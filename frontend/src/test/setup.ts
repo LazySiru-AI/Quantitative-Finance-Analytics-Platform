@@ -13,7 +13,7 @@ import { cleanup, configure } from "@testing-library/react";
 
 // `findBy*`/`waitFor` give up after 1s by default. On a loaded CI runner a lazy page plus several
 // stubbed fetches can take longer than that, which reads as "element not found" rather than "slow".
-configure({ asyncUtilTimeout: 5000 });
+configure({ asyncUtilTimeout: 10_000 });
 
 beforeEach(() => {
   vi.stubGlobal(

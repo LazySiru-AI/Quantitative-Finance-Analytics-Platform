@@ -68,7 +68,12 @@ jobs:
         working-directory: .
         env:
           INVDASH_AUTH_ENABLED: "0"
-        run: ./.venv/Scripts/python.exe -m pytest
+        run: ./.venv/Scripts/python.exe -m pytest --junitxml=pytest-report.xml -o junit_family=xunit1
+
+      - name: Annotate failing tests
+        if: failure()
+        working-directory: .
+        run: ./.venv/Scripts/python.exe tools/ci_junit_annotations.py pytest-report.xml
 
       - name: pip-audit (known-vulnerable dependencies)
         working-directory: backend
@@ -140,8 +145,10 @@ jobs:
       # useful failure than a bundle that compiled. Until 2026-08-14 there were no frontend tests at
       # all and `tsc` was the only guard -- which is how a union that had drifted from its backend
       # enum compiled clean and blanked a headline at runtime (docs/reports/defects-1.md).
+      # Two workers: on a hosted runner more parallel jsdom workers starve each other and turn slow
+      # renders into spurious findBy timeouts.
       - name: vitest
-        run: npm test
+        run: npx vitest run --maxWorkers=2 --minWorkers=1
 
       - name: vite build
         run: npm run build
