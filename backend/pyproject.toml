@@ -21,6 +21,9 @@ dependencies = [
     "numpy>=2.0",
     "python-dateutil>=2.9",
     "tzdata>=2024.2",
+    # DuckDB imports pytz to hand TIMESTAMPTZ columns to pandas, and pandas 3 no longer depends on
+    # it -- a clean install without this line fails in app.market.storestate with ModuleNotFoundError.
+    "pytz>=2024.1",
     # Tournament analyst PDF reports (app.tournament.report_pdf). platypus/canvas is the only
     # working path here: no jinja2/weasyprint/wkhtmltopdf/pandoc is available to render an HTML
     # template to PDF instead.
@@ -51,6 +54,8 @@ dev = [
     "httpx>=0.28",
     "ruff>=0.8",
     "mypy>=1.13",
+    # tests/test_tournament_pdf.py reads the generated analyst PDFs back.
+    "pypdf>=5.0",
 ]
 # The MCP server (`app.mcp.server`), which exposes the tax, decision-table and macro engines to an
 # MCP client such as Claude Code.

@@ -27,5 +27,8 @@ export default defineConfig({
     setupFiles: ["./src/test/setup.ts"],
     include: ["src/**/*.test.{ts,tsx}"],
     restoreMocks: true,
+    // Shared CI runners are several times slower than a dev machine; the default 5s per test
+    // turned slow-but-correct renders into failures there. See also `asyncUtilTimeout` in setup.ts.
+    testTimeout: 30_000,
   },
 });
