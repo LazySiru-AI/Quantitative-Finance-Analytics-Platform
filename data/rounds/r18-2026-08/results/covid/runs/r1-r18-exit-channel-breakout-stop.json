@@ -1,0 +1,61 @@
+{
+  "card": {
+    "agent_id": "r18-exit-channel-breakout-stop",
+    "display_name": "fixed entry / exit channel-breakout / stop",
+    "discipline": "trend",
+    "purpose": "trading",
+    "thesis": "Round 18 cell. The entry is pinned to the evolution loop's own hardcoded template -- close > sma(200) and ema(10) crosses_above ema(30) -- and only the exit varies, so that any difference is attributable to the exit alone. Round 17 found bracket policy moved its whole 48-cell field by 0.14 percentage points, with many cells byte-identical across bracket policies, because the rule's own exit fires first almost every time; this round isolates that. Exit borrowed from the channel-breakout form. Brackets: stop. Not a proposal to trade anything; nothing in this round is promotable. See strategy-program/ROUND-18-PLAN.md for the pre-registration and the five falsifiable predictions.",
+    "universe": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLY",
+      "XLP",
+      "XLU",
+      "XLB"
+    ],
+    "entry": "close > sma(200) and ema(10) crosses_above ema(30)",
+    "exit": "close crosses_below swing_low(10)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 180,
+    "max_positions": 6,
+    "position_pct": "0.15",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "10284.63",
+  "total_return": "0.028462999999999905",
+  "max_drawdown": "-0.009584213823995325",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.5806451612903226,
+  "capital_exposure": 0.08358154838709678,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLK",
+      "entry_date": "2020-04-15",
+      "entry_price": "43.62",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "33",
+      "exit_reason": "open_at_end",
+      "pnl": "284.63",
+      "return_pct": "0.1977338724243813652341850416",
+      "bars_held": 53
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

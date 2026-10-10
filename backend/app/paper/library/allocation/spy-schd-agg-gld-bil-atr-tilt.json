@@ -1,0 +1,47 @@
+{
+  "agent_id": "spy-schd-agg-gld-bil-atr-tilt",
+  "display_name": "Whole-Market Core-Satellite, ATR Volatility Tilt",
+  "thesis": "This is a diversified core-satellite book, not a leveraged rotation: SPY (40%, the whole-market equity core) is surrounded by four satellites drawn from different asset classes -- SCHD (20%, dividend/quality equity, a different equity factor from SPY rather than a levered copy of it), AGG (20%, investment-grade aggregate bonds), GLD (10%, gold, the one sleeve here with low correlation to both equity and nominal bonds), and BIL (10%, T-bills, dry powder and the destination for capital pulled out of the book when volatility rises). No sleeve in this card is leveraged; the base allocation alone is the diversification claim, before either rule ever fires. Two tilt rules move weight toward defence when SPY's own volatility -- read off SPY's own bars only, this engine has no cross-symbol operator -- is elevated: when SPY's own ATR(14) exceeds 1.8% of its own close (roughly the 80th percentile of SPY's own historical ATR-to-price ratio, a threshold well above SPY's ordinary trading-range noise and well below where a genuine crisis sits), rule 1 shifts 5 points of the book from SPY into BIL and rule 2 shifts 5 points from SCHD into GLD -- ten points total moved from the two equity sleeves into the two least-correlated-with-equity sleeves. Both rules read the identical condition off the identical symbol (SPY), so they always fire or not-fire together within a session. There is no separate, lower exit threshold: because AllocationCard recomputes every session's target weights fresh from this card's own declared base weights plus whichever rules fire that same session (there is no persistent 'armed' state carried from one session to the next anywhere in this card type), the tilt reverts to the base 40/20/20/10/10 allocation automatically the very next session SPY's own ATR falls back at or below 1.8% of its close -- not on a separate rule, but because the mechanism has nothing to remember. This is a real, load-bearing property of the card shape, not an oversight: a threshold sitting near a chop zone can re-fire and revert repeatedly, trading on noise rather than a regime change, in a way a stateful arm-once ladder rung would not. Falsification: this thesis is wrong, not merely unlucky, if elevated SPY ATR is not followed by continued or deepening equity stress often enough to be worth the shift's cost -- i.e. if the tilt is moving capital into T-bills and gold ahead of drawdowns that mostly do not happen, or reverts back into SPY just before the drawdown that does -- and it would be further undermined by evidence that the tilt's own turnover (a session-by-session threshold crossing, not a per-cycle arming) trades meaningfully more than the drawdown it avoids is worth in slippage. A backtest of this exact base allocation and both rules (against a static, no-tilt version of the same five sleeves, and against SPY/QQQ buy-and-hold) over 2011-2026 and, with SCHD's own base weight folded into SPY as a substitute proxy, over the 2007-2011 crisis is reported in strategy-program/ALLOCATION-FAMILY.md.",
+  "falsification": "Falsification: this thesis is wrong, not merely unlucky, if elevated SPY ATR is not followed by continued or deepening equity stress often enough to be worth the shift's cost -- i.e. if the tilt is moving capital into T-bills and gold ahead of drawdowns that mostly do not happen, or reverts back into SPY just before the drawdown that does -- and it would be further undermined by evidence that the tilt's own turnover (a session-by-session threshold crossing, not a per-cycle arming) trades meaningfully more than the drawdown it avoids is worth in slippage. A backtest of this exact base allocation and both rules (against a static, no-tilt version of the same five sleeves, and against SPY/QQQ buy-and-hold) over 2011-2026 and, with SCHD's own base weight folded into SPY as a substitute proxy, over the 2007-2011 crisis is reported in strategy-program/ALLOCATION-FAMILY.md.",
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "SCHD",
+      "target_weight": "0.20"
+    },
+    {
+      "symbol": "AGG",
+      "target_weight": "0.20"
+    },
+    {
+      "symbol": "GLD",
+      "target_weight": "0.10"
+    },
+    {
+      "symbol": "BIL",
+      "target_weight": "0.10"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "atr(14) > close * 0.018",
+      "on_symbol": "SPY",
+      "from_symbol": "SPY",
+      "to_symbol": "BIL",
+      "shift_pct": "0.05"
+    },
+    {
+      "condition": "atr(14) > close * 0.018",
+      "on_symbol": "SPY",
+      "from_symbol": "SCHD",
+      "to_symbol": "GLD",
+      "shift_pct": "0.05"
+    }
+  ],
+  "designed_through": "2026-02-13",
+  "purpose": "savings"
+}

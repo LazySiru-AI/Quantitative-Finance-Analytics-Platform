@@ -1,0 +1,32 @@
+{
+  "agent_id": "ladder-sso-vig-bnd",
+  "display_name": "Drawdown Ladder - Roth-Disjoint (SSO/VIG/BND)",
+  "thesis": "The shipped ladder (ladder-qld-schd, QLD/SCHD/IEF) trades exactly the three tickers a taxable momentum or income strategy is most likely to also want, which is disqualifying for a Roth IRA: Rev. Rul. 2008-5 holds that a loss sold in a taxable account and replaced inside an IRA within 30 days is disallowed with no basis adjustment anywhere, strictly worse than an ordinary wash sale, which only defers the loss. `backend/app/tax/washsale.py` models the destruction; the cheaper fix is never letting the two accounts name the same ticker at all (strategy-program/THREE-PURPOSES-PLAN.md section 6). This card re-expresses the identical mechanism -- same signal, same rungs, same confirmation gate, same recovery clock, same fund-order (bond before defensive) -- on three tickers disjoint from the original: QLD (2x Nasdaq-100, ProShares) becomes SSO (2x S&P 500, ProShares) -- same leverage factor, a genuinely different underlying index, not a relabelling of the same one; SCHD (Dow Jones U.S. Dividend 100 Index) becomes VIG (S&P U.S. Dividend Growers Index, Vanguard) -- a different provider and a different selection philosophy, dividend growth rather than high current yield; IEF (ICE U.S. Treasury 7-10 Year Index) becomes BND (Bloomberg U.S. Aggregate Bond Index, Vanguard) -- broader than Treasuries alone, adding investment-grade corporate and mortgage-backed exposure, a real change in what the bond sleeve is actually exposed to, not merely a different duration bucket of the same collateral. None of this is a claim that the substitution satisfies IRC section 1091's substantially-identical test -- the IRS has never ruled on ETF pairs of this kind, and strategy-program/ROTH-DISJOINT-LADDER.md says explicitly that ticker disjointness is a necessary condition this card satisfies, not a sufficient one the backtest can prove. The signal stays SPY, unchanged and untraded, because the drawdown trigger is a fact about the broad market's own price level, not a position either account holds. This would be falsified by: (a) the substitute tickers' longer or shorter histories changing which regimes the backtest can even see, most importantly whether SCHD's own 2011-10-20 start (not any substitute's) remains the binding constraint on the shared comparison window; (b) evidence that SSO, VIG or BND individually correlates with its QLD/SCHD/IEF counterpart closely enough that the substitution changes nothing real about the strategy's risk profile, which would undercut the same-strategy claim in the opposite direction from the section-1091 concern; or (c) the contribution-funded backtest in strategy-program/tools/roth_disjoint.py showing the substitution costs enough on IRR, CAGR or MAR that holding this strategy on disjoint tickers is not worth the tax protection it buys -- see that script's own report for the measured number, not a claim made here in advance of running it.",
+  "falsification": "This would be falsified by: (a) the substitute tickers' longer or shorter histories changing which regimes the backtest can even see, most importantly whether SCHD's own 2011-10-20 start (not any substitute's) remains the binding constraint on the shared comparison window; (b) evidence that SSO, VIG or BND individually correlates with its QLD/SCHD/IEF counterpart closely enough that the substitution changes nothing real about the strategy's risk profile, which would undercut the same-strategy claim in the opposite direction from the section-1091 concern; or (c) the contribution-funded backtest in strategy-program/tools/roth_disjoint.py showing the substitution costs enough on IRR, CAGR or MAR that holding this strategy on disjoint tickers is not worth the tax protection it buys -- see that script's own report for the measured number, not a claim made here in advance of running it.",
+  "signal_symbol": "SPY",
+  "defensive_symbol": "VIG",
+  "bond_symbol": "BND",
+  "leveraged_symbol": "SSO",
+  "base_defensive_weight": "0.60",
+  "base_bond_weight": "0.40",
+  "rungs": [
+    {
+      "drawdown": "-0.10",
+      "leveraged_weight": "0.20"
+    },
+    {
+      "drawdown": "-0.20",
+      "leveraged_weight": "0.60"
+    },
+    {
+      "drawdown": "-0.30",
+      "leveraged_weight": "0.80"
+    }
+  ],
+  "confirm_ma": 50,
+  "ath_haircut": "0.5",
+  "recovery_gain": "0.10",
+  "recovery_sessions": 60,
+  "designed_through": "2026-02-13",
+  "purpose": "roth"
+}

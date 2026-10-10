@@ -1,0 +1,29 @@
+{
+  "agent_id": "r17-macd-cross-off-stop",
+  "display_name": "macd-cross / regime off / stop",
+  "discipline": "momentum",
+  "purpose": "trading",
+  "thesis": "Round 17 factorial cell. Form: a MACD(10,30,9) signal-line crossover inside a 200-day SMA regime filter -- but with the 200-day SMA regime filter REMOVED for this cell, which is the paired half of this round's second factor. Brackets: stop. This card is one cell of a pre-registered 8x2x3 grid whose only purpose is to measure whether strategy form, the regime filter and the bracket policy each change a result by more than this programme's own measured noise floor of 21.2 percentage points. It is not a proposal to trade anything. Every parameter is the textbook constant frozen in app.evolution.ruleforms before this round was conceived; nothing here was tuned, and the universe is the mechanically defined GICS sector ETF set rather than any thesis-picked list, so that stock selection cannot flatter a form. See strategy-program/ROUND-17-PLAN.md for the pre-registration, the five falsifiable predictions and the correction applied across all cells.",
+  "universe": [
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLY",
+    "XLP",
+    "XLU",
+    "XLB",
+    "XLRE",
+    "XLC"
+  ],
+  "entry": "macd_macd(10, 30, 9) crosses_above macd_signal(10, 30, 9)",
+  "exit": "macd_macd(10, 30, 9) crosses_below macd_signal(10, 30, 9)",
+  "stop_loss_pct": "0.12",
+  "take_profit_pct": null,
+  "max_hold_days": 180,
+  "max_positions": 6,
+  "position_pct": "0.15",
+  "rank_by": null,
+  "designed_through": "2026-02-13"
+}

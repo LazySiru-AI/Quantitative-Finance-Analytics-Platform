@@ -1,0 +1,94 @@
+/* =============================================================================
+   Agent Desk landing (page: AgentDeskLanding).
+
+   Reuses .panel, .subtitle, h1/h2 and StatusPill.css from styles.css -- nothing
+   there is modified, only built on top of. Every class this file adds is
+   prefixed `adl-`, matching the funnel/card layout `StrategyLanding.css`
+   establishes for its own `sl-` prefix (same shapes, deliberately, since both
+   landings are the same kind of page).
+
+   Kept to one screen: no independent scroll container, three `.panel`s stacked
+   (availability, funnel, try-this).
+   ============================================================================= */
+
+.adl-page {
+  max-width: 880px;
+}
+
+.adl-availability {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.adl-availability-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* --- Funnel ------------------------------------------------------------------ */
+
+.adl-funnel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.adl-funnel-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel-2);
+}
+
+.adl-funnel-arrow {
+  color: var(--muted);
+}
+
+/* --- Try this ------------------------------------------------------------------ */
+
+.adl-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.adl-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.adl-card:hover,
+.adl-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 14px -8px var(--glow-cyan);
+}
+
+.adl-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.adl-card-blurb {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}

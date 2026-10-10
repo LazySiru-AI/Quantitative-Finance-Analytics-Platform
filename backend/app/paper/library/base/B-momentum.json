@@ -1,0 +1,29 @@
+{
+  "agent_id": "B-momentum",
+  "display_name": "Strategy B - Confirmed Acceleration",
+  "discipline": "momentum",
+  "thesis": "Institutional flow into AI/cloud-infrastructure leaders re-rates them in slow, multi-week waves, not single days: a fund building a position over weeks pushes the medium-term average through the long-term one, and that crossover is a public, mechanical signal other trend-following capital reacts to next, extending the move further than any one participant intended. On the design-window history of these 12 names, once close > sma(200) is already established and ema(20) crosses above ema(50) -- a fresh acceleration inside a standing uptrend, not a bottom-pick -- the resulting move has a median duration of roughly 3-4 weeks and stretches past two months at the 75th percentile (NVDA's longest such run reached 256 sessions, MSFT's 169, TSM's 189). The other side of this trade is whoever sells into that strength: value-discipline holders trimming into a re-rate, and short sellers pressing a name that 'already ran too far' -- both wrong, on average, while the wave is still building. I tested a fixed take-profit and a fast rule exit against simply riding the position to a stop or a genuine trend break, on this same entry: capping gains at 8-30% cut mean per-signal return to 2-9%, and a fast 20-day-EMA exit (even with a 3-day confirmation filter) cut it to 3-5% and win rate to 42-49% by whipsawing out of live trends on ordinary pullbacks. Letting the position run to a stop, a 200-day trend-break, or a 180-day backstop produced roughly triple the aggregate return of either capped variant, at the cost of a median trade near breakeven-to-slightly-negative -- this strategy's edge is concentrated in a minority of large winners, which is exactly what a take-profit would have amputated. It is deliberately not diversified across volatility regimes: the universe was chosen so one stop and one position size fit all 12 names reasonably rather than being tuned to any single one.",
+  "falsification": "Added 2026-08-30 by docs/research/programme/thesis-audit.md, after this card's live record already existed. This is NOT a pre-registration of the card's design and must not be read as one: it names measurements that would settle claims the thesis already makes, chosen because none of them has been run. Every threshold below is the programme's 21.2-point ordering floor (PROTOCOL.md section 7), fixed before any of these measurements exist. (1) MEASURED, 2026-08-30, and this condition is retired: round 24's arm 2 had already run both cards on round 2's regime matrix as controls, on an identical set of six windows. B3-concentrated's median adjusted excess is +13.89% against B-momentum's +12.16% -- a gap of 1.74pp, well inside the 21.2-point floor -- so the concentration difference is doing no measurable work and the pair is one idea holding two seats. The median also flatters B3-concentrated: B-momentum is HIGHER in five of the six windows, and the whole gap comes from `recent` alone (+14.61pp). This condition was written as though unrun, which was an error -- the measurement was in a scorecard read the same day. What would still settle it is a null over the window set, or a wider matrix; a 1.74pp median gap decided by one window is not a measurement of concentration. The original condition read: the concentration difference is unclaimed and unmeasured. The thesis says this strategy's 'edge is concentrated in a minority of large winners'. This card holds six positions at 15% where B3-concentrated holds four at 22% -- the only two fields that differ between them, under a byte-identical thesis that never mentions concentration. If the edge really is carried by a few large winners, spreading the same capital across six names should dilute it, so this card should post a LOWER median than B3-concentrated over round 2's eight-window regime matrix. Falsified if it does not. And if the gap is inside the floor in either direction, the concentration difference is doing no work and the two cards are one idea seated twice. (2) The take-profit and fast-EMA-exit variants named in the shared thesis have never been built as arms here either; the same test stated on B3-concentrated applies unchanged to this card, and 'roughly triple' is unsupported out of sample if the uncapped advantage sits inside the floor.",
+  "universe": [
+    "NVDA",
+    "AMD",
+    "AVGO",
+    "MU",
+    "MRVL",
+    "TSM",
+    "META",
+    "MSFT",
+    "GOOGL",
+    "NOW",
+    "AMZN",
+    "NFLX"
+  ],
+  "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+  "exit": "close crosses_below sma(200)",
+  "stop_loss_pct": 0.12,
+  "take_profit_pct": null,
+  "max_hold_days": 180,
+  "max_positions": 6,
+  "position_pct": 0.15,
+  "designed_through": "2026-02-13"
+}

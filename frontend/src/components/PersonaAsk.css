@@ -1,0 +1,48 @@
+/**
+ * Styles for PersonaCritique.tsx.
+ *
+ * Formerly shared with `PersonaAsk.tsx` too (hence the filename), retained after that component's
+ * removal (Persona Chat replaced it -- see `PersonaChat.tsx`/`PersonaChat.css`) purely because
+ * `PersonaCritique.tsx` still imports this sheet for its own `.persona-critique-*` classes.
+ * `PersonaCritique.tsx` is out of this change's scope to edit, so this file stays rather than being
+ * deleted alongside `PersonaAsk.tsx`/`PersonaAsk.test.tsx`.
+ *
+ * Deliberately self-contained -- these components must not depend on `pages/Personas.css` (out of
+ * scope to touch), so every class here is prefixed `persona-critique-` rather than reusing that
+ * file's `persona-card-*` / `persona-ticker-*` vocabulary. Only the globally-defined `.panel`,
+ * `.muted`, `.placeholder`, `.badge`, `.callout*` classes from `styles.css` are shared.
+ */
+
+.persona-critique-caveat-label {
+  font-style: italic;
+}
+
+.persona-critique-assessment {
+  white-space: pre-wrap;
+}
+
+.persona-critique-grounding-issues {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.persona-critique-trigger-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.persona-critique-verdict-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.persona-critique-backend-caveat {
+  border-top: 1px dashed var(--border, #ccc);
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}

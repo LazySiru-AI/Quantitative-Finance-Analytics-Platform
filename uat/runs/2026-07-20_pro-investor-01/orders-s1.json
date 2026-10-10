@@ -1,0 +1,26 @@
+{
+  "orders": [
+    {
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": 2,
+      "thesis": "Long-term uptrend intact: close 743.29 vs sma200 696.69 (+6.7%). Short-term pullback (-1.5% over 5d, price just under sma20/sma50) is an entry within the trend, not a chase of highs.",
+      "invalidation": "A weekly close back below sma200 (696.69), or a break of the recent swing low, invalidates the long-term-uptrend thesis.",
+      "stop_level": "710.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": "close 743.29 > sma200 696.69; change_20d +0.31%; change_5d -1.54%; range_52w 621.72-759.57"
+    },
+    {
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": 10,
+      "thesis": "Small diversifying ballast against equity-momentum risk. Price is basing near sma50 (85.30) after a 20-day decline; 1-day change has turned slightly positive.",
+      "invalidation": "A close below the 52-week low (83.02) means this is a continuation of the bond downtrend, not a base, and the position is closed.",
+      "stop_level": "82.50",
+      "regime": "transitional",
+      "conviction": 2,
+      "evidence": "close 84.52 near sma50 85.30, below sma200 87.57 (long-term downtrend intact); change_5d +0.06% (flattening); 52w low 83.02 close by"
+    }
+  ]
+}

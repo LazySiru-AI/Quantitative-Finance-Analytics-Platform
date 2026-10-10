@@ -1,0 +1,31 @@
+{
+  "agent_id": "r36-strong-k4",
+  "display_name": "R36 strongest first, close/sma(200) / 4 slots",
+  "discipline": "pairs-rotation",
+  "purpose": "roth",
+  "desk_only": false,
+  "thesis": "Round 36 ordering cell: strongest first, close/sma(200), 4 slots on eight industry ETFs. This card is one cell of a pre-registered ten-cell field whose only variable is which qualifying name takes a scarce slot. Entry, exit, stop, hold cap, universe membership, design cutoff and maximum capital at risk are identical across all ten; the chooser here is `close / sma(200)`. The question the field asks: `StrategyCard.rank_by` is the one place this engine compares symbols to each other, and PROTOCOL.md section 7 prices the alternative it replaces -- twelve orderings of one identical card moved its three-year return across a 53.9-point spread, sigma = 21.2 points, with relative-strength order 9th of 10 against random draws. So the operator is not known to be worth anything, and this round measures the two contrasts that would settle it: canonical order against its own reverse (pure ordering noise, with the rule and the names held fixed), and strongest-first against weakest-first (whether relative strength carries slot-level information at all). If those two spreads are the same size, the chooser is decorative on this universe. The rule is c20-rotation's own absolute filter, unchanged, because that card's thesis is what says this engine has no cross-symbol operator and calls its fill order an arbitrary-but-reasoned tiebreak -- rank_by is the feature that changes that claim, so it is tested on that card's filter rather than on a rule invented for the occasion. Nothing here is tuned: every threshold was frozen in c20-rotation before this round was conceived, and no parameter was chosen by looking at an outcome. This is a measurement study on a Roth-purpose universe held disjoint from every taxable card; it is not a proposal to trade anything and nothing in it will be promoted. See strategy-program/ROUND-36-PLAN.md for the pre-registration, the predictions, the 21.2pp decision rule and the Benjamini-Hochberg correction taken across all ten cells.",
+  "falsification": "Strongest-first minus weakest-first, on median adjusted excess across the eight main windows, lands inside the 21.2pp ordering-noise floor -- and/or is no larger than the canonical-versus-reversed spread measured on the identical rule and names. Either outcome says relative strength carries no slot-level information on this universe and that naming the chooser bought nothing measurable. A second, structural falsification runs first: if all five orderings inside a slot arm return identical trade logs, the slot cap never bound, no ordering could have mattered, and that arm measured nothing at all.",
+  "universe": [
+    "XME",
+    "XRT",
+    "XHB",
+    "XSD",
+    "XOP",
+    "XBI",
+    "ITA",
+    "VNQ"
+  ],
+  "entry": "close > sma(100) and rsi(14) > 50 and rsi(14) < 75",
+  "exit": "close < sma(100) or rsi(14) < 40",
+  "stop_loss_pct": "0.10",
+  "take_profit_pct": null,
+  "max_hold_days": 150,
+  "max_positions": 4,
+  "position_pct": "0.125",
+  "rank_by": "close / sma(200)",
+  "designed_through": "2026-02-13",
+  "reference_only": false,
+  "source_thesis_hash": null,
+  "source_persona": null
+}

@@ -1,0 +1,96 @@
+/**
+ * Styles for PersonaChat.tsx.
+ *
+ * Deliberately self-contained -- this component must not depend on `pages/Personas.css` (out of
+ * scope to touch), so every class here is prefixed `persona-chat-` rather than reusing that file's
+ * `persona-card-*` / `persona-ticker-*` vocabulary. Only the globally-defined `.panel`, `.muted`,
+ * `.placeholder`, `.badge`, `.callout*` classes from `styles.css` are shared, same convention
+ * `PersonaAsk.css` established.
+ */
+
+.persona-chat-caveat {
+  font-style: italic;
+}
+
+.persona-chat-thread-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.persona-chat-thread-select {
+  max-width: 16rem;
+}
+
+.persona-chat-turn {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border, #ccc);
+}
+
+.persona-chat-turn:last-child {
+  border-bottom: none;
+}
+
+.persona-chat-question {
+  font-weight: 600;
+}
+
+.persona-chat-answer-text {
+  white-space: pre-wrap;
+}
+
+.persona-chat-stance-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.35rem 0;
+}
+
+.persona-chat-grounding-issues {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.persona-chat-turn-cost {
+  margin-top: 0.25rem;
+}
+
+.persona-chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.persona-chat-suggestion-chip {
+  font-size: 0.85em;
+}
+
+.persona-chat-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.persona-chat-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.persona-chat-field textarea,
+.persona-chat-field input {
+  width: 100%;
+}
+
+.persona-chat-send-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.persona-chat-consolidate-row {
+  margin-top: 0.35rem;
+}

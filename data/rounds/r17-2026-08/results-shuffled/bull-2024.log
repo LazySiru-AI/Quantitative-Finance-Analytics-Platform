@@ -1,0 +1,7 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+2 cards
+[1/2] r1 r17-band-reversion-off-stop-shuf: 2s trades=30 ret=+5.39% dd=-7.76% rej=1
+[2/2] r1 r17-vol-compression-off-stop-shuf: 4s trades=27 ret=-5.46% dd=-16.17% rej=25
+r1: 2 agents, 1 discoveries
+overall: 2 agents, 1 discoveries at alpha=0.1

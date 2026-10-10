@@ -1,0 +1,54 @@
+{
+  "cash": "8541.00",
+  "positions": {
+    "QQQ": "2"
+  },
+  "unsettled": [
+    [
+      "2026-07-02",
+      "530.18"
+    ]
+  ],
+  "fills": [
+    {
+      "order_id": "s1-xle-toehold",
+      "session": 1,
+      "trade_date": "2026-06-29",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "10",
+      "price": "54.01",
+      "reference_open": "53.98",
+      "gross": "540.10",
+      "fees": "0.00",
+      "cash_delta": "-540.10"
+    },
+    {
+      "order_id": "s2-qqq-buy",
+      "session": 2,
+      "trade_date": "2026-06-30",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "price": "724.54",
+      "reference_open": "724.18",
+      "gross": "1449.08",
+      "fees": "0.00",
+      "cash_delta": "-1449.08"
+    },
+    {
+      "order_id": "s3-xle-exit",
+      "session": 3,
+      "trade_date": "2026-07-01",
+      "symbol": "XLE",
+      "side": "sell",
+      "quantity": "10",
+      "price": "53.02",
+      "reference_open": "53.05",
+      "gross": "530.20",
+      "fees": "0.02",
+      "cash_delta": "530.18"
+    }
+  ],
+  "rejections": []
+}

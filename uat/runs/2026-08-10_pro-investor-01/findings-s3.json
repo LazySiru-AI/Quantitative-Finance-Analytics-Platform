@@ -1,0 +1,97 @@
+{
+  "findings": [
+    {
+      "finding_id": "report-drawdown-facts-table-still-underwater-contradicts-current-drawdown",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-14T20:35:00Z",
+      "session_date": "2026-08-12",
+      "surface": "ui",
+      "locator": "/report/XLE",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Report Facts table says 'Still underwater: no' beside a current drawdown of -15.6%",
+      "observed": "On /report/XLE, the Drawdown history narrative and the Drawdown profile table both state the position is currently 15.6% below a 2026-03-27 peak, with recovery '\u2014' and underwater '95 bars+ (ongoing)'. The Facts table lower on the same page lists, in this order: Deepest drawdown -76.7%, Peak 2014-06-23, Trough 2020-03-23, Bars to trough 1,447, **Still underwater: no**, Bars underwater 2,919, Bars to recovery 2,919, Current drawdown -15.6%, Current drawdown peak 2026-03-27. The 'Still underwater' row is grouped by table position with the fully-recovered 2014-2020 episode, not with the ongoing 2026 one, but nothing labels it that way -- read top to bottom it sits one field away from 'Current drawdown -15.6%' with no qualifier distinguishing which episode 'no' answers for.",
+      "expected": "A field named 'Still underwater' on a page whose headline number for this symbol is a live, unrecovered 15.6% drawdown should either say 'yes', or be renamed to make clear it answers only for the deepest historical episode (e.g. 'Deepest episode still underwater'), or the current episode should carry its own explicit yes/no field next to 'Current drawdown'.",
+      "why_it_matters": "I hold 22 shares of XLE. A reader who scans the Facts table for a one-word answer to 'is this thing currently in a drawdown' gets 'no', which is false -- the page's own drawdown profile and narrative say otherwise 300 pixels above it. This is exactly the ambiguous-field problem I watch for: the same page disagrees with itself and only close reading of table row order resolves it.",
+      "repro": [
+        "Navigate to /report/XLE, wait for the report to load",
+        "Read the Drawdown profile section: Current drawdown 15.6%, peak 2026-03-27, '95 bars+ (ongoing) underwater'",
+        "Scroll to the Facts table",
+        "Read the row order: ...Bars to trough 1,447, Still underwater: no, Bars underwater 2,919, Bars to recovery 2,919, Current drawdown -15.6%...",
+        "Observe 'Still underwater: no' has no label tying it to the 2014-2020 episode specifically, and sits adjacent to the live 2026 current-drawdown figures"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "portfolio-api-money-fields-carry-float-precision-noise",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-14T20:45:00Z",
+      "session_date": "2026-08-12",
+      "surface": "api",
+      "locator": "GET /api/portfolio",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "GET /api/portfolio returns money fields with binary-float noise past the cent",
+      "observed": "GET /api/portfolio returns total_market_value=\"8441.430080413818432\" and total_unrealized=\"102.850080413818432\". Per-position market_value values show the same pattern: QQQ \"1464.1400146484376\", SPY \"1555.7600097656250\", XLE \"1343.320030212402352\", XLF \"990.4199714660644\", XLK \"1335.39002990722658\", XLV \"841.9000244140625\" -- all trailing 8-12 spurious digits characteristic of a float32/float64 multiply-then-stringify, not a decimal computation. total_cost_basis (\"8338.58\") and IWM's market_value (\"910.5\") are clean, so the noise is specific to values computed as quantity \u00d7 price rather than carried straight from the ledger. The UI rounds these for display so the Portfolio page itself reads correctly ($8,441.43 etc).",
+      "expected": "Monetary fields should be decimal-exact strings throughout, matching the app's own stated design: the order schema notes 'the ledger rejects binary floats in monetary and quantity fields' as a deliberate constraint. A quantity-times-price multiplication landing in the API response should round to cents before serialization, the same way the UI already does.",
+      "why_it_matters": "I read API responses directly to verify what the UI shows, per my usual practice. These values are currently unusable for any downstream reconciliation (a spreadsheet import, a diff against a broker statement) without re-rounding them myself first -- the provenance chain the app is built around breaks exactly at the boundary where a number leaves the page.",
+      "repro": [
+        "Navigate to /portfolio",
+        "Run fetch('/api/portfolio').then(r=>r.json()).then(j=>j.total_market_value) in the console",
+        "Observe \"8441.430080413818432\" instead of \"8441.43\"",
+        "Run the same against j.positions[*].market_value: SPY, QQQ, XLE, XLF, XLK, XLV all show 8-12 trailing spurious digits; IWM does not"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "tax-year-zero-disposals-boilerplate-contradicts-transactions-shown",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-14T20:50:00Z",
+      "session_date": "2026-08-12",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "Tax page's 'absence of data' boilerplate is reused for a year that has data, and now contradicts the sentence before it",
+      "observed": "Selecting tax year 2026 (where the ledger's 8 transactions all fall, none of them disposals) reads: 'Nothing was disposed of in 2026. The ledger holds 8 transactions dated in this tax year -- see Activity -- but no lot was sold, so there is no gain or loss to report and no Form 8949 to file for it. This is an absence of data, not a report of zero gains, so no figures are shown below.' The same trailing sentence appears verbatim when 2025 is selected, a year with zero transactions at all: 'No 2025 activity at all. The ledger holds 8 transactions, none of them dated in this tax year -- pick another year above. This is an absence of data, not a report of zero gains...'",
+      "expected": "For 2026, the middle sentence already correctly states the data exists and explains why gains are legitimately zero (nothing was sold). The trailing 'this is an absence of data, not a report of zero gains' then asserts the opposite of what was just said -- it belongs only to the 2025-style case where the year truly has nothing in it.",
+      "why_it_matters": "This is the same category of ambiguity the tax page was fixed to resolve in the prior run: telling 'nothing imported/nothing happened' apart from 'a real answer of zero'. For 2026 the real answer is genuinely zero gains (no disposals), which the page's own prior sentence says -- the boilerplate then tells the reader not to trust that, which reintroduces the ambiguity in miniature rather than the outright contradiction filed before.",
+      "repro": [
+        "Navigate to /tax, select 2026",
+        "Read the full message including the trailing sentence: 'This is an absence of data, not a report of zero gains, so no figures are shown below.'",
+        "Select 2025 and read the same trailing sentence appended there too",
+        "Compare: 2026's own message states 8 transactions exist and explains a legitimate zero; 2025's states none exist at all -- the shared trailing sentence fits only the second case"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "backtest-and-thesis-tools-report-real-sample-size-and-baseline",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-14T21:00:00Z",
+      "session_date": "2026-08-12",
+      "surface": "ui",
+      "locator": "/backtest, /thesis/:symbol",
+      "kind": "friction",
+      "severity": "polish",
+      "title": "Backtest event study and Thesis loop both give a real denominator, not just a number",
+      "observed": "Ran an event study on XLE for 'close > sma(20) and rsi(14) > 60': every horizon reported edge against the same instrument's unconditional baseline (e.g. 20b: +0.5% edge, 55.8% vs 55.3% base, 183 independent samples of 1,713 raw triggers) rather than a bare hit rate. Separately ran the Thesis loop on XLE at budget 12: it worked through the full catalog of 5 distinct hypotheses (0 survived, 1 rejected, 4 inconclusive), correctly declined to spend XLE's one holdout evaluation since nothing survived in-sample, and stated plainly: 'Every available thesis for XLE was tried (5 of them) and none survived. The run ran out of distinct hypotheses before it ran out of budget -- that is information about the catalogue, not about the ticker.' The Report page's rule-evidence section for XLE volunteers the same discipline unprompted: it names the single largest-edge rule but adds 'that rule was selected for having the largest edge, which is not the same as having the best evidence... no correction for having looked at all of them is applied here.'",
+      "expected": "Confirms this is the kind of tooling I'd actually act on: independent (non-overlapping) sample counts distinct from raw trigger counts, an explicit baseline for every hit rate, and unprompted warnings against selection bias and multiple comparisons.",
+      "why_it_matters": "This directly answers whether the workbench gives a sample size and a baseline I'd trust, versus a number with no denominator. It does. It also tempered my own read on XLE this session: no thesis survived testing for the position I hold the most of by weight, which is useful evidence against adding to it, not just a UI compliment.",
+      "repro": [
+        "Navigate to /backtest, load XLE, run event study on 'close > sma(20) and rsi(14) > 60'",
+        "Read the per-horizon edge/baseline/independent-sample columns",
+        "Navigate to /thesis/XLE, run the thesis loop at budget 12",
+        "Read the trial ledger and run outcome"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

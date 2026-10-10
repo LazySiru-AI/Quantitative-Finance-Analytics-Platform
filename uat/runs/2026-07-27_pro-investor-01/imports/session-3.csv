@@ -1,0 +1,3 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+07/29/2026,07/29/2026,07/30/2026,QQQ,"QQQ paper fill, UAT persona pro-investor-01",Sell,1,$675.17,$675.17
+07/29/2026,07/29/2026,07/30/2026,,Regulatory fees on QQQ sale (s3-1),FEE,,,($0.02)

@@ -1,0 +1,42 @@
+/**
+ * CitationList.tsx.
+ *
+ * Compact, inline, mono-font chips -- deliberately unremarkable so a row of citations reads as
+ * supporting detail rather than competing with the claim it backs. There is no collapsed state:
+ * these are always visible, so there is nothing here that hides content the way `InfoNote`'s
+ * `<details>` does.
+ */
+
+.citation-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.citation-list-item {
+  display: inline-flex;
+}
+
+.citation-list-text,
+.citation-list-button {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05rem 0.35rem;
+  white-space: nowrap;
+}
+
+.citation-list-button {
+  background: transparent;
+  cursor: pointer;
+}
+
+.citation-list-button:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}

@@ -1,0 +1,35 @@
+matrix: r2 (8 windows, gate 5)
+## Ranked (by median adjusted_excess, descending)
+
+| rank | agent_id | display_name | median_adj_excess | worst | best | hit_rate | iqr | rank_median | rank_worst | rank_hit_rate | borda | pareto | windows(run/elig) | trades | mean_exposure | incommensurable_exposure | worst_dd | total_realised_pnl | median_excess_per_exposure | q4-2018 | covid | bear-2022 | chop-2015 | chop-2011 | bull-2024 | recent | gfc | 13f-legal |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | r47-power-trim | R47 basket / power / trim | +9.16% | -7.92% | +23.78% | 87.50% | +16.22% | 1 | 7 | 1 | 3.00 | yes | 8/8 | 78 | 90.20% | no | -40.94% | -$392.63 | +10.55% | +23.78% | +1.87% | +18.89% | +2.41% | +11.53% | +6.78% | -7.92% | +18.36% | not run |
+| 2 | r47-power-passive | R47 basket / power / passive | +6.79% | -9.29% | +22.49% | 75.00% | +11.86% | 2 | 10 | 2 | 4.67 | no | 8/8 | 32 | 99.01% | no | -44.57% | -$2,317.52 | +6.88% | +22.49% | -3.63% | +12.21% | +2.41% | +6.10% | +7.48% | -9.29% | +14.41% | not run |
+| 3 | r47-power-dip-trim | R47 basket / power / dip-trim | +6.71% | -4.21% | +12.70% | 62.50% | +12.47% | 3 | 5 | 3.5 | 3.83 | yes | 8/8 | 86 | 69.34% | no | -42.92% | -$1,098.14 | +10.08% | +12.70% | -0.26% | +12.39% | +7.17% | +11.89% | -4.21% | -1.07% | +6.24% | not run |
+| 4 | r47-power-dip | R47 basket / power / dip | +5.85% | -5.82% | +12.73% | 62.50% | +12.02% | 4 | 6 | 3.5 | 4.50 | no | 8/8 | 31 | 76.71% | no | -44.55% | -$1,736.93 | +8.86% | +12.73% | -2.04% | +10.17% | +7.17% | +11.89% | -1.21% | -5.82% | +4.52% | not run |
+| 5 | r47-defense-trim | R47 basket / defense / trim | -0.13% | -13.26% | +36.70% | 50.00% | +11.90% | 5 | 11.5 | 6 | 7.50 | no | 8/8 | 85 | 86.97% | no | -53.01% | -$5,617.30 | -0.16% | -6.91% | -13.26% | +36.70% | +5.89% | -4.44% | -5.47% | +6.61% | +4.18% | not run |
+| 6 | r47-control-dip-trim | R47 basket / control / dip-trim | -0.64% | -2.48% | +3.96% | 25.00% | +2.03% | 6 | 1.5 | 10.5 | 6.00 | yes | 8/8 | 33 | 85.56% | no | -40.65% | -$5,743.64 | -0.69% | -1.38% | -0.09% | +3.58% | -1.05% | -2.48% | -0.22% | +3.96% | -1.14% | not run |
+| 7 | r47-defense-dip-trim | R47 basket / defense / dip-trim | -0.81% | -8.14% | +22.79% | 50.00% | +8.83% | 7 | 8.5 | 6 | 7.17 | no | 8/8 | 69 | 68.05% | no | -52.86% | -$3,983.25 | -1.73% | -2.10% | -8.14% | +22.79% | +6.16% | -3.77% | -4.98% | +4.29% | +0.49% | not run |
+| 8 | r47-defense-passive | R47 basket / defense / passive | -0.89% | -13.26% | +34.10% | 50.00% | +11.79% | 8 | 11.5 | 6 | 8.50 | no | 8/8 | 32 | 95.58% | no | -54.47% | -$5,982.00 | -1.08% | -6.91% | -13.26% | +34.10% | +5.92% | -6.77% | -4.30% | +4.67% | +2.53% | not run |
+| 9 | r47-control-dip | R47 basket / control / dip | -1.10% | -2.48% | +3.58% | 25.00% | +1.91% | 9 | 1.5 | 10.5 | 7.00 | no | 8/8 | 31 | 85.95% | no | -40.65% | -$5,972.22 | -1.37% | -1.38% | -0.09% | +3.58% | -1.05% | -2.48% | -1.41% | +2.33% | -1.14% | not run |
+| 10 | r47-control-passive | R47 basket / control / passive | -1.22% | -3.22% | +2.30% | 25.00% | +2.72% | 10.5 | 3 | 10.5 | 8.00 | no | 8/8 | 32 | 96.54% | no | -56.70% | -$8,312.64 | -1.26% | -0.90% | -3.11% | +2.30% | -1.54% | -2.78% | -3.22% | +1.36% | -0.65% | not run |
+| 11 | r47-control-trim | R47 basket / control / trim | -1.22% | -3.57% | +3.33% | 25.00% | +2.95% | 10.5 | 4 | 10.5 | 8.33 | no | 8/8 | 42 | 96.26% | no | -56.70% | -$8,196.45 | -1.26% | -0.90% | -3.11% | +2.30% | -1.54% | -2.78% | -3.57% | +3.33% | -0.65% | not run |
+| 12 | r47-defense-dip | R47 basket / defense / dip | -1.44% | -8.14% | +21.40% | 37.50% | +11.01% | 12 | 8.5 | 8 | 9.50 | no | 8/8 | 28 | 75.14% | no | -54.08% | -$3,969.77 | -3.15% | -2.10% | -8.14% | +21.40% | +6.25% | -6.14% | -4.28% | +6.34% | -0.77% | not run |
+
+## Pareto frontier -- the defensible choices, not a single ordering's winner
+
+A card is on the frontier when no other ranked card is at least as good on all of (median, worst-window, hit-rate) *and* strictly better on at least one. This is the honest answer to "which cards are defensible choices" -- a single ordering, whichever criterion it uses, cannot give that answer on its own.
+
+**Exposure caveat.** The worst-window criterion structurally favours low-exposure books -- a book that never puts much capital at risk cannot sustain a deep drawdown, so a small book reaches a shallow worst window almost for free, the same way a large negative benchmark structurally favours it on adjusted_excess (see the incommensurable-exposure flag above). Frontier membership earned mainly on the worst-window axis is not the same finding as frontier membership earned on the median, and both are weaker evidence for a card whose `mean_exposure` sits well below the field's -- read the column below beside every row rather than trusting frontier membership alone.
+
+| agent_id | display_name | median_adj_excess | worst | hit_rate | borda | mean_exposure | incommensurable_exposure |
+|---|---|---|---|---|---|---|---|
+| r47-power-trim | R47 basket / power / trim | +9.16% | -7.92% | 87.50% | 3.00 | 90.20% | no |
+| r47-power-dip-trim | R47 basket / power / dip-trim | +6.71% | -4.21% | 62.50% | 3.83 | 69.34% | no |
+| r47-control-dip-trim | R47 basket / control / dip-trim | -0.64% | -2.48% | 25.00% | 6.00 | 85.56% | no |
+
+## Unranked (fewer than 5 main windows run, zero trades in every window run, or a provenance violation (a run file for a window the eligibility map marks ineligible because the basket was not yet knowable there) -- excluded from the ranking, not placed last
+
+_Every scored card is ranked._
+
+wrote data\rounds\r47-2026-09\scorecard.json

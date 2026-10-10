@@ -1,0 +1,24 @@
+{
+  "agent_id": "g1855-4a8d06c30426",
+  "display_name": "auto g1855 · mean-reversion (roth)",
+  "discipline": "mean-reversion",
+  "purpose": "roth",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 13/21-day EMA crossover trigger inside a 135-day SMA regime filter on AAPL, AMAT, LRCX, KLAC, INTU, IGV, with a 8% stop and a 123-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "AAPL",
+    "AMAT",
+    "LRCX",
+    "KLAC",
+    "INTU",
+    "IGV"
+  ],
+  "entry": "close > sma(135) and ema(13) crosses_above ema(21)",
+  "exit": "ema(13) crosses_below ema(21)",
+  "stop_loss_pct": "0.08",
+  "take_profit_pct": null,
+  "max_hold_days": 123,
+  "max_positions": 3,
+  "position_pct": "0.2",
+  "rank_by": null,
+  "designed_through": "2026-02-13"
+}

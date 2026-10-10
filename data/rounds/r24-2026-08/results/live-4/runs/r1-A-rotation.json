@@ -1,0 +1,394 @@
+{
+  "card": {
+    "agent_id": "A-rotation",
+    "display_name": "Strategy A - Semis Breadth-Capped Rotation",
+    "discipline": "pairs-rotation",
+    "purpose": "trading",
+    "thesis": "This engine cannot express relative strength: entry and exit are evaluated per symbol against that symbol's own bars, with no cross-sectional comparison, so there is no way to buy 'the strongest semiconductor name' or trade a spread. What this card actually does is apply one absolute condition -- close above its own 50-day average with RSI(14) between 55 and 80, i.e. a confirmed, non-extreme uptrend -- identically to a 9-name cyclical-semiconductor universe (NVDA AMD MU INTC MRVL AVGO TSM QCOM SOXX), and cap concurrent holdings at 3 of 9. That cap is the only 'rotation' logic available: the mechanism is that semiconductor demand and AI-capex cycles tend to move the whole group together and to persist for quarters rather than days, so entering only into names already confirmed in trend, and exiting on trend break or momentum fade, should keep capital on the right side of the cycle more often than not, while the cap prevents any single session from committing to more than 3 names at once. I measured pairwise daily-return correlation across these 9 names over the trailing ~253 sessions through 2026-02-13: mean 0.589, range 0.286 (INTC vs AVGO) to 0.824 (SOXX vs TSM). That is high -- this is a concentrated sector bet dressed as a 3-of-9 rotation, not a diversified basket, and I am not pretending otherwise. It is not a coin-flip between one name and nothing, though: breadth genuinely varies session to session under the proposed filter (median 4 of 9 names qualifying; at least 4 qualify on 50.6% of sessions, at least 6 on 21.3%), so the cap binds and actually forces a choice often enough to matter. When more than 3 names qualify on the same session, the broker fills entries in the fixed order the universe list is written -- alphabetical here -- not by any measure of relative strength, momentum magnitude, or liquidity. That is an arbitrary tiebreak, not a 'buy the leader' mechanism, and the card cannot do better than that. On the other side of these trades: momentum/trend traders who initiated the move earlier and are already positioned before this rule confirms it; mean-reversion sellers who fade strength too early inside a still-intact uptrend and get run over; and dip-buyers in choppy or declining regimes who buy bottoms this rule cannot see coming and will instead get chopped by.",
+    "universe": [
+      "MU",
+      "INTC",
+      "AMD",
+      "TSM",
+      "SOXX",
+      "NVDA",
+      "AVGO",
+      "QCOM",
+      "MRVL"
+    ],
+    "entry": "close > sma(50) and rsi(14) > 55 and rsi(14) < 80",
+    "exit": "close < sma(50) or rsi(14) < 45",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": "0.20",
+    "max_hold_days": 120,
+    "max_positions": 3,
+    "position_pct": "0.30",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 85,
+  "starting_equity": "10000.00",
+  "ending_equity": "15581.97",
+  "total_return": "0.558197",
+  "max_drawdown": "-0.1411468483719076",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 1.0,
+  "capital_exposure": 0.7618866352941176,
+  "win_rate": 0.5555555555555556,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "MU",
+      "entry_date": "2026-02-17",
+      "entry_price": "401.15",
+      "exit_date": "2026-03-04",
+      "exit_price": "393.44",
+      "quantity": "7",
+      "exit_reason": "rule",
+      "pnl": "-54.05",
+      "return_pct": "-0.01924823275938818753227328573",
+      "bars_held": 11
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-02-17",
+      "entry_price": "349.98",
+      "exit_date": "2026-03-04",
+      "exit_price": "339.79",
+      "quantity": "8",
+      "exit_reason": "rule",
+      "pnl": "-81.60",
+      "return_pct": "-0.02914452254414537973598491342",
+      "bars_held": 11
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2026-02-17",
+      "entry_price": "362.05",
+      "exit_date": "2026-03-09",
+      "exit_price": "335.43",
+      "quantity": "8",
+      "exit_reason": "rule",
+      "pnl": "-213.04",
+      "return_pct": "-0.07355337660544123739814942687",
+      "bars_held": 14
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2026-03-10",
+      "entry_price": "348.90",
+      "exit_date": "2026-03-16",
+      "exit_price": "325.86",
+      "quantity": "8",
+      "exit_reason": "rule",
+      "pnl": "-184.39",
+      "return_pct": "-0.06606119231871596445973058183",
+      "bars_held": 4
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2026-03-12",
+      "entry_price": "410.21",
+      "exit_date": "2026-03-25",
+      "exit_price": "382.81",
+      "quantity": "7",
+      "exit_reason": "rule",
+      "pnl": "-191.88",
+      "return_pct": "-0.06682291648528454067080624210",
+      "bars_held": 9
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-03-26",
+      "entry_price": "218.09",
+      "exit_date": "2026-03-27",
+      "exit_price": "201.67",
+      "quantity": "13",
+      "exit_reason": "rule",
+      "pnl": "-213.54",
+      "return_pct": "-0.07531823488538606150601198517",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-03-09",
+      "entry_price": "87.97",
+      "exit_date": "2026-04-02",
+      "exit_price": "102.25",
+      "quantity": "33",
+      "exit_reason": "target",
+      "pnl": "471.14",
+      "return_pct": "0.1622936193812628960974988030",
+      "bars_held": 18
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2026-04-02",
+      "entry_price": "46.08",
+      "exit_date": "2026-04-09",
+      "exit_price": "58.37",
+      "quantity": "62",
+      "exit_reason": "target",
+      "pnl": "761.87",
+      "return_pct": "0.2666715669802867383512544803",
+      "bars_held": 4
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-04-02",
+      "entry_price": "102.35",
+      "exit_date": "2026-04-13",
+      "exit_price": "129.91",
+      "quantity": "28",
+      "exit_reason": "target",
+      "pnl": "771.57",
+      "return_pct": "0.2692337218228766836485449089",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-04-06",
+      "entry_price": "219.39",
+      "exit_date": "2026-04-17",
+      "exit_price": "280.86",
+      "quantity": "13",
+      "exit_reason": "target",
+      "pnl": "799.01",
+      "return_pct": "0.2801509079370422184588737303",
+      "bars_held": 9
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2026-04-14",
+      "entry_price": "65.19",
+      "exit_date": "2026-04-27",
+      "exit_price": "83.63",
+      "quantity": "46",
+      "exit_reason": "target",
+      "pnl": "848.13",
+      "return_pct": "0.2828287880909982192520858761",
+      "bars_held": 9
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2026-04-10",
+      "entry_price": "420.50",
+      "exit_date": "2026-04-28",
+      "exit_price": "503.29",
+      "quantity": "7",
+      "exit_reason": "target",
+      "pnl": "579.43",
+      "return_pct": "0.1968506879565143536606081196",
+      "bars_held": 12
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2026-04-28",
+      "entry_price": "503.79",
+      "exit_date": "2026-05-06",
+      "exit_price": "660.04",
+      "quantity": "5",
+      "exit_reason": "target",
+      "pnl": "781.16",
+      "return_pct": "0.3101133408761587169257031700",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-05-06",
+      "entry_price": "409.69",
+      "exit_date": "2026-05-27",
+      "exit_price": "507.75",
+      "quantity": "8",
+      "exit_reason": "target",
+      "pnl": "784.37",
+      "return_pct": "0.2393181429861602675193438942",
+      "bars_held": 14
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2026-04-20",
+      "entry_price": "369.40",
+      "exit_date": "2026-06-03",
+      "exit_price": "449.77",
+      "quantity": "8",
+      "exit_reason": "target",
+      "pnl": "642.86",
+      "return_pct": "0.2175351922035733622089875474",
+      "bars_held": 31
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-04-27",
+      "entry_price": "209.75",
+      "exit_date": "2026-06-08",
+      "exit_price": "210.07",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "4.40",
+      "return_pct": "0.001498382428060616380044270390",
+      "bars_held": 29
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-06-03",
+      "entry_price": "534.02",
+      "exit_date": "2026-06-08",
+      "exit_price": "484.76",
+      "quantity": "5",
+      "exit_reason": "stop",
+      "pnl": "-246.37",
+      "return_pct": "-0.09226995243623834313321598442",
+      "bars_held": 3
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-06-08",
+      "entry_price": "288.83",
+      "exit_date": "2026-06-11",
+      "exit_price": "260.41",
+      "quantity": "11",
+      "exit_reason": "stop",
+      "pnl": "-312.70",
+      "return_pct": "-0.09842216088104673085457629999",
+      "bars_held": 3
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2026-05-27",
+      "entry_price": "956.14",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "3",
+      "exit_reason": "open_at_end",
+      "pnl": "261.15",
+      "return_pct": "0.09104315267638630326102871964",
+      "bars_held": 15
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-06-09",
+      "entry_price": "503.00",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "6",
+      "exit_reason": "open_at_end",
+      "pnl": "56.88",
+      "return_pct": "0.01884691848906560636182902584",
+      "bars_held": 6
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-06-11",
+      "entry_price": "260.67",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "11",
+      "exit_reason": "open_at_end",
+      "pnl": "317.57",
+      "return_pct": "0.1107530594237925346223194077",
+      "bars_held": 4
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2921.50 exceeds $957.81 of settled cash (total cash $4576.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2907.84 exceeds $957.81 of settled cash (total cash $4576.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2971.92 exceeds $957.81 of settled cash (total cash $4576.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2819.84 exceeds $957.81 of settled cash (total cash $4576.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2986.08 exceeds $1633.14 of settled cash (total cash $5270.51; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2963.60 exceeds $1633.14 of settled cash (total cash $5270.51; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2695.49 exceeds $1633.14 of settled cash (total cash $5270.51; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2791.80 exceeds $1633.14 of settled cash (total cash $5270.51; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2958.72 exceeds $1633.14 of settled cash (total cash $5270.51; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$2990.69 exceeds $1633.14 of settled cash (total cash $5270.51; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2987.12 exceeds $2271.77 of settled cash (total cash $5922.85; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2895.13 exceeds $2271.77 of settled cash (total cash $5922.85; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$3000.00 exceeds $2271.77 of settled cash (total cash $5922.85; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2807.70 exceeds $2271.77 of settled cash (total cash $5922.85; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$2968.90 exceeds $2271.77 of settled cash (total cash $5922.85; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "0.08942276590113800099979416003",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

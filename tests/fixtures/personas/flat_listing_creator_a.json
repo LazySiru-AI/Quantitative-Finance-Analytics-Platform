@@ -1,0 +1,37 @@
+{
+  "_type": "playlist",
+  "id": "UCaaaaaaaaaaaaaaaaaaaaaa",
+  "title": "Creator A - Videos",
+  "entries": [
+    {
+      "_type": "url",
+      "duration": 612.0,
+      "id": "vidAAAAAA01",
+      "ie_key": "Youtube",
+      "thumbnails": [{"url": "https://i.ytimg.com/vi/vidAAAAAA01/hqdefault.jpg"}],
+      "title": "36 1 September Market Headwinds",
+      "url": "https://www.youtube.com/watch?v=vidAAAAAA01",
+      "view_count": 18234
+    },
+    {
+      "_type": "url",
+      "duration": 481.0,
+      "id": "aBcDeFgHiJk",
+      "ie_key": "Youtube",
+      "thumbnails": [{"url": "https://i.ytimg.com/vi/aBcDeFgHiJk/hqdefault.jpg"}],
+      "title": "FOMC Preview",
+      "url": "https://www.youtube.com/watch?v=aBcDeFgHiJk",
+      "view_count": 9021
+    },
+    {
+      "_type": "url",
+      "duration": 730.0,
+      "id": "zYxWvUtSrQp",
+      "ie_key": "Youtube",
+      "thumbnails": [{"url": "https://i.ytimg.com/vi/zYxWvUtSrQp/hqdefault.jpg"}],
+      "title": "NVDA Earnings Reaction",
+      "url": "https://www.youtube.com/watch?v=zYxWvUtSrQp",
+      "view_count": 45210
+    }
+  ]
+}

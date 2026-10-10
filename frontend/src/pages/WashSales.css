@@ -1,0 +1,93 @@
+/* =============================================================================
+   Wash Sales page — the scope switch and the per-row links added with it.
+
+   Everything else this page renders (`.panel`, `.wsale-*` cards, countdown bar, badges) is styled
+   in `styles.css` and is untouched here: this file exists because the scope switch and the two
+   outbound links per row are new, not to fork the page's existing look. `.visually-hidden` (used by
+   the sales table's caption) is also the app-wide utility from `styles.css` — deliberately not
+   redefined, so there is one definition of it and captions on this page behave exactly as they do
+   on every other.
+   ============================================================================= */
+
+/* The cross-link under the page subtitle. Sits above the disclaimer, tight to the subtitle it
+   follows rather than reading as its own paragraph of the page. */
+.wsale-crosslink {
+  margin: -0.35rem 0 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* --- scope switch ---------------------------------------------------------------------------
+   A radio group that looks like a segmented control: one pressed option, the alternatives visible
+   beside it. The visible alternative is the point — a reader on a year-filtered list has to be
+   able to see that a wider scope exists without opening a menu to find out. */
+.wsale-scope-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.wsale-scope-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.wsale-scope-switch-label {
+  margin-right: 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wsale-scope-option {
+  padding: 0.25rem 0.7rem;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.wsale-scope-option:hover {
+  color: var(--fg);
+  border-color: var(--accent);
+}
+
+/* The active option is marked three ways, not one: filled, bordered in the accent, and bold. The
+   `aria-checked` state carries it for a screen reader, and colour is never the only signal — the
+   rule `docs/COPY-STYLE.md` states for pills applies to a chosen segment for the same reason. */
+.wsale-scope-option.is-active {
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.wsale-scope-option:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.wsale-scope-note {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+/* --- per-row link out to the Tax page's Disposals tab ---------------------------------------- */
+.wsale-disposals-link {
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+/* A link inside the card's `<summary>` keeps the summary's own pointer affordance from claiming it
+   visually — the rest of the row expands the card, this one navigates, and they must not look like
+   the same control. */
+.wsale-symbol-summary .wsale-disposals-link,
+.wsale-symbol-name a {
+  position: relative;
+  z-index: 1;
+}

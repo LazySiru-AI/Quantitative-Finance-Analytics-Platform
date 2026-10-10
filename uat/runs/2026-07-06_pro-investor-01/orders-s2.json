@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "order_id": "s2-qqq-buy",
+      "session": 2,
+      "decided_on": "2026-07-06",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "QQQ closed 722.82 on 2026-07-06, above sma20 (720.2145) for the first time this week -- it was below sma20 (721.10 vs close 712.60) on session 1's data -- while remaining above sma50 (710.5038) and sma200 (635.5878) throughout, confirming the primary uptrend on the two longer timeframes even while 20d change is still -2.40% from the early-month pullback. 5d momentum reaccelerated to +2.31% with a +1.43% 1d gain.",
+      "invalidation": "A close back below sma20 (720.21) would signal the cross failed and the pullback has resumed; sized smaller than XLF because this signal is one session old.",
+      "stop_level": "715.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=722.82, sma20=720.2145, sma50=710.5038, sma200=635.5878, change_1d=+1.43%, change_5d=+2.31%, change_20d=-2.40% via brief-s2.json watchlist.QQQ (as of 2026-07-06)",
+        "session 1 comparison: close=712.60 was below sma20=721.1040 via brief-s1.json watchlist.QQQ (as of 2026-07-02)"
+      ]
+    }
+  ]
+}

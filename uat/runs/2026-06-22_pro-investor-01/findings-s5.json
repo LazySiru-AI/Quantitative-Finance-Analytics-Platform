@@ -1,0 +1,112 @@
+[
+  {
+    "finding_id": "cash-settled-unsettled-split-fee-misattributed",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 5,
+    "observed_at": "2026-08-18T06:50:00Z",
+    "session_date": "2026-06-26",
+    "surface": "ui",
+    "locator": "/portfolio, backend/app/core/cash.py",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "Settled/unsettled cash split misattributes a sale's fee to settled cash instead of the unsettled proceeds it came from",
+    "observed": "Session 4's IWM sale carried a $0.05 fee (gross $1,796.22, cash_delta $1,796.17). /portfolio's Cash by account row read SETTLED $5,698.37 / UNSETTLED $1,796.17 / BALANCE $7,494.54, matching the broker's own book_after.settled_cash to the cent -- the fee-net figure, not the gross. Session 5's TLT sale carried a $0.03 fee (gross $1,130.61, cash_delta $1,130.58); portfolio then read SETTLED $6,972.24 / UNSETTLED $1,130.58, again matching exactly. The free cross-check the run instructions asked for: a same-session oversized order (45 XLV, $7,038.00) was rejected insufficient_cash with reason '$7038.00 exceeds $6972.24 of settled cash (total cash $8102.82...)' -- $6,972.24 is the exact figure the portfolio page showed as settled.",
+    "expected": "settled = balance - unsettled, with unsettled equal to pending sale proceeds net of any fee sharing that sale's settle date, so the split ties to what the broker would actually let a same-day order spend.",
+    "why_it_matters": "This is the exact number I size a same-day order against under the no-reuse-of-unsettled-proceeds rule. Two independent fee amounts ($0.05 and $0.03) both landed correctly, and the broker's own rejection message -- generated independently of the portfolio page -- named the identical settled figure.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["backend/app/core/cash.py:450-470", "frontend/src/pages/Portfolio.tsx"],
+      "note": "Re-test of the defect fixed by classifying all 17 TxnAction members explicitly. Held across two independent fee amounts this run ($0.05 on IWM, $0.03 on TLT), both agreeing to the cent with the paper broker's book_after and with an independent insufficient_cash rejection message. No regression."
+    }
+  },
+  {
+    "finding_id": "wash-sale-repurchase-safe-date-not-displayed",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 5,
+    "observed_at": "2026-08-18T06:51:00Z",
+    "session_date": "2026-06-26",
+    "surface": "ui",
+    "locator": "/tax",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "Wash-sale per-symbol panel's repurchase-safe date is computed but never rendered",
+    "observed": "Sold 13 TLT at a loss (2026-06-26) and bought back 6 the same session, creating a wash sale. Real wall-clock 'now' (2026-08-17/18) is well past the 30-day window from that loss sale, so the window is closed by the time this is checked. The Tax page's 'Wash sales by symbol' table shows: 'TLT ... $3.90 ... 0.00 ... 1 ... 2026-06-26 ... SAFE TO REPURCHASE -- WINDOW CLOSED 2026-07-27'. The date is present in the closed-window state, not just the open one.",
+    "expected": "The closed-window branch should render the same repurchase-safe date the open branch always did, since the caption promises a date either way.",
+    "why_it_matters": "The prior defect was that this exact date vanished once the window closed while the caption still promised one -- and because the harness clock always makes a short replay's windows closed by the time anyone checks them, the closed branch is the one every real re-test will land in.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["frontend/src/pages/Tax.tsx:756-767", "backend/app/tax/washsale_summary.py:140-142"],
+      "note": "Re-test of the defect fixed in commit b61b198. Held: closed-window branch renders 'WINDOW CLOSED 2026-07-27' with the date intact, produced by this run's own deliberate same-day wash sale rather than a pre-loaded fixture. No regression."
+    }
+  },
+  {
+    "finding_id": "wash-sale-tolled-holding-period-not-displayed",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 5,
+    "observed_at": "2026-08-18T06:51:30Z",
+    "session_date": "2026-06-26",
+    "surface": "ui",
+    "locator": "/tax",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "Wash-sale's tolled holding-period start date is computed but not shown anywhere in the UI",
+    "observed": "The 6 TLT shares bought back 2026-06-26 (the replacement lot) are still held -- not in the Disposals table, since nothing has sold them. The 'Wash sales by symbol' table's TLT row reads 'TLT (holding tolled to 2026-06-25)' beside the symbol, and the portfolio page shows this lot's cost basis as $526.20 (the $522.30 purchase plus the $3.90 disallowed loss rolled in), 6 ST / 0 LT.",
+    "expected": "A still-held replacement lot's tolled holding-period start should surface somewhere, since tolling changes whether that lot becomes long-term on schedule.",
+    "why_it_matters": "This is the position I am still holding into next week; knowing its tolled holding-period start (2026-06-25, the original lot's acquisition date, not 2026-06-26 when I actually bought the replacement) is what tells me when it becomes long-term.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["frontend/src/pages/Tax.tsx:760-836,913-954 (tolledOpenLotDatesBySymbol)", "frontend/src/pages/Tax.tsx:416-419 (disposed-row case, for contrast)"],
+      "note": "Re-test of the defect fixed by keying on every replacement_lot_ids entry rather than basis_added_to_lot_id. Held: the still-held TLT replacement lot's tolled date renders in the wash-sales-by-symbol panel, produced by this run's own trade rather than a fixture. No regression."
+    }
+  },
+  {
+    "finding_id": "lot-selection-method-undisclosed",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 5,
+    "observed_at": "2026-08-18T06:52:00Z",
+    "session_date": "2026-06-26",
+    "surface": "ui",
+    "locator": "/tax",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "FIFO lot selection is applied but not stated anywhere in the UI",
+    "observed": "The Tax page's Disposals table names the lot and method on every row: '2026-06-25 IWM 6 2026-06-22 3b14c9da . FIFO Short $1,796.22 $1,783.68 $12.54' and '2026-06-26 TLT 13 2026-06-25 9b2e8d28 . FIFO Short $1,130.61 $1,139.06 -$4.55'.",
+    "expected": "The lot id and selection method visible on every disposal row.",
+    "why_it_matters": "With only single-lot positions this run, FIFO vs any other method could not disagree on which shares moved, but the disclosure itself -- lot id plus method, on every disposal row without having to reverse-engineer the arithmetic -- is exactly what the original finding asked for.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["backend/app/tax (Disposal.lot_method)", "frontend/src/pages/Tax.tsx (Disposals table)"],
+      "note": "Re-test of the run-1 P1 fix. Held on both of this run's disposals. No regression."
+    }
+  },
+  {
+    "finding_id": "export-lacks-portfolio-statement",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 5,
+    "observed_at": "2026-08-18T06:52:30Z",
+    "session_date": "2026-06-26",
+    "surface": "api",
+    "locator": "GET /api/portfolio/statement.md",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "No portfolio statement export; only per-symbol research reports available",
+    "observed": "GET /api/portfolio/statement.md returns a Markdown statement: totals (cost basis $1,905.09, market value $1,998.57, cash $8,102.82 with the $6,972.24/$1,130.58 settled/unsettled split, total equity $10,101.39), a holdings table with per-row priced-as-of dates, and a cash-by-account table with the derivation window -- all agreeing with the portfolio page and the paper broker's own book to the cent.",
+    "expected": "A downloadable statement of positions, basis, cash and valuation as of a date.",
+    "why_it_matters": "This is the end-of-week artifact a professional produces; it exists, is complete for this run's clean export (no completeness caveats needed), and every figure ties back to the same numbers shown elsewhere on the page.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["backend/app/api/portfolio.py"],
+      "note": "Re-test of the run-1/2 P1 fix. Held: fetched directly this session, all figures agree to the cent with book_after and the portfolio page. No regression."
+    }
+  }
+]

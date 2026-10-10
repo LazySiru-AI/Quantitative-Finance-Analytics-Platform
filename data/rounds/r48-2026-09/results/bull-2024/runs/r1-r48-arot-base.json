@@ -1,0 +1,969 @@
+{
+  "card": {
+    "agent_id": "r48-arot-base",
+    "display_name": "arot base",
+    "discipline": "pairs-rotation",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Round 48 cell on the taxable trading book: base `arot` (`A-rotation`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/candidates/A-rotation.json` -- entry 'close > sma(50) and rsi(14) > 55 and rsi(14) < 80', exit 'close < sma(50) or rsi(14) < 45', stop 0.12, take-profit 0.20, hold cap 120, 3 slots at 0.30 each. This is the BASE cell: the seated card unchanged except for its identifying fields. Its sibling risk1pct cell changes exactly one thing against it, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+    "falsification": "Baseline against which this base's risk1pct cell is contrasted. Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+    "universe": [
+      "MU",
+      "INTC",
+      "AMD",
+      "TSM",
+      "SOXX",
+      "NVDA",
+      "AVGO",
+      "QCOM",
+      "MRVL"
+    ],
+    "entry": "close > sma(50) and rsi(14) > 55 and rsi(14) < 80",
+    "exit": "close < sma(50) or rsi(14) < 45",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": "0.20",
+    "max_hold_days": 120,
+    "max_positions": 3,
+    "position_pct": "0.30",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 250,
+  "starting_equity": "10000.00",
+  "ending_equity": "11074.18",
+  "total_return": "0.10741800000000001",
+  "max_drawdown": "-0.22881726455398477",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.884,
+  "capital_exposure": 0.656410424,
+  "win_rate": 0.2777777777777778,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "AMD",
+      "entry_date": "2024-08-21",
+      "entry_price": "156.20",
+      "exit_date": "2024-08-23",
+      "exit_price": "153.52",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-51.00",
+      "return_pct": "-0.01718444639126625783408585484",
+      "bars_held": 2
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2024-08-21",
+      "entry_price": "165.20",
+      "exit_date": "2024-08-27",
+      "exit_price": "157.52",
+      "quantity": "18",
+      "exit_reason": "rule",
+      "pnl": "-138.32",
+      "return_pct": "-0.04651600753295668549905838041",
+      "bars_held": 4
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2024-08-26",
+      "entry_price": "154.78",
+      "exit_date": "2024-08-27",
+      "exit_price": "150.05",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-89.95",
+      "return_pct": "-0.03058670710890159887378350256",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2024-08-21",
+      "entry_price": "127.38",
+      "exit_date": "2024-08-30",
+      "exit_price": "119.47",
+      "quantity": "23",
+      "exit_reason": "rule",
+      "pnl": "-182.01",
+      "return_pct": "-0.06212496672059636691310491716",
+      "bars_held": 7
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2024-09-03",
+      "entry_price": "74.62",
+      "exit_date": "2024-09-09",
+      "exit_price": "67.81",
+      "quantity": "39",
+      "exit_reason": "rule",
+      "pnl": "-265.67",
+      "return_pct": "-0.09128988584898528613350376953",
+      "bars_held": 4
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2024-09-13",
+      "entry_price": "172.33",
+      "exit_date": "2024-09-18",
+      "exit_price": "168.38",
+      "quantity": "17",
+      "exit_reason": "rule",
+      "pnl": "-67.23",
+      "return_pct": "-0.02294844706291963776748440919",
+      "bars_held": 3
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2024-09-20",
+      "entry_price": "156.08",
+      "exit_date": "2024-10-23",
+      "exit_price": "152.92",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-60.12",
+      "return_pct": "-0.02027300439720521190212846314",
+      "bars_held": 23
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2024-09-13",
+      "entry_price": "166.82",
+      "exit_date": "2024-11-01",
+      "exit_price": "168.18",
+      "quantity": "18",
+      "exit_reason": "rule",
+      "pnl": "24.39",
+      "return_pct": "0.008122527274907085481357151421",
+      "bars_held": 35
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2024-09-12",
+      "entry_price": "74.11",
+      "exit_date": "2024-11-07",
+      "exit_price": "91.67",
+      "quantity": "40",
+      "exit_reason": "target",
+      "pnl": "702.29",
+      "return_pct": "0.2369079746323033328835514775",
+      "bars_held": 40
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2024-10-24",
+      "entry_price": "199.06",
+      "exit_date": "2024-11-14",
+      "exit_price": "188.31",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-150.58",
+      "return_pct": "-0.05403252429274734107447862095",
+      "bars_held": 15
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2024-11-08",
+      "entry_price": "112.20",
+      "exit_date": "2024-11-14",
+      "exit_price": "101.24",
+      "quantity": "26",
+      "exit_reason": "rule",
+      "pnl": "-285.04",
+      "return_pct": "-0.09771013300425065130947483889",
+      "bars_held": 4
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2024-11-15",
+      "entry_price": "144.94",
+      "exit_date": "2024-11-26",
+      "exit_price": "137.63",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "-146.28",
+      "return_pct": "-0.05046226024561887677659721264",
+      "bars_held": 7
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2024-11-04",
+      "entry_price": "22.97",
+      "exit_date": "2024-12-04",
+      "exit_price": "22.52",
+      "quantity": "129",
+      "exit_reason": "rule",
+      "pnl": "-58.15",
+      "return_pct": "-0.01962451866776010502407926753",
+      "bars_held": 21
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2024-11-15",
+      "entry_price": "89.18",
+      "exit_date": "2024-12-05",
+      "exit_price": "116.54",
+      "quantity": "33",
+      "exit_reason": "target",
+      "pnl": "902.77",
+      "return_pct": "0.3067578679823577782761456231",
+      "bars_held": 13
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2024-12-05",
+      "entry_price": "145.18",
+      "exit_date": "2024-12-11",
+      "exit_price": "137.29",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "-157.88",
+      "return_pct": "-0.05437388069982091197134591542",
+      "bars_held": 4
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2024-12-03",
+      "entry_price": "193.60",
+      "exit_date": "2024-12-13",
+      "exit_price": "198.41",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "72.06",
+      "return_pct": "0.02481404958677685950413223140",
+      "bars_held": 8
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2024-12-12",
+      "entry_price": "181.02",
+      "exit_date": "2024-12-16",
+      "exit_price": "231.67",
+      "quantity": "16",
+      "exit_reason": "target",
+      "pnl": "810.29",
+      "return_pct": "0.2797653574190697160534747542",
+      "bars_held": 2
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2024-12-17",
+      "entry_price": "109.80",
+      "exit_date": "2024-12-19",
+      "exit_price": "90.03",
+      "quantity": "27",
+      "exit_reason": "rule",
+      "pnl": "-533.86",
+      "return_pct": "-0.1800782567631383660527558524",
+      "bars_held": 2
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2024-12-06",
+      "entry_price": "113.54",
+      "exit_date": "2025-01-28",
+      "exit_price": "103.25",
+      "quantity": "26",
+      "exit_reason": "rule",
+      "pnl": "-267.62",
+      "return_pct": "-0.09065595317136624164984214306",
+      "bars_held": 33
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2024-12-16",
+      "entry_price": "203.30",
+      "exit_date": "2025-01-28",
+      "exit_price": "195.55",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-108.58",
+      "return_pct": "-0.03814911109549574871758836343",
+      "bars_held": 27
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2024-12-20",
+      "entry_price": "220.47",
+      "exit_date": "2025-01-28",
+      "exit_price": "207.91",
+      "quantity": "13",
+      "exit_reason": "rule",
+      "pnl": "-163.36",
+      "return_pct": "-0.05699711455596610039391370185",
+      "bars_held": 23
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2025-02-07",
+      "entry_price": "121.47",
+      "exit_date": "2025-02-10",
+      "exit_price": "111.73",
+      "quantity": "25",
+      "exit_reason": "rule",
+      "pnl": "-243.58",
+      "return_pct": "-0.08021075162591586399934140117",
+      "bars_held": 1
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-02-12",
+      "entry_price": "21.99",
+      "exit_date": "2025-02-19",
+      "exit_price": "25.97",
+      "quantity": "143",
+      "exit_reason": "target",
+      "pnl": "569.01",
+      "return_pct": "0.1809500186034974575220141387",
+      "bars_held": 4
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2025-01-29",
+      "entry_price": "171.64",
+      "exit_date": "2025-02-24",
+      "exit_price": "165.83",
+      "quantity": "17",
+      "exit_reason": "rule",
+      "pnl": "-98.85",
+      "return_pct": "-0.03387733559981904670514208946",
+      "bars_held": 17
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2025-02-06",
+      "entry_price": "234.62",
+      "exit_date": "2025-02-24",
+      "exit_price": "218.49",
+      "quantity": "12",
+      "exit_reason": "rule",
+      "pnl": "-193.63",
+      "return_pct": "-0.06877433012246753615775864519",
+      "bars_held": 11
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-02-20",
+      "entry_price": "104.03",
+      "exit_date": "2025-02-25",
+      "exit_price": "95.45",
+      "quantity": "28",
+      "exit_reason": "rule",
+      "pnl": "-240.32",
+      "return_pct": "-0.08250367339091745512970159707",
+      "bars_held": 3
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-02-25",
+      "entry_price": "24.22",
+      "exit_date": "2025-03-05",
+      "exit_price": "21.32",
+      "quantity": "123",
+      "exit_reason": "rule",
+      "pnl": "-356.79",
+      "return_pct": "-0.1197659664457916255463132666",
+      "bars_held": 6
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-03-17",
+      "entry_price": "101.11",
+      "exit_date": "2025-03-24",
+      "exit_price": "96.05",
+      "quantity": "29",
+      "exit_reason": "rule",
+      "pnl": "-146.82",
+      "return_pct": "-0.05007178934516521780648593713",
+      "bars_held": 5
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2025-03-25",
+      "entry_price": "113.33",
+      "exit_date": "2025-03-28",
+      "exit_price": "105.48",
+      "quantity": "26",
+      "exit_reason": "rule",
+      "pnl": "-204.18",
+      "return_pct": "-0.06929389325930400667892947078",
+      "bars_held": 3
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-03-14",
+      "entry_price": "23.69",
+      "exit_date": "2025-04-02",
+      "exit_price": "21.88",
+      "quantity": "126",
+      "exit_reason": "rule",
+      "pnl": "-228.16",
+      "return_pct": "-0.07643704731083371860070889197",
+      "bars_held": 13
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2025-04-28",
+      "entry_price": "190.63",
+      "exit_date": "2025-05-14",
+      "exit_price": "230.11",
+      "quantity": "15",
+      "exit_reason": "target",
+      "pnl": "592.10",
+      "return_pct": "0.2070677927573484411337844690",
+      "bars_held": 12
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-05-15",
+      "entry_price": "94.06",
+      "exit_date": "2025-06-11",
+      "exit_price": "115.54",
+      "quantity": "31",
+      "exit_reason": "target",
+      "pnl": "665.78",
+      "return_pct": "0.2283305782856515744926025255",
+      "bars_held": 18
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2025-05-02",
+      "entry_price": "179.89",
+      "exit_date": "2025-06-25",
+      "exit_price": "220.69",
+      "quantity": "17",
+      "exit_reason": "target",
+      "pnl": "693.49",
+      "return_pct": "0.2267693001932553553969255722",
+      "bars_held": 36
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2025-05-15",
+      "entry_price": "117.08",
+      "exit_date": "2025-06-26",
+      "exit_price": "145.90",
+      "quantity": "25",
+      "exit_reason": "target",
+      "pnl": "720.39",
+      "return_pct": "0.2461188930645712333447215579",
+      "bars_held": 28
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-06-27",
+      "entry_price": "125.20",
+      "exit_date": "2025-07-18",
+      "exit_price": "114.18",
+      "quantity": "23",
+      "exit_reason": "rule",
+      "pnl": "-253.54",
+      "return_pct": "-0.08804695096541186275871648840",
+      "bars_held": 14
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-06-26",
+      "entry_price": "22.41",
+      "exit_date": "2025-07-28",
+      "exit_price": "20.81",
+      "quantity": "135",
+      "exit_reason": "rule",
+      "pnl": "-216.10",
+      "return_pct": "-0.07142975192952881484786884162",
+      "bars_held": 21
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2025-06-12",
+      "entry_price": "225.05",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "13",
+      "exit_reason": "open_at_end",
+      "pnl": "242.97",
+      "return_pct": "0.08304821150855365474339035770",
+      "bars_held": 47
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2025-07-21",
+      "entry_price": "157.70",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "19",
+      "exit_reason": "open_at_end",
+      "pnl": "142.50",
+      "return_pct": "0.04755865567533291058972733037",
+      "bars_held": 22
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2025-07-29",
+      "entry_price": "241.62",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "12",
+      "exit_reason": "open_at_end",
+      "pnl": "-156.24",
+      "return_pct": "-0.05388626769307176558231934443",
+      "bars_held": 16
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2878.47 exceeds $273.14 of settled cash (total cash $3178.54; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2951.70 exceeds $273.14 of settled cash (total cash $3178.54; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2842.00 exceeds $273.14 of settled cash (total cash $3178.54; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2928.12 exceeds $455.72 of settled cash (total cash $4122.41; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2929.20 exceeds $455.72 of settled cash (total cash $4122.41; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2913.28 exceeds $455.72 of settled cash (total cash $4122.41; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$3028.41 exceeds $455.72 of settled cash (total cash $4122.41; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2954.20 exceeds $1205.21 of settled cash (total cash $6473.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$3033.36 exceeds $1205.21 of settled cash (total cash $6473.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$3014.83 exceeds $1354.72 of settled cash (total cash $5061.33; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2964.26 exceeds $2096.73 of settled cash (total cash $4527.47; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2895.27 exceeds $1661.36 of settled cash (total cash $9786.15; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2962.68 exceeds $664.68 of settled cash (total cash $4378.26; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2832.91 exceeds $664.68 of settled cash (total cash $4378.26; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2954.38 exceeds $664.68 of settled cash (total cash $4378.26; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2931.18 exceeds $664.68 of settled cash (total cash $4378.26; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2947.20 exceeds $1465.42 of settled cash (total cash $6906.26; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2824.20 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2937.22 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2855.34 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2900.04 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2957.13 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2889.15 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2957.75 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2996.35 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2976.56 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2918.70 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2935.25 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$3157.24 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$3203.92 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$3103.50 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$3050.75 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2963.20 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$3019.95 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2960.55 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2923.20 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$3000.96 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2889.71 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$2993.68 exceeds $2725.25 of settled cash (total cash $2725.25; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2890.50 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2951.52 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$3117.14 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$3014.48 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$3065.21 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2764.20 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2888.19 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$3000.60 exceeds $2725.25 of settled cash (total cash $6176.80; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$3007.16 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2941.65 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "SOXX",
+      "reason": "$2977.13 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2893.60 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2957.76 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2881.44 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$2985.06 exceeds $333.94 of settled cash (total cash $3915.58; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$3004.47 exceeds $989.93 of settled cash (total cash $4741.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2871.83 exceeds $989.93 of settled cash (total cash $4741.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2986.80 exceeds $989.93 of settled cash (total cash $4741.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2927.43 exceeds $989.93 of settled cash (total cash $4741.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2967.42 exceeds $989.93 of settled cash (total cash $4741.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$2979.99 exceeds $989.93 of settled cash (total cash $4741.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2920.80 exceeds $1716.20 of settled cash (total cash $5363.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2926.17 exceeds $1716.20 of settled cash (total cash $5363.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2965.14 exceeds $1716.20 of settled cash (total cash $5363.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2917.31 exceeds $1716.20 of settled cash (total cash $5363.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2975.02 exceeds $1716.20 of settled cash (total cash $5363.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$3083.73 exceeds $1716.20 of settled cash (total cash $5363.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2874.06 exceeds $2483.99 of settled cash (total cash $5110.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2945.16 exceeds $2483.99 of settled cash (total cash $5110.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2953.41 exceeds $2483.99 of settled cash (total cash $5110.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2872.50 exceeds $2483.99 of settled cash (total cash $5110.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2917.44 exceeds $2113.75 of settled cash (total cash $4923.00; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2959.87 exceeds $2113.75 of settled cash (total cash $4923.00; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AVGO",
+      "reason": "$2926.10 exceeds $2113.75 of settled cash (total cash $4923.00; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MRVL",
+      "reason": "$3007.60 exceeds $2113.75 of settled cash (total cash $4923.00; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "0.1399503367454490237061650321",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,143 @@
+{
+  "run_id": "2026-07-06_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-16T18:11:29.530106+00:00",
+  "window": {
+    "first_session": "2026-07-06",
+    "last_session": "2026-07-10",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "10001.96",
+    "pnl": "1.96",
+    "return_pct_of_1": "0.000196",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "0.004885",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 6,
+    "buys": 5,
+    "sells": 1,
+    "gross_traded": "8482.12",
+    "total_fees": "0.04",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-07-10",
+    "cash": "4336.24",
+    "settled_cash": "4336.24",
+    "positions_market_value": "5665.72",
+    "equity": "10001.96",
+    "return_since_inception_pct_of_1": "0.000196",
+    "positions": [
+      {
+        "symbol": "QQQ",
+        "quantity": "2",
+        "mark": "725.51",
+        "market_value": "1451.02",
+        "weight_pct_of_1": "0.145074"
+      },
+      {
+        "symbol": "SPY",
+        "quantity": "3",
+        "mark": "754.95",
+        "market_value": "2264.85",
+        "weight_pct_of_1": "0.226441"
+      },
+      {
+        "symbol": "XLF",
+        "quantity": "35",
+        "mark": "55.71",
+        "market_value": "1949.85",
+        "weight_pct_of_1": "0.194947"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 3,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-3.csv",
+      "session-4.csv",
+      "session-5.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "5c94840c69390ada447d0793898d538b90c87f85",
+        "adapter": "robinhood",
+        "row_count": 3,
+        "usable_row_count": 3,
+        "inserted": 0,
+        "duplicates": 3,
+        "conflicts": [],
+        "instruments": 2,
+        "skipped": {},
+        "ledger_fingerprint": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "226dde079b553c90a4fec08ca6474a5e224d0083",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "581389965bd8ac93d77e82bf5338f39be806e906",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "0d97e38c68b023e0a79313604481327585ad048a",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "43ee22a048bf5c42f19a2b5596de49788e7b7117",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+        "ledger_txn_count": 8
+      }
+    ],
+    "fingerprint_before_replay": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+    "fingerprint_after_replay": "231c974ffbcf10a268ea4f9ca5e35f91c36fd98f882a005c817529b8e233fdce",
+    "ledger_txn_count": 8,
+    "idempotent": true
+  },
+  "findings_recorded": 2
+}

@@ -1,0 +1,568 @@
+{
+  "sma_window": 200,
+  "note": "Descriptive only -- no p-values in this file. The one inferential number (hit-rate edge/q-value for close > sma(200)) is cited from trend-ma's own family, not re-derived here.",
+  "trend_ma_citation": {
+    "source_file": "data/trend_ma_primary.json",
+    "idea": "regime_filter_standalone",
+    "family_size_their_ledger": 45,
+    "cells": {
+      "SPY": {
+        "symbol": "SPY",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.6579375406636304,
+        "baseline": 0.6370604696435089,
+        "edge": 0.020877071020121485,
+        "n_raw": 6148,
+        "n_independent": 335,
+        "p_value": 0.49542386784846926,
+        "triggers": 6168,
+        "evaluable_bars": 8239,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 8438 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 8438 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.012901801347468767,
+        "baseline_median_forward": 0.012783505154639219,
+        "q_value": 0.8917629621272447,
+        "verdict": "inconclusive"
+      },
+      "QQQ": {
+        "symbol": "QQQ",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.6391224113184335,
+        "baseline": 0.6171009284216832,
+        "edge": 0.022021482896750322,
+        "n_raw": 4877,
+        "n_independent": 268,
+        "p_value": 0.4902999699340447,
+        "triggers": 4897,
+        "evaluable_bars": 6698,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6897 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6897 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.015143043424511005,
+        "baseline_median_forward": 0.015016578762870214,
+        "q_value": 0.8917629621272447,
+        "verdict": "inconclusive"
+      },
+      "IWM": {
+        "symbol": "IWM",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.5739008419083256,
+        "baseline": 0.5949128591615638,
+        "edge": -0.021012017253238202,
+        "n_raw": 4276,
+        "n_independent": 240,
+        "p_value": 0.5541799743826221,
+        "triggers": 4296,
+        "evaluable_bars": 6389,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6588 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6588 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.008963419743099776,
+        "baseline_median_forward": 0.01234873639115408,
+        "q_value": 0.9236332906377035,
+        "verdict": "rejected"
+      },
+      "XLK": {
+        "symbol": "XLK",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.636608623548922,
+        "baseline": 0.6097488482686878,
+        "edge": 0.0268597752802342,
+        "n_raw": 4824,
+        "n_independent": 264,
+        "p_value": 0.4121912375659019,
+        "triggers": 4844,
+        "evaluable_bars": 6749,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.014020857611806381,
+        "baseline_median_forward": 0.01329328773581362,
+        "q_value": 0.8917629621272447,
+        "verdict": "inconclusive"
+      },
+      "XLV": {
+        "symbol": "XLV",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.571304347826087,
+        "baseline": 0.5963739039976222,
+        "edge": -0.02506955617153528,
+        "n_raw": 4600,
+        "n_independent": 268,
+        "p_value": 0.4184153035578889,
+        "triggers": 4620,
+        "evaluable_bars": 6749,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.006625348651817187,
+        "baseline_median_forward": 0.008890633804656378,
+        "q_value": 0.8917629621272447,
+        "verdict": "rejected"
+      }
+    }
+  },
+  "per_symbol": {
+    "SPY": {
+      "time_in_regime": {
+        "evaluable_bars": 8241,
+        "favorable_bars": 6170,
+        "unfavorable_bars": 2071,
+        "favorable_pct": 0.7486955466569591,
+        "unfavorable_pct": 0.2513044533430409,
+        "transitions": 222,
+        "n_episodes": 223,
+        "n_favorable_episodes": 112,
+        "n_unfavorable_episodes": 111,
+        "favorable_episode_median_len": 6.0,
+        "unfavorable_episode_median_len": 4.0,
+        "favorable_episode_max_len": 525,
+        "unfavorable_episode_max_len": 314
+      },
+      "drawdown_avoided": {
+        "n_days": 8240,
+        "buy_hold_total_return": 15.615849003958868,
+        "buy_hold_max_drawdown": -0.564736691781716,
+        "favorable_days_contribution": 7.261407539134259,
+        "unfavorable_days_contribution": 1.0112612681615856,
+        "frictionless_favorable_only_total_return": 7.261407539134259,
+        "frictionless_favorable_only_max_drawdown": -0.2872461896238365,
+        "note": "favorable_only figures are frictionless (no slippage, no re-entry cost) and therefore an UPPER bound on what a real regime-gated strategy could achieve -- the costed version with real fills is trend-ma's regime_filter_standalone / this stream's own DSL family windows, not this number."
+      },
+      "loss_streak": {
+        "closed_trades": 111,
+        "open_trades_at_end": 1,
+        "longest_consecutive_losing_streak": 10,
+        "worst_trade_return_pct": -0.05317188043027876,
+        "worst_trade_dates": "2009-06-02 -> 2009-06-23",
+        "best_trade_return_pct": 0.6469411919806969,
+        "avg_loss_pct": -0.016404451086581465,
+        "avg_win_pct": 0.11330324319469379,
+        "max_drawdown_strategy": -0.30489055102448614,
+        "max_drawdown_buy_hold": -0.5647366917817163
+      },
+      "trend_ma_citation": {
+        "symbol": "SPY",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.6579375406636304,
+        "baseline": 0.6370604696435089,
+        "edge": 0.020877071020121485,
+        "n_raw": 6148,
+        "n_independent": 335,
+        "p_value": 0.49542386784846926,
+        "triggers": 6168,
+        "evaluable_bars": 8239,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 8438 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 8438 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.012901801347468767,
+        "baseline_median_forward": 0.012783505154639219,
+        "q_value": 0.8917629621272447,
+        "verdict": "inconclusive"
+      }
+    },
+    "QQQ": {
+      "time_in_regime": {
+        "evaluable_bars": 6699,
+        "favorable_bars": 4898,
+        "unfavorable_bars": 1801,
+        "favorable_pct": 0.7311539035676967,
+        "unfavorable_pct": 0.26884609643230334,
+        "transitions": 172,
+        "n_episodes": 173,
+        "n_favorable_episodes": 87,
+        "n_unfavorable_episodes": 86,
+        "favorable_episode_median_len": 5.0,
+        "unfavorable_episode_median_len": 4.0,
+        "favorable_episode_max_len": 572,
+        "unfavorable_episode_max_len": 308
+      },
+      "drawdown_avoided": {
+        "n_days": 6698,
+        "buy_hold_total_return": 7.032984063810279,
+        "buy_hold_max_drawdown": -0.8296390703529309,
+        "favorable_days_contribution": 6.573955391370699,
+        "unfavorable_days_contribution": 0.060606202270814036,
+        "frictionless_favorable_only_total_return": 6.573955391370699,
+        "frictionless_favorable_only_max_drawdown": -0.5827297348102223,
+        "note": "favorable_only figures are frictionless (no slippage, no re-entry cost) and therefore an UPPER bound on what a real regime-gated strategy could achieve -- the costed version with real fills is trend-ma's regime_filter_standalone / this stream's own DSL family windows, not this number."
+      },
+      "loss_streak": {
+        "closed_trades": 86,
+        "open_trades_at_end": 1,
+        "longest_consecutive_losing_streak": 9,
+        "worst_trade_return_pct": -0.08749439793549552,
+        "worst_trade_dates": "2020-03-11 -> 2020-03-12",
+        "best_trade_return_pct": 0.7747007661613377,
+        "avg_loss_pct": -0.021463929932586074,
+        "avg_win_pct": 0.17202087076208727,
+        "max_drawdown_strategy": -0.5429443881713489,
+        "max_drawdown_buy_hold": -0.8296390703529309
+      },
+      "trend_ma_citation": {
+        "symbol": "QQQ",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.6391224113184335,
+        "baseline": 0.6171009284216832,
+        "edge": 0.022021482896750322,
+        "n_raw": 4877,
+        "n_independent": 268,
+        "p_value": 0.4902999699340447,
+        "triggers": 4897,
+        "evaluable_bars": 6698,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6897 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6897 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.015143043424511005,
+        "baseline_median_forward": 0.015016578762870214,
+        "q_value": 0.8917629621272447,
+        "verdict": "inconclusive"
+      }
+    },
+    "IWM": {
+      "time_in_regime": {
+        "evaluable_bars": 6391,
+        "favorable_bars": 4298,
+        "unfavorable_bars": 2093,
+        "favorable_pct": 0.6725082146768894,
+        "unfavorable_pct": 0.32749178532311063,
+        "transitions": 223,
+        "n_episodes": 224,
+        "n_favorable_episodes": 112,
+        "n_unfavorable_episodes": 112,
+        "favorable_episode_median_len": 4.5,
+        "unfavorable_episode_median_len": 3.0,
+        "favorable_episode_max_len": 362,
+        "unfavorable_episode_max_len": 207
+      },
+      "drawdown_avoided": {
+        "n_days": 6390,
+        "buy_hold_total_return": 5.529067249391426,
+        "buy_hold_max_drawdown": -0.5949352323725712,
+        "favorable_days_contribution": 1.7363071993951444,
+        "unfavorable_days_contribution": 1.3860870778085905,
+        "frictionless_favorable_only_total_return": 1.7363071993951444,
+        "frictionless_favorable_only_max_drawdown": -0.34416067591518307,
+        "note": "favorable_only figures are frictionless (no slippage, no re-entry cost) and therefore an UPPER bound on what a real regime-gated strategy could achieve -- the costed version with real fills is trend-ma's regime_filter_standalone / this stream's own DSL family windows, not this number."
+      },
+      "loss_streak": {
+        "closed_trades": 111,
+        "open_trades_at_end": 1,
+        "longest_consecutive_losing_streak": 10,
+        "worst_trade_return_pct": -0.1034058683700102,
+        "worst_trade_dates": "2008-09-19 -> 2008-09-24",
+        "best_trade_return_pct": 0.4281055406590839,
+        "avg_loss_pct": -0.01994584587262181,
+        "avg_win_pct": 0.10352685344279718,
+        "max_drawdown_strategy": -0.3936915637904438,
+        "max_drawdown_buy_hold": -0.5949352323725718
+      },
+      "trend_ma_citation": {
+        "symbol": "IWM",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.5739008419083256,
+        "baseline": 0.5949128591615638,
+        "edge": -0.021012017253238202,
+        "n_raw": 4276,
+        "n_independent": 240,
+        "p_value": 0.5541799743826221,
+        "triggers": 4296,
+        "evaluable_bars": 6389,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6588 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6588 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.008963419743099776,
+        "baseline_median_forward": 0.01234873639115408,
+        "q_value": 0.9236332906377035,
+        "verdict": "rejected"
+      }
+    },
+    "XLK": {
+      "time_in_regime": {
+        "evaluable_bars": 6751,
+        "favorable_bars": 4846,
+        "unfavorable_bars": 1905,
+        "favorable_pct": 0.717819582284106,
+        "unfavorable_pct": 0.2821804177158939,
+        "transitions": 178,
+        "n_episodes": 179,
+        "n_favorable_episodes": 90,
+        "n_unfavorable_episodes": 89,
+        "favorable_episode_median_len": 6.0,
+        "unfavorable_episode_median_len": 3.0,
+        "favorable_episode_max_len": 575,
+        "unfavorable_episode_max_len": 309
+      },
+      "drawdown_avoided": {
+        "n_days": 6750,
+        "buy_hold_total_return": 7.747528289111271,
+        "buy_hold_max_drawdown": -0.8204651174619217,
+        "favorable_days_contribution": 9.111753594588107,
+        "unfavorable_days_contribution": -0.1349148090601141,
+        "frictionless_favorable_only_total_return": 9.111753594588107,
+        "frictionless_favorable_only_max_drawdown": -0.4994422513135728,
+        "note": "favorable_only figures are frictionless (no slippage, no re-entry cost) and therefore an UPPER bound on what a real regime-gated strategy could achieve -- the costed version with real fills is trend-ma's regime_filter_standalone / this stream's own DSL family windows, not this number."
+      },
+      "loss_streak": {
+        "closed_trades": 89,
+        "open_trades_at_end": 1,
+        "longest_consecutive_losing_streak": 12,
+        "worst_trade_return_pct": -0.09294641447785912,
+        "worst_trade_dates": "2020-03-11 -> 2020-03-12",
+        "best_trade_return_pct": 0.730886136466488,
+        "avg_loss_pct": -0.02072437496621785,
+        "avg_win_pct": 0.16342567642045205,
+        "max_drawdown_strategy": -0.5275629575620298,
+        "max_drawdown_buy_hold": -0.8204651174619216
+      },
+      "trend_ma_citation": {
+        "symbol": "XLK",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.636608623548922,
+        "baseline": 0.6097488482686878,
+        "edge": 0.0268597752802342,
+        "n_raw": 4824,
+        "n_independent": 264,
+        "p_value": 0.4121912375659019,
+        "triggers": 4844,
+        "evaluable_bars": 6749,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.014020857611806381,
+        "baseline_median_forward": 0.01329328773581362,
+        "q_value": 0.8917629621272447,
+        "verdict": "inconclusive"
+      }
+    },
+    "XLV": {
+      "time_in_regime": {
+        "evaluable_bars": 6751,
+        "favorable_bars": 4622,
+        "unfavorable_bars": 2129,
+        "favorable_pct": 0.6846393126944157,
+        "unfavorable_pct": 0.31536068730558436,
+        "transitions": 313,
+        "n_episodes": 314,
+        "n_favorable_episodes": 157,
+        "n_unfavorable_episodes": 157,
+        "favorable_episode_median_len": 3.0,
+        "unfavorable_episode_median_len": 3.0,
+        "favorable_episode_max_len": 922,
+        "unfavorable_episode_max_len": 201
+      },
+      "drawdown_avoided": {
+        "n_days": 6750,
+        "buy_hold_total_return": 5.17967795887216,
+        "buy_hold_max_drawdown": -0.40575775822610105,
+        "favorable_days_contribution": 0.17764818946957206,
+        "unfavorable_days_contribution": 4.247473748212939,
+        "frictionless_favorable_only_total_return": 0.17764818946957206,
+        "frictionless_favorable_only_max_drawdown": -0.5505451548305171,
+        "note": "favorable_only figures are frictionless (no slippage, no re-entry cost) and therefore an UPPER bound on what a real regime-gated strategy could achieve -- the costed version with real fills is trend-ma's regime_filter_standalone / this stream's own DSL family windows, not this number."
+      },
+      "loss_streak": {
+        "closed_trades": 156,
+        "open_trades_at_end": 1,
+        "longest_consecutive_losing_streak": 18,
+        "worst_trade_return_pct": -0.0761850000631995,
+        "worst_trade_dates": "2020-03-11 -> 2020-03-12",
+        "best_trade_return_pct": 0.9684982914203044,
+        "avg_loss_pct": -0.013763997206117004,
+        "avg_win_pct": 0.0687648711357088,
+        "max_drawdown_strategy": -0.5507472716038331,
+        "max_drawdown_buy_hold": -0.4057577582261015
+      },
+      "trend_ma_citation": {
+        "symbol": "XLV",
+        "idea": "regime_filter_standalone",
+        "horizon": 20,
+        "direction": "up",
+        "hit_rate": 0.571304347826087,
+        "baseline": 0.5963739039976222,
+        "edge": -0.02506955617153528,
+        "n_raw": 4600,
+        "n_independent": 268,
+        "p_value": 0.4184153035578889,
+        "triggers": 4620,
+        "evaluable_bars": 6749,
+        "guard_entry": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "guard_exit": {
+          "status": "passed",
+          "passed": true,
+          "findings": [
+            "every node in the tree is on the allowlist; the grammar has no way to reference a later bar, and adj_close is not a referenceable field",
+            "sma_200: identical at every position across 8 leading slices of 6948 bars",
+            "scope note: this verifies the rule is causal over the bars it was given. It does not prove those bars are point-in-time -- a retroactively revised close or back-applied split is outside what any AST check can see. The run card's data fingerprint is what makes that visible."
+          ]
+        },
+        "median_forward": 0.006625348651817187,
+        "baseline_median_forward": 0.008890633804656378,
+        "q_value": 0.8917629621272447,
+        "verdict": "rejected"
+      }
+    }
+  }
+}

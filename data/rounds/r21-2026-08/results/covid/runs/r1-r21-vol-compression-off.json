@@ -1,0 +1,190 @@
+{
+  "card": {
+    "agent_id": "r21-vol-compression-off",
+    "display_name": "vol-compression / macro gate off",
+    "discipline": "volatility",
+    "purpose": "trading",
+    "thesis": "Round 21 cell. Everything except the macro conjunct is held identical across the gate-on and gate-off pair, so any difference is attributable to the gate alone. Gate: none. This is the first round in this programme whose cards can read a non-price field at all -- FRED series were collected and displayed but unreachable by any card until 2026-08-30. The honest prior, stated before the data: this finds nothing, on a base rate of ~50 concepts and near-zero survivors. It is worth running because the class was unreachable, not because it is likely to win. Nothing in this round is promotable. See strategy-program/ROUND-21-PLAN.md for the pre-registration, the circular-shift null and the five falsifiable predictions.",
+    "universe": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLY",
+      "XLP",
+      "XLU",
+      "XLB"
+    ],
+    "entry": "close > sma(200) and ema(10) > ema(30) and atr(10) / close < 0.02",
+    "exit": "atr(10) / close > 0.05 or close crosses_below sma(200)",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 6,
+    "position_pct": "0.15",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "8926.45",
+  "total_return": "-0.10735499999999998",
+  "max_drawdown": "-0.12606701178746405",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.45161290322580644,
+  "capital_exposure": 0.18456366666666665,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLI",
+      "entry_date": "2020-02-19",
+      "entry_price": "84.37",
+      "exit_date": "2020-02-26",
+      "exit_price": "78.35",
+      "quantity": "17",
+      "exit_reason": "rule",
+      "pnl": "-102.38",
+      "return_pct": "-0.07138026480000557767257667557",
+      "bars_held": 5
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2020-02-19",
+      "entry_price": "31.03",
+      "exit_date": "2020-02-27",
+      "exit_price": "27.93",
+      "quantity": "48",
+      "exit_reason": "rule",
+      "pnl": "-148.85",
+      "return_pct": "-0.09993688903211945429154581588",
+      "bars_held": 6
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2020-02-19",
+      "entry_price": "103.88",
+      "exit_date": "2020-02-28",
+      "exit_price": "91.30",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-176.16",
+      "return_pct": "-0.1211287749601188184168546125",
+      "bars_held": 7
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2020-02-19",
+      "entry_price": "66.11",
+      "exit_date": "2020-02-28",
+      "exit_price": "56.37",
+      "quantity": "22",
+      "exit_reason": "rule",
+      "pnl": "-214.32",
+      "return_pct": "-0.1473577096024532115894995943",
+      "bars_held": 7
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2020-02-19",
+      "entry_price": "64.60",
+      "exit_date": "2020-02-28",
+      "exit_price": "57.78",
+      "quantity": "23",
+      "exit_reason": "rule",
+      "pnl": "-156.90",
+      "return_pct": "-0.1055996769417149010634001885",
+      "bars_held": 7
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2020-02-27",
+      "entry_price": "33.56",
+      "exit_date": "2020-03-02",
+      "exit_price": "31.23",
+      "quantity": "44",
+      "exit_reason": "rule",
+      "pnl": "-102.57",
+      "return_pct": "-0.06946175100227543612525734099",
+      "bars_held": 2
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2020-02-19",
+      "entry_price": "51.15",
+      "exit_date": "2020-03-10",
+      "exit_price": "42.82",
+      "quantity": "29",
+      "exit_reason": "rule",
+      "pnl": "-241.61",
+      "return_pct": "-0.1628813159402703340411905484",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2020-06-08",
+      "entry_price": "60.46",
+      "exit_date": "2020-06-11",
+      "exit_price": "59.72",
+      "quantity": "24",
+      "exit_reason": "rule",
+      "pnl": "-17.80",
+      "return_pct": "-0.01226706362333223067592898886",
+      "bars_held": 3
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2020-05-21",
+      "entry_price": "99.92",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "14",
+      "exit_reason": "open_at_end",
+      "pnl": "2.10",
+      "return_pct": "0.001501200960768614891913530825",
+      "bars_held": 27
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2020-06-03",
+      "entry_price": "63.56",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "23",
+      "exit_reason": "open_at_end",
+      "pnl": "6.79",
+      "return_pct": "0.004644704079678222562727446849",
+      "bars_held": 19
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2020-06-04",
+      "entry_price": "49.64",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "30",
+      "exit_reason": "open_at_end",
+      "pnl": "78.15",
+      "return_pct": "0.05247784045124899274778404512",
+      "bars_held": 18
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1497.76 exceeds $1198.38 of settled cash (total cash $2530.29; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

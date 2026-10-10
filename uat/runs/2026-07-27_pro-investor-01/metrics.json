@@ -1,0 +1,129 @@
+{
+  "run_id": "2026-07-27_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-18T06:45:33.564678+00:00",
+  "window": {
+    "first_session": "2026-07-27",
+    "last_session": "2026-07-31",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "10051.60",
+    "pnl": "51.60",
+    "return_pct_of_1": "0.005160",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "0.010743",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 5,
+    "buys": 4,
+    "sells": 1,
+    "gross_traded": "5445.92",
+    "total_fees": "0.02",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-07-31",
+    "cash": "5904.40",
+    "settled_cash": "5904.40",
+    "positions_market_value": "4147.20",
+    "equity": "10051.60",
+    "return_since_inception_pct_of_1": "0.005160",
+    "positions": [
+      {
+        "symbol": "QQQ",
+        "quantity": "1",
+        "mark": "687.99",
+        "market_value": "687.99",
+        "weight_pct_of_1": "0.068446"
+      },
+      {
+        "symbol": "SPY",
+        "quantity": "2",
+        "mark": "747.03",
+        "market_value": "1494.06",
+        "weight_pct_of_1": "0.148639"
+      },
+      {
+        "symbol": "XLE",
+        "quantity": "33",
+        "mark": "59.55",
+        "market_value": "1965.15",
+        "weight_pct_of_1": "0.195506"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 3,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-3.csv",
+      "session-4.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "0137b305b91f425db6b252e03f8ecd3b8a694162",
+        "adapter": "robinhood",
+        "row_count": 3,
+        "usable_row_count": 3,
+        "inserted": 0,
+        "duplicates": 3,
+        "conflicts": [],
+        "instruments": 2,
+        "skipped": {},
+        "ledger_fingerprint": "fab4225b8cdbcd53b7c6cc8a6a8cc3c69616128d6dfb395ed7eb185ea84d41f6",
+        "ledger_txn_count": 7
+      },
+      {
+        "import_id": "1116ffc1e3da69fb825625e49b122ebf32be1133",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "fab4225b8cdbcd53b7c6cc8a6a8cc3c69616128d6dfb395ed7eb185ea84d41f6",
+        "ledger_txn_count": 7
+      },
+      {
+        "import_id": "db6aebb418a4502b9faa02db7528630538aab6b9",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "fab4225b8cdbcd53b7c6cc8a6a8cc3c69616128d6dfb395ed7eb185ea84d41f6",
+        "ledger_txn_count": 7
+      },
+      {
+        "import_id": "17dca85b54f36be23631e2ffc474232a09b0c3ca",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "fab4225b8cdbcd53b7c6cc8a6a8cc3c69616128d6dfb395ed7eb185ea84d41f6",
+        "ledger_txn_count": 7
+      }
+    ],
+    "fingerprint_before_replay": "fab4225b8cdbcd53b7c6cc8a6a8cc3c69616128d6dfb395ed7eb185ea84d41f6",
+    "fingerprint_after_replay": "fab4225b8cdbcd53b7c6cc8a6a8cc3c69616128d6dfb395ed7eb185ea84d41f6",
+    "ledger_txn_count": 7,
+    "idempotent": true
+  },
+  "findings_recorded": 6
+}

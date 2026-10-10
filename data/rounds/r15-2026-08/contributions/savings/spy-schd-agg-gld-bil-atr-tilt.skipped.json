@@ -1,0 +1,7 @@
+{
+  "agent_id": "spy-schd-agg-gld-bil-atr-tilt",
+  "purpose": "savings",
+  "skipped": true,
+  "reason": "UnsupportedConditionError: condition 'atr(14) > close * 0.018' uses indicator 'atr', which this bridge does not support -- only ['bb', 'ema', 'macd', 'rsi', 'sma'] are computable from closes alone (e.g. atr needs high/low, vwap needs high/low/volume, neither of which contributions.simulate ever supplies). Extend this bridge deliberately if a future card needs one of those, rather than letting the tilt silently never fire.",
+  "note": "Not a failure of the strategy. The contribution harness passes closes only, so a tilt gated on a bar field it does not carry cannot be evaluated. Running it anyway would silently never fire the tilt and score this card as its own static twin."
+}

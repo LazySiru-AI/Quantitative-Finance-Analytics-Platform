@@ -1,0 +1,66 @@
+/**
+ * Rules.tsx -- the rule catalog table.
+ *
+ * `.data-table` in styles.css sets `white-space: nowrap` on every cell, and that is the correct
+ * default for the tables it was written for: a column of money, dates or identifiers is easier to
+ * scan when nothing wraps, and any of those cells that does not fit is a cell whose column should
+ * be wider. The rule catalog breaks that assumption in exactly one column. `description` is free
+ * prose written by whoever added the rule, so it has no natural width -- under `nowrap` the longest
+ * description in the catalog sets the table's width, the table overflows `.table-wrap`, and the
+ * column explaining what each rule MEANS ends up the one column behind a horizontal scrollbar.
+ * Measured at 1440px, which is not a narrow window.
+ *
+ * So this file grants that one column a wrap and a floor, rather than turning wrapping on
+ * table-wide: `expression` is a DSL fragment where a break in the middle of `bb_lower(20, 2)` would
+ * be a readability regression, not a fix.
+ */
+
+/* `auto`, not the `fixed` other wide tables here use: the two mono columns should still size to
+   their content, and only what is left over goes to the description. */
+.rules-catalog-table {
+  table-layout: auto;
+}
+
+.rules-catalog-table td.rules-description {
+  white-space: normal;
+  /* The floor. Without it the browser is free to solve the layout by squeezing this column to the
+     width of its longest single word, which is how a "wrapping" column becomes a one-word ladder. */
+  min-width: 22rem;
+  /* And the ceiling, so a long description does not simply reintroduce the overflow it fixed. */
+  max-width: 46rem;
+  overflow-wrap: anywhere;
+  /* Prose reads as prose: the mono face `.data-table` sets is for the figures and identifiers in
+     the other columns, and a wrapped paragraph of it is measurably slower to read. */
+  font-family: var(--font-sans);
+}
+
+/* Intervals: a short bounded set (`1d`, `1h`, `15m`…), so each becomes its own badge instead of a
+   comma-joined string. Wrapping is deliberate -- a rule valid on five intervals should stack them
+   rather than widen the column that description needs. */
+.rules-catalog-table td.rules-intervals {
+  white-space: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.rules-interval-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* "any interval" is the absence of a constraint, not one more interval -- dashed and muted so it
+   never reads as a fourth literal interval name sitting alongside `1d` and `1h`. Same convention
+   `StatusPill`'s `neutral` tone uses for the same distinction. */
+.rules-interval-badge.rules-interval-any {
+  border-style: dashed;
+  color: var(--muted);
+  font-style: italic;
+}

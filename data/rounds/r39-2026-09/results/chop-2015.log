@@ -1,0 +1,13 @@
+window: 2015-04-07 -> 2016-04-15
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+8 cards
+[1/8] r1 r39-core-ma: 0s trades=5 ret=-2.84% dd=-3.65% rej=0
+[2/8] r1 r39-core-passive: 1s trades=2 ret=-0.83% dd=-7.59% rej=0
+[3/8] r1 r39-full-ma: 1s trades=15 ret=-1.72% dd=-2.74% rej=0
+[4/8] r1 r39-full-passive: 2s trades=7 ret=-2.97% dd=-13.78% rej=0
+[5/8] r1 r39-growth-ma: 0s trades=5 ret=-1.57% dd=-4.91% rej=0
+[6/8] r1 r39-growth-passive: 1s trades=2 ret=-6.38% dd=-22.82% rej=0
+[7/8] r1 r39-value-ma: 0s trades=5 ret=-1.33% dd=-2.63% rej=0
+[8/8] r1 r39-value-passive: 1s trades=3 ret=-2.51% dd=-14.71% rej=0
+r1: 8 agents, 0 discoveries
+overall: 8 agents, 0 discoveries at alpha=0.1

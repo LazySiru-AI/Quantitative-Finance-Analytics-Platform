@@ -1,0 +1,21 @@
+{
+  "orders": [
+    {
+      "order_id": "s4-1",
+      "session": 4,
+      "decided_on": "2026-07-29",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "1",
+      "thesis": "Deliberate repurchase of the session-3 QQQ loss sale, inside the 30-day window, specifically to trigger a real wash sale and exercise the new /wash-sales tab and the Tax page's disallowance mechanics against live data rather than an empty ledger. Not a trend call -- QQQ is in a confirmed downtrend (close 661.73 below sma20 704.33 and sma50 715.81, 5d -6.18%, 20d -10.14%) and I would not otherwise buy it here.",
+      "invalidation": "N/A -- this is a deliberate wash-sale test repurchase, not a trend position.",
+      "stop_level": "n/a",
+      "regime": "risk-off",
+      "conviction": 1,
+      "evidence": [
+        "brief watchlist QQQ: close=661.73, sma20=704.3300, sma50=715.8054, change_5d=-6.18%, change_20d=-10.14%",
+        "session-3 fill: sold 1 QQQ 2026-07-29 at a loss, window open until 2026-08-29 per /wash-sales"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "results_root": "data\\rounds\\r17-2026-08\\results-shuffled",
+  "round": "r1",
+  "window_tags": [
+    "q4-2018",
+    "covid",
+    "bear-2022",
+    "chop-2015",
+    "chop-2011",
+    "bull-2024",
+    "recent",
+    "gfc",
+    "13f-legal"
+  ],
+  "matrix": "r2",
+  "main_window_tags": [
+    "q4-2018",
+    "covid",
+    "bear-2022",
+    "chop-2015",
+    "chop-2011",
+    "bull-2024",
+    "recent",
+    "gfc"
+  ],
+  "min_ranked_main_windows": 5,
+  "rank_by": "median",
+  "rank_by_choices": [
+    "median",
+    "worst",
+    "hit-rate",
+    "borda",
+    "excess-per-exposure"
+  ],
+  "pareto_frontier": [
+    "r17-band-reversion-off-stop-shuf"
+  ],
+  "ranked": [
+    {
+      "agent_id": "r17-band-reversion-off-stop-shuf",
+      "display_name": "band-reversion / regime off / stop / shuffled order",
+      "ranked": true,
+      "median_adjusted_excess": "0.01651407633188698295520298680",
+      "worst_adjusted_excess": "-0.1380136212611576777317268125",
+      "best_adjusted_excess": "0.08530386592907206404907975460",
+      "hit_rate": 0.625,
+      "iqr": "0.1104743903728844975658033684",
+      "n_windows_run": 8,
+      "n_windows_eligible": 8,
+      "total_trades": 263,
+      "mean_exposure": 0.34101925710853825,
+      "worst_drawdown": "-0.304280860788932",
+      "notes": [],
+      "windows": {
+        "q4-2018": {
+          "status": "run",
+          "excess": "0.1071123736053771878945033949",
+          "adjusted_excess": "0.0151115762000120637005697909",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "-933.38",
+          "excess_per_exposure": "0.02793114737001809809651742098"
+        },
+        "covid": {
+          "status": "run",
+          "excess": "-0.06988986308061221468960004737",
+          "adjusted_excess": "-0.1380136212611576777317268125",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "-1570.15",
+          "excess_per_exposure": "-0.6328201660724064699230685269"
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.2086161788788578626915809364",
+          "adjusted_excess": "0.0631130022698350869452026034",
+          "trades": 31,
+          "reason": null,
+          "realised_pnl": "-427.80",
+          "excess_per_exposure": "0.1498339575619809594703610485"
+        },
+        "chop-2015": {
+          "status": "run",
+          "excess": "-0.07433312556528432598864620418",
+          "adjusted_excess": "-0.07458154365586304389492927932",
+          "trades": 32,
+          "reason": null,
+          "realised_pnl": "-747.18",
+          "excess_per_exposure": "-0.2103568700767990290077080082"
+        },
+        "chop-2011": {
+          "status": "run",
+          "excess": "0.08563044217223358327652806180",
+          "adjusted_excess": "0.08530386592907206404907975460",
+          "trades": 41,
+          "reason": null,
+          "realised_pnl": "851.76",
+          "excess_per_exposure": "0.3031743828403412267116082709"
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0860003367454490237061650321",
+          "adjusted_excess": "0.01791657646376190220983618271",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "539.50",
+          "excess_per_exposure": "0.06958625252211716845573569928"
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1002693798956434274218897341",
+          "adjusted_excess": "0.05388253737897463139466901364",
+          "trades": 32,
+          "reason": null,
+          "realised_pnl": "1058.82",
+          "excess_per_exposure": "0.2136168120411081731229397433"
+        },
+        "gfc": {
+          "status": "run",
+          "excess": "0.2886190642673521850899742931",
+          "adjusted_excess": "-0.0475184678096386550796915167",
+          "trades": 63,
+          "reason": null,
+          "realised_pnl": "-2736.56",
+          "excess_per_exposure": "-0.1181513271271539094483335298"
+        },
+        "13f-legal": {
+          "status": "not_run",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": null,
+          "realised_pnl": null,
+          "excess_per_exposure": null
+        }
+      },
+      "rank_median": 1.0,
+      "rank_worst": 1.0,
+      "rank_hit_rate": 1.0,
+      "borda": 1.0,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "-3964.99",
+      "median_excess_per_exposure": "0.04875869994606763327612656013",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "r17-vol-compression-off-stop-shuf",
+      "display_name": "vol-compression / regime off / stop / shuffled order",
+      "ranked": true,
+      "median_adjusted_excess": "-0.05777648251563062547294688465",
+      "worst_adjusted_excess": "-0.1626959603577183486074637798",
+      "best_adjusted_excess": "0.0346502140086580519215938303",
+      "hit_rate": 0.25,
+      "iqr": "0.08605896105721678829871268514",
+      "n_windows_run": 8,
+      "n_windows_eligible": 8,
+      "total_trades": 201,
+      "mean_exposure": 0.5678742685545294,
+      "worst_drawdown": "-0.177473",
+      "notes": [],
+      "windows": {
+        "q4-2018": {
+          "status": "run",
+          "excess": "0.0979153736053771878945033949",
+          "adjusted_excess": "0.0150294802594110128288239108",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "-1025.35",
+          "excess_per_exposure": "0.02562563902333430814625932568"
+        },
+        "covid": {
+          "status": "run",
+          "excess": "-0.01565886308061221468960004737",
+          "adjusted_excess": "-0.08305504580054987290446727257",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "-1027.84",
+          "excess_per_exposure": "-0.3667798183352573981348587865"
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.0763241788788578626915809364",
+          "adjusted_excess": "-0.0608837370168432624921268108",
+          "trades": 26,
+          "reason": null,
+          "realised_pnl": "-1750.72",
+          "excess_per_exposure": "-0.1340412617026792058173674597"
+        },
+        "chop-2015": {
+          "status": "run",
+          "excess": "-0.05454812556528432598864620418",
+          "adjusted_excess": "-0.05466922801441798845376695853",
+          "trades": 37,
+          "reason": null,
+          "realised_pnl": "-549.33",
+          "excess_per_exposure": "-0.07976885104748717160723018804"
+        },
+        "chop-2011": {
+          "status": "run",
+          "excess": "-0.002129557827766416723471938196",
+          "adjusted_excess": "-0.002290509508328526743921835946",
+          "trades": 31,
+          "reason": null,
+          "realised_pnl": "-25.84",
+          "excess_per_exposure": "-0.003546636589684334542684343561"
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.1945543367454490237061650321",
+          "adjusted_excess": "-0.1626959603577183486074637798",
+          "trades": 27,
+          "reason": null,
+          "realised_pnl": "-546.04",
+          "excess_per_exposure": "-0.2106479923560850957599561132"
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1213933798956434274218897341",
+          "adjusted_excess": "-0.0869127550927921018843905199",
+          "trades": 22,
+          "reason": null,
+          "realised_pnl": "847.58",
+          "excess_per_exposure": "-0.1043694622489808520218644298"
+        },
+        "gfc": {
+          "status": "run",
+          "excess": "0.4059990642673521850899742931",
+          "adjusted_excess": "0.0346502140086580519215938303",
+          "trades": 35,
+          "reason": null,
+          "realised_pnl": "-1562.76",
+          "excess_per_exposure": "0.1020444018636026973107862661"
+        },
+        "13f-legal": {
+          "status": "not_run",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": null,
+          "realised_pnl": null,
+          "excess_per_exposure": null
+        }
+      },
+      "rank_median": 2.0,
+      "rank_worst": 2.0,
+      "rank_hit_rate": 2.0,
+      "borda": 2.0,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "-5640.30",
+      "median_excess_per_exposure": "-0.0920691566482340118145473089",
+      "incommensurable_exposure": false
+    }
+  ],
+  "unranked": []
+}

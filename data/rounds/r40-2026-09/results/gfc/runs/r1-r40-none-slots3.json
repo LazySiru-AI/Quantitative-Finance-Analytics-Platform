@@ -1,0 +1,1938 @@
+{
+  "card": {
+    "agent_id": "r40-none-slots3",
+    "display_name": "conjunct none / 3 slots",
+    "discipline": "momentum",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Round 40 cell on the taxable trading book. The base entry 'close crosses_above bb_mid(20, 2)' and the exit 'close crosses_below bb_mid(20, 2)' are held IDENTICAL across every cell in this round; the only thing that varies within a slot cap is the confirmation conjunct added to the entry. This is the CONTROL: the bare base entry, no confirmation term. Every other arm is reported as arm-minus-this-control on median exposure-adjusted excess, never against SPY. Slot cap 3 (position size chosen so gross commitment is ~0.75 either way, so the cap varies breadth of book, not exposure). The hypothesis under test is the influencer persona creator-e's claim that a signal is only valid with a confirmation term; that persona's corpus is partly Korean-language and machine-summarised, so this is a fair test of the claim, not an endorsement. Pre-registered 2026-09-09 before any measurement. Not investment advice. See strategy-program/ROUND-40-PLAN.md.",
+    "falsification": "Baseline against which every treatment is measured. Honest prior: the null (rounds 17/18/34 put form, exit and rotation all inside the 21.2pp floor). Pre-registered predictions with named failure regimes: (1) No treatment arm beats the control by more than 21.2pp on median adjusted excess AND survives BH q<0.10 with the denominator = every cell run; if one does, a confirmation conjunct pays for itself. (2) The divergence-proxy negative control is INDISTINGUISHABLE from the 'none' control (|arm-control| < 21.2pp), because it retains ~93% of the base's firings. If it separates, the metric or the store moved. (3) Both treatments take materially fewer trades and lower exposure than the control (they retain ~11-14% of firings); if a treatment's trade count is NOT below the control's, the conjunct did not bind. (4) Sign flips by regime: in a strong trend (recent, bull-2024) the confirmation delays entry and gives back early upside, while in chop it avoids false starts -- so any single-window arm-minus-control read is unsafe and only the median across the eight main windows is interpreted. (5) Degenerate-outcome guard: a heavily filtered treatment at slot cap 6 may take so few trades that it fails the 5-of-8 regime gate in some windows and is UNRANKED -- that is 'switched off', NOT 'the conjunct did not help', and the two must not be conflated.",
+    "universe": [
+      "NVDA",
+      "TSM",
+      "MU",
+      "AMD",
+      "QCOM",
+      "MSFT",
+      "GOOGL",
+      "AMZN",
+      "NFLX",
+      "ORCL",
+      "INTC",
+      "TXN"
+    ],
+    "entry": "close crosses_above bb_mid(20, 2)",
+    "exit": "close crosses_below bb_mid(20, 2)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 3,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 356,
+  "starting_equity": "10000.00",
+  "ending_equity": "3260.11",
+  "total_return": "-0.673989",
+  "max_drawdown": "-0.6837236707895544",
+  "sharpe": -2.3852040184432513,
+  "sortino": -2.0537305301517343,
+  "volatility": 0.31164823932309377,
+  "exposure": 0.7837078651685393,
+  "capital_exposure": 0.3502184775280899,
+  "win_rate": 0.16129032258064516,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "INTC",
+      "entry_date": "2007-10-10",
+      "entry_price": "25.89",
+      "exit_date": "2007-10-12",
+      "exit_price": "25.59",
+      "quantity": "96",
+      "exit_reason": "rule",
+      "pnl": "-28.88",
+      "return_pct": "-0.01161967297540878073902407622",
+      "bars_held": 2
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2007-10-15",
+      "entry_price": "41.90",
+      "exit_date": "2007-10-16",
+      "exit_price": "41.17",
+      "quantity": "59",
+      "exit_reason": "rule",
+      "pnl": "-43.15",
+      "return_pct": "-0.01745479551798066421261275838",
+      "bars_held": 1
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2007-10-15",
+      "entry_price": "4.59",
+      "exit_date": "2007-10-16",
+      "exit_price": "4.43",
+      "quantity": "541",
+      "exit_reason": "rule",
+      "pnl": "-86.72",
+      "return_pct": "-0.03492282104873167176092042896",
+      "bars_held": 1
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2007-10-18",
+      "entry_price": "26.52",
+      "exit_date": "2007-10-25",
+      "exit_price": "26.17",
+      "quantity": "93",
+      "exit_reason": "rule",
+      "pnl": "-32.63",
+      "return_pct": "-0.01323002319207252793590554501",
+      "bars_held": 5
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2007-10-24",
+      "entry_price": "4.55",
+      "exit_date": "2007-10-25",
+      "exit_price": "4.41",
+      "quantity": "495",
+      "exit_reason": "rule",
+      "pnl": "-69.44",
+      "return_pct": "-0.03083139083139083139083139083",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2007-10-15",
+      "entry_price": "0.91",
+      "exit_date": "2007-10-26",
+      "exit_price": "0.89",
+      "quantity": "2767",
+      "exit_reason": "rule",
+      "pnl": "-55.87",
+      "return_pct": "-0.02218850899732721200014297231",
+      "bars_held": 9
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2007-10-31",
+      "entry_price": "10.39",
+      "exit_date": "2007-11-06",
+      "exit_price": "10.16",
+      "quantity": "241",
+      "exit_reason": "rule",
+      "pnl": "-55.54",
+      "return_pct": "-0.02218059976277860534586799468",
+      "bars_held": 4
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2007-11-07",
+      "entry_price": "41.32",
+      "exit_date": "2007-11-08",
+      "exit_price": "41.41",
+      "quantity": "60",
+      "exit_reason": "rule",
+      "pnl": "5.32",
+      "return_pct": "0.002145853501129396579541787673",
+      "bars_held": 1
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2007-10-30",
+      "entry_price": "10.25",
+      "exit_date": "2007-11-09",
+      "exit_price": "9.75",
+      "quantity": "239",
+      "exit_reason": "rule",
+      "pnl": "-119.60",
+      "return_pct": "-0.04882130829676497601796101643",
+      "bars_held": 8
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2007-10-30",
+      "entry_price": "26.12",
+      "exit_date": "2007-11-09",
+      "exit_price": "25.35",
+      "quantity": "95",
+      "exit_reason": "rule",
+      "pnl": "-73.23",
+      "return_pct": "-0.02951156605142258402514709438",
+      "bars_held": 8
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2007-11-14",
+      "entry_price": "34.64",
+      "exit_date": "2007-11-15",
+      "exit_price": "33.74",
+      "quantity": "72",
+      "exit_reason": "rule",
+      "pnl": "-64.88",
+      "return_pct": "-0.02601360020528611752630228381",
+      "bars_held": 1
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2007-11-16",
+      "entry_price": "41.32",
+      "exit_date": "2007-11-23",
+      "exit_price": "40.23",
+      "quantity": "61",
+      "exit_reason": "rule",
+      "pnl": "-66.57",
+      "return_pct": "-0.02641121673305508387158205450",
+      "bars_held": 4
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2007-11-29",
+      "entry_price": "40.86",
+      "exit_date": "2007-12-04",
+      "exit_price": "39.52",
+      "quantity": "60",
+      "exit_reason": "rule",
+      "pnl": "-80.48",
+      "return_pct": "-0.03282754119758525044868657203",
+      "bars_held": 3
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2007-11-28",
+      "entry_price": "4.38",
+      "exit_date": "2007-12-18",
+      "exit_price": "4.29",
+      "quantity": "584",
+      "exit_reason": "rule",
+      "pnl": "-52.73",
+      "return_pct": "-0.02061440545443172577719397010",
+      "bars_held": 14
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2007-11-29",
+      "entry_price": "17.29",
+      "exit_date": "2007-12-18",
+      "exit_price": "16.86",
+      "quantity": "144",
+      "exit_reason": "rule",
+      "pnl": "-62.01",
+      "return_pct": "-0.02490601503759398496240601504",
+      "bars_held": 13
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2007-12-24",
+      "entry_price": "9.80",
+      "exit_date": "2007-12-26",
+      "exit_price": "9.78",
+      "quantity": "256",
+      "exit_reason": "rule",
+      "pnl": "-5.23",
+      "return_pct": "-0.002084661989795918367346938776",
+      "bars_held": 1
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2007-12-27",
+      "entry_price": "9.97",
+      "exit_date": "2007-12-28",
+      "exit_price": "9.79",
+      "quantity": "252",
+      "exit_reason": "rule",
+      "pnl": "-45.47",
+      "return_pct": "-0.01809794462753339383229052236",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2007-12-06",
+      "entry_price": "0.84",
+      "exit_date": "2008-01-02",
+      "exit_price": "0.85",
+      "quantity": "2973",
+      "exit_reason": "rule",
+      "pnl": "29.17",
+      "return_pct": "0.01168052151906844136914772636",
+      "bars_held": 17
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2007-12-31",
+      "entry_price": "9.91",
+      "exit_date": "2008-01-03",
+      "exit_price": "9.45",
+      "quantity": "253",
+      "exit_reason": "rule",
+      "pnl": "-116.49",
+      "return_pct": "-0.04646163295748694774711534243",
+      "bars_held": 2
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2007-12-20",
+      "entry_price": "4.51",
+      "exit_date": "2008-01-07",
+      "exit_price": "4.43",
+      "quantity": "559",
+      "exit_reason": "rule",
+      "pnl": "-44.88",
+      "return_pct": "-0.01780182381430254374100091627",
+      "bars_held": 10
+    },
+    {
+      "symbol": "ORCL",
+      "entry_date": "2008-01-15",
+      "entry_price": "21.77",
+      "exit_date": "2008-01-16",
+      "exit_price": "21.02",
+      "quantity": "113",
+      "exit_reason": "rule",
+      "pnl": "-84.83",
+      "return_pct": "-0.03448359966016398307323953968",
+      "bars_held": 1
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-01-15",
+      "entry_price": "39.63",
+      "exit_date": "2008-01-22",
+      "exit_price": "37.31",
+      "quantity": "62",
+      "exit_reason": "rule",
+      "pnl": "-143.91",
+      "return_pct": "-0.05856999829064003321042221191",
+      "bars_held": 4
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2008-01-22",
+      "entry_price": "6.57",
+      "exit_date": "2008-02-07",
+      "exit_price": "6.64",
+      "quantity": "353",
+      "exit_reason": "rule",
+      "pnl": "24.59",
+      "return_pct": "0.01060274834965354581948163383",
+      "bars_held": 12
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-01-25",
+      "entry_price": "40.17",
+      "exit_date": "2008-02-07",
+      "exit_price": "39.10",
+      "quantity": "61",
+      "exit_reason": "rule",
+      "pnl": "-65.35",
+      "return_pct": "-0.02666944175777535637475156813",
+      "bars_held": 9
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2008-01-24",
+      "entry_price": "6.80",
+      "exit_date": "2008-02-11",
+      "exit_price": "6.78",
+      "quantity": "373",
+      "exit_reason": "rule",
+      "pnl": "-7.59",
+      "return_pct": "-0.002992430216054250118277874152",
+      "bars_held": 12
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2008-02-12",
+      "entry_price": "20.71",
+      "exit_date": "2008-02-19",
+      "exit_price": "20.39",
+      "quantity": "120",
+      "exit_reason": "rule",
+      "pnl": "-38.49",
+      "return_pct": "-0.01548768710767745050700144858",
+      "bars_held": 4
+    },
+    {
+      "symbol": "TXN",
+      "entry_date": "2008-02-21",
+      "entry_price": "30.47",
+      "exit_date": "2008-02-22",
+      "exit_price": "30.14",
+      "quantity": "82",
+      "exit_reason": "rule",
+      "pnl": "-27.14",
+      "return_pct": "-0.01086234360866746179768985087",
+      "bars_held": 1
+    },
+    {
+      "symbol": "TXN",
+      "entry_date": "2008-02-26",
+      "entry_price": "30.31",
+      "exit_date": "2008-03-03",
+      "exit_price": "29.96",
+      "quantity": "82",
+      "exit_reason": "rule",
+      "pnl": "-28.78",
+      "return_pct": "-0.01157953182963040451915571614",
+      "bars_held": 4
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-02-08",
+      "entry_price": "40.59",
+      "exit_date": "2008-03-04",
+      "exit_price": "40.87",
+      "quantity": "61",
+      "exit_reason": "rule",
+      "pnl": "17.00",
+      "return_pct": "0.006865940492489872737773577438",
+      "bars_held": 16
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2008-02-12",
+      "entry_price": "6.96",
+      "exit_date": "2008-03-04",
+      "exit_price": "6.99",
+      "quantity": "366",
+      "exit_reason": "rule",
+      "pnl": "10.85",
+      "return_pct": "0.004259311601030086049871239244",
+      "bars_held": 14
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2008-03-06",
+      "entry_price": "6.85",
+      "exit_date": "2008-03-07",
+      "exit_price": "6.44",
+      "quantity": "365",
+      "exit_reason": "rule",
+      "pnl": "-149.78",
+      "return_pct": "-0.05990600939906009399060093991",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-03-06",
+      "entry_price": "28.07",
+      "exit_date": "2008-03-07",
+      "exit_price": "27.33",
+      "quantity": "88",
+      "exit_reason": "rule",
+      "pnl": "-65.20",
+      "return_pct": "-0.02639505133270719305632023837",
+      "bars_held": 1
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-03-05",
+      "entry_price": "10.15",
+      "exit_date": "2008-03-17",
+      "exit_price": "9.48",
+      "quantity": "250",
+      "exit_reason": "rule",
+      "pnl": "-167.61",
+      "return_pct": "-0.06605320197044334975369458128",
+      "bars_held": 8
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-03-11",
+      "entry_price": "28.41",
+      "exit_date": "2008-03-17",
+      "exit_price": "27.29",
+      "quantity": "89",
+      "exit_reason": "rule",
+      "pnl": "-99.76",
+      "return_pct": "-0.03945437790934510320388848680",
+      "bars_held": 4
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-03-19",
+      "entry_price": "10.05",
+      "exit_date": "2008-03-20",
+      "exit_price": "10.02",
+      "quantity": "247",
+      "exit_reason": "rule",
+      "pnl": "-7.52",
+      "return_pct": "-0.003029387475577577698551775535",
+      "bars_held": 1
+    },
+    {
+      "symbol": "ORCL",
+      "entry_date": "2008-03-11",
+      "entry_price": "19.66",
+      "exit_date": "2008-03-28",
+      "exit_price": "19.54",
+      "quantity": "129",
+      "exit_reason": "rule",
+      "pnl": "-15.57",
+      "return_pct": "-0.006139250987721498024557003951",
+      "bars_held": 12
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-03-18",
+      "entry_price": "28.68",
+      "exit_date": "2008-03-28",
+      "exit_price": "28.22",
+      "quantity": "88",
+      "exit_reason": "rule",
+      "pnl": "-40.56",
+      "return_pct": "-0.01607074933434766070749334348",
+      "bars_held": 7
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-03-24",
+      "entry_price": "10.88",
+      "exit_date": "2008-03-31",
+      "exit_price": "10.10",
+      "quantity": "243",
+      "exit_reason": "rule",
+      "pnl": "-189.65",
+      "return_pct": "-0.07173278261922052771725974340",
+      "bars_held": 5
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-03-31",
+      "entry_price": "0.50",
+      "exit_date": "2008-04-07",
+      "exit_price": "0.48",
+      "quantity": "5081",
+      "exit_reason": "rule",
+      "pnl": "-102.53",
+      "return_pct": "-0.04035819720527455225349340681",
+      "bars_held": 5
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-04-01",
+      "entry_price": "10.25",
+      "exit_date": "2008-04-09",
+      "exit_price": "10.26",
+      "quantity": "244",
+      "exit_reason": "rule",
+      "pnl": "2.33",
+      "return_pct": "0.0009316273490603758496601359456",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2008-04-08",
+      "entry_price": "6.11",
+      "exit_date": "2008-04-09",
+      "exit_price": "6.09",
+      "quantity": "394",
+      "exit_reason": "rule",
+      "pnl": "-8.01",
+      "return_pct": "-0.003327323934300929656799621159",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-04-10",
+      "entry_price": "0.49",
+      "exit_date": "2008-04-14",
+      "exit_price": "0.46",
+      "quantity": "5128",
+      "exit_reason": "rule",
+      "pnl": "-154.76",
+      "return_pct": "-0.06159062689038173771848833137",
+      "bars_held": 2
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2008-04-10",
+      "entry_price": "6.27",
+      "exit_date": "2008-04-14",
+      "exit_price": "6.06",
+      "quantity": "399",
+      "exit_reason": "rule",
+      "pnl": "-83.92",
+      "return_pct": "-0.03354478700739088550722899753",
+      "bars_held": 2
+    },
+    {
+      "symbol": "TXN",
+      "entry_date": "2008-04-17",
+      "entry_price": "28.95",
+      "exit_date": "2008-04-18",
+      "exit_price": "29.57",
+      "quantity": "84",
+      "exit_reason": "rule",
+      "pnl": "52.00",
+      "return_pct": "0.02138333744551361131672012501",
+      "bars_held": 1
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-03-31",
+      "entry_price": "40.30",
+      "exit_date": "2008-04-23",
+      "exit_price": "42.05",
+      "quantity": "62",
+      "exit_reason": "rule",
+      "pnl": "108.42",
+      "return_pct": "0.04339229968782518210197710718",
+      "bars_held": 17
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2008-04-16",
+      "entry_price": "0.53",
+      "exit_date": "2008-04-23",
+      "exit_price": "0.43",
+      "quantity": "4797",
+      "exit_reason": "stop",
+      "pnl": "-480.55",
+      "return_pct": "-0.1890135737351568000440526902",
+      "bars_held": 5
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2008-04-21",
+      "entry_price": "13.50",
+      "exit_date": "2008-05-22",
+      "exit_price": "13.81",
+      "quantity": "185",
+      "exit_reason": "rule",
+      "pnl": "57.25",
+      "return_pct": "0.02292292292292292292292292292",
+      "bars_held": 23
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-05-28",
+      "entry_price": "11.34",
+      "exit_date": "2008-06-10",
+      "exit_price": "11.03",
+      "quantity": "222",
+      "exit_reason": "rule",
+      "pnl": "-68.92",
+      "return_pct": "-0.02737658293213848769404324960",
+      "bars_held": 9
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-04-24",
+      "entry_price": "41.89",
+      "exit_date": "2008-06-12",
+      "exit_price": "47.78",
+      "quantity": "59",
+      "exit_reason": "rule",
+      "pnl": "347.42",
+      "return_pct": "0.1405699349790209224320354763",
+      "bars_held": 34
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2008-06-13",
+      "entry_price": "7.23",
+      "exit_date": "2008-06-23",
+      "exit_price": "7.13",
+      "quantity": "350",
+      "exit_reason": "rule",
+      "pnl": "-35.13",
+      "return_pct": "-0.01388263189093064611736810907",
+      "bars_held": 6
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-06-13",
+      "entry_price": "49.40",
+      "exit_date": "2008-06-24",
+      "exit_price": "47.50",
+      "quantity": "51",
+      "exit_reason": "rule",
+      "pnl": "-96.98",
+      "return_pct": "-0.03849329205366357069143446852",
+      "bars_held": 7
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-06-16",
+      "entry_price": "29.03",
+      "exit_date": "2008-06-24",
+      "exit_price": "27.91",
+      "quantity": "85",
+      "exit_reason": "rule",
+      "pnl": "-95.28",
+      "return_pct": "-0.03861319932726793783307329132",
+      "bars_held": 6
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-06-26",
+      "entry_price": "10.98",
+      "exit_date": "2008-06-27",
+      "exit_price": "10.63",
+      "quantity": "220",
+      "exit_reason": "rule",
+      "pnl": "-77.10",
+      "return_pct": "-0.03191753601589667163437655241",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-06-26",
+      "entry_price": "28.04",
+      "exit_date": "2008-06-27",
+      "exit_price": "27.67",
+      "quantity": "88",
+      "exit_reason": "rule",
+      "pnl": "-32.64",
+      "return_pct": "-0.01322785630916872001037478926",
+      "bars_held": 1
+    },
+    {
+      "symbol": "ORCL",
+      "entry_date": "2008-06-26",
+      "entry_price": "21.69",
+      "exit_date": "2008-06-27",
+      "exit_price": "21.38",
+      "quantity": "110",
+      "exit_reason": "rule",
+      "pnl": "-34.18",
+      "return_pct": "-0.01432583092334129678528018777",
+      "bars_held": 1
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-07-09",
+      "entry_price": "47.72",
+      "exit_date": "2008-07-10",
+      "exit_price": "46.85",
+      "quantity": "52",
+      "exit_reason": "rule",
+      "pnl": "-45.32",
+      "return_pct": "-0.01826358888387387968276484622",
+      "bars_held": 1
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2008-07-09",
+      "entry_price": "13.79",
+      "exit_date": "2008-07-10",
+      "exit_price": "13.63",
+      "quantity": "180",
+      "exit_reason": "rule",
+      "pnl": "-28.90",
+      "return_pct": "-0.01164289742969946015631294819",
+      "bars_held": 1
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-07-11",
+      "entry_price": "47.63",
+      "exit_date": "2008-07-16",
+      "exit_price": "46.86",
+      "quantity": "51",
+      "exit_reason": "rule",
+      "pnl": "-39.34",
+      "return_pct": "-0.01619509865672071894052603195",
+      "bars_held": 3
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-07-17",
+      "entry_price": "47.58",
+      "exit_date": "2008-07-18",
+      "exit_price": "45.38",
+      "quantity": "53",
+      "exit_reason": "rule",
+      "pnl": "-116.68",
+      "return_pct": "-0.04626963921736578711524582233",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-07-17",
+      "entry_price": "27.59",
+      "exit_date": "2008-07-21",
+      "exit_price": "25.65",
+      "quantity": "91",
+      "exit_reason": "rule",
+      "pnl": "-176.62",
+      "return_pct": "-0.07034719539250166288948456400",
+      "bars_held": 2
+    },
+    {
+      "symbol": "ORCL",
+      "entry_date": "2008-07-23",
+      "entry_price": "21.55",
+      "exit_date": "2008-07-25",
+      "exit_price": "20.96",
+      "quantity": "115",
+      "exit_reason": "rule",
+      "pnl": "-67.94",
+      "return_pct": "-0.02741450620397457883587208716",
+      "bars_held": 2
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-07-24",
+      "entry_price": "26.10",
+      "exit_date": "2008-07-25",
+      "exit_price": "25.63",
+      "quantity": "94",
+      "exit_reason": "rule",
+      "pnl": "-44.26",
+      "return_pct": "-0.01804027064481943425450395370",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-07-28",
+      "entry_price": "26.07",
+      "exit_date": "2008-07-29",
+      "exit_price": "25.51",
+      "quantity": "95",
+      "exit_reason": "rule",
+      "pnl": "-53.28",
+      "return_pct": "-0.02151293077342377808733571558",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-07-30",
+      "entry_price": "26.21",
+      "exit_date": "2008-08-01",
+      "exit_price": "25.91",
+      "quantity": "95",
+      "exit_reason": "rule",
+      "pnl": "-28.58",
+      "return_pct": "-0.01147814213136809976103937830",
+      "bars_held": 2
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2008-07-28",
+      "entry_price": "0.40",
+      "exit_date": "2008-08-22",
+      "exit_price": "0.43",
+      "quantity": "6282",
+      "exit_reason": "rule",
+      "pnl": "187.34",
+      "return_pct": "0.07455428207577204711875198981",
+      "bars_held": 19
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2008-08-25",
+      "entry_price": "54.89",
+      "exit_date": "2008-08-26",
+      "exit_price": "53.94",
+      "quantity": "45",
+      "exit_reason": "rule",
+      "pnl": "-42.82",
+      "return_pct": "-0.01733568146393797696402906824",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-08-06",
+      "entry_price": "26.74",
+      "exit_date": "2008-09-02",
+      "exit_price": "27.66",
+      "quantity": "95",
+      "exit_reason": "rule",
+      "pnl": "87.31",
+      "return_pct": "0.03436995630437349919300869976",
+      "bars_held": 18
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2008-08-28",
+      "entry_price": "0.43",
+      "exit_date": "2008-09-05",
+      "exit_price": "0.42",
+      "quantity": "5711",
+      "exit_reason": "rule",
+      "pnl": "-58.12",
+      "return_pct": "-0.02366709695284090677721084973",
+      "bars_held": 5
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2008-09-11",
+      "entry_price": "4.69",
+      "exit_date": "2008-09-16",
+      "exit_price": "4.00",
+      "quantity": "509",
+      "exit_reason": "rule",
+      "pnl": "-351.35",
+      "return_pct": "-0.1471801810481692017040813334",
+      "bars_held": 3
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-09-12",
+      "entry_price": "27.15",
+      "exit_date": "2008-09-16",
+      "exit_price": "26.08",
+      "quantity": "91",
+      "exit_reason": "rule",
+      "pnl": "-97.45",
+      "return_pct": "-0.03944306154250905632121101734",
+      "bars_held": 2
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-09-22",
+      "entry_price": "9.77",
+      "exit_date": "2008-09-30",
+      "exit_price": "8.81",
+      "quantity": "251",
+      "exit_reason": "rule",
+      "pnl": "-241.06",
+      "return_pct": "-0.09830075807313224074021212999",
+      "bars_held": 6
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2008-09-19",
+      "entry_price": "0.46",
+      "exit_date": "2008-10-02",
+      "exit_price": "0.43",
+      "quantity": "5638",
+      "exit_reason": "rule",
+      "pnl": "-170.14",
+      "return_pct": "-0.06560297361074695004395638293",
+      "bars_held": 9
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2008-10-01",
+      "entry_price": "9.18",
+      "exit_date": "2008-10-03",
+      "exit_price": "8.77",
+      "quantity": "268",
+      "exit_reason": "rule",
+      "pnl": "-109.99",
+      "return_pct": "-0.04470702045328911000552791598",
+      "bars_held": 2
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2008-10-03",
+      "entry_price": "4.55",
+      "exit_date": "2008-10-07",
+      "exit_price": "4.18",
+      "quantity": "558",
+      "exit_reason": "rule",
+      "pnl": "-206.62",
+      "return_pct": "-0.08138170073653944621686557170",
+      "bars_held": 2
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2008-10-14",
+      "entry_price": "25.65",
+      "exit_date": "2008-10-15",
+      "exit_price": "23.77",
+      "quantity": "98",
+      "exit_reason": "rule",
+      "pnl": "-184.32",
+      "return_pct": "-0.07332617257429287504475474400",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2008-10-14",
+      "entry_price": "4.44",
+      "exit_date": "2008-10-16",
+      "exit_price": "4.14",
+      "quantity": "593",
+      "exit_reason": "rule",
+      "pnl": "-178.07",
+      "return_pct": "-0.06763213466417513635051577716",
+      "bars_held": 2
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2008-10-21",
+      "entry_price": "4.32",
+      "exit_date": "2008-10-24",
+      "exit_price": "3.43",
+      "quantity": "561",
+      "exit_reason": "rule",
+      "pnl": "-499.44",
+      "return_pct": "-0.2060804119627649039413745296",
+      "bars_held": 3
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-10-29",
+      "entry_price": "0.20",
+      "exit_date": "2008-11-07",
+      "exit_price": "0.22",
+      "quantity": "12468",
+      "exit_reason": "rule",
+      "pnl": "247.21",
+      "return_pct": "0.09913779274943856272056464549",
+      "bars_held": 7
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-11-10",
+      "entry_price": "0.23",
+      "exit_date": "2008-11-12",
+      "exit_price": "0.19",
+      "quantity": "11467",
+      "exit_reason": "stop",
+      "pnl": "-460.64",
+      "return_pct": "-0.1746561967991324822458396685",
+      "bars_held": 2
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-11-14",
+      "entry_price": "0.19",
+      "exit_date": "2008-11-17",
+      "exit_price": "0.18",
+      "quantity": "12594",
+      "exit_reason": "rule",
+      "pnl": "-128.09",
+      "return_pct": "-0.05353008533721153765786548315",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2008-11-25",
+      "entry_price": "0.31",
+      "exit_date": "2008-11-26",
+      "exit_price": "0.30",
+      "quantity": "7878",
+      "exit_reason": "rule",
+      "pnl": "-80.15",
+      "return_pct": "-0.03281903872769410936130833927",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-11-28",
+      "entry_price": "0.19",
+      "exit_date": "2008-12-01",
+      "exit_price": "0.18",
+      "quantity": "13144",
+      "exit_reason": "rule",
+      "pnl": "-133.69",
+      "return_pct": "-0.05353253035205176666559887241",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-12-04",
+      "entry_price": "0.19",
+      "exit_date": "2008-12-05",
+      "exit_price": "0.17",
+      "quantity": "13192",
+      "exit_reason": "rule",
+      "pnl": "-266.09",
+      "return_pct": "-0.1061608311257221282435926080",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-12-08",
+      "entry_price": "0.19",
+      "exit_date": "2008-12-09",
+      "exit_price": "0.18",
+      "quantity": "13586",
+      "exit_reason": "rule",
+      "pnl": "-138.18",
+      "return_pct": "-0.05353033695677438849589747960",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-12-10",
+      "entry_price": "0.20",
+      "exit_date": "2008-12-26",
+      "exit_price": "0.19",
+      "quantity": "12800",
+      "exit_reason": "rule",
+      "pnl": "-130.19",
+      "return_pct": "-0.05085546875",
+      "bars_held": 11
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2008-12-29",
+      "entry_price": "2.26",
+      "exit_date": "2008-12-30",
+      "exit_price": "2.13",
+      "quantity": "1146",
+      "exit_reason": "rule",
+      "pnl": "-149.24",
+      "return_pct": "-0.05762251154457983907087368145",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2008-12-31",
+      "entry_price": "0.20",
+      "exit_date": "2009-01-12",
+      "exit_price": "0.20",
+      "quantity": "12468",
+      "exit_reason": "rule",
+      "pnl": "-2.14",
+      "return_pct": "-0.0008581969842797561758100737889",
+      "bars_held": 7
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2009-01-14",
+      "entry_price": "19.54",
+      "exit_date": "2009-01-15",
+      "exit_price": "19.06",
+      "quantity": "126",
+      "exit_reason": "rule",
+      "pnl": "-60.57",
+      "return_pct": "-0.02460154993420090656528732271",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2009-01-16",
+      "entry_price": "0.46",
+      "exit_date": "2009-01-21",
+      "exit_price": "0.43",
+      "quantity": "5534",
+      "exit_reason": "rule",
+      "pnl": "-167.00",
+      "return_pct": "-0.06560236325639132006096698669",
+      "bars_held": 2
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2009-01-22",
+      "entry_price": "34.62",
+      "exit_date": "2009-01-30",
+      "exit_price": "34.82",
+      "quantity": "69",
+      "exit_reason": "rule",
+      "pnl": "13.72",
+      "return_pct": "0.005743517611500431182444595149",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2009-02-02",
+      "entry_price": "2.93",
+      "exit_date": "2009-02-27",
+      "exit_price": "3.06",
+      "quantity": "850",
+      "exit_reason": "rule",
+      "pnl": "110.29",
+      "return_pct": "0.04428428026500702670146556916",
+      "bars_held": 18
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2009-03-02",
+      "entry_price": "3.20",
+      "exit_date": "2009-03-03",
+      "exit_price": "3.14",
+      "quantity": "771",
+      "exit_reason": "rule",
+      "pnl": "-46.46",
+      "return_pct": "-0.01883106355382619974059662776",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2009-03-05",
+      "entry_price": "0.21",
+      "exit_date": "2009-03-06",
+      "exit_price": "0.21",
+      "quantity": "11820",
+      "exit_reason": "rule",
+      "pnl": "-2.03",
+      "return_pct": "-0.0008178228990411731528482797518",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2009-03-09",
+      "entry_price": "0.21",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "11921",
+      "exit_reason": "open_at_end",
+      "pnl": "-29.80",
+      "return_pct": "-0.01190376326690394302171837613",
+      "bars_held": 0
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2488.20 exceeds $1079.13 of settled cash (total cash $5834.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2408.28 exceeds $769.93 of settled cash (total cash $5568.55; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2498.13 exceeds $2463.49 of settled cash (total cash $2463.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2475.49 exceeds $2463.49 of settled cash (total cash $2463.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2505.18 exceeds $2463.49 of settled cash (total cash $2463.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2485.70 exceeds $2463.49 of settled cash (total cash $2463.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2484.16 exceeds $2463.49 of settled cash (total cash $2463.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2571.14 exceeds $31.69 of settled cash (total cash $2515.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2492.28 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2493.96 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2518.28 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2516.00 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2515.98 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2517.48 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2494.80 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2491.44 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2491.66 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2500.96 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2494.77 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2544.72 exceeds $2215.36 of settled cash (total cash $2215.36; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2498.31 exceeds $2252.63 of settled cash (total cash $2252.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2470.50 exceeds $2252.63 of settled cash (total cash $2252.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2521.53 exceeds $2252.63 of settled cash (total cash $2252.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2536.57 exceeds $2252.63 of settled cash (total cash $2252.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2468.40 exceeds $2252.63 of settled cash (total cash $2252.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2461.68 exceeds $2252.63 of settled cash (total cash $2252.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2474.70 exceeds $2002.82 of settled cash (total cash $4407.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2460.75 exceeds $2002.82 of settled cash (total cash $4407.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2439.06 exceeds $1810.30 of settled cash (total cash $1810.30; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2484.42 exceeds $1810.30 of settled cash (total cash $6629.75; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2527.30 exceeds $1810.30 of settled cash (total cash $6629.75; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2484.72 exceeds $1573.72 of settled cash (total cash $1573.72; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2436.28 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2452.45 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2449.20 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2508.80 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2478.33 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2489.99 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2446.80 exceeds $1494.79 of settled cash (total cash $1494.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2470.51 exceeds $1724.88 of settled cash (total cash $1724.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2511.96 exceeds $1724.88 of settled cash (total cash $1724.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2467.68 exceeds $1724.88 of settled cash (total cash $1724.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2485.85 exceeds $1696.38 of settled cash (total cash $1696.38; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2465.10 exceeds $1696.38 of settled cash (total cash $1696.38; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2445.45 exceeds $1696.38 of settled cash (total cash $1696.38; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2476.80 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2524.14 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2505.02 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2469.60 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2489.20 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2343.30 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2434.74 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2440.00 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2456.72 exceeds $1227.05 of settled cash (total cash $1227.05; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2454.27 exceeds $978.02 of settled cash (total cash $978.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2484.60 exceeds $978.02 of settled cash (total cash $978.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2466.56 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2473.20 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2449.17 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2450.77 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2451.20 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2581.32 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2558.19 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2459.04 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2448.38 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2535.06 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2430.32 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2460.92 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2454.40 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2417.76 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2474.04 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2467.04 exceeds $2189.56 of settled cash (total cash $2189.56; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2437.54 exceeds $2292.96 of settled cash (total cash $2292.96; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2533.28 exceeds $2292.96 of settled cash (total cash $2292.96; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2463.26 exceeds $2292.96 of settled cash (total cash $4469.73; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2408.14 exceeds $2076.87 of settled cash (total cash $2076.87; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2442.22 exceeds $2076.87 of settled cash (total cash $2076.87; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2435.07 exceeds $2076.87 of settled cash (total cash $2076.87; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2448.64 exceeds $1764.13 of settled cash (total cash $1764.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2541.50 exceeds $1621.32 of settled cash (total cash $1621.32; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2446.71 exceeds $1621.32 of settled cash (total cash $1621.32; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2486.94 exceeds $1280.37 of settled cash (total cash $3723.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2437.56 exceeds $1280.37 of settled cash (total cash $3723.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2434.34 exceeds $1280.37 of settled cash (total cash $3723.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2458.50 exceeds $1280.37 of settled cash (total cash $3723.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2445.50 exceeds $1280.37 of settled cash (total cash $3723.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2443.35 exceeds $1280.37 of settled cash (total cash $3723.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2499.27 exceeds $1163.53 of settled cash (total cash $1163.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2462.40 exceeds $1163.53 of settled cash (total cash $1163.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2496.00 exceeds $1163.53 of settled cash (total cash $1163.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2457.68 exceeds $1163.53 of settled cash (total cash $1163.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MU",
+      "reason": "$2592.00 exceeds $1163.53 of settled cash (total cash $1163.53; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2488.20 exceeds $950.50 of settled cash (total cash $950.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2506.98 exceeds $950.50 of settled cash (total cash $950.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2484.60 exceeds $950.50 of settled cash (total cash $950.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2488.50 exceeds $950.50 of settled cash (total cash $950.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2465.62 exceeds $950.50 of settled cash (total cash $950.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2502.32 exceeds $950.50 of settled cash (total cash $950.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2465.37 exceeds $835.75 of settled cash (total cash $835.75; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2453.22 exceeds $835.75 of settled cash (total cash $835.75; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2451.86 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2544.75 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "GOOGL",
+      "reason": "$2495.91 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2510.00 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2513.00 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2551.68 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2521.61 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2434.27 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2467.08 exceeds $825.61 of settled cash (total cash $825.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NVDA",
+      "reason": "$2505.93 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TXN",
+      "reason": "$2521.74 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2456.86 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "INTC",
+      "reason": "$2509.78 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2481.68 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ORCL",
+      "reason": "$2446.15 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2562.78 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2465.68 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2520.80 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2475.90 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2523.15 exceeds $737.61 of settled cash (total cash $737.61; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "TSM",
+      "reason": "$2502.24 exceeds $809.74 of settled cash (total cash $809.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2400.06 exceeds $809.74 of settled cash (total cash $809.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "QCOM",
+      "reason": "$2454.47 exceeds $809.74 of settled cash (total cash $809.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMZN",
+      "reason": "$2474.91 exceeds $809.74 of settled cash (total cash $809.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2412.80 exceeds $809.74 of settled cash (total cash $809.74; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.5622750642673521850899742931",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

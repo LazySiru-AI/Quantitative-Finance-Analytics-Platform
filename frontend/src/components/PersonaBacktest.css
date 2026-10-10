@@ -1,0 +1,22 @@
+/**
+ * Layout for PersonaBacktest.tsx. Reuses .panel, .placeholder, .muted, .callout variants,
+ * .warning-list, .persona-card-subhead, and every `.persona-scorecard-*` class that
+ * `pages/Personas.css` already styles (aggregate stat rows, list rows, sign-colored returns,
+ * empty state) -- see that file's own comment on the same convention. Only what's new below.
+ */
+
+.persona-backtest {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-backtest-caveat {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.persona-backtest-caveat strong {
+  margin-right: 0.35rem;
+}

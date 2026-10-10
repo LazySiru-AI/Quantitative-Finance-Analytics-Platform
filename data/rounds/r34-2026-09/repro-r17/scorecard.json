@@ -1,0 +1,238 @@
+{
+  "results_root": "data\\rounds\\r34-2026-09\\repro-r17",
+  "round": "r1",
+  "window_tags": [
+    "q4-2018",
+    "covid",
+    "bear-2022",
+    "chop-2015",
+    "chop-2011",
+    "bull-2024",
+    "recent",
+    "gfc"
+  ],
+  "matrix": "r2",
+  "main_window_tags": [
+    "q4-2018",
+    "covid",
+    "bear-2022",
+    "chop-2015",
+    "chop-2011",
+    "bull-2024",
+    "recent",
+    "gfc"
+  ],
+  "min_ranked_main_windows": 5,
+  "rank_by": "median",
+  "rank_by_choices": [
+    "median",
+    "worst",
+    "hit-rate",
+    "borda",
+    "excess-per-exposure"
+  ],
+  "pareto_frontier": [
+    "r17-ma-crossover-on-stop-tp"
+  ],
+  "ranked": [
+    {
+      "agent_id": "r17-ma-crossover-on-stop",
+      "display_name": "ma-crossover / regime on / stop",
+      "ranked": true,
+      "median_adjusted_excess": "0.001694387827976326341689903010",
+      "worst_adjusted_excess": "-0.1315703800322275220179716670",
+      "best_adjusted_excess": "0.03574505384716024226708901980",
+      "hit_rate": 0.5,
+      "iqr": "0.07105555011419356018767711130",
+      "n_windows_run": 8,
+      "n_windows_eligible": 8,
+      "total_trades": 155,
+      "mean_exposure": 0.3025983564100269,
+      "worst_drawdown": "-0.1199175057766404",
+      "notes": [],
+      "windows": {
+        "q4-2018": {
+          "status": "run",
+          "excess": "0.1760283736053771878945033949",
+          "adjusted_excess": "0.02906011792387215701661605651",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "-244.22",
+          "excess_per_exposure": "0.1089169935855589663228241178"
+        },
+        "covid": {
+          "status": "run",
+          "excess": "0.1155881369193877853103999526",
+          "adjusted_excess": "0.03574505384716024226708901980",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "284.63",
+          "excess_per_exposure": "0.4276668060947112240005644542"
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.2181591788788578626915809364",
+          "adjusted_excess": "0.03519871297908624571404576948",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "-332.37",
+          "excess_per_exposure": "0.1293012311729712809567282766"
+        },
+        "chop-2015": {
+          "status": "run",
+          "excess": "-0.008544125565284325988646204176",
+          "adjusted_excess": "-0.008818964751422925199653613009",
+          "trades": 21,
+          "reason": null,
+          "realised_pnl": "-89.29",
+          "excess_per_exposure": "-0.03084642528074874880267247210"
+        },
+        "chop-2011": {
+          "status": "run",
+          "excess": "-0.02741955782776641672347193820",
+          "adjusted_excess": "-0.02767618169297187700977050670",
+          "trades": 25,
+          "reason": null,
+          "realised_pnl": "-278.74",
+          "excess_per_exposure": "-0.06357967731418012530542120978"
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.2199983367454490237061650321",
+          "adjusted_excess": "-0.1315703800322275220179716670",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "-800.48",
+          "excess_per_exposure": "-0.3573848680848849601559578485"
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1653363798956434274218897341",
+          "adjusted_excess": "-0.0788145886271558929575029861",
+          "trades": 40,
+          "reason": null,
+          "realised_pnl": "408.15",
+          "excess_per_exposure": "-0.1358170364694160585441408287"
+        },
+        "gfc": {
+          "status": "run",
+          "excess": "0.5022150642673521850899742931",
+          "adjusted_excess": "0.01220774040737557788303341903",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "-600.60",
+          "excess_per_exposure": "0.09498163334598615407852974626"
+        }
+      },
+      "rank_median": 1.5,
+      "rank_worst": 2.0,
+      "rank_hit_rate": 1.5,
+      "borda": 1.6666666666666667,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "-1652.92",
+      "median_excess_per_exposure": "0.03206760403261870263792863708",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "r17-ma-crossover-on-stop-tp",
+      "display_name": "ma-crossover / regime on / stop-tp",
+      "ranked": true,
+      "median_adjusted_excess": "0.001694387827976326341689903010",
+      "worst_adjusted_excess": "-0.1171408317670471800918234275",
+      "best_adjusted_excess": "0.03574505384716024226708901980",
+      "hit_rate": 0.5,
+      "iqr": "0.05814639186589253709139379574",
+      "n_windows_run": 8,
+      "n_windows_eligible": 8,
+      "total_trades": 157,
+      "mean_exposure": 0.2912153453263043,
+      "worst_drawdown": "-0.10732720469025225",
+      "notes": [],
+      "windows": {
+        "q4-2018": {
+          "status": "run",
+          "excess": "0.1760283736053771878945033949",
+          "adjusted_excess": "0.02906011792387215701661605651",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "-244.22",
+          "excess_per_exposure": "0.1089169935855589663228241178"
+        },
+        "covid": {
+          "status": "run",
+          "excess": "0.1155881369193877853103999526",
+          "adjusted_excess": "0.03574505384716024226708901980",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "284.63",
+          "excess_per_exposure": "0.4276668060947112240005644542"
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.2141851788788578626915809364",
+          "adjusted_excess": "0.01942424303945806719378542935",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "-372.11",
+          "excess_per_exposure": "0.08622158598899051024353230333"
+        },
+        "chop-2015": {
+          "status": "run",
+          "excess": "-0.008544125565284325988646204176",
+          "adjusted_excess": "-0.008818964751422925199653613009",
+          "trades": 21,
+          "reason": null,
+          "realised_pnl": "-89.29",
+          "excess_per_exposure": "-0.03084642528074874880267247210"
+        },
+        "chop-2011": {
+          "status": "run",
+          "excess": "-0.02741955782776641672347193820",
+          "adjusted_excess": "-0.02767618169297187700977050670",
+          "trades": 25,
+          "reason": null,
+          "realised_pnl": "-278.74",
+          "excess_per_exposure": "-0.06357967731418012530542120978"
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.2070683367454490237061650321",
+          "adjusted_excess": "-0.1171408317670471800918234275",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "-671.18",
+          "excess_per_exposure": "-0.3277283247135124749508769882"
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1556333798956434274218897341",
+          "adjusted_excess": "-0.0622241753424081587382913183",
+          "trades": 41,
+          "reason": null,
+          "realised_pnl": "505.18",
+          "excess_per_exposure": "-0.1137781807983333245537884262"
+        },
+        "gfc": {
+          "status": "run",
+          "excess": "0.5022150642673521850899742931",
+          "adjusted_excess": "0.01220774040737557788303341903",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "-600.60",
+          "excess_per_exposure": "0.09498163334598615407852974626"
+        }
+      },
+      "rank_median": 1.5,
+      "rank_worst": 1.0,
+      "rank_hit_rate": 1.5,
+      "borda": 1.3333333333333333,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "-1466.33",
+      "median_excess_per_exposure": "0.02768758035412088072042991562",
+      "incommensurable_exposure": false
+    }
+  ],
+  "unranked": []
+}

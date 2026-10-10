@@ -1,0 +1,26 @@
+/**
+ * Glyph.tsx -- one tone per glyph, following the same token mapping `StatusPill.css` uses (`--up`
+ * for good/pass/live, `--down` for bad/fail, `--warn` for caution). Untoned glyphs (`age`, `seat`,
+ * `partial`, `idle`, `info`, `star`) inherit the surrounding text colour so they read as part of the
+ * sentence rather than a status signal of their own.
+ */
+
+.glyph {
+  font-style: normal;
+  line-height: 1;
+}
+
+.glyph-up,
+.glyph-pass,
+.glyph-live {
+  color: var(--up);
+}
+
+.glyph-down,
+.glyph-fail {
+  color: var(--down);
+}
+
+.glyph-warn {
+  color: var(--warn);
+}

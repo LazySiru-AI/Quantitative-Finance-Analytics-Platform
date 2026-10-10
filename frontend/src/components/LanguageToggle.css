@@ -1,0 +1,47 @@
+/**
+ * Co-located rather than appended to `styles.css`, matching `Collapsible.css` and
+ * `EventCalendar.css`. It also keeps this component landable while `styles.css` is being edited
+ * elsewhere.
+ */
+.language-toggle {
+  display: flex;
+  gap: 1px;
+  margin: 0 0.5rem 0.9rem;
+  padding: 1px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-raised);
+}
+
+.language-option {
+  flex: 1;
+  padding: 0.25rem 0.1rem;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* Korean glyphs have no uppercase form and sit taller than Latin at the same size; a fixed line
+     box stops the rail height changing when the label does. */
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.language-option:hover {
+  color: var(--text);
+}
+
+.language-option.is-active {
+  background: var(--panel-2);
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+
+.language-option:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}

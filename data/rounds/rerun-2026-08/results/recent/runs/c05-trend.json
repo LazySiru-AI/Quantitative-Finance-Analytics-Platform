@@ -1,0 +1,103 @@
+{
+  "card": {
+    "agent_id": "c05-trend",
+    "display_name": "Cross-Asset 200dma Trend",
+    "discipline": "trend",
+    "purpose": "trading",
+    "thesis": "The 200-day moving average is not a statistical artifact -- it is a level thousands of participants mechanically watch and react to at the same time (managed-futures CTAs, trend-following mutual funds, and technically-oriented traders all use variants of it), so a break of it triggers correlated follow-on flow rather than random noise. The other side of the trade is supplied by participants who are slow or unwilling to move: index funds and 401k flows that buy/sell on a schedule unrelated to price level, and holders exhibiting the disposition effect who keep underwater positions past the point a trend-follower would already have exited, cushioning the trend-follower's fills. Applying the identical rule independently across three assets whose price drivers are structurally different (US equity beta, long-duration interest-rate risk, and a non-yielding hard asset with its own supply/demand book) means the three trend signals are not forced to fire together -- when equity trend breaks down in a genuine flight-to-quality event, rate or gold trend can still be up, which a single-asset or single-sector trend book cannot offer. This is not a hedge (the rules do not compare symbols to each other -- the engine cannot do that); it is three independent bets whose bad years are not the same years, which the correlation numbers in the memo support. What I expect to go wrong: fast V-shaped shocks. A 200-day average reacts on the order of weeks, not days, so a crash-and-snapback that completes inside a single quarter (COVID is the designed example) will be entered late on the way down and re-entered late on the way back up, capturing the worst of both transitions rather than avoiding them.",
+    "universe": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ],
+    "entry": "close crosses_above sma(200)",
+    "exit": "close crosses_below sma(200)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 3,
+    "position_pct": "0.33",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 249,
+  "starting_equity": "10000.00",
+  "ending_equity": "10171.47",
+  "total_return": "0.017147000000000023",
+  "max_drawdown": "-0.029989758001870315",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.7188755020080321,
+  "capital_exposure": 0.21498027309236947,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "TLT",
+      "entry_date": "2025-09-08",
+      "entry_price": "89.21",
+      "exit_date": "2025-12-08",
+      "exit_price": "88.15",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "-39.32",
+      "return_pct": "-0.01191237196169378660130817961",
+      "bars_held": 64
+    },
+    {
+      "symbol": "TLT",
+      "entry_date": "2026-01-15",
+      "entry_price": "88.68",
+      "exit_date": "2026-01-20",
+      "exit_price": "86.59",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "-77.43",
+      "return_pct": "-0.02359836155505979592583110851",
+      "bars_held": 2
+    },
+    {
+      "symbol": "TLT",
+      "entry_date": "2026-01-26",
+      "entry_price": "88.44",
+      "exit_date": "2026-01-28",
+      "exit_price": "87.47",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "-35.99",
+      "return_pct": "-0.01099844756561174471622232816",
+      "bars_held": 2
+    },
+    {
+      "symbol": "TLT",
+      "entry_date": "2026-02-11",
+      "entry_price": "88.08",
+      "exit_date": "2026-03-12",
+      "exit_price": "86.87",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "-44.87",
+      "return_pct": "-0.01376819598890443577092078454",
+      "bars_held": 20
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2026-04-09",
+      "entry_price": "675.18",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "4",
+      "exit_reason": "open_at_end",
+      "pnl": "369.08",
+      "return_pct": "0.1366598536686513226102668918",
+      "bars_held": 90
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "0.2061513798956434274218897341",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

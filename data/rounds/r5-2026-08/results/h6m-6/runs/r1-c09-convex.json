@@ -1,0 +1,112 @@
+{
+  "card": {
+    "agent_id": "c09-convex",
+    "display_name": "Flight-to-Quality Insurance",
+    "discipline": "volatility",
+    "thesis": "In a systemic equity selloff capital does not vanish, it rotates: institutional and retail sellers de-risk out of equities into US duration (Treasuries) and, in uncertainty-driven episodes, into gold. That rotation shows up first as a volatility breakout in the receiving instrument's own price -- a close pushing above its 20-day Bollinger upper band -- because a sudden, forced buying wave widens the band and breaks it before any slower moving-average filter would confirm a trend. The other side of that trade is whoever is still willing to sell duration or gold at the pre-rotation price: in ordinary markets TLT and GLD are unremarkable, low-conviction holdings that drift on yield and macro views with no connection to equity risk, so a band breakout in either is a cheap, low-information signal most of the time and costs a string of small whipsaw losses. It becomes a strong, well-paid signal exactly when equity holders are forced, non-price-sensitive sellers of risk and buyers of safety, because that is the one condition under which the other side of a TLT/GLD trade is not a considered view but a stampede. This card holds TLT and GLD outright -- real capital, real price risk, sized at 15% of starting equity per slot -- so its payoff comes from a position actually carried through the dislocation, not from sitting out of SPY while it falls; roughly 85% of the book is uninvested cash at any time, which this engine scores as free but which a real book would have to fund, invest, or forgo yield on. I expect this card's numerically worst window to be bull-2024: a strong, low-volatility equity year gives TLT and GLD no rotation to catch, so the entry still fires on ordinary volatility noise, whipsaws against sma(20), and pays its premium with nothing to show for it. Separately, and worth flagging even though it is not the predicted worst *number*: bear-2022 is the window where the underlying mechanism itself fails, not just goes unpaid -- 2022 was a rate-hike-driven decline that hurt equities and duration together, so there was no flight-to-quality rotation into TLT to catch, and the card's raw return there is a real loss (the low-exposure denominator in the scoring only cushions how that loss compares to the benchmark, it does not mean the trade worked).",
+    "universe": [
+      "TLT",
+      "GLD"
+    ],
+    "entry": "close crosses_above bb_upper(20,2)",
+    "exit": "close crosses_below sma(20)",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 180,
+    "max_positions": 2,
+    "position_pct": "0.15",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 125,
+  "starting_equity": "10000.00",
+  "ending_equity": "10246.98",
+  "total_return": "0.02469800000000011",
+  "max_drawdown": "-0.021728400774279177",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.52,
+  "capital_exposure": 0.099385776,
+  "win_rate": 0.8,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "TLT",
+      "entry_date": "2025-09-08",
+      "entry_price": "89.21",
+      "exit_date": "2025-10-02",
+      "exit_price": "89.27",
+      "quantity": "16",
+      "exit_reason": "rule",
+      "pnl": "0.92",
+      "return_pct": "0.0006445465754960206254904158727",
+      "bars_held": 18
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2025-08-29",
+      "entry_price": "314.88",
+      "exit_date": "2025-10-28",
+      "exit_price": "361.63",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "186.96",
+      "return_pct": "0.1484375",
+      "bars_held": 41
+    },
+    {
+      "symbol": "TLT",
+      "entry_date": "2025-10-13",
+      "entry_price": "90.33",
+      "exit_date": "2025-10-31",
+      "exit_price": "90.51",
+      "quantity": "16",
+      "exit_reason": "rule",
+      "pnl": "2.84",
+      "return_pct": "0.001965017159304771393778368205",
+      "bars_held": 14
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2025-12-23",
+      "entry_price": "410.51",
+      "exit_date": "2026-01-02",
+      "exit_price": "401.42",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-27.30",
+      "return_pct": "-0.02216754768458746437358407834",
+      "bars_held": 6
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2026-01-13",
+      "entry_price": "424.80",
+      "exit_date": "2026-02-03",
+      "exit_price": "452.40",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "82.76",
+      "return_pct": "0.06494036409290646578782172003",
+      "bars_held": 14
+    },
+    {
+      "symbol": "TLT",
+      "entry_date": "2026-02-13",
+      "entry_price": "89.67",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "16",
+      "exit_reason": "open_at_end",
+      "pnl": "0.80",
+      "return_pct": "0.0005576000892160142745622839300",
+      "bars_held": 0
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "0.06049528668761472171234794512",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

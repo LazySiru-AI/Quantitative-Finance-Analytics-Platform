@@ -1,0 +1,15 @@
+SKIP  sso-vig-bnd-mean-reversion       h10y-1-c7500     already run
+SKIP  sso-vig-bnd-mean-reversion       h10y-2-c7500     already run
+SKIP  sso-vig-bnd-mean-reversion       h5y-1-c7500      already run
+SKIP  sso-vig-bnd-mean-reversion       h5y-2-c7500      already run
+SKIP  sso-vig-bnd-mean-reversion       h5y-3-c7500      already run
+SKIP  sso-vig-bnd-static               h10y-1-c7500     already run
+SKIP  sso-vig-bnd-static               h10y-2-c7500     already run
+SKIP  sso-vig-bnd-static               h5y-1-c7500      already run
+SKIP  sso-vig-bnd-static               h5y-2-c7500      already run
+SKIP  sso-vig-bnd-static               h5y-3-c7500      already run
+OK    ladder-sso-vig-bnd               h10y-1-c7500     irr=  8.55%  cagr=  8.14%
+OK    ladder-sso-vig-bnd               h10y-2-c7500     irr= 10.90%  cagr= 10.64%
+OK    ladder-sso-vig-bnd               h5y-1-c7500      irr=  6.07%  cagr=  6.09%
+OK    ladder-sso-vig-bnd               h5y-2-c7500      irr= 12.35%  cagr= 11.63%
+OK    ladder-sso-vig-bnd               h5y-3-c7500      irr= 10.47%  cagr=  9.77%

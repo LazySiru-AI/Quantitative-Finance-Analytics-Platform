@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "finding_id": "tax-page-defaults-to-wrong-year",
+      "run_id": "2026-07-27_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "session_date": "2026-07-27",
+      "observed_at": "2026-08-18T06:33:00Z",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "Tax page's year selector defaults to a year with no activity instead of the ledger's actual year",
+      "observed": "After session 1's two fills (XLE, SPY bought 2026-07-27; account funded 2026-07-24), I opened /tax. The year selector loaded already on 2026, not 2025, and read: 'Nothing was disposed of in 2026. The ledger holds 3 transactions dated in this tax year -- see Activity -- but no lot was sold, so there is no gain or loss to report and no Form 8949 to file for it.' Every transaction I have is correctly attributed to the year shown by default.",
+      "expected": "The default year should resolve from the ledger's most recent transaction, not a hardcoded currentYear-1, exactly what shipped.",
+      "why_it_matters": "A wrong default year previously read as a failed import to three independent personas across runs 3-5. Getting the right year on first paint is what stops that misdiagnosis before it starts.",
+      "repro": [
+        "Fund and trade a fresh ledger (only 2026 activity)",
+        "Navigate to /tax",
+        "Read the year selector's initial value without touching it"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

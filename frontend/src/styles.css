@@ -1,0 +1,3439 @@
+/**
+ * Dark-neon terminal theme.
+ *
+ * Monospace is reserved for things that read as instrument output: nav, headings, labels, tables,
+ * badges, figures. Long explanatory prose (subtitles, placeholders, callouts, the tax disclaimer)
+ * stays in the sans stack -- a wall of monospace body copy is measurably harder to read, and this
+ * app has a lot of prose worth reading. Glow is reserved for accents, borders and headings; body
+ * text stays flat and high-contrast so it remains legible under 18px.
+ */
+:root {
+  --bg: #07090c;
+  --bg-raised: #0a0d12;
+  --panel: #0c1016;
+  --panel-2: #10151d;
+  --border: #1c2733;
+  --border-strong: #2c3e4f;
+  --glow-cyan: rgba(57, 242, 208, 0.35);
+  --glow-magenta: rgba(255, 79, 216, 0.28);
+  --text: #dbe9e5;
+  --muted: #7d93a1;
+  --accent: #39f2d0;
+  --accent-2: #ff4fd8;
+  --up: #35e28a;
+  --down: #ff4d6a;
+  --warn: #ffb454;
+
+  /* Korean faces are appended to both stacks: the Latin faces above carry no Hangul glyphs, so
+     without a Korean fallback the browser substitutes an arbitrary system font mid-line and the
+     monospace tables lose their alignment. The Korean monospace faces (D2Coding, Nanum Gothic
+     Coding) are placed before the generic `monospace` so a fixed-width Hangul face wins when one is
+     installed. These are all system fonts -- nothing is fetched -- so a machine without them simply
+     falls through to the next candidate. */
+  --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", "SF Mono", Menlo, Consolas,
+    "D2Coding", "Nanum Gothic Coding", "Apple SD Gothic Neo", "Malgun Gothic", monospace;
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Malgun Gothic",
+    "Noto Sans KR", sans-serif;
+
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  /* Tabular figures so columns of prices line up rather than jittering by digit width. */
+  font-variant-numeric: tabular-nums;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  position: relative;
+}
+
+/* A very faint scanline wash -- terminal texture without fighting legibility of charts or figures. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(180, 255, 240, 0.022) 0px,
+    rgba(180, 255, 240, 0.022) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+a { color: inherit; text-decoration: none; }
+
+.app { display: flex; min-height: 100vh; }
+
+/* The skip link (`components/SkipLink.tsx`).
+
+   Off-canvas rather than `display: none`: a link that is not rendered is not focusable, and the
+   entire point is that it is the first thing Tab reaches. `left: -9999px` keeps it out of the layout
+   and out of the scroll area while remaining in the accessibility tree, which `visibility: hidden`
+   and `display: none` would both remove.
+
+   It lands in the top-left corner on focus, over the sidebar, with the app's own focus treatment so
+   it reads as part of the shell rather than as a stray browser artefact. `z-index` clears the
+   scanline overlay on `body::before`, which sits at 999. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 0.55rem 0.9rem;
+  background: var(--panel-2);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 0 0 6px 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 10px var(--glow-cyan);
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* The privacy switch (`components/PrivacyToggle.tsx`), directly under the language toggle and
+   styled as its sibling -- same rail width, same mono cap, same active treatment -- because they
+   are the same kind of control: a display preference that applies to every page. Warn-toned rather
+   than accent-toned when engaged, because "figures on this screen are hidden" is a caveat about
+   what you are looking at, not a feature that is going well. */
+.privacy-toggle {
+  display: flex;
+  margin: 0 0.5rem 0.9rem;
+  padding: 1px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-raised);
+}
+
+.privacy-option {
+  flex: 1;
+  padding: 0.25rem 0.1rem;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.privacy-option:hover { color: var(--text); }
+
+.privacy-option[aria-pressed="true"] {
+  background: var(--panel-2);
+  color: var(--warn);
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  padding: 1.25rem 0.75rem;
+  background: var(--panel);
+  font-family: var(--font-mono);
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0 0.5rem 1rem;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.brand::before {
+  content: "▍";
+  color: var(--accent);
+  margin-right: 0.4em;
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+
+/* UX-08's mobile nav disclosure (`App.tsx`'s `Sidebar`). Off on desktop by default -- the button and
+   the `menuOpen` state behind it exist only for the `@media (max-width: 860px)` column layout below,
+   where its styled, visible form lives; `.nav-menu-panel` itself carries no desktop rule at all, so
+   the language toggle, privacy toggle and favourites rail it wraps render exactly as before. */
+.nav-menu-toggle { display: none; }
+
+/* --- Section rail (level 1) ----------------------------------------------------
+   Three sections above the active section's pages. Styled to read like the
+   `.timeframe-tab` pills used inside Competition, Ticker and Portfolio, so the
+   app has one visual language for "pick one of these" -- but deliberately NOT
+   reusing that class, and never given role="tab". Those pills switch which JSX
+   a loaded page renders, from local state; these are links to different routed
+   pages. `role="tablist"` would promise assistive tech roving-tabindex and
+   panels in the same subtree, and there are none.
+
+   The separator below the rail is what makes the two levels read as levels
+   rather than as one list with odd spacing. */
+/* The shell symbol-jump: a full-width search field between the language toggle and the section
+   rail. Mono, uppercase, so a typed ticker reads as the symbol it is; `/` focuses it (see App.tsx). */
+.symbol-jump {
+  margin-bottom: 0.7rem;
+}
+
+.symbol-jump-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.34rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.symbol-jump-input::placeholder {
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.symbol-jump-input:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.nav-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-sections a {
+  padding: 0.32rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.nav-sections a:hover { color: var(--text); border-color: var(--border-strong); }
+
+.nav-sections a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
+  box-shadow: 0 0 10px -4px var(--glow-cyan);
+}
+
+.nav { display: flex; flex-direction: column; gap: 0.125rem; }
+
+.nav a {
+  padding: 0.5rem 0.65rem;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-left: 2px solid transparent;
+}
+
+.nav a:hover { background: var(--panel-2); color: var(--text); }
+.nav a.active {
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
+  color: var(--accent);
+  border-left-color: var(--accent);
+  text-shadow: 0 0 8px var(--glow-cyan);
+}
+
+.content { flex: 1; padding: 1.75rem 2rem; max-width: 1400px; }
+
+h1 {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle { color: var(--muted); font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid color-mix(in srgb, var(--accent) 10%, var(--border));
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 22px -18px var(--glow-cyan);
+}
+
+.placeholder { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.stat { display: flex; flex-direction: column; gap: 0.2rem; }
+.stat .label {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stat .value { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 600; }
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+}
+.badge.ok {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--up) 55%, transparent);
+}
+.badge.stale {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+.badge.none { color: var(--muted); }
+
+/* Wide numeric tables scroll inside their panel rather than the page. */
+.table-wrap { overflow-x: auto; }
+
+/* --- Section headings ------------------------------------------------------ */
+
+h2 {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+h2::before {
+  content: "▍";
+  color: var(--accent);
+  margin-right: 0.5em;
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+h3 {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- Form controls, shared ------------------------------------------------- */
+
+input, select, button { font-family: inherit; }
+
+/* The focus ring, and why it is a transparent outline plus a glow rather than just the glow.
+
+   `box-shadow` is not painted in Windows High Contrast / forced-colors mode -- the OS replaces the
+   whole palette and drops shadows entirely -- so the previous `outline: none` + shadow left those
+   users with no visible focus indicator at all on every input, select and button in the app
+   (WCAG 2.4.7, and 1.4.11 for the contrast the shadow was carrying). A *transparent* outline is
+   the standard fix: it costs nothing visually here, and forced-colors mode repaints it in the
+   system highlight colour, which is exactly the behaviour that mode exists to provide.
+
+   `border-color` lost its `!important`. It was there to beat page-level `:focus` rules, but it beat
+   the good ones too -- any component that wanted its own focus treatment (`.bt-entry-select`,
+   `.fav-toggle`, `.symbol-jump-input`) had its border silently overridden by this. Ordinary
+   specificity is enough: this is a bare element selector, so any class-level rule already wins. */
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 8px var(--glow-cyan);
+}
+
+.year-select {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+.year-select select {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Non-dismissible: no close control by design -- this notice must stay visible every render. */
+.disclaimer {
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--border));
+  background: color-mix(in srgb, var(--warn) 8%, var(--panel));
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+/* `gap` needs a flex or grid container to mean anything, and this rule set one without the other --
+   so the 0.3rem never applied anywhere, and a tile whose label/value/hint are inline spans rendered
+   them jammed together ("Rounds run13", "Windows covered48distinct window keys"). Most callers hid
+   the omission by giving their children `display: block`, or by carrying a second class that is
+   itself flex; the Competition summary's tiles did neither and exposed it. Completing the rule the
+   way it was evidently meant fixes those and is a no-op for every tile already laid out in a column. */
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.tile .value { font-family: var(--font-mono); }
+.tile .value-emphasize { font-size: 1.5rem; }
+.tile-hint { color: var(--muted); font-size: 0.72rem; line-height: 1.4; }
+.tile-danger .value { color: var(--down); }
+.tile-danger .label { color: var(--down); }
+
+.callout {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  border-left-width: 3px;
+  border-left-style: solid;
+}
+.callout-danger {
+  border-left-color: var(--down);
+  background: color-mix(in srgb, var(--down) 10%, var(--panel));
+}
+.callout-warn {
+  border-left-color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 10%, var(--panel));
+}
+
+.warning-list { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+.warning-list li { margin-bottom: 0.25rem; }
+
+/* Grouped warnings (kind x account, with a count) -- the headline view finding 3.1 asked for, so
+   330 raw messages read as a shape instead of a wall of near-identical sentences. */
+/* `table-layout: fixed` because auto layout distributes this table backwards. The Kind column holds
+   a long-but-wrappable label ("Fees unknown -- source export has no fee column") and Example holds a
+   ~250-character sentence; auto layout handed Kind 494px and squeezed Example to 97px, so every row
+   wrapped to 425px tall. Thirteen groups became a ~5,000px wall of near-empty table sitting between
+   the totals and the positions -- seen on a large book, and it gets worse with each import,
+   because more accounts means more (kind x account) groups. Fixed layout makes the split a
+   statement rather than a side effect of how long the widest label happens to be. */
+.warning-group-table { margin-top: 0.5rem; table-layout: fixed; width: 100%; }
+/* `.data-table` sets `white-space: nowrap`, which is right for the numeric tables it was written
+   for and wrong for every column here: under fixed layout a label longer than its share does not
+   widen the column, it paints straight over the next one. Both prose columns wrap instead.
+   Written as `.data-table.warning-group-table` deliberately: the two selectors otherwise tie on
+   specificity and `.data-table` is defined *below* this block, so source order would win. */
+.data-table.warning-group-table th, .data-table.warning-group-table td {
+  white-space: normal;
+  /* `anywhere` rather than `break-word`: an account id like `rh-short-cash` is one token wider than
+     its column at phone widths, and under fixed layout an unbreakable token overflows the cell
+     instead of widening it. Measured at 375px, where 20% of the table is 61px. */
+  overflow-wrap: anywhere;
+}
+.warning-group-table th:nth-child(1), .warning-group-table td:nth-child(1) { width: 25%; }
+.warning-group-table th:nth-child(2), .warning-group-table td:nth-child(2) { width: 18%; }
+/* Wide enough for the word COUNT, which the header renders in uppercase mono -- at 8% it broke
+   across two lines above a three-digit number. */
+.warning-group-table th:nth-child(3), .warning-group-table td:nth-child(3) { width: 11%; }
+.warning-group-table .warning-sample {
+  white-space: normal;
+  /* Long, unbroken identifiers (a txn_id, a symbol run) would otherwise push a fixed column wider
+     than its share and reintroduce the overflow this rule exists to remove. */
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+/* The ungrouped list stays available, just collapsed by default -- legibility, not concealment. */
+.warning-detail { margin-top: 0.6rem; }
+.warning-detail summary {
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.warning-detail summary:hover { color: var(--text); }
+.warning-detail .warning-list { font-size: 0.83rem; }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.83rem;
+}
+.data-table th, .data-table td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.data-table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.data-table tbody tr:hover { background: var(--panel-2); }
+
+/* Colour never carries this alone -- the text says "PERMANENT" too. */
+.badge.permanent {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+  font-weight: 600;
+  text-shadow: 0 0 6px color-mix(in srgb, var(--down) 45%, transparent);
+}
+.badge.deferred { color: var(--muted); }
+
+.form8949-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.download-link {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.82rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+}
+.download-link:hover { background: var(--panel-2); border-color: var(--accent); }
+
+.form8949-box { margin-bottom: 1.25rem; }
+.form8949-box:last-child { margin-bottom: 0; }
+.form8949-subtotal {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+/* --- Ticker page: symbol entry -------------------------------------------- */
+
+.ticker-empty { display: flex; flex-direction: column; gap: 0.75rem; }
+.prompt-line {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+.prompt-line::before { content: "$ "; color: var(--muted); text-shadow: none; }
+
+.symbol-form { display: flex; gap: 0.5rem; }
+.symbol-input {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  min-width: 10rem;
+}
+.symbol-submit {
+  font-family: var(--font-mono);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+.symbol-submit:hover { border-color: var(--accent); box-shadow: 0 0 10px -4px var(--glow-cyan); }
+
+.symbol-examples { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.symbol-example {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+}
+.symbol-example:hover { color: var(--accent); border-color: var(--accent); }
+
+/* --- Ticker page: header ---------------------------------------------------- */
+
+.ticker-header { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; justify-content: space-between; }
+.ticker-symbol-block, .ticker-price-block { display: flex; flex-direction: column; gap: 0.2rem; }
+.ticker-price-block { align-items: flex-end; }
+
+.ticker-symbol {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 12px var(--glow-cyan);
+}
+.ticker-name { color: var(--muted); font-size: 0.85rem; }
+.ticker-meta {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ticker-price { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 600; }
+.ticker-change { font-family: var(--font-mono); font-size: 0.92rem; }
+.ticker-change.pos { color: var(--up); }
+.ticker-change.neg { color: var(--down); }
+.ticker-range { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+
+/* --- Ticker page: chart panel ----------------------------------------------- */
+
+.chart-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.chart-panel-head h2 { margin: 0; }
+.chart-source { margin-bottom: 0.5rem; }
+
+.chart-controls { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.timeframe-tabs, .view-tabs { display: flex; gap: 0.4rem; }
+/* The layout switch is a mode, not a timeframe; the rule keeps it from reading as a fifth tab. */
+.view-tabs { padding-right: 1rem; border-right: 1px solid var(--border); }
+.timeframe-tab {
+  font-family: var(--font-mono);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.timeframe-tab:hover { color: var(--text); border-color: var(--border-strong); }
+.timeframe-tab.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
+  box-shadow: 0 0 10px -4px var(--glow-cyan);
+}
+
+.chart-wrap { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+.chart-container { width: 100%; }
+.oscillator-container { width: 100%; border-top: 1px solid var(--border); padding-top: 0.5rem; }
+
+/* --- Indicator picker -------------------------------------------------------- */
+
+.indicator-picker { margin: 0.75rem 0; }
+.indicator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.6rem;
+}
+.indicator-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 0.65rem;
+  background: var(--panel-2);
+}
+.indicator-toggle.active {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  box-shadow: 0 0 10px -6px var(--glow-cyan);
+}
+.indicator-toggle.disabled { opacity: 0.55; }
+.indicator-toggle-row { display: flex; align-items: center; gap: 0.5rem; }
+.indicator-name { font-family: var(--font-mono); font-size: 0.83rem; flex: 1; }
+
+.indicator-add {
+  font-family: var(--font-mono);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--accent);
+  width: 1.4rem;
+  height: 1.4rem;
+  line-height: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.indicator-add:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.indicator-add:disabled { color: var(--muted); cursor: not-allowed; opacity: 0.5; }
+
+/* --- Indicator instances: one configured line each, in its own colour ---------- */
+
+.instance-list { display: flex; flex-direction: column; gap: 0.45rem; }
+.instance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.4rem 0.45rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+.instance-row { display: flex; align-items: center; gap: 0.45rem; }
+.instance-spec {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.instance-remove {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+}
+.instance-remove:hover { color: var(--down); }
+
+.swatch {
+  width: 0.95rem;
+  height: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+.swatch.small { width: 0.8rem; height: 0.8rem; }
+.swatch.chosen { outline: 1px solid var(--text); outline-offset: 1px; }
+.swatch-row { display: flex; gap: 0.3rem; flex-wrap: wrap; padding: 0.15rem 0; }
+
+.param-split { display: flex; gap: 0.25rem; }
+.param-split select { width: 6.5rem; }
+.param-split input { width: 8.5rem; }
+
+/* --- Four-timeframe grid ------------------------------------------------------- */
+
+.timeframe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.timeframe-panel {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+  padding: 0.5rem 0.6rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  /* Charts size to their container; without this the grid track can only ever grow. */
+  min-width: 0;
+}
+/* Off the happy path (loading/error/no-bars -- see `TimeframeGrid.tsx`'s `TimeframePanel`) there is
+   no `Chart` to give this panel its height, only a one-line `.placeholder`. `min-height` (set inline
+   to the same `PANEL_HEIGHT` constant the `Chart` is given) keeps that panel occupying the same
+   footprint a loaded one would, so `.timeframe-grid`'s row stays aligned across all four panels
+   whichever phase each one happens to be in -- not just once every chart has loaded. */
+.timeframe-panel-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.timeframe-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+}
+.timeframe-panel-interval {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.timeframe-panel-meta { font-size: 0.7rem; color: var(--muted); }
+.timeframe-panel-note {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 0.3rem;
+}
+.timeframe-panel-note.warn { color: var(--warn); }
+.indicator-reason { font-size: 0.72rem; color: var(--muted); line-height: 1.4; }
+.indicator-params { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.indicator-param {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.68rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.indicator-param input, .indicator-param select {
+  font-family: var(--font-mono);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 0.2rem 0.35rem;
+  font-size: 0.78rem;
+  width: 5.5rem;
+  text-transform: none;
+}
+
+/* --- Warnings strip ----------------------------------------------------------- */
+
+.warnings-strip { display: flex; flex-direction: column; gap: 0.4rem; }
+.warning-chip {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--warn) 30%, var(--border));
+  background: color-mix(in srgb, var(--warn) 6%, var(--panel-2));
+}
+.warning-chip .kind {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  color: var(--warn);
+  border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  flex-shrink: 0;
+}
+.warning-chip .message { color: var(--text); line-height: 1.5; }
+
+/* =============================================================================
+   Phase 5 -- Macro page (agent M4)
+   Rates, oil, Fear & Greed and the movers grid. Reuses .panel, .tile-grid,
+   .placeholder, .warnings-strip/.warning-chip, .data-table/.table-wrap, .stat,
+   .status-grid and .symbol-submit from the rules above -- nothing above this
+   line is modified, only appended to.
+   ============================================================================= */
+
+/* --- Toolbar ----------------------------------------------------------------- */
+
+.macro-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.macro-generated {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+/* --- Tile grid ----------------------------------------------------------------
+   auto-fit(220px) rather than the base .tile-grid's 190px -- a macro tile carries
+   four change columns plus a sparkline and needs more room than a plain stat. */
+
+.macro-tile-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.macro-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.macro-tile-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.macro-tile-label {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.macro-tile-source {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05rem 0.35rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+/* A proxy series (Yahoo standing in for a FRED series) is worth a slightly warmer flag than a
+   direct-from-source reading -- still not an error, just not the primary series. */
+.macro-tile-source.src-yahoo {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 40%, var(--border));
+}
+
+.macro-tile-value {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.macro-tile-changes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+}
+.macro-change-stat { display: flex; flex-direction: column; gap: 0.1rem; }
+.macro-change-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.macro-change-value { font-family: var(--font-mono); font-size: 0.85rem; }
+/* Only ever applied when tone="signed" (the movers grid) -- rates and spreads never get these. */
+.macro-change-value.pos { color: var(--up); }
+.macro-change-value.neg { color: var(--down); }
+
+.macro-tile-foot {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+.macro-tile-warnings { margin: 0; padding-left: 1.1rem; font-size: 0.72rem; }
+
+/* --- Sparkline ----------------------------------------------------------------- */
+
+.sparkline { display: block; width: 100%; }
+.sparkline-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* --- Fear & Greed -------------------------------------------------------------- */
+
+.fg-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.fg-head h2 { margin: 0; }
+.fg-source-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  color: var(--muted);
+}
+.fg-source-badge.cnn {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.fg-source-badge.composite {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+/* The composite is our approximation of CNN's number, not CNN's number -- this note must sit in
+   the body of the panel, not only in a title/tooltip a keyboard or screen-reader user could miss. */
+.fg-composite-note {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: color-mix(in srgb, var(--warn) 8%, var(--panel));
+  border-left: 3px solid var(--warn);
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  margin: 0.6rem 0;
+}
+
+.fg-score-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+.fg-score { display: flex; flex-direction: column; align-items: center; min-width: 5rem; }
+.fg-score-value { font-family: var(--font-mono); font-size: 2.1rem; font-weight: 700; line-height: 1; }
+.fg-score-rating {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+.fg-score-delta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  white-space: nowrap;
+}
+.fg-score-delta.pos { color: var(--up); }
+.fg-score-delta.neg { color: var(--down); }
+
+.fg-meter { flex: 1; min-width: 14rem; }
+.fg-meter-track {
+  position: relative;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to right,
+    var(--down) 0%,
+    var(--warn) 45%,
+    var(--muted) 50%,
+    var(--warn) 55%,
+    var(--up) 100%
+  );
+}
+.fg-meter-marker {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 14px;
+  background: var(--text);
+  box-shadow: 0 0 6px var(--glow-cyan);
+  transform: translateX(-1px);
+}
+.fg-meter-bands {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.35rem;
+}
+.fg-band-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.fg-history { margin: 0.75rem 0; }
+.fg-prev-grid { margin: 0.5rem 0; }
+.fg-asof {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.fg-components { margin-top: 0.25rem; }
+
+/* =============================================================================
+   Phase 6 -- Decision table UI
+   DecisionTable and RuleEditor, mounted below the chart on the ticker page.
+   Reuses .panel, .placeholder, .table-wrap, .data-table, .badge,
+   .warnings-strip/.warning-chip and .timeframe-tabs/.timeframe-tab from the
+   rules above -- nothing above this line is modified, only appended to.
+   ============================================================================= */
+
+/* Screen-reader-only text: table captions and column headers that would otherwise be redundant
+   for sighted users but are needed for an accessible name. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Decision table meta / horizon picker ----------------------------------- */
+
+.decision-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.decision-meta strong { color: var(--text); font-weight: 600; }
+
+.decision-horizon-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+.decision-horizon-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- Table body --------------------------------------------------------------- */
+
+.decision-table { min-width: 900px; }
+.decision-table td.num,
+.decision-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.decision-table tr.decision-row.degraded {
+  background: color-mix(in srgb, var(--warn) 6%, transparent);
+}
+
+.rule-name-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 10rem;
+  white-space: normal;
+}
+.rule-name { font-weight: 600; }
+.rule-id { font-size: 0.68rem; color: var(--muted); }
+.rule-row-warning {
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  color: var(--warn);
+  white-space: normal;
+}
+
+/* State pill -- three-valued, and "unknown" must never read as "false". The dashed border and
+   italic give it a second, non-colour signal on top of the muted colour so the distinction survives
+   colourblindness and greyscale printing alike. */
+.state-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+}
+.state-pill.state-true {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--up) 55%, transparent);
+}
+.state-pill.state-false { color: var(--muted); }
+.state-pill.state-unknown {
+  color: var(--muted);
+  border-style: dashed;
+  font-style: italic;
+}
+
+.last-trigger { display: flex; flex-direction: column; gap: 0.1rem; white-space: normal; }
+.last-trigger-ts { font-size: 0.8rem; }
+.last-trigger-bars { font-size: 0.68rem; color: var(--muted); }
+/* Never fired reads as text, deliberately not the em dash used for unmeasurable statistics --
+   the two absences mean different things. */
+.never-fired { color: var(--muted); font-style: italic; }
+
+/* Edge gets the visual weight; hit rate and baseline sit underneath, small and muted, so the pair
+   that makes an edge meaningful is always in view but never competes with it. */
+.edge-cell { min-width: 7rem; }
+.edge-value { font-size: 1rem; font-weight: 700; }
+.edge-value.pos { color: var(--up); }
+.edge-value.neg { color: var(--down); }
+.edge-baseline { font-size: 0.68rem; color: var(--muted); margin-top: 0.1rem; }
+.entry-tag {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.62rem;
+  color: var(--warn);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: normal;
+}
+
+.median-cell { min-width: 7rem; }
+.median-value { font-size: 0.85rem; }
+.median-baseline { font-size: 0.68rem; color: var(--muted); }
+
+.sample-cell { font-size: 0.78rem; color: var(--muted); min-width: 6rem; }
+
+.significance-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+}
+.significance-badge.insufficient { color: var(--muted); }
+.significance-badge.weak {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 40%, transparent);
+}
+/* Suggestive is still just a badge, not a glow or a checkmark -- it must not read as more certain
+   than "worth opening the backtest workbench". */
+.significance-badge.suggestive {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Insufficient sample: the numbers stay on screen (never hidden) but lose the emphasis the same
+   cells get once there is enough history behind them, so the row reads as provisional rather than
+   as a finding. */
+.evidence-provisional .edge-value { font-weight: 400; opacity: 0.6; }
+.evidence-provisional .median-value { opacity: 0.6; }
+
+.decision-expand-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.decision-expand-btn:hover { color: var(--text); border-color: var(--border-strong); }
+
+.decision-detail-row td { background: var(--panel-2); padding: 0.75rem 0.9rem; }
+.decision-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+.decision-detail-table th,
+.decision-detail-table td {
+  text-align: right;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.decision-detail-table th:first-child,
+.decision-detail-table td:first-child {
+  text-align: left;
+}
+.decision-detail-table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* --- Rule editor ---------------------------------------------------------------- */
+
+.rule-editor { display: flex; flex-direction: column; gap: 0.5rem; }
+.rule-editor-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.rule-editor-input {
+  font-family: var(--font-mono);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.9rem;
+}
+.rule-editor-status { min-height: 1.4rem; font-size: 0.85rem; }
+.rule-editor-checking { color: var(--muted); font-family: var(--font-mono); font-size: 0.78rem; }
+.rule-editor-error { color: var(--down); }
+.rule-editor-result { display: flex; flex-direction: column; gap: 0.4rem; }
+.rule-editor-verdict {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.rule-editor-verdict.valid {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+/* A parse failure is user input mid-correction, not an application error -- amber, not red. */
+.rule-editor-verdict.invalid {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+.rule-editor-parse-error { color: var(--text); font-size: 0.85rem; line-height: 1.5; }
+.rule-editor-field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+.rule-editor-normalized code {
+  font-family: var(--font-mono);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.82rem;
+  display: inline-block;
+}
+.rule-editor-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.rule-editor-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  color: var(--text);
+}
+
+/* ---------------------------------------------------------------------------
+   Flex shrink fix for the main column.
+
+   `.app` is a flex row and `.content` is `flex: 1`, which by default carries
+   `min-width: auto` -- a flex item refuses to shrink below the intrinsic minimum width of its
+   contents. So any wide descendant pushes the whole column wider than the viewport and the *page*
+   scrolls sideways, taking the sidebar and headings with it.
+
+   That defeats every inner scroll container: `.table-wrap` sets `overflow-x: auto` around the
+   decision table precisely so a 900px-min-width table scrolls within its panel, but an ancestor
+   that will not shrink means there is nothing to scroll against. `min-width: 0` restores the
+   ability to shrink, which is what lets the overflow land on `.table-wrap` where it belongs.
+
+   Appended rather than edited into the original `.content` rule so the base layout stays where a
+   reader expects it; same specificity, later in the cascade, so this wins.
+   --------------------------------------------------------------------------- */
+.content { min-width: 0; }
+
+/* Keep a wide table's overflow inside its own scroller.
+
+   `.table-wrap` already sets `overflow-x: auto`, and it does clip correctly -- the table is not
+   visible outside the panel and it scrolls internally. But a `display: table` element whose
+   `min-width` exceeds the wrapper still contributes its full intrinsic width to the *document*
+   scroll area in Chrome, so the page itself gained ~790px of horizontal scroll into blank space.
+   Verified with `elementFromPoint` out there: nothing is rendered, so no content was hidden -- the
+   symptom is scrolling into emptiness rather than lost data, which makes it easy to miss.
+
+   `contain: paint` tells the browser this subtree cannot paint outside its box, which removes it
+   from that calculation. Measured at a 390px viewport: page overflow 882px -> 91px (the remainder
+   being the pre-existing shell overflow, which the 200px fixed sidebar causes on every page), with
+   the wrapper's own horizontal scrolling unaffected. */
+.table-wrap { contain: paint; }
+
+/* Matches `.scroll-region:focus-visible` in `ScrollPanel.css`: a `.table-wrap` that markup makes
+   focusable (`tabIndex={0}`, so keyboard users can scroll it without a mouse-only drag) needs the
+   same visible ring `.scroll-region` already gets, or a keyboard user tabs into a wide table with no
+   sign focus landed there at all. */
+.table-wrap:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------------
+   Phase 7 -- the backtest workbench.
+
+   The visual argument this page has to make is that its four sections carry different weights of
+   claim, so they are deliberately not styled alike. Drawdown is descriptive and reads as an
+   ordinary table. The event study and the scan share the Phase 6 `.edge-value` treatment, because
+   they are making the same kind of statement and should look like it. Reverse conditioning is
+   fenced off in its own tinted panel -- it generates candidates, not findings, and rendering it in
+   the same language as a confirmatory result is exactly how a fishing expedition gets read as
+   evidence.
+   --------------------------------------------------------------------------- */
+
+.section-heading {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem;
+  color: var(--text);
+}
+
+/* Numeric columns line up by digit, everywhere in the workbench. */
+.data-table td.num, .data-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.bt-cell-sub { font-size: 0.68rem; color: var(--muted); margin-top: 0.1rem; }
+
+/* Controls --------------------------------------------------------------- */
+
+.bt-control-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.bt-entry-select, .bt-scan-input {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.4rem 0.55rem;
+}
+.bt-entry-select:focus-visible, .bt-scan-input:focus-visible,
+.bt-arm-input-row input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.bt-scan-form { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.75rem; }
+.bt-scan-input { width: 100%; resize: vertical; line-height: 1.6; }
+.bt-scan-controls, .bt-event-study-controls, .bt-basis-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: flex-end;
+}
+.bt-scan-planned { font-size: 0.78rem; color: var(--muted); margin: 0; }
+
+/* The scan's per-line parse errors. Sits inside .rule-editor-result.invalid, so it inherits that
+   block's colour and type scale; only the list needs shaping. Line numbers are the point -- six
+   expressions share one textarea, and naming the text instead of the line makes the reader search. */
+.bt-scan-invalid-list { margin: 0.35rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.2rem; }
+
+/* The calendar's cold-start explanation. A second line under "Loading calendar...", shown only once
+   the fetch passes SLOW_AFTER_MS -- so it reads as the card explaining itself, not as a warning. */
+.overview-calendar-slow { display: block; margin-top: 0.4rem; font-size: 0.8rem; color: var(--muted); max-width: 46ch; }
+
+/* Event study ------------------------------------------------------------ */
+
+.bt-event-study-form { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.75rem; }
+.bt-arm-input-row { display: flex; gap: 0.5rem; align-items: center; }
+.bt-arm-input-row input {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.45rem 0.6rem;
+}
+.bt-arm-input-controls { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.bt-arm-remove {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  padding: 0.4rem 0.6rem;
+}
+.bt-arm-remove:hover { color: var(--down); border-color: var(--down); }
+
+.bt-event-study-result { margin-top: 1.25rem; }
+.bt-event-study-meta { margin-bottom: 0.75rem; }
+.bt-arm-head { margin: 1.25rem 0 0.5rem; }
+.bt-arm-expression {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  word-break: break-word;
+}
+.bt-arm-meta { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; }
+.bt-arm-warnings { margin-top: 0.5rem; }
+
+.bt-event-study-table, .bt-scan-table, .bt-delta-table, .bt-drawdown-table, .bt-reverse-table {
+  min-width: 720px;
+}
+.bt-distribution-cell { min-width: 11rem; }
+/* The independent count is what any claim rests on, so it is the one that carries the weight; the
+   raw trigger count sits under it in `.bt-cell-sub`. */
+.bt-sample-independent { font-size: 0.85rem; font-weight: 600; }
+
+.bt-row-small-sample td { opacity: 0.82; }
+.badge.small-sample {
+  display: inline-block;
+  margin-top: 0.2rem;
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 40%, transparent);
+  font-size: 0.62rem;
+}
+
+/* A/B delta -------------------------------------------------------------- */
+
+.bt-delta-panel {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+}
+/* The sample-size change is not a footnote to the rate change. A hit rate that improved while the
+   sample collapsed is precisely what this panel exists to make impossible to miss. */
+.bt-delta-warning { margin-top: 0.5rem; font-size: 0.75rem; color: var(--warn); }
+
+/* Guards ----------------------------------------------------------------- */
+
+.bt-guard-callout { margin-top: 0.6rem; }
+.bt-guard-status { font-family: var(--font-mono); font-size: 0.8rem; }
+.badge.bt-badge-guard {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+/* Deliberately not a checkmark and not a glow. "Survives correction" is a statement about a set at
+   a chosen false-discovery rate, not a verdict about this row. */
+.badge.bt-badge-discovery {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.bt-row-discovery td { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+
+/* Scan ------------------------------------------------------------------- */
+
+.bt-scan-result { margin-top: 1.25rem; }
+.bt-scan-reading { font-size: 0.82rem; line-height: 1.65; color: var(--text); margin: 0.75rem 0 1rem; }
+.bt-run-id { font-size: 0.7rem; color: var(--muted); margin-top: 0.75rem; }
+.bt-run-id code { font-family: var(--font-mono); }
+
+/* Drawdown --------------------------------------------------------------- */
+
+.bt-current-drawdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  margin: 0.75rem 0 1rem;
+  border: 1px solid color-mix(in srgb, var(--down) 35%, var(--border));
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--down) 5%, transparent);
+}
+.bt-current-drawdown-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.bt-current-drawdown-depth {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--down);
+}
+.bt-current-drawdown-meta { font-size: 0.75rem; color: var(--muted); }
+/* Not being underwater is a different fact from a shallow drawdown, so it gets its own treatment
+   rather than rendering as a 0% decline. */
+.bt-current-drawdown-clear {
+  border-color: color-mix(in srgb, var(--up) 30%, var(--border));
+  background: color-mix(in srgb, var(--up) 5%, transparent);
+}
+.bt-current-drawdown-clear-text { font-family: var(--font-mono); color: var(--up); font-size: 1rem; }
+
+/* Reverse conditioning ---------------------------------------------------- */
+
+/* Fenced off on purpose. Everything above tests a hypothesis; this reads one off the data. The tint
+   and the banner are the only things standing between "candidate" and "finding". */
+.bt-exploratory {
+  border-color: color-mix(in srgb, var(--accent-2) 30%, var(--border));
+  background:
+    linear-gradient(color-mix(in srgb, var(--accent-2) 4%, transparent),
+                    color-mix(in srgb, var(--accent-2) 4%, transparent)),
+    var(--panel);
+}
+.bt-exploratory-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.badge.bt-badge-exploratory {
+  color: var(--accent-2);
+  border-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
+  flex: none;
+}
+.bt-reverse-result { margin-top: 1.25rem; }
+.bt-independent-emphasis { color: var(--accent); }
+
+@media (max-width: 720px) {
+  .bt-scan-controls, .bt-event-study-controls, .bt-basis-picker { gap: 0.6rem; }
+  .bt-current-drawdown-depth { font-size: 1.25rem; }
+}
+
+/* ---------------------------------------------------------------------------
+   Phase 8 -- the per-holding report.
+
+   Two things are specific to this page rather than reused wholesale from the backtest workbench.
+   First, narrative prose sits in its own quiet typographic register (serif-free running text, not
+   the monospace the rest of the app uses for data) so it reads as prose rather than as another
+   data cell. Second, the grounding citations and caveat are deliberately understated -- small type,
+   muted colour -- per the contract's "unobtrusive but present": they are not the headline of the
+   section, but they must never be truly hidden.
+   --------------------------------------------------------------------------- */
+
+.report-narrative-section h2 { margin-bottom: 0.6rem; }
+
+.report-narrative { display: flex; flex-direction: column; gap: 0.75rem; }
+.report-narrative-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+}
+
+.report-narrative-citations {
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.report-narrative-citations-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+.report-narrative-citations ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.report-narrative-citations li { color: var(--text); }
+.report-citation-source { color: var(--muted); }
+.report-citation-missing { color: var(--warn); }
+
+/* Unobtrusive but present: the caveat states the limit of the grounding guarantee (checked, not
+   necessarily true) and must stay visible, never collapse into a tooltip or a hidden expander. */
+.report-narrative-caveat {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Facts ------------------------------------------------------------------- */
+
+.report-fact-table { min-width: 640px; }
+.report-fact-source { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); }
+
+/* Decision summary ---------------------------------------------------------- */
+
+.report-decision-summary { min-width: 560px; }
+
+/* Strategy card -------------------------------------------------------------- */
+
+.report-strategy-form { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.75rem; margin-bottom: 1.25rem; }
+.report-strategy-metrics { min-width: 640px; }
+.report-trades-table { min-width: 680px; }
+
+.report-open-trades-note { margin: 0.4rem 0 0.75rem; }
+.report-trade-open td { opacity: 0.85; }
+.badge.report-badge-open {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 40%, transparent);
+  font-size: 0.6rem;
+}
+
+/* cost_drag deliberately gets the same loud treatment as a failed guard -- an edge inside its own
+   cost drag is not a smaller finding, it is no finding. */
+.report-cost-callout { margin-bottom: 1rem; }
+
+.report-equity-chart { margin: 1.25rem 0; }
+.report-equity-svg { width: 100%; height: auto; display: block; }
+.report-equity-line { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.report-equity-line-strategy { stroke: var(--accent); }
+.report-equity-line-buyhold { stroke: var(--muted); stroke-dasharray: 4 3; }
+.report-equity-legend { display: flex; gap: 1rem; margin-top: 0.5rem; font-size: 0.75rem; color: var(--muted); }
+.report-equity-legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+.report-equity-swatch { width: 0.85rem; height: 0.15rem; display: inline-block; border-radius: 2px; }
+.report-equity-swatch-strategy { background: var(--accent); }
+.report-equity-swatch-buyhold { background: var(--muted); }
+
+/* Export + disclaimer -------------------------------------------------------- */
+
+.report-export-link { display: inline-block; text-decoration: none; }
+.report-disclaimer {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0.5rem 0 2rem;
+}
+
+@media (max-width: 720px) {
+  .report-narrative-text { font-size: 0.9rem; }
+}
+
+/* ============================================================================
+   Phase 9: Thesis loop.
+
+   backend/app/thesis/__init__.py's hazard statement and its four guards are the whole design brief
+   for this page; every rule below maps onto one of them. See pages/Thesis.tsx, components/
+   ThesisCard.tsx and components/TrialLedger.tsx for which guard drove which rule -- summarised
+   here only where the CSS itself carries the decision.
+   ============================================================================ */
+
+/* A genuinely neutral callout, distinct from the amber/red treatments above. Guard 1 requires
+   "inconclusive" to read as neither an error nor a warning; guard 3 requires a "spent" holdout
+   (which worked exactly as designed) to read as informational rather than as a problem. Neither
+   belongs under .callout-warn or .callout-danger, so this is a third, deliberately unalarming
+   variant rather than a reuse of either. */
+.callout-info {
+  border-left-color: var(--border-strong);
+  background: color-mix(in srgb, var(--accent) 4%, var(--panel-2));
+}
+
+.thesis-run-warning { font-weight: 600; margin-bottom: 0.9rem; }
+.thesis-run-controls { display: flex; gap: 0.75rem; align-items: flex-end; flex-wrap: wrap; }
+
+/* Verdict badges share one size and weight via .badge and differ only in accent color, so
+   "inconclusive" -- the expected outcome for most theses on most tickers -- never reads as
+   smaller, dimmer or more apologetic than "survived". Guard 1. */
+.badge.verdict-survived {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--up) 55%, transparent);
+}
+.badge.verdict-rejected {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+.badge.verdict-inconclusive {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+/* The ledger's total-trial count is the denominator every q-value on the page depends on, so it
+   renders at the same visual weight as the biggest figures elsewhere on the workbench. Guard 2. */
+.thesis-total-trials { font-size: 1.4rem; color: var(--accent); text-shadow: 0 0 8px var(--glow-cyan); }
+.thesis-ledger-stats { margin-bottom: 1rem; }
+.thesis-ledger-table { min-width: 720px; }
+.thesis-ledger-hypothesis { white-space: normal; max-width: 26rem; }
+.thesis-ledger-dates { font-size: 0.85rem; }
+
+.thesis-holdout-callout { margin-top: 0.5rem; }
+
+.thesis-card-header { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem; }
+.thesis-card-title { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.thesis-card-title h2 { margin: 0; }
+.thesis-card-meta { font-size: 0.75rem; color: var(--muted); }
+
+/* "Promote to library" sits inline with the verdict badge; only a survivor renders it. A quiet
+   outline button, not a primary call to action -- promoting is an available next step, not the point
+   of the card. */
+.thesis-promote-wrap { display: inline-flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.thesis-promote {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-2);
+  background: transparent;
+  color: var(--accent-2);
+  cursor: pointer;
+}
+.thesis-promote:hover:not(:disabled) { background: color-mix(in srgb, var(--accent-2) 12%, transparent); }
+.thesis-promote:disabled { opacity: 0.55; cursor: default; }
+
+.thesis-hypothesis-block { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.thesis-hypothesis { font-size: 0.95rem; line-height: 1.6; margin: 0; }
+.thesis-rationale { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+/* The falsification criterion gets its own visual treatment, distinct from the surrounding prose,
+   because it is the field most likely to be skimmed past and the one doing the most work: a
+   criterion written before any test ran is a different kind of fact than one supplied afterward. */
+.thesis-falsifies {
+  border-left: 3px solid var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 6%, var(--panel-2));
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+.thesis-falsifies-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-2);
+  margin-bottom: 0.25rem;
+}
+.thesis-falsifies-text { margin: 0; font-size: 0.88rem; line-height: 1.55; }
+.thesis-direction-horizon { margin-top: 0.1rem; }
+
+.thesis-distribution-pair { margin: 1rem 0; }
+.thesis-distribution-table { min-width: 520px; }
+
+/* auto-fit rather than a fixed two-column split so the pair reflows to one column on narrow
+   viewports without ever forcing the page wider than its content area. */
+.thesis-evidence-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1rem 0;
+}
+.thesis-evidence-col h3 { margin-top: 0; }
+
+.thesis-regimes { margin: 1rem 0; }
+.thesis-regime-note { max-width: 60rem; line-height: 1.6; }
+.thesis-regime-table { min-width: 480px; }
+.badge.thesis-regime-conditional {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+
+.thesis-tax-block { margin: 1rem 0; }
+.thesis-tax-headline { margin-bottom: 0.75rem; }
+
+.thesis-hourly-substudy { margin: 1rem 0; }
+
+.thesis-unlevered-section { margin: 1.25rem 0 0; }
+.thesis-unlevered-note { margin-bottom: 0.75rem; }
+/* Dashed border marks this panel as a nested card rather than a sibling section -- the leveraged
+   card's own chrome (.panel) is reserved for the top-level card so the nesting stays legible. */
+.thesis-nested-card {
+  border: 1px dashed var(--border-strong);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  background: var(--panel-2);
+}
+
+.thesis-outcome-headline { font-size: 1rem; font-weight: 600; line-height: 1.6; }
+.thesis-outcome-meta { margin-top: 0.35rem; }
+
+@media (max-width: 720px) {
+  .thesis-evidence-columns { grid-template-columns: 1fr; }
+}
+
+/* =============================================================================
+   Portfolio page.
+   Reuses .panel, .tile-grid, .tile/.tile-danger, .callout/.callout-danger/.callout-warn,
+   .data-table/.table-wrap, .badge, .status-grid, .stat and .visually-hidden from the rules above --
+   nothing above this line is modified, only appended to.
+   ============================================================================= */
+
+/* Signed money tiles: colour is additional to the explicit +/- sign `formatSignedMoney` already
+   renders into the text, never a replacement for it. */
+.tile .value.pos { color: var(--up); }
+.tile .value.neg { color: var(--down); }
+
+.position-table th.num, .position-table td.num { text-align: right; }
+
+.position-symbol-cell { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.position-symbol { font-weight: 600; }
+
+/* Same colour vocabulary as `.badge.stale`/`.badge.permanent` above: warn for a figure that is
+   still usable but not verified, muted for the weaker fees-only gap. */
+.badge.basis-uncertain {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+.badge.fees-unknown { color: var(--muted); }
+
+.position-term-split, .position-price-asof, .position-unrealized-pct {
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.position-unrealized-value { font-weight: 700; }
+.position-unrealized-value.pos { color: var(--up); }
+.position-unrealized-value.neg { color: var(--down); }
+
+/* A basis-uncertain position's unrealized figure is a bound, not an estimate -- flagged the same
+   way `.entry-tag` already flags an upper-bound same-close fill in the decision table, rather than
+   inventing a second visual language for "this number is honest but not exact". */
+
+/* Unpriced positions get their own labelled row inside the same table -- deliberately not hidden,
+   not a separate panel, not interleaved with the priced rows they cannot be ranked against. */
+.position-group-separator td {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.78rem;
+  padding-top: 0.7rem;
+  border-bottom: 1px dashed var(--border-strong);
+}
+
+.position-expand-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.position-expand-btn:hover { color: var(--text); border-color: var(--border-strong); }
+
+.position-detail-row td { background: var(--panel-2); padding: 0.75rem 0.9rem; }
+.position-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+.position-detail-table th, .position-detail-table td {
+  text-align: left;
+  padding: 0.35rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.position-detail-table th.num, .position-detail-table td.num { text-align: right; }
+.position-detail-table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive shell -- fixes the sidebar overflow recorded in phase-6.md and
+   re-measured in phase-8.md.
+
+   `.sidebar` is 200px and `flex-shrink: 0` inside the `.app` flex row. Below
+   roughly 860px that stops leaving enough room for `.content` to be usable, so
+   the row layout is dropped in favour of a column: the sidebar becomes a
+   horizontal, independently-scrollable top bar (its own `overflow-x: auto`,
+   the same pattern `.table-wrap` already uses so inner content scrolls in its
+   own box rather than the page), and `.content` drops to full width beneath
+   it. `.content`'s `min-width: 0` above still stands -- that's what lets it
+   shrink to the viewport instead of forcing the page to scroll sideways; this
+   block only changes how the two children are arranged, not that rule.
+
+   Appended at the end of the file (rather than folded into `.app`/`.sidebar`
+   above) so this always wins the cascade regardless of specificity elsewhere
+   in a long stylesheet -- last same-specificity rule wins, and nothing below
+   this point overrides it. */
+@media (max-width: 860px) {
+  .app { flex-direction: column; min-height: 0; }
+
+  /* UX-08: this used to also carry `overflow-x: auto` plus its own edge-fade mask, on the theory
+     that the whole sidebar would be the scroll container. It wasn't -- `.nav-sections`/`.nav` below
+     set `width: max-content`, which doesn't fit inside a box that is itself sized to content; a
+     block with no constrained width never triggers its *own* `overflow-x: auto`, so instead each
+     rail forced `.sidebar` bodily wider than the viewport (525-817px measured, on a 375px phone) and
+     dragged the brand/menu/search along with it whenever a reader scrolled to reach an off-screen
+     section. `.sidebar` itself no longer needs to scroll now that the two rails below are
+     independently clipped and scrollable in place; the fade moved down onto each rail with them. */
+  .sidebar {
+    width: auto;
+    max-width: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 0.75rem;
+  }
+
+  .brand { padding: 0 0.5rem 0.5rem; }
+
+  /* The disclosure button collapsing the language toggle, privacy toggle and favourites rail
+     (`.nav-menu-panel` / the second `.nav-favorites` block below). Hidden entirely above this
+     width -- see the base (non-media) `.nav-menu-toggle` rule -- so it never touches desktop. */
+  .nav-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 0.6rem;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel-2);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+  }
+  .nav-menu-toggle:hover { color: var(--text); border-color: var(--border-strong); }
+  .nav-menu-toggle[aria-expanded="true"] { color: var(--accent); border-color: var(--accent); }
+
+  /* Closed by default (the button's `aria-expanded` starts false) -- with these hidden, the brand,
+     menu button, symbol search and the two nav rails are what sits above `.content`, in place of the
+     full stack (language + privacy + favourites included) that measured ~278px tall. */
+  .nav-menu-panel:not(.open) { display: none; }
+  .nav-favorites:not(.open) { display: none; }
+
+  /* Two stacked, independently-scrollable strips instead of one flowing sidebar. Each sets its own
+     `max-width: 100%` (not `width`, which is what forced `.sidebar` wide above) so it is clipped to
+     the viewport and scrolls *inside* itself; `scroll-snap-type` settles a swipe on a whole pill or
+     link instead of leaving one half-cut at the edge. */
+  .nav-sections {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    gap: 0.35rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0.55rem;
+    margin-bottom: 0.55rem;
+    /* Measured when the strip held every page at once: 7 items already overflowed the smallest
+       widths (526px of nav content in a 375px viewport -- Tax and Macro entirely off-screen), and
+       it had reached 13 before the nav split into sections. The strip now carries one section's
+       four or five items, so it fits far more often -- but "more often" is not "always", and the
+       affordance below is still what tells a reader the difference. Nothing here told a
+       first-time reader that a hard-cut label ("...THES") meant "swipe for more" rather than
+       "that's the whole label" -- non-overflowing is not the same claim as usable. A static edge
+       fade is a CSS-only affordance for that: it cannot track scroll position without JS, so it
+       fades a hint of both edges permanently rather than exactly the edge that has more content,
+       but "always hints scrollable" is still a strict improvement on "never hints at all". */
+    mask-image: linear-gradient(to right, transparent, black 14px, black calc(100% - 14px), transparent);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 14px,
+      black calc(100% - 14px),
+      transparent
+    );
+  }
+  .nav-sections a { padding: 0.5rem 0.7rem; scroll-snap-align: start; }
+
+  /* The page rail gets the same treatment, plus its own fade -- previously it had none at all, so
+     Market/Data (off the end of a five-item strip) were invisible with no hint that scrolling
+     further would reach them. */
+  .nav {
+    flex-direction: row;
+    gap: 0.35rem;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    mask-image: linear-gradient(to right, transparent, black 14px, black calc(100% - 14px), transparent);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 14px,
+      black calc(100% - 14px),
+      transparent
+    );
+  }
+  .nav a {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    scroll-snap-align: start;
+    /* 32px tall at the base padding, under the ~44px touch-target guideline. This is the one place
+       in the app where the row/column swap makes every primary nav link a thumb target instead of
+       a mouse target, so it gets the padding bump rather than inheriting the desktop rule as-is. */
+    padding: 0.65rem 0.75rem;
+  }
+  .nav a.active { border-left-color: transparent; border-bottom-color: var(--accent); }
+
+  .content { padding: 1.25rem 1rem; max-width: 100%; }
+}
+
+/* ---------------------------------------------------------------------------
+   A11Y-08 -- touch targets under a coarse (touch) pointer.
+
+   Not gated by the 860px breakpoint above: a touchscreen laptop at a wide viewport has the same
+   fat-finger problem a phone does, and `pointer: coarse` is the feature that actually describes it.
+   `min-height` rather than `height` so a wrapped two-line label still grows the box instead of being
+   clipped; existing padding is left alone; whatever box-sizing already applies (this file sets
+   border-box globally) makes the padding count toward the 44px rather than add to it.
+
+   The selector list is deliberately generic rather than per-component classes -- most "chip"/"pill"
+   styling in this app lives in page-specific stylesheets this pass doesn't touch, but every one of
+   them is either a real `<button>`/`<select>`, carries `role="tab"`, or (when clickable) renders as
+   an `<a>`/`<button>` whose class name ends in "chip" or "pill" (`mgr-ref-chip`, `desk-stale-pill`,
+   etc.) -- so the attribute-substring selectors below reach them without a static list, while a
+   plain `<span>`/`<div>` badge that isn't interactive (most of them) is correctly left alone. */
+@media (pointer: coarse) {
+  button,
+  select,
+  [role="tab"],
+  a[class*="chip"],
+  button[class*="chip"],
+  a[class*="pill"],
+  button[class*="pill"],
+  .nav-sections a,
+  .nav a,
+  .nav-account a,
+  .nav-favorites-list a {
+    min-height: 44px;
+  }
+}
+
+/* =============================================================================
+   Activity page + portfolio cash panels
+   Reuses .panel, .tile-grid/.stat/.tile/.tile-hint, .table-wrap, .data-table,
+   .callout/.callout-danger, .subtitle, .placeholder and .symbol-input from the
+   rules above -- nothing above this line is modified, only appended to.
+   ============================================================================= */
+
+/* Low-emphasis inline text: a provenance coordinate, a settle date, a coverage
+   window. Existing muted text was always tied to a specific block (.subtitle,
+   .placeholder); these are spans inside table cells, so the utility earns its
+   keep rather than duplicating var(--muted) at four call sites. */
+.muted { color: var(--muted); }
+
+/* --- Filter bar -------------------------------------------------------------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.filter-bar label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.filter-bar label.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.45rem;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.85rem;
+  color: inherit;
+}
+
+/* --- Pager ------------------------------------------------------------------- */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+.pager button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Withheld-cash reasons ---------------------------------------------------- */
+/* Inside .callout-danger, so it inherits the callout's type scale. Left padding
+   rather than list-style: none -- each entry is a distinct account and the
+   marker is what makes "three accounts" legible at a glance. */
+.cash-reasons {
+  margin: 0.6rem 0 0.6rem 1.1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* --- 404 destination list ------------------------------------------------------ */
+/* Grouped by nav section since the list started coming from `@/nav`. A flat list of thirteen
+   answers "where is it" but not "what kind of thing was I looking for", which is the more useful
+   question when the path that failed was a guess. */
+.destination-group + .destination-group { margin-top: 1rem; }
+
+.destination-group-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.destination-list {
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* --- As-of stamp above the portfolio totals ------------------------------------ */
+.totals-asof {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin-bottom: 0.9rem;
+}
+
+/* --- Statement download, above the portfolio totals ---------------------------- */
+.totals-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.6rem;
+}
+
+/* --- Import panel -------------------------------------------------------------- */
+/* The only write surface in the app, so its states are visually distinct from the read pages:
+   `.badge.bad` is the generic red the tax page spells `permanent`, defined here rather than
+   reused, because a wash-sale badge and a failed import share a colour and nothing else. */
+.badge.bad {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+
+.import-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.import-head h2 { margin: 0; }
+/* The server-side path can be long; it truncates rather than wrapping the header onto three lines,
+   and carries the full value in a title attribute. */
+.import-dir {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  max-width: 55%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.import-notice { padding: 0.75rem 0.9rem; margin: 0.9rem 0; }
+.import-notice p { margin: 0.4rem 0; }
+.import-notice strong { display: block; margin-bottom: 0.2rem; }
+
+/* A command to copy. Scrolls inside itself on a narrow viewport rather than widening the page. */
+.import-command {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+}
+
+.import-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
+}
+
+.import-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+.import-result { margin-top: 1.4rem; }
+.import-result h3 { margin: 0 0 0.6rem; }
+.import-detail { font-size: 0.76rem; line-height: 1.4; margin-top: 0.2rem; max-width: 48ch; }
+
+/* --- 1099-B reconciliation ------------------------------------------------------ */
+.reconcile-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.reconcile-head h2 { margin: 0; }
+.reconcile-intro { font-size: 0.88rem; line-height: 1.6; margin: 0.6rem 0 0; }
+.reconcile-help { font-size: 0.82rem; line-height: 1.6; margin: 0.9rem 0 0.5rem; }
+
+/* Monospace and wide: the user is typing columns, and proportional digits make a transcription
+   error harder to see than it needs to be. */
+.reconcile-input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.6rem 0.7rem;
+  resize: vertical;
+}
+.reconcile-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--glow-cyan);
+}
+
+.reconcile-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 0.7rem;
+  font-size: 0.82rem;
+}
+.reconcile-notice { padding: 0.75rem 0.9rem; margin: 1rem 0; }
+.reconcile-notice p { margin: 0.4rem 0 0; }
+.reconcile-notice strong { display: block; }
+.reconcile-result { margin-top: 0.5rem; }
+.reconcile-note { font-size: 0.76rem; line-height: 1.4; margin-top: 0.25rem; max-width: 44ch; }
+.reconcile-matched { font-size: 0.8rem; margin-top: 0.6rem; }
+
+/* --- Error boundary ------------------------------------------------------------- */
+.error-boundary h2 { margin-top: 0; }
+.error-boundary p { font-size: 0.88rem; line-height: 1.6; }
+.error-boundary-message {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.6rem 0.7rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* --- Fear & Greed component units, and the provider footnote -------------------- */
+.fg-component-desc { font-size: 0.72rem; line-height: 1.35; margin-top: 0.15rem; max-width: 34ch; }
+.provider-note { font-size: 0.78rem; line-height: 1.6; margin: 0.9rem 0 0; }
+.fg-col-note { display: block; font-size: 0.66rem; font-weight: 400; text-transform: none; letter-spacing: 0; margin-top: 0.1rem; }
+
+/* --- Significance legend on the decision table ---------------------------------- */
+.significance-legend { margin-top: 0.9rem; font-size: 0.82rem; line-height: 1.6; }
+.significance-legend summary { cursor: pointer; color: var(--muted); font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.significance-legend p { margin: 0.6rem 0; }
+.significance-legend ul { margin: 0.5rem 0; padding-left: 1.2rem; }
+.significance-legend li { margin-bottom: 0.35rem; }
+
+/* --- Import: the per-file account decision ------------------------------------- */
+.import-decisions { margin-top: 1.4rem; }
+.import-decisions h3 { margin: 0 0 0.3rem; }
+.import-decisions-intro { font-size: 0.82rem; line-height: 1.6; margin: 0 0 1rem; max-width: 78ch; }
+
+.import-decision {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem 0.9rem;
+  margin-bottom: 0.9rem;
+  background: var(--panel-2);
+}
+.import-decision-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  margin-bottom: 0.6rem;
+}
+
+.import-decision-modes {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  font-size: 0.84rem;
+}
+.import-decision-modes label { display: flex; align-items: center; gap: 0.35rem; cursor: pointer; }
+.import-decision-modes input[disabled] + * { color: var(--muted); }
+
+.import-decision-body { margin-top: 0.8rem; }
+.import-match-table td { vertical-align: top; font-size: 0.82rem; }
+.import-match-sub { font-size: 0.74rem; line-height: 1.4; margin-top: 0.15rem; }
+.import-match-selected { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+.import-decision-more {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  background: none;
+  border: 0;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+}
+
+/* A form, not a table: each field gets its own line so the labels stay readable. */
+.import-new-account { display: flex; flex-direction: column; gap: 0.6rem; max-width: 32rem; }
+.import-new-account label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.import-new-account input,
+.import-new-account select {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.4rem 0.55rem;
+}
+.import-decision-note { font-size: 0.78rem; line-height: 1.6; max-width: 70ch; text-transform: none; letter-spacing: 0; }
+
+/* ---------------------------------------------------------------------------
+   Portfolio: by-instrument / by-account toggle and the by-account view.
+   Appended at the end of the file per this file's own append-only convention -- nothing above this
+   line is modified. Reuses .panel, .muted, .view-tabs/.timeframe-tab (Ticker.tsx's chart-layout
+   switch), .tile-grid/.stat/.tile-hint, .table-wrap, .data-table/.num, .badge,
+   .position-group-separator, .position-symbol-cell/.position-symbol, .position-price-asof and
+   .position-unrealized-value from the rules above.
+   ============================================================================= */
+
+.positions-view-toggle { display: flex; flex-direction: column; gap: 0.6rem; }
+.positions-view-note { font-size: 0.8rem; line-height: 1.55; max-width: 78ch; margin: 0; }
+
+.account-view { display: flex; flex-direction: column; gap: 1rem; }
+
+.account-section-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+.account-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+/* `h2` elsewhere on this page sits alone in a block with its own margin; inline here so the account
+   name, broker and tax-treatment badge read as one heading rather than stacking three lines tall. */
+.account-section-title { margin: 0; }
+.account-broker { font-size: 0.82rem; }
+
+/* Tax treatment is a headline fact per this page's module docstring, not a footnote, so it gets its
+   own colour rather than borrowing `.badge`'s default neutral border -- a Roth/traditional account
+   (gains never taxed, or not yet) reads differently at a glance from a taxable one. */
+.account-tax-badge.tax-taxable { color: var(--muted); }
+.account-tax-badge.tax-roth_ira,
+.account-tax-badge.tax-traditional_ira {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.account-tax-badge.tax-unknown { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, transparent); }
+
+.account-warning-count { white-space: nowrap; }
+
+.account-tile-grid { margin-bottom: 0.9rem; }
+
+/* `.data-table` sets `white-space: nowrap` (~line 300 above) which is right for every column this
+   table actually has -- quantities, money, lot counts -- so no override is needed here, unlike
+   `.warning-group-table` above it which had to turn nowrap back off for its prose columns. */
+.account-position-table .position-symbol-cell { min-width: 8rem; }
+
+/* Cash-by-account: the Source column carries prose (a declared balance's date and the note saying
+   where it came from), which the numeric-table defaults were never written for. Without a width the
+   note set the table's minimum size and pushed it 152px past the viewport, and `.data-table`'s
+   `white-space: nowrap` meant it could not wrap out of it. Both fixed here rather than by shortening
+   the note: the note is the part that makes a declared figure auditable. */
+.data-table.cash-account-table { table-layout: fixed; width: 100%; }
+.data-table.cash-account-table th, .data-table.cash-account-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.data-table.cash-account-table th:nth-child(1) { width: 20%; }
+.data-table.cash-account-table th:nth-child(2) { width: 10%; }
+.data-table.cash-account-table th:nth-child(3),
+.data-table.cash-account-table th:nth-child(4),
+.data-table.cash-account-table th:nth-child(5) { width: 13%; }
+.data-table.cash-account-table th:nth-child(6) { width: 31%; }
+/* The note is context for the balance, not a headline: smaller, dimmer, and allowed to wrap to as
+   many lines as it needs rather than widening its column. */
+.cash-account-table .position-price-asof { white-space: normal; }
+
+/* ---------------------------------------------------------------------------
+   Portfolio: accounts holding nothing, and the by-tax-treatment view.
+   Appended at the end of the file per this file's own append-only convention -- nothing above this
+   line is modified. Reuses .account-view/.account-section/.account-section-head/
+   .account-section-heading/.account-section-title/.account-broker/.account-tile-grid/
+   .account-position-table, .panel/.callout/.callout-warn, .muted, .table-wrap/.data-table and the
+   .warning-detail details/summary pattern from the rules above.
+   ============================================================================= */
+
+/* Same collapsed-by-default disclosure pattern as `.warning-detail` above, applied to accounts this
+   report shows holding nothing rather than to warnings. */
+.empty-accounts-detail { margin-top: 0.4rem; }
+.empty-accounts-detail summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.4rem 0;
+}
+.empty-accounts-detail summary:hover { color: var(--text); }
+.empty-accounts-detail .empty-accounts-list { margin-top: 0.8rem; }
+
+/* ---------------------------------------------------------------------------
+   Tax page: per-symbol wash-sale panel.
+   Appended at the end of the file per this file's own append-only convention -- nothing above this
+   line is modified. Reuses .panel/.subtitle/.placeholder/.muted, .table-wrap/.data-table/.num and
+   the .badge vocabulary (see .badge.permanent/.badge.stale/.badge.ok above) rather than inventing a
+   parallel one.
+   ============================================================================= */
+
+/* An open §1091 window is the one state on this panel that calls for action (don't repurchase yet),
+   so it gets the same warn-colored, weighted treatment `.badge.stale` uses for a price gone stale --
+   text carries the state ("N days — safe from ...") and colour is additive, never load-bearing
+   alone. */
+.badge.wash-window-open {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+  font-weight: 600;
+  text-shadow: 0 0 6px color-mix(in srgb, var(--warn) 45%, transparent);
+}
+/* Past the window: quiet and affirmative, mirroring `.badge.ok`'s green rather than the neutral
+   muted tone `.badge.deferred` uses elsewhere on this page -- "safe to repurchase" is a resolved
+   state worth a positive signal, not a shrug. */
+.badge.wash-window-safe {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+
+.tax-groups-note { font-size: 0.8rem; line-height: 1.55; max-width: 78ch; margin: 0 0 0.2rem; }
+
+/* ---------------------------------------------------------------------------
+   Tax page: per-symbol wash-sale panel -- copy/framing correctness pass.
+   Appended at the end of the file per this file's own append-only convention -- nothing above this
+   line is modified. Reuses .panel/.subtitle/.muted/.table-wrap/.data-table/.badge from above; adds
+   only what the corrected copy and the new "no repurchase yet" row state need.
+   ============================================================================= */
+
+.wash-scope-line { margin-bottom: 0.75rem; }
+.wash-column-note { margin: 0 0 0.5rem; font-size: 0.8rem; }
+.wash-repurchase-note { margin: 0.6rem 0 0; font-size: 0.8rem; }
+.wash-totals { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.wash-totals p { margin: 0; font-size: 0.85rem; line-height: 1.55; max-width: 70ch; }
+
+/* The single most important row in this table: a recent loss sale with no repurchase yet, so
+   `deferred_disallowed` is a real "0.00" (nothing to defer -- yet) rather than an absent figure.
+   A flat zero next to an otherwise-loud warn badge reads as "nothing happening here" unless the
+   row itself is marked too, so it gets the same warn-tinted row background `.decision-row.degraded`
+   and `.bt-row-discovery` use elsewhere in this file for a row that needs the reader's attention. */
+.wash-summary-table tr.wash-row-pending td {
+  background: color-mix(in srgb, var(--warn) 6%, transparent);
+}
+.wash-pending-note { color: var(--warn); font-size: 0.78rem; }
+
+/* Whole-panel footer: the scope and modelling limits the panel cannot clear on its own (options,
+   substantially-identical securities via the `UNSETTLED` table, accounts never connected here).
+   Small and muted like `.tax-groups-note` above, not alarmed like `.callout-danger` -- this is a
+   standing limitation of the calculation, not a detected problem in the data. */
+.wash-panel-footer {
+  margin-top: 0.9rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  max-width: 78ch;
+}
+
+/* ---------------------------------------------------------------------------
+   Wash Sales page (`WashSales.tsx`).
+   Appended at the end of the file per this file's own append-only convention -- nothing above this
+   line is modified. Reuses .panel/.subtitle/.placeholder/.muted/.disclaimer, .tile-grid/.stat/.tile,
+   .callout/.callout-danger, .table-wrap/.data-table/.num, .badge and the .badge.permanent/
+   .badge.deferred vocabulary the Tax page's wash-sale tables already use, plus the
+   details/summary disclosure pattern `.warning-detail`/`.empty-accounts-detail` established above.
+   Only the wsale- prefixed classes below are new: the per-symbol urgency card and its countdown
+   bar have no existing equivalent on any other page.
+   ============================================================================= */
+
+.wsale-scope-line { margin: 0; }
+.wsale-footer { font-size: 0.78rem; line-height: 1.55; max-width: 78ch; }
+
+/* Each closed-window symbol card is a <details> so its drill-down is collapsed by default and
+   keyboard/AT-navigable for free -- the same disclosure primitive `.warning-detail` and
+   `.empty-accounts-detail` already use elsewhere in this file. (The open windows are a sortable
+   table with expandable rows instead -- see `.wsale-open-table` below.) */
+.wsale-closed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wsale-symbol-card {
+  border: 1px solid var(--border);
+  border-left-width: 3px;
+  border-radius: 6px;
+  background: var(--panel-2);
+}
+
+.wsale-symbol-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  padding: 0.6rem 0.85rem;
+}
+.wsale-symbol-summary::-webkit-details-marker { display: none; }
+.wsale-symbol-summary:hover { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+
+.wsale-symbol-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 4.5ch;
+}
+
+/* The countdown bar: a fixed-width track with a fill proportional to how much of the 31-day
+   window has elapsed, so a reader scanning the open-windows list sees urgency as a shape, not
+   just a number that has to be read and compared to the next one down. Colour is never the only
+   signal -- the day count and "left" text next to it carry the same information in words. */
+.wsale-countdown { display: inline-flex; align-items: center; gap: 0.5rem; }
+.wsale-countdown-track {
+  display: inline-block;
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+.wsale-countdown-fill {
+  display: block;
+  height: 100%;
+  background: var(--muted);
+  border-radius: inherit;
+}
+
+.wsale-days-badge { font-weight: 600; }
+
+/* Three urgency tiers, escalating from a plain border through amber to a weighted, glowing red --
+   the "3 days must not look like 28 days" requirement this page exists to satisfy. Applied to both
+   the card's left border and the countdown fill/badge so the signal reads at a glance whether the
+   card is scanned top-down or the badge is read on its own. */
+.wsale-tier-critical { border-left-color: var(--down); }
+.wsale-tier-critical .wsale-countdown-fill { background: var(--down); }
+.wsale-tier-critical .wsale-days-badge {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 50%, transparent);
+  font-weight: 700;
+  text-shadow: 0 0 6px color-mix(in srgb, var(--down) 55%, transparent);
+}
+
+.wsale-tier-soon { border-left-color: var(--warn); }
+.wsale-tier-soon .wsale-countdown-fill { background: var(--warn); }
+.wsale-tier-soon .wsale-days-badge {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+
+.wsale-tier-open { border-left-color: var(--border-strong); }
+.wsale-tier-open .wsale-countdown-fill { background: var(--accent); }
+.wsale-tier-open .wsale-days-badge { color: var(--text); }
+
+/* The closed-window cards reuse `.badge.wash-window-safe`'s green from the Tax page's own
+   wash-sale panel (see above) via the `wsale-window-safe` alias below -- a resolved window is the
+   same "safe" state on both pages and earns the same colour rather than a new one. */
+.wsale-tier-closed { border-left-color: var(--up); }
+.badge.wsale-window-safe {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+
+.wsale-symbol-figures {
+  margin-left: auto;
+  display: flex;
+  gap: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.wsale-figure-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.3rem;
+}
+.wsale-figure-permanent { color: var(--down); }
+
+/* Open-windows table (replaces the former amount chart + card list): one sortable row per open
+   symbol, each expandable in place to the same per-sale drill-down the cards held. The urgency
+   tiers keep the card list's left-accent and coloured day badge -- "3 days" must not read like
+   "28 days" -- reusing the `.wsale-tier-*` descendant rules above, now anchored on the row. */
+.wsale-open-table td { vertical-align: middle; }
+.wsale-open-symbol-cell,
+.wsale-open-days-cell,
+.wsale-open-safe-cell { white-space: nowrap; }
+.wsale-open-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+.wsale-open-toggle:hover .wsale-symbol-name { color: var(--accent); }
+.wsale-open-caret { color: var(--muted); font-size: 0.75rem; }
+/* The urgency left-accent, moved from the card border to the row's first cell. */
+.wsale-open-row > td:first-child { border-left: 3px solid transparent; }
+.wsale-tier-critical.wsale-open-row > td:first-child { border-left-color: var(--down); }
+.wsale-tier-soon.wsale-open-row > td:first-child { border-left-color: var(--warn); }
+.wsale-tier-open.wsale-open-row > td:first-child { border-left-color: var(--border-strong); }
+.wsale-open-row.wsale-card-live > td {
+  background: color-mix(in srgb, var(--warn) 6%, transparent);
+}
+/* The expanded drill-down spans the full row; its own top border would double the cell border. */
+.wsale-open-detail-row > td { padding: 0; }
+.wsale-open-detail-row .wsale-drilldown { border-top: none; }
+
+.wsale-drilldown {
+  padding: 0 0.85rem 0.85rem;
+  border-top: 1px solid var(--border);
+}
+.wsale-drilldown-meta { margin: 0.6rem 0; font-size: 0.78rem; }
+.wsale-sales-table th.num, .wsale-sales-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* A loss sale whose own window is still open and has not (yet) been disallowed -- `sales` is one
+   row per loss sale, not per triggered event, so `disallowed_loss: "0.00"` here is a real zero, not
+   an absence. It is the single most actionable row on the page (a repurchase now still creates the
+   wash sale), so it gets the same warn-tinted, weighted treatment `.wash-row-pending` uses on the
+   Tax page's per-symbol table for the identical case, one level up (symbol rather than sale). A flat
+   `$0.00` next to an otherwise quiet row would read as nothing happening; this makes sure it can't. */
+.wsale-card-live { background: color-mix(in srgb, var(--warn) 6%, var(--panel-2)); }
+.wsale-sale-row-live td { background: color-mix(in srgb, var(--warn) 10%, transparent); }
+.badge.wsale-live-warn {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 50%, transparent);
+  font-weight: 600;
+  text-shadow: 0 0 6px color-mix(in srgb, var(--warn) 45%, transparent);
+}
+
+/* The closed-windows disclosure itself: same collapsed-by-default pattern as the per-symbol cards
+   inside it, one level up. Styled as a `.panel` (see the JSX) so it sits visually level with the
+   other sections on the page even though it renders as a bare <details>, matching how
+   `.empty-accounts-detail` is used on the Portfolio page. */
+.wsale-closed-section > summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.wsale-closed-section > summary:hover { color: var(--accent); }
+.wsale-closed-note { margin: 0.6rem 0; font-size: 0.82rem; line-height: 1.55; max-width: 78ch; }
+
+/* ---------------------------------------------------------------------------
+   Institutions page (`Institutions.tsx`).
+   Appended at the end of the file per this file's own append-only convention -- nothing above this
+   line is modified. Reuses .panel/.subtitle/.placeholder/.muted/.disclaimer, .year-select (the fund
+   picker), .filter-bar/.checkbox, .tile-grid/.stat/.tile, .table-wrap/.data-table/.num and .badge
+   wholesale -- only the inst- prefixed classes below are new: the sortable column-header buttons,
+   the issuer/ticker cell layout, the owned-position row treatment, and the per-action badge colours,
+   none of which any other page needed before this one.
+   ============================================================================= */
+
+.inst-source-note { margin: 0 0 0.4rem; max-width: 82ch; }
+.inst-provenance { margin: 0 0 0.9rem; font-size: 0.8rem; line-height: 1.5; }
+
+/* Deliberately narrower tiles than the default `.tile-grid` minmax -- five single-number action
+   counts (New/Exit/Add/Trim/Hold) waste space at the ~190px default sized for money figures with
+   hints underneath. */
+.inst-counts-strip { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); margin-bottom: 0.9rem; }
+
+.inst-changes-filters { margin-bottom: 0.8rem; }
+
+/* A column header rendered as a real <button> rather than a bare clickable <th> -- keyboard-
+   reachable and announced as a button by a screen reader for free, matching this file's existing
+   preference for native interactive elements (`<details>/<summary>` for disclosures) over
+   hand-rolled ARIA. Reset to look like plain header text until hovered/focused. */
+.inst-sort-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+.inst-sort-button:hover, .inst-sort-button:focus-visible { color: var(--accent); }
+
+.inst-issuer-cell { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.inst-issuer-name { font-weight: 500; }
+
+/* The CUSIP column: always present, in mono so its fixed 9-character shape is easy to scan and
+   compare row to row -- it is this page's real identity column on every row that has no ticker,
+   which is most of them. See the module docstring in `@/api/institutions` for why. */
+.inst-cusip { font-family: var(--font-mono); font-size: 0.82rem; }
+
+/* The one badge on this page that is not an `Action` -- it means "this CUSIP matched something in
+   your own ledger", which is the single most actionable fact a row can carry (this institution just
+   moved on something you hold). Uses the same `--accent` treatment the rest of this app reserves for
+   its most attention-worthy badges, and a matching left border on the row so it reads at a glance
+   even before the badge text is read. */
+.inst-owned-badge {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  font-weight: 600;
+}
+.inst-owned-row { box-shadow: inset 3px 0 0 var(--accent); }
+.inst-owned-row td:first-child { padding-left: calc(0.6rem - 3px); }
+
+/* Action badges, coloured by what the share columns concluded happened -- never by the sign of
+   `value_delta`, which moves on price as often as on a trade. `new`/`add` read as acquiring more
+   (up), `exit`/`trim` as reducing (down), `hold` as neutral -- the same up/down/neutral vocabulary
+   `.badge.ok`/`.badge.stale`/`.badge.none` already use elsewhere in this file, applied to a new
+   five-way vocabulary instead of a three-way one. */
+.badge.inst-action-new, .badge.inst-action-add {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.badge.inst-action-exit, .badge.inst-action-trim {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+.badge.inst-action-hold { color: var(--muted); }
+.wsale-closed-list { margin-top: 0.6rem; }
+
+/* The caveat under the counts strip. Sits between the tally and the table it qualifies, so it is
+   deliberately not `.placeholder` (which reads as "nothing here") nor a `.disclaimer` panel (which
+   would compete with the page-level one above the fund selector). */
+.inst-traded-note {
+  margin: 0.35rem 0 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  border-left: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-left: 0.7rem;
+}
+
+/* Sits inline in the filter bar, next to the checkbox whose meaning it qualifies. */
+.inst-owned-caveat {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  max-width: 46ch;
+}
+
+/* "N of M" note under the counts strip and above a filtered holdings table. */
+.inst-filter-note {
+  margin: 0.3rem 0 0.75rem;
+  font-size: 0.78rem;
+}
+
+/* =============================================================================
+   Sidebar favourites.
+   Appended here rather than inline with the `.sidebar`/`.nav` rules near the top
+   of the file (around line 130) because those rules predate this feature and are
+   still correct as written -- `.nav a` still applies by descendant selector once
+   each link is wrapped in a `.nav-row`. Kept as an addition so that block stays
+   readable as "the base nav", with the row/star/favourites behaviour layered on
+   top of it here.
+   ============================================================================= */
+
+/* Each page link now sits in a row next to its star toggle. `.nav` is already
+   `flex-direction: column`, so this only has to solve the cross-axis: the link
+   must claim the remaining width (`flex: 1`) and be allowed to shrink below its
+   text's intrinsic width (`min-width: 0`), or a long page name would push the
+   star out past the sidebar's fixed 200px. */
+.nav-row { display: flex; align-items: stretch; gap: 0.1rem; }
+
+/* Scoped to `.nav-row a` rather than touching the base `.nav a` rule -- `.nav a`
+   still needs to size to its content when it is used bare (it no longer is, but
+   nothing here should assume that). `display: block` is what lets the existing
+   hover/active background, border-radius and left border fill the row's full
+   width instead of collapsing to the width of the link text, now that the link
+   is a flex child sharing its row with the star button. */
+.nav-row a { display: block; flex: 1; min-width: 0; }
+
+/* Reset UA button chrome first, then restyle as a small, quiet icon control --
+   it should read as part of the row's furniture, not as a second, competing
+   piece of text next to the page name. */
+.fav-toggle {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  margin: 0;
+  line-height: 1;
+  font-size: 0.8rem;
+  font-family: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--muted);
+  opacity: 0.35;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-self: center;
+  border-radius: 4px;
+  transition: opacity 150ms ease, color 150ms ease;
+}
+
+/* An unstarred toggle stays near-invisible at rest -- thirteen fully-visible
+   outline stars would be pure noise next to the thing they're annotating. It
+   only needs to be discoverable while the row is being looked at, so reveal it
+   on hover of the row rather than on hover of the tiny button itself; hovering
+   the button is a subset of hovering the row anyway. */
+.nav-row:hover .fav-toggle { opacity: 0.75; }
+.fav-toggle:hover { opacity: 1; color: var(--text); }
+
+/* A favourited star is a standing piece of state, not a hover affordance, so it
+   is exempt from the reveal-on-hover rule above and stays fully visible with
+   the same accent + glow treatment `.nav a.active` uses -- the two are meant to
+   read as the same visual language ("this is lit up") even though only one of
+   them is a link. */
+.fav-toggle.is-fav {
+  opacity: 1;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--glow-cyan);
+}
+.fav-toggle.is-fav:hover { color: var(--accent); }
+
+/* Required, not optional: hover-reveal makes the unstarred toggle invisible
+   until pointed at, which is fine for a mouse but would leave a keyboard user
+   tabbing past a control they cannot see exists. The focus ring has to make it
+   visible on its own, independent of hover or `.is-fav` state. */
+.fav-toggle:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* --- Favorites section, below the page rail ---------------------------------
+   Separated from `.nav` above it the same way `.nav-sections` is separated from
+   `.nav` below it -- padding-bottom on the block above plus a border, so the
+   two read as distinct levels rather than one list with an odd gap in it. */
+.nav-favorites {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+
+.nav-favorites-title {
+  padding: 0 0.65rem 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.nav-favorites-list { display: flex; flex-direction: column; gap: 0.125rem; }
+
+.nav-favorites-empty {
+  margin: 0;
+  padding: 0 0.65rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* --- Authentication: login screen, account page, sidebar footer ---------------
+   The login screen is the one full-viewport, sidebar-less surface in the app (see
+   `App.tsx`'s `AuthGate`). It reuses `.panel` for the card and `.callout`/`.callout-danger`
+   for messages, so it reads as the same product as everything behind it. */
+.auth-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.login-shell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+.login-lang {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.login-card {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.5rem 1.6rem 1.7rem;
+}
+.login-brand {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.login-title { margin: 0; font-size: 1.15rem; }
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.login-field input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+}
+.login-error { margin: 0; padding: 0.55rem 0.7rem; border-radius: 6px; }
+
+.login-submit {
+  margin-top: 0.3rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 14%, var(--panel-2));
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.login-submit:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 22%, var(--panel-2));
+  box-shadow: 0 0 12px -4px var(--glow-cyan);
+}
+.login-submit:disabled { opacity: 0.6; cursor: default; }
+
+/* Account page reuses the login field/submit styles above. */
+.account-page { max-width: 460px; }
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 340px;
+}
+.account-saved {
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
+}
+.account-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.account-signout {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.account-signout:hover { border-color: var(--down); color: var(--down); }
+.account-back { color: var(--muted); font-size: 0.82rem; }
+.account-back:hover { color: var(--accent); }
+
+/* Sidebar account footer -- a sibling of `.nav`/`.nav-favorites`, pushed to the bottom. */
+.nav-account {
+  margin-top: 1.1rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+}
+.nav-account-user {
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding: 0 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-account a {
+  padding: 0.4rem 0.65rem;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.nav-account a:hover { background: var(--panel-2); color: var(--text); }
+.nav-account a.active { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--panel-2)); }
+.nav-account-signout {
+  text-align: left;
+  padding: 0.4rem 0.65rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.nav-account-signout:hover { background: var(--panel-2); color: var(--down); }
+
+/* The auth-off pill's own footer slot. Same divider and spacing as `.nav-account`, but a pill sits
+   on its own line rather than in the link column, so it gets a little breathing room instead of the
+   0.35rem gap tuned for stacked links. */
+.nav-account-gate-off {
+  align-items: flex-start;
+  padding-bottom: 0.2rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Privacy mode -- `data-redact="on"` on <html>, set by `@/privacy`.
+
+   The blur is CSS, not React, so it reaches pages that import nothing from the feature: a figure is
+   covered because of the class it already carries. What each selector buys:
+
+     .redactable          opt-in, for anything with no numeric class of its own. Currently the
+                          signed-in username in the sidebar footer.
+     [data-money]         the same opt-in as an attribute, for a call site that already owns its
+                          className. Nothing uses it yet; it exists so the next one does not have to
+                          come back and edit this rule.
+     .stat .value         every summary tile in the app. `StatTile`/`StatGrid` (Tax, Wash Sales),
+     .tile .value         `MoneyTile`/`Stat` (Account), `OverviewTile` (Overview), `TaxStat`
+                          (Paper Desk) and `Activity`'s own `Tile` all render `stat tile` >
+                          `span.value` -- the shared CSS contract those five components agreed on
+                          instead of a shared component, which is what makes one rule cover them.
+     td.num               every right-aligned numeric table cell: Tax (Form 8949, wash detail),
+                          Wash Sales (sales, per-symbol), Account (positions, by-account, cash),
+                          Activity, Paper Desk, Filers, Symbol. `td` only, never `th.num` -- a
+                          blurred column header hides the word, not a number.
+     .wsale-figure        the inline "Deferred $x / Permanent $y" figures on Wash Sales. The whole
+                          span blurs, its little label included: `filter` applies to the entire
+                          subtree and cannot be lifted by a child, and a blurred "Deferred" next to a
+                          blurred amount is a fair trade for one rule.
+     .alloc-pie-legend-value  the Account allocation legend's per-slice figure.
+
+   NOT covered, and deliberately listed rather than left to be found on a screen share: money
+   rendered inside a prose sentence (`Tax`'s `.wash-total-deferred`/`.wash-total-permanent`, several
+   `Trans` callouts) and money drawn into an SVG chart (`Chart.tsx`, `AllocationPie.tsx`, the
+   holdings pie) carry no numeric class, so nothing here can find them. Blurring the sentences would
+   blur the sentence; the charts need their own pass in the files that own them.
+
+   `user-select: none` so a blurred figure cannot be selected and read out of the clipboard, which
+   would defeat the point on a screen someone else is driving. This is a screen-privacy control, not
+   a security boundary -- the values are still in the DOM.
+   --------------------------------------------------------------------------- */
+html[data-redact="on"] .redactable,
+html[data-redact="on"] [data-money],
+html[data-redact="on"] .stat .value,
+html[data-redact="on"] .tile .value,
+html[data-redact="on"] td.num,
+html[data-redact="on"] .wsale-figure,
+html[data-redact="on"] .alloc-pie-legend-value {
+  filter: blur(6px);
+  user-select: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion, globally.
+
+   Seven component stylesheets honour `prefers-reduced-motion` individually, which left every
+   animation and transition written anywhere else ungated -- `CountdownBar.css`'s width transition
+   being the one that matters, because it animates continuously rather than once on interaction.
+   A blanket rule is the accepted pattern here: it cannot be forgotten by the next component, and
+   the per-component rules above it keep working unchanged (they simply agree with it).
+
+   Durations are near-zero rather than `none` so that `transitionend`/`animationend` handlers still
+   fire -- a hard `animation: none` silently strips the event some components sequence on.
+   --------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Forced colors (Windows High Contrast).
+
+   The OS replaces the entire palette with its own and drops `box-shadow`, `background-image` and
+   most colour entirely. Three things in this app depended on exactly those:
+
+     - focus, which was a box-shadow glow (see the `input:focus` rule near the top of this file);
+     - pills and badges, which are a tinted background with no border, so they lose their edges and
+       run together with the text beside them;
+     - links, which inherit `color` from their container by design (`a { color: inherit }`), so the
+       system link colour never gets a chance to distinguish them.
+
+   System colour keywords (`Highlight`, `CanvasText`, `LinkText`) are the supported way to say
+   "whatever this user chose"; hardcoding our own would be overridden anyway.
+   --------------------------------------------------------------------------- */
+@media (forced-colors: active) {
+  :focus-visible,
+  input:focus,
+  select:focus {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+
+  .status-pill,
+  .badge,
+  .state-pill,
+  .pill {
+    border: 1px solid CanvasText;
+    forced-color-adjust: auto;
+  }
+
+  a,
+  .skip-link {
+    forced-color-adjust: auto;
+    color: LinkText;
+  }
+
+  /* The blur survives forced-colors (it is a filter, not a colour), but say so explicitly rather
+     than relying on it: privacy mode must not quietly stop working for a high-contrast user. */
+  html[data-redact="on"] .redactable,
+  html[data-redact="on"] [data-money],
+  html[data-redact="on"] .stat .value,
+  html[data-redact="on"] .tile .value,
+  html[data-redact="on"] td.num,
+  html[data-redact="on"] .wsale-figure,
+  html[data-redact="on"] .alloc-pie-legend-value {
+    forced-color-adjust: none;
+  }
+}
+
+/* =============================================================================
+   UX-08 -- wide tables on a phone (375x812 walk, 2026-09-10).
+
+   The positions table ran 1201px inside a 305px well, the Competition
+   leaderboard 1419px: `.table-wrap` already scrolled (it has since the Phase 6
+   rules above), but with no affordance telling a reader that, and the first
+   column -- the one piece of context (symbol, agent name) every other cell in
+   the row is meaningless without -- scrolled away with everything else. A row
+   could not be read once scrolled. Everything below is CSS-only and lives
+   entirely inside `@media (max-width: 720px)`, so desktop stays exactly what
+   it was.
+
+   The `.scroll-region` half of this (the sticky corner cell, and the base
+   sticky-column rule for a table that sits directly inside a `ScrollRegion`
+   with no `.table-wrap` div at all -- `AgentWorkflow.css`'s `.wf-table` is the
+   one table in the codebase built that way) lives in `ScrollPanel.css`, next
+   to the primitive it extends, not here.
+
+   Every selector below is deliberately kept at or near (0,1,0) specificity via
+   `:where()`: real, but just barely. That is what lets this reach every plain
+   `.table-wrap table` at once while still losing cleanly to (a) any page's own
+   pinned-column rule -- the Competition leaderboard already has one, in
+   `Competition.css`, complete with its own header treatment, zebra striping
+   and podium/ineligible row states, and none of that is touched here -- and
+   (b) any table's own per-row background rule that already targets `<td>`
+   directly (`.position-detail-row td`, `.decision-detail-row td`,
+   `.bt-row-discovery td`, `.wsale-sale-row-live td`, ... all keep winning as
+   written, no edits needed).
+
+   What `:where()` cannot fix is a rule that colours the *row* (`<tr>`) rather
+   than the cell: the sticky cell's own background always paints over its
+   row's, regardless of specificity, because that is the CSS table background
+   painting order (cell over row), not the cascade. Every `<tr>`-level
+   background rule this file defines gets a same-tint companion for
+   `td:first-child` immediately below the base rule, so a hovered, degraded or
+   selected row still reads as that state in its frozen first cell instead of
+   reverting to the plain panel background.
+   ============================================================================= */
+@media (max-width: 720px) {
+  /* --- Sticky first column ------------------------------------------------- */
+  :where(.table-wrap) :where(table) :where(th, td):first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--panel);
+    box-shadow: 3px 0 6px -3px color-mix(in srgb, var(--bg) 85%, transparent);
+  }
+  @media (forced-colors: active) {
+    :where(.table-wrap) :where(table) :where(th, td):first-child {
+      /* box-shadow is dropped by forced-colors wholesale (see the Phase note
+         above on this file's other forced-colors block) -- a real border
+         stands in for it as the boundary cue. */
+      box-shadow: none;
+      border-right: 1px solid CanvasText;
+    }
+  }
+
+  /* Companions for this file's own `<tr>`-level background rules -- see the
+     section comment above for why these cannot be folded into the base rule. */
+  .data-table tbody tr:hover td:first-child {
+    background: var(--panel-2);
+  }
+  .decision-table tr.decision-row.degraded td:first-child {
+    background: color-mix(in srgb, var(--warn) 6%, var(--panel));
+  }
+  tr.import-match-selected td:first-child {
+    background: color-mix(in srgb, var(--accent) 8%, var(--panel));
+  }
+
+  /* --- Scroll affordance -----------------------------------------------------
+     A static inset fade on the right edge: the same technique, and the same
+     "CSS alone cannot see whether a given instance actually overflows, so hint
+     unconditionally rather than never" reasoning, as the nav rails' own fade
+     added this morning (see the `.nav-sections`/`.nav` rules in the responsive
+     shell above) -- just facing the opposite edge, since a table's scrollable
+     axis runs the other way from the sidebar's. `scrollbar-gutter: stable`
+     keeps a table that does grow a visible scrollbar from reflowing by its
+     width the moment one appears. */
+  .table-wrap {
+    scrollbar-gutter: stable;
+    mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+  }
+
+  /* --- Cell density -----------------------------------------------------------
+     One step down from the desktop `.data-table` defaults (0.45rem 0.6rem
+     padding, 0.83rem font, set near the top of this file) -- same specificity
+     as that rule, so this wins purely by coming later in the cascade, the same
+     technique this file already uses deliberately elsewhere (see `.content`'s
+     `min-width: 0` fix above). */
+  .data-table th,
+  .data-table td {
+    padding: 0.32rem 0.45rem;
+    font-size: 0.76rem;
+  }
+  /* `.num`/`.comp-num` are the only numeric-cell markers actually in use
+     (`grep -rho 'className="[^"]*\b(num|money|right)\b[^"]*"' src` finds
+     neither `.money` nor `.right` anywhere in the codebase). This is already
+     implied by the base `.data-table td { white-space: nowrap }` rule near the
+     top of this file -- restated here to say explicitly that a numeric column
+     must never wrap, independent of that blanket default. Nothing here touches
+     prose columns: a table with one already opts out of the blanket nowrap
+     itself (`.warning-group-table`, `.cash-account-table`,
+     `.thesis-ledger-hypothesis`, `.comp-card-rule-cell`, ...), and this rule
+     does not touch those overrides either. */
+  .data-table th.num,
+  .data-table td.num,
+  .data-table .comp-num {
+    white-space: nowrap;
+  }
+
+  /* --- Opt-in card layout -----------------------------------------------------
+     `.table-wrap--cards`: not applied anywhere by this change -- no `.tsx`
+     edited in this pass adds a `data-label` attribute to any `<td>`, and
+     without one every card row would print an empty label before its value.
+     Documented here for whichever table gets that pass next: add
+     `data-label="Column name"` to each `<td>` in a row (the `<thead>` stays in
+     the DOM for the accessible name, just visually hidden) and add this class
+     alongside `.table-wrap` on that table's wrapper to turn its rows into
+     stacked cards under 720px instead of a horizontally-scrolling grid.
+     Sticky-column positioning is turned back off inside a card: there is
+     nothing left to scroll horizontally once rows are stacked, and
+     `position: sticky` on a cell that is now `display: flex` would do nothing
+     useful regardless. */
+  .table-wrap--cards table,
+  .table-wrap--cards thead,
+  .table-wrap--cards tbody,
+  .table-wrap--cards tr {
+    display: block;
+  }
+  .table-wrap--cards thead {
+    position: absolute;
+    left: -9999px;
+  }
+  .table-wrap--cards tbody tr {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.65rem;
+  }
+  .table-wrap--cards td {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed var(--border);
+    position: static;
+    box-shadow: none;
+  }
+  .table-wrap--cards td:last-child {
+    border-bottom: 0;
+  }
+  .table-wrap--cards td::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+}

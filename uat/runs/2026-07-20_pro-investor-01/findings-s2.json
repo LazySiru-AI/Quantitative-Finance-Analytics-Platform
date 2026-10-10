@@ -1,0 +1,32 @@
+{
+  "findings": [
+    {
+      "finding_id": "cash-settled-unsettled-split-fee-misattributed",
+      "run_id": "2026-07-20_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-08-16T18:15:00Z",
+      "session_date": "2026-07-21",
+      "surface": "api",
+      "locator": "GET /api/portfolio (cash_by_account), /portfolio",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "Settled/unsettled cash split misattributes a sale's fee to settled cash instead of the unsettled proceeds it came from",
+      "observed": "I sold 10 TLT this session: gross proceeds $837.00, a $0.02 fee, net cash_delta $836.98 (all three numbers are in the fill record and the paper broker's own book_after.settled_cash, which read exactly '1750.68' after the fill). The very next order I placed was rejected with 'reason: $2231.34 exceeds $1750.68 of settled cash' -- so the broker's own enforcement engine used $1,750.68 as spendable settled cash, correctly netting the $0.02 fee out of the settled side (settled cash was unaffected by an unsettled trade's fee) and leaving $836.98 as the unsettled proceeds. But the application's own /api/portfolio, ingested from the very same session's fills, reports settled_cash '1750.66' and cash_by_account[0] = {settled: '1750.66', unsettled: '837.00', balance: '2587.66'}. The total ($2,587.66) matches the broker exactly. The split does not: settled is $0.02 low, unsettled is $0.02 high -- the two errors cancel in the total but land on the wrong side of the settled/unsettled line individually.",
+      "expected": "The application's derived settled/unsettled split should agree with the paper broker's own settlement accounting to the cent, since both are reading the same ledger. A sale's regulatory fee (recorded as its own FEE row per this ledger's design) belongs with the unsettled proceeds it was deducted from, not against the previously-settled balance -- the fee only exists because of a trade that has not settled yet.",
+      "why_it_matters": "I size positions against 'settled cash' because that is the number the broker actually enforces -- and it is the number I'd read off this page to decide what I can spend today. It disagreed with the broker's own enforcement by $0.02 in this session; on an account with more trading and more fee rows the same misattribution compounds every session and the two ledgers (what the broker will actually let me spend, and what the portfolio page tells me I can spend) drift apart. A two-cent gap I catch by accident is a two-cent gap I won't catch when it's buried in a real multi-fee week.",
+      "repro": [
+        "From a book with only settled cash, sell a position so the sale carries a fee row (this run: SELL TLT 10 in session 2, fee $0.02, net proceeds $836.98)",
+        "Read the fill record / paper-broker book_after.settled_cash -- it nets the fee out of the unsettled side (here: $1,750.68 settled, implying $836.98 unsettled)",
+        "Fetch GET /api/portfolio (or read the Portfolio page's CASH tile / Cash by Account table) for the same session",
+        "Compare: application reports settled '1750.66' (two cents lower) and unsettled '837.00' (two cents higher, the un-netted gross proceeds)"
+      ],
+      "evidence": [
+        "harness book_after.settled_cash = 1750.68 (uat/runs/2026-07-20_pro-investor-01/state.json after session 2)",
+        "GET /api/portfolio -> settled_cash: '1750.66', cash_by_account[0].settled: '1750.66', .unsettled: '837.00', .balance: '2587.66'"
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "When deriving the unsettled bucket for a still-unsettled sale, net that sale's own FEE row(s) out of the unsettled proceeds rather than out of the running settled balance."
+    }
+  ]
+}

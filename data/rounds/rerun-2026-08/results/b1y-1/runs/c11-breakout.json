@@ -1,0 +1,80 @@
+{
+  "card": {
+    "agent_id": "c11-breakout",
+    "display_name": "Cross-Asset Breakout",
+    "discipline": "breakout",
+    "purpose": "trading",
+    "thesis": "A confirmed swing-high breakout marks the point where a market has absorbed all the supply that capped it at the old pivot -- the resting sellers at that level have been cleared, so the next marginal buyer transacts at a new equilibrium with less overhead resistance above. The counterparty giving up the trade is the anchoring seller who priced the old high as fair value and is now underwater on that anchor; they cover or step aside rather than average down into a level that just failed to hold. This mechanism is not equity-specific -- it is a statement about order-book supply and anchoring bias, so it should recur in any liquid, exchange-traded, trend-capable market: government bonds, gold, investment-grade credit, not just stock indices. Round 1's breakout card tested that claim with nine US sector ETFs, which are nine expressions of the same equity-beta trend and were later measured near 0.58 mean pairwise correlation -- one bet in nine costumes, which is why its win rate moved by window and not by symbol within a window. This card tests the mechanism across four assets chosen specifically because their return drivers differ (equity risk premium, interest-rate duration, monetary/safe-haven demand, investment-grade credit spread), and reports the measured correlation matrix rather than asserting diversification. The trend filter (price above its 200-day average) is there to avoid buying a breakout that is really a dead-cat bounce inside a larger downtrend; it also means the strategy is structurally absent during the worst of a fast crash, which is arithmetic, not risk management, and is declared as such rather than claimed as skill.",
+    "universe": [
+      "SPY",
+      "TLT",
+      "GLD",
+      "LQD"
+    ],
+    "entry": "close crosses_above swing_high(20) and close > sma(200)",
+    "exit": "close crosses_below swing_low(20)",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 120,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 253,
+  "starting_equity": "10000.00",
+  "ending_equity": "9703.07",
+  "total_return": "-0.02969299999999997",
+  "max_drawdown": "-0.042215049161227314",
+  "sharpe": -1.0985068726667568,
+  "sortino": -0.7277481099381056,
+  "volatility": 0.026998941467548828,
+  "exposure": 0.48616600790513836,
+  "capital_exposure": 0.11738551778656127,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "SPY",
+      "entry_date": "2021-12-28",
+      "entry_price": "477.96",
+      "exit_date": "2022-01-21",
+      "exit_price": "445.34",
+      "quantity": "5",
+      "exit_reason": "rule",
+      "pnl": "-163.16",
+      "return_pct": "-0.06827349569001590091221022680",
+      "bars_held": 17
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2022-02-15",
+      "entry_price": "173.19",
+      "exit_date": "2022-07-06",
+      "exit_price": "164.24",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-125.37",
+      "return_pct": "-0.05170621860384548761475835787",
+      "bars_held": 96
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2022-12-14",
+      "entry_price": "168.51",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "14",
+      "exit_reason": "open_at_end",
+      "pnl": "-8.40",
+      "return_pct": "-0.003560619547801317429232686487",
+      "bars_held": 9
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.2115465126015239052164447794",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

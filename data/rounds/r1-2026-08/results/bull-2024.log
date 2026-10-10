@@ -1,0 +1,27 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+22 cards
+[1/22] r1 A-rotation: 99s trades=39 ret=+10.01% dd=-22.88% rej=74
+[2/22] r1 A1-alpha-order: 99s trades=39 ret=+22.27% dd=-23.82% rej=39
+[3/22] r1 A2-cash-headroom: 122s trades=49 ret=+19.59% dd=-23.60% rej=29
+[4/22] r1 A3-no-target: 128s trades=25 ret=+4.62% dd=-26.26% rej=359
+[5/22] r1 A4-tight-stop: 104s trades=39 ret=+10.01% dd=-22.88% rej=74
+[6/22] r1 B-momentum: 151s trades=19 ret=+15.20% dd=-15.22% rej=0
+[7/22] r1 B1-with-target: 145s trades=20 ret=+25.26% dd=-6.31% rej=0
+[8/22] r1 B2-hold-90: 146s trades=19 ret=+27.69% dd=-6.31% rej=0
+[9/22] r1 B3-concentrated: 122s trades=15 ret=+12.52% dd=-15.83% rej=0
+[10/22] r1 B4-tight-stop: 149s trades=19 ret=+14.49% dd=-13.94% rej=0
+[11/22] r1 C-trend: 108s trades=15 ret=+22.75% dd=-13.33% rej=0
+[12/22] r1 c01-meanrev: 101s trades=22 ret=+2.22% dd=-3.99% rej=0
+[13/22] r1 c02-volatility: 63s trades=9 ret=+1.13% dd=-6.39% rej=0
+[14/22] r1 c03-breakout: 103s trades=11 ret=+1.82% dd=-10.04% rej=0
+[15/22] r1 c04-riskmanaged: 73s trades=17 ret=+6.37% dd=-5.58% rej=0
+[16/22] r1 c05-trend: 29s trades=6 ret=+0.30% dd=-2.65% rej=0
+[17/22] r1 c06-13f-momentum: 95s trades=59 ret=-11.85% dd=-14.99% rej=0
+[18/22] r1 D-13f-newbuys: FAILED GuardFailed: D-13f-newbuys: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against SNDK (failed): causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_200: only 0 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: rsi_14: only 0 bars against a 14-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[19/22] r1 E-asymmetric: FAILED GuardFailed: E-asymmetric: entry expression 'close > bb_upper(20,2) and macd_hist(12,26,9) > 0 and close > sma(50)' failed the lookahead guard against NBIS (failed): causality: bb_20_2: only 0 bars against a 19-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: macd_12_26_9: only 0 bars against a 33-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[20/22] r1 F-fastrev: 110s trades=41 ret=-7.05% dd=-19.94% rej=4
+[21/22] r1 G-volatility: 125s trades=47 ret=+15.78% dd=-11.48% rej=0
+[22/22] r1 H-trend-diversified: 97s trades=13 ret=+11.13% dd=-9.18% rej=0
+r1: 20 agents, 2 discoveries
+overall: 20 agents, 2 discoveries at alpha=0.1

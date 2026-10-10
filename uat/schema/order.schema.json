@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://investing-dashboard.local/uat/order.schema.json",
+  "title": "UAT paper order",
+  "description": "One order submitted by a persona during a session, before the paper broker has attempted it. Written to uat/runs/<run-id>/orders.jsonl. The rationale fields are mandatory: an order the persona cannot justify is not a trade this harness is interested in recording, and the justification is what makes the resulting dataset useful for anything beyond P&L.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["order_id", "session", "decided_on", "symbol", "side", "quantity", "thesis", "invalidation"],
+  "properties": {
+    "order_id": { "type": "string" },
+    "session": { "type": "integer", "minimum": 1 },
+    "decided_on": {
+      "type": "string",
+      "format": "date",
+      "description": "The last session date whose close informed this decision. The broker fills at the NEXT session's open, so this date is also the lookahead boundary the harness enforces."
+    },
+    "symbol": { "type": "string", "pattern": "^[A-Z][A-Z0-9]{0,5}([.\\-^][A-Z]{1,2})?$" },
+    "side": { "type": "string", "enum": ["buy", "sell"] },
+    "quantity": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Whole shares, as a string. Strings throughout: the ledger rejects binary floats in monetary and quantity fields and this file is a ledger input."
+    },
+    "order_type": { "type": "string", "enum": ["market_on_open"], "default": "market_on_open" },
+
+    "thesis": {
+      "type": "string",
+      "description": "Why this position, now. Must reference something the persona actually read in the app this session."
+    },
+    "invalidation": {
+      "type": "string",
+      "description": "What would make this wrong. Required before the fill, never written after."
+    },
+    "stop_level": {
+      "type": "string",
+      "description": "Price at which the thesis is considered broken, as a decimal string."
+    },
+    "regime": {
+      "type": "string",
+      "enum": ["risk-on", "risk-off", "transitional"],
+      "description": "The macro read this order was sized under."
+    },
+    "conviction": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Figures from the app that supported the call, quoted with their source, e.g. 'RSI(14)=61.2 via GET /api/market/indicators?symbol=XLE'."
+    }
+  }
+}

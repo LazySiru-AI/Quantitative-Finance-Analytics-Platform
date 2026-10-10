@@ -1,0 +1,53 @@
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+48 cards
+[1/48] r1 r17-band-breakout-off-none: 1s trades=16 ret=-1.49% dd=-6.25% rej=0
+[2/48] r1 r17-band-breakout-off-stop-tp: 1s trades=17 ret=-1.41% dd=-6.05% rej=0
+[3/48] r1 r17-band-breakout-off-stop: 1s trades=16 ret=-1.49% dd=-6.25% rej=0
+[4/48] r1 r17-band-breakout-on-none: 1s trades=14 ret=-3.53% dd=-7.94% rej=0
+[5/48] r1 r17-band-breakout-on-stop-tp: 1s trades=15 ret=-3.45% dd=-7.74% rej=0
+[6/48] r1 r17-band-breakout-on-stop: 1s trades=14 ret=-3.53% dd=-7.94% rej=0
+[7/48] r1 r17-band-reversion-off-none: 1s trades=29 ret=-3.99% dd=-7.53% rej=0
+[8/48] r1 r17-band-reversion-off-stop-tp: 2s trades=31 ret=-3.84% dd=-7.96% rej=2
+[9/48] r1 r17-band-reversion-off-stop: 2s trades=31 ret=-3.84% dd=-7.96% rej=2
+[10/48] r1 r17-band-reversion-on-none: 1s trades=9 ret=-2.33% dd=-3.30% rej=0
+[11/48] r1 r17-band-reversion-on-stop-tp: 1s trades=9 ret=-2.94% dd=-3.93% rej=0
+[12/48] r1 r17-band-reversion-on-stop: 1s trades=9 ret=-2.94% dd=-3.93% rej=0
+[13/48] r1 r17-channel-breakout-off-none: 2s trades=17 ret=-17.50% dd=-18.64% rej=0
+[14/48] r1 r17-channel-breakout-off-stop-tp: 2s trades=18 ret=-17.02% dd=-17.67% rej=0
+[15/48] r1 r17-channel-breakout-off-stop: 2s trades=17 ret=-16.91% dd=-18.08% rej=0
+[16/48] r1 r17-channel-breakout-on-none: 1s trades=13 ret=-12.65% dd=-13.73% rej=0
+[17/48] r1 r17-channel-breakout-on-stop-tp: 2s trades=14 ret=-12.53% dd=-13.06% rej=0
+[18/48] r1 r17-channel-breakout-on-stop: 2s trades=13 ret=-12.42% dd=-13.50% rej=0
+[19/48] r1 r17-ma-crossover-off-none: 1s trades=21 ret=-3.60% dd=-8.55% rej=0
+[20/48] r1 r17-ma-crossover-off-stop-tp: 2s trades=22 ret=-3.69% dd=-8.86% rej=0
+[21/48] r1 r17-ma-crossover-off-stop: 2s trades=21 ret=-3.60% dd=-8.55% rej=0
+[22/48] r1 r17-ma-crossover-on-none: 1s trades=15 ret=-3.32% dd=-8.69% rej=0
+[23/48] r1 r17-ma-crossover-on-stop-tp: 1s trades=16 ret=-3.72% dd=-8.69% rej=0
+[24/48] r1 r17-ma-crossover-on-stop: 2s trades=15 ret=-3.32% dd=-8.69% rej=0
+[25/48] r1 r17-macd-cross-off-none: 2s trades=49 ret=-4.69% dd=-9.53% rej=0
+[26/48] r1 r17-macd-cross-off-stop-tp: 2s trades=49 ret=-4.69% dd=-9.53% rej=0
+[27/48] r1 r17-macd-cross-off-stop: 2s trades=49 ret=-4.69% dd=-9.53% rej=0
+[28/48] r1 r17-macd-cross-on-none: 1s trades=25 ret=+0.37% dd=-4.13% rej=0
+[29/48] r1 r17-macd-cross-on-stop-tp: 1s trades=25 ret=+0.37% dd=-4.13% rej=0
+[30/48] r1 r17-macd-cross-on-stop: 1s trades=25 ret=+0.37% dd=-4.13% rej=0
+[31/48] r1 r17-momentum-state-off-none: 2s trades=30 ret=-10.76% dd=-11.40% rej=5
+[32/48] r1 r17-momentum-state-off-stop-tp: 3s trades=31 ret=-10.73% dd=-11.20% rej=6
+[33/48] r1 r17-momentum-state-off-stop: 3s trades=30 ret=-10.76% dd=-11.40% rej=5
+[34/48] r1 r17-momentum-state-on-none: 2s trades=26 ret=-12.33% dd=-12.89% rej=4
+[35/48] r1 r17-momentum-state-on-stop-tp: 3s trades=27 ret=-12.29% dd=-12.64% rej=5
+[36/48] r1 r17-momentum-state-on-stop: 3s trades=26 ret=-12.33% dd=-12.89% rej=4
+[37/48] r1 r17-rsi-pullback-off-none: 3s trades=34 ret=-4.44% dd=-9.08% rej=4
+[38/48] r1 r17-rsi-pullback-off-stop-tp: 3s trades=41 ret=-7.75% dd=-10.21% rej=22
+[39/48] r1 r17-rsi-pullback-off-stop: 4s trades=41 ret=-7.75% dd=-10.21% rej=22
+[40/48] r1 r17-rsi-pullback-on-none: 2s trades=18 ret=-3.16% dd=-7.74% rej=0
+[41/48] r1 r17-rsi-pullback-on-stop-tp: 3s trades=19 ret=-4.82% dd=-7.99% rej=0
+[42/48] r1 r17-rsi-pullback-on-stop: 3s trades=19 ret=-4.82% dd=-7.99% rej=0
+[43/48] r1 r17-vol-compression-off-none: 2s trades=25 ret=-18.52% dd=-18.75% rej=7
+[44/48] r1 r17-vol-compression-off-stop-tp: 3s trades=26 ret=-17.75% dd=-18.02% rej=7
+[45/48] r1 r17-vol-compression-off-stop: 3s trades=26 ret=-17.75% dd=-18.02% rej=7
+[46/48] r1 r17-vol-compression-on-none: 2s trades=22 ret=-11.40% dd=-11.48% rej=1
+[47/48] r1 r17-vol-compression-on-stop-tp: 2s trades=22 ret=-11.40% dd=-11.48% rej=1
+[48/48] r1 r17-vol-compression-on-stop: 2s trades=22 ret=-11.40% dd=-11.48% rej=1
+r1: 48 agents, 33 discoveries
+overall: 48 agents, 33 discoveries at alpha=0.1

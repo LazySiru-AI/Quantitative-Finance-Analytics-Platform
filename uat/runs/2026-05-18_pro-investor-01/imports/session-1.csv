@@ -1,0 +1,4 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+05/18/2026,05/18/2026,05/19/2026,XLE,"XLE paper fill, UAT persona pro-investor-01",Buy,25,$59.16,"($1,479.00)"
+05/18/2026,05/18/2026,05/19/2026,AAPL,"AAPL paper fill, UAT persona pro-investor-01",Buy,6,$300.39,"($1,802.34)"
+05/15/2026,05/15/2026,05/15/2026,,UAT opening deposit for persona pro-investor-01,ACH,,,"$10,000.00"

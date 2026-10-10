@@ -1,0 +1,130 @@
+{
+  "card": {
+    "agent_id": "r47-power-trim",
+    "display_name": "R47 basket / power / trim",
+    "discipline": "risk-managed",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 47 trim cell. Basket (power): Creator A's and Creator D's electricity-infrastructure-as-AI-bottleneck thesis: two regulated utilities (NEE, DUK), one merchant/renewable utility (SO), one uranium miner (CCJ) -- round 44's basket, reused verbatim (ROUND-44-PLAN.md section 2). Universe: NEE DUK SO CCJ. Arm: trim -- round 44's profit-trim, verbatim: entry/exit both close vs sma(200)*1.15, stepping a name to cash when it is 15% above its own 200-day mean and back in when it is not. Purpose ROTH: no ticker this round trades is claimed by any savings- or trading-purpose card in the live library (app.evolution.promotion._library_cards, all six tiers), because Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss whose replacement is bought inside an IRA. Ticker disjointness from the taxable book is NECESSARY, not sufficient, under IRC section 1091; nothing here is a section 1091-safety claim. The Roth benchmark is SPY, price-only, no dividends -- power and defense are not US large-cap-growth books, so a raw adjusted_excess-vs-SPY reading is not this round's decision quantity; the decision quantity is arm-minus-passive within basket. Every note in the persona corpus that produced the underlying hypotheses has published=null (PERSONA-HYPOTHESES.md), so bull-2024 and recent are IN-SAMPLE to the hypothesis and any positive result confined to them is hindsight, not a finding -- the fair test is the six windows ending by 2022-10 (gfc, chop-2011, chop-2015, q4-2018, covid, bear-2022), reported separately. Pre-registered 2026-09-09, before any card ran. Not investment advice; no influencer is endorsed. See strategy-program/ROUND-47-PLAN.md.",
+    "falsification": "Pre-registered decision rule (PROTOCOL.md section 7 floor, 21.2pp): an edge requires median(r47-power-trim) minus median(r47-power-passive) > 21.2pp AND BH q<0.10 over all 12 cells this round runs (denominator against `r47-control-passive`). A margin inside the floor is a null whichever side it lands on, and the pre-registered prediction is null on every arm. Nothing is promoted from this round regardless of outcome -- it is a pre-registered measurement study. Predicted to underperform its own passive control in bull-2024 (round 44's own finding for this basket); recent is pre-registered separately and not predicted in either direction, because round 44 found trim beat passive in recent for this basket.",
+    "universe": [
+      "NEE",
+      "DUK",
+      "SO",
+      "CCJ"
+    ],
+    "entry": "close < sma(200) * 1.15",
+    "exit": "close > sma(200) * 1.15",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 356,
+  "starting_equity": "10000.00",
+  "ending_equity": "6254.47",
+  "total_return": "-0.374553",
+  "max_drawdown": "-0.40942191150114915",
+  "sharpe": -0.9730162857754809,
+  "sortino": -0.9874185352602799,
+  "volatility": 0.2965567340294959,
+  "exposure": 1.0,
+  "capital_exposure": 0.9927363146067416,
+  "win_rate": 1.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "CCJ",
+      "entry_date": "2007-10-10",
+      "entry_price": "44.10",
+      "exit_date": "2007-10-29",
+      "exit_price": "50.96",
+      "quantity": "56",
+      "exit_reason": "rule",
+      "pnl": "384.07",
+      "return_pct": "0.1555191124068675089083252349",
+      "bars_held": 13
+    },
+    {
+      "symbol": "NEE",
+      "entry_date": "2007-10-09",
+      "entry_price": "15.68",
+      "exit_date": "2007-12-04",
+      "exit_price": "17.74",
+      "quantity": "160",
+      "exit_reason": "rule",
+      "pnl": "329.49",
+      "return_pct": "0.1313337053571428571428571429",
+      "bars_held": 39
+    },
+    {
+      "symbol": "DUK",
+      "entry_date": "2007-10-09",
+      "entry_price": "57.93",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "43",
+      "exit_reason": "open_at_end",
+      "pnl": "-967.50",
+      "return_pct": "-0.3883997928534438114966338685",
+      "bars_held": 355
+    },
+    {
+      "symbol": "SO",
+      "entry_date": "2007-10-09",
+      "entry_price": "36.73",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "68",
+      "exit_reason": "open_at_end",
+      "pnl": "-673.88",
+      "return_pct": "-0.2698066975224612033759869317",
+      "bars_held": 355
+    },
+    {
+      "symbol": "CCJ",
+      "entry_date": "2007-10-31",
+      "entry_price": "50.43",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "49",
+      "exit_reason": "open_at_end",
+      "pnl": "-1780.66",
+      "return_pct": "-0.7206028157842554035296450525",
+      "bars_held": 339
+    },
+    {
+      "symbol": "NEE",
+      "entry_date": "2007-12-07",
+      "entry_price": "17.80",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "141",
+      "exit_reason": "open_at_end",
+      "pnl": "-1037.06",
+      "return_pct": "-0.4132042393816240337875527931",
+      "bars_held": 313
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2512.81 exceeds $2502.57 of settled cash (total cash $2502.57; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.5622750642673521850899742931",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

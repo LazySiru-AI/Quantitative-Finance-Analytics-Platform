@@ -1,0 +1,4102 @@
+{
+  "card": {
+    "agent_id": "r21-vol-compression-off",
+    "display_name": "vol-compression / macro gate off",
+    "discipline": "volatility",
+    "purpose": "trading",
+    "thesis": "Round 21 cell. Everything except the macro conjunct is held identical across the gate-on and gate-off pair, so any difference is attributable to the gate alone. Gate: none. This is the first round in this programme whose cards can read a non-price field at all -- FRED series were collected and displayed but unreachable by any card until 2026-08-30. The honest prior, stated before the data: this finds nothing, on a base rate of ~50 concepts and near-zero survivors. It is worth running because the class was unreachable, not because it is likely to win. Nothing in this round is promotable. See strategy-program/ROUND-21-PLAN.md for the pre-registration, the circular-shift null and the five falsifiable predictions.",
+    "universe": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLY",
+      "XLP",
+      "XLU",
+      "XLB"
+    ],
+    "entry": "close > sma(200) and ema(10) > ema(30) and atr(10) / close < 0.02",
+    "exit": "atr(10) / close > 0.05 or close crosses_below sma(200)",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 6,
+    "position_pct": "0.15",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 753,
+  "starting_equity": "10000.00",
+  "ending_equity": "10163.12",
+  "total_return": "0.016312000000000104",
+  "max_drawdown": "-0.15463700000000002",
+  "sharpe": 0.10496427500504335,
+  "sortino": 0.09486515662481908,
+  "volatility": 0.0913723006203932,
+  "exposure": 0.9296148738379814,
+  "capital_exposure": 0.5614455272244356,
+  "win_rate": 0.23214285714285715,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLI",
+      "entry_date": "2022-01-03",
+      "entry_price": "106.08",
+      "exit_date": "2022-01-21",
+      "exit_price": "102.10",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-55.76",
+      "return_pct": "-0.03754578754578754578754578755",
+      "bars_held": 13
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2022-01-03",
+      "entry_price": "104.20",
+      "exit_date": "2022-01-21",
+      "exit_price": "92.58",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-162.72",
+      "return_pct": "-0.1115437345763641349054017000",
+      "bars_held": 13
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2022-01-03",
+      "entry_price": "87.09",
+      "exit_date": "2022-01-24",
+      "exit_price": "75.84",
+      "quantity": "17",
+      "exit_reason": "rule",
+      "pnl": "-191.29",
+      "return_pct": "-0.1292037310962965964890951213",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2022-01-03",
+      "entry_price": "140.36",
+      "exit_date": "2022-01-24",
+      "exit_price": "128.24",
+      "quantity": "10",
+      "exit_reason": "rule",
+      "pnl": "-121.24",
+      "return_pct": "-0.08637788543744656597321174124",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2022-01-03",
+      "entry_price": "35.79",
+      "exit_date": "2022-01-27",
+      "exit_price": "33.57",
+      "quantity": "41",
+      "exit_reason": "rule",
+      "pnl": "-91.07",
+      "return_pct": "-0.06206257368525068318579246145",
+      "bars_held": 17
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2022-01-03",
+      "entry_price": "76.70",
+      "exit_date": "2022-03-09",
+      "exit_price": "73.57",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-59.51",
+      "return_pct": "-0.04083579221848624167981884307",
+      "bars_held": 45
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2022-03-21",
+      "entry_price": "102.31",
+      "exit_date": "2022-03-24",
+      "exit_price": "102.77",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "6.40",
+      "return_pct": "0.004468212854489855760503790999",
+      "bars_held": 3
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2022-03-31",
+      "entry_price": "39.19",
+      "exit_date": "2022-04-01",
+      "exit_price": "38.56",
+      "quantity": "38",
+      "exit_reason": "rule",
+      "pnl": "-23.99",
+      "return_pct": "-0.01610910409476101583379218651",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2022-03-25",
+      "entry_price": "103.35",
+      "exit_date": "2022-04-04",
+      "exit_price": "101.93",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "-19.92",
+      "return_pct": "-0.01376736471076093717603151565",
+      "bars_held": 6
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2022-03-17",
+      "entry_price": "133.71",
+      "exit_date": "2022-04-27",
+      "exit_price": "132.11",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-17.64",
+      "return_pct": "-0.01199339139657739612866379750",
+      "bars_held": 28
+    },
+    {
+      "symbol": "XLB",
+      "entry_date": "2022-03-24",
+      "entry_price": "43.57",
+      "exit_date": "2022-04-27",
+      "exit_price": "42.45",
+      "quantity": "34",
+      "exit_reason": "rule",
+      "pnl": "-38.13",
+      "return_pct": "-0.02573951315665123060929673683",
+      "bars_held": 23
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2022-03-30",
+      "entry_price": "75.76",
+      "exit_date": "2022-05-19",
+      "exit_price": "71.39",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-83.07",
+      "return_pct": "-0.05770994275551603401322736620",
+      "bars_held": 35
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2022-03-07",
+      "entry_price": "35.54",
+      "exit_date": "2022-06-14",
+      "exit_price": "34.05",
+      "quantity": "42",
+      "exit_reason": "rule",
+      "pnl": "-62.63",
+      "return_pct": "-0.04195808880671007851649382319",
+      "bars_held": 69
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2022-07-29",
+      "entry_price": "132.24",
+      "exit_date": "2022-08-02",
+      "exit_price": "131.67",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-6.31",
+      "return_pct": "-0.004337843040202386844855084420",
+      "bars_held": 2
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2022-07-29",
+      "entry_price": "74.25",
+      "exit_date": "2022-08-10",
+      "exit_price": "75.16",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "17.25",
+      "return_pct": "0.01222753854332801701222753854",
+      "bars_held": 8
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2022-08-11",
+      "entry_price": "132.46",
+      "exit_date": "2022-08-12",
+      "exit_price": "132.18",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-3.12",
+      "return_pct": "-0.002141298230683705544040739571",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2022-08-16",
+      "entry_price": "75.47",
+      "exit_date": "2022-08-17",
+      "exit_price": "74.85",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-11.82",
+      "return_pct": "-0.008243080206146743564888104719",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2022-08-15",
+      "entry_price": "133.62",
+      "exit_date": "2022-08-23",
+      "exit_price": "130.53",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-34.03",
+      "return_pct": "-0.02315249486331659659005864664",
+      "bars_held": 6
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2022-08-15",
+      "entry_price": "99.20",
+      "exit_date": "2022-08-23",
+      "exit_price": "96.95",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "-33.79",
+      "return_pct": "-0.02270833333333333333333333333",
+      "bars_held": 6
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2022-08-11",
+      "entry_price": "75.40",
+      "exit_date": "2022-08-29",
+      "exit_price": "73.97",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-27.21",
+      "return_pct": "-0.01899343850342035460002792126",
+      "bars_held": 12
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2022-08-26",
+      "entry_price": "99.19",
+      "exit_date": "2022-08-29",
+      "exit_price": "94.86",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "-64.99",
+      "return_pct": "-0.04368047854286386396478139597",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2022-07-29",
+      "entry_price": "36.61",
+      "exit_date": "2022-09-27",
+      "exit_price": "35.23",
+      "quantity": "40",
+      "exit_reason": "rule",
+      "pnl": "-55.25",
+      "return_pct": "-0.03772876263316033870527178367",
+      "bars_held": 41
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2022-12-01",
+      "entry_price": "36.08",
+      "exit_date": "2022-12-05",
+      "exit_price": "35.23",
+      "quantity": "41",
+      "exit_reason": "rule",
+      "pnl": "-34.90",
+      "return_pct": "-0.02359255854199340219566275485",
+      "bars_held": 2
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2022-11-17",
+      "entry_price": "34.88",
+      "exit_date": "2022-12-16",
+      "exit_price": "33.58",
+      "quantity": "42",
+      "exit_reason": "rule",
+      "pnl": "-54.65",
+      "return_pct": "-0.03730477282656181738750546090",
+      "bars_held": 20
+    },
+    {
+      "symbol": "XLB",
+      "entry_date": "2022-11-28",
+      "entry_price": "40.91",
+      "exit_date": "2022-12-19",
+      "exit_price": "39.19",
+      "quantity": "36",
+      "exit_reason": "rule",
+      "pnl": "-61.97",
+      "return_pct": "-0.04207746000706157147125125614",
+      "bars_held": 15
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2022-12-16",
+      "entry_price": "35.60",
+      "exit_date": "2022-12-19",
+      "exit_price": "34.76",
+      "quantity": "41",
+      "exit_reason": "rule",
+      "pnl": "-34.49",
+      "return_pct": "-0.02362976157851466155110989312",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2022-12-28",
+      "entry_price": "35.77",
+      "exit_date": "2022-12-29",
+      "exit_price": "35.49",
+      "quantity": "42",
+      "exit_reason": "rule",
+      "pnl": "-11.81",
+      "return_pct": "-0.007861070064033441165115752759",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2023-01-10",
+      "entry_price": "35.66",
+      "exit_date": "2023-01-18",
+      "exit_price": "35.75",
+      "quantity": "41",
+      "exit_reason": "rule",
+      "pnl": "3.64",
+      "return_pct": "0.002489637908156983981505546968",
+      "bars_held": 5
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2022-11-17",
+      "entry_price": "73.30",
+      "exit_date": "2023-01-19",
+      "exit_price": "72.42",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "-17.64",
+      "return_pct": "-0.01203274215552523874488403820",
+      "bars_held": 41
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2022-10-27",
+      "entry_price": "131.77",
+      "exit_date": "2023-02-22",
+      "exit_price": "130.35",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-15.66",
+      "return_pct": "-0.01080394902964531863370749308",
+      "bars_held": 79
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2023-01-09",
+      "entry_price": "35.52",
+      "exit_date": "2023-03-10",
+      "exit_price": "33.13",
+      "quantity": "42",
+      "exit_reason": "rule",
+      "pnl": "-100.43",
+      "return_pct": "-0.06731955169455169455169455169",
+      "bars_held": 42
+    },
+    {
+      "symbol": "XLB",
+      "entry_date": "2023-01-19",
+      "entry_price": "40.60",
+      "exit_date": "2023-03-14",
+      "exit_price": "39.24",
+      "quantity": "36",
+      "exit_reason": "rule",
+      "pnl": "-49.01",
+      "return_pct": "-0.03353174603174603174603174603",
+      "bars_held": 37
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2023-04-05",
+      "entry_price": "73.69",
+      "exit_date": "2023-04-06",
+      "exit_price": "72.08",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "-32.24",
+      "return_pct": "-0.02187542407382277106798751527",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2023-04-10",
+      "entry_price": "34.72",
+      "exit_date": "2023-04-11",
+      "exit_price": "34.77",
+      "quantity": "42",
+      "exit_reason": "rule",
+      "pnl": "2.05",
+      "return_pct": "0.001405804257186745666008338819",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2023-04-12",
+      "entry_price": "34.95",
+      "exit_date": "2023-04-13",
+      "exit_price": "34.66",
+      "quantity": "43",
+      "exit_reason": "rule",
+      "pnl": "-12.52",
+      "return_pct": "-0.008330838074325448314868416675",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2023-04-14",
+      "entry_price": "73.23",
+      "exit_date": "2023-04-21",
+      "exit_price": "73.44",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "4.16",
+      "return_pct": "0.002840365970230779735081250853",
+      "bars_held": 5
+    },
+    {
+      "symbol": "XLE",
+      "entry_date": "2023-04-24",
+      "entry_price": "42.38",
+      "exit_date": "2023-05-03",
+      "exit_price": "39.72",
+      "quantity": "35",
+      "exit_reason": "rule",
+      "pnl": "-93.14",
+      "return_pct": "-0.06279242230162475561248567384",
+      "bars_held": 7
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2023-04-05",
+      "entry_price": "131.73",
+      "exit_date": "2023-05-17",
+      "exit_price": "131.01",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-7.96",
+      "return_pct": "-0.005493330020772516787092054685",
+      "bars_held": 29
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2023-03-29",
+      "entry_price": "73.94",
+      "exit_date": "2023-05-26",
+      "exit_price": "73.07",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "-17.44",
+      "return_pct": "-0.01179334595618068704354882337",
+      "bars_held": 41
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2022-11-16",
+      "entry_price": "99.53",
+      "exit_date": "2023-06-01",
+      "exit_price": "97.03",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "-37.54",
+      "return_pct": "-0.02514484744968016343481027496",
+      "bars_held": 134
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2023-06-16",
+      "entry_price": "33.82",
+      "exit_date": "2023-06-20",
+      "exit_price": "33.19",
+      "quantity": "44",
+      "exit_reason": "rule",
+      "pnl": "-27.77",
+      "return_pct": "-0.01866163109510241384871781087",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2023-06-21",
+      "entry_price": "131.27",
+      "exit_date": "2023-06-28",
+      "exit_price": "130.85",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-4.66",
+      "return_pct": "-0.003227213861783832074073561085",
+      "bars_held": 5
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2023-06-30",
+      "entry_price": "131.98",
+      "exit_date": "2023-07-07",
+      "exit_price": "129.74",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-24.68",
+      "return_pct": "-0.01699982090950419485045943600",
+      "bars_held": 4
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2023-07-11",
+      "entry_price": "33.88",
+      "exit_date": "2023-08-18",
+      "exit_price": "33.73",
+      "quantity": "44",
+      "exit_reason": "rule",
+      "pnl": "-6.65",
+      "return_pct": "-0.004460931630353117956423741548",
+      "bars_held": 28
+    },
+    {
+      "symbol": "XLB",
+      "entry_date": "2023-06-12",
+      "entry_price": "39.56",
+      "exit_date": "2023-08-25",
+      "exit_price": "40.44",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "32.51",
+      "return_pct": "0.02221053206897494056240264531",
+      "bars_held": 52
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2023-08-28",
+      "entry_price": "133.95",
+      "exit_date": "2023-09-06",
+      "exit_price": "131.96",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "-21.93",
+      "return_pct": "-0.01488343683192507380637279853",
+      "bars_held": 6
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2023-06-07",
+      "entry_price": "100.98",
+      "exit_date": "2023-09-22",
+      "exit_price": "101.90",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "12.84",
+      "return_pct": "0.009082420847126729479670656141",
+      "bars_held": 74
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2023-09-13",
+      "entry_price": "34.87",
+      "exit_date": "2023-09-22",
+      "exit_price": "33.95",
+      "quantity": "43",
+      "exit_reason": "rule",
+      "pnl": "-39.61",
+      "return_pct": "-0.02641705737590118780053487705",
+      "bars_held": 7
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2023-05-08",
+      "entry_price": "73.86",
+      "exit_date": "2023-10-20",
+      "exit_price": "76.82",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "59.15",
+      "return_pct": "0.04004197129704847007852694286",
+      "bars_held": 115
+    },
+    {
+      "symbol": "XLE",
+      "entry_date": "2023-08-21",
+      "entry_price": "44.61",
+      "exit_date": "2023-10-30",
+      "exit_price": "42.44",
+      "quantity": "33",
+      "exit_reason": "rule",
+      "pnl": "-71.65",
+      "return_pct": "-0.04867097335153824730152907692",
+      "bars_held": 49
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2023-11-13",
+      "entry_price": "80.39",
+      "exit_date": "2024-04-19",
+      "exit_price": "85.59",
+      "quantity": "18",
+      "exit_reason": "rule",
+      "pnl": "93.55",
+      "return_pct": "0.06465010849884590399579826125",
+      "bars_held": 108
+    },
+    {
+      "symbol": "XLE",
+      "entry_date": "2024-04-22",
+      "entry_price": "47.26",
+      "exit_date": "2024-06-17",
+      "exit_price": "43.94",
+      "quantity": "31",
+      "exit_reason": "rule",
+      "pnl": "-102.96",
+      "return_pct": "-0.07027698524292520442848757047",
+      "bars_held": 39
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2023-02-01",
+      "entry_price": "67.96",
+      "exit_date": "2024-08-06",
+      "exit_price": "100.16",
+      "quantity": "22",
+      "exit_reason": "rule",
+      "pnl": "708.34",
+      "return_pct": "0.4737679918668735619883353845",
+      "bars_held": 379
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2024-06-18",
+      "entry_price": "145.96",
+      "exit_date": "2024-11-01",
+      "exit_price": "147.37",
+      "quantity": "10",
+      "exit_reason": "rule",
+      "pnl": "14.06",
+      "return_pct": "0.009632776103041929295697451357",
+      "bars_held": 95
+    },
+    {
+      "symbol": "XLB",
+      "entry_date": "2023-11-20",
+      "entry_price": "40.10",
+      "exit_date": "2024-12-11",
+      "exit_price": "45.60",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "203.45",
+      "return_pct": "0.1371234076969737817618116870",
+      "bars_held": 266
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2024-08-07",
+      "entry_price": "78.61",
+      "exit_date": "2024-12-24",
+      "exit_price": "78.81",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "3.76",
+      "return_pct": "0.002517424460527989608928822501",
+      "bars_held": 97
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2023-11-13",
+      "entry_price": "33.81",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "44",
+      "exit_reason": "open_at_end",
+      "pnl": "638.88",
+      "return_pct": "0.4294587400177462289263531500",
+      "bars_held": 284
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2023-11-15",
+      "entry_price": "105.04",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "14",
+      "exit_reason": "open_at_end",
+      "pnl": "374.08",
+      "return_pct": "0.2543792840822543792840822544",
+      "bars_held": 282
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2024-08-08",
+      "entry_price": "36.52",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "40",
+      "exit_reason": "open_at_end",
+      "pnl": "53.00",
+      "return_pct": "0.03628148959474260679079956188",
+      "bars_held": 100
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2024-11-04",
+      "entry_price": "112.12",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "13",
+      "exit_reason": "open_at_end",
+      "pnl": "53.82",
+      "return_pct": "0.03692472351052443810203353550",
+      "bars_held": 39
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2024-12-12",
+      "entry_price": "118.26",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "12",
+      "exit_reason": "open_at_end",
+      "pnl": "-73.02",
+      "return_pct": "-0.05145442245898866903433113479",
+      "bars_held": 12
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLF",
+      "reason": "$1476.68 exceeds $1247.26 of settled cash (total cash $3972.70; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1490.58 exceeds $1479.12 of settled cash (total cash $1479.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1506.75 exceeds $1479.12 of settled cash (total cash $1479.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1495.68 exceeds $1479.12 of settled cash (total cash $1479.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1482.97 exceeds $1479.12 of settled cash (total cash $1479.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1486.80 exceeds $1300.02 of settled cash (total cash $1300.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1497.60 exceeds $1300.02 of settled cash (total cash $1300.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1491.12 exceeds $1300.02 of settled cash (total cash $1300.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1469.65 exceeds $1300.02 of settled cash (total cash $1300.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1507.68 exceeds $1300.02 of settled cash (total cash $2765.72; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1487.77 exceeds $1076.86 of settled cash (total cash $2537.15; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1502.94 exceeds $1034.30 of settled cash (total cash $1034.30; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1494.43 exceeds $1034.30 of settled cash (total cash $2524.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1464.48 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1498.87 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1471.68 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1458.60 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1462.32 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1446.36 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1457.64 exceeds $1060.03 of settled cash (total cash $1060.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1502.20 exceeds $1060.03 of settled cash (total cash $2528.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1460.52 exceeds $1060.03 of settled cash (total cash $2528.79; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1476.60 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1496.28 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1464.60 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1464.54 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1447.92 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1457.40 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1465.20 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1497.58 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1468.60 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1472.97 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1475.80 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1492.95 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1476.30 exceeds $1045.49 of settled cash (total cash $1045.49; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1477.78 exceeds $1045.49 of settled cash (total cash $2435.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1435.28 exceeds $950.77 of settled cash (total cash $2411.08; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLF",
+      "reason": "$1484.12 exceeds $954.64 of settled cash (total cash $954.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLF",
+      "reason": "$1483.68 exceeds $954.64 of settled cash (total cash $954.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLF",
+      "reason": "$1477.08 exceeds $954.64 of settled cash (total cash $954.64; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1485.80 exceeds $954.64 of settled cash (total cash $2381.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1460.69 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1470.04 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1496.80 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1485.88 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1435.07 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1499.41 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1437.35 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1474.90 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1499.05 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1486.10 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1441.53 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1467.16 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1452.48 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1488.30 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1439.06 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1467.59 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1473.22 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1496.66 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1447.23 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1465.44 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1497.65 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1487.97 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1444.38 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1472.88 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1485.22 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1444.76 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1482.06 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1473.01 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1438.11 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1470.84 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1469.05 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1426.52 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1465.40 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1464.87 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1436.59 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1486.82 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1462.78 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1435.26 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1486.82 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1461.57 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1496.60 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1456.22 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1483.35 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1429.75 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1501.78 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1484.01 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1496.00 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1463.88 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1488.52 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1502.20 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1460.91 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1483.46 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1495.00 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1480.05 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1493.36 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1498.80 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1467.51 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1493.91 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1485.20 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1492.60 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1489.73 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1498.72 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1475.54 exceeds $891.02 of settled cash (total cash $891.02; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1487.16 exceeds $891.02 of settled cash (total cash $2375.09; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1466.19 exceeds $891.02 of settled cash (total cash $2375.09; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1469.05 exceeds $902.96 of settled cash (total cash $902.96; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1468.94 exceeds $902.96 of settled cash (total cash $902.96; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1474.77 exceeds $902.96 of settled cash (total cash $902.96; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1467.51 exceeds $902.96 of settled cash (total cash $902.96; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLB",
+      "reason": "$1465.45 exceeds $925.74 of settled cash (total cash $925.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1440.12 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1443.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1447.05 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1450.68 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1454.97 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1453.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1452.11 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1461.35 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1465.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1463.11 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1501.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1494.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1482.25 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1483.04 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1475.43 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1474.22 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1481.37 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1469.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1482.25 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1484.78 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1500.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1487.64 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1486.45 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1496.77 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1499.41 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1361.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1486.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1393.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1460.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1475.26 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1390.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1485.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1389.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1457.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1392.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1481.66 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1402.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1446.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1488.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1404.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1454.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1483.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1408.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1450.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1478.44 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1405.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1457.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1402.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1457.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1395.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1382.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1395.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1396.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1399.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1404.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1449.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1382.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1395.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1394.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1457.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1405.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1459.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1417.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1469.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1406.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1459.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1422.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1425.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1436.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1475.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1444.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1443.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1474.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1484.35 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1441.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1472.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1438.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1464.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1435.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1472.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1434.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1456.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1442.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1460.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1505.35 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1454.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1462.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1499.75 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1458.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1476.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1491.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1447.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1459.96 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1457.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1480.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1457.58 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1477.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1492.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1460.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1478.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1496.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1468.46 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1464.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1489.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1462.68 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1461.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1489.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1460.98 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1460.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1496.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1475.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1452.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1485.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1481.38 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1459.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1464.04 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1462.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1497.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1489.54 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1453.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1501.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1483.76 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1464.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1437.92 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1497.89 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1492.26 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1466.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1430.51 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1499.30 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1500.08 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1461.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1432.03 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1496.95 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1470.48 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1465.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1439.82 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1471.54 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1483.68 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1476.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1443.81 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1503.53 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1497.54 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1466.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1446.66 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1466.94 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1460.16 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1450.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1429.56 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1485.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1459.84 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1455.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1423.67 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1481.91 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1458.88 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1450.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1436.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1490.37 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1467.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1455.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1441.91 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1497.42 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1476.16 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1458.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1444.95 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1473.84 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1482.88 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1459.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1444.95 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1508.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1484.16 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1457.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1437.92 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1473.84 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1494.40 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1456.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1435.64 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1477.98 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1478.08 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1470.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1441.91 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1502.59 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1504.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1479.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1454.07 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1500.06 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1468.47 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1477.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1451.41 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1478.25 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1481.18 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1445.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1440.01 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1465.65 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1501.02 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1445.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1432.03 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1471.05 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1459.50 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1450.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1498.00 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1509.72 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1462.20 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1483.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1485.34 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1472.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1499.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1468.80 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1479.60 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1458.90 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1454.85 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1472.10 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1500.06 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1475.70 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1491.32 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1497.92 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1487.64 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1474.05 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1490.84 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1460.72 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1464.75 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1479.82 exceeds $812.12 of settled cash (total cash $812.12; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1457.93 exceeds $812.12 of settled cash (total cash $2352.69; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1486.72 exceeds $812.12 of settled cash (total cash $2352.69; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1473.75 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1485.90 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1480.05 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1446.47 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1465.64 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1434.88 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1473.12 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1437.35 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1500.30 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1440.01 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1468.72 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1431.08 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1468.72 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1430.89 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1492.04 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1438.68 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1505.68 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1445.71 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1476.19 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1449.32 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1485.22 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1458.82 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1492.53 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1424.16 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1455.97 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1475.46 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1434.40 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1466.99 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1507.38 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1439.50 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1431.68 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1478.39 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1502.34 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1437.20 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1421.28 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1472.69 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1504.02 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1447.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1436.48 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1464.71 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1480.92 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1459.60 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1431.52 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1482.76 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1488.30 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1460.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1424.32 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1488.65 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1480.51 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1462.30 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1426.88 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1486.37 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1487.07 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1463.30 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1418.40 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1480.48 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1480.51 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1459.30 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1425.28 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1475.16 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1486.25 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1463.40 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1417.76 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1474.78 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1474.77 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1451.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1466.99 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1491.00 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1441.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1460.91 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1467.80 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1415.20 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1446.47 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1452.22 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1410.60 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1447.99 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1486.38 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1421.50 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1446.28 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1470.67 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1436.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1465.47 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1489.12 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1446.50 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1469.84 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1470.67 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1453.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1480.48 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1472.31 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1457.50 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1478.20 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1462.06 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1462.00 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1483.33 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1472.94 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1462.70 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1478.58 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1469.16 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1469.30 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1425.92 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1473.07 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1475.88 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1470.60 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1435.20 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1477.25 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1498.14 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1455.80 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1447.36 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1457.68 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1472.10 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1457.00 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1436.48 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1455.97 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1464.54 exceeds $887.63 of settled cash (total cash $887.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLV",
+      "reason": "$1453.30 exceeds $887.63 of settled cash (total cash $2249.73; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1425.44 exceeds $887.63 of settled cash (total cash $2249.73; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1457.30 exceeds $887.63 of settled cash (total cash $2249.73; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1461.60 exceeds $887.63 of settled cash (total cash $2249.73; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1451.20 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1474.40 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1475.76 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1446.08 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1475.92 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1493.39 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1456.80 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1478.39 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1461.92 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1468.89 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1453.76 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1475.54 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1442.88 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1461.29 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1470.72 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1468.13 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1468.96 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1462.05 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1465.60 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1463.38 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1472.96 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1498.56 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1416.00 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1418.70 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1419.60 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1429.05 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1443.30 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1469.27 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1416.45 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1473.64 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1444.95 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1471.36 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1480.50 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1443.60 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1464.33 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1504.57 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1480.96 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1450.20 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1480.10 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1470.84 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1490.56 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1439.55 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1491.31 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1471.26 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1492.48 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1416.60 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1493.21 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1474.62 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1470.72 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1419.45 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1487.89 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1481.34 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1465.28 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1430.25 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1486.94 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1483.02 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1495.23 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1387.05 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1474.78 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1487.22 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1492.26 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1450.88 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1483.90 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1500.24 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1467.20 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1456.16 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1482.95 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1492.68 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1475.84 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1471.52 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1489.22 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1501.08 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1463.04 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1489.44 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1474.78 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1464.52 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1505.92 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1495.52 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1482.57 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1494.45 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1488.64 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1501.28 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1482.76 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1495.68 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLE",
+      "reason": "$1480.71 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1504.99 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1501.60 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1424.88 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1492.80 exceeds $790.13 of settled cash (total cash $790.13; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1484.28 exceeds $790.13 of settled cash (total cash $2993.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1487.89 exceeds $790.13 of settled cash (total cash $2993.59; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1506.75 exceeds $1500.00 of settled cash (total cash $1500.00; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLK",
+      "reason": "$1446.90 exceeds $39.20 of settled cash (total cash $1512.86; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1504.65 exceeds $39.20 of settled cash (total cash $1512.86; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLY",
+      "reason": "$1406.88 exceeds $55.30 of settled cash (total cash $1742.45; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "0.2304849884526558891454965358",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,20 @@
+{
+  "round_id": "r3-2026-08",
+  "title": "Round 3 - does a wider universe change the result?",
+  "focus": "The symbol store grew from 173 to 633 symbols, with 380 reaching back to the GFC against 86 before. Does more choice produce a better field, and does a controlled re-cut of the two base strategies onto the wider universe change their results?",
+  "headline": "No, not measurably - the controlled arm found no detectable effect from universe breadth, and the round's one genuinely useful new card used no symbol the expansion had actually added.",
+  "outcome": "A controlled arm (B-wide and C-wide, byte-identical to B-momentum and C-trend except universe) and a six-card open arm were run on the same eight windows as round 2. Every controlled-arm margin sat inside the programme's measured ordering noise floor, so breadth produced no detectable effect.\n\nThe open arm's centre of mass was essentially unchanged from round 2, and its best card was materially worse than round 2's best.\n\nThe GFC's raw excess figures were shown to be an artifact twice over: one card posting a large raw excess on a single trade at negligible capital exposure had simply declined to attend, and two cards whose GFC-adjusted excess looked strong did so partly because a universe drawn from today's S&P 500 cannot contain the banks that actually collapsed in 2008 - a clean demonstration of survivorship bias, made sharper because one analyst had pre-registered the GFC as that card's predicted worst window before it came back as its best.\n\nThe round's one genuinely useful new card, c14-riskmanaged-wide, used no symbol added by the universe expansion at all - every one of its four names (TLT, IEF, GLD, LQD) was already in the smaller store. It reached the Pareto frontier on best worst-window and best hit rate and was promoted to candidates pending a second round on new windows.\n\nThe round's headline finding was a combined-book result: equal thirds of B-momentum, C-trend and c14-riskmanaged-wide produced a much shallower worst window and a strong median, because C-trend and c14 measured as effectively uncorrelated on this matrix - presented as the strongest result the programme had produced to that point, with the disclosed caveat that two-thirds of the crisis-window excess was non-participation rather than alpha.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "The combined-book finding (B-momentum + C-trend + c14-riskmanaged-wide) rests entirely on round 3's own bear-weighted window mix and needs testing on windows it has never seen before it can be trusted.",
+    "c14-riskmanaged-wide needs confirmation on new windows before being relied on as a standalone diversifier - it is currently only promoted to candidates pending that test.",
+    "The GFC window in the wide universe is contaminated by survivorship, since a mechanically current-index-derived universe cannot contain the 2008 failures; any GFC result on the wide universe should be read with that caveat.",
+    "Universe breadth alone (173 to 633 symbols) produced no measurable improvement in the controlled arm, so future rounds should not expect breadth by itself to change results."
+  ],
+  "sources": [
+    "data/rounds/r3-2026-08/BRIEF.md",
+    "data/rounds/r3-2026-08/REPORT.md",
+    "data/rounds/PROGRAMME-REPORT.md"
+  ]
+}

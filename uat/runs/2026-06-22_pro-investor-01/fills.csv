@@ -1,0 +1,10 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+06/26/2026,06/26/2026,06/29/2026,TLT,"TLT paper fill, UAT persona pro-investor-01",Sell,13,$86.97,"$1,130.61"
+06/26/2026,06/26/2026,06/29/2026,,Regulatory fees on TLT sale (s5-1),FEE,,,($0.03)
+06/26/2026,06/26/2026,06/29/2026,TLT,"TLT paper fill, UAT persona pro-investor-01",Buy,6,$87.05,($522.30)
+06/25/2026,06/25/2026,06/26/2026,IWM,"IWM paper fill, UAT persona pro-investor-01",Sell,6,$299.37,"$1,796.22"
+06/25/2026,06/25/2026,06/26/2026,,Regulatory fees on IWM sale (s4-1),FEE,,,($0.05)
+06/25/2026,06/25/2026,06/26/2026,TLT,"TLT paper fill, UAT persona pro-investor-01",Buy,13,$87.62,"($1,139.06)"
+06/24/2026,06/24/2026,06/25/2026,XLV,"XLV paper fill, UAT persona pro-investor-01",Buy,9,$153.21,"($1,378.89)"
+06/22/2026,06/22/2026,06/23/2026,IWM,"IWM paper fill, UAT persona pro-investor-01",Buy,6,$297.28,"($1,783.68)"
+06/18/2026,06/18/2026,06/18/2026,,UAT opening deposit for persona pro-investor-01,ACH,,,"$10,000.00"

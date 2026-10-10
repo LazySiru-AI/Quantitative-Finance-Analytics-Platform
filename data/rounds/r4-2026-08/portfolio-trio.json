@@ -1,0 +1,210 @@
+{
+  "agent_ids": [
+    "B-momentum",
+    "C-trend",
+    "c14-riskmanaged-wide"
+  ],
+  "n_windows": 6,
+  "windows": [
+    {
+      "window_tag": "banks-2023",
+      "members": [
+        {
+          "agent_id": "B-momentum",
+          "present": true,
+          "corrected_return": "0.06643",
+          "capital_exposure": "0.1442785"
+        },
+        {
+          "agent_id": "C-trend",
+          "present": true,
+          "corrected_return": "0.071236",
+          "capital_exposure": "0.2717903125"
+        },
+        {
+          "agent_id": "c14-riskmanaged-wide",
+          "present": true,
+          "corrected_return": "-0.012537",
+          "capital_exposure": "0.478456078125"
+        }
+      ],
+      "benchmark_return": "0.05675122025239624693356263119",
+      "combined_return": "0.04170966666666666666666666667",
+      "combined_capital_exposure": "0.2981749635416666666666666667",
+      "excess": "-0.01504155358572958026689596452",
+      "adjusted_excess": "0.02478787363696332077253146523",
+      "benchmark_disagreement": []
+    },
+    {
+      "window_tag": "inflation-2021",
+      "members": [
+        {
+          "agent_id": "B-momentum",
+          "present": true,
+          "corrected_return": "0.252022",
+          "capital_exposure": "0.5397346666666667"
+        },
+        {
+          "agent_id": "C-trend",
+          "present": true,
+          "corrected_return": "0.146733",
+          "capital_exposure": "0.48864735317460317"
+        },
+        {
+          "agent_id": "c14-riskmanaged-wide",
+          "present": true,
+          "corrected_return": "-0.020448",
+          "capital_exposure": "0.08659131349206349"
+        }
+      ],
+      "benchmark_return": "0.2655138418907036849537715489",
+      "combined_return": "0.1261023333333333333333333333",
+      "combined_capital_exposure": "0.3716577777777777866666666667",
+      "excess": "-0.1394115085573703516204382156",
+      "adjusted_excess": "0.02742204888699415654259145767",
+      "benchmark_disagreement": []
+    },
+    {
+      "window_tag": "oil-2014",
+      "members": [
+        {
+          "agent_id": "B-momentum",
+          "present": true,
+          "corrected_return": "0.033882",
+          "capital_exposure": "0.47450842944785276"
+        },
+        {
+          "agent_id": "C-trend",
+          "present": true,
+          "corrected_return": "0.014842",
+          "capital_exposure": "0.4716521717791411"
+        },
+        {
+          "agent_id": "c14-riskmanaged-wide",
+          "present": true,
+          "corrected_return": "0.019848",
+          "capital_exposure": "0.4764178036809816"
+        }
+      ],
+      "benchmark_return": "0.05560373412232821506912207315",
+      "combined_return": "0.02285733333333333333333333333",
+      "combined_capital_exposure": "0.47419280163599182",
+      "excess": "-0.03274640078899488173578873982",
+      "adjusted_excess": "-0.00350955713155627967487969529",
+      "benchmark_disagreement": []
+    },
+    {
+      "window_tag": "recovery-2009",
+      "members": [
+        {
+          "agent_id": "B-momentum",
+          "present": false,
+          "corrected_return": null,
+          "capital_exposure": null
+        },
+        {
+          "agent_id": "C-trend",
+          "present": false,
+          "corrected_return": null,
+          "capital_exposure": null
+        },
+        {
+          "agent_id": "c14-riskmanaged-wide",
+          "present": true,
+          "corrected_return": "0.012922",
+          "capital_exposure": "0.2800948661971831"
+        }
+      ],
+      "benchmark_return": "0.7524097252193928931089051935",
+      "combined_return": "0.004307333333333333333333333333",
+      "combined_capital_exposure": "0.09336495539906103333333333333",
+      "excess": "-0.7481023918860595597755718602",
+      "adjusted_excess": "-0.06594136710359505169519973145",
+      "benchmark_disagreement": []
+    },
+    {
+      "window_tag": "taper-2013",
+      "members": [
+        {
+          "agent_id": "B-momentum",
+          "present": true,
+          "corrected_return": "0.10829",
+          "capital_exposure": "0.21445402702702704"
+        },
+        {
+          "agent_id": "C-trend",
+          "present": true,
+          "corrected_return": "0.123198",
+          "capital_exposure": "0.34051277027027027"
+        },
+        {
+          "agent_id": "c14-riskmanaged-wide",
+          "present": true,
+          "corrected_return": "0",
+          "capital_exposure": "0.0"
+        }
+      ],
+      "benchmark_return": "-0.008246683399067766224453209035",
+      "combined_return": "0.07716266666666666666666666667",
+      "combined_capital_exposure": "0.1849889324324324366666666667",
+      "excess": "0.08540935006573443289111987570",
+      "adjusted_excess": "0.07868821182476847593283136130",
+      "benchmark_disagreement": []
+    },
+    {
+      "window_tag": "volmageddon-2018",
+      "members": [
+        {
+          "agent_id": "B-momentum",
+          "present": true,
+          "corrected_return": "-0.011214",
+          "capital_exposure": "0.12281111111111111"
+        },
+        {
+          "agent_id": "C-trend",
+          "present": true,
+          "corrected_return": "-0.044164",
+          "capital_exposure": "0.2683370666666667"
+        },
+        {
+          "agent_id": "c14-riskmanaged-wide",
+          "present": true,
+          "corrected_return": "-0.001275",
+          "capital_exposure": "0.021351666666666668"
+        }
+      ],
+      "benchmark_return": "-0.09421284080914687774846086192",
+      "combined_return": "-0.01888433333333333333333333333",
+      "combined_capital_exposure": "0.1374999481481481593333333333",
+      "excess": "0.07532850747581354441512752859",
+      "adjusted_excess": "-0.00593007260718590076711814717",
+      "benchmark_disagreement": []
+    }
+  ],
+  "median_excess": "-0.02389397718736223100134235217",
+  "worst_excess": "-0.7481023918860595597755718602",
+  "hit_rate_excess": 0.3333333333333333,
+  "median_adjusted_excess": "0.01063915825270352054882588497",
+  "worst_adjusted_excess": "-0.06594136710359505169519973145",
+  "hit_rate_adjusted_excess": 0.5,
+  "correlation": [
+    {
+      "a": "B-momentum",
+      "b": "C-trend",
+      "n": 5,
+      "rho": 0.8891360363853679
+    },
+    {
+      "a": "B-momentum",
+      "b": "c14-riskmanaged-wide",
+      "n": 5,
+      "rho": -0.6523767612734857
+    },
+    {
+      "a": "C-trend",
+      "b": "c14-riskmanaged-wide",
+      "n": 5,
+      "rho": -0.5540039526320905
+    }
+  ]
+}

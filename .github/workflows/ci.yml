@@ -1,0 +1,150 @@
+name: CI
+
+# Windows runner, deliberately: every concurrency bug this project has recorded (DuckDB locking,
+# sidecar writers, cache races -- 90 races measured in 240 attempts, see docs/reports/) is
+# Windows-specific. A Linux runner would not exercise the file-locking and path-separator behaviour
+# those bugs live in, so it would not have caught them.
+#
+# Working directories are set explicitly on every step (via `working-directory:`), even where it
+# duplicates the default, because both pytest and mypy silently discover no config -- and therefore
+# misbehave -- when run from the wrong directory. See pytest.ini and the note in backend/pyproject.toml
+# for pytest; mypy is documented under "Development" in README.md.
+#
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  backend:
+    name: backend (pytest, ruff, mypy, pre-commit)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: backend/requirements-dev.lock.txt
+
+      # A real .venv, not the setup-python interpreter directly: .pre-commit-config.yaml's local
+      # ruff-check hook has a hard-coded entry of `./.venv/Scripts/python.exe` (the `./` prefix is
+      # load-bearing on Windows -- see the comment in that file), so pre-commit only works in CI if
+      # `.venv` exists at the repo root in exactly the shape local development already uses.
+      # Building the same venv here also means every command below is the literal command a
+      # contributor runs locally, not a CI-only variant.
+      - name: Create virtualenv
+        working-directory: .
+        run: python -m venv .venv
+
+      # Installed as two separate `pip install` calls on purpose: the lockfile is hash-pinned
+      # (`pip-compile --generate-hashes`), and pip requires *every* requirement in a hash-checked
+      # install to carry a hash. The local `app` package is installed editable from a path, which
+      # has no meaningful hash, so it cannot be mixed into the same invocation as the locked file.
+      - name: Install backend dependencies (hash-pinned lockfile)
+        working-directory: backend
+        run: |
+          ../.venv/Scripts/python.exe -m pip install --upgrade pip
+          ../.venv/Scripts/python.exe -m pip install -r requirements-dev.lock.txt
+
+      - name: Install local backend package (editable, no-deps)
+        working-directory: backend
+        run: ../.venv/Scripts/python.exe -m pip install -e . --no-deps
+
+      # Bare invocation, from the repository root, is the point of pytest.ini: this is what a
+      # contributor actually runs. Do NOT add -q here: pytest.ini deliberately does not carry it in
+      # addopts either (see the comment there), because a quiet flag in addopts cannot be turned off
+      # from the command line and stacks -- a command-line -q on top of one already in addopts
+      # becomes -qq, pytest's second quiet level, which suppresses the final "N passed" summary
+      # line, the only real evidence a run happened at all.
+      # Auth off for the suite: endpoint tests build a bare TestClient with no session, and the
+      # login gate is covered by its own tests (tests/test_auth*.py), which turn it back on.
+      - name: pytest
+        working-directory: .
+        env:
+          INVDASH_AUTH_ENABLED: "0"
+        run: ./.venv/Scripts/python.exe -m pytest
+
+      - name: pip-audit (known-vulnerable dependencies)
+        working-directory: backend
+        run: |
+          ../.venv/Scripts/python.exe -m pip install pip-audit
+          ../.venv/Scripts/python.exe -m pip_audit -r requirements.lock.txt
+
+      # ruff.toml lives at the repository root deliberately (see the comment at its top) so one
+      # config covers backend/, tests/ and strategy-program/ -- run it from the root so that config
+      # resolves.
+      #
+      # strategy-program/ joined this gate on 2026-08-30. It holds 41 Python research tools and was
+      # covered by neither gate -- not this one, and not pytest (`pytest.ini` sets
+      # `testpaths = tests`) -- so 52 lint errors accumulated there unnoticed, including one mistake
+      # repeated across seven files. Those tools author and score the rounds whose results the
+      # programme's conclusions rest on, so "not application code" is not a reason to leave them
+      # unchecked.
+      - name: ruff
+        working-directory: .
+        run: ./.venv/Scripts/python.exe -m ruff check backend tests strategy-program
+
+      # mypy does not walk up parent directories looking for config the way ruff and pytest do; it
+      # only checks the current directory. backend/pyproject.toml's [tool.mypy] (strict = true, plus
+      # the pandas/duckdb ignore_missing_imports overrides) is only discovered when mypy is invoked
+      # with cwd == backend/. Running it from the repository root reports phantom import-untyped
+      # errors for pandas and duckdb -- confirmed locally, not a hypothetical. See also the
+      # "Development" section of README.md.
+      - name: mypy
+        working-directory: backend
+        run: ../.venv/Scripts/python.exe -m mypy app
+
+      # Runs the same hooks a contributor's local `pre-commit install` would run, so the guarantee
+      # (secret scanning via detect-secrets, plus the ruff-check hook) does not depend on every
+      # clone having installed the hook. detect-secrets' hook environment is managed by pre-commit
+      # itself (a separate, isolated install, not the .venv above) and requires network access to
+      # fetch https://github.com/Yelp/detect-secrets at the pinned `rev: v1.5.0` -- unverified here,
+      # since this sandbox has no network egress and the repo has no remote to actually run this on.
+      - name: Install pre-commit
+        working-directory: .
+        run: .venv/Scripts/python.exe -m pip install pre-commit==4.0.1
+
+      - name: pre-commit (detect-secrets + ruff-check)
+        working-directory: .
+        run: .venv/Scripts/python.exe -m pre_commit run --all-files
+
+  frontend:
+    name: frontend (tsc, build)
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: npm ci
+        run: npm ci
+
+      - name: tsc --noEmit
+        run: npm run typecheck
+
+      # Runs before the build, deliberately: a failing assertion about what the UI renders is a more
+      # useful failure than a bundle that compiled. Until 2026-08-14 there were no frontend tests at
+      # all and `tsc` was the only guard -- which is how a union that had drifted from its backend
+      # enum compiled clean and blanked a headline at runtime (docs/reports/defects-1.md).
+      - name: vitest
+        run: npm test
+
+      - name: vite build
+        run: npm run build
+
+      - name: npm audit (production dependencies)
+        run: npm audit --omit=dev --audit-level=high

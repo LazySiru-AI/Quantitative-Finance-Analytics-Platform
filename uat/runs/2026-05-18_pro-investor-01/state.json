@@ -1,0 +1,51 @@
+{
+  "cash": "4590.64",
+  "positions": {
+    "AAPL": "6",
+    "QQQ": "3",
+    "XLE": "25"
+  },
+  "unsettled": [],
+  "fills": [
+    {
+      "order_id": "s1-buy-xle",
+      "session": 1,
+      "trade_date": "2026-05-18",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "25",
+      "price": "59.16",
+      "reference_open": "59.13",
+      "gross": "1479.00",
+      "fees": "0.00",
+      "cash_delta": "-1479.00"
+    },
+    {
+      "order_id": "s1-buy-aapl",
+      "session": 1,
+      "trade_date": "2026-05-18",
+      "symbol": "AAPL",
+      "side": "buy",
+      "quantity": "6",
+      "price": "300.39",
+      "reference_open": "300.24",
+      "gross": "1802.34",
+      "fees": "0.00",
+      "cash_delta": "-1802.34"
+    },
+    {
+      "order_id": "s4-buy-qqq",
+      "session": 4,
+      "trade_date": "2026-05-21",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "3",
+      "price": "709.34",
+      "reference_open": "708.99",
+      "gross": "2128.02",
+      "fees": "0.00",
+      "cash_delta": "-2128.02"
+    }
+  ],
+  "rejections": []
+}

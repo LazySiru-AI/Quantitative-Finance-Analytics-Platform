@@ -1,0 +1,18 @@
+{
+  "round_id": "r7-2026-08",
+  "title": "Round 7 - re-selection under the live-evidence gates",
+  "focus": "Apply the four fixes round 6 pre-registered for itself: a liveness gate, a holdings-overlap cap alongside the return-correlation cap, re-specifying correlation on annualized figures only, and scoring the live desk as its own matrix once it has enough sessions.",
+  "headline": "Round 7 initially reported that the backtests had ranked the field backwards out of sample, then withdrew that finding in its own later section after the desk was backdated and the full 127-session record showed the opposite result.",
+  "outcome": "The liveness gate removed c07-chop and c14-riskmanaged-wide outright, since both had taken zero trades in the 60 sessions before selection. The holdings-overlap cap was the round's real finding: every pair among the six equity-family books breached a 25%-of-book-weight threshold, including B-momentum and A-rotation at a correlation comfortably under the cap but 45% shared holdings weight in the same names. After the cap, H-trend-diversified was the only card in the field that could sit beside any equity book at all, capping the desk at two performance seats as a consequence rather than a design choice. Re-specifying correlation on annualized figures vindicated round 6's flag on c20-rotation, whose correlation to B-momentum read as essentially uncorrelated rather than the most correlated card in the field, so it took the hedge seat. Scoring the live desk as its own matrix could not be applied, since 55 sessions was judged far too few, and was deferred to roughly 250 sessions.\n\nThe result seated B-momentum and H-trend-diversified as performance cards and c20-rotation and c11-breakout as hedges, dropping A-rotation, c07-chop and c14-riskmanaged-wide.\n\nThe desk was then backdated from 2026-06-01 to 2026-01-01, exposing that the 55-session window used throughout the rest of the document was an unrepresentative slice. On the genuine 127-session out-of-sample period the Spearman correlation between round 5's ladder rank and forward result flipped from negative to strongly positive, and the round's own words withdrew its earlier headline claim as true of the slice measured and false of the period it was meant to describe. The correction also disclosed that round 7's own selection underperformed out of sample against both round 6's roster and simple SPY, the foreseeable cost of the holdings-overlap cap removing A-rotation.",
+  "seated": ["B-momentum", "H-trend-diversified", "c20-rotation", "c11-breakout"],
+  "owner_override": null,
+  "carries_forward": [
+    "Re-open the holdings-overlap cap as a sizing rule rather than an outright exclusion, since removing a second-best card entirely to hold two fewer shared names was a poor trade this round.",
+    "Fix 4 (scoring the live desk's own matrix) is now much closer, at roughly half the ~250-session bar, and on this evidence it will likely support rather than contradict the backtest ranking.",
+    "A forward window shorter than roughly one full cycle should be reported as an observation and never as a correlation - the 55-session slice's negative correlation was inside the noise of a single rotation.",
+    "The liveness gate and the holdings-overlap cap itself both held up under the longer 127-session window and should be kept."
+  ],
+  "sources": [
+    "data/rounds/r7-2026-08/SELECTION.md"
+  ]
+}

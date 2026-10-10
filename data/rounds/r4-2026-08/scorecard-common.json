@@ -1,0 +1,923 @@
+{
+  "results_root": "data\\rounds\\r4-2026-08\\results",
+  "round": "r1",
+  "window_tags": [
+    "oil-2014",
+    "volmageddon-2018",
+    "inflation-2021",
+    "banks-2023"
+  ],
+  "matrix": "r4",
+  "main_window_tags": [
+    "recovery-2009",
+    "taper-2013",
+    "oil-2014",
+    "volmageddon-2018",
+    "inflation-2021",
+    "banks-2023"
+  ],
+  "min_ranked_main_windows": 4,
+  "rank_by": "borda",
+  "rank_by_choices": [
+    "median",
+    "worst",
+    "hit-rate",
+    "borda",
+    "excess-per-exposure"
+  ],
+  "pareto_frontier": [
+    "B3-concentrated",
+    "c07-chop"
+  ],
+  "ranked": [
+    {
+      "agent_id": "B3-concentrated",
+      "display_name": "B3 - 4 slots at 22 pct",
+      "ranked": true,
+      "median_adjusted_excess": "0.0560557331594556314249810897",
+      "worst_adjusted_excess": "0.00156482637896999860404573439",
+      "best_adjusted_excess": "0.2644466955349714962164610588",
+      "hit_rate": 1.0,
+      "iqr": "0.1105729177398095931061521631",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 27,
+      "mean_exposure": 0.38835655533234126,
+      "worst_drawdown": "-0.09770211281594132",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.00026273412232821506912207315",
+          "adjusted_excess": "0.02615409952558281895628220170",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "553.41",
+          "excess_per_exposure": "0.04982596893096292682404417089"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.07911484080914687774846086192",
+          "adjusted_excess": "0.00156482637896999860404573439",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-150.98",
+          "excess_per_exposure": "0.008847642961815899725336007741"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "0.1689691581092963150462284511",
+          "adjusted_excess": "0.2644466955349714962164610588",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "4344.83",
+          "excess_per_exposure": "0.4129368626758910648020109391"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "0.04119477974760375306643736881",
+          "adjusted_excess": "0.08595736679332844389367997775",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "979.46",
+          "excess_per_exposure": "0.4069008844552464701515110342"
+        }
+      },
+      "rank_median": 1.0,
+      "rank_worst": 2.0,
+      "rank_hit_rate": 2.5,
+      "borda": 1.8333333333333333,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "5726.72",
+      "median_excess_per_exposure": "0.2283634266931046984877776026",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c07-chop",
+      "display_name": "Sector Oversold Reversion",
+      "ranked": true,
+      "median_adjusted_excess": "0.03864592261192889966573041103",
+      "worst_adjusted_excess": "0.01419920389595609620394021396",
+      "best_adjusted_excess": "0.05222869791339687888588481355",
+      "hit_rate": 1.0,
+      "iqr": "0.02877837660610917917030741989",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 33,
+      "mean_exposure": 0.15893497719075617,
+      "worst_drawdown": "-0.029782246971214232",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "0.00170926587767178493087792685",
+          "adjusted_excess": "0.05222869791339687888588481355",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "573.13",
+          "excess_per_exposure": "0.5711915977581472070536701400"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.1138428408091468777484608619",
+          "adjusted_excess": "0.05149325801309488866561125770",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "196.30",
+          "excess_per_exposure": "0.1522545534401497540186119364"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2199088418907036849537715489",
+          "adjusted_excess": "0.02579858721076291066584956436",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "456.05",
+          "excess_per_exposure": "0.3458416260719506044225184866"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.03508922025239624693356263119",
+          "adjusted_excess": "0.01419920389595609620394021396",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "216.62",
+          "excess_per_exposure": "0.1079785828895194252399086044"
+        }
+      },
+      "rank_median": 2.0,
+      "rank_worst": 1.0,
+      "rank_hit_rate": 2.5,
+      "borda": 1.8333333333333333,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "1442.10",
+      "median_excess_per_exposure": "0.2490480897560501792205652115",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "B-momentum",
+      "display_name": "Strategy B - Confirmed Acceleration",
+      "ranked": true,
+      "median_adjusted_excess": "0.03286978925949635356949093692",
+      "worst_adjusted_excess": "0.00035638366070556033702726473",
+      "best_adjusted_excess": "0.1087149750517350013189097013",
+      "hit_rate": 1.0,
+      "iqr": "0.06514799256173480202142817966",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 36,
+      "mean_exposure": 0.32033317680640766,
+      "worst_drawdown": "-0.09126849345907817",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.02172173412232821506912207315",
+          "adjusted_excess": "0.00749755945017805905218588992",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "338.82",
+          "excess_per_exposure": "0.01580068758504957455102173374"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.08299884080914687774846086192",
+          "adjusted_excess": "0.00035638366070556033702726473",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-112.14",
+          "excess_per_exposure": "0.002901884507690258809612076040"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.0134918418907036849537715489",
+          "adjusted_excess": "0.1087149750517350013189097013",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "2520.22",
+          "excess_per_exposure": "0.2014229986803423063520280557"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "0.00967877974760375306643736881",
+          "adjusted_excess": "0.05824201906881464808679598392",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "664.30",
+          "excess_per_exposure": "0.4036777417897652670827322430"
+        }
+      },
+      "rank_median": 3.0,
+      "rank_worst": 3.5,
+      "rank_hit_rate": 2.5,
+      "borda": 3.0,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "3411.20",
+      "median_excess_per_exposure": "0.1086118431326959404515248947",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "B4-tight-stop",
+      "display_name": "B4 - 8 pct stop",
+      "ranked": true,
+      "median_adjusted_excess": "0.02992160776908134130374146169",
+      "worst_adjusted_excess": "0.00035638366070556033702726473",
+      "best_adjusted_excess": "0.1077641847088946027284111801",
+      "hit_rate": 1.0,
+      "iqr": "0.06048802274040218397517933650",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 38,
+      "mean_exposure": 0.3127206444403362,
+      "worst_drawdown": "-0.0868299185127378",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.02172173412232821506912207315",
+          "adjusted_excess": "0.00749755945017805905218588992",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "338.82",
+          "excess_per_exposure": "0.01580068758504957455102173374"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.08299884080914687774846086192",
+          "adjusted_excess": "0.00035638366070556033702726473",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-112.14",
+          "excess_per_exposure": "0.002901884507690258809612076040"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.0194788418907036849537715489",
+          "adjusted_excess": "0.1077641847088946027284111801",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "2460.35",
+          "excess_per_exposure": "0.2069336370082040136287100927"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "0.00313077974760375306643736881",
+          "adjusted_excess": "0.05234565608798462355529703346",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "598.82",
+          "excess_per_exposure": "0.3941805061694669611741645079"
+        }
+      },
+      "rank_median": 5.0,
+      "rank_worst": 3.5,
+      "rank_hit_rate": 2.5,
+      "borda": 3.6666666666666665,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "3285.85",
+      "median_excess_per_exposure": "0.1113671622966267940898659132",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "C-trend",
+      "display_name": "C - Trend (r1): won in-sample and 3yr",
+      "ranked": true,
+      "median_adjusted_excess": "0.00280337098553076689345663369",
+      "worst_adjusted_excess": "-0.01888320265493989718205804749",
+      "best_adjusted_excess": "0.05581156811284489517209984573",
+      "hit_rate": 0.5,
+      "iqr": "0.03995418210698140359885144521",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 38,
+      "mean_exposure": 0.37510672603010276,
+      "worst_drawdown": "-0.08885476274225501",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.04076173412232821506912207315",
+          "adjusted_excess": "-0.01138362195782603678008468092",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "148.42",
+          "excess_per_exposure": "-0.02413562926019262625021609811"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.05004884080914687774846086192",
+          "adjusted_excess": "-0.01888320265493989718205804749",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-441.64",
+          "excess_per_exposure": "-0.07037120472959840125088156477"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.1187808418907036849537715489",
+          "adjusted_excess": "0.0169903639288875705669979483",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "1467.33",
+          "excess_per_exposure": "0.03477019535357348848003428432"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "0.01448477974760375306643736881",
+          "adjusted_excess": "0.05581156811284489517209984573",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "712.36",
+          "excess_per_exposure": "0.2053478933795511757693712712"
+        }
+      },
+      "rank_median": 8.0,
+      "rank_worst": 5.0,
+      "rank_hit_rate": 8.0,
+      "borda": 7.0,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "1886.47",
+      "median_excess_per_exposure": "0.005317283046690431114909093105",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c19-volatility",
+      "display_name": "C19 - Panic-Bid: financials/energy shock reversion",
+      "ranked": true,
+      "median_adjusted_excess": "0.03041876021413624187262247260",
+      "worst_adjusted_excess": "-0.07907665651791811031587466174",
+      "best_adjusted_excess": "0.07422242396916210121920114268",
+      "hit_rate": 0.75,
+      "iqr": "0.03978749565808547899304104696",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 38,
+      "mean_exposure": 0.22159157115392808,
+      "worst_drawdown": "-0.08604033540537814",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "0.02793426587767178493087792685",
+          "adjusted_excess": "0.07422242396916210121920114268",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "835.38",
+          "excess_per_exposure": "0.4430261654925056993385513078"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.08841284080914687774846086192",
+          "adjusted_excess": "0.03139391057167985927880386983",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "-58.00",
+          "excess_per_exposure": "0.07952133705774738536524565164"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2129988418907036849537715489",
+          "adjusted_excess": "0.02944360985659262446644107537",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "525.15",
+          "excess_per_exposure": "0.3388476343888100690296260611"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.1223692202523962469335626312",
+          "adjusted_excess": "-0.07907665651791811031587466174",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-656.18",
+          "excess_per_exposure": "-0.3334431445588038373236331279"
+        }
+      },
+      "rank_median": 4.0,
+      "rank_worst": 14.0,
+      "rank_hit_rate": 6.0,
+      "borda": 8.0,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "646.35",
+      "median_excess_per_exposure": "0.2091844857232787271974358564",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "B2-hold-90",
+      "display_name": "B2 - 90 day max hold",
+      "ranked": true,
+      "median_adjusted_excess": "0.003926971555441809694606577325",
+      "worst_adjusted_excess": "-0.0496329579013623789800431643",
+      "best_adjusted_excess": "0.05824201906881464808679598392",
+      "hit_rate": 0.75,
+      "iqr": "0.03232462608464863080307875595",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 36,
+      "mean_exposure": 0.28142836232228063,
+      "worst_drawdown": "-0.09126849345907817",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.02172173412232821506912207315",
+          "adjusted_excess": "0.00749755945017805905218588992",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "338.82",
+          "excess_per_exposure": "0.01580068758504957455102173374"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.08299884080914687774846086192",
+          "adjusted_excess": "0.00035638366070556033702726473",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-112.14",
+          "excess_per_exposure": "0.002901884507690258809612076040"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2131588418907036849537715489",
+          "adjusted_excess": "-0.0496329579013623789800431643",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "523.55",
+          "excess_per_exposure": "-0.1292136602003112065370264817"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "0.00967877974760375306643736881",
+          "adjusted_excess": "0.05824201906881464808679598392",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "664.30",
+          "excess_per_exposure": "0.4036777417897652670827322430"
+        }
+      },
+      "rank_median": 7.0,
+      "rank_worst": 12.0,
+      "rank_hit_rate": 6.0,
+      "borda": 8.333333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "1414.53",
+      "median_excess_per_exposure": "0.00935128604636991668031690489",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "H-trend-diversified",
+      "display_name": "H - Trend, cross-asset: lowest drawdown of the trend family",
+      "ranked": true,
+      "median_adjusted_excess": "0.01045924616537600605218505926",
+      "worst_adjusted_excess": "-0.06360621727893783783094424323",
+      "best_adjusted_excess": "0.02612131573391393071327702431",
+      "hit_rate": 0.75,
+      "iqr": "0.03773037757477660979656400768",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 19,
+      "mean_exposure": 0.22519893435544783,
+      "worst_drawdown": "-0.06879177011157178",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.1027307341223282150691220732",
+          "adjusted_excess": "-0.06360621727893783783094424323",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "-471.27",
+          "excess_per_exposure": "-0.2146183968716418251060665301"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.1042488408091468777484608619",
+          "adjusted_excess": "0.02065824237975178449252418646",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "100.36",
+          "excess_per_exposure": "0.1832260676361826705762729496"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.1691268418907036849537715489",
+          "adjusted_excess": "0.02612131573391393071327702431",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "963.87",
+          "excess_per_exposure": "0.09870495061981552129431087998"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.04360622025239624693356263119",
+          "adjusted_excess": "0.00026024995100022761184593207",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "131.45",
+          "excess_per_exposure": "0.001146277749566107167364473413"
+        }
+      },
+      "rank_median": 6.0,
+      "rank_worst": 13.0,
+      "rank_hit_rate": 6.0,
+      "borda": 8.333333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "724.41",
+      "median_excess_per_exposure": "0.04992561418469081423083767670",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c09-convex",
+      "display_name": "Flight-to-Quality Insurance",
+      "ranked": true,
+      "median_adjusted_excess": "-0.004662224245899202460829006576",
+      "worst_adjusted_excess": "-0.02545884919418994697316884709",
+      "best_adjusted_excess": "0.003460811668132512145646437995",
+      "hit_rate": 0.25,
+      "iqr": "0.01238236277828387097566599664",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 23,
+      "mean_exposure": 0.09459990181082019,
+      "worst_drawdown": "-0.01186022067282766",
+      "notes": [
+        "excess_per_exposure unavailable for 1 of 4 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.05057873412232821506912207315",
+          "adjusted_excess": "-0.001227259204097031663520889660",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "50.25",
+          "excess_per_exposure": "-0.01091448582923025530338344147"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.09316384080914687774846086192",
+          "adjusted_excess": "0.003460811668132512145646437995",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-10.49",
+          "excess_per_exposure": null
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2683538418907036849537715489",
+          "adjusted_excess": "-0.02545884919418994697316884709",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "-28.40",
+          "excess_per_exposure": "-0.2988514933554515903453911979"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.05730622025239624693356263119",
+          "adjusted_excess": "-0.008097189287701373258137123492",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-5.55",
+          "excess_per_exposure": "-0.06092731900020150246918609381"
+        }
+      },
+      "rank_median": 9.0,
+      "rank_worst": 6.0,
+      "rank_hit_rate": 10.5,
+      "borda": 8.5,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "5.81",
+      "median_excess_per_exposure": "-0.06092731900020150246918609381",
+      "incommensurable_exposure": true
+    },
+    {
+      "agent_id": "c11-breakout",
+      "display_name": "Cross-Asset Breakout",
+      "ranked": true,
+      "median_adjusted_excess": "-0.008069010372145368098935282365",
+      "worst_adjusted_excess": "-0.02903073580094423366150648797",
+      "best_adjusted_excess": "0.00412074780465867237667703923",
+      "hit_rate": 0.25,
+      "iqr": "0.02039138645961877865794880535",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 10,
+      "mean_exposure": 0.16820529713975313,
+      "worst_drawdown": "-0.022128934518791832",
+      "notes": [
+        "excess_per_exposure unavailable for 1 of 4 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.03153573412232821506912207315",
+          "adjusted_excess": "0.00412074780465867237667703923",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "240.68",
+          "excess_per_exposure": "0.01148674329033256405032314377"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.09421284080914687774846086192",
+          "adjusted_excess": "0E-30",
+          "trades": 0,
+          "reason": null,
+          "realised_pnl": "0.00",
+          "excess_per_exposure": null
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2688148418907036849537715489",
+          "adjusted_excess": "-0.02903073580094423366150648797",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-33.01",
+          "excess_per_exposure": "-0.2995779768224369661474229157"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.06056422025239624693356263119",
+          "adjusted_excess": "-0.01613802074429073619787056473",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-38.13",
+          "excess_per_exposure": "-0.07430838362858166770775502844"
+        }
+      },
+      "rank_median": 11.0,
+      "rank_worst": 7.0,
+      "rank_hit_rate": 10.5,
+      "borda": 9.5,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "169.54",
+      "median_excess_per_exposure": "-0.07430838362858166770775502844",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c20-rotation",
+      "display_name": "Strategy C20 - Defensive/Reflation Sector Rotation",
+      "ranked": true,
+      "median_adjusted_excess": "-0.007294891182541382384384383575",
+      "worst_adjusted_excess": "-0.03489717775536784603323132951",
+      "best_adjusted_excess": "0.0235669931926115655591377794",
+      "hit_rate": 0.25,
+      "iqr": "0.02507868922526016913429945945",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 47,
+      "mean_exposure": 0.3336014843797169,
+      "worst_drawdown": "-0.048924704840422995",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.04807873412232821506912207315",
+          "adjusted_excess": "-0.01426998884138492654185583839",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "75.25",
+          "excess_per_exposure": "-0.03640583031445766550734361396"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.06579584080914687774846086192",
+          "adjusted_excess": "-0.00031979352369783822691292876",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-284.17",
+          "excess_per_exposure": "-0.001072300777137819120542134023"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.1269608418907036849537715489",
+          "adjusted_excess": "0.0235669931926115655591377794",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "1385.53",
+          "excess_per_exposure": "0.05441847297875109749958044770"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.07966622025239624693356263119",
+          "adjusted_excess": "-0.03489717775536784603323132951",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-229.15",
+          "excess_per_exposure": "-0.1652835954711727267506229414"
+        }
+      },
+      "rank_median": 10.0,
+      "rank_worst": 9.0,
+      "rank_hit_rate": 10.5,
+      "borda": 9.833333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "947.46",
+      "median_excess_per_exposure": "-0.01873906554579774231394287399",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c14-riskmanaged-wide",
+      "display_name": "C14 - Risk-managed: flight-to-quality basket, built for the worst window",
+      "ranked": true,
+      "median_adjusted_excess": "-0.02316628757889522111902086440",
+      "worst_adjusted_excess": "-0.04343919231964010225813327650",
+      "best_adjusted_excess": "0.000736601172676634543676341249",
+      "hit_rate": 0.25,
+      "iqr": "0.03582946641089072393387325876",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 33,
+      "mean_exposure": 0.26570421549117795,
+      "worst_drawdown": "-0.029706903163007392",
+      "notes": [
+        "excess_per_exposure unavailable for 1 of 4 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.03575573412232821506912207315",
+          "adjusted_excess": "-0.00664260888702086129674029485",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "198.48",
+          "excess_per_exposure": "-0.01394282253034539874554107849"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.09293784080914687774846086192",
+          "adjusted_excess": "0.000736601172676634543676341249",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "-12.75",
+          "excess_per_exposure": null
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2859618418907036849537715489",
+          "adjusted_excess": "-0.04343919231964010225813327650",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "-204.48",
+          "excess_per_exposure": "-0.5016576209300891709330767746"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.06928822025239624693356263119",
+          "adjusted_excess": "-0.03968996627076958094130143395",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-125.37",
+          "excess_per_exposure": "-0.08295425240767930926011043441"
+        }
+      },
+      "rank_median": 13.0,
+      "rank_worst": 10.0,
+      "rank_hit_rate": 10.5,
+      "borda": 11.166666666666666,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "-144.12",
+      "median_excess_per_exposure": "-0.08295425240767930926011043441",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c21-uncorrelated",
+      "display_name": "C21 - Uncorrelated: global macro trend across commodities, precious metals and EM equities",
+      "ranked": true,
+      "median_adjusted_excess": "-0.01463788692229569485124482644",
+      "worst_adjusted_excess": "-0.03391169803811233909107002858",
+      "best_adjusted_excess": "-0.00933777618841004488302550572",
+      "hit_rate": 0.0,
+      "iqr": "0.01052906870767754698482388892",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 28,
+      "mean_exposure": 0.18482515047366466,
+      "worst_drawdown": "-0.04998478246631921",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.06201673412232821506912207315",
+          "adjusted_excess": "-0.01171416142546104589603632097",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-64.13",
+          "excess_per_exposure": "-0.1228695119976884682998854152"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.07478584080914687774846086192",
+          "adjusted_excess": "-0.00933777618841004488302550572",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-194.27",
+          "excess_per_exposure": "-0.08719584756753258870409434037"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2354548418907036849537715489",
+          "adjusted_excess": "-0.01756161241913034380645333192",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "300.59",
+          "excess_per_exposure": "-0.09791665722731472142962458556"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.07037322025239624693356263119",
+          "adjusted_excess": "-0.03391169803811233909107002858",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-136.22",
+          "excess_per_exposure": "-0.09485258188064767095779344134"
+        }
+      },
+      "rank_median": 12.0,
+      "rank_worst": 8.0,
+      "rank_hit_rate": 13.5,
+      "borda": 11.166666666666666,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "-94.03",
+      "median_excess_per_exposure": "-0.09638461955398119619370901345",
+      "incommensurable_exposure": false
+    },
+    {
+      "agent_id": "c18-meanrev",
+      "display_name": "Defensive Snapback \u2014 Staples, Healthcare & Energy",
+      "ranked": true,
+      "median_adjusted_excess": "-0.03596802771707728312986925924",
+      "worst_adjusted_excess": "-0.04465508953048734225234566652",
+      "best_adjusted_excess": "-0.02312067849593542227758386401",
+      "hit_rate": 0.0,
+      "iqr": "0.01577709141228033607144592852",
+      "n_windows_run": 4,
+      "n_windows_eligible": 6,
+      "total_trades": 153,
+      "mean_exposure": 0.1731770475388609,
+      "worst_drawdown": "-0.07829579980883827",
+      "notes": [],
+      "windows": {
+        "oil-2014": {
+          "status": "run",
+          "excess": "-0.07434873412232821506912207315",
+          "adjusted_excess": "-0.02903903528131571241136560730",
+          "trades": 49,
+          "reason": null,
+          "realised_pnl": "-187.45",
+          "excess_per_exposure": "-0.1568557667450320140280281582"
+        },
+        "volmageddon-2018": {
+          "status": "run",
+          "excess": "0.03708984080914687774846086192",
+          "adjusted_excess": "-0.04289702015283885384837291117",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "-571.23",
+          "excess_per_exposure": "-0.2840894036309675148009042559"
+        },
+        "inflation-2021": {
+          "status": "run",
+          "excess": "-0.2441548418907036849537715489",
+          "adjusted_excess": "-0.02312067849593542227758386401",
+          "trades": 76,
+          "reason": null,
+          "realised_pnl": "213.59",
+          "excess_per_exposure": "-0.1380149403538643572651334197"
+        },
+        "banks-2023": {
+          "status": "run",
+          "excess": "-0.09067722025239624693356263119",
+          "adjusted_excess": "-0.04465508953048734225234566652",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "-339.26",
+          "excess_per_exposure": "-0.2362018523691124169986876040"
+        }
+      },
+      "rank_median": 14.0,
+      "rank_worst": 11.0,
+      "rank_hit_rate": 13.5,
+      "borda": 12.833333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "-884.35",
+      "median_excess_per_exposure": "-0.1965288095570722155133578811",
+      "incommensurable_exposure": false
+    }
+  ],
+  "unranked": []
+}

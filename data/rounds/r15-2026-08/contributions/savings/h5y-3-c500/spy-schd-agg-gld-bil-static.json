@@ -1,0 +1,19 @@
+{
+  "agent_id": "spy-schd-agg-gld-bil-static",
+  "purpose": "savings",
+  "window": "h5y-3",
+  "start": "2021-02-16",
+  "end": "2026-02-13",
+  "sessions": 1256,
+  "seed": "20000",
+  "contribution": "500",
+  "funding_shape": "monthly_contribution",
+  "irr": 0.09432947016949178,
+  "time_weighted_cagr": 0.08133649400968146,
+  "max_drawdown": -0.18031738601220548,
+  "volatility": 0.09988559257240684,
+  "mar": 0.45107405230561565,
+  "multiple": 1.38667800632982,
+  "profit": 19527.239319655913,
+  "cash_constraint_modelled": false
+}

@@ -1,0 +1,20 @@
+{
+  "orders": [
+    {
+      "order_id": "s2-1",
+      "session": 2,
+      "decided_on": "2026-07-27",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "1",
+      "thesis": "Deliberate small rule-probe, not a full trend entry: QQQ is pulling back (close 682.12 below sma20 710.49 and sma50 717.64, 5d -2.00%, 20d -3.45%) which fails my two-timeframe confirmation test, so sized at the $500 minimum clip only. Purpose is to hold a position I can realize a loss on and repurchase within 30 days later this week, to exercise the new /wash-sales tab against a real transaction rather than an empty ledger.",
+      "invalidation": "N/A for a probe -- this position is a deliberate test vehicle, not a trend call. Will be closed on the first realized loss this week regardless of trend.",
+      "stop_level": "n/a",
+      "regime": "transitional",
+      "conviction": 2,
+      "evidence": [
+        "brief watchlist QQQ: close=682.12, sma20=710.4930, sma50=717.6354, change_5d=-2.00%, change_20d=-3.45%"
+      ]
+    }
+  ]
+}

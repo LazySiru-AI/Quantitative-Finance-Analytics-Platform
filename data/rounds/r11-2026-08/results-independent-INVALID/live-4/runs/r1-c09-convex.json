@@ -1,0 +1,39 @@
+{
+  "card": {
+    "agent_id": "c09-convex",
+    "display_name": "Flight-to-Quality Insurance",
+    "discipline": "volatility",
+    "thesis": "In a systemic equity selloff capital does not vanish, it rotates: institutional and retail sellers de-risk out of equities into US duration (Treasuries) and, in uncertainty-driven episodes, into gold. That rotation shows up first as a volatility breakout in the receiving instrument's own price -- a close pushing above its 20-day Bollinger upper band -- because a sudden, forced buying wave widens the band and breaks it before any slower moving-average filter would confirm a trend. The other side of that trade is whoever is still willing to sell duration or gold at the pre-rotation price: in ordinary markets TLT and GLD are unremarkable, low-conviction holdings that drift on yield and macro views with no connection to equity risk, so a band breakout in either is a cheap, low-information signal most of the time and costs a string of small whipsaw losses. It becomes a strong, well-paid signal exactly when equity holders are forced, non-price-sensitive sellers of risk and buyers of safety, because that is the one condition under which the other side of a TLT/GLD trade is not a considered view but a stampede. This card holds TLT and GLD outright -- real capital, real price risk, sized at 15% of starting equity per slot -- so its payoff comes from a position actually carried through the dislocation, not from sitting out of SPY while it falls; roughly 85% of the book is uninvested cash at any time, which this engine scores as free but which a real book would have to fund, invest, or forgo yield on. I expect this card's numerically worst window to be bull-2024: a strong, low-volatility equity year gives TLT and GLD no rotation to catch, so the entry still fires on ordinary volatility noise, whipsaws against sma(20), and pays its premium with nothing to show for it. Separately, and worth flagging even though it is not the predicted worst *number*: bear-2022 is the window where the underlying mechanism itself fails, not just goes unpaid -- 2022 was a rate-hike-driven decline that hurt equities and duration together, so there was no flight-to-quality rotation into TLT to catch, and the card's raw return there is a real loss (the low-exposure denominator in the scoring only cushions how that loss compares to the benchmark, it does not mean the trade worked).",
+    "universe": [
+      "TLT",
+      "GLD"
+    ],
+    "entry": "close crosses_above bb_upper(20,2)",
+    "exit": "close crosses_below sma(20)",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 180,
+    "max_positions": 2,
+    "position_pct": "0.15",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 21,
+  "starting_equity": "10000.00",
+  "ending_equity": "10000.00",
+  "total_return": "0.0",
+  "max_drawdown": "0.0",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.0,
+  "capital_exposure": 0.0,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [],
+  "rejections": [],
+  "benchmark_return": "0.008410680747978986907645825962",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

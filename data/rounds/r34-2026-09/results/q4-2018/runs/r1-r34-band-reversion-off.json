@@ -1,0 +1,230 @@
+{
+  "card": {
+    "agent_id": "r34-band-reversion-off",
+    "display_name": "band-reversion / regime off / industries",
+    "discipline": "mean-reversion",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 34 replication cell. Form: a Bollinger reversion -- price under the lower band of a 30-day, 2-deviation channel while still above its 200-day SMA -- exited back at the channel's midline -- but with the 200-day SMA regime filter REMOVED from the entry for this cell, which is the paired half of this round's second factor. Brackets: stop only (12% stop, 180-day hold cap, no target), because round 17 measured the three bracket policies as differing by 0.14pp across its whole 48-cell field. This card is one cell of a pre-registered 8x2 grid asking a single question: does round 17's finding -- that form, the regime filter and brackets all sit inside this programme's 21.2 percentage point noise floor -- replicate out of sample on a universe one level below the sector? Sector ETFs average a rule's signal over the dispersion the sector already contains; industry baskets do not, so if form ever changes a result it should change it here first, and a null measured here is a stronger null than round 17's. It is not a proposal to trade anything and nothing in this round will be promoted. The universe is the eight industry baskets XME XRT XHB XSD XOP XBI ITA VNQ -- mechanically defined by the index each tracks, not thesis-picked, and sharing no ticker with any savings- or trading-purpose card in the library, which is the condition this card's roth purpose imposes (Rev. Rul. 2008-5 destroys a wash-sale loss outright when an IRA buys the replacement). Ticker disjointness is necessary and not sufficient under IRC 1091, and no claim is made here that the roster is substantially different from anything the taxable book holds. Every parameter is the textbook constant frozen in app.evolution.ruleforms before either round was conceived; nothing here was tuned. See strategy-program/ROUND-34-PLAN.md for the pre-registration, the decision rule and the six falsifiable predictions.",
+    "falsification": "This cell's thesis is that buying weakness inside strength earns something on an industry basket. It is falsified if this cell's worst adjusted excess is not in `gfc`, `covid` or `bear-2022` -- a mean-reversion rule that buys every dip is supposed to be worst in a sustained decline, and if it is not, the form is not doing what its label says. The round-level falsification, which this cell contributes one observation to, is in `strategy-program/ROUND-34-PLAN.md` section 5: round 17's null replicates unless the eight form-marginals span more than 21.2 percentage points AND the best-versus-worst contrast survives Benjamini-Hochberg over all sixteen cells run. This cell is the regime-filter-removed half of its pair, so it also falsifies the claim that the 200-day filter is load-bearing: if the two regime marginals differ by less than 21.2pp, six of eight forms carry that conjunct on convention alone, on industries as well as on sectors.",
+    "universe": [
+      "XME",
+      "XRT",
+      "XHB",
+      "XSD",
+      "XOP",
+      "XBI",
+      "ITA",
+      "VNQ"
+    ],
+    "entry": "close < bb_lower(30, 2)",
+    "exit": "close crosses_above bb_mid(30, 2)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 180,
+    "max_positions": 4,
+    "position_pct": "0.20",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 65,
+  "starting_equity": "10000.00",
+  "ending_equity": "8085.07",
+  "total_return": "-0.19149300000000002",
+  "max_drawdown": "-0.19149300000000002",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.9692307692307692,
+  "capital_exposure": 0.5309173846153846,
+  "win_rate": 0.125,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XHB",
+      "entry_date": "2018-09-27",
+      "entry_price": "38.89",
+      "exit_date": "2018-10-19",
+      "exit_price": "34.33",
+      "quantity": "51",
+      "exit_reason": "stop",
+      "pnl": "-232.62",
+      "return_pct": "-0.1172840439852978990516237351",
+      "bars_held": 16
+    },
+    {
+      "symbol": "XBI",
+      "entry_date": "2018-10-03",
+      "entry_price": "93.67",
+      "exit_date": "2018-10-25",
+      "exit_price": "78.01",
+      "quantity": "21",
+      "exit_reason": "stop",
+      "pnl": "-328.91",
+      "return_pct": "-0.1672080810545633861530092981",
+      "bars_held": 16
+    },
+    {
+      "symbol": "VNQ",
+      "entry_date": "2018-09-25",
+      "entry_price": "80.23",
+      "exit_date": "2018-10-31",
+      "exit_price": "79.18",
+      "quantity": "24",
+      "exit_reason": "rule",
+      "pnl": "-25.26",
+      "return_pct": "-0.01311853421413436370434999377",
+      "bars_held": 26
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2018-10-03",
+      "entry_price": "49.37",
+      "exit_date": "2018-11-05",
+      "exit_price": "48.18",
+      "quantity": "40",
+      "exit_reason": "rule",
+      "pnl": "-47.66",
+      "return_pct": "-0.02413408952805347376949564513",
+      "bars_held": 23
+    },
+    {
+      "symbol": "XOP",
+      "entry_date": "2018-10-23",
+      "entry_price": "153.36",
+      "exit_date": "2018-11-21",
+      "exit_price": "132.65",
+      "quantity": "12",
+      "exit_reason": "stop",
+      "pnl": "-248.57",
+      "return_pct": "-0.1350689010606850982437836898",
+      "bars_held": 21
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2018-11-20",
+      "entry_price": "43.98",
+      "exit_date": "2018-12-04",
+      "exit_price": "46.88",
+      "quantity": "43",
+      "exit_reason": "rule",
+      "pnl": "124.64",
+      "return_pct": "0.06590733631566145288027327432",
+      "bars_held": 9
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2018-10-25",
+      "entry_price": "30.37",
+      "exit_date": "2018-12-20",
+      "exit_price": "26.56",
+      "quantity": "65",
+      "exit_reason": "stop",
+      "pnl": "-247.71",
+      "return_pct": "-0.1254831437906841265418809047",
+      "bars_held": 38
+    },
+    {
+      "symbol": "XOP",
+      "entry_date": "2018-12-11",
+      "entry_price": "124.18",
+      "exit_date": "2018-12-20",
+      "exit_price": "106.27",
+      "quantity": "16",
+      "exit_reason": "stop",
+      "pnl": "-286.61",
+      "return_pct": "-0.1442512884522467386052504429",
+      "bars_held": 7
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2018-12-10",
+      "entry_price": "43.53",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "46",
+      "exit_reason": "open_at_end",
+      "pnl": "-233.68",
+      "return_pct": "-0.1167011256604640477831380657",
+      "bars_held": 10
+    },
+    {
+      "symbol": "XHB",
+      "entry_date": "2018-12-17",
+      "entry_price": "33.04",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "60",
+      "exit_reason": "open_at_end",
+      "pnl": "-138.00",
+      "return_pct": "-0.06961259079903147699757869249",
+      "bars_held": 5
+    },
+    {
+      "symbol": "XSD",
+      "entry_date": "2018-12-21",
+      "entry_price": "63.45",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "31",
+      "exit_reason": "open_at_end",
+      "pnl": "-102.92",
+      "return_pct": "-0.05232466509062253743104806935",
+      "bars_held": 1
+    },
+    {
+      "symbol": "XOP",
+      "entry_date": "2018-12-21",
+      "entry_price": "104.25",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "19",
+      "exit_reason": "open_at_end",
+      "pnl": "-147.63",
+      "return_pct": "-0.07453237410071942446043165468",
+      "bars_held": 1
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XSD",
+      "reason": "$1982.45 exceeds $1295.91 of settled cash (total cash $4722.52; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XOP",
+      "reason": "$1914.66 exceeds $1295.91 of settled cash (total cash $4722.52; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XBI",
+      "reason": "$1979.04 exceeds $1295.91 of settled cash (total cash $4722.52; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ITA",
+      "reason": "$1926.10 exceeds $1295.91 of settled cash (total cash $4722.52; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$1989.78 exceeds $1295.91 of settled cash (total cash $4722.52; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.2004503736053771878945033949",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "order_id": "s3-qqq-sell",
+      "session": 3,
+      "decided_on": "2026-07-07",
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "Closing the full QQQ position. My session-2 invalidation was explicit: 'a close back below sma20 (720.21) would signal the cross failed.' QQQ closed 709.43 on 2026-07-07, below sma20 (720.4330) and below my stop_level of 715.00 -- both the stop and the written invalidation triggered on the same print. The sma20 cross I bought was a one-session head-fake.",
+      "invalidation": "This exit is itself the position's invalidation trigger firing; nothing to invalidate about closing it. (A rebound back above sma20 without ever trading through the 715.00 stop would have meant this sell was premature, but that is not what happened -- price traded through the stop first.)",
+      "stop_level": "715.00",
+      "regime": "transitional",
+      "conviction": 5,
+      "evidence": [
+        "close=709.43, sma20=720.4330, change_1d=-1.85%, change_5d=-2.02% via brief-s3.json watchlist.QQQ (as of 2026-07-07)",
+        "entry stop_level=715.00 recorded on order s2-qqq-buy, session 2; 709.43 < 715.00"
+      ]
+    }
+  ]
+}

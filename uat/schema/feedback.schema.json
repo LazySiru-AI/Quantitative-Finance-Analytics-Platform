@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://investing-dashboard.local/uat/feedback.schema.json",
+  "title": "UAT finding",
+  "description": "One observation from one persona session. Appended as a line to uat/runs/<run-id>/feedback.jsonl. The enhancement loop reads these, so every field that a triager needs to act without replaying the session is required.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "finding_id",
+    "run_id",
+    "persona_id",
+    "session",
+    "observed_at",
+    "surface",
+    "kind",
+    "severity",
+    "title",
+    "observed",
+    "expected",
+    "why_it_matters"
+  ],
+  "properties": {
+    "finding_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable kebab-case slug, unique within the run. Used to dedupe across runs, so phrase it after the problem, not the session: 'portfolio-total-hides-partial-pricing', not 'day-2-issue-3'."
+    },
+    "run_id": { "type": "string" },
+    "persona_id": { "type": "string" },
+    "session": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "1-based session number within the run."
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Wall-clock time the finding was recorded, not the simulated session date."
+    },
+    "session_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Simulated trading date the session represents."
+    },
+
+    "surface": {
+      "type": "string",
+      "enum": ["ui", "api", "data", "docs", "workflow"],
+      "description": "Where it was hit. 'data' is for a value that is wrong or unusable regardless of how it is rendered; 'workflow' is for a sequence that is only painful end-to-end."
+    },
+    "locator": {
+      "type": "string",
+      "description": "Route, endpoint or file. e.g. '/portfolio', 'GET /api/portfolio', 'frontend/src/pages/Tax.tsx'."
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["defect", "friction", "gap"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["blocker", "major", "minor", "polish"]
+    },
+
+    "title": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "One line, states the problem, no rationale clause."
+    },
+    "observed": {
+      "type": "string",
+      "description": "What actually happened. Concrete: the value seen, the label read, the time waited."
+    },
+    "expected": {
+      "type": "string",
+      "description": "What the persona expected instead, and on what professional basis."
+    },
+    "why_it_matters": {
+      "type": "string",
+      "description": "The decision this affected. A finding with no downstream consequence is polish at best."
+    },
+    "repro": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ordered steps sufficient for an engineer who has never seen the session."
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Relative paths to screenshots, response captures, or log excerpts within the run directory."
+    },
+    "blocked_decision": {
+      "type": "boolean",
+      "default": false,
+      "description": "True when the persona could not place, size or exit a position because of this."
+    },
+    "suggested_fix": {
+      "type": "string",
+      "description": "Optional. The persona is a user, not an engineer; a suggestion here is a hint, never a specification."
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Filled in by the synthesis pass, not by the persona. A persona's claim is a report until someone reads the code.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["confirmed", "partly-confirmed", "not-reproduced", "works-as-designed", "unverified"]
+        },
+        "checked_against": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Source locations read while verifying, as path:line."
+        },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

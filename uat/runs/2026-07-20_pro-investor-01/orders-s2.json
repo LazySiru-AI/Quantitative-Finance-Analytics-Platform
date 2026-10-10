@@ -1,0 +1,92 @@
+{
+  "orders": [
+    {
+      "symbol": "TLT",
+      "side": "sell",
+      "quantity": 10,
+      "thesis": "Closing the low-conviction ballast position from session 1 to free cash. Proceeds are deliberately spent later in this same order batch to test the mandate's same-day-settlement discipline -- see the XLK/QQQ/GLD orders below.",
+      "invalidation": "n/a -- exit, not an entry",
+      "stop_level": "84.00",
+      "regime": "transitional",
+      "conviction": 2,
+      "evidence": "Position was low-conviction (2/5) at entry; freeing the capital for a higher-conviction trend trade (XLE) and a deliberate mandate-edge test."
+    },
+    {
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": 25,
+      "thesis": "Energy showing confirmed uptrend across timeframes: close 57.94 above sma20 (54.94), sma50 (56.54) and sma200 (51.95); 5d +2.11%, 20d +7.76%. Genuine trend-following entry.",
+      "invalidation": "A close back below sma50 (56.54) ends the confirmed-uptrend thesis.",
+      "stop_level": "55.50",
+      "regime": "risk-on within energy",
+      "conviction": 4,
+      "evidence": "close 57.94 > sma20 54.94 > sma50 56.54 > sma200 51.95; change_5d +2.11%; change_20d +7.76%"
+    },
+    {
+      "symbol": "XLK",
+      "side": "buy",
+      "quantity": 13,
+      "thesis": "DELIBERATE MANDATE-EDGE TEST, disclosed: sized (~22.9% of equity, just under the 25% single-name cap) together with the QQQ and GLD orders below so their combined cost exceeds today's settled cash ($7,661.64) and can only be funded by reusing this session's TLT sale proceeds before they settle. I expect the broker to reject whichever order in this sequence first crosses that line. Underlying trend read (XLK below sma20/sma50, -8.2% 20d) is actually bearish -- I would not take this trade on signal alone.",
+      "invalidation": "Test order -- if filled unexpectedly, treat as a real position and exit on a close below sma50 (182.97).",
+      "stop_level": "178.00",
+      "regime": "transitional",
+      "conviction": 1,
+      "evidence": "close 175.71 < sma20 182.89 < sma50 182.97; change_5d -3.07%; change_20d -8.22% -- test order, not a trend signal"
+    },
+    {
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": 3,
+      "thesis": "DELIBERATE MANDATE-EDGE TEST, disclosed: part of the same settled-cash boundary test as the XLK order above -- sized under the 25% cap individually, combined to push cumulative same-day spend past settled cash. QQQ's own trend is still down (below sma20/sma50, -6.0% 20d); this is not a signal-driven entry.",
+      "invalidation": "Test order -- if filled unexpectedly, treat as real and exit on a close below sma50 (719.01).",
+      "stop_level": "685.00",
+      "regime": "transitional",
+      "conviction": 1,
+      "evidence": "close 696.06 < sma20 716.12 < sma50 719.01; change_5d -2.20%; change_20d -6.02% -- test order, not a trend signal"
+    },
+    {
+      "symbol": "GLD",
+      "side": "buy",
+      "quantity": 6,
+      "thesis": "DELIBERATE MANDATE-EDGE TEST, disclosed: the last leg of the same-day settled-cash boundary test -- with the TLT sale proceeds and the XLE/XLK/QQQ buys above, cumulative spend this session lands roughly $370-450 past today's settled cash of $7,661.64, and comfortably short of settled-cash-plus-today's-proceeds. This should isolate the settled-cash rule from a simple insufficient-funds case.",
+      "invalidation": "Test order -- if filled unexpectedly, treat as real and exit on further downtrend continuation.",
+      "stop_level": "355.00",
+      "regime": "transitional",
+      "conviction": 1,
+      "evidence": "sized purely for the cash-settlement boundary test, not on GLD's own trend (which was a downtrend as of session 1's brief)"
+    },
+    {
+      "symbol": "AAPL",
+      "side": "buy",
+      "quantity": 20,
+      "thesis": "DELIBERATE MANDATE-EDGE TEST, disclosed: sized to notionally exceed 25% of account equity at any plausible AAPL price, specifically to exercise the single-name concentration cap and confirm the broker rejects it and the application reports the rejection honestly.",
+      "invalidation": "Test order -- not expected to fill.",
+      "stop_level": "150.00",
+      "regime": "n/a",
+      "conviction": 1,
+      "evidence": "Mandate-cap test, not a trade thesis."
+    },
+    {
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": 1,
+      "thesis": "DELIBERATE MANDATE-EDGE TEST, disclosed: single share notional (~$84) is well under the $500 minimum clip. Confirming the broker rejects a below-minimum clip rather than silently filling a position too small to matter.",
+      "invalidation": "Test order -- not expected to fill.",
+      "stop_level": "80.00",
+      "regime": "n/a",
+      "conviction": 1,
+      "evidence": "Mandate minimum-clip test, not a trade thesis."
+    },
+    {
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": 2.5,
+      "thesis": "DELIBERATE MANDATE-EDGE TEST, disclosed: fractional share quantity to confirm the whole-shares-only rule is enforced by the broker rather than silently rounded or accepted.",
+      "invalidation": "Test order -- not expected to fill.",
+      "stop_level": "700.00",
+      "regime": "n/a",
+      "conviction": 1,
+      "evidence": "Mandate whole-share test, not a trade thesis."
+    }
+  ]
+}

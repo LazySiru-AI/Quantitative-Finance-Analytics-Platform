@@ -1,0 +1,21 @@
+[
+  {
+    "order_id": "s1-1",
+    "session": 1,
+    "decided_on": "2026-06-18",
+    "symbol": "IWM",
+    "side": "buy",
+    "quantity": "6",
+    "order_type": "market_on_open",
+    "thesis": "IWM close 295.59 is above sma20 288.98, sma50 281.36 and sma200 258.01 -- clean stacked uptrend with price at its 52w high. Decision table on /ticker/IWM confirms 'Price Above 200-Bar SMA' FIRING 0 bars ago. 20d change +5.6% is the strongest of the watchlist (SPY +0.7%, XLV +1.5%, TLT +3.4%). Macro page reads Fear & Greed 60 (Greed), oil and yields both firming -- risk-on, small caps are the higher-beta expression of that.",
+    "invalidation": "Close back below sma50 (~281) undoes the stacked-MA structure this thesis rests on.",
+    "stop_level": "281.00",
+    "regime": "risk-on",
+    "conviction": 3,
+    "evidence": [
+      "IWM close 295.59, sma20 288.9825, sma50 281.3568, sma200 258.0062 via session brief watchlist",
+      "Price Above 200-Bar SMA: FIRING, 0 bars ago via /ticker/IWM decision table",
+      "Fear & Greed 60 GREED via /macro"
+    ]
+  }
+]

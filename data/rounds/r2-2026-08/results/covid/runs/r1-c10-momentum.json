@@ -1,0 +1,70 @@
+{
+  "card": {
+    "agent_id": "c10-momentum",
+    "display_name": "Confirmed Sector Momentum",
+    "discipline": "momentum",
+    "thesis": "Momentum exists because information diffuses and positions build slowly: institutional flows into a strengthening sector are staged over weeks (mandate reviews, index-fund rebalancing lags, analysts revising estimates in sequence rather than all at once), and short-horizon traders and dip-buyers who fade the first leg of a move get run over and forced to chase, extending it further. The people on the other side are the ones who sold or shorted the early leg on a mean-reversion prior and are still underwater when the second leg arrives. This is a diffusion-and-crowding story, not a single mispriced fact, which is why it decays slowly rather than being arbitraged away overnight. The entry requires three things at once: a short-term breakout (close crossing above its 20-day average), that breakout occurring above the 100-day average (a cheap, conventional context filter -- do not fight the intermediate trend), and RSI(14) above 55 confirming the move actually has thrust rather than being a one-bar wiggle. I measured this filter directly (see memo) and it is NOT a strong lever: it modestly cuts trade count in both chop windows (-8% in chop-2015, -4% in chop-2011) but its effect on average per-trade return is small and inconsistent, and in gfc it is measurably worse than the unfiltered rule on a per-trade basis. The real defense against chop in this design is the fast discretionary exit (price closing back below its own 20-day average), which keeps the average holding period to 6-13 sessions across every regime I measured, including both chop windows -- short enough that a whipsaw round-trip costs a small, bounded amount rather than compounding into a large loss. In both chop windows tested, zero trades reached the 8% stop within a 40-day hold; the stop is a tail backstop, not the routine risk control. I am not claiming this rule profits from chop -- it is roughly flat to modestly positive per trade in both chop windows, which is the honest finding: momentum does not get shredded here, but it does not have an edge here either, and the edge this rule has belongs to trending regimes.",
+    "universe": [
+      "QQQ",
+      "XLK",
+      "XLY",
+      "XLI",
+      "XLE",
+      "XLF",
+      "IWM",
+      "SMH"
+    ],
+    "entry": "close crosses_above sma(20) and close > sma(100) and rsi(14) > 55",
+    "exit": "close crosses_below sma(20)",
+    "stop_loss_pct": "0.08",
+    "take_profit_pct": null,
+    "max_hold_days": 40,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "10248.62",
+  "total_return": "0.02486199999999994",
+  "max_drawdown": "-0.016451176776820398",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.3118279569892473,
+  "capital_exposure": 0.07678101075268817,
+  "win_rate": 1.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "SMH",
+      "entry_date": "2020-05-19",
+      "entry_price": "68.43",
+      "exit_date": "2020-06-29",
+      "exit_price": "74.03",
+      "quantity": "36",
+      "exit_reason": "rule",
+      "pnl": "201.52",
+      "return_pct": "0.08180297790118044392485427119",
+      "bars_held": 28
+    },
+    {
+      "symbol": "QQQ",
+      "entry_date": "2020-06-30",
+      "entry_price": "242.89",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "10",
+      "exit_reason": "open_at_end",
+      "pnl": "47.10",
+      "return_pct": "0.01939149409197579151056033595",
+      "bars_held": 0
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

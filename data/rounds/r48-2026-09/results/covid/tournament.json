@@ -1,0 +1,1684 @@
+{
+  "generated_at": "2026-09-09T22:40:52.954797Z",
+  "trade_start": "2020-02-19",
+  "trade_end": "2020-06-30",
+  "sessions": 93,
+  "agents": [
+    {
+      "card": {
+        "agent_id": "r48-arot-risk1pct",
+        "display_name": "arot risk1pct",
+        "discipline": "pairs-rotation",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `arot` (`A-rotation`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/candidates/A-rotation.json` -- entry 'close > sma(50) and rsi(14) > 55 and rsi(14) < 80', exit 'close < sma(50) or rsi(14) < 45', stop 0.12, take-profit 0.20, hold cap 120, 3 slots at 0.30 each. Arm `risk1pct`, round 45's follow-up question asked of every seated trading card: position size becomes Decimal('0.01') / this base's stop_loss_pct, quantised to 3dp (0.083 here, since every base in this round carries a 0.12 stop) -- slot count and every other field unchanged. Round 45 measured this exact resizing lower the tail (worst window, IQR) and mean exposure on Creator E's own card without moving the per-window sign pattern, at a cost to the median. Predicted here to repeat that shape on the four other bases, and to be near-inert on the fifth if its own position size barely moves relative to its stop. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "MU",
+          "INTC",
+          "AMD",
+          "TSM",
+          "SOXX",
+          "NVDA",
+          "AVGO",
+          "QCOM",
+          "MRVL"
+        ],
+        "entry": "close > sma(50) and rsi(14) > 55 and rsi(14) < 80",
+        "exit": "close < sma(50) or rsi(14) < 45",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": "0.20",
+        "max_hold_days": 120,
+        "max_positions": 3,
+        "position_pct": "0.083",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "10107.89",
+      "total_return": "0.010788999999999938",
+      "max_drawdown": "-0.046641980773717284",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.7311827956989247,
+      "capital_exposure": 0.17336733333333335,
+      "win_rate": 0.2727272727272727,
+      "profit_factor": "1.236434957924263674614305750",
+      "realised_reward_risk": "1.596841447999858686688628239",
+      "trades": [
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-02-19",
+          "entry_price": "66.42",
+          "exit_date": "2020-02-25",
+          "exit_price": "61.96",
+          "quantity": "12",
+          "exit_reason": "rule",
+          "pnl": "-53.54",
+          "return_pct": "-0.06717354210579142828465321690",
+          "bars_held": 4
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-02-19",
+          "entry_price": "58.02",
+          "exit_date": "2020-02-25",
+          "exit_price": "51.11",
+          "quantity": "14",
+          "exit_reason": "stop",
+          "pnl": "-96.76",
+          "return_pct": "-0.1191214852021470428916137293",
+          "bars_held": 4
+        },
+        {
+          "symbol": "SOXX",
+          "entry_date": "2020-02-19",
+          "entry_price": "88.52",
+          "exit_date": "2020-02-25",
+          "exit_price": "82.59",
+          "quantity": "9",
+          "exit_reason": "rule",
+          "pnl": "-53.39",
+          "return_pct": "-0.06701561480142591755786514033",
+          "bars_held": 4
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-03-05",
+          "entry_price": "6.92",
+          "exit_date": "2020-03-10",
+          "exit_price": "6.41",
+          "quantity": "116",
+          "exit_reason": "rule",
+          "pnl": "-59.20",
+          "return_pct": "-0.07374925254135937811441100259",
+          "bars_held": 3
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-03-31",
+          "entry_price": "6.68",
+          "exit_date": "2020-04-02",
+          "exit_price": "6.10",
+          "quantity": "125",
+          "exit_reason": "rule",
+          "pnl": "-72.54",
+          "return_pct": "-0.08687425149700598802395209581",
+          "bars_held": 2
+        },
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-04-07",
+          "entry_price": "59.97",
+          "exit_date": "2020-04-13",
+          "exit_price": "56.54",
+          "quantity": "14",
+          "exit_reason": "rule",
+          "pnl": "-48.04",
+          "return_pct": "-0.05721908573334286190714404821",
+          "bars_held": 3
+        },
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-04-14",
+          "entry_price": "60.07",
+          "exit_date": "2020-04-22",
+          "exit_price": "58.24",
+          "quantity": "14",
+          "exit_reason": "rule",
+          "pnl": "-25.64",
+          "return_pct": "-0.03048823991058051321077790197",
+          "bars_held": 6
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": "2020-05-18",
+          "exit_price": "8.76",
+          "quantity": "123",
+          "exit_reason": "target",
+          "pnl": "223.81",
+          "return_pct": "0.2621892645439422693938754950",
+          "bars_held": 28
+        },
+        {
+          "symbol": "MRVL",
+          "entry_date": "2020-04-07",
+          "entry_price": "24.51",
+          "exit_date": "2020-05-26",
+          "exit_price": "31.90",
+          "quantity": "34",
+          "exit_reason": "target",
+          "pnl": "251.22",
+          "return_pct": "0.3014615883072935416516667867",
+          "bars_held": 33
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-04-22",
+          "entry_price": "54.94",
+          "exit_date": "2020-06-12",
+          "exit_price": "54.98",
+          "quantity": "15",
+          "exit_reason": "rule",
+          "pnl": "0.57",
+          "return_pct": "0.0006916636330542409901710957408",
+          "bars_held": 36
+        },
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-05-26",
+          "entry_price": "63.71",
+          "exit_date": "2020-06-12",
+          "exit_price": "60.08",
+          "quantity": "13",
+          "exit_reason": "rule",
+          "pnl": "-47.21",
+          "return_pct": "-0.05700107458073240524974946573",
+          "bars_held": 13
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-05-18",
+          "entry_price": "8.76",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "97",
+          "exit_reason": "open_at_end",
+          "pnl": "71.57",
+          "return_pct": "0.08422774561031869321658899402",
+          "bars_held": 30
+        },
+        {
+          "symbol": "TSM",
+          "entry_date": "2020-06-12",
+          "entry_price": "56.53",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "15",
+          "exit_reason": "open_at_end",
+          "pnl": "3.60",
+          "return_pct": "0.004245533345126481514240226428",
+          "bars_held": 12
+        },
+        {
+          "symbol": "MRVL",
+          "entry_date": "2020-06-12",
+          "entry_price": "34.50",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "24",
+          "exit_reason": "open_at_end",
+          "pnl": "13.44",
+          "return_pct": "0.01623188405797101449275362319",
+          "bars_held": 12
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": 0.7905273437500017,
+      "q_value": 1.0,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-arot-base",
+        "display_name": "arot base",
+        "discipline": "pairs-rotation",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `arot` (`A-rotation`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/candidates/A-rotation.json` -- entry 'close > sma(50) and rsi(14) > 55 and rsi(14) < 80', exit 'close < sma(50) or rsi(14) < 45', stop 0.12, take-profit 0.20, hold cap 120, 3 slots at 0.30 each. This is the BASE cell: the seated card unchanged except for its identifying fields. Its sibling risk1pct cell changes exactly one thing against it, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Baseline against which this base's risk1pct cell is contrasted. Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "MU",
+          "INTC",
+          "AMD",
+          "TSM",
+          "SOXX",
+          "NVDA",
+          "AVGO",
+          "QCOM",
+          "MRVL"
+        ],
+        "entry": "close > sma(50) and rsi(14) > 55 and rsi(14) < 80",
+        "exit": "close < sma(50) or rsi(14) < 45",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": "0.20",
+        "max_hold_days": 120,
+        "max_positions": 3,
+        "position_pct": "0.30",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "10046.47",
+      "total_return": "0.004647000000000068",
+      "max_drawdown": "-0.17854020806138993",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.7311827956989247,
+      "capital_exposure": 0.5133131935483871,
+      "win_rate": 0.3,
+      "profit_factor": "1.030838144535138363527772248",
+      "realised_reward_risk": "1.191286576865477177187686424",
+      "trades": [
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-02-19",
+          "entry_price": "66.42",
+          "exit_date": "2020-02-25",
+          "exit_price": "61.96",
+          "quantity": "45",
+          "exit_reason": "rule",
+          "pnl": "-200.78",
+          "return_pct": "-0.06717521496202616347151125832",
+          "bars_held": 4
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-02-19",
+          "entry_price": "58.02",
+          "exit_date": "2020-02-25",
+          "exit_price": "51.11",
+          "quantity": "52",
+          "exit_reason": "stop",
+          "pnl": "-359.40",
+          "return_pct": "-0.1191233792061092991806538859",
+          "bars_held": 4
+        },
+        {
+          "symbol": "SOXX",
+          "entry_date": "2020-02-19",
+          "entry_price": "88.52",
+          "exit_date": "2020-02-25",
+          "exit_price": "82.59",
+          "quantity": "34",
+          "exit_reason": "rule",
+          "pnl": "-201.70",
+          "return_pct": "-0.06701709151803513994843305601",
+          "bars_held": 4
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-03-05",
+          "entry_price": "6.92",
+          "exit_date": "2020-03-10",
+          "exit_price": "6.41",
+          "quantity": "421",
+          "exit_reason": "rule",
+          "pnl": "-214.85",
+          "return_pct": "-0.07374747710515837601087419164",
+          "bars_held": 3
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-03-31",
+          "entry_price": "6.68",
+          "exit_date": "2020-04-02",
+          "exit_price": "6.10",
+          "quantity": "451",
+          "exit_reason": "rule",
+          "pnl": "-261.73",
+          "return_pct": "-0.08687613686153192506339870149",
+          "bars_held": 2
+        },
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-04-07",
+          "entry_price": "59.97",
+          "exit_date": "2020-04-13",
+          "exit_price": "56.54",
+          "quantity": "51",
+          "exit_reason": "rule",
+          "pnl": "-175.02",
+          "return_pct": "-0.05722469077676092948435001815",
+          "bars_held": 3
+        },
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-04-14",
+          "entry_price": "60.07",
+          "exit_date": "2020-04-22",
+          "exit_price": "58.24",
+          "quantity": "51",
+          "exit_reason": "rule",
+          "pnl": "-93.42",
+          "return_pct": "-0.03049383562314554588274464106",
+          "bars_held": 6
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": "2020-05-18",
+          "exit_price": "8.76",
+          "quantity": "447",
+          "exit_reason": "target",
+          "pnl": "813.36",
+          "return_pct": "0.2621898149043575807980194573",
+          "bars_held": 28
+        },
+        {
+          "symbol": "INTC",
+          "entry_date": "2020-04-23",
+          "entry_price": "59.70",
+          "exit_date": "2020-06-12",
+          "exit_price": "60.08",
+          "quantity": "49",
+          "exit_reason": "rule",
+          "pnl": "18.53",
+          "return_pct": "0.006334393053703893617748606980",
+          "bars_held": 35
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-05-19",
+          "entry_price": "54.42",
+          "exit_date": "2020-06-12",
+          "exit_price": "54.98",
+          "quantity": "54",
+          "exit_reason": "rule",
+          "pnl": "30.15",
+          "return_pct": "0.01025970844052431704030380987",
+          "bars_held": 17
+        },
+        {
+          "symbol": "SOXX",
+          "entry_date": "2020-05-19",
+          "entry_price": "80.65",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "37",
+          "exit_reason": "open_at_end",
+          "pnl": "356.68",
+          "return_pct": "0.1195288282703037817730936144",
+          "bars_held": 29
+        },
+        {
+          "symbol": "TSM",
+          "entry_date": "2020-06-15",
+          "entry_price": "54.74",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "53",
+          "exit_reason": "open_at_end",
+          "pnl": "107.59",
+          "return_pct": "0.03708439897698209718670076726",
+          "bars_held": 11
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-06-15",
+          "entry_price": "8.82",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "335",
+          "exit_reason": "open_at_end",
+          "pnl": "227.06",
+          "return_pct": "0.07684705723085254002098351779",
+          "bars_held": 11
+        }
+      ],
+      "rejections": [
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash",
+        "insufficient_cash"
+      ],
+      "rejection_details": [
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3063.75 exceeds $2600.89 of settled cash (total cash $2600.89; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3026.25 exceeds $2600.89 of settled cash (total cash $2600.89; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3029.87 exceeds $2600.89 of settled cash (total cash $2600.89; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3037.10 exceeds $2600.89 of settled cash (total cash $2600.89; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2999.97 exceeds $2600.89 of settled cash (total cash $5484.34; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3031.66 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3063.42 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2903.04 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2931.24 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2924.32 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2884.20 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2962.44 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3023.46 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3005.94 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2983.76 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$3087.12 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$3039.27 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$3017.04 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3055.44 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2968.53 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2916.65 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2888.38 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2913.12 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2927.34 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2950.90 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2960.36 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2942.91 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2954.88 exceeds $2420.77 of settled cash (total cash $2420.77; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3076.64 exceeds $2420.77 of settled cash (total cash $5390.92; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3098.68 exceeds $2420.77 of settled cash (total cash $5390.92; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3004.04 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2959.04 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2969.12 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2921.89 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2947.28 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2992.24 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3045.91 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2978.08 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$3039.66 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2988.85 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3031.60 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$3031.07 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2998.24 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$3018.34 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$3045.84 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3045.46 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2946.24 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$3000.10 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$3064.56 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3031.41 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MU",
+          "reason": "$2970.00 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$2982.65 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2912.76 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2955.96 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2971.47 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2985.12 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MU",
+          "reason": "$2875.56 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2900.16 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2927.10 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2921.82 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2919.84 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2996.30 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3043.80 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$3030.12 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3013.92 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2998.20 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$3030.12 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2985.46 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MU",
+          "reason": "$2961.12 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2946.31 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2981.15 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2972.21 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$2947.05 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MU",
+          "reason": "$3009.48 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2980.72 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "SOXX",
+          "reason": "$2991.45 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AVGO",
+          "reason": "$2988.36 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$3009.21 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2998.20 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "AMD",
+          "reason": "$2934.25 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "QCOM",
+          "reason": "$2764.27 exceeds $2465.62 of settled cash (total cash $2465.62; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "NVDA",
+          "reason": "$3092.28 exceeds $2465.62 of settled cash (total cash $6381.16; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "TSM",
+          "reason": "$3052.62 exceeds $458.43 of settled cash (total cash $6371.09; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "NVDA",
+          "reason": "$3126.97 exceeds $458.43 of settled cash (total cash $6371.09; unsettled proceeds are not spendable in a cash account)"
+        },
+        {
+          "rule": "insufficient_cash",
+          "symbol": "MRVL",
+          "reason": "$3105.00 exceeds $458.43 of settled cash (total cash $6371.09; unsettled proceeds are not spendable in a cash account)"
+        }
+      ],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": 0.9999999999999981,
+      "q_value": 1.0,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-b3-base",
+        "display_name": "b3 base",
+        "discipline": "momentum",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `b3` (`B3-concentrated`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/variants/B3-concentrated.json` -- entry 'ema(20) crosses_above ema(50) and close > sma(200)', exit 'close crosses_below sma(200)', stop 0.12, take-profit None, hold cap 180, 4 slots at 0.22 each. This is the BASE cell: the seated card unchanged except for its identifying fields. Its sibling risk1pct cell changes exactly one thing against it, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Baseline against which this base's risk1pct cell is contrasted. Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "NVDA",
+          "AMD",
+          "AVGO",
+          "MU",
+          "MRVL",
+          "TSM",
+          "META",
+          "MSFT",
+          "GOOGL",
+          "NOW",
+          "AMZN",
+          "NFLX"
+        ],
+        "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+        "exit": "close crosses_below sma(200)",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": null,
+        "max_hold_days": 180,
+        "max_positions": 4,
+        "position_pct": "0.22",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "12184.90",
+      "total_return": "0.21849000000000007",
+      "max_drawdown": "-0.06025896636470274",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.6989247311827957,
+      "capital_exposure": 0.5641511505376344,
+      "win_rate": null,
+      "profit_factor": null,
+      "realised_reward_risk": null,
+      "trades": [
+        {
+          "symbol": "NFLX",
+          "entry_date": "2020-03-30",
+          "entry_price": "36.32",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "61",
+          "exit_reason": "open_at_end",
+          "pnl": "560.22",
+          "return_pct": "0.2528616306781252256806528490",
+          "bars_held": 64
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "327",
+          "exit_reason": "open_at_end",
+          "pnl": "836.40",
+          "return_pct": "0.3685588134204055733283980647",
+          "bars_held": 58
+        },
+        {
+          "symbol": "AMZN",
+          "entry_date": "2020-04-08",
+          "entry_price": "101.10",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "21",
+          "exit_reason": "open_at_end",
+          "pnl": "773.66",
+          "return_pct": "0.3644011115821204841976355329",
+          "bars_held": 57
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-04-14",
+          "entry_price": "52.27",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "43",
+          "exit_reason": "open_at_end",
+          "pnl": "14.62",
+          "return_pct": "0.006504687201071360244882341687",
+          "bars_held": 54
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": null,
+      "q_value": null,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-b3-risk1pct",
+        "display_name": "b3 risk1pct",
+        "discipline": "momentum",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `b3` (`B3-concentrated`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/variants/B3-concentrated.json` -- entry 'ema(20) crosses_above ema(50) and close > sma(200)', exit 'close crosses_below sma(200)', stop 0.12, take-profit None, hold cap 180, 4 slots at 0.22 each. Arm `risk1pct`, round 45's follow-up question asked of every seated trading card: position size becomes Decimal('0.01') / this base's stop_loss_pct, quantised to 3dp (0.083 here, since every base in this round carries a 0.12 stop) -- slot count and every other field unchanged. Round 45 measured this exact resizing lower the tail (worst window, IQR) and mean exposure on Creator E's own card without moving the per-window sign pattern, at a cost to the median. Predicted here to repeat that shape on the four other bases, and to be near-inert on the fifth if its own position size barely moves relative to its stop. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "NVDA",
+          "AMD",
+          "AVGO",
+          "MU",
+          "MRVL",
+          "TSM",
+          "META",
+          "MSFT",
+          "GOOGL",
+          "NOW",
+          "AMZN",
+          "NFLX"
+        ],
+        "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+        "exit": "close crosses_below sma(200)",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": null,
+        "max_hold_days": 180,
+        "max_positions": 4,
+        "position_pct": "0.083",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "10826.01",
+      "total_return": "0.08260099999999992",
+      "max_drawdown": "-0.024252462782128337",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.6989247311827957,
+      "capital_exposure": 0.21244083870967742,
+      "win_rate": null,
+      "profit_factor": null,
+      "realised_reward_risk": null,
+      "trades": [
+        {
+          "symbol": "NFLX",
+          "entry_date": "2020-03-30",
+          "entry_price": "36.32",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "23",
+          "exit_reason": "open_at_end",
+          "pnl": "211.23",
+          "return_pct": "0.2528610419459873587435357211",
+          "bars_held": 64
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "123",
+          "exit_reason": "open_at_end",
+          "pnl": "314.61",
+          "return_pct": "0.3685597806986715400295213327",
+          "bars_held": 58
+        },
+        {
+          "symbol": "AMZN",
+          "entry_date": "2020-04-08",
+          "entry_price": "101.10",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "8",
+          "exit_reason": "open_at_end",
+          "pnl": "294.73",
+          "return_pct": "0.3644040553907022749752720079",
+          "bars_held": 57
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-04-14",
+          "entry_price": "52.27",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "16",
+          "exit_reason": "open_at_end",
+          "pnl": "5.44",
+          "return_pct": "0.006504687201071360244882341687",
+          "bars_held": 54
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": null,
+      "q_value": null,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-bmom-base",
+        "display_name": "bmom base",
+        "discipline": "momentum",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `bmom` (`B-momentum`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/base/B-momentum.json` -- entry 'ema(20) crosses_above ema(50) and close > sma(200)', exit 'close crosses_below sma(200)', stop 0.12, take-profit None, hold cap 180, 6 slots at 0.15 each. This is the BASE cell: the seated card unchanged except for its identifying fields. Its sibling risk1pct cell changes exactly one thing against it, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Baseline against which this base's risk1pct cell is contrasted. Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "NVDA",
+          "AMD",
+          "AVGO",
+          "MU",
+          "MRVL",
+          "TSM",
+          "META",
+          "MSFT",
+          "GOOGL",
+          "NOW",
+          "AMZN",
+          "NFLX"
+        ],
+        "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+        "exit": "close crosses_below sma(200)",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": null,
+        "max_hold_days": 180,
+        "max_positions": 6,
+        "position_pct": "0.15",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "12292.91",
+      "total_return": "0.2292909999999999",
+      "max_drawdown": "-0.04583497349378085",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.6989247311827957,
+      "capital_exposure": 0.5471574301075269,
+      "win_rate": null,
+      "profit_factor": null,
+      "realised_reward_risk": null,
+      "trades": [
+        {
+          "symbol": "NFLX",
+          "entry_date": "2020-03-30",
+          "entry_price": "36.32",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "42",
+          "exit_reason": "open_at_end",
+          "pnl": "385.73",
+          "return_pct": "0.2528647472204740927207887560",
+          "bars_held": 64
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "223",
+          "exit_reason": "open_at_end",
+          "pnl": "570.39",
+          "return_pct": "0.3685594655018673834662255592",
+          "bars_held": 58
+        },
+        {
+          "symbol": "AMZN",
+          "entry_date": "2020-04-08",
+          "entry_price": "101.10",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "14",
+          "exit_reason": "open_at_end",
+          "pnl": "515.77",
+          "return_pct": "0.3643987565352550515755263530",
+          "bars_held": 57
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-04-14",
+          "entry_price": "52.27",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "29",
+          "exit_reason": "open_at_end",
+          "pnl": "9.86",
+          "return_pct": "0.006504687201071360244882341687",
+          "bars_held": 54
+        },
+        {
+          "symbol": "MRVL",
+          "entry_date": "2020-04-16",
+          "entry_price": "25.26",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "59",
+          "exit_reason": "open_at_end",
+          "pnl": "578.20",
+          "return_pct": "0.3879651623119556611243072051",
+          "bars_held": 52
+        },
+        {
+          "symbol": "MSFT",
+          "entry_date": "2020-04-16",
+          "entry_price": "174.39",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "8",
+          "exit_reason": "open_at_end",
+          "pnl": "232.96",
+          "return_pct": "0.1669820517231492631458225816",
+          "bars_held": 52
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": null,
+      "q_value": null,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-bmom-risk1pct",
+        "display_name": "bmom risk1pct",
+        "discipline": "momentum",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `bmom` (`B-momentum`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/base/B-momentum.json` -- entry 'ema(20) crosses_above ema(50) and close > sma(200)', exit 'close crosses_below sma(200)', stop 0.12, take-profit None, hold cap 180, 6 slots at 0.15 each. Arm `risk1pct`, round 45's follow-up question asked of every seated trading card: position size becomes Decimal('0.01') / this base's stop_loss_pct, quantised to 3dp (0.083 here, since every base in this round carries a 0.12 stop) -- slot count and every other field unchanged. Round 45 measured this exact resizing lower the tail (worst window, IQR) and mean exposure on Creator E's own card without moving the per-window sign pattern, at a cost to the median. Predicted here to repeat that shape on the four other bases, and to be near-inert on the fifth if its own position size barely moves relative to its stop. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "NVDA",
+          "AMD",
+          "AVGO",
+          "MU",
+          "MRVL",
+          "TSM",
+          "META",
+          "MSFT",
+          "GOOGL",
+          "NOW",
+          "AMZN",
+          "NFLX"
+        ],
+        "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+        "exit": "close crosses_below sma(200)",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": null,
+        "max_hold_days": 180,
+        "max_positions": 6,
+        "position_pct": "0.083",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "11265.89",
+      "total_return": "0.12658900000000006",
+      "max_drawdown": "-0.02675910824979566",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.6989247311827957,
+      "capital_exposure": 0.2996993548387097,
+      "win_rate": null,
+      "profit_factor": null,
+      "realised_reward_risk": null,
+      "trades": [
+        {
+          "symbol": "NFLX",
+          "entry_date": "2020-03-30",
+          "entry_price": "36.32",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "23",
+          "exit_reason": "open_at_end",
+          "pnl": "211.23",
+          "return_pct": "0.2528610419459873587435357211",
+          "bars_held": 64
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "123",
+          "exit_reason": "open_at_end",
+          "pnl": "314.61",
+          "return_pct": "0.3685597806986715400295213327",
+          "bars_held": 58
+        },
+        {
+          "symbol": "AMZN",
+          "entry_date": "2020-04-08",
+          "entry_price": "101.10",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "8",
+          "exit_reason": "open_at_end",
+          "pnl": "294.73",
+          "return_pct": "0.3644040553907022749752720079",
+          "bars_held": 57
+        },
+        {
+          "symbol": "AMD",
+          "entry_date": "2020-04-14",
+          "entry_price": "52.27",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "16",
+          "exit_reason": "open_at_end",
+          "pnl": "5.44",
+          "return_pct": "0.006504687201071360244882341687",
+          "bars_held": 54
+        },
+        {
+          "symbol": "MRVL",
+          "entry_date": "2020-04-16",
+          "entry_price": "25.26",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "33",
+          "exit_reason": "open_at_end",
+          "pnl": "323.40",
+          "return_pct": "0.3879651623119556611243072051",
+          "bars_held": 52
+        },
+        {
+          "symbol": "MSFT",
+          "entry_date": "2020-04-16",
+          "entry_price": "174.39",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "4",
+          "exit_reason": "open_at_end",
+          "pnl": "116.48",
+          "return_pct": "0.1669820517231492631458225816",
+          "bars_held": 52
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": null,
+      "q_value": null,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-ctrend-base",
+        "display_name": "ctrend base",
+        "discipline": "trend",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `ctrend` (`C-trend`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/base/C-trend.json` -- entry 'close > sma(200) and ema(20) crosses_above ema(50)', exit 'ema(20) crosses_below ema(50)', stop 0.12, take-profit None, hold cap 120, 5 slots at 0.18 each. This is the BASE cell: the seated card unchanged except for its identifying fields. Its sibling risk1pct cell changes exactly one thing against it, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Baseline against which this base's risk1pct cell is contrasted. Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "NVDA",
+          "AVGO",
+          "TSM",
+          "ORCL",
+          "SOXX",
+          "NFLX",
+          "MU",
+          "META",
+          "QCOM"
+        ],
+        "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+        "exit": "ema(20) crosses_below ema(50)",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": null,
+        "max_hold_days": 120,
+        "max_positions": 5,
+        "position_pct": "0.18",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "11589.84",
+      "total_return": "0.15898400000000001",
+      "max_drawdown": "-0.04881457354619101",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.6989247311827957,
+      "capital_exposure": 0.4475933978494624,
+      "win_rate": 0.0,
+      "profit_factor": "27.85086978550920452626245567",
+      "realised_reward_risk": "5.545617110322094146166731106",
+      "trades": [
+        {
+          "symbol": "TSM",
+          "entry_date": "2020-05-08",
+          "entry_price": "52.65",
+          "exit_date": "2020-05-18",
+          "exit_price": "50.91",
+          "quantity": "34",
+          "exit_reason": "rule",
+          "pnl": "-59.21",
+          "return_pct": "-0.03307636444891346852131165857",
+          "bars_held": 6
+        },
+        {
+          "symbol": "NFLX",
+          "entry_date": "2020-03-30",
+          "entry_price": "36.32",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "50",
+          "exit_reason": "open_at_end",
+          "pnl": "459.20",
+          "return_pct": "0.2528634361233480176211453744",
+          "bars_held": 64
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "268",
+          "exit_reason": "open_at_end",
+          "pnl": "685.49",
+          "return_pct": "0.3685588627467848079487289776",
+          "bars_held": 58
+        },
+        {
+          "symbol": "SOXX",
+          "entry_date": "2020-04-30",
+          "entry_price": "80.91",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "22",
+          "exit_reason": "open_at_end",
+          "pnl": "206.36",
+          "return_pct": "0.1159312816709924607588678779",
+          "bars_held": 42
+        },
+        {
+          "symbol": "META",
+          "entry_date": "2020-05-01",
+          "entry_price": "201.70",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "8",
+          "exit_reason": "open_at_end",
+          "pnl": "202.96",
+          "return_pct": "0.1257808626673277144273673773",
+          "bars_held": 41
+        },
+        {
+          "symbol": "MU",
+          "entry_date": "2020-06-04",
+          "entry_price": "48.88",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "36",
+          "exit_reason": "open_at_end",
+          "pnl": "95.04",
+          "return_pct": "0.05400981996726677577741407529",
+          "bars_held": 18
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": null,
+      "q_value": null,
+      "notes": []
+    },
+    {
+      "card": {
+        "agent_id": "r48-ctrend-risk1pct",
+        "display_name": "ctrend risk1pct",
+        "discipline": "trend",
+        "purpose": "trading",
+        "desk_only": false,
+        "thesis": "Round 48 cell on the taxable trading book: base `ctrend` (`C-trend`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/base/C-trend.json` -- entry 'close > sma(200) and ema(20) crosses_above ema(50)', exit 'ema(20) crosses_below ema(50)', stop 0.12, take-profit None, hold cap 120, 5 slots at 0.18 each. Arm `risk1pct`, round 45's follow-up question asked of every seated trading card: position size becomes Decimal('0.01') / this base's stop_loss_pct, quantised to 3dp (0.083 here, since every base in this round carries a 0.12 stop) -- slot count and every other field unchanged. Round 45 measured this exact resizing lower the tail (worst window, IQR) and mean exposure on Creator E's own card without moving the per-window sign pattern, at a cost to the median. Predicted here to repeat that shape on the four other bases, and to be near-inert on the fifth if its own position size barely moves relative to its stop. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+        "falsification": "Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+        "universe": [
+          "NVDA",
+          "AVGO",
+          "TSM",
+          "ORCL",
+          "SOXX",
+          "NFLX",
+          "MU",
+          "META",
+          "QCOM"
+        ],
+        "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+        "exit": "ema(20) crosses_below ema(50)",
+        "stop_loss_pct": "0.12",
+        "take_profit_pct": null,
+        "max_hold_days": 120,
+        "max_positions": 5,
+        "position_pct": "0.083",
+        "rank_by": null,
+        "designed_through": "2026-02-13",
+        "reference_only": false,
+        "source_thesis_hash": null,
+        "source_persona": null
+      },
+      "sessions": 93,
+      "starting_equity": "10000.00",
+      "ending_equity": "10737.24",
+      "total_return": "0.0737239999999999",
+      "max_drawdown": "-0.024463428377391905",
+      "sharpe": null,
+      "sortino": null,
+      "volatility": null,
+      "exposure": 0.6989247311827957,
+      "capital_exposure": 0.20745903225806453,
+      "win_rate": 0.0,
+      "profit_factor": "29.22511485451761102603369066",
+      "realised_reward_risk": "5.546045298575472127332035737",
+      "trades": [
+        {
+          "symbol": "TSM",
+          "entry_date": "2020-05-08",
+          "entry_price": "52.65",
+          "exit_date": "2020-05-18",
+          "exit_price": "50.91",
+          "quantity": "15",
+          "exit_reason": "rule",
+          "pnl": "-26.12",
+          "return_pct": "-0.03307375751820196264640709085",
+          "bars_held": 6
+        },
+        {
+          "symbol": "NFLX",
+          "entry_date": "2020-03-30",
+          "entry_price": "36.32",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "23",
+          "exit_reason": "open_at_end",
+          "pnl": "211.23",
+          "return_pct": "0.2528610419459873587435357211",
+          "bars_held": 64
+        },
+        {
+          "symbol": "NVDA",
+          "entry_date": "2020-04-07",
+          "entry_price": "6.94",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "123",
+          "exit_reason": "open_at_end",
+          "pnl": "314.61",
+          "return_pct": "0.3685597806986715400295213327",
+          "bars_held": 58
+        },
+        {
+          "symbol": "SOXX",
+          "entry_date": "2020-04-30",
+          "entry_price": "80.91",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "10",
+          "exit_reason": "open_at_end",
+          "pnl": "93.80",
+          "return_pct": "0.1159312816709924607588678779",
+          "bars_held": 42
+        },
+        {
+          "symbol": "META",
+          "entry_date": "2020-05-01",
+          "entry_price": "201.70",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "4",
+          "exit_reason": "open_at_end",
+          "pnl": "101.48",
+          "return_pct": "0.1257808626673277144273673773",
+          "bars_held": 41
+        },
+        {
+          "symbol": "MU",
+          "entry_date": "2020-06-04",
+          "entry_price": "48.88",
+          "exit_date": null,
+          "exit_price": null,
+          "quantity": "16",
+          "exit_reason": "open_at_end",
+          "pnl": "42.24",
+          "return_pct": "0.05400981996726677577741407529",
+          "bars_held": 18
+        }
+      ],
+      "rejections": [],
+      "rejection_details": [],
+      "benchmark_return": "-0.08712513691938778531039995263",
+      "p_value": null,
+      "q_value": null,
+      "notes": []
+    }
+  ],
+  "alpha": 0.1,
+  "discoveries": 0,
+  "benchmark": "SPY",
+  "benchmark_return": "-0.08712513691938778531039995263"
+}

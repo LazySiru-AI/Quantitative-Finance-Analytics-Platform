@@ -1,0 +1,92 @@
+{
+  "card": {
+    "agent_id": "c02-volatility",
+    "display_name": "Squeeze-Break Gamma Unwind",
+    "discipline": "volatility",
+    "thesis": "In heavily-optioned, high-open-interest instruments (broad index ETFs and major sector SPDRs), a period of contracting realized volatility is systematically accompanied by net-short-gamma positioning among option sellers -- covered-call overlay funds, options-income strategies, and dealer desks that have sold volatility into the calm and hedge by trading against price. While the range holds, that flow is stabilizing: dealers buy dips and sell rips, compressing range further. When price finally closes outside the upper band while realized volatility (ATR-14) is still below its own longer-run baseline (ATR-50), the move has started before the option-selling crowd has repriced -- their short-gamma hedging flips from stabilizing to reinforcing (short calls forces the dealer/writer to buy into the breakout to stay hedged), mechanically extending the initial move for a period afterward. The other side of this trade is the option seller who wrote premium assuming continued range-bound behavior and is now a forced, mechanical buyer. What is expected to go wrong: this mechanism is about the first burst of a volatility regime change, not persistence. In a slow grinding bear (rate-driven, low realized-vol decline) there may be few or no valid low-ATR breakouts to trade, and the strategy should sit mostly in cash -- underperforming a benchmark that keeps drifting down slowly without ever tripping the squeeze condition. It is also vulnerable to a crash that gaps straight through the band with ATR already elevated (already-expanded, not compressed, volatility) -- COVID's opening days looked like that -- in which case the squeeze filter correctly refuses the entry, but a separate, unfiltered breakout would have caught the early down-move it is not designed to catch (this strategy is long-only).",
+    "universe": [
+      "SPY",
+      "QQQ",
+      "DIA",
+      "IWM",
+      "XLF",
+      "XLE"
+    ],
+    "entry": "close crosses_above bb_upper(20,2.0) and atr(14) < atr(50)",
+    "exit": "",
+    "stop_loss_pct": "0.08",
+    "take_profit_pct": "0.20",
+    "max_hold_days": 60,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "10204.97",
+  "total_return": "0.020496999999999987",
+  "max_drawdown": "-0.07980725668750921",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.3870967741935484,
+  "capital_exposure": 0.2842518064516129,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "QQQ",
+      "entry_date": "2020-05-11",
+      "entry_price": "223.60",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "11",
+      "exit_reason": "open_at_end",
+      "pnl": "264.00",
+      "return_pct": "0.1073345259391771019677996422",
+      "bars_held": 35
+    },
+    {
+      "symbol": "DIA",
+      "entry_date": "2020-05-27",
+      "entry_price": "253.86",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "9",
+      "exit_reason": "open_at_end",
+      "pnl": "36.09",
+      "return_pct": "0.01579610809107382021586701331",
+      "bars_held": 24
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2020-05-28",
+      "entry_price": "304.80",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "8",
+      "exit_reason": "open_at_end",
+      "pnl": "28.48",
+      "return_pct": "0.01167979002624671916010498688",
+      "bars_held": 23
+    },
+    {
+      "symbol": "XLF",
+      "entry_date": "2020-05-28",
+      "entry_price": "24.34",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "103",
+      "exit_reason": "open_at_end",
+      "pnl": "-123.60",
+      "return_pct": "-0.04930156121610517666392769104",
+      "bars_held": 23
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

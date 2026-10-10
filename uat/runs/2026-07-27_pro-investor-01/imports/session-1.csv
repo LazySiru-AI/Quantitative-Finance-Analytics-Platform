@@ -1,0 +1,4 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+07/27/2026,07/27/2026,07/28/2026,XLE,"XLE paper fill, UAT persona pro-investor-01",Buy,33,$58.44,"($1,928.52)"
+07/27/2026,07/27/2026,07/28/2026,SPY,"SPY paper fill, UAT persona pro-investor-01",Buy,2,$745.28,"($1,490.56)"
+07/24/2026,07/24/2026,07/24/2026,,UAT opening deposit for persona pro-investor-01,ACH,,,"$10,000.00"

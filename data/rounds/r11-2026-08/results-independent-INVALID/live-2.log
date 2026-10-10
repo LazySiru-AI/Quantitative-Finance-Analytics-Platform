@@ -1,0 +1,20 @@
+window: 2026-03-19 -> 2026-04-17
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+15 cards
+[1/15] r1 A-rotation: 2s trades=9 ret=+29.91% dd=-6.13% rej=11
+[2/15] r1 B-momentum: 1s trades=6 ret=+4.72% dd=-0.18% rej=0
+[3/15] r1 B2-hold-90: 1s trades=6 ret=+4.72% dd=-0.18% rej=0
+[4/15] r1 B3-concentrated: 1s trades=4 ret=+6.28% dd=-0.27% rej=0
+[5/15] r1 B4-tight-stop: 1s trades=6 ret=+4.72% dd=-0.18% rej=0
+[6/15] r1 C-trend: 1s trades=4 ret=+5.14% dd=-0.23% rej=0
+[7/15] r1 c07-chop: 1s trades=2 ret=+1.20% dd=-0.91% rej=0
+[8/15] r1 c09-convex: 0s trades=0 ret=+0.00% dd=0.00% rej=0
+[9/15] r1 c11-breakout: 0s trades=1 ret=+0.26% dd=0.00% rej=0
+[10/15] r1 c14-riskmanaged-wide: 1s trades=0 ret=+0.00% dd=0.00% rej=0
+[11/15] r1 c18-meanrev: 2s trades=13 ret=-2.75% dd=-2.75% rej=0
+[12/15] r1 c19-volatility: 2s trades=0 ret=+0.00% dd=0.00% rej=0
+[13/15] r1 c20-rotation: 1s trades=5 ret=-1.72% dd=-4.32% rej=0
+[14/15] r1 c21-uncorrelated: 1s trades=2 ret=+1.36% dd=-0.56% rej=0
+[15/15] r1 H-trend-diversified: 0s trades=1 ret=+0.33% dd=0.00% rej=0
+r1: 15 agents, 0 discoveries
+overall: 15 agents, 0 discoveries at alpha=0.1

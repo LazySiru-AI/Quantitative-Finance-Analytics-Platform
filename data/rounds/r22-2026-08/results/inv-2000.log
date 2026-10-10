@@ -1,0 +1,13 @@
+window: 1999-12-02 -> 2001-06-29
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+8 cards
+[1/8] r1 r21-channel-breakout-off: 3s trades=26 ret=-15.59% dd=-18.21% rej=4
+[2/8] r1 r21-channel-breakout-on: 2s trades=15 ret=-13.62% dd=-15.95% rej=0
+[3/8] r1 r21-ma-crossover-off: 2s trades=48 ret=-14.51% dd=-17.72% rej=1
+[4/8] r1 r21-ma-crossover-on: 1s trades=20 ret=-4.92% dd=-8.14% rej=0
+[5/8] r1 r21-rsi-pullback-off: 2s trades=39 ret=+12.74% dd=-6.37% rej=0
+[6/8] r1 r21-rsi-pullback-on: 2s trades=20 ret=+4.05% dd=-6.71% rej=0
+[7/8] r1 r21-vol-compression-off: 3s trades=43 ret=-19.91% dd=-22.32% rej=43
+[8/8] r1 r21-vol-compression-on: 3s trades=27 ret=-12.88% dd=-15.47% rej=3
+r1: 8 agents, 7 discoveries
+overall: 8 agents, 7 discoveries at alpha=0.1

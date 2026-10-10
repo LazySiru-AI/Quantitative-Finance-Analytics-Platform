@@ -1,0 +1,16 @@
+{
+  "agent_id": "c06-13f-momentum",
+  "display_name": "13F Conviction + Price Confirmation",
+  "discipline": "momentum",
+  "thesis": "Large institutional managers who file Form 13F disclose share-count changes with a ~45-day lag, so by the time a new or materially increased position is public the manager is often still mid-build: 13F filers of this size (multi-billion-dollar books) cannot fill a real position in a single session without moving the tape, so a disclosed NEW or ADD (measured strictly in shares, never in dollar value, so a repricing is never mistaken for a purchase) frequently reflects buying pressure that continues for weeks or months after the filing becomes public, both from the manager finishing the trade and from other participants who watch 13F disclosures and follow. The seller on the other side of that continued buying is typically a retail holder or an index fund forced to trade at whatever price prevails -- neither is pricing in the institutional accumulation the filing just revealed. This card does not trade the 13F signal directly (the filing is stale by 45+ days and by itself says nothing about timing); it uses cross-manager 13F conviction only to pick a universe of names multiple institutions were accumulating as of the last filing legally visible before this card's eligible window opens, then requires the market's own price action -- a name in an established uptrend that has just pushed to a fresh short-term high -- to confirm the accumulation is still live before risking capital. What is expected to go wrong: every name that survived to the tradeable universe below is a mega-cap technology / semiconductor name (see memo -- this is what 13F conviction resolves to once CUSIP-to-ticker resolution and cross-manager agreement are both applied), so this card is a concentrated bet on continued AI/mega-cap-tech leadership. It is expected to underperform badly in a rotation out of that theme (value/small-cap leadership, a mega-cap-tech-specific drawdown, or a market where breadth broadens away from these exact names) even if the broad market holds up, and the 200-day trend filter will keep it flat-footed at the start of any sharp reversal since it only reduces exposure after the long-term average has already rolled over."
+  ,
+  "universe": ["GOOGL", "MSFT", "AMZN", "META", "NVDA", "AMD", "AVGO", "TSM"],
+  "entry": "close > sma(200) and close crosses_above sma(20)",
+  "exit": "close crosses_below sma(20)",
+  "stop_loss_pct": "0.12",
+  "take_profit_pct": null,
+  "max_hold_days": null,
+  "max_positions": 4,
+  "position_pct": "0.20",
+  "designed_through": "2026-02-13"
+}

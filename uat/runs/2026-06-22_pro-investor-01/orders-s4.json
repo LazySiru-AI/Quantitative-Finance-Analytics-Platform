@@ -1,0 +1,38 @@
+[
+  {
+    "order_id": "s4-1",
+    "session": 4,
+    "decided_on": "2026-06-24",
+    "symbol": "IWM",
+    "side": "sell",
+    "quantity": "6",
+    "order_type": "market_on_open",
+    "thesis": "Closing the full IWM lot. Momentum has stalled since session 1: 1D change is only +0.46% and the close (296.69) is still below the 298.18 high printed on session 1's fill day -- the clean stacked-MA breakout I bought has gone sideways for three sessions running, which is a different trade than the one I entered. Redeploying into names still confirming (XLV) and a possible bond-side diversifier (TLT) rather than holding a stalled position against the 25%-cap headroom I'd rather use elsewhere.",
+    "invalidation": "n/a -- this is the exit.",
+    "stop_level": "n/a",
+    "regime": "transitional",
+    "conviction": 3,
+    "evidence": [
+      "IWM close 296.69 vs session-1 fill 297.28 and session-1 high of range 298.18 via session brief",
+      "1D change +0.46%, the weakest daily move of the three sessions held, via session brief"
+    ]
+  },
+  {
+    "order_id": "s4-2",
+    "session": 4,
+    "decided_on": "2026-06-24",
+    "symbol": "TLT",
+    "side": "buy",
+    "quantity": "13",
+    "order_type": "market_on_open",
+    "thesis": "TLT close 87.38 is back above both sma20 (85.74) and sma50 (85.64) for the first time this week and is within 0.6% of reclaiming sma200 (87.91) -- the first two-timeframe confirmation this name has shown all week, after being the weakest watchlist member in sessions 1-3. A modest diversifier against the two equity-ETF longs.",
+    "invalidation": "A close back below sma50 (~85.64) undoes the reclaim.",
+    "stop_level": "85.50",
+    "regime": "transitional",
+    "conviction": 2,
+    "evidence": [
+      "TLT close 87.38, sma20 85.7410, sma50 85.6406, sma200 87.9108 via session brief watchlist",
+      "1D change +1.4% via session brief watchlist"
+    ]
+  }
+]

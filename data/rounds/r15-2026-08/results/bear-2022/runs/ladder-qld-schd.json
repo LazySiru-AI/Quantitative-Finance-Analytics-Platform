@@ -1,0 +1,180 @@
+{
+  "card": {
+    "agent_id": "ladder-qld-schd",
+    "display_name": "Drawdown Ladder - QLD/SCHD/IEF",
+    "purpose": "trading",
+    "thesis": "A market-wide drawdown of 10%+ is, historically, a better-paying entry for leverage than any single stock's own price action, because it is priced off the index nobody can manipulate one name at a time. The base book (60% SCHD / 40% IEF) is a conservative income-and-duration hold with no leverage in it at all; as SPY's own closing price falls further below its all-time high, QLD is added in three steps (20% at -10%, 60% at -20%, 80% at -30%), funded out of IEF first and only then out of SCHD, so the sleeve most likely to be needed as ballast if the decline keeps going (SCHD, equity) is the one preserved longest. None of this fires on the way down alone: a rung only arms once SPY has closed back above its own 50-session moving average, i.e. once a bounce is already underway, not merely once a level has been crossed. That single gate is not decoration -- on the reference backtest's own 2006-2011 window (strategy-program/tools/drawdown_ladder.py), removing it lets the ladder reach its full 80% leveraged weight at the worst point of the 2008 decline, which produced a 0.06 MAR and a -72.7% max drawdown; adding the confirmation gate back moves those to a 0.25 MAR and a -55.0% max drawdown on the identical price history. The gate is what separates 'buying a leveraged bottom that recovery has already begun to confirm' from 'buying every day the index is merely still falling.' A rung fires once per drawdown cycle (no re-firing on a chop around one threshold) and the ladder fully exits back to the base 60/40 state on a new all-time high 10% above the high the cycle started from, or 60 sessions after that new high, whichever comes first -- so leverage cannot ratchet upward across repeated cycles the way a bare 'halve on a new high' rule would. This would be falsified by: (a) a period where SPY makes a confirmed bounce off a -10%/-20%/-30% drawdown that then fails and revisits new lows before the recovery clock or gain target ever closes the position, repeatedly enough that the confirmation gate is buying into fake bounces rather than real ones; (b) a period where QLD's own daily-leveraged decay against SPY (a 2x fund does not return exactly 2x the index over a multi-month holding period) erodes the strategy's edge faster than the timing signal adds value, which is most visible in a choppy, range-bound market rather than a clean crash-and-recover one; or (c) evidence that a static 60/40/plus-a-fixed-QLD-sleeve blend, rebalanced on a calendar with no drawdown signal at all, matches or beats the ladder on a risk-adjusted basis over the same window -- the reference script's own comparison against exactly that static benchmark is the bar this card has to clear, not the leveraged sleeve held alone.",
+    "signal_symbol": "SPY",
+    "defensive_symbol": "SCHD",
+    "bond_symbol": "IEF",
+    "leveraged_symbol": "QLD",
+    "base_defensive_weight": "0.60",
+    "base_bond_weight": "0.40",
+    "rungs": [
+      {
+        "drawdown": "-0.10",
+        "leveraged_weight": "0.20"
+      },
+      {
+        "drawdown": "-0.20",
+        "leveraged_weight": "0.60"
+      },
+      {
+        "drawdown": "-0.30",
+        "leveraged_weight": "0.80"
+      }
+    ],
+    "confirm_ma": 50,
+    "ath_haircut": "0.5",
+    "recovery_gain": "0.10",
+    "recovery_sessions": 60,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 196,
+  "starting_equity": "100000",
+  "ending_equity": "79213.01",
+  "total_return": "-0.20786990000000005",
+  "max_drawdown": "-0.2113110288500245",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 1.0,
+  "capital_exposure": 0.9957643699838205,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "IEF",
+      "entry_date": "2022-01-03",
+      "entry_price": "114.43",
+      "exit_date": "2022-07-20",
+      "exit_price": "102.43",
+      "quantity": "171",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-2052.52",
+      "return_pct": "-0.1048941792857861978491920033",
+      "bars_held": 136
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2022-01-03",
+      "entry_price": "26.98",
+      "exit_date": "2022-07-20",
+      "exit_price": "24.16",
+      "quantity": "7",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-19.75",
+      "return_pct": "-0.1045748173250026474637297469",
+      "bars_held": 136
+    },
+    {
+      "symbol": "IEF",
+      "entry_date": "2022-01-03",
+      "entry_price": "114.43",
+      "exit_date": "2022-07-22",
+      "exit_price": "103.95",
+      "quantity": "1",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-10.48",
+      "return_pct": "-0.09158437472690727955955606047",
+      "bars_held": 138
+    },
+    {
+      "symbol": "IEF",
+      "entry_date": "2022-01-03",
+      "entry_price": "114.43",
+      "exit_date": "2022-07-25",
+      "exit_price": "103.53",
+      "quantity": "3",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-32.71",
+      "return_pct": "-0.09528387077980716012700632119",
+      "bars_held": 139
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2022-01-03",
+      "entry_price": "26.98",
+      "exit_date": "2022-07-26",
+      "exit_price": "24.14",
+      "quantity": "10",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-28.37",
+      "return_pct": "-0.1051673844029697983526070820",
+      "bars_held": 140
+    },
+    {
+      "symbol": "IEF",
+      "entry_date": "2022-01-03",
+      "entry_price": "114.43",
+      "exit_date": "2022-07-27",
+      "exit_price": "104.09",
+      "quantity": "2",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-20.69",
+      "return_pct": "-0.09040461417460456174080223718",
+      "bars_held": 141
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2022-01-03",
+      "entry_price": "26.98",
+      "exit_date": "2022-07-27",
+      "exit_price": "24.15",
+      "quantity": "14",
+      "exit_reason": "rebalance_trim",
+      "pnl": "-39.57",
+      "return_pct": "-0.1047755023119370290752974025",
+      "bars_held": 141
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2022-01-03",
+      "entry_price": "26.95",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "2220",
+      "exit_reason": "open_at_end",
+      "pnl": "-10133.65",
+      "return_pct": "-0.1693680445063420613219334554",
+      "bars_held": 195
+    },
+    {
+      "symbol": "IEF",
+      "entry_date": "2022-01-03",
+      "entry_price": "114.27",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "173",
+      "exit_reason": "open_at_end",
+      "pnl": "-3297.22",
+      "return_pct": "-0.1667911910585247779933277858",
+      "bars_held": 195
+    },
+    {
+      "symbol": "QLD",
+      "entry_date": "2022-07-22",
+      "entry_price": "24.65",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "734",
+      "exit_reason": "open_at_end",
+      "pnl": "-5152.02",
+      "return_pct": "-0.2847609277687255008169157947",
+      "bars_held": 57
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "benchmark_return": "-0.2513961788788578626915809364",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,53 @@
+{
+  "agent_id": "r46-both-gld",
+  "display_name": "Both sleeves de-risk + metals rotation when AGG is weak and GLD confirms",
+  "purpose": "savings",
+  "thesis": "Round 46 pre-registered cell, on the taxable savings book ($100,000 lump sum, 10-20 year horizon, benchmark 30/70 SPY/AGG, mandate: lowest drawdown of the three books, least return accepted). Base allocation on every card in this field, including the control: 30% SPY, 50% AGG, 10% GLD, 10% BIL -- round 38's and round 43's own figures, reused unmodified. This round asks whether two independently-measured de-risking reads (round 43: the SPY-sleeve placebo, +0.94pp drawdown margin; the AGG-sleeve primary, +1.34pp) stack additively when carried on one card, and whether adding a third rule -- Creator A's metals destination or Creator B's trim-after-gains -- improves the stack further. Every reported figure is treatment MINUS CONTROL, never treatment against the benchmark alone. It is not a proposal to trade anything, and nothing in a measurement round is promotable. Not investment advice. This cell's role: both + Creator A's metals-in-stress destination. Rules, evaluated independently against each condition's own symbol's bars (there is no cross-symbol operator in this engine): `close < sma(200)` true of SPY's own bars -> 10 points move from SPY into BIL; `close < sma(200)` true of AGG's own bars -> 10 points move from AGG into BIL; `close > sma(200)` true of GLD's own bars -> 10 points move from AGG into GLD. When more than one rule fires on the same session, each moves its own ten points; the book does not treat a doubly-fired session specially. No return series was read while choosing any threshold in this field -- every condition and shift is reused, unmodified, from a card this programme has already authored (round 38, round 43, or round 44's trim arm, translated into this card shape's TiltRule). What WAS read and is disclosed rather than hidden is the support of each regressor and the pairwise overlap of the two single-sleeve conditions (ROUND-46-PLAN.md section 6): how often each condition fires, and how often the SPY and AGG conditions fire together -- both touch price only, never a return series, a card or a window outcome.",
+  "falsification": "This round's additivity hypothesis is wrong, in the informative direction, if r46-both's drawdown margin is NOT within +/-0.5pp of the sum of r46-spy-derisk's and r46-agg-derisk's own margins (P1) -- that would show the two reads are not independent, i.e. they fire on overlapping sessions of the same underlying drawdown rather than capturing two separable risks. It is also wrong if any card in this field moves the drawdown margin by more than a few points (P2) -- every prior savings tilt this programme has measured, including both single-sleeve reads this round stacks, has stayed inside a couple of points. It is wrong about the trim rule specifically if r46-trim-high does NOT show a CAGR drag with no drawdown benefit (P3) -- SPY trades more than 15% above its own 200-day mean on a meaningful minority of sessions, mostly inside sustained rallies, so a rule that steps out there is predicted to give back upside without shallowing a drawdown it was never positioned to prevent. It is wrong about the two add-on cards specifically if r46-both-gld or r46-both-trim improves r46-both's own drawdown margin by more than 0.5pp (P4) -- a third rule stacked on an already-stacked card is predicted to add cost (more trades, more whipsaw) without a compensating defensive benefit. b6m-2 and b1y-1 (the 2021-2022 bear windows) are in-sample to the corpus's bond-stress hypothesis, exactly as round 43 pre-registered, and are reported separately. See ROUND-46-PLAN.md section 5 for the full prediction set and section 6 for the pre-registered support and overlap tables.",
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "target_weight": "0.30"
+    },
+    {
+      "symbol": "AGG",
+      "target_weight": "0.50"
+    },
+    {
+      "symbol": "GLD",
+      "target_weight": "0.10"
+    },
+    {
+      "symbol": "BIL",
+      "target_weight": "0.10"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "close < sma(200)",
+      "on_symbol": "SPY",
+      "from_symbol": "SPY",
+      "to_symbol": "BIL",
+      "shift_pct": "0.10",
+      "shift_expr": null
+    },
+    {
+      "condition": "close < sma(200)",
+      "on_symbol": "AGG",
+      "from_symbol": "AGG",
+      "to_symbol": "BIL",
+      "shift_pct": "0.10",
+      "shift_expr": null
+    },
+    {
+      "condition": "close > sma(200)",
+      "on_symbol": "GLD",
+      "from_symbol": "AGG",
+      "to_symbol": "GLD",
+      "shift_pct": "0.10",
+      "shift_expr": null
+    }
+  ],
+  "designed_through": "2026-02-13"
+}

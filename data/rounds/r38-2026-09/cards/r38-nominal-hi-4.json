@@ -1,0 +1,37 @@
+{
+  "agent_id": "r38-nominal-hi-4",
+  "display_name": "Nominal 10y above 4% -> defensive",
+  "purpose": "savings",
+  "thesis": "Round 38 pre-registered cell, on the taxable savings book ($100,000 lump sum, 10-20 year horizon, benchmark 30/70 SPY/AGG, mandate: lowest drawdown of the three books, least return accepted). Base allocation on every card in this field, including the control: 30% SPY (the benchmark's own equity share, so no card here makes an unstated beta bet), 50% AGG, 10% GLD, 10% BIL. Cards differ in exactly one thing -- the tilt condition -- and this round reports treatment MINUS CONTROL, never treatment against the benchmark alone. The programme's prior is a null: rounds 30 and 31 measured every FRED series in the DSL null, and round 32's single inflation near-miss dissolved out of sample. This round predicts a null too (see strategy-program/ROUND-38-PLAN.md section 5); it earns its place by testing a quantity the programme has never formed -- nominal minus breakeven, the real yield -- on a book no macro series has ever been attached to, not by expecting a different answer. It is not a proposal to trade anything, and nothing in a measurement round is promotable. Not investment advice. This cell's role: separability leg A (nominal alone). When `macro(DGS10) > 4.0` is true of the session -- read off SPY's bars, which supply the session axis only, the condition containing no price term at all; the macro series is joined at its RELEASE date, not its reference date, and DGS10/T10YIE are daily market-observed series carrying a one-trading-day lag, so this round inherits none of the monthly CPI/PCE rounds' 45-day placeholder-lag or revision caveats -- ten points of the whole book move from SPY into BIL. Ten points is deliberately larger than the 5-point band: a shift smaller than the band could be absorbed by it and never trade, leaving a tilt that is present, plausible and unread. The threshold is a round number fixed by a concept before any measurement existed, not a searched one (ROUND-38-PLAN.md section 4 justifies each individually), and no return series was read while choosing it.",
+  "falsification": "This round's hypothesis is wrong, not merely unlucky, if the treatment-minus-control margin in max drawdown and MAR is indistinguishable from zero across the eligible 5y and 10y rungs -- which is the outcome pre-registered as most likely. It is also wrong in the more interesting direction if the price-only placebo card (r38-price-placebo) moves the same metrics by as much as any macro card does, because that would show the measured effect is 'a tilt fired sometimes' rather than 'the real discount rate carried information'. The named failure regime is a sustained low-real-yield decade with rising equities: from 2013 to 2021 the real yield sat below 1% almost continuously, so a card that de-risks on high real yields spends that entire stretch identical to its own control and can only differ after 2022 -- which means any margin this round reports on the 10-year rungs is dominated by one regime transition, not by nine years of evidence. See ROUND-38-PLAN.md section 6 for the pre-registered per-window firing matrix.",
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "target_weight": "0.30"
+    },
+    {
+      "symbol": "AGG",
+      "target_weight": "0.50"
+    },
+    {
+      "symbol": "GLD",
+      "target_weight": "0.10"
+    },
+    {
+      "symbol": "BIL",
+      "target_weight": "0.10"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "macro(DGS10) > 4.0",
+      "on_symbol": "SPY",
+      "from_symbol": "SPY",
+      "to_symbol": "BIL",
+      "shift_pct": "0.10",
+      "shift_expr": null
+    }
+  ],
+  "designed_through": "2026-02-13"
+}

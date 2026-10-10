@@ -1,0 +1,218 @@
+{
+  "card": {
+    "agent_id": "r35-absolute-2-rank",
+    "display_name": "R35 country rotation / absolute / 2 slots / rank",
+    "discipline": "mean-reversion",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 35 cell. Form: c20-rotation's absolute per-symbol filter verbatim -- price above its own 100-day average with 14-day RSI between 50 and 75, an established but not extended move, exited when the trend breaks or RSI falls under 40. Applied identically across eight country and regional equity ETFs with a binding 2-slot cap and 0.44 of the book per slot, so at most 88% of capital is deployed -- the same budget every card in this field carries, which is what makes the slot cap a question about concentration rather than about how much money is in the market. Slots are filled by distance above the 200-day trend (highest first), the stated chooser rather than the arbitrary one. The hypothesis under test is not that this rule is good -- the programme's record across rounds 1-33 is that no durable edge has been found, and that record is the prior this card argues against. It is that country dispersion is a source this shape has never been pointed at, and that a rotation which cannot beat its own universe's buy-and-hold on that axis has been shown not to carry information there. This engine has no cross-symbol operator -- entry and exit are evaluated per instrument against that instrument's own bars only -- so the rotation here is produced entirely by the universe, the slot cap and the fill order, exactly as c20-rotation's own thesis says of the sector version. The universe is eight single-country and regional equity ETFs chosen on one mechanical criterion and one legal one: enough stored history to clear every window in the matrix including gfc, and total absence from every savings- or trading-purpose card in the library, because this card is roth-purpose and Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss replaced inside an IRA. EEM, EWZ, FXI and INDA belong in this universe on the merits and are excluded on that second criterion alone. Ticker disjointness is necessary and not sufficient under IRC section 1091: VWO tracks a different index from the taxable book's EEM and ILF is not EWZ, but the economic exposures are close, and nothing here claims the roster is section 1091-safe. EFA contains EWJ, EWG and EWU, so this is not eight independent bets; that redundancy is left in and counted against the field under Benjamini-Hochberg rather than papered over with extra cells. The benchmark is SPY, price-only, in USD, which is the wrong benchmark for a non-US book and is pre-registered as this round's known confound -- the field carries its own within-universe passive control (r35-passive-8-order) so the rotation can be read against buy-and-hold of the same eight names rather than only against a decade of US outperformance. Not a proposal to trade anything. See strategy-program/ROUND-35-PLAN.md.",
+    "falsification": "Wrong if this cell's median exposure-adjusted excess over the eight main windows fails to beat the field's passive control (r35-passive-8-order) by more than 21.2 percentage points, the programme's measured ordering-noise floor. Beating SPY is not the test and failing to beat SPY is not the falsification: a non-US book measured against a US price-only benchmark over 2011-2026 inherits an asset-class gap no rule can close, which is why the control is in the field. A margin inside 21.2pp is a null for this cell whichever side of the control it lands on.",
+    "universe": [
+      "EWJ",
+      "EWG",
+      "EWU",
+      "EWC",
+      "EWY",
+      "ILF",
+      "EFA",
+      "VWO"
+    ],
+    "entry": "close > sma(100) and rsi(14) > 50 and rsi(14) < 75",
+    "exit": "close < sma(100) or rsi(14) < 40",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 2,
+    "position_pct": "0.44",
+    "rank_by": "close / sma(200)",
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 249,
+  "starting_equity": "10000.00",
+  "ending_equity": "13278.05",
+  "total_return": "0.3278049999999999",
+  "max_drawdown": "-0.15661252217128419",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.9959839357429718,
+  "capital_exposure": 0.8360849718875502,
+  "win_rate": 0.875,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "EWG",
+      "entry_date": "2025-08-21",
+      "entry_price": "42.22",
+      "exit_date": "2025-09-03",
+      "exit_price": "40.96",
+      "quantity": "103",
+      "exit_reason": "rule",
+      "pnl": "-129.91",
+      "return_pct": "-0.02987357024922619841514397539",
+      "bars_held": 8
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2025-08-21",
+      "entry_price": "78.97",
+      "exit_date": "2025-10-13",
+      "exit_price": "78.98",
+      "quantity": "55",
+      "exit_reason": "rule",
+      "pnl": "0.42",
+      "return_pct": "0.00009669955218897855342074665869",
+      "bars_held": 36
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2025-10-14",
+      "entry_price": "49.83",
+      "exit_date": "2026-03-16",
+      "exit_price": "55.37",
+      "quantity": "86",
+      "exit_reason": "rule",
+      "pnl": "476.29",
+      "return_pct": "0.1111430024875273604674497944",
+      "bars_held": 104
+    },
+    {
+      "symbol": "EWY",
+      "entry_date": "2025-09-04",
+      "entry_price": "72.82",
+      "exit_date": "2026-03-31",
+      "exit_price": "115.09",
+      "quantity": "60",
+      "exit_reason": "rule",
+      "pnl": "2536.00",
+      "return_pct": "0.5804266227226952302481003387",
+      "bars_held": 143
+    },
+    {
+      "symbol": "ILF",
+      "entry_date": "2026-03-26",
+      "entry_price": "34.38",
+      "exit_date": "2026-05-18",
+      "exit_price": "34.59",
+      "quantity": "126",
+      "exit_reason": "rule",
+      "pnl": "26.32",
+      "return_pct": "0.006075883911835046215499967681",
+      "bars_held": 36
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2026-04-02",
+      "entry_price": "45.58",
+      "exit_date": "2026-05-18",
+      "exit_price": "46.14",
+      "quantity": "94",
+      "exit_reason": "rule",
+      "pnl": "52.50",
+      "return_pct": "0.01225341461820694033403975241",
+      "bars_held": 31
+    },
+    {
+      "symbol": "EWY",
+      "entry_date": "2026-05-19",
+      "entry_price": "168.35",
+      "exit_date": "2026-07-14",
+      "exit_price": "173.58",
+      "quantity": "24",
+      "exit_reason": "rule",
+      "pnl": "125.40",
+      "return_pct": "0.03103653103653103653103653104",
+      "bars_held": 37
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2026-05-19",
+      "entry_price": "90.03",
+      "exit_date": "2026-07-30",
+      "exit_price": "90.55",
+      "quantity": "48",
+      "exit_reason": "rule",
+      "pnl": "24.83",
+      "return_pct": "0.005745769928542337739272094487",
+      "bars_held": 49
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2026-07-14",
+      "entry_price": "59.03",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "74",
+      "exit_reason": "open_at_end",
+      "pnl": "188.70",
+      "return_pct": "0.04319837370828392342876503473",
+      "bars_held": 25
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2026-07-31",
+      "entry_price": "48.41",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "90",
+      "exit_reason": "open_at_end",
+      "pnl": "-22.50",
+      "return_pct": "-0.005164222268126420161123734766",
+      "bars_held": 12
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4377.60 exceeds $1307.99 of settled cash (total cash $5526.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4378.86 exceeds $1307.99 of settled cash (total cash $5526.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4385.15 exceeds $1307.99 of settled cash (total cash $5526.74; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4380.96 exceeds $4266.40 of settled cash (total cash $12961.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4371.84 exceeds $4266.40 of settled cash (total cash $12961.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4417.14 exceeds $4397.36 of settled cash (total cash $8743.63; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4418.96 exceeds $4397.36 of settled cash (total cash $8743.63; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "0.2061513798956434274218897341",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

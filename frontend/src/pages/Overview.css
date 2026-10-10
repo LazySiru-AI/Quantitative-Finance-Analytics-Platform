@@ -1,0 +1,210 @@
+/* Overview page (the landing page). Every new selector here is prefixed `overview-`, per the
+   project convention (see the header comment of Portfolio.css), so it can never collide with a
+   class another page introduces in the shared stylesheet. Everything unprefixed referenced from
+   Overview.tsx (.panel, .stat, .tile, .tile-grid, .value-emphasize, .tile-danger, .status-grid,
+   .data-table, .table-wrap, .callout*, .badge, .muted, .placeholder, .warning-list) is defined in
+   the shared stylesheet (`styles.css`) and reused as-is, matching every other page in this app. */
+
+.overview-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* The "Fetch data" button's row. Right-aligned above the cards so it reads as a page-level action on
+   everything below it, not a control belonging to the first card. The button itself reuses the
+   shared `.symbol-submit` style (as the Macro page's refresh button does), so nothing but placement
+   lives here. */
+/* Now also the page's `<h1>` row: the heading on the left, the action on the right, one line. */
+.overview-toolbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.overview-title {
+  margin: 0;
+}
+
+/* Each section's own heading row, with the link through to the full page it summarises sharing the
+   same line as the heading rather than sitting below the fold -- the summary and its source should
+   read as one unit. */
+/* The mark line above the portfolio tiles -- what those figures are priced at, and how far behind
+   the calendar that is. Typographic rather than boxed in the ordinary case: a current mark is
+   routine information and a bordered panel around it every time would give a non-event the same
+   weight as the stale warning it escalates into. The escalated form reuses the shared
+   `.callout-warn`, which is the same treatment `ReferenceDeskSection` uses further down this page --
+   the two must look alike, because they are making the same kind of statement about the same kind
+   of hazard. */
+.overview-mark-note {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+}
+
+.overview-mark-callout {
+  margin: 0 0 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+.overview-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.overview-section-head h2 {
+  margin: 0;
+}
+
+/* The heading and its qualifier pill read as one unit, so they sit in their own group rather than
+   being spread apart by the row's own `space-between` against the section link. */
+.overview-section-head-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* The reference desk's visible simulated-money line (docs/COPY-STYLE.md rule 6). Sits between the
+   section head and the book cards, so it is read before the first RETURN % underneath it. */
+.overview-desk-caveat {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+}
+
+.overview-section-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+.overview-section-link:hover {
+  text-decoration: underline;
+}
+
+/* A plain link to a page this section's own fetch does not otherwise feed (Strategy Lab out of
+   Programme, Ticker research out of Market context) -- reuses `.overview-section-link`'s styling,
+   just placed below the panel it follows rather than beside a heading. */
+.overview-more-link {
+  margin-top: 0.5rem;
+}
+
+/* --- the card rows -------------------------------------------------------------------------------
+   Tax|Activity, Fear&Greed|Calendar|Attention and the three reference books are `CardGrid`s
+   (components/Card.css), so nothing here sets a column count, a gap or a breakpoint: the grid's own
+   `repeat(auto-fit, minmax(var(--card-min), 1fr))` does all three, and `grid-auto-rows` is what makes
+   each row line up at the bottom. The rules this file used to carry -- `.overview-split`,
+   `.overview-fg-calendar`, `.overview-tax-activity`, `.overview-book-grid`'s named areas and the two
+   `align-items: start` declarations that made raggedness deliberate -- are gone with the layout they
+   described. What remains below is only the per-card styling that is genuinely this page's.
+
+   Two cards compose a component that brings its own `.panel`: `FearGreedGauge` and `EventCalendar`.
+   Flattened here so a card does not read as a box inside a box -- the `Card` root is already the
+   panel, and the nested one only needs to supply its contents. */
+.overview-fg-card .card-body > .panel,
+.overview-calendar-card .event-calendar-panel {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* The Calendar card is `height="auto"` on purpose (see `EventCalendarCard`): `EventCalendar`'s own
+   `ScrollRegion` is the single scroll container, and these three rules are what make it fill the grid
+   track instead of capping itself at its own `md` height inside it. The component's head -- heading
+   and expand control -- stays above the region and so never scrolls. */
+.overview-calendar-card > .card-body {
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.overview-calendar-card .event-calendar-panel {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.overview-calendar-card .event-calendar-scroll {
+  flex: 1 1 auto;
+  max-height: none;
+}
+
+/* Expanded, the card releases its track height (`.card.expanded { height: auto }`), so the body must
+   stop clipping or the list would grow into a box that no longer scrolls. */
+.overview-calendar-card.expanded > .card-body {
+  overflow: visible;
+}
+
+.overview-book-card h3 {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.overview-book-benchmark {
+  margin: 0;
+  font-size: 0.82rem;
+}
+
+.overview-desk-table td:nth-child(2) { text-align: right; }
+.overview-desk-table td:nth-child(3) { text-align: right; }
+
+/* Programme status strip (loop / agent layer / newest round). Each `.stat.tile` is itself the
+   `<Link>` -- `a { color: inherit; text-decoration: none; }` in styles.css already keeps it from
+   reading as ordinary link text, so only the hover affordance and the pill's vertical alignment need
+   a rule here. */
+.overview-programme-tile {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0.3rem 0.4rem;
+  margin: -0.3rem -0.4rem;
+}
+
+.overview-programme-tile:hover {
+  border-color: var(--border);
+  background: color-mix(in srgb, var(--accent) 4%, transparent);
+}
+
+.overview-programme-value {
+  display: flex;
+  align-items: center;
+}
+
+.overview-attention-list li {
+  margin-bottom: 0.35rem;
+}
+
+/* The "could not be checked" notes now sit in the same list as the findings rather than in a second
+   scroll region below it, so the distinction has to be carried by the row: smaller and muted, and
+   without the link that every real finding has. */
+.overview-attention-unavailable {
+  font-size: 0.82rem;
+}
+
+/* The soonest-safe-repurchase date under an attention line. Its own block rather than trailing the
+   link text: the link is the claim ("3 open wash-sale windows"), and the date is what the reader
+   does about it -- folding the second into the first would make the whole sentence one link target
+   and bury the date inside it. */
+.overview-attention-note {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* The always-present way out of the Attention panel. Sits below whatever the panel is currently
+   saying -- including "nothing needs attention" -- so the destination is stable rather than
+   appearing only when something is wrong. */
+.overview-attention-actions {
+  margin-top: 0.6rem;
+}

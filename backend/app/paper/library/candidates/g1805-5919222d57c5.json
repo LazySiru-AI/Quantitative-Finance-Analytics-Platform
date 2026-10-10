@@ -1,0 +1,30 @@
+{
+  "agent_id": "g1805-5919222d57c5",
+  "display_name": "auto g1805 · pairs-rotation (trading)",
+  "discipline": "pairs-rotation",
+  "purpose": "trading",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 7/17-day EMA crossover trigger inside a 67-day SMA regime filter on AMD, TXN, TSM, INTC, MU, SOXX, QCOM, MSFT, ORCL, NFLX, AMZN, NVDA, with a 14% stop and a 180-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "AMD",
+    "TXN",
+    "TSM",
+    "INTC",
+    "MU",
+    "SOXX",
+    "QCOM",
+    "MSFT",
+    "ORCL",
+    "NFLX",
+    "AMZN",
+    "NVDA"
+  ],
+  "entry": "close > sma(67) and ema(7) crosses_above ema(17)",
+  "exit": "ema(7) crosses_below ema(17)",
+  "stop_loss_pct": "0.14",
+  "take_profit_pct": null,
+  "max_hold_days": 180,
+  "max_positions": 4,
+  "position_pct": "0.2",
+  "rank_by": "close / sma(200)",
+  "designed_through": "2026-02-13"
+}

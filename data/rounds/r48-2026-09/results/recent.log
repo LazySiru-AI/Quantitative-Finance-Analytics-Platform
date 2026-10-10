@@ -1,0 +1,15 @@
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r48-arot-base: 4s trades=47 ret=+95.28% dd=-13.24% rej=12
+[2/10] r1 r48-arot-risk1pct: 3s trades=45 ret=+23.44% dd=-3.90% rej=21
+[3/10] r1 r48-b3-base: 2s trades=12 ret=+40.05% dd=-30.41% rej=0
+[4/10] r1 r48-b3-risk1pct: 2s trades=12 ret=+13.28% dd=-14.65% rej=1
+[5/10] r1 r48-bmom-base: 2s trades=17 ret=+24.27% dd=-26.51% rej=0
+[6/10] r1 r48-bmom-risk1pct: 2s trades=16 ret=+12.14% dd=-16.11% rej=2
+[7/10] r1 r48-ctrend-base: 2s trades=14 ret=-2.24% dd=-17.99% rej=0
+[8/10] r1 r48-ctrend-risk1pct: 2s trades=12 ret=-0.47% dd=-7.79% rej=2
+[9/10] r1 r48-i13f-base: 4s trades=55 ret=+45.55% dd=-18.91% rej=0
+[10/10] r1 r48-i13f-risk1pct: 3s trades=42 ret=+27.81% dd=-11.88% rej=5
+r1: 10 agents, 5 discoveries
+overall: 10 agents, 5 discoveries at alpha=0.1

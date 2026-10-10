@@ -1,0 +1,542 @@
+{
+  "card": {
+    "agent_id": "r34-rsi-pullback-off",
+    "display_name": "rsi-pullback / regime off / industries",
+    "discipline": "mean-reversion",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 34 replication cell. Form: an RSI pullback -- 10-day RSI under 40 while price holds above its 200-day SMA -- exited when RSI recovers past 60 -- but with the 200-day SMA regime filter REMOVED from the entry for this cell, which is the paired half of this round's second factor. Brackets: stop only (12% stop, 180-day hold cap, no target), because round 17 measured the three bracket policies as differing by 0.14pp across its whole 48-cell field. This card is one cell of a pre-registered 8x2 grid asking a single question: does round 17's finding -- that form, the regime filter and brackets all sit inside this programme's 21.2 percentage point noise floor -- replicate out of sample on a universe one level below the sector? Sector ETFs average a rule's signal over the dispersion the sector already contains; industry baskets do not, so if form ever changes a result it should change it here first, and a null measured here is a stronger null than round 17's. It is not a proposal to trade anything and nothing in this round will be promoted. The universe is the eight industry baskets XME XRT XHB XSD XOP XBI ITA VNQ -- mechanically defined by the index each tracks, not thesis-picked, and sharing no ticker with any savings- or trading-purpose card in the library, which is the condition this card's roth purpose imposes (Rev. Rul. 2008-5 destroys a wash-sale loss outright when an IRA buys the replacement). Ticker disjointness is necessary and not sufficient under IRC 1091, and no claim is made here that the roster is substantially different from anything the taxable book holds. Every parameter is the textbook constant frozen in app.evolution.ruleforms before either round was conceived; nothing here was tuned. See strategy-program/ROUND-34-PLAN.md for the pre-registration, the decision rule and the six falsifiable predictions.",
+    "falsification": "This cell's thesis is that buying weakness inside strength earns something on an industry basket. It is falsified if this cell's worst adjusted excess is not in `gfc`, `covid` or `bear-2022` -- a mean-reversion rule that buys every dip is supposed to be worst in a sustained decline, and if it is not, the form is not doing what its label says. The round-level falsification, which this cell contributes one observation to, is in `strategy-program/ROUND-34-PLAN.md` section 5: round 17's null replicates unless the eight form-marginals span more than 21.2 percentage points AND the best-versus-worst contrast survives Benjamini-Hochberg over all sixteen cells run. This cell is the regime-filter-removed half of its pair, so it also falsifies the claim that the 200-day filter is load-bearing: if the two regime marginals differ by less than 21.2pp, six of eight forms carry that conjunct on convention alone, on industries as well as on sectors.",
+    "universe": [
+      "XME",
+      "XRT",
+      "XHB",
+      "XSD",
+      "XOP",
+      "XBI",
+      "ITA",
+      "VNQ"
+    ],
+    "entry": "rsi(10) < 40",
+    "exit": "rsi(10) > 60",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 180,
+    "max_positions": 4,
+    "position_pct": "0.20",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 196,
+  "starting_equity": "10000.00",
+  "ending_equity": "8513.33",
+  "total_return": "-0.148667",
+  "max_drawdown": "-0.18086337703113908",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.8571428571428571,
+  "capital_exposure": 0.5572953010204081,
+  "win_rate": 0.4583333333333333,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XBI",
+      "entry_date": "2022-01-06",
+      "entry_price": "105.51",
+      "exit_date": "2022-01-21",
+      "exit_price": "91.14",
+      "quantity": "19",
+      "exit_reason": "stop",
+      "pnl": "-273.08",
+      "return_pct": "-0.1362205627802802428305623313",
+      "bars_held": 10
+    },
+    {
+      "symbol": "XSD",
+      "entry_date": "2022-01-06",
+      "entry_price": "231.59",
+      "exit_date": "2022-01-24",
+      "exit_price": "193.80",
+      "quantity": "8",
+      "exit_reason": "stop",
+      "pnl": "-302.36",
+      "return_pct": "-0.1631978928278423075262317026",
+      "bars_held": 11
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2022-01-24",
+      "entry_price": "41.01",
+      "exit_date": "2022-02-09",
+      "exit_price": "46.51",
+      "quantity": "47",
+      "exit_reason": "rule",
+      "pnl": "258.43",
+      "return_pct": "0.1340773137843909373427342579",
+      "bars_held": 12
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2022-01-06",
+      "entry_price": "87.89",
+      "exit_date": "2022-02-23",
+      "exit_price": "75.52",
+      "quantity": "22",
+      "exit_reason": "stop",
+      "pnl": "-272.19",
+      "return_pct": "-0.1407699707278726507307688329",
+      "bars_held": 32
+    },
+    {
+      "symbol": "XHB",
+      "entry_date": "2022-01-10",
+      "entry_price": "78.90",
+      "exit_date": "2022-02-23",
+      "exit_price": "68.71",
+      "quantity": "25",
+      "exit_reason": "stop",
+      "pnl": "-254.80",
+      "return_pct": "-0.1291761723700887198986058302",
+      "bars_held": 30
+    },
+    {
+      "symbol": "VNQ",
+      "entry_date": "2022-02-14",
+      "entry_price": "103.46",
+      "exit_date": "2022-03-18",
+      "exit_price": "106.29",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "53.71",
+      "return_pct": "0.02732304373925341092921749570",
+      "bars_held": 23
+    },
+    {
+      "symbol": "XBI",
+      "entry_date": "2022-01-21",
+      "entry_price": "91.24",
+      "exit_date": "2022-03-21",
+      "exit_price": "91.64",
+      "quantity": "21",
+      "exit_reason": "rule",
+      "pnl": "8.34",
+      "return_pct": "0.004352727500469718795014717856",
+      "bars_held": 40
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2022-02-24",
+      "entry_price": "70.31",
+      "exit_date": "2022-03-21",
+      "exit_price": "79.44",
+      "quantity": "27",
+      "exit_reason": "rule",
+      "pnl": "246.45",
+      "return_pct": "0.1298218998403893866843660614",
+      "bars_held": 17
+    },
+    {
+      "symbol": "XHB",
+      "entry_date": "2022-02-24",
+      "entry_price": "64.26",
+      "exit_date": "2022-03-21",
+      "exit_price": "71.31",
+      "quantity": "30",
+      "exit_reason": "rule",
+      "pnl": "211.44",
+      "return_pct": "0.1096794273264861500155617803",
+      "bars_held": 17
+    },
+    {
+      "symbol": "XHB",
+      "entry_date": "2022-03-25",
+      "entry_price": "66.54",
+      "exit_date": "2022-05-05",
+      "exit_price": "64.51",
+      "quantity": "30",
+      "exit_reason": "rule",
+      "pnl": "-60.96",
+      "return_pct": "-0.03053802224226029455966336038",
+      "bars_held": 28
+    },
+    {
+      "symbol": "XBI",
+      "entry_date": "2022-04-19",
+      "entry_price": "83.69",
+      "exit_date": "2022-05-09",
+      "exit_price": "68.95",
+      "quantity": "23",
+      "exit_reason": "stop",
+      "pnl": "-339.07",
+      "return_pct": "-0.1761521557299973504704213791",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XSD",
+      "entry_date": "2022-04-07",
+      "entry_price": "188.65",
+      "exit_date": "2022-05-10",
+      "exit_price": "168.31",
+      "quantity": "10",
+      "exit_reason": "stop",
+      "pnl": "-203.45",
+      "return_pct": "-0.1078452160084813146037635834",
+      "bars_held": 22
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2022-04-25",
+      "entry_price": "56.75",
+      "exit_date": "2022-05-12",
+      "exit_price": "48.90",
+      "quantity": "34",
+      "exit_reason": "stop",
+      "pnl": "-266.95",
+      "return_pct": "-0.1383519046385073853329878207",
+      "bars_held": 13
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2022-05-09",
+      "entry_price": "68.03",
+      "exit_date": "2022-05-25",
+      "exit_price": "58.88",
+      "quantity": "28",
+      "exit_reason": "stop",
+      "pnl": "-256.25",
+      "return_pct": "-0.1345257344448877596018563239",
+      "bars_held": 12
+    },
+    {
+      "symbol": "XSD",
+      "entry_date": "2022-05-11",
+      "entry_price": "164.75",
+      "exit_date": "2022-05-31",
+      "exit_price": "183.22",
+      "quantity": "12",
+      "exit_reason": "rule",
+      "pnl": "221.58",
+      "return_pct": "0.1120789074355083459787556904",
+      "bars_held": 13
+    },
+    {
+      "symbol": "ITA",
+      "entry_date": "2022-05-06",
+      "entry_price": "103.56",
+      "exit_date": "2022-06-03",
+      "exit_price": "103.08",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "-9.18",
+      "return_pct": "-0.004665487589193145087516009026",
+      "bars_held": 19
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2022-05-13",
+      "entry_price": "49.63",
+      "exit_date": "2022-06-08",
+      "exit_price": "56.55",
+      "quantity": "40",
+      "exit_reason": "rule",
+      "pnl": "276.73",
+      "return_pct": "0.1393965343542212371549466049",
+      "bars_held": 17
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2022-06-14",
+      "entry_price": "48.64",
+      "exit_date": "2022-07-06",
+      "exit_price": "41.35",
+      "quantity": "41",
+      "exit_reason": "stop",
+      "pnl": "-298.94",
+      "return_pct": "-0.1499017169448010269576379974",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XHB",
+      "entry_date": "2022-06-13",
+      "entry_price": "57.29",
+      "exit_date": "2022-07-20",
+      "exit_price": "60.29",
+      "quantity": "33",
+      "exit_reason": "rule",
+      "pnl": "98.94",
+      "return_pct": "0.05233342325330455894254113839",
+      "bars_held": 25
+    },
+    {
+      "symbol": "XSD",
+      "entry_date": "2022-06-13",
+      "entry_price": "162.23",
+      "exit_date": "2022-07-20",
+      "exit_price": "166.45",
+      "quantity": "11",
+      "exit_reason": "rule",
+      "pnl": "46.37",
+      "return_pct": "0.02598443287588328579513933641",
+      "bars_held": 25
+    },
+    {
+      "symbol": "VNQ",
+      "entry_date": "2022-06-10",
+      "entry_price": "93.53",
+      "exit_date": "2022-07-22",
+      "exit_price": "94.53",
+      "quantity": "21",
+      "exit_reason": "rule",
+      "pnl": "20.94",
+      "return_pct": "0.01066120877945960807074888118",
+      "bars_held": 28
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2022-07-07",
+      "entry_price": "42.46",
+      "exit_date": "2022-07-28",
+      "exit_price": "47.13",
+      "quantity": "48",
+      "exit_reason": "rule",
+      "pnl": "224.09",
+      "return_pct": "0.1099515230020411367561626629",
+      "bars_held": 15
+    },
+    {
+      "symbol": "VNQ",
+      "entry_date": "2022-08-24",
+      "entry_price": "96.24",
+      "exit_date": "2022-09-26",
+      "exit_price": "82.95",
+      "quantity": "20",
+      "exit_reason": "stop",
+      "pnl": "-265.85",
+      "return_pct": "-0.1381182460515378221113881962",
+      "bars_held": 22
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2022-08-31",
+      "entry_price": "64.98",
+      "exit_date": "2022-10-03",
+      "exit_price": "57.16",
+      "quantity": "30",
+      "exit_reason": "stop",
+      "pnl": "-234.65",
+      "return_pct": "-0.1203703703703703703703703704",
+      "bars_held": 22
+    },
+    {
+      "symbol": "XHB",
+      "entry_date": "2022-08-29",
+      "entry_price": "60.84",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "32",
+      "exit_reason": "open_at_end",
+      "pnl": "-134.08",
+      "return_pct": "-0.06886916502301117685733070348",
+      "bars_held": 31
+    },
+    {
+      "symbol": "XBI",
+      "entry_date": "2022-08-31",
+      "entry_price": "84.09",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "24",
+      "exit_reason": "open_at_end",
+      "pnl": "-129.36",
+      "return_pct": "-0.06409799024854322749435129028",
+      "bars_held": 29
+    },
+    {
+      "symbol": "XME",
+      "entry_date": "2022-09-27",
+      "entry_price": "41.84",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "48",
+      "exit_reason": "open_at_end",
+      "pnl": "178.08",
+      "return_pct": "0.08867112810707456978967495220",
+      "bars_held": 11
+    },
+    {
+      "symbol": "XRT",
+      "entry_date": "2022-10-04",
+      "entry_price": "59.38",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "34",
+      "exit_reason": "open_at_end",
+      "pnl": "-30.60",
+      "return_pct": "-0.01515661839003031323678006063",
+      "bars_held": 6
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$2004.88 exceeds $1674.97 of settled cash (total cash $3860.87; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XRT",
+      "reason": "$1965.60 exceeds $1895.13 of settled cash (total cash $5274.22; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XHB",
+      "reason": "$1994.33 exceeds $1895.13 of settled cash (total cash $5274.22; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$1966.31 exceeds $1938.87 of settled cash (total cash $3874.11; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XSD",
+      "reason": "$2021.64 exceeds $1587.43 of settled cash (total cash $3270.48; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XOP",
+      "reason": "$1936.20 exceeds $1587.43 of settled cash (total cash $3270.48; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XBI",
+      "reason": "$2094.98 exceeds $1587.43 of settled cash (total cash $3270.48; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$1932.60 exceeds $1587.43 of settled cash (total cash $3270.48; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XME",
+      "reason": "$1957.60 exceeds $1293.48 of settled cash (total cash $2956.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XHB",
+      "reason": "$1964.52 exceeds $1293.48 of settled cash (total cash $2956.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XBI",
+      "reason": "$1924.79 exceeds $1293.48 of settled cash (total cash $2956.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$1962.24 exceeds $1293.48 of settled cash (total cash $2956.03; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XRT",
+      "reason": "$1945.02 exceeds $970.83 of settled cash (total cash $2619.42; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XHB",
+      "reason": "$1952.28 exceeds $970.83 of settled cash (total cash $2619.42; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XME",
+      "reason": "$1986.72 exceeds $1404.92 of settled cash (total cash $3100.22; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XOP",
+      "reason": "$1919.64 exceeds $1404.92 of settled cash (total cash $3100.22; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XME",
+      "reason": "$1969.44 exceeds $1290.55 of settled cash (total cash $2949.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XSD",
+      "reason": "$1861.92 exceeds $1290.55 of settled cash (total cash $2949.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XOP",
+      "reason": "$1879.20 exceeds $1290.55 of settled cash (total cash $2949.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ITA",
+      "reason": "$1966.23 exceeds $1290.55 of settled cash (total cash $2949.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$1909.69 exceeds $1290.55 of settled cash (total cash $2949.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XRT",
+      "reason": "$2002.70 exceeds $941.18 of settled cash (total cash $2655.93; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XSD",
+      "reason": "$2005.77 exceeds $941.18 of settled cash (total cash $2655.93; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ITA",
+      "reason": "$1940.19 exceeds $941.18 of settled cash (total cash $2655.93; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VNQ",
+      "reason": "$1954.56 exceeds $941.18 of settled cash (total cash $2655.93; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.2513961788788578626915809364",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,38 @@
+{
+  "agent_id": "sso-vig-bnd-mean-reversion",
+  "display_name": "SSO/VIG/BND Buy-Low/Trim-High Allocator (Roth)",
+  "thesis": "Holds SSO (35%, 2x S&P 500 -- ProShares' leveraged-beta sleeve, the Roth-disjoint substitute for QLD's 2x Nasdaq-100 exposure already established by ladder-sso-vig-bnd), VIG (40%, dividend-growth equity -- the Roth-disjoint substitute for SCHD's dividend/quality tilt), BND (25%, the total U.S. bond market -- the Roth-disjoint substitute for a short-duration cash sleeve; SGOV itself, at a 2020-06-01 start, is disqualifying on coverage grounds alone for a contribution-funded arm that needs at least three of the round's five long windows, so this card does not even consider it). The weights (35/40/25) and both rule mechanics are a direct, deliberate re-expression of the already-frozen qld-schd-sgov on Roth-safe tickers -- the identical isolate-one-decision discipline ladder-sso-vig-bnd already used to re-express ladder-qld-schd, extended here from the ladder card shape to the allocation card shape. This is not a claim that SSO, VIG and BND are individually uncorrelated with QLD, SCHD and SGOV -- SSO and QLD both track leveraged-equity beta and will move together in almost every regime -- it is a claim, following THREE-PURPOSES-PLAN.md section 6, that the two baskets must never share a ticker so that a taxable-side tax-loss harvest can never be replaced inside this Roth within the 30-day window Rev. Rul. 2008-5 governs, where an IRA replacement purchase destroys the loss outright with no basis adjustment anywhere -- strictly worse than an ordinary wash sale, which only defers it. This is an argument for disjointness, not a claim that the substitute tickers are not 'substantially identical' to their taxable counterparts under IRC section 1091; the IRS has never ruled on ETF pairs of this shape, and that question stays open and unclaimed here, exactly as ladder-sso-vig-bnd's own thesis states it. What makes it move: two rules, evaluated against SSO's own bars only. Rule 1 -- when SSO closes below its own 150-day SMA (weak relative to its own trend), shift 8 points from VIG into SSO, adding to the leveraged sleeve while it is depressed. Rule 2 -- when SSO closes above its own 20-day/2-sigma upper Bollinger band (statistically extended), shift 8 points from SSO into BND, trimming into strength. Both are mean-reversion bets, the same direction as qld-schd-sgov's own rules on QLD, restated here on SSO because a trend-following version would do the opposite of each. Falsification: this thesis is wrong, not merely unlucky, if SSO's below-150-SMA dips are followed by further, larger declines rather than reversion, and/or if SSO's above-band extensions are followed by continued strength rather than mean reversion -- a sustained one-way trend in the S&P 500 in either direction breaks this card exactly the way qld-schd-sgov's own thesis states for QLD and the Nasdaq-100, because a buy-low/trim-high rule fights a real trend on both ends. This card additionally carries a discrimination purpose the base card does not: it is falsified as 'better than the ladder' if ladder-sso-vig-bnd -- same disjoint tickers, a discrete armed-rung state machine instead of a continuous tilt -- posts a higher median IRR or CAGR in the Roth arm's contribution-funded matrix by a margin outside PROTOCOL.md section 7's noise floor; that comparison, tickers held fixed and mechanism as the one free variable, is the specific thing this card exists to let round 15 measure that no prior round could. Who is on the other side of the trade: on rule 1, whoever sells SSO into this book's buy is, in a genuine bear market, someone correctly cutting a leveraged-beta position while it is still falling; on rule 2, whoever buys the SSO this book trims into strength is someone correctly staying long a trend that keeps running. Both counterparties are 'right' exactly in the regime that falsifies this card -- a sustained trend, not a mean-reverting chop. Parameter count against the ten-parameter budget: 2 free sleeve weights (SSO, VIG; BND is determined) plus 1 band_pct plus rule 1 (the 150-day SMA period, the 0.08 shift_pct = 2 parameters) plus rule 2 (the 20-day/2-sigma Bollinger band = 2 parameters, plus the 0.08 shift_pct = 1) totals 2 + 1 + 2 + 3 = 8 of 10. Expected window eligibility: bound by BND's 2007-04-10 start (SSO 2006-06-21, VIG 2006-05-02, BND 2007-04-10 -- BND is latest), which clears every one of the round's five long windows (the earliest, h10y-1 and h5y-1, both start 2013-09-03, nearly six years after BND's own start) -- eligible in all five, comfortably clearing the >=3-window contribution-arm gate, unlike a card that included SGOV would.",
+  "sleeves": [
+    {
+      "symbol": "SSO",
+      "target_weight": "0.35"
+    },
+    {
+      "symbol": "VIG",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "BND",
+      "target_weight": "0.25"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "close < sma(150)",
+      "on_symbol": "SSO",
+      "from_symbol": "VIG",
+      "to_symbol": "SSO",
+      "shift_pct": "0.08"
+    },
+    {
+      "condition": "close > bb_upper(20,2)",
+      "on_symbol": "SSO",
+      "from_symbol": "SSO",
+      "to_symbol": "BND",
+      "shift_pct": "0.08"
+    }
+  ],
+  "designed_through": "2026-02-13",
+  "purpose": "roth"
+}

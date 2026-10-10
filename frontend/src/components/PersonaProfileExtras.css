@@ -1,0 +1,248 @@
+/**
+ * Styles for the three persona-profile extras: the regime section appended inside
+ * `PersonaProfile.tsx`, `PersonaStrategyCard.tsx`, and `PersonaProfileDiff.tsx`.
+ *
+ * Reuses `.panel`, `.placeholder`, `.muted`, `.badge`, `.callout` variants, `.persona-card-section`,
+ * `.persona-card-subhead`, `.persona-claim-list`/`.persona-claim`, `.persona-vocab-list`/
+ * `.persona-vocab-chip` and `.status-grid` (via `StatGrid`) verbatim from `Personas.css`/
+ * `styles.css` -- only what is genuinely new lives here.
+ */
+
+/* --- regime section (PersonaProfile.tsx) ------------------------------------------------------ */
+
+.persona-profile-regime-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.persona-profile-regime-summary {
+  margin: 0;
+}
+
+.persona-profile-regime-sectors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.persona-profile-regime-sectors-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* --- strategy card draft (PersonaStrategyCard.tsx) ---------------------------------------------- */
+
+.persona-strategy-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-strategy-card-hint {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.persona-strategy-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-strategy-card-version {
+  align-self: flex-start;
+}
+
+.persona-strategy-card-unmapped {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.persona-strategy-card-reason-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.persona-strategy-card-reason {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.persona-strategy-card-mapped {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-strategy-card-rule-shape,
+.persona-strategy-card-rationale {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.persona-strategy-card-fidelity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+}
+
+.persona-strategy-card-fidelity-summary {
+  font-weight: 600;
+}
+
+.persona-strategy-card-unrepresentable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.persona-strategy-card-caveat {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.persona-strategy-card-caveat-label {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.72rem;
+}
+
+.persona-strategy-card-history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.persona-strategy-card-history-empty {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.persona-strategy-card-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.persona-strategy-card-history-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.persona-strategy-card-history-filename {
+  font-family: var(--font-mono);
+}
+
+/* --- profile drift diff (PersonaProfileDiff.tsx) ------------------------------------------------ */
+
+.persona-profile-diff {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-profile-diff-controls {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.persona-profile-diff-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.persona-profile-diff-select {
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+}
+
+.persona-profile-diff-idle {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.persona-profile-diff-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-profile-diff-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.persona-profile-diff-empty {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.persona-profile-diff-change {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.persona-profile-diff-change-section {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* "Promote to library" on a drafted, mapped persona card. A quiet outline pill -- promoting is an
+   available next step, not the panel's point. Sits under the mapped card block. */
+.persona-strategy-card-promote {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+.persona-strategy-card-promote button {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-2);
+  background: transparent;
+  color: var(--accent-2);
+  cursor: pointer;
+}
+.persona-strategy-card-promote button:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent-2) 12%, transparent);
+}
+.persona-strategy-card-promote button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}

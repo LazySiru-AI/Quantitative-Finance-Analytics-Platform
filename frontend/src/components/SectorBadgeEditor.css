@@ -1,0 +1,44 @@
+/**
+ * Scoped styles for `SectorBadgeEditor.tsx`. Classes are prefixed `sector-badge-` to stay out of
+ * the shared `styles.css` namespace, matching `AllocationPie.css`'s `alloc-pie-` convention. Reuses
+ * the shared `.badge`/`.badge.sector-badge` classes for the read-only state -- this file only adds
+ * the editing-mode chrome, plus a pointer cursor on the badge itself as the one visual hint that it
+ * is interactive at all.
+ */
+
+.badge.sector-badge {
+  cursor: pointer;
+}
+
+.sector-badge-editing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.sector-badge-select {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.1rem 0.3rem;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+
+.sector-badge-select:disabled {
+  opacity: 0.6;
+}
+
+.sector-badge-saving {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.sector-badge-error {
+  color: var(--down);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}

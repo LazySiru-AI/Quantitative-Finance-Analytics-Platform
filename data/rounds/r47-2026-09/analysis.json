@@ -1,0 +1,375 @@
+{
+  "round": 47,
+  "n_cells": 12,
+  "arm_vs_passive": {
+    "power": {
+      "dip": {
+        "contrast": {
+          "a": "r47-power-dip",
+          "b": "r47-power-passive",
+          "median_diff": -0.009447487224049457,
+          "mean_paired_diff": -0.018467716163699265,
+          "windows_a_gt_b": 4,
+          "windows_a_lt_b": 4,
+          "n_windows": 8,
+          "p_signflip": 0.453125,
+          "inside_floor": true
+        },
+        "fair_median_diff": -0.002261662396957142,
+        "hindsight_median_diff": -0.0261223562254134,
+        "mean_exposure_arm": 0.7670731553870989,
+        "mean_exposure_passive": 0.9901362865168539,
+        "trades_arm": 31,
+        "trades_passive": 32
+      },
+      "trim": {
+        "contrast": {
+          "a": "r47-power-trim",
+          "b": "r47-power-passive",
+          "median_diff": 0.023648209490662153,
+          "mean_paired_diff": 0.029396137970471185,
+          "windows_a_gt_b": 6,
+          "windows_a_lt_b": 1,
+          "n_windows": 8,
+          "p_signflip": 0.03125,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.04694809138959044,
+        "hindsight_median_diff": 0.0033427260714623333,
+        "mean_exposure_arm": 0.9020341393944854,
+        "mean_exposure_passive": 0.9901362865168539,
+        "trades_arm": 78,
+        "trades_passive": 32
+      },
+      "dip-trim": {
+        "contrast": {
+          "a": "r47-power-dip-trim",
+          "b": "r47-power-passive",
+          "median_diff": -0.000836931131287813,
+          "mean_paired_diff": -0.00915506802823805,
+          "windows_a_gt_b": 5,
+          "windows_a_lt_b": 3,
+          "n_windows": 8,
+          "p_signflip": 0.75,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.017765092818004934,
+        "hindsight_median_diff": -0.017338570469184314,
+        "mean_exposure_arm": 0.6933890901528457,
+        "mean_exposure_passive": 0.9901362865168539,
+        "trades_arm": 86,
+        "trades_passive": 32
+      }
+    },
+    "defense": {
+      "dip": {
+        "contrast": {
+          "a": "r47-defense-dip",
+          "b": "r47-defense-passive",
+          "median_diff": -0.005517323087668266,
+          "mean_paired_diff": -0.0042787335080382615,
+          "windows_a_gt_b": 6,
+          "windows_a_lt_b": 2,
+          "n_windows": 8,
+          "p_signflip": 0.875,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.0047524814864789225,
+        "hindsight_median_diff": 0.008465338593881856,
+        "mean_exposure_arm": 0.7513563867636619,
+        "mean_exposure_passive": 0.955803125,
+        "trades_arm": 28,
+        "trades_passive": 32
+      },
+      "trim": {
+        "contrast": {
+          "a": "r47-defense-trim",
+          "b": "r47-defense-passive",
+          "median_diff": 0.007584287398590597,
+          "mean_paired_diff": 0.009147004389809157,
+          "windows_a_gt_b": 4,
+          "windows_a_lt_b": 2,
+          "n_windows": 8,
+          "p_signflip": 0.125,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.008264695463465107,
+        "hindsight_median_diff": 0.0038371517829211034,
+        "mean_exposure_arm": 0.8696718129332335,
+        "mean_exposure_passive": 0.955803125,
+        "trades_arm": 85,
+        "trades_passive": 32
+      },
+      "dip-trim": {
+        "contrast": {
+          "a": "r47-defense-dip-trim",
+          "b": "r47-defense-passive",
+          "median_diff": 0.0008057891718707185,
+          "mean_paired_diff": -0.0015414041222573168,
+          "windows_a_gt_b": 4,
+          "windows_a_lt_b": 4,
+          "n_windows": 8,
+          "p_signflip": 0.9453125,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.016202835581940005,
+        "hindsight_median_diff": -0.005281891512903751,
+        "mean_exposure_arm": 0.6804758120379685,
+        "mean_exposure_passive": 0.955803125,
+        "trades_arm": 69,
+        "trades_passive": 32
+      }
+    },
+    "control": {
+      "dip": {
+        "contrast": {
+          "a": "r47-control-dip",
+          "b": "r47-control-passive",
+          "median_diff": 0.001220187738163795,
+          "mean_paired_diff": 0.008641404264364,
+          "windows_a_gt_b": 6,
+          "windows_a_lt_b": 2,
+          "n_windows": 8,
+          "p_signflip": 0.078125,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.003938820401412908,
+        "hindsight_median_diff": 0.013966385853179173,
+        "mean_exposure_arm": 0.8595106618432353,
+        "mean_exposure_passive": 0.965439875,
+        "trades_arm": 31,
+        "trades_passive": 32
+      },
+      "trim": {
+        "contrast": {
+          "a": "r47-control-trim",
+          "b": "r47-control-passive",
+          "median_diff": 0.0,
+          "mean_paired_diff": 0.002034117500520104,
+          "windows_a_gt_b": 1,
+          "windows_a_lt_b": 1,
+          "n_windows": 8,
+          "p_signflip": 1.0,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.0,
+        "hindsight_median_diff": 0.008136470002080416,
+        "mean_exposure_arm": 0.9625995182349397,
+        "mean_exposure_passive": 0.965439875,
+        "trades_arm": 42,
+        "trades_passive": 32
+      },
+      "dip-trim": {
+        "contrast": {
+          "a": "r47-control-dip-trim",
+          "b": "r47-control-passive",
+          "median_diff": 0.00579063168457692,
+          "mean_paired_diff": 0.012157144225648392,
+          "windows_a_gt_b": 6,
+          "windows_a_lt_b": 2,
+          "n_windows": 8,
+          "p_signflip": 0.078125,
+          "inside_floor": true
+        },
+        "fair_median_diff": 0.003938820401412908,
+        "hindsight_median_diff": 0.028029345698316745,
+        "mean_exposure_arm": 0.85559123901191,
+        "mean_exposure_passive": 0.965439875,
+        "trades_arm": 33,
+        "trades_passive": 32
+      }
+    }
+  },
+  "dip_trim_vs_max_component": {
+    "power": {
+      "dip_median": 0.058460554155742826,
+      "trim_median": 0.09155625087045444,
+      "dip_trim_median": 0.06707111024850447,
+      "max_dip_trim": 0.09155625087045444,
+      "dip_trim_minus_max": -0.024485140621949966,
+      "dip_trim_le_max": true
+    },
+    "defense": {
+      "dip_median": -0.014381494291643636,
+      "trim_median": -0.0012798838053847733,
+      "dip_trim_median": -0.008058382032104652,
+      "max_dip_trim": -0.0012798838053847733,
+      "dip_trim_minus_max": -0.006778498226719878,
+      "dip_trim_le_max": true
+    },
+    "control": {
+      "dip_median": -0.010960453836366854,
+      "trim_median": -0.01218064157453065,
+      "dip_trim_median": -0.006390009889953729,
+      "max_dip_trim": -0.010960453836366854,
+      "dip_trim_minus_max": 0.004570443946413125,
+      "dip_trim_le_max": false
+    }
+  },
+  "dip_trim_le_max_in_n_of_3": 2,
+  "days_to_first_entry": {
+    "r47-power-dip": {
+      "q4-2018": 0,
+      "covid": 8,
+      "bear-2022": 0,
+      "chop-2015": 0,
+      "chop-2011": 8,
+      "bull-2024": 47,
+      "recent": 0,
+      "gfc": 8
+    },
+    "r47-power-dip-trim": {
+      "q4-2018": 38,
+      "covid": 9,
+      "bear-2022": 0,
+      "chop-2015": 0,
+      "chop-2011": 8,
+      "bull-2024": 48,
+      "recent": 0,
+      "gfc": 13
+    },
+    "r47-defense-dip": {
+      "q4-2018": 19,
+      "covid": 0,
+      "bear-2022": 0,
+      "chop-2015": 0,
+      "chop-2011": 0,
+      "bull-2024": 7,
+      "recent": 20,
+      "gfc": 13
+    },
+    "r47-defense-dip-trim": {
+      "q4-2018": 19,
+      "covid": 0,
+      "bear-2022": 0,
+      "chop-2015": 8,
+      "chop-2011": 12,
+      "bull-2024": 63,
+      "recent": 20,
+      "gfc": 45
+    },
+    "r47-control-dip": {
+      "q4-2018": 6,
+      "covid": 6,
+      "bear-2022": 3,
+      "chop-2015": 0,
+      "chop-2011": 0,
+      "bull-2024": 14,
+      "recent": 53,
+      "gfc": 22
+    },
+    "r47-control-dip-trim": {
+      "q4-2018": 6,
+      "covid": 6,
+      "bear-2022": 3,
+      "chop-2015": 0,
+      "chop-2011": 0,
+      "bull-2024": 14,
+      "recent": 85,
+      "gfc": 22
+    }
+  },
+  "trim_minus_passive_bull_vs_recent": {
+    "power": {
+      "bull_2024": -0.00703907744780892,
+      "recent": 0.013724529590733586
+    },
+    "defense": {
+      "bull_2024": -0.011709907769976956,
+      "recent": 0.019384211335819163
+    },
+    "control": {
+      "bull_2024": -0.0034727174515247344,
+      "recent": 0.019745657455685565
+    }
+  },
+  "bh": [
+    {
+      "cell": "r47-control-dip",
+      "vs": "r47-control-passive",
+      "median_diff": 0.001220187738163795,
+      "p": 0.078125,
+      "q": 0.171875
+    },
+    {
+      "cell": "r47-control-dip-trim",
+      "vs": "r47-control-passive",
+      "median_diff": 0.00579063168457692,
+      "p": 0.078125,
+      "q": 0.171875
+    },
+    {
+      "cell": "r47-control-passive",
+      "vs": "r47-control-passive",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    },
+    {
+      "cell": "r47-control-trim",
+      "vs": "r47-control-passive",
+      "median_diff": 0.0,
+      "p": 1.0,
+      "q": 1.0
+    },
+    {
+      "cell": "r47-defense-dip",
+      "vs": "r47-control-passive",
+      "median_diff": -0.0022008527171129867,
+      "p": 0.453125,
+      "q": 0.6796875
+    },
+    {
+      "cell": "r47-defense-dip-trim",
+      "vs": "r47-control-passive",
+      "median_diff": 0.004122259542425998,
+      "p": 0.40625,
+      "q": 0.6796875
+    },
+    {
+      "cell": "r47-defense-passive",
+      "vs": "r47-control-passive",
+      "median_diff": 0.0033164703705552794,
+      "p": 0.6796875,
+      "q": 0.815625
+    },
+    {
+      "cell": "r47-defense-trim",
+      "vs": "r47-control-passive",
+      "median_diff": 0.010900757769145876,
+      "p": 0.5703125,
+      "q": 0.7604166666666666
+    },
+    {
+      "cell": "r47-power-dip",
+      "vs": "r47-control-passive",
+      "median_diff": 0.07064119573027347,
+      "p": 0.0546875,
+      "q": 0.171875
+    },
+    {
+      "cell": "r47-power-dip-trim",
+      "vs": "r47-control-passive",
+      "median_diff": 0.07925175182303512,
+      "p": 0.0390625,
+      "q": 0.171875
+    },
+    {
+      "cell": "r47-power-passive",
+      "vs": "r47-control-passive",
+      "median_diff": 0.08008868295432293,
+      "p": 0.0859375,
+      "q": 0.171875
+    },
+    {
+      "cell": "r47-power-trim",
+      "vs": "r47-control-passive",
+      "median_diff": 0.10373689244498509,
+      "p": 0.0390625,
+      "q": 0.171875
+    }
+  ],
+  "min_q": 0.171875,
+  "any_arm_edge_before_bh": false,
+  "clears_decision_rule": false
+}

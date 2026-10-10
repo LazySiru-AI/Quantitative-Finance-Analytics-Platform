@@ -1,0 +1,10 @@
+{
+  "B-wide": {
+    "universe_knowable_from": "2026-03-31",
+    "reason": "Universe drawn from data/universe/index-constituents.json, whose membership is only knowable from the 2026-03-31 N-PORT period. Today's S&P 500 excludes the companies that collapsed, so a result on any window starting earlier is survivorship-flattered."
+  },
+  "C-wide": {
+    "universe_knowable_from": "2026-03-31",
+    "reason": "Same as B-wide: mechanically selected from the current index constituent list, so the basket was not knowable before the filing it came from."
+  }
+}

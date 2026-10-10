@@ -1,0 +1,11 @@
+window: 2026-02-17 -> 2026-05-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+6 cards
+[1/6] r1 A-rotation: 3s trades=16 ret=+45.53% dd=-14.11% rej=15
+[2/6] r1 B-momentum-cap126: 1s trades=6 ret=+29.55% dd=-4.18% rej=0
+[3/6] r1 B-momentum: 1s trades=6 ret=+29.55% dd=-4.18% rej=0
+[4/6] r1 B3-concentrated-cap126: 1s trades=4 ret=+37.88% dd=-5.47% rej=0
+[5/6] r1 B3-concentrated: 1s trades=4 ret=+37.88% dd=-5.47% rej=0
+[6/6] r1 C-trend: 1s trades=4 ret=+12.84% dd=-4.05% rej=0
+r1: 6 agents, 0 discoveries
+overall: 6 agents, 0 discoveries at alpha=0.1

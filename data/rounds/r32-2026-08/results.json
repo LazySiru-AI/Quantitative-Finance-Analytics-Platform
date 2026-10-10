@@ -1,0 +1,85 @@
+{
+  "seed": 32,
+  "horizon": 63,
+  "cohort": [
+    "AEP",
+    "BA",
+    "CAT",
+    "CNP",
+    "CVX",
+    "DIS",
+    "DTE",
+    "ED",
+    "GD",
+    "GE",
+    "HON",
+    "HPQ",
+    "IBM",
+    "IP",
+    "JNJ",
+    "KO",
+    "KR",
+    "LMT",
+    "MCD",
+    "MMM",
+    "MO",
+    "MRK",
+    "MSI",
+    "PG",
+    "RTX",
+    "XOM"
+  ],
+  "split": "1993-01-01",
+  "test0_baseline_spy": {
+    "n": 130,
+    "spread": -0.036560357770281486,
+    "p": 0.010494752623688156
+  },
+  "test1_full": {
+    "label": "1970-2026 full",
+    "n": 222,
+    "n_hot": 108,
+    "n_cool": 114,
+    "hot": 0.01629152319242822,
+    "cool": 0.040383800358623184,
+    "spread": -0.024092277166194963,
+    "p": 0.033483258370814596
+  },
+  "test1_oos": {
+    "label": "1970-1992 OOS",
+    "n": 89,
+    "n_hot": 45,
+    "n_cool": 44,
+    "hot": 0.028711766831978174,
+    "cool": 0.03686527824937946,
+    "spread": -0.00815351141740129,
+    "p": 0.5107446276861569
+  },
+  "test1_insample": {
+    "label": "1993-2026 in-sample",
+    "n": 133,
+    "n_hot": 63,
+    "n_cool": 70,
+    "hot": 0.007419920592749689,
+    "cool": 0.04259544282729066,
+    "spread": -0.03517552223454097,
+    "p": 0.02048975512243878
+  },
+  "test2_rate_control": {
+    "n": 222,
+    "spread_raw": -0.024092277166194963,
+    "spread_rate_residual": -0.022905290375968432,
+    "p_rate_residual": 0.03698150924537731
+  },
+  "test3_exploitability": {
+    "hot_fwd": 0.01629152319242822,
+    "hot_cash_floor": 0.013937037037037036,
+    "hot_excess_over_cash": 0.002354486155391188,
+    "cool_fwd": 0.040383800358623184,
+    "cool_cash_floor": 0.015601535087719297,
+    "cool_excess_over_cash": 0.024782265270903877
+  },
+  "oos_sign_holds": true,
+  "survives_rate_control": true,
+  "card_candidate": true
+}

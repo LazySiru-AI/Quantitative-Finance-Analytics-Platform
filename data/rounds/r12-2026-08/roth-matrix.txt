@@ -1,0 +1,425 @@
+Roth strategy matrix -- the two Roth candidate families run through contributions.py ($7,500/year) over app.tournament's own round-5 window calendar (strategy-program/tools/windows.py: R5_LADDER_WINDOW_TAGS + R5_BEAR_WINDOW_TAGS).
+This is NOT a StrategyCard run and these numbers are NOT comparable to a card's adjusted_excess in score.py -- contribution-funded IRR/TWR here, lump-sum excess there. See this script's module docstring.
+A row marked '*' never left its own initial defensive weight within this window -- its lookback exceeds the window's own session count. See the module docstring.
+
+Symbol coverage (first stored session):
+  QLD    2006-06-21
+  SCHD   2011-10-20
+  IEF    2002-07-30
+  SPY    1993-01-29
+  QQQ    1999-03-10
+
+=== h10y-1 (ladder, 10y): 2013-09-03 .. 2023-08-31 -- decade, early endpoint (2517 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $    188,658  $   82,500   2.29x   14.25%   15.44%    -55.5%   0.28    17       4.0%       4.8%      -2.8%      -2.0%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $    259,044  $   82,500   3.14x   19.57%   19.25%    -55.0%   0.35    68       9.3%       8.6%       2.5%       1.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $    212,667  $   82,500   2.58x   16.26%   16.53%    -52.2%   0.32    88       6.0%       5.9%      -0.8%      -1.0%
+static 40/30/30 QLD/SCHD/IEF     $    196,727  $   82,500   2.38x   14.96%   16.13%    -42.2%   0.38    29       4.7%       5.5%      -2.1%      -1.4%
+voltarget 12% QLD/IEF (lb20)     $    153,511  $   82,500   1.86x   10.77%   11.84%    -36.1%   0.33   338       0.5%       1.2%      -6.3%      -5.6%
+risk-budgeted core (lb20)        $    171,567  $   82,500   2.08x   12.65%   13.42%    -33.5%   0.40   393       2.4%       2.8%      -4.4%      -4.1%
+circuit-breaker (lb20)           $    155,221  $   82,500   1.88x   10.96%   12.13%    -22.5%   0.54    32       0.7%       1.5%      -6.1%      -5.3%
+SPY buy & hold                   $    148,740  $   82,500   1.80x   10.23%   10.67%    -34.1%   0.31     0       0.0%       0.0%      -6.8%      -6.8%
+QQQ buy & hold                   $    223,116  $   82,500   2.70x   17.07%   17.48%    -42.4%   0.41     0       6.8%       6.8%       0.0%       0.0%
+
+=== h10y-2 (ladder, 10y): 2016-02-16 .. 2026-02-13 -- decade, recent endpoint (2515 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $    237,981  $   82,500   2.88x   19.48%   20.02%    -57.0%   0.35    11       6.0%       6.4%       0.5%       0.5%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $    239,581  $   82,500   2.90x   19.59%   20.32%    -56.0%   0.36    58       6.1%       6.7%       0.6%       0.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $    234,702  $   82,500   2.84x   19.23%   19.22%    -53.1%   0.36    73       5.8%       5.6%       0.2%      -0.3%
+static 40/30/30 QLD/SCHD/IEF     $    193,481  $   82,500   2.35x   15.80%   16.89%    -43.2%   0.39    28       2.3%       3.3%      -3.2%      -2.7%
+voltarget 12% QLD/IEF (lb20)     $    142,879  $   82,500   1.73x   10.34%   11.38%    -36.4%   0.31   301      -3.1%      -2.2%      -8.7%      -8.2%
+risk-budgeted core (lb20)        $    159,970  $   82,500   1.94x   12.38%   13.65%    -34.2%   0.40   376      -1.1%       0.0%      -6.6%      -5.9%
+circuit-breaker (lb20)           $    151,601  $   82,500   1.84x   11.41%   12.82%    -22.8%   0.56    32      -2.0%      -0.8%      -7.6%      -6.7%
+SPY buy & hold                   $    169,802  $   82,500   2.06x   13.46%   13.60%    -35.0%   0.39     0       0.0%       0.0%      -5.5%      -6.0%
+QQQ buy & hold                   $    231,532  $   82,500   2.81x   18.99%   19.56%    -43.6%   0.45     0       5.5%       6.0%       0.0%       0.0%
+
+=== h5y-1 (ladder, 5y): 2013-09-03 .. 2018-08-31 -- half-decade, early (1260 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $    107,016  $   45,000   2.38x   29.54%   25.94%    -34.5%   0.75     7      17.7%      13.8%       9.6%       6.1%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $    111,750  $   45,000   2.48x   31.09%   26.59%    -25.6%   1.04    23      19.2%      14.4%      11.2%       6.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $    108,405  $   45,000   2.41x   30.00%   25.57%    -27.3%   0.94    31      18.1%      13.4%      10.1%       5.7%
+static 40/30/30 QLD/SCHD/IEF     $     79,695  $   45,000   1.77x   19.20%   19.76%    -19.0%   1.04    10       7.3%       7.6%      -0.7%      -0.1%
+voltarget 12% QLD/IEF (lb20)     $     74,631  $   45,000   1.66x   16.94%   16.15%    -15.9%   1.02   204       5.1%       4.0%      -3.0%      -3.7%
+risk-budgeted core (lb20)        $     79,152  $   45,000   1.76x   18.96%   17.67%    -18.1%   0.97   216       7.1%       5.5%      -1.0%      -2.2%
+circuit-breaker (lb20)           $     67,575  $   45,000   1.50x   13.55%   14.83%    -22.5%   0.66    13       1.7%       2.7%      -6.4%      -5.0%
+SPY buy & hold                   $     64,314  $   45,000   1.43x   11.88%   12.16%    -18.9%   0.64     0       0.0%       0.0%      -8.0%      -7.7%
+QQQ buy & hold                   $     81,370  $   45,000   1.81x   19.92%   19.84%    -20.6%   0.96     0       8.0%       7.7%       0.0%       0.0%
+
+=== h5y-2 (ladder, 5y): 2016-02-16 .. 2021-02-12 -- half-decade, middle (1259 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $    104,356  $   45,000   2.32x   32.64%   28.70%    -56.0%   0.51     9      16.5%      13.2%       2.4%       1.5%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $    112,485  $   45,000   2.50x   35.62%   30.70%    -40.4%   0.76    28      19.5%      15.2%       5.4%       3.5%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $    100,910  $   45,000   2.24x   31.31%   26.63%    -48.4%   0.55    38      15.2%      11.1%       1.0%      -0.5%
+static 40/30/30 QLD/SCHD/IEF     $     93,048  $   45,000   2.07x   28.11%   25.42%    -31.2%   0.81    13      12.0%       9.9%      -2.2%      -1.7%
+voltarget 12% QLD/IEF (lb20)     $     77,177  $   45,000   1.72x   20.81%   18.31%    -17.0%   1.08   179       4.7%       2.8%      -9.5%      -8.8%
+risk-budgeted core (lb20)        $     79,792  $   45,000   1.77x   22.10%   20.39%    -18.4%   1.11   203       6.0%       4.9%      -8.2%      -6.8%
+circuit-breaker (lb20)           $     65,836  $   45,000   1.46x   14.65%   15.78%    -20.0%   0.79    20      -1.4%       0.3%     -15.6%     -11.4%
+SPY buy & hold                   $     68,334  $   45,000   1.52x   16.09%   15.52%    -35.0%   0.44     0       0.0%       0.0%     -14.2%     -11.6%
+QQQ buy & hold                   $     98,281  $   45,000   2.18x   30.27%   27.15%    -28.6%   0.95     0      14.2%      11.6%       0.0%       0.0%
+
+=== h5y-3 (ladder, 5y): 2021-02-16 .. 2026-02-13 -- half-decade, recent (1256 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     73,481  $   45,000   1.63x   18.89%   15.18%    -46.3%   0.33     3       5.2%       3.5%       2.3%       2.7%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     62,544  $   45,000   1.39x   12.67%    5.67%    -51.6%   0.11    31      -1.0%      -6.1%      -3.9%      -6.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     69,542  $   45,000   1.55x   16.76%   10.64%    -41.1%   0.26    37       3.1%      -1.1%       0.2%      -1.8%
+static 40/30/30 QLD/SCHD/IEF     $     62,762  $   45,000   1.39x   12.80%    9.22%    -43.0%   0.21    16      -0.9%      -2.5%      -3.7%      -3.3%
+voltarget 12% QLD/IEF (lb20)     $     55,059  $   45,000   1.22x    7.76%    5.55%    -35.4%   0.16   119      -5.9%      -6.2%      -8.8%      -6.9%
+risk-budgeted core (lb20)        $     57,927  $   45,000   1.29x    9.72%    8.15%    -34.7%   0.23   168      -3.9%      -3.6%      -6.8%      -4.3%
+circuit-breaker (lb20)           $     57,689  $   45,000   1.28x    9.56%    9.07%    -23.3%   0.39    14      -4.1%      -2.7%      -7.0%      -3.4%
+SPY buy & hold                   $     64,180  $   45,000   1.43x   13.66%   11.72%    -32.0%   0.37     0       0.0%       0.0%      -2.9%      -0.8%
+QQQ buy & hold                   $     69,151  $   45,000   1.54x   16.54%   12.48%    -40.9%   0.31     0       2.9%       0.8%       0.0%       0.0%
+
+=== h3y-1 (ladder, 3y): 2014-02-18 .. 2017-02-15 -- three years, 2014-17 (756 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     34,716  $   30,000   1.16x    9.32%    7.90%    -32.2%   0.25     7       0.0%      -0.6%      -4.3%      -5.0%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     40,623  $   30,000   1.35x   19.64%   12.57%    -22.6%   0.56    17      10.3%       4.0%       6.0%      -0.4%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     37,130  $   30,000   1.24x   13.69%    9.31%    -24.4%   0.38    25       4.4%       0.8%       0.0%      -3.6%
+static 40/30/30 QLD/SCHD/IEF     $     37,443  $   30,000   1.25x   14.25%   13.84%    -17.7%   0.78     6       4.9%       5.3%       0.6%       0.9%
+voltarget 12% QLD/IEF (lb20)     $     36,241  $   30,000   1.21x   12.11%   10.42%    -15.1%   0.69   114       2.8%       1.9%      -1.6%      -2.5%
+risk-budgeted core (lb20)        $     36,996  $   30,000   1.23x   13.46%   11.50%    -17.8%   0.65   126       4.2%       3.0%      -0.2%      -1.4%
+circuit-breaker (lb20)           $     35,035  $   30,000   1.17x    9.91%    9.54%    -20.5%   0.47     6       0.6%       1.0%      -3.8%      -3.4%
+SPY buy & hold                   $     34,709  $   30,000   1.16x    9.31%    8.53%    -17.8%   0.48     0       0.0%       0.0%      -4.4%      -4.4%
+QQQ buy & hold                   $     37,113  $   30,000   1.24x   13.66%   12.93%    -19.8%   0.65     0       4.4%       4.4%       0.0%       0.0%
+
+=== h3y-2 (ladder, 3y): 2017-02-16 .. 2020-02-14 -- three years, 2017-20 (754 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     40,232  $   30,000   1.34x   19.01%   12.31%    -42.5%   0.29     7       3.6%      -0.4%      -6.3%      -9.2%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     45,979  $   30,000   1.53x   28.05%   17.68%    -36.5%   0.48    17      12.6%       5.0%       2.7%      -3.9%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     41,041  $   30,000   1.37x   20.34%   12.06%    -39.1%   0.31    25       4.9%      -0.6%      -5.0%      -9.5%
+static 40/30/30 QLD/SCHD/IEF     $     43,357  $   30,000   1.45x   24.04%   20.36%    -23.1%   0.88     5       8.6%       7.7%      -1.3%      -1.2%
+voltarget 12% QLD/IEF (lb20)     $     40,897  $   30,000   1.36x   20.11%   17.16%    -13.9%   1.24   121       4.7%       4.5%      -5.2%      -4.4%
+risk-budgeted core (lb20)        $     42,252  $   30,000   1.41x   22.30%   19.47%    -15.5%   1.25   132       6.9%       6.8%      -3.1%      -2.1%
+circuit-breaker (lb20)           $     38,797  $   30,000   1.29x   16.60%   15.02%    -19.2%   0.78    11       1.2%       2.3%      -8.7%      -6.5%
+SPY buy & hold                   $     38,104  $   30,000   1.27x   15.41%   12.69%    -20.2%   0.63     0       0.0%       0.0%      -9.9%      -8.9%
+QQQ buy & hold                   $     44,200  $   30,000   1.47x   25.35%   21.54%    -23.2%   0.93     0       9.9%       8.9%       0.0%       0.0%
+
+=== h3y-3 (ladder, 3y): 2020-02-18 .. 2023-02-15 -- three years, 2020-23 (756 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     27,998  $   30,000   0.93x   -4.33%    2.93%    -55.1%   0.05     2      -9.0%      -4.4%      -8.2%      -6.9%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     28,618  $   30,000   0.95x   -2.96%    3.50%    -56.8%   0.06    19      -7.6%      -3.8%      -6.8%      -6.3%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     27,614  $   30,000   0.92x   -5.19%    1.81%    -54.7%   0.03    21      -9.8%      -5.5%      -9.1%      -8.0%
+static 40/30/30 QLD/SCHD/IEF     $     30,859  $   30,000   1.03x    1.78%    7.97%    -44.2%   0.18    13      -2.9%       0.6%      -2.1%      -1.8%
+voltarget 12% QLD/IEF (lb20)     $     29,537  $   30,000   0.98x   -0.98%    5.37%    -36.9%   0.15    63      -5.6%      -2.0%      -4.9%      -4.4%
+risk-budgeted core (lb20)        $     31,389  $   30,000   1.05x    2.87%    8.61%    -35.5%   0.24    92      -1.8%       1.3%      -1.0%      -1.2%
+circuit-breaker (lb20)           $     30,561  $   30,000   1.02x    1.17%    0.90%    -29.3%   0.03    11      -3.5%      -6.4%      -2.7%      -8.9%
+SPY buy & hold                   $     32,276  $   30,000   1.08x    4.64%    7.32%    -34.1%   0.21     0       0.0%       0.0%       0.8%      -2.5%
+QQQ buy & hold                   $     31,892  $   30,000   1.06x    3.88%    9.79%    -42.8%   0.23     0      -0.8%       2.5%       0.0%       0.0%
+
+=== h3y-4 (ladder, 3y): 2023-02-16 .. 2026-02-13 -- three years, 2023-26 (751 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     39,515  $   30,000   1.32x   17.83%   15.43%    -46.0%   0.34     1      -0.1%      -3.4%      -4.5%     -10.8%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     38,637  $   30,000   1.29x   16.34%   18.04%    -39.1%   0.46     5      -1.6%      -0.8%      -6.0%      -8.1%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     39,459  $   30,000   1.32x   17.74%   17.26%    -42.2%   0.41     8      -0.2%      -1.6%      -4.6%      -8.9%
+static 40/30/30 QLD/SCHD/IEF     $     40,048  $   30,000   1.33x   18.72%   20.49%    -28.3%   0.72     7       0.8%       1.6%      -3.6%      -5.7%
+voltarget 12% QLD/IEF (lb20)     $     35,878  $   30,000   1.20x   11.47%   14.68%    -20.6%   0.71    80      -6.4%      -4.2%     -10.9%     -11.5%
+risk-budgeted core (lb20)        $     36,731  $   30,000   1.22x   13.01%   15.66%    -23.5%   0.67   103      -4.9%      -3.2%      -9.4%     -10.5%
+circuit-breaker (lb20)           $     36,604  $   30,000   1.22x   12.78%   15.81%    -22.6%   0.70     8      -5.1%      -3.1%      -9.6%     -10.4%
+SPY buy & hold                   $     39,552  $   30,000   1.32x   17.89%   18.87%    -25.1%   0.75     0       0.0%       0.0%      -4.5%      -7.3%
+QQQ buy & hold                   $     42,287  $   30,000   1.41x   22.37%   26.18%    -31.0%   0.85     0       4.5%       7.3%       0.0%       0.0%
+
+=== h1y-1 (ladder, 1y): 2014-02-18 .. 2015-02-17 -- one year, 2014 (252 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     16,172  $   15,000   1.08x   14.01%   13.60%     -9.7%   1.40     0      -0.5%      -0.4%      -6.1%      -5.1%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     16,423  $   15,000   1.09x   17.04%   11.87%    -12.2%   0.97     1       2.5%      -2.2%      -3.1%      -6.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     16,086  $   15,000   1.07x   12.98%   10.40%     -8.0%   1.30     1      -1.6%      -3.6%      -7.2%      -8.3%
+static 40/30/30 QLD/SCHD/IEF     $     16,854  $   15,000   1.12x   22.24%   21.24%    -11.9%   1.79     1       7.7%       7.2%       2.1%       2.5%
+voltarget 12% QLD/IEF (lb20)     $     16,583  $   15,000   1.11x   18.97%   17.79%    -11.7%   1.53    44       4.4%       3.7%      -1.2%      -0.9%
+risk-budgeted core (lb20)        $     16,721  $   15,000   1.11x   20.64%   19.20%    -12.7%   1.51    46       6.1%       5.2%       0.5%       0.5%
+circuit-breaker (lb20)           $     16,854  $   15,000   1.12x   22.24%   21.24%    -11.9%   1.79     1       7.7%       7.2%       2.1%       2.5%
+SPY buy & hold                   $     16,216  $   15,000   1.08x   14.54%   14.04%     -9.6%   1.47     0       0.0%       0.0%      -5.6%      -4.7%
+QQQ buy & hold                   $     16,681  $   15,000   1.11x   20.15%   18.71%    -11.8%   1.59     0       5.6%       4.7%       0.0%       0.0%
+
+=== h1y-2 (ladder, 1y): 2016-02-16 .. 2017-02-15 -- one year, 2016 (254 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     16,501  $   15,000   1.10x   18.05%   18.39%    -10.3%   1.79     0      -7.2%      -4.7%     -15.5%      -9.8%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     18,105  $   15,000   1.21x   37.61%   23.65%     -8.0%   2.95     1      12.3%       0.5%       4.0%      -4.5%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     16,812  $   15,000   1.12x   21.83%   15.02%     -5.7%   2.63     1      -3.5%      -8.1%     -11.8%     -13.2%
+static 40/30/30 QLD/SCHD/IEF     $     17,599  $   15,000   1.17x   31.41%   27.05%     -9.0%   2.99     1       6.1%       3.9%      -2.2%      -1.1%
+voltarget 12% QLD/IEF (lb20)     $     17,151  $   15,000   1.14x   25.94%   14.40%     -8.4%   1.72    35       0.6%      -8.7%      -7.6%     -13.8%
+risk-budgeted core (lb20)        $     17,540  $   15,000   1.17x   30.69%   19.65%     -8.1%   2.43    41       5.4%      -3.5%      -2.9%      -8.5%
+circuit-breaker (lb20)           $     17,599  $   15,000   1.17x   31.41%   27.05%     -9.0%   2.99     1       6.1%       3.9%      -2.2%      -1.1%
+SPY buy & hold                   $     17,098  $   15,000   1.14x   25.30%   23.12%     -8.9%   2.60     0       0.0%       0.0%      -8.3%      -5.1%
+QQQ buy & hold                   $     17,777  $   15,000   1.19x   33.59%   28.19%     -9.1%   3.11     0       8.3%       5.1%       0.0%       0.0%
+
+=== h1y-3 (ladder, 1y): 2018-02-16 .. 2019-02-15 -- one year, 2018 (251 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     15,842  $   15,000   1.06x   10.09%    1.19%    -18.3%   0.07     0      -1.0%      -0.3%      -3.5%      -2.8%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     15,044  $   15,000   1.00x    0.53%   -4.77%    -14.6%  -0.33     3     -10.6%      -6.3%     -13.1%      -8.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     15,283  $   15,000   1.02x    3.38%   -1.41%    -11.5%  -0.12     3      -7.7%      -2.9%     -10.3%      -5.4%
+static 40/30/30 QLD/SCHD/IEF     $     16,091  $   15,000   1.07x   13.10%    2.61%    -23.6%   0.11     1       2.0%       1.1%      -0.5%      -1.4%
+voltarget 12% QLD/IEF (lb20)     $     15,495  $   15,000   1.03x    5.93%    2.14%    -13.9%   0.15    27      -5.2%       0.7%      -7.7%      -1.9%
+risk-budgeted core (lb20)        $     15,691  $   15,000   1.05x    8.28%    3.07%    -15.4%   0.20    33      -2.8%       1.6%      -5.4%      -0.9%
+circuit-breaker (lb20)           $     15,794  $   15,000   1.05x    9.51%    5.56%    -11.1%   0.50     3      -1.6%       4.1%      -4.1%       1.6%
+SPY buy & hold                   $     15,924  $   15,000   1.06x   11.09%    1.48%    -20.2%   0.07     0       0.0%       0.0%      -2.5%      -2.5%
+QQQ buy & hold                   $     16,135  $   15,000   1.08x   13.64%    4.01%    -23.2%   0.17     0       2.5%       2.5%       0.0%       0.0%
+
+=== h1y-4 (ladder, 1y): 2020-02-18 .. 2021-02-17 -- one year, 2020 (253 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     16,642  $   15,000   1.11x   19.72%   16.01%    -32.8%   0.49     0      -0.8%      -1.2%     -25.8%     -26.9%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     18,469  $   15,000   1.23x   41.97%   32.07%    -14.4%   2.23     3      21.4%      14.9%      -3.5%     -10.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     17,200  $   15,000   1.15x   26.48%   21.37%    -14.4%   1.48     3       5.9%       4.2%     -19.0%     -21.5%
+static 40/30/30 QLD/SCHD/IEF     $     18,407  $   15,000   1.23x   41.22%   38.74%    -31.0%   1.25     5      20.7%      21.6%      -4.3%      -4.2%
+voltarget 12% QLD/IEF (lb20)     $     17,800  $   15,000   1.19x   33.79%   34.32%    -13.9%   2.47    22      13.2%      17.1%     -11.7%      -8.6%
+risk-budgeted core (lb20)        $     17,902  $   15,000   1.19x   35.03%   34.77%    -12.9%   2.69    25      14.5%      17.6%     -10.5%      -8.1%
+circuit-breaker (lb20)           $     14,907  $   15,000   0.99x   -1.11%   -5.62%    -29.3%  -0.19     8     -21.7%     -22.8%     -46.6%     -48.5%
+SPY buy & hold                   $     16,711  $   15,000   1.11x   20.56%   17.19%    -34.1%   0.50     0       0.0%       0.0%     -25.0%     -25.7%
+QQQ buy & hold                   $     18,757  $   15,000   1.25x   45.51%   42.90%    -28.6%   1.50     0      25.0%      25.7%       0.0%       0.0%
+
+=== h1y-5 (ladder, 1y): 2022-02-16 .. 2023-02-15 -- one year, 2022 (251 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     15,095  $   15,000   1.01x    1.13%   -1.05%    -17.2%  -0.06     0      -0.0%       6.1%      -2.1%      11.9%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     16,205  $   15,000   1.08x   14.51%    2.18%    -15.0%   0.15     5      13.3%       9.3%      11.3%      15.1%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     15,404  $   15,000   1.03x    4.85%   -2.28%    -15.0%  -0.15     5       3.7%       4.9%       1.6%      10.6%
+static 40/30/30 QLD/SCHD/IEF     $     14,922  $   15,000   0.99x   -0.93%  -14.99%    -31.2%  -0.48     7      -2.1%      -7.8%      -4.2%      -2.1%
+voltarget 12% QLD/IEF (lb20)     $     14,673  $   15,000   0.98x   -3.91%  -13.41%    -24.0%  -0.56     7      -5.1%      -6.3%      -7.1%      -0.5%
+risk-budgeted core (lb20)        $     15,086  $   15,000   1.01x    1.03%   -8.58%    -21.5%  -0.40    22      -0.1%      -1.4%      -2.2%       4.3%
+circuit-breaker (lb20)           $     14,410  $   15,000   0.96x   -7.03%   -9.16%    -16.1%  -0.57     2      -8.2%      -2.0%     -10.3%       3.8%
+SPY buy & hold                   $     15,098  $   15,000   1.01x    1.17%   -7.15%    -22.7%  -0.31     0       0.0%       0.0%      -2.1%       5.8%
+QQQ buy & hold                   $     15,269  $   15,000   1.02x    3.22%  -12.92%    -29.9%  -0.43     0       2.1%      -5.8%       0.0%       0.0%
+
+=== h1y-6 (ladder, 1y): 2025-02-18 .. 2026-02-13 -- one year, 2025 (250 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     17,011  $   15,000   1.13x   24.64%   12.39%    -14.8%   0.84     0      14.4%       0.9%      15.8%       0.6%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     14,171  $   15,000   0.94x   -9.98%   -6.28%    -11.2%  -0.56     1     -20.2%     -17.7%     -18.8%     -18.1%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     15,195  $   15,000   1.01x    2.37%    1.15%     -7.6%   0.15     1      -7.8%     -10.3%      -6.5%     -10.6%
+static 40/30/30 QLD/SCHD/IEF     $     16,257  $   15,000   1.08x   15.35%   14.16%    -21.3%   0.66     5       5.1%       2.7%       6.5%       2.4%
+voltarget 12% QLD/IEF (lb20)     $     16,027  $   15,000   1.07x   12.52%   15.15%    -13.0%   1.16    33       2.3%       3.7%       3.7%       3.4%
+risk-budgeted core (lb20)        $     16,065  $   15,000   1.07x   12.99%   14.23%    -10.5%   1.36    40       2.8%       2.8%       4.2%       2.5%
+circuit-breaker (lb20)           $     15,381  $   15,000   1.03x    4.62%    2.37%    -15.1%   0.16     4      -5.6%      -9.1%      -4.2%      -9.4%
+SPY buy & hold                   $     15,838  $   15,000   1.06x   10.21%   11.46%    -19.0%   0.60     0       0.0%       0.0%       1.4%      -0.3%
+QQQ buy & hold                   $     15,725  $   15,000   1.05x    8.82%   11.77%    -22.9%   0.51     0      -1.4%       0.3%       0.0%       0.0%
+
+=== h6m-1 (ladder, 6m): 2014-08-18 .. 2015-02-17 -- six months, H2 2014 (126 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     15,610  $   15,000   1.04x   13.46%   12.58%     -7.1%   1.77     0      -0.9%      -0.8%      -8.3%      -6.6%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     15,362  $   15,000   1.02x    7.87%    7.69%     -2.5%   3.12     0      -6.4%      -5.7%     -13.9%     -11.5%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     15,362  $   15,000   1.02x    7.87%    7.69%     -2.5%   3.12     0      -6.4%      -5.7%     -13.9%     -11.5%
+static 40/30/30 QLD/SCHD/IEF     $     15,974  $   15,000   1.06x   21.94%   19.92%     -7.7%   2.59     0       7.6%       6.6%       0.2%       0.8%
+voltarget 12% QLD/IEF (lb20)     $     15,479  $   15,000   1.03x   10.49%    6.23%     -7.5%   0.83    22      -3.8%      -7.1%     -11.3%     -12.9%
+risk-budgeted core (lb20)        $     15,692  $   15,000   1.05x   15.34%   11.25%     -8.2%   1.37    21       1.0%      -2.1%      -6.4%      -7.9%
+circuit-breaker (lb20)           $     15,974  $   15,000   1.06x   21.94%   19.92%     -7.7%   2.59     0       7.6%       6.6%       0.2%       0.8%
+SPY buy & hold                   $     15,648  $   15,000   1.04x   14.32%   13.34%     -7.7%   1.73     0       0.0%       0.0%      -7.4%      -5.8%
+QQQ buy & hold                   $     15,966  $   15,000   1.06x   21.75%   19.16%     -8.5%   2.26     0       7.4%       5.8%       0.0%       0.0%
+
+=== h6m-2 (ladder, 6m): 2016-08-16 .. 2017-02-15 -- six months, H2 2016 (127 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     15,389  $   15,000   1.03x    8.59%    7.56%     -4.5%   1.69     0     -11.8%      -7.6%     -23.9%     -13.1%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     14,931  $   15,000   1.00x   -1.48%   -2.88%     -3.5%  -0.83     0     -21.9%     -18.0%     -34.0%     -23.6%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     14,931  $   15,000   1.00x   -1.48%   -2.88%     -3.5%  -0.83     0     -21.9%     -18.0%     -34.0%     -23.6%
+static 40/30/30 QLD/SCHD/IEF     $     16,080  $   15,000   1.07x   24.82%   14.53%     -5.0%   2.93     0       4.4%      -0.6%      -7.7%      -6.2%
+voltarget 12% QLD/IEF (lb20)     $     16,870  $   15,000   1.12x   45.00%   22.54%     -7.1%   3.19    15      24.6%       7.4%      12.5%       1.8%
+risk-budgeted core (lb20)        $     17,097  $   15,000   1.14x   51.11%   29.53%     -6.8%   4.34    18      30.7%      14.4%      18.6%       8.8%
+circuit-breaker (lb20)           $     16,080  $   15,000   1.07x   24.82%   14.53%     -5.0%   2.93     0       4.4%      -0.6%      -7.7%      -6.2%
+SPY buy & hold                   $     15,898  $   15,000   1.06x   20.43%   15.11%     -4.8%   3.16     0       0.0%       0.0%     -12.1%      -5.6%
+QQQ buy & hold                   $     16,388  $   15,000   1.09x   32.49%   20.69%     -5.0%   4.18     0      12.1%       5.6%       0.0%       0.0%
+
+=== h6m-3 (ladder, 6m): 2018-08-16 .. 2019-02-15 -- six months, H2 2018 (126 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     15,699  $   15,000   1.05x   15.64%   -1.43%    -18.3%  -0.08     0       1.6%       3.4%       4.8%       7.6%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     15,441  $   15,000   1.03x    9.72%    1.67%     -8.2%   0.20     0      -4.3%       6.5%      -1.1%      10.7%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     15,441  $   15,000   1.03x    9.72%    1.67%     -8.2%   0.20     0      -4.3%       6.5%      -1.1%      10.7%
+static 40/30/30 QLD/SCHD/IEF     $     15,592  $   15,000   1.04x   13.17%   -7.92%    -23.0%  -0.34     1      -0.9%      -3.1%       2.3%       1.1%
+voltarget 12% QLD/IEF (lb20)     $     14,916  $   15,000   0.99x   -1.80%  -10.86%    -12.9%  -0.84    10     -15.9%      -6.1%     -12.6%      -1.8%
+risk-budgeted core (lb20)        $     15,094  $   15,000   1.01x    2.03%   -9.55%    -14.1%  -0.68    12     -12.0%      -4.7%      -8.8%      -0.5%
+circuit-breaker (lb20)           $     15,383  $   15,000   1.03x    8.42%    0.13%    -10.9%   0.01     1      -5.6%       4.9%      -2.4%       9.1%
+SPY buy & hold                   $     15,631  $   15,000   1.04x   14.06%   -4.81%    -20.2%  -0.24     0       0.0%       0.0%       3.2%       4.2%
+QQQ buy & hold                   $     15,490  $   15,000   1.03x   10.82%   -9.01%    -23.2%  -0.39     0      -3.2%      -4.2%       0.0%       0.0%
+
+=== h6m-4 (ladder, 6m): 2020-08-18 .. 2021-02-17 -- six months, H2 2020 (126 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     16,882  $   15,000   1.13x   45.11%   42.30%     -8.6%   4.94     0       5.8%       6.3%      -5.8%      -3.9%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     15,675  $   15,000   1.04x   15.08%   15.25%     -4.4%   3.49     0     -24.3%     -20.7%     -35.8%     -30.9%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     15,675  $   15,000   1.04x   15.08%   15.25%     -4.4%   3.49     0     -24.3%     -20.7%     -35.8%     -30.9%
+static 40/30/30 QLD/SCHD/IEF     $     17,040  $   15,000   1.14x   49.33%   45.47%    -13.2%   3.45     0      10.0%       9.5%      -1.6%      -0.7%
+voltarget 12% QLD/IEF (lb20)     $     15,894  $   15,000   1.06x   20.25%   18.77%     -4.8%   3.92    13     -19.1%     -17.2%     -30.7%     -27.4%
+risk-budgeted core (lb20)        $     16,155  $   15,000   1.08x   26.55%   24.45%     -5.4%   4.53    14     -12.8%     -11.5%     -24.4%     -21.8%
+circuit-breaker (lb20)           $     16,108  $   15,000   1.07x   25.39%   21.96%    -11.7%   1.87     3     -13.9%     -14.0%     -25.5%     -24.2%
+SPY buy & hold                   $     16,662  $   15,000   1.11x   39.34%   35.97%     -9.8%   3.67     0       0.0%       0.0%     -11.6%     -10.2%
+QQQ buy & hold                   $     17,098  $   15,000   1.14x   50.91%   46.20%    -12.7%   3.62     0      11.6%      10.2%       0.0%       0.0%
+
+=== h6m-5 (ladder, 6m): 2022-08-16 .. 2023-02-15 -- six months, H2 2022 (127 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     15,120  $   15,000   1.01x    2.62%   -1.39%    -14.7%  -0.09     0      -5.6%       5.4%     -13.9%      11.4%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     14,785  $   15,000   0.99x   -4.58%   -8.05%    -11.5%  -0.70     0     -12.8%      -1.3%     -21.1%       4.7%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     14,785  $   15,000   0.99x   -4.58%   -8.05%    -11.5%  -0.70     0     -12.8%      -1.3%     -21.1%       4.7%
+static 40/30/30 QLD/SCHD/IEF     $     15,398  $   15,000   1.03x    8.79%  -16.26%    -23.2%  -0.70     3       0.6%      -9.5%      -7.7%      -3.5%
+voltarget 12% QLD/IEF (lb20)     $     15,413  $   15,000   1.03x    9.12%   -6.83%    -13.0%  -0.53     7       0.9%      -0.1%      -7.4%       5.9%
+risk-budgeted core (lb20)        $     16,062  $   15,000   1.07x   24.39%    9.04%     -8.4%   1.08     8      16.2%      15.8%       7.8%      21.8%
+circuit-breaker (lb20)           $     14,317  $   15,000   0.95x  -14.10%  -19.53%    -17.3%  -1.13     1     -22.3%     -12.8%     -30.6%      -6.8%
+SPY buy & hold                   $     15,371  $   15,000   1.02x    8.18%   -6.76%    -17.0%  -0.40     0       0.0%       0.0%      -8.4%       6.0%
+QQQ buy & hold                   $     15,734  $   15,000   1.05x   16.54%  -12.76%    -21.7%  -0.59     0       8.4%      -6.0%       0.0%       0.0%
+
+=== h6m-6 (ladder, 6m): 2025-08-18 .. 2026-02-13 -- six months, H2 2025 (125 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     17,238  $   15,000   1.15x   56.51%   33.25%     -5.4%   6.15     0      46.9%      21.1%      52.5%      24.2%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     16,239  $   15,000   1.08x   29.49%   18.41%     -2.6%   6.97     0      19.9%       6.3%      25.5%       9.4%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     16,239  $   15,000   1.08x   29.49%   18.41%     -2.6%   6.97     0      19.9%       6.3%      25.5%       9.4%
+static 40/30/30 QLD/SCHD/IEF     $     15,770  $   15,000   1.05x   17.81%   15.82%     -7.2%   2.21     0       8.2%       3.7%      13.8%       6.8%
+voltarget 12% QLD/IEF (lb20)     $     15,024  $   15,000   1.00x    0.53%    3.31%     -7.7%   0.43    19      -9.1%      -8.9%      -3.4%      -5.7%
+risk-budgeted core (lb20)        $     15,108  $   15,000   1.01x    2.40%    2.72%     -5.3%   0.51    23      -7.2%      -9.4%      -1.6%      -6.3%
+circuit-breaker (lb20)           $     15,770  $   15,000   1.05x   17.81%   15.82%     -7.2%   2.21     0       8.2%       3.7%      13.8%       6.8%
+SPY buy & hold                   $     15,425  $   15,000   1.03x    9.62%   12.16%     -5.1%   2.40     0       0.0%       0.0%       5.7%       3.2%
+QQQ buy & hold                   $     15,178  $   15,000   1.01x    3.96%    9.01%     -8.9%   1.02     0      -5.7%      -3.2%       0.0%       0.0%
+
+=== b6m-1 (bear, 6m): 2019-09-20 .. 2020-03-23 -- six months into the covid low (127 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     10,495  $   15,000   0.70x  -63.54%  -48.06%    -33.9%  -1.42     0      -2.6%      -3.7%     -25.2%     -26.8%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     13,238  $   15,000   0.88x  -29.28%  -20.39%    -14.3%  -1.42     1      31.7%      24.0%       9.1%       0.9%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     13,238  $   15,000   0.88x  -29.28%  -20.39%    -14.3%  -1.42     1      31.7%      24.0%       9.1%       0.9%
+static 40/30/30 QLD/SCHD/IEF     $     11,925  $   15,000   0.80x  -47.34%  -30.00%    -31.2%  -0.96     2      13.6%      14.4%      -9.0%      -8.7%
+voltarget 12% QLD/IEF (lb20)     $     16,186  $   15,000   1.08x   23.10%   28.90%    -10.7%   2.70    23      84.0%      73.3%      61.4%      50.2%
+risk-budgeted core (lb20)        $     14,975  $   15,000   1.00x   -0.45%   11.63%    -15.6%   0.75    23      60.5%      56.0%      37.9%      32.9%
+circuit-breaker (lb20)           $     14,040  $   15,000   0.94x  -16.69%   -3.22%    -19.1%  -0.17     2      44.3%      41.2%      21.6%      18.1%
+SPY buy & hold                   $     10,748  $   15,000   0.72x  -60.94%  -44.40%    -34.1%  -1.30     0       0.0%       0.0%     -22.6%     -23.1%
+QQQ buy & hold                   $     12,609  $   15,000   0.84x  -38.34%  -21.31%    -28.6%  -0.75     0      22.6%      23.1%       0.0%       0.0%
+
+=== b6m-2 (bear, 6m): 2021-12-15 .. 2022-06-16 -- six months into the 2022 bear (127 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $     13,247  $   15,000   0.88x  -23.02%  -20.02%    -13.9%  -1.45     0      18.8%      19.4%      32.7%      33.5%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $     13,170  $   15,000   0.88x  -23.97%  -22.00%    -13.0%  -1.69     0      17.9%      17.4%      31.8%      31.5%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $     13,170  $   15,000   0.88x  -23.97%  -22.00%    -13.0%  -1.69     0      17.9%      17.4%      31.8%      31.5%
+static 40/30/30 QLD/SCHD/IEF     $     10,142  $   15,000   0.68x  -56.15%  -53.67%    -33.6%  -1.60     3     -14.3%     -14.2%      -0.4%      -0.2%
+voltarget 12% QLD/IEF (lb20)     $     11,804  $   15,000   0.79x  -39.63%  -38.09%    -22.6%  -1.68     6       2.2%       1.3%      16.1%      15.4%
+risk-budgeted core (lb20)        $     11,855  $   15,000   0.79x  -39.08%  -37.31%    -21.0%  -1.78    10       2.8%       2.1%      16.6%      16.2%
+circuit-breaker (lb20)           $     12,052  $   15,000   0.80x  -36.92%  -34.76%    -21.1%  -1.65     2       4.9%       4.7%      18.8%      18.7%
+SPY buy & hold                   $     11,594  $   15,000   0.77x  -41.87%  -39.44%    -23.8%  -1.66     0       0.0%       0.0%      13.9%      14.0%
+QQQ buy & hold                   $     10,189  $   15,000   0.68x  -55.72%  -53.47%    -33.1%  -1.61     0     -13.9%     -14.0%       0.0%       0.0%
+
+=== b6m-3 (bear, 6m): 2018-06-25 .. 2018-12-24 -- six months into the Q4-2018 low (127 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD) *        $      6,636  $    7,500   0.88x  -21.77%  -21.47%    -18.3%  -1.17     0       3.6%       3.6%       8.3%       8.2%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) * $      7,111  $    7,500   0.95x  -10.13%   -9.93%     -8.4%  -1.18     0      15.2%      15.1%      19.9%      19.8%
+confirmed regime (QLD vs 50/50 SCHD/IEF) * $      7,111  $    7,500   0.95x  -10.13%   -9.93%     -8.4%  -1.18     0      15.2%      15.1%      19.9%      19.8%
+static 40/30/30 QLD/SCHD/IEF     $      6,256  $    7,500   0.83x  -30.52%  -30.16%    -23.4%  -1.29     1      -5.1%      -5.1%      -0.5%      -0.5%
+voltarget 12% QLD/IEF (lb20)     $      6,668  $    7,500   0.89x  -21.03%  -20.74%    -13.9%  -1.50    13       4.3%       4.3%       9.0%       8.9%
+risk-budgeted core (lb20)        $      6,615  $    7,500   0.88x  -22.27%  -22.05%    -15.4%  -1.43    15       3.1%       3.0%       7.8%       7.6%
+circuit-breaker (lb20)           $      7,263  $    7,500   0.97x   -6.24%   -6.08%    -11.0%  -0.55     1      19.1%      19.0%      23.8%      23.6%
+SPY buy & hold                   $      6,482  $    7,500   0.86x  -25.37%  -25.05%    -20.2%  -1.24     0       0.0%       0.0%       4.7%       4.6%
+QQQ buy & hold                   $      6,277  $    7,500   0.84x  -30.04%  -29.68%    -23.2%  -1.28     0      -4.7%      -4.6%       0.0%       0.0%
+
+=== b1y-1 (bear, 1y): 2021-12-28 .. 2022-12-28 -- the 2022 bear year (253 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     13,909  $   15,000   0.93x   -7.33%   -7.15%    -18.9%  -0.38     0      14.0%      14.0%      28.2%      28.3%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     12,761  $   15,000   0.85x  -15.05%  -14.88%    -17.5%  -0.85     2       6.2%       6.3%      20.5%      20.6%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     12,993  $   15,000   0.87x  -13.49%  -13.34%    -17.5%  -0.76     2       7.8%       7.8%      22.0%      22.1%
+static 40/30/30 QLD/SCHD/IEF     $      9,657  $   15,000   0.64x  -35.87%  -35.77%    -37.1%  -0.96     5     -14.6%     -14.6%      -0.3%      -0.3%
+voltarget 12% QLD/IEF (lb20)     $     11,426  $   15,000   0.76x  -24.02%  -23.84%    -25.4%  -0.94     8      -2.7%      -2.7%      11.5%      11.6%
+risk-budgeted core (lb20)        $     12,243  $   15,000   0.82x  -18.53%  -18.32%    -23.8%  -0.77    25       2.8%       2.9%      17.0%      17.1%
+circuit-breaker (lb20)           $     12,065  $   15,000   0.80x  -19.73%  -19.83%    -24.5%  -0.81     2       1.6%       1.4%      15.8%      15.6%
+SPY buy & hold                   $     11,832  $   15,000   0.79x  -21.29%  -21.19%    -25.4%  -0.83     0       0.0%       0.0%      14.2%      14.3%
+QQQ buy & hold                   $      9,709  $   15,000   0.65x  -35.53%  -35.45%    -35.2%  -1.01     0     -14.2%     -14.3%       0.0%       0.0%
+
+=== b1y-2 (bear, 1y): 2019-03-22 .. 2020-03-23 -- one year into the covid low (253 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     10,836  $   15,000   0.72x  -43.48%  -23.49%    -35.9%  -0.66     0      -2.9%      -3.0%     -22.8%     -18.2%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     11,150  $   15,000   0.74x  -40.36%  -22.73%    -40.4%  -0.56     7       0.2%      -2.3%     -19.7%     -17.5%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     12,326  $   15,000   0.82x  -28.40%  -14.62%    -28.8%  -0.51     7      12.2%       5.8%      -7.7%      -9.4%
+static 40/30/30 QLD/SCHD/IEF     $     12,421  $   15,000   0.83x  -27.42%   -9.78%    -31.2%  -0.31     3      13.1%      10.7%      -6.7%      -4.5%
+voltarget 12% QLD/IEF (lb20)     $     15,971  $   15,000   1.06x   10.63%   10.75%    -10.7%   1.01    44      51.2%      31.2%      31.3%      16.0%
+risk-budgeted core (lb20)        $     14,823  $   15,000   0.99x   -1.93%    3.66%    -15.6%   0.24    44      38.6%      24.1%      18.7%       8.9%
+circuit-breaker (lb20)           $     14,066  $   15,000   0.94x  -10.08%   -1.29%    -19.1%  -0.07     6      30.5%      19.2%      10.6%       4.0%
+SPY buy & hold                   $     11,129  $   15,000   0.74x  -40.56%  -20.45%    -35.8%  -0.57     0       0.0%       0.0%     -19.9%     -15.2%
+QQQ buy & hold                   $     13,068  $   15,000   0.87x  -20.67%   -5.25%    -28.6%  -0.18     0      19.9%      15.2%       0.0%       0.0%
+
+=== b1y-3 (bear, 1y): 2015-02-11 .. 2016-02-11 -- the 2015-16 growth scare (253 shared sessions) ===
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal  exIRR~SPY  exTWR~SPY  exIRR~QQQ  exTWR~QQQ
+abs momentum (QLD/SCHD)          $     13,896  $   15,000   0.93x  -13.26%   -9.25%    -15.2%  -0.61     0       5.4%       1.7%       4.5%      -2.4%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) $     14,091  $   15,000   0.94x  -10.93%  -11.97%    -12.7%  -0.94     8       7.7%      -1.0%       6.8%      -5.1%
+confirmed regime (QLD vs 50/50 SCHD/IEF) $     14,422  $   15,000   0.96x   -6.96%   -7.56%     -8.3%  -0.91     8      11.7%       3.4%      10.8%      -0.7%
+static 40/30/30 QLD/SCHD/IEF     $     13,653  $   15,000   0.91x  -16.16%   -7.63%    -14.6%  -0.52     1       2.5%       3.4%       1.6%      -0.7%
+voltarget 12% QLD/IEF (lb20)     $     14,516  $   15,000   0.97x   -5.84%   -3.60%    -11.2%  -0.32    29      12.8%       7.4%      11.9%       3.3%
+risk-budgeted core (lb20)        $     14,206  $   15,000   0.95x   -9.55%   -5.68%    -13.4%  -0.42    31       9.1%       5.3%       8.2%       1.2%
+circuit-breaker (lb20)           $     13,881  $   15,000   0.93x  -13.43%  -10.26%    -14.8%  -0.69     3       5.2%       0.7%       4.3%      -3.4%
+SPY buy & hold                   $     13,443  $   15,000   0.90x  -18.64%  -10.98%    -13.1%  -0.84     0       0.0%       0.0%      -0.9%      -4.1%
+QQQ buy & hold                   $     13,517  $   15,000   0.90x  -17.77%   -6.89%    -18.2%  -0.38     0       0.9%       4.1%       0.0%       0.0%
+
+====================================================================================================
+Aggregate over the round-5 ladder (21 windows, 6mo-10y) and bear-supplement (6 windows) arms
+====================================================================================================
+variant                                         ladder n  skip  no-sig  med exIRR~SPY  worst exIRR~SPY   hit%    bear n  med exIRR~SPY
+abs momentum (QLD/SCHD)                           21/21      0      10           0.0%           -11.8%   52.4      6/6             4.5%
+MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200) *    21/21      0       6           2.5%           -24.3%   52.4      6/6            11.5%
+confirmed regime (QLD vs 50/50 SCHD/IEF)          21/21      0       6          -0.2%           -24.3%   47.6      6/6            13.7%
+static 40/30/30 QLD/SCHD/IEF                      21/21      0       0           4.9%            -2.9%   81.0      6/6            -1.3%
+voltarget 12% QLD/IEF (lb20) *                    21/21      0       0           0.5%           -19.1%   52.4      6/6             8.6%
+risk-budgeted core (lb20)                         21/21      0       0           2.4%           -12.8%   57.1      6/6             6.1%
+circuit-breaker (lb20)                            21/21      0       0          -1.6%           -22.3%   42.9      6/6            12.2%
+(* = the best candidate named in that family's own document)
+
+  ^ 'no-sig' counts windows too short for that variant's own lookback to activate. Those
+    cells are the fallback sleeve held start to finish, NOT the strategy, and they are in
+    the medians above. Do not rank variants off that table -- use the next one.
+
+====================================================================================================
+COMMON SUPPORT -- only windows where every variant's signal is live
+====================================================================================================
+ladder: 11 of 21 windows qualify (h10y-1, h10y-2, h5y-1, h5y-2, h5y-3, h3y-1, h3y-2, h3y-3, h3y-4, h1y-2, h1y-4)
+   MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200)       10.3%  n=11
+   static 40/30/30 QLD/SCHD/IEF                         4.9%  n=11
+   confirmed regime (QLD vs 50/50 SCHD/IEF)             4.9%  n=11
+   risk-budgeted core (lb20)                            4.2%  n=11
+   abs momentum (QLD/SCHD)                              3.6%  n=11
+   voltarget 12% QLD/IEF (lb20)                         0.6%  n=11
+   circuit-breaker (lb20)                              -1.4%  n=11
+
+bear: 3 of 6 windows qualify (b1y-1, b1y-2, b1y-3)
+   voltarget 12% QLD/IEF (lb20)                        12.8%  n=3
+   confirmed regime (QLD vs 50/50 SCHD/IEF)            11.7%  n=3
+   risk-budgeted core (lb20)                            9.1%  n=3
+   MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200)        6.2%  n=3
+   abs momentum (QLD/SCHD)                              5.4%  n=3
+   circuit-breaker (lb20)                               5.2%  n=3
+   static 40/30/30 QLD/SCHD/IEF                         2.5%  n=3
+
+The ordering here differs from the table above, and this one is the comparable one. On the
+ladder arm the starved cells drag the momentum family below the static baseline; with them
+excluded the ordering reverses. Neither table is wrong -- they answer different questions.
+
+Per-horizon breakdown, ladder arm only (bear windows carry a deliberate downward regime
+bias -- see windows.py's own module docstring -- and are kept out of this breakdown so a
+horizon's number is not silently part-ordinary-market, part-crash):
+  abs momentum (QLD/SCHD)
+      6m: 6/6 run, 6 no-signal, median exIRR~SPY   0.4%
+      1y: 6/6 run, 4 no-signal, median exIRR~SPY  -0.7%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY  -0.0%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY  16.5%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY   5.0%
+  MA regime (QLD vs 50/50 SCHD/IEF, sig SPY200)
+      6m: 6/6 run, 6 no-signal, median exIRR~SPY  -9.6%
+      1y: 6/6 run, 0 no-signal, median exIRR~SPY   7.4%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY   4.4%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY  19.2%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY   7.7%
+  confirmed regime (QLD vs 50/50 SCHD/IEF)
+      6m: 6/6 run, 6 no-signal, median exIRR~SPY  -9.6%
+      1y: 6/6 run, 0 no-signal, median exIRR~SPY  -2.5%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY   2.1%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY  15.2%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY   5.9%
+  static 40/30/30 QLD/SCHD/IEF
+      6m: 6/6 run, 0 no-signal, median exIRR~SPY   6.0%
+      1y: 6/6 run, 0 no-signal, median exIRR~SPY   5.6%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY   2.9%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY   7.3%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY   3.5%
+  voltarget 12% QLD/IEF (lb20)
+      6m: 6/6 run, 0 no-signal, median exIRR~SPY  -6.5%
+      1y: 6/6 run, 0 no-signal, median exIRR~SPY   1.5%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY  -1.4%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY   4.7%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY  -1.3%
+  risk-budgeted core (lb20)
+      6m: 6/6 run, 0 no-signal, median exIRR~SPY  -3.1%
+      1y: 6/6 run, 0 no-signal, median exIRR~SPY   4.1%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY   1.2%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY   6.0%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY   0.7%
+  circuit-breaker (lb20)
+      6m: 6/6 run, 0 no-signal, median exIRR~SPY  -0.6%
+      1y: 6/6 run, 0 no-signal, median exIRR~SPY  -3.6%
+      3y: 4/4 run, 0 no-signal, median exIRR~SPY  -1.4%
+      5y: 3/3 run, 0 no-signal, median exIRR~SPY  -1.4%
+     10y: 2/2 run, 0 no-signal, median exIRR~SPY  -0.7%
+
+wrote C:\Users\<user>\repos\Investing dashboard\Investing dashboard\data\rounds\r12-2026-08\roth-matrix.txt
+wrote C:\Users\<user>\repos\Investing dashboard\Investing dashboard\data\rounds\r12-2026-08\roth-matrix.json

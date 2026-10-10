@@ -1,0 +1,15 @@
+{
+  "agent_id": "c01-meanrev",
+  "display_name": "Band Reversion — Broad Market & Sector ETFs",
+  "discipline": "mean-reversion",
+  "thesis": "Mechanism: a close below the 20-day, 2-stdev Bollinger lower band while price still sits above its 200-day SMA is disproportionately forced, price-insensitive selling inside an intact uptrend -- stop-loss cascades from levered/margin accounts, mechanical VaR/vol-target de-risking by risk-parity and vol-targeting funds reacting to a spike in realised volatility, and index/ETF authorized-participant redemption flow. None of that flow carries a fundamental view; the 200-day trend filter is the proxy for 'nothing structural has changed yet'. The counterparty on my entry is that forced seller. Once the flow clears, price tends to revert toward the 20-day mean as valuation-insensitive rebalancers (funds trading back to target weight) and short-term dip buyers step back in; my exit sells into that reversion at the middle band, before it can be told apart from a genuine trend resumption. Pre-registered failure regime: a fast, deep, sustained decline where the 200-day SMA (which is slow by construction) has not yet turned down before the crash accelerates -- GFC's Sep-Oct 2008 leg and COVID's Feb-Mar 2020 leg are the two candidates. In that regime the entry keeps firing on 'dips' that are actually the first third of a much larger decline, the 20-day reversion does not arrive inside the 20-day hold, and positions exit on the stop or the time cap at a loss, repeatedly, until the 200-day SMA finally rolls over and the filter shuts the strategy off -- likely after most of the damage in that leg is already done.",
+  "universe": ["SPY", "QQQ", "IWM", "XLF", "XLE", "XLI", "XLK", "XLV", "EEM", "DIA"],
+  "entry": "close < bb_lower(20,2.0) and close > sma(200)",
+  "exit": "close > bb_mid(20,2.0)",
+  "stop_loss_pct": "0.08",
+  "take_profit_pct": null,
+  "max_hold_days": 20,
+  "max_positions": 6,
+  "position_pct": "0.15",
+  "designed_through": "2026-02-13"
+}

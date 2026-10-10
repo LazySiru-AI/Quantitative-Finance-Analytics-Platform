@@ -1,0 +1,37 @@
+matrix: r2 (8 windows, gate 5)
+## Ranked (by median adjusted_excess, descending)
+
+| rank | agent_id | display_name | median_adj_excess | worst | best | hit_rate | iqr | rank_median | rank_worst | rank_hit_rate | borda | pareto | windows(run/elig) | trades | mean_exposure | incommensurable_exposure | worst_dd | total_realised_pnl | median_excess_per_exposure | q4-2018 | covid | bear-2022 | chop-2015 | chop-2011 | bull-2024 | recent | gfc |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | r40-rsi-confirm-slots3 | conjunct rsi-confirm / 3 slots | +5.65% | -30.73% | +29.37% | 75.00% | +12.08% | 1 | 6 | 1.5 | 2.83 | yes | 8/8 | 171 | 21.30% | no | -41.64% | +$2,084.05 | +24.07% | -5.54% | +8.83% | +2.55% | +8.75% | +17.13% | +0.28% | +29.37% | -30.73% |
+| 2 | r40-rsi-confirm-slots6 | conjunct rsi-confirm / 6 slots | +4.01% | -17.21% | +22.38% | 75.00% | +8.26% | 2 | 3 | 1.5 | 2.17 | yes | 8/8 | 202 | 12.61% | yes | -25.02% | +$2,292.79 | +37.62% | -3.58% | +4.38% | +1.31% | +3.65% | +9.90% | +7.84% | +22.38% | -17.21% |
+| 3 | r40-none-slots6 | conjunct none / 6 slots | -0.81% | -23.72% | +46.17% | 50.00% | +23.42% | 3 | 4 | 3.5 | 3.50 | no | 8/8 | 834 | 43.59% | no | -45.78% | -$302.98 | -1.85% | -9.51% | +15.28% | -18.04% | +10.61% | -5.08% | +3.45% | +46.17% | -23.72% |
+| 4 | r40-divergence-proxy-negative-control-slots6 | conjunct divergence-proxy-negative-control / 6 slots | -0.85% | -25.16% | +43.05% | 50.00% | +23.31% | 4 | 5 | 3.5 | 4.17 | no | 8/8 | 819 | 42.92% | no | -46.94% | -$810.95 | -1.90% | -10.14% | +13.18% | -16.38% | +11.09% | -5.59% | +3.89% | +43.05% | -25.16% |
+| 5 | r40-swing-structure-slots6 | conjunct swing-structure / 6 slots | -1.83% | -5.82% | -0.34% | 0.00% | +1.08% | 5 | 1 | 7.5 | 4.50 | yes | 8/8 | 99 | 4.02% | yes | -7.36% | -$1,669.87 | -44.17% | -0.74% | -1.82% | -0.34% | -1.90% | -2.92% | -1.19% | -5.82% | -1.84% |
+| 6 | r40-none-slots3 | conjunct none / 3 slots | -2.18% | -47.71% | +53.12% | 37.50% | +26.51% | 6 | 8 | 5.5 | 6.50 | no | 8/8 | 456 | 48.04% | no | -68.37% | -$1,874.65 | -5.80% | -4.29% | +13.08% | -23.40% | +18.42% | -8.33% | -0.06% | +53.12% | -47.71% |
+| 7 | r40-swing-structure-slots3 | conjunct swing-structure / 3 slots | -3.67% | -12.36% | -0.17% | 0.00% | +2.92% | 7 | 2 | 7.5 | 5.50 | no | 8/8 | 94 | 8.08% | yes | -15.22% | -$3,134.76 | -40.72% | -1.47% | -3.67% | -0.68% | -3.81% | -5.33% | -0.17% | -12.36% | -3.68% |
+| 8 | r40-divergence-proxy-negative-control-slots3 | conjunct divergence-proxy-negative-control / 3 slots | -5.80% | -45.31% | +43.84% | 37.50% | +26.55% | 8 | 7 | 5.5 | 6.83 | no | 8/8 | 463 | 47.70% | no | -67.27% | -$3,787.70 | -12.37% | -4.05% | +13.08% | -23.42% | +16.18% | -9.12% | -7.55% | +43.84% | -45.31% |
+
+## Pareto frontier -- the defensible choices, not a single ordering's winner
+
+A card is on the frontier when no other ranked card is at least as good on all of (median, worst-window, hit-rate) *and* strictly better on at least one. This is the honest answer to "which cards are defensible choices" -- a single ordering, whichever criterion it uses, cannot give that answer on its own.
+
+**Exposure caveat.** The worst-window criterion structurally favours low-exposure books -- a book that never puts much capital at risk cannot sustain a deep drawdown, so a small book reaches a shallow worst window almost for free, the same way a large negative benchmark structurally favours it on adjusted_excess (see the incommensurable-exposure flag above). Frontier membership earned mainly on the worst-window axis is not the same finding as frontier membership earned on the median, and both are weaker evidence for a card whose `mean_exposure` sits well below the field's -- read the column below beside every row rather than trusting frontier membership alone.
+
+| agent_id | display_name | median_adj_excess | worst | hit_rate | borda | mean_exposure | incommensurable_exposure |
+|---|---|---|---|---|---|---|---|
+| r40-rsi-confirm-slots3 | conjunct rsi-confirm / 3 slots | +5.65% | -30.73% | 75.00% | 2.83 | 21.30% | no |
+| r40-rsi-confirm-slots6 | conjunct rsi-confirm / 6 slots | +4.01% | -17.21% | 75.00% | 2.17 | 12.61% | yes |
+| r40-swing-structure-slots6 | conjunct swing-structure / 6 slots | -1.83% | -5.82% | 0.00% | 4.50 | 4.02% | yes |
+
+## Unranked (fewer than 5 main windows run, zero trades in every window run, or a provenance violation (a run file for a window the eligibility map marks ineligible because the basket was not yet knowable there) -- excluded from the ranking, not placed last
+
+_Every scored card is ranked._
+
+## Notes
+
+- **r40-rsi-confirm-slots6**: excess_per_exposure unavailable for 1 of 8 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r40-swing-structure-slots6**: excess_per_exposure unavailable for 5 of 8 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r40-swing-structure-slots3**: excess_per_exposure unavailable for 3 of 8 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+
+wrote data\rounds\r40-2026-09\scorecard.json

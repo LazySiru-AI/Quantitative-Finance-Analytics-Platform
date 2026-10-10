@@ -1,0 +1,80 @@
+/**
+ * Term.tsx -- a defined word, and the tip that defines it.
+ *
+ * The underline is the only mark on the word itself: a term inside a column header or a pill has to
+ * stay the same size, weight and colour it was, or applying this component to a table's headings
+ * would redesign the table. `text-decoration` on the inner `.term-word` (not a border) so it hugs
+ * the glyphs and survives wrapping.
+ *
+ * The tip is positioned, never unmounted -- see the component's docstring: `aria-describedby` has to
+ * keep resolving to it, so it is hidden with `opacity` + `pointer-events`, not `display: none`. It
+ * is also `max-width`-bounded rather than `white-space: nowrap`, because a 120-character definition
+ * set on one line is wider than most of the tables it appears in.
+ */
+
+.term {
+  position: relative;
+  /* The word stays inline: a term applied inside a `<th>` or a `<summary>` must not become a block
+     and break the line it sits on. */
+  display: inline;
+  cursor: help;
+}
+
+.term:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Dotted, not solid: a solid underline reads as a link, and this is not one -- nothing navigates. */
+.term-word {
+  text-decoration: underline dotted currentColor;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+.term-tip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.35rem);
+  z-index: 40;
+  width: max-content;
+  max-width: 22rem;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--bg-raised);
+  color: var(--text);
+  /* Prose, so the sans stack -- monospace in this app means instrument output. */
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+.term[data-open="true"] > .term-tip {
+  opacity: 1;
+}
+
+/* A term near the right edge of a wide table would otherwise push its tip past the viewport. Anchor
+   from the right instead once the word is in the last quarter of a row -- opt-in, because the
+   component cannot measure and the caller can. */
+.term-tip-end {
+  left: auto;
+  right: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .term-tip {
+    transition: none;
+  }
+}

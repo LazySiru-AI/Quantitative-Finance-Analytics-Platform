@@ -1,0 +1,98 @@
+/**
+ * Scoped styles for `WarningsChart.tsx`. Classes are prefixed `wc-` to stay out of the shared
+ * `styles.css` namespace, matching `AllocationPie.css`'s `alloc-pie-` convention for the same kind
+ * of component. Reuses the shared `.placeholder`/`.muted` classes rather than redefining them here.
+ */
+
+.wc-root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.wc-svg {
+  width: 100%;
+  height: auto;
+  font-family: var(--font-mono);
+}
+
+.wc-kind-label {
+  fill: var(--text);
+  font-size: 11px;
+}
+
+.wc-count-label {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.wc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.wc-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.wc-swatch {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.wc-top-symbols-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.wc-top-symbols-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.wc-top-symbol-row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr 2.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+}
+
+.wc-top-symbol-bar-track {
+  background: var(--border);
+  border-radius: 3px;
+  height: 0.55rem;
+  overflow: hidden;
+}
+
+.wc-top-symbol-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--warn);
+}
+
+.wc-top-symbol-count {
+  text-align: right;
+  color: var(--muted);
+}
+
+.wc-empty {
+  font-size: 0.85rem;
+}

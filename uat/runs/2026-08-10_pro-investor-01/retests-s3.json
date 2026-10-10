@@ -1,0 +1,53 @@
+{
+  "retests": [
+    {
+      "finding_id": "portfolio-settled-unsettled-cash-split-incorrect",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-14T20:10:00Z",
+      "session_date": "2026-08-12",
+      "surface": "api",
+      "locator": "GET /api/portfolio, /portfolio, GET /api/portfolio/statement.md",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "FIXED: settled/unsettled cash split now matches deployable cash",
+      "observed": "Re-tested this session. The Portfolio page's Cash by account table reads 'UAT TAXABLE \u00b7 robinhood \u00b7 $1,661.42 settled \u00b7 $0.00 unsettled \u00b7 $1,661.42 balance'. GET /api/portfolio confirms settled_cash=\"1661.42\", unsettled_cash=\"0\", cash_balance=\"1661.42\" -- all three equal, none negative. The downloaded statement (GET /api/portfolio/statement.md) renders the identical figures under 'Cash by account'. This matches the session brief's book.cash and book.settled_cash exactly (both \"1661.42\").",
+      "expected": "Settled cash should equal actual deployable cash with no phantom negative unsettled balance -- this is now the case.",
+      "why_it_matters": "This was the figure the mandate's 'no same-day reuse of unsettled proceeds' rule depends on. It now reads correctly everywhere I checked it (tile, cash-by-account table, downloaded statement, and raw API), so I sized this session off it directly rather than falling back to the brief.",
+      "repro": [
+        "Navigate to /portfolio",
+        "Read the Cash by account row: $1,661.42 settled / $0.00 unsettled / $1,661.42 balance",
+        "Confirm via GET /api/portfolio: settled_cash=\"1661.42\", unsettled_cash=\"0\"",
+        "Download statement via GET /api/portfolio/statement.md: same three figures under Cash by account",
+        "Compare against brief-s3.json book.cash=\"1661.42\", book.settled_cash=\"1661.42\": exact match"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "tax-year-activity-message-contradicts-transaction-count",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-14T20:20:00Z",
+      "session_date": "2026-08-12",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "FIXED: 2026 tax-year message now correctly states the ledger's transactions fall in-year",
+      "observed": "Re-tested this session. The year selector still defaults to 2025 (document.querySelector('select').value === '2025') rather than 2026, but selecting 2026 now reads: 'Nothing was disposed of in 2026. The ledger holds 8 transactions dated in this tax year -- see Activity -- but no lot was sold, so there is no gain or loss to report and no Form 8949 to file for it.' GET /api/portfolio/transactions?start_date=2026-01-01&end_date=2026-12-31 confirms total=8, total_sold=\"0\", and /activity lists all 8 rows (7 buys + 1 deposit) dated 2026-08-07 through 2026-08-12. The message no longer claims the year holds none of the ledger's transactions -- it correctly states 8 transactions exist and explains why there is still nothing to report (no disposals).",
+      "expected": "For a year with activity but no sales, the page should say so and explain the $0 gains rather than assert the transactions aren't in this year. It now does.",
+      "why_it_matters": "This was the exact false claim previously logged -- that transactions visible on Activity 'don't exist' for tax purposes in the year they're dated. That contradiction is gone; the message and the Activity page now agree. (Separately, I noticed a new, narrower copy issue in the same message -- see tax-year-zero-disposals-boilerplate-contradicts-transactions-shown -- but the specific defect filed under this id is resolved.)",
+      "repro": [
+        "Navigate to /tax",
+        "Note the year selector's initial value is 2025, not 2026",
+        "Switch to 2026 via native select value setter + change event",
+        "Read: 'Nothing was disposed of in 2026. The ledger holds 8 transactions dated in this tax year -- see Activity -- but no lot was sold...'",
+        "Confirm via GET /api/portfolio/transactions?start_date=2026-01-01&end_date=2026-12-31: total=8, total_sold=\"0\"",
+        "Confirm on /activity: 8 rows, all dated 2026-08-07 through 2026-08-12"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

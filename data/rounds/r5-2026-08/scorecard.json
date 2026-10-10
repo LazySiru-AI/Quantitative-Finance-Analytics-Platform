@@ -1,0 +1,5161 @@
+{
+  "results_root": "data\\rounds\\r5-2026-08\\results",
+  "round": "r1",
+  "window_tags": [
+    "h10y-1",
+    "h10y-2",
+    "h5y-1",
+    "h5y-2",
+    "h5y-3",
+    "h3y-1",
+    "h3y-2",
+    "h3y-3",
+    "h3y-4",
+    "h1y-1",
+    "h1y-2",
+    "h1y-3",
+    "h1y-4",
+    "h1y-5",
+    "h1y-6",
+    "h6m-1",
+    "h6m-2",
+    "h6m-3",
+    "h6m-4",
+    "h6m-5",
+    "h6m-6",
+    "b6m-1",
+    "b6m-2",
+    "b6m-3",
+    "b1y-1",
+    "b1y-2",
+    "b1y-3"
+  ],
+  "matrix": "r5",
+  "main_window_tags": [
+    "h10y-1",
+    "h10y-2",
+    "h5y-1",
+    "h5y-2",
+    "h5y-3",
+    "h3y-1",
+    "h3y-2",
+    "h3y-3",
+    "h3y-4",
+    "h1y-1",
+    "h1y-2",
+    "h1y-3",
+    "h1y-4",
+    "h1y-5",
+    "h1y-6",
+    "h6m-1",
+    "h6m-2",
+    "h6m-3",
+    "h6m-4",
+    "h6m-5",
+    "h6m-6",
+    "b6m-1",
+    "b6m-2",
+    "b6m-3",
+    "b1y-1",
+    "b1y-2",
+    "b1y-3"
+  ],
+  "min_ranked_main_windows": 17,
+  "rank_by": "borda",
+  "rank_by_choices": [
+    "median",
+    "worst",
+    "hit-rate",
+    "borda",
+    "excess-per-exposure"
+  ],
+  "pareto_frontier": [
+    "B2-hold-90",
+    "A-rotation",
+    "H-trend-diversified"
+  ],
+  "ranked": [
+    {
+      "agent_id": "B2-hold-90",
+      "display_name": "B2 - 90 day max hold",
+      "ranked": true,
+      "median_adjusted_excess": "0.1743479753589655744906112665",
+      "worst_adjusted_excess": "-0.07959856236294060915284820956",
+      "best_adjusted_excess": "1.564614517989839966998729045",
+      "hit_rate": 0.7777777777777778,
+      "iqr": "0.3924720459086871655974076071",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 853,
+      "mean_exposure": 0.35180743807732057,
+      "worst_drawdown": "-0.12232292838989989",
+      "notes": [
+        "excess_per_exposure unavailable for 2 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "0.654863374326696120559220481",
+          "adjusted_excess": "1.564614517989839966998729045",
+          "trades": 143,
+          "reason": null,
+          "realised_pnl": "23804.58",
+          "excess_per_exposure": "3.309323985577998201804275492"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-0.129756850294008581872119511",
+          "adjusted_excess": "1.309728065976909614864650103",
+          "trades": 134,
+          "reason": null,
+          "realised_pnl": "24817.81",
+          "excess_per_exposure": "2.918301996950321408873413327"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "0.7504436135689644737638443382",
+          "adjusted_excess": "1.054681562233884664382981299",
+          "trades": 89,
+          "reason": null,
+          "realised_pnl": "15074.49",
+          "excess_per_exposure": "1.763376861904492589321362491"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "0.852790475923080998039942788",
+          "adjusted_excess": "1.351221222660403853498966997",
+          "trades": 71,
+          "reason": null,
+          "realised_pnl": "19327.82",
+          "excess_per_exposure": "2.509294857025649472556051497"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.1135236350898568382576911362",
+          "adjusted_excess": "0.3603833924960373006175753883",
+          "trades": 63,
+          "reason": null,
+          "realised_pnl": "6169.82",
+          "excess_per_exposure": "1.025968541185825689163407074"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.4764816328591595178629601477",
+          "adjusted_excess": "0.5937358644147575985123248996",
+          "trades": 57,
+          "reason": null,
+          "realised_pnl": "7519.73",
+          "excess_per_exposure": "1.033696068898160355492378645"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "0.5349335316024686103426260907",
+          "adjusted_excess": "0.7650619206425770334369014684",
+          "trades": 44,
+          "reason": null,
+          "realised_pnl": "9718.35",
+          "excess_per_exposure": "1.616538659590156291206564428"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.2174089588719503135122284627",
+          "adjusted_excess": "0.3772519551650548123027547472",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "4476.25",
+          "excess_per_exposure": "1.234129514071963637846852955"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.0518277056434844296582597422",
+          "adjusted_excess": "0.3126253580809057745248171433",
+          "trades": 44,
+          "reason": null,
+          "realised_pnl": "6158.99",
+          "excess_per_exposure": "0.6883166605941530488298604048"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "0.0281908125746552285807362363",
+          "adjusted_excess": "0.08537295002451880815506569661",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "1689.77",
+          "excess_per_exposure": "0.1437649509411498925596531642"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "0.2138145936324627854002224930",
+          "adjusted_excess": "0.3059876521079895858716957144",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "4582.92",
+          "excess_per_exposure": "0.4911682995477885926677111497"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "0.2259416404230317273795534665",
+          "adjusted_excess": "0.2386812246171015116113396005",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "2444.86",
+          "excess_per_exposure": "0.7625084799337299886498281050"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.3495115277109149802383287272",
+          "adjusted_excess": "0.4349386713089474701375887789",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "5155.69",
+          "excess_per_exposure": "0.8957524734281744379019936628"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.02440559142207104723717703242",
+          "adjusted_excess": "-0.04046146705812974548070641768",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-430.60",
+          "excess_per_exposure": null
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.0704190350969093766369827135",
+          "adjusted_excess": "0.1474699288279858564693556836",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "1864.32",
+          "excess_per_exposure": "0.4391045743397520639037252308"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.00134311382113821138211382114",
+          "adjusted_excess": "0.02333507533109110284044715447",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "662.89",
+          "excess_per_exposure": "0.03674170597872114953809261386"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.00902990759377859103385178408",
+          "adjusted_excess": "0.04972855757684909769075937786",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "656.27",
+          "excess_per_exposure": "0.2335184937601533503066843493"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.02373334650670430486944248412",
+          "adjusted_excess": "0.003911459325536848405081157375",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "24.56",
+          "excess_per_exposure": "0.05718158794003370279694488678"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.0511895467872554235384524443",
+          "adjusted_excess": "0.05424820908267348342939055388",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "1085.61",
+          "excess_per_exposure": "0.1595605918388151859203804551"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03214644752530802141537886050",
+          "adjusted_excess": "0E-30",
+          "trades": 0,
+          "reason": null,
+          "realised_pnl": "0.00",
+          "excess_per_exposure": null
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.1335802866876147217123479451",
+          "adjusted_excess": "-0.07959856236294060915284820956",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-730.85",
+          "excess_per_exposure": "-0.7392786898710434051439291043"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.3168380644559861499533892662",
+          "adjusted_excess": "0.1743479753589655744906112665",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "591.14",
+          "excess_per_exposure": "0.3899342073308828579578780506"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.1329200558025117603901428510",
+          "adjusted_excess": "-0.05424625079934631951987398040",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-758.97",
+          "excess_per_exposure": "-0.5231940139929267148183376250"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0809639783499122293739028672",
+          "adjusted_excess": "-0.05429015470782287406963136337",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-620.29",
+          "excess_per_exposure": "-1.003135561399128226299897574"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.1356495126015239052164447794",
+          "adjusted_excess": "-0.06488677913220207085384744201",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-758.97",
+          "excess_per_exposure": "-1.246711760298050349586544564"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.3520787681660899653979238754",
+          "adjusted_excess": "0.2380201617954784739100346021",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "1392.76",
+          "excess_per_exposure": "0.5129553827630725882088740165"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.1774008736266395624606747011",
+          "adjusted_excess": "0.1092317605892065600648564929",
+          "trades": 23,
+          "reason": null,
+          "realised_pnl": "624.50",
+          "excess_per_exposure": "0.2684013202872532473317270200"
+        }
+      },
+      "rank_median": 2.0,
+      "rank_worst": 2.5,
+      "rank_hit_rate": 2.5,
+      "borda": 2.3333333333333335,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "134543.45",
+      "median_excess_per_exposure": "0.4911682995477885926677111497",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.02797864986779393786633575431",
+          "worst_annualized_adjusted_excess": "-0.1554062540452724060482608",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.1942535776322199635089245444",
+          "worst_annualized_adjusted_excess": "-0.04061926441703666012063210706",
+          "hit_rate": 0.8333333333333334,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.1331846489121996764947417834",
+          "worst_annualized_adjusted_excess": "0.08968150706019001669673678309",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1304731209910375391069325180",
+          "worst_annualized_adjusted_excess": "0.06036310827389389068502342351",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.0756460603861929019191093165",
+          "worst_annualized_adjusted_excess": "0.07152528940654871802764825089",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.1050483573560011276790650818",
+          "worst_annualized_adjusted_excess": "-0.1064308768469584082667997511",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1088035111426033464971301424",
+          "worst_annualized_adjusted_excess": "-0.06463699922926897451073897724",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "B-momentum",
+      "display_name": "Strategy B - Confirmed Acceleration",
+      "ranked": true,
+      "median_adjusted_excess": "0.1333502310584254332267945132",
+      "worst_adjusted_excess": "-0.07959856236294060915284820956",
+      "best_adjusted_excess": "1.681460899405663700121841394",
+      "hit_rate": 0.7777777777777778,
+      "iqr": "0.5892914762677139280904590045",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 704,
+      "mean_exposure": 0.4186906218854404,
+      "worst_drawdown": "-0.23223286217654837",
+      "notes": [
+        "excess_per_exposure unavailable for 2 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "0.877470374326696120559220481",
+          "adjusted_excess": "1.617768941584082990643345640",
+          "trades": 117,
+          "reason": null,
+          "realised_pnl": "26030.65",
+          "excess_per_exposure": "2.833273681888896770715896438"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "0.573413149705991418127880489",
+          "adjusted_excess": "1.681460899405663700121841394",
+          "trades": 109,
+          "reason": null,
+          "realised_pnl": "31849.51",
+          "excess_per_exposure": "2.920670233113897359373183432"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "1.086223613568964473763844338",
+          "adjusted_excess": "1.312312319642556945639411729",
+          "trades": 68,
+          "reason": null,
+          "realised_pnl": "18432.29",
+          "excess_per_exposure": "1.871155176327085848075228799"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "1.059612475923080998039942788",
+          "adjusted_excess": "1.428767128928913740827461991",
+          "trades": 57,
+          "reason": null,
+          "realised_pnl": "21396.04",
+          "excess_per_exposure": "2.170760200997832255048820509"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "0.3079353649101431617423088638",
+          "adjusted_excess": "0.6817946363397210355406640268",
+          "trades": 52,
+          "reason": null,
+          "realised_pnl": "10384.41",
+          "excess_per_exposure": "1.396494888406109169725328984"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.7212216328591595178629601477",
+          "adjusted_excess": "0.8151008967346183618416766207",
+          "trades": 44,
+          "reason": null,
+          "realised_pnl": "9967.13",
+          "excess_per_exposure": "1.236444357846654211347026888"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "0.3335865316024686103426260907",
+          "adjusted_excess": "0.5360090029231909696531176846",
+          "trades": 38,
+          "reason": null,
+          "realised_pnl": "7704.88",
+          "excess_per_exposure": "0.9987381529729365081957536476"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.4226889588719503135122284627",
+          "adjusted_excess": "0.5568648529539284231975275623",
+          "trades": 27,
+          "reason": null,
+          "realised_pnl": "6529.05",
+          "excess_per_exposure": "1.334850329091106736500417439"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "0.2629112943565155703417402578",
+          "adjusted_excess": "0.5149112694893888174563957044",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "9306.38",
+          "excess_per_exposure": "0.8270336748675298540185358268"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0232331874253447714192637637",
+          "adjusted_excess": "0.02643896505359663481919861006",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "1175.53",
+          "excess_per_exposure": "0.04085255462078214241035198704"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "0.5596825936324627854002224930",
+          "adjusted_excess": "0.6272391084847243532340944006",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "8041.60",
+          "excess_per_exposure": "0.8667477825895512309367514186"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.01034735957696827262044653349",
+          "adjusted_excess": "0.001609549577688071845622796710",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "81.97",
+          "excess_per_exposure": "0.004531049831435326716963181567"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.4196565277109149802383287272",
+          "adjusted_excess": "0.4761343825249718001604707141",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "5857.14",
+          "excess_per_exposure": "0.7215363025887471430911930744"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.02440559142207104723717703242",
+          "adjusted_excess": "-0.04046146705812974548070641768",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-430.60",
+          "excess_per_exposure": null
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.0764840350969093766369827135",
+          "adjusted_excess": "0.1301139228788632792037716082",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "1924.97",
+          "excess_per_exposure": "0.2419711028206803548488810739"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.00134311382113821138211382114",
+          "adjusted_excess": "0.02333507533109110284044715447",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "662.89",
+          "excess_per_exposure": "0.03674170597872114953809261386"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.00902990759377859103385178408",
+          "adjusted_excess": "0.04972855757684909769075937786",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "656.27",
+          "excess_per_exposure": "0.2335184937601533503066843493"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.02373334650670430486944248412",
+          "adjusted_excess": "0.003911459325536848405081157375",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "24.56",
+          "excess_per_exposure": "0.05718158794003370279694488678"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.0511895467872554235384524443",
+          "adjusted_excess": "0.05424820908267348342939055388",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "1085.61",
+          "excess_per_exposure": "0.1595605918388151859203804551"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03214644752530802141537886050",
+          "adjusted_excess": "0E-30",
+          "trades": 0,
+          "reason": null,
+          "realised_pnl": "0.00",
+          "excess_per_exposure": null
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.1335802866876147217123479451",
+          "adjusted_excess": "-0.07959856236294060915284820956",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-730.85",
+          "excess_per_exposure": "-0.7392786898710434051439291043"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2713270644559861499533892662",
+          "adjusted_excess": "0.1333502310584254332267945132",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "136.03",
+          "excess_per_exposure": "0.2870009038267793466166681655"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.1329200558025117603901428510",
+          "adjusted_excess": "-0.05424625079934631951987398040",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-758.97",
+          "excess_per_exposure": "-0.5231940139929267148183376250"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0809639783499122293739028672",
+          "adjusted_excess": "-0.05429015470782287406963136337",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-620.29",
+          "excess_per_exposure": "-1.003135561399128226299897574"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.1356495126015239052164447794",
+          "adjusted_excess": "-0.06488677913220207085384744201",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-758.97",
+          "excess_per_exposure": "-1.246711760298050349586544564"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2954777681660899653979238754",
+          "adjusted_excess": "0.2043370467538329143598615917",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "826.75",
+          "excess_per_exposure": "0.3574121128841641963440120372"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.2343068736266395624606747011",
+          "adjusted_excess": "0.1770595765863124915299356275",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "1193.56",
+          "excess_per_exposure": "0.3527190898143974299693296548"
+        }
+      },
+      "rank_median": 5.0,
+      "rank_worst": 2.5,
+      "rank_hit_rate": 2.5,
+      "borda": 3.3333333333333335,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "159967.54",
+      "median_excess_per_exposure": "0.3527190898143974299693296548",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.02797864986779393786633575431",
+          "worst_annualized_adjusted_excess": "-0.1554062540452724060482608",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.0788531961149870447889362898",
+          "worst_annualized_adjusted_excess": "-0.04061926441703666012063210706",
+          "hit_rate": 0.8333333333333334,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.1468869365905119588488558845",
+          "worst_annualized_adjusted_excess": "0.1304345268275503710429000452",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1487460052521715611414266907",
+          "worst_annualized_adjusted_excess": "0.09681711977460524415650361658",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.07590557201233670649596473935",
+          "worst_annualized_adjusted_excess": "0.07517804933981630195358374861",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.1050483573560011276790650818",
+          "worst_annualized_adjusted_excess": "-0.1064308768469584082667997511",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1763463417534151452023625007",
+          "worst_annualized_adjusted_excess": "-0.06463699922926897451073897724",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "B4-tight-stop",
+      "display_name": "B4 - 8 pct stop",
+      "ranked": true,
+      "median_adjusted_excess": "0.1337088765421127191270475429",
+      "worst_adjusted_excess": "-0.09969303824247892231590081822",
+      "best_adjusted_excess": "1.632476899867248953047267446",
+      "hit_rate": 0.7777777777777778,
+      "iqr": "0.5422920703801301571130003832",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 736,
+      "mean_exposure": 0.4151474716861112,
+      "worst_drawdown": "-0.2341188431516611",
+      "notes": [
+        "excess_per_exposure unavailable for 2 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "0.879690374326696120559220481",
+          "adjusted_excess": "1.632476899867248953047267446",
+          "trades": 119,
+          "reason": null,
+          "realised_pnl": "26052.85",
+          "excess_per_exposure": "2.895733870392659491324346352"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "0.202106149705991418127880489",
+          "adjusted_excess": "1.327396038621310074672882343",
+          "trades": 117,
+          "reason": null,
+          "realised_pnl": "28136.44",
+          "excess_per_exposure": "2.332413626306476972528763450"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "1.112227613568964473763844338",
+          "adjusted_excess": "1.339567711428513763626460086",
+          "trades": 68,
+          "reason": null,
+          "realised_pnl": "18692.33",
+          "excess_per_exposure": "1.914529788756616656108614111"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "1.032739475923080998039942788",
+          "adjusted_excess": "1.414534625085946827393123908",
+          "trades": 58,
+          "reason": null,
+          "realised_pnl": "21127.31",
+          "excess_per_exposure": "2.188045456114263701016467278"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.0498226350898568382576911362",
+          "adjusted_excess": "0.3270481243007065889354249162",
+          "trades": 60,
+          "reason": null,
+          "realised_pnl": "6806.83",
+          "excess_per_exposure": "0.6755852269231133108883208870"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.7309646328591595178629601477",
+          "adjusted_excess": "0.8253903149122005590835052666",
+          "trades": 44,
+          "reason": null,
+          "realised_pnl": "10064.56",
+          "excess_per_exposure": "1.255831032642710430482409690"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "0.3151205316024686103426260907",
+          "adjusted_excess": "0.5262688987145523811023622047",
+          "trades": 39,
+          "reason": null,
+          "realised_pnl": "7520.22",
+          "excess_per_exposure": "1.018491676575524120753596607"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.4281139588719503135122284627",
+          "adjusted_excess": "0.5638362509489328533743425158",
+          "trades": 28,
+          "reason": null,
+          "realised_pnl": "6583.30",
+          "excess_per_exposure": "1.373679749628676121762741028"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.1002717056434844296582597422",
+          "adjusted_excess": "0.1518168699770284657843880721",
+          "trades": 40,
+          "reason": null,
+          "realised_pnl": "5674.55",
+          "excess_per_exposure": "0.2438952808426497981553853511"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0206011874253447714192637637",
+          "adjusted_excess": "0.02974232298329619801824302314",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "1201.85",
+          "excess_per_exposure": "0.04629792478630554703280954474"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "0.5596825936324627854002224930",
+          "adjusted_excess": "0.6272391084847243532340944006",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "8041.60",
+          "excess_per_exposure": "0.8667477825895512309367514186"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.01034735957696827262044653349",
+          "adjusted_excess": "0.001609549577688071845622796710",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "81.97",
+          "excess_per_exposure": "0.004531049831435326716963181567"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.4196565277109149802383287272",
+          "adjusted_excess": "0.4761343825249718001604707141",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "5857.14",
+          "excess_per_exposure": "0.7215363025887471430911930744"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.02700159142207104723717703242",
+          "adjusted_excess": "-0.03790636652740287925573851733",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-404.64",
+          "excess_per_exposure": null
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.0680020350969093766369827135",
+          "adjusted_excess": "0.1221443892689889994761655317",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "1840.15",
+          "excess_per_exposure": "0.2290317256925048711766755641"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.00134311382113821138211382114",
+          "adjusted_excess": "0.02333507533109110284044715447",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "662.89",
+          "excess_per_exposure": "0.03674170597872114953809261386"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.00902990759377859103385178408",
+          "adjusted_excess": "0.04972855757684909769075937786",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "656.27",
+          "excess_per_exposure": "0.2335184937601533503066843493"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.02373334650670430486944248412",
+          "adjusted_excess": "0.003911459325536848405081157375",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "24.56",
+          "excess_per_exposure": "0.05718158794003370279694488678"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.0511895467872554235384524443",
+          "adjusted_excess": "0.05424820908267348342939055388",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "1085.61",
+          "excess_per_exposure": "0.1595605918388151859203804551"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03214644752530802141537886050",
+          "adjusted_excess": "0E-30",
+          "trades": 0,
+          "reason": null,
+          "realised_pnl": "0.00",
+          "excess_per_exposure": null
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.1544632866876147217123479451",
+          "adjusted_excess": "-0.09969303824247892231590081822",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "-939.68",
+          "excess_per_exposure": "-1.053435570873447223861844716"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2719870644559861499533892662",
+          "adjusted_excess": "0.1337088765421127191270475429",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "142.63",
+          "excess_per_exposure": "0.2884988256930533967294353857"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.1443320558025117603901428510",
+          "adjusted_excess": "-0.04332470944810526984247550818",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-644.85",
+          "excess_per_exposure": "-0.4275431969265907663642747006"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0853649783499122293739028672",
+          "adjusted_excess": "-0.05005799676331418180222352253",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-576.28",
+          "excess_per_exposure": "-0.9455665768711534650325188168"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.1470615126015239052164447794",
+          "adjusted_excess": "-0.05372419581516816139956459851",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-644.85",
+          "excess_per_exposure": "-1.056163282205270906952038352"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2843027681660899653979238754",
+          "adjusted_excess": "0.1918329765512808242214532872",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "715.00",
+          "excess_per_exposure": "0.3392468931262273353900579808"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.2343068736266395624606747011",
+          "adjusted_excess": "0.1769916965052064832292725425",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "1193.56",
+          "excess_per_exposure": "0.3529991198440128081430235712"
+        }
+      },
+      "rank_median": 4.0,
+      "rank_worst": 4.0,
+      "rank_hit_rate": 2.5,
+      "borda": 3.5,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "148951.32",
+      "median_excess_per_exposure": "0.2884988256930533967294353857",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.02797864986779393786633575431",
+          "worst_annualized_adjusted_excess": "-0.1922975781325188800085832",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.0764824427028002490241277908",
+          "worst_annualized_adjusted_excess": "-0.03805442148700819410720324894",
+          "hit_rate": 0.8333333333333334,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.1469423605129323958912174683",
+          "worst_annualized_adjusted_excess": "0.0462376757203683709445271139",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1511893967610534714895361870",
+          "worst_annualized_adjusted_excess": "0.05348287403309626246685780866",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.0714283305364773658876486787",
+          "worst_annualized_adjusted_excess": "0.06538923454129498872312395236",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.08622494394572059134695686806",
+          "worst_annualized_adjusted_excess": "-0.09714157890346414059498959875",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1762787139858366003193558825",
+          "worst_annualized_adjusted_excess": "-0.05351537843649999845543235768",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "A-rotation",
+      "display_name": "Strategy A - Semis Breadth-Capped Rotation",
+      "ranked": true,
+      "median_adjusted_excess": "0.3829761193019407057093425605",
+      "worst_adjusted_excess": "-0.2917541513622513342376287365",
+      "best_adjusted_excess": "1.340207745781221857911744451",
+      "hit_rate": 0.7777777777777778,
+      "iqr": "0.5616860384317957454852478758",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 1967,
+      "mean_exposure": 0.657836295605216,
+      "worst_drawdown": "-0.37040230533885776",
+      "notes": [],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "0.552804374326696120559220481",
+          "adjusted_excess": "1.023275162527951604720692369",
+          "trades": 323,
+          "reason": null,
+          "realised_pnl": "22783.99",
+          "excess_per_exposure": "1.406839762201977354262493555"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "0.614639149705991418127880489",
+          "adjusted_excess": "1.340207745781221857911744451",
+          "trades": 331,
+          "reason": null,
+          "realised_pnl": "32261.77",
+          "excess_per_exposure": "1.855811407071252450136586248"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "0.6099786135689644737638443382",
+          "adjusted_excess": "0.7751124300435467947951340556",
+          "trades": 159,
+          "reason": null,
+          "realised_pnl": "13669.84",
+          "excess_per_exposure": "0.9913709568374523547434709017"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "0.769945475923080998039942788",
+          "adjusted_excess": "1.004503938618268811251787890",
+          "trades": 156,
+          "reason": null,
+          "realised_pnl": "18499.37",
+          "excess_per_exposure": "1.283195310385166445365081321"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "0.5530413649101431617423088638",
+          "adjusted_excess": "0.8090334660392831236140724946",
+          "trades": 173,
+          "reason": null,
+          "realised_pnl": "12835.47",
+          "excess_per_exposure": "1.245493465665621070010818258"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.4161666328591595178629601477",
+          "adjusted_excess": "0.4854795968830238979585188403",
+          "trades": 94,
+          "reason": null,
+          "realised_pnl": "6916.58",
+          "excess_per_exposure": "0.6486879122271957350508621308"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "0.1407755316024686103426260907",
+          "adjusted_excess": "0.2543723064933393461800383061",
+          "trades": 94,
+          "reason": null,
+          "realised_pnl": "5776.77",
+          "excess_per_exposure": "0.3437489045432533338855282882"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.5240869588719503135122284627",
+          "adjusted_excess": "0.6108577237802708320703693798",
+          "trades": 100,
+          "reason": null,
+          "realised_pnl": "7543.03",
+          "excess_per_exposure": "0.9803686155950514865103618989"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "0.6584462943565155703417402578",
+          "adjusted_excess": "0.8424231264069607276890334891",
+          "trades": 105,
+          "reason": null,
+          "realised_pnl": "13261.73",
+          "excess_per_exposure": "1.162808405045335258260523720"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "0.0451208125746552285807362363",
+          "adjusted_excess": "0.0728202725978037309045498968",
+          "trades": 27,
+          "reason": null,
+          "realised_pnl": "1859.07",
+          "excess_per_exposure": "0.09065686824464589796955197664"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "0.4960115936324627854002224930",
+          "adjusted_excess": "0.5300325680351333593261641151",
+          "trades": 31,
+          "reason": null,
+          "realised_pnl": "7404.89",
+          "excess_per_exposure": "0.6157140758957023376959430994"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "0.09960664042303172737955346651",
+          "adjusted_excess": "0.1062562675710202681037015276",
+          "trades": 36,
+          "reason": null,
+          "realised_pnl": "1181.51",
+          "excess_per_exposure": "0.1656577350443660468902224849"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.5315345277109149802383287272",
+          "adjusted_excess": "0.5746966118818098298534961814",
+          "trades": 32,
+          "reason": null,
+          "realised_pnl": "6975.92",
+          "excess_per_exposure": "0.7765357851379726956290198810"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "-0.1839034085779289527628229676",
+          "adjusted_excess": "-0.2315606755243796282184128128",
+          "trades": 28,
+          "reason": null,
+          "realised_pnl": "-2513.69",
+          "excess_per_exposure": "-0.7886774039659045991795158686"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.5781940350969093766369827135",
+          "adjusted_excess": "0.6137001255215426925091671032",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "6942.07",
+          "excess_per_exposure": "0.8843613863335927659010826547"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "0.01840088617886178861788617886",
+          "adjusted_excess": "0.03339422319049232083841463414",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "860.33",
+          "excess_per_exposure": "0.04290604836736884295805820265"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "0.1344560924062214089661482159",
+          "adjusted_excess": "0.1460542640323893594876486734",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "2091.13",
+          "excess_per_exposure": "0.1729175113681967863756638926"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "-0.05975865349329569513055751588",
+          "adjusted_excess": "-0.07024464236566186104093154552",
+          "trades": 20,
+          "reason": null,
+          "realised_pnl": "-810.36",
+          "excess_per_exposure": "-0.1385015348854553449443720571"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "0.1731704532127445764615475557",
+          "adjusted_excess": "0.1975175966363787494827688124",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "3329.21",
+          "excess_per_exposure": "0.2330336112603469408365269529"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "-0.1048455524746919785846211395",
+          "adjusted_excess": "-0.1246693392258822481471956608",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "-1369.92",
+          "excess_per_exposure": "-0.3252281666194434850562055665"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "0.4014207133123852782876520549",
+          "adjusted_excess": "0.4142734669078804094204025760",
+          "trades": 20,
+          "reason": null,
+          "realised_pnl": "4619.16",
+          "excess_per_exposure": "0.5260339977978555248997532828"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.4614740644559861499533892662",
+          "adjusted_excess": "0.3905015245484945695332267945",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "2037.50",
+          "excess_per_exposure": "0.5389066586000642037298658300"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "-0.0132719441974882396098571490",
+          "adjusted_excess": "-0.1529427703513453694434853912",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "-2220.89",
+          "excess_per_exposure": "-0.4618770853208627916260638995"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1314959783499122293739028672",
+          "adjusted_excess": "0.06779154924772971277062609715",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "-114.97",
+          "excess_per_exposure": "0.1222587072895041761655061635"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "-0.1397664873984760947835552206",
+          "adjusted_excess": "-0.2917541513622513342376287365",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "-3513.13",
+          "excess_per_exposure": "-1.036278817830996013998165280"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.4469597681660899653979238754",
+          "adjusted_excess": "0.3829761193019407057093425605",
+          "trades": 29,
+          "reason": null,
+          "realised_pnl": "2341.57",
+          "excess_per_exposure": "0.5476337900079005797947546423"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "-0.0681551263733604375393252989",
+          "adjusted_excess": "-0.1268951859086824728352935482",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "-1831.06",
+          "excess_per_exposure": "-0.2595001106997131174854211012"
+        }
+      },
+      "rank_median": 1.0,
+      "rank_worst": 10.0,
+      "rank_hit_rate": 2.5,
+      "borda": 4.5,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "160816.89",
+      "median_excess_per_exposure": "0.5260339977978555248997532828",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.1992496393561548974721091262",
+          "worst_annualized_adjusted_excess": "-0.2294227802647201134094599214",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.3155019419516461380480431841",
+          "worst_annualized_adjusted_excess": "-0.2323474827080165700534715718",
+          "hit_rate": 0.8333333333333334,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.1448996873468326346639953130",
+          "worst_annualized_adjusted_excess": "0.06930443724675656531871990155",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1046320394217642398761970302",
+          "worst_annualized_adjusted_excess": "0.09476974251850605879841748200",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.0528121408117922882812871514",
+          "worst_annualized_adjusted_excess": "0.04942249990667725003160934641",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1235646751647948299134630016",
+          "worst_annualized_adjusted_excess": "-0.2693688158271880972369151241",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.1264508453794400247115490457",
+          "worst_annualized_adjusted_excess": "-0.2908521375418806104825498348",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "B3-concentrated",
+      "display_name": "B3 - 4 slots at 22 pct",
+      "ranked": true,
+      "median_adjusted_excess": "0.1648979970705342547553361405",
+      "worst_adjusted_excess": "-0.1195415471740658930404753757",
+      "best_adjusted_excess": "1.472137975268851969274778832",
+      "hit_rate": 0.7407407407407407,
+      "iqr": "0.5853546978081245491484205238",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 542,
+      "mean_exposure": 0.4558954843601267,
+      "worst_drawdown": "-0.27952607030348264",
+      "notes": [
+        "excess_per_exposure unavailable for 1 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "0.307652374326696120559220481",
+          "adjusted_excess": "0.976409265819805457895055378",
+          "trades": 89,
+          "reason": null,
+          "realised_pnl": "20332.47",
+          "excess_per_exposure": "1.594271785595605530197256492"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "0.242585149705991418127880489",
+          "adjusted_excess": "1.294611783361872500015892355",
+          "trades": 82,
+          "reason": null,
+          "realised_pnl": "28541.23",
+          "excess_per_exposure": "2.167940594216755375785119933"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "0.4542096135689644737638443382",
+          "adjusted_excess": "0.6484974912440475302063789869",
+          "trades": 50,
+          "reason": null,
+          "realised_pnl": "12112.15",
+          "excess_per_exposure": "0.8724023800931080045979537102"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "1.117745475923080998039942788",
+          "adjusted_excess": "1.472137975268851969274778832",
+          "trades": 42,
+          "reason": null,
+          "realised_pnl": "21977.37",
+          "excess_per_exposure": "2.191150320455863636895419873"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "0.1835073649101431617423088638",
+          "adjusted_excess": "0.5273341590450516537541882424",
+          "trades": 38,
+          "reason": null,
+          "realised_pnl": "9140.13",
+          "excess_per_exposure": "0.9962287406428395301153351758"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.4122476328591595178629601477",
+          "adjusted_excess": "0.4893970854738089838201759149",
+          "trades": 34,
+          "reason": null,
+          "realised_pnl": "6877.39",
+          "excess_per_exposure": "0.6797588521518421968696231267"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "0.5437035316024686103426260907",
+          "adjusted_excess": "0.7211259851955068871462013195",
+          "trades": 28,
+          "reason": null,
+          "realised_pnl": "9806.05",
+          "excess_per_exposure": "1.214206097047651793339909244"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.5437269588719503135122284627",
+          "adjusted_excess": "0.6674519956982181959287985498",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "7739.43",
+          "excess_per_exposure": "1.442921466466898925398808634"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "0.0283972943565155703417402578",
+          "adjusted_excess": "0.2615172017518232422515227867",
+          "trades": 25,
+          "reason": null,
+          "realised_pnl": "6961.24",
+          "excess_per_exposure": "0.4017931157513364435530454533"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0405051874253447714192637637",
+          "adjusted_excess": "0.00705880754269892059941361712",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "1002.81",
+          "excess_per_exposure": "0.01066036504302378086078464481"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "0.8027115936324627854002224930",
+          "adjusted_excess": "0.8725875869151269067648461090",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "10471.89",
+          "excess_per_exposure": "1.221799676809146221693502993"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "0.02509164042303172737955346651",
+          "adjusted_excess": "0.03595152887743971284334606346",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "436.36",
+          "excess_per_exposure": "0.08675913647299545677389651668"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.4496785277109149802383287272",
+          "adjusted_excess": "0.5044438961359117239547115984",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "6157.36",
+          "excess_per_exposure": "0.7526740478038268590121619045"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.00306559142207104723717703242",
+          "adjusted_excess": "-0.06060962610217342521230824680",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-644.00",
+          "excess_per_exposure": "-1.078802350659501192233704501"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.0783709649030906233630172865",
+          "adjusted_excess": "-0.02307201298068360398114195912",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "376.42",
+          "excess_per_exposure": "-0.04408624139246545153817283391"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "0.01052388617886178861788617886",
+          "adjusted_excess": "0.03082408596431798177337398374",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "781.56",
+          "excess_per_exposure": "0.04404423807580896098261493069"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.01032090759377859103385178408",
+          "adjusted_excess": "0.04563076706024738561756633120",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "643.36",
+          "excess_per_exposure": "0.1821229369782539384462075637"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.02426434650670430486944248412",
+          "adjusted_excess": "0.005122254672850085663726182075",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "29.87",
+          "excess_per_exposure": "0.05104214918979293206083750633"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.0252555467872554235384524443",
+          "adjusted_excess": "0.06070486075573458240231719571",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "1344.95",
+          "excess_per_exposure": "0.1314218240769406369507945168"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03214644752530802141537886050",
+          "adjusted_excess": "0E-30",
+          "trades": 0,
+          "reason": null,
+          "realised_pnl": "0.00",
+          "excess_per_exposure": null
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.1701352866876147217123479451",
+          "adjusted_excess": "-0.1195415471740658930404753757",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-1096.40",
+          "excess_per_exposure": "-0.7303606234707830513199168322"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2816700644559861499533892662",
+          "adjusted_excess": "0.1700494819468606095352243974",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "239.46",
+          "excess_per_exposure": "0.2999644023673555049727321965"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.0948410558025117603901428510",
+          "adjusted_excess": "-0.08169213011614776379526131802",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-1139.76",
+          "excess_per_exposure": "-0.5283973127900045876184206942"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0519639783499122293739028672",
+          "adjusted_excess": "-0.07973232952456425632314218841",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-910.29",
+          "excess_per_exposure": "-1.009249875375718622043975651"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.0975705126015239052164447794",
+          "adjusted_excess": "-0.09755843705129007191074269446",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-1139.76",
+          "excess_per_exposure": "-1.257077387035536360254727339"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2582727681660899653979238754",
+          "adjusted_excess": "0.1668843476961582328719723183",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "454.70",
+          "excess_per_exposure": "0.2924979776048199250081799934"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.2152128736266395624606747011",
+          "adjusted_excess": "0.1648979970705342547553361405",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "1002.62",
+          "excess_per_exposure": "0.2932602525161957436018189334"
+        }
+      },
+      "rank_median": 3.0,
+      "rank_worst": 5.0,
+      "rank_hit_rate": 5.5,
+      "borda": 4.5,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "141498.61",
+      "median_excess_per_exposure": "0.2928791150605078343049994634",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.03738168691417412784112573164",
+          "worst_annualized_adjusted_excess": "-0.2293058349934809158781504",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.02157852024011502548540252058",
+          "worst_annualized_adjusted_excess": "-0.06084314413999819061872221694",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.1536218937671657372087854775",
+          "worst_annualized_adjusted_excess": "0.0721117381176023042123065745",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.08329935888383043750847424468",
+          "worst_annualized_adjusted_excess": "0.07754914557428508339443423513",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.05778736102310314260649741285",
+          "worst_annualized_adjusted_excess": "0.05282720734176483636175426111",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.1516921218287118474075319463",
+          "worst_annualized_adjusted_excess": "-0.1559953205780594474375160142",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1642422939305900390888889677",
+          "worst_annualized_adjusted_excess": "-0.09719205770558610367075590894",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "H-trend-diversified",
+      "display_name": "H - Trend, cross-asset: lowest drawdown of the trend family",
+      "ranked": true,
+      "median_adjusted_excess": "0.05772287673501155220044925223",
+      "worst_adjusted_excess": "-0.07709999748022080536796341766",
+      "best_adjusted_excess": "0.4125237599410735892857142857",
+      "hit_rate": 0.7037037037037037,
+      "iqr": "0.2567761200578027917576929498",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 564,
+      "mean_exposure": 0.25897627570211995,
+      "worst_drawdown": "-0.12663426666609168",
+      "notes": [
+        "excess_per_exposure unavailable for 1 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-0.915562625673303879440779519",
+          "adjusted_excess": "0.2893905236318471509144828422",
+          "trades": 86,
+          "reason": null,
+          "realised_pnl": "8100.32",
+          "excess_per_exposure": "0.9591451218665235102642504511"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-1.387052850294008581872119511",
+          "adjusted_excess": "0.3547601739629078894633681198",
+          "trades": 95,
+          "reason": null,
+          "realised_pnl": "12244.85",
+          "excess_per_exposure": "1.065244539818975820323696252"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.2699143864310355262361556618",
+          "adjusted_excess": "0.2425242850979250616474005931",
+          "trades": 48,
+          "reason": null,
+          "realised_pnl": "4870.91",
+          "excess_per_exposure": "0.7506834698784587960353824894"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-0.460563524076919001960057212",
+          "adjusted_excess": "0.2563253672969147927467288236",
+          "trades": 49,
+          "reason": null,
+          "realised_pnl": "6194.28",
+          "excess_per_exposure": "0.7623993856110063363686291902"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.0861776350898568382576911362",
+          "adjusted_excess": "0.4125237599410735892857142857",
+          "trades": 46,
+          "reason": null,
+          "realised_pnl": "6443.28",
+          "excess_per_exposure": "1.300023378212598243132398301"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.0492276328591595178629601477",
+          "adjusted_excess": "0.2470876896622007207948745792",
+          "trades": 27,
+          "reason": null,
+          "realised_pnl": "3247.19",
+          "excess_per_exposure": "0.8768437004671726414117079457"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.2222614683975313896573739093",
+          "adjusted_excess": "0.0710562604682524709938284742",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "2146.40",
+          "excess_per_exposure": "0.2162123972997148231040829509"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.0749539588719503135122284627",
+          "adjusted_excess": "0.2435551270530337897096668747",
+          "trades": 20,
+          "reason": null,
+          "realised_pnl": "3051.70",
+          "excess_per_exposure": "0.9100123795572864191159019488"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.0861897056434844296582597422",
+          "adjusted_excess": "0.3177916214249458187685608748",
+          "trades": 34,
+          "reason": null,
+          "realised_pnl": "5815.37",
+          "excess_per_exposure": "0.8045560972542126932415087835"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.1116961874253447714192637637",
+          "adjusted_excess": "-0.03995308155324242538929308285",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "290.90",
+          "excess_per_exposure": "-0.08146858311121713100362222690"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.0735594063675372145997775070",
+          "adjusted_excess": "0.1296066689140515578243364942",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "1709.18",
+          "excess_per_exposure": "0.7670026946873425390352520684"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.05278335957696827262044653349",
+          "adjusted_excess": "-0.03803388656566448655992949471",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "-342.39",
+          "excess_per_exposure": "-0.1858590649230128686255075302"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.1217895277109149802383287272",
+          "adjusted_excess": "0.2314240885496005700870702208",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "2878.47",
+          "excess_per_exposure": "0.6811009602922573466889011223"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "-0.01504040857792895276282296758",
+          "adjusted_excess": "-0.07709999748022080536796341766",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-825.06",
+          "excess_per_exposure": "-0.9621891424600631985568200769"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.2090790350969093766369827135",
+          "adjusted_excess": "0.2727051540128339444735463594",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "3250.92",
+          "excess_per_exposure": "0.6039175076341391354143447752"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.08427911382113821138211382114",
+          "adjusted_excess": "-0.03876460135985288369563008130",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "-166.47",
+          "excess_per_exposure": "-0.1185359971339160575630390312"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.05317690759377859103385178408",
+          "adjusted_excess": "0.00750631905540627302470265325",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "214.80",
+          "excess_per_exposure": "0.04010386170336155776512230272"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.03073534650670430486944248412",
+          "adjusted_excess": "0.01123454495412844022512350035",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "94.58",
+          "excess_per_exposure": "0.1345540428226366688748636939"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.0524235467872554235384524443",
+          "adjusted_excess": "0.05772287673501155220044925223",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "1073.27",
+          "excess_per_exposure": "0.1858970689047534377868534668"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "-0.00329655247469197858462113950",
+          "adjusted_excess": "-0.03087928755887839329132864190",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-354.43",
+          "excess_per_exposure": "-0.2175113813451442780051007929"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.08793928668761472171234794512",
+          "adjusted_excess": "-0.04248458209327069657468189030",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-274.44",
+          "excess_per_exposure": "-0.1708788235453871835474130284"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2232490644559861499533892662",
+          "adjusted_excess": "0.03563242110281311532827273938",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-344.75",
+          "excess_per_exposure": "0.1309894480294292269010480703"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.2042940558025117603901428510",
+          "adjusted_excess": "0.03277640892991069269345302318",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-45.23",
+          "excess_per_exposure": "0.1834954871639970885347980843"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1335529783499122293739028672",
+          "adjusted_excess": "-0.001602838590740083199239321239",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-94.40",
+          "excess_per_exposure": "-0.02924460170404273753869167153"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.1555375126015239052164447794",
+          "adjusted_excess": "-0.02130658480963098981160512434",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "-560.09",
+          "excess_per_exposure": "-0.1298853030026844942240018398"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2900417681660899653979238754",
+          "adjusted_excess": "0.1594019729953362465397923875",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "772.39",
+          "excess_per_exposure": "0.4128524062349753869262720172"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.1171578736266395624606747011",
+          "adjusted_excess": "0.004282978246999894704999757998",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "22.07",
+          "excess_per_exposure": null
+        }
+      },
+      "rank_median": 7.0,
+      "rank_worst": 1.0,
+      "rank_hit_rate": 7.0,
+      "borda": 5.0,
+      "pareto_optimal": true,
+      "provenance_violation": false,
+      "total_realised_pnl": "59413.62",
+      "median_excess_per_exposure": "0.2010547331022341304454682088",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.02293102634612717634757533487",
+          "worst_annualized_adjusted_excess": "-0.0858098197679565404068256",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.04516572610266961114899736966",
+          "worst_annualized_adjusted_excess": "-0.07739391177449121361594581930",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.07407931243904868041175573545",
+          "worst_annualized_adjusted_excess": "0.02481891570647235424340009039",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.04821986530865029312511176930",
+          "worst_annualized_adjusted_excess": "0.04404955642182421738326165466",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.03351099821882696749090524570",
+          "worst_annualized_adjusted_excess": "0.02934379608052900201226260139",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.0541950938661022062473098985",
+          "worst_annualized_adjusted_excess": "-0.00418859055759098600824249608",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.004266528834751967921198205992",
+          "worst_annualized_adjusted_excess": "-0.02121306483351534307299877340",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "C-trend",
+      "display_name": "C - Trend (r1): won in-sample and 3yr",
+      "ranked": true,
+      "median_adjusted_excess": "0.0793161424005104749234252231",
+      "worst_adjusted_excess": "-0.1442471345903109068100029377",
+      "best_adjusted_excess": "0.751942468375570555617947767",
+      "hit_rate": 0.7407407407407407,
+      "iqr": "0.3291977091636004646708489674",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 759,
+      "mean_exposure": 0.3695548067312401,
+      "worst_drawdown": "-0.1867701127402055",
+      "notes": [],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-0.335880625673303879440779519",
+          "adjusted_excess": "0.5417828788815128468195848214",
+          "trades": 125,
+          "reason": null,
+          "realised_pnl": "13897.14",
+          "excess_per_exposure": "1.102563169100983525992659316"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-0.554032850294008581872119511",
+          "adjusted_excess": "0.751942468375570555617947767",
+          "trades": 124,
+          "reason": null,
+          "realised_pnl": "20575.05",
+          "excess_per_exposure": "1.504122682628588372931876044"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "0.1512036135689644737638443382",
+          "adjusted_excess": "0.4758722682590597786358409490",
+          "trades": 70,
+          "reason": null,
+          "realised_pnl": "9082.09",
+          "excess_per_exposure": "0.8332344764569310023748330727"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-0.023482524076919001960057212",
+          "adjusted_excess": "0.4974170174103555704084335437",
+          "trades": 65,
+          "reason": null,
+          "realised_pnl": "10565.09",
+          "excess_per_exposure": "0.9608547063160040831677927067"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "0.2737973649101431617423088638",
+          "adjusted_excess": "0.6629519028395047341532135242",
+          "trades": 59,
+          "reason": null,
+          "realised_pnl": "10043.03",
+          "excess_per_exposure": "1.418744819765731245905810517"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "0.1420406328591595178629601477",
+          "adjusted_excess": "0.2659800807771727830600499511",
+          "trades": 43,
+          "reason": null,
+          "realised_pnl": "4175.32",
+          "excess_per_exposure": "0.4834990969517037725479819663"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.1086324683975313896573739093",
+          "adjusted_excess": "0.1372261326996601287507980422",
+          "trades": 39,
+          "reason": null,
+          "realised_pnl": "3282.69",
+          "excess_per_exposure": "0.3138264187834943995562154019"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "0.1978029588719503135122284627",
+          "adjusted_excess": "0.3398148853536118243618317435",
+          "trades": 32,
+          "reason": null,
+          "realised_pnl": "4280.19",
+          "excess_per_exposure": "0.8869295716658953236593498482"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "0.2647332943565155703417402578",
+          "adjusted_excess": "0.5585322988706659856845813254",
+          "trades": 39,
+          "reason": null,
+          "realised_pnl": "9324.60",
+          "excess_per_exposure": "0.9973771153996346246631310779"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0174251874253447714192637637",
+          "adjusted_excess": "0.03949107363354000444673688783",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "1233.61",
+          "excess_per_exposure": "0.06629071867676093757695802881"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "0.0297185936324627854002224930",
+          "adjusted_excess": "0.1429940736420899665201038301",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "2741.96",
+          "excess_per_exposure": "0.2664505104489202380203059902"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.1561793595769682726204465335",
+          "adjusted_excess": "-0.1442471345903109068100029377",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "-1376.35",
+          "excess_per_exposure": "-0.4045547916870646477216002160"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "0.1831605277109149802383287272",
+          "adjusted_excess": "0.2728270312814529667813735104",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "3492.18",
+          "excess_per_exposure": "0.5930670594537646362844158471"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.06195959142207104723717703242",
+          "adjusted_excess": "0.000384026476213947011916293110",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-55.06",
+          "excess_per_exposure": "0.004398719334138141100987972325"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.2528420350969093766369827135",
+          "adjusted_excess": "0.3180093681535489785227867994",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "3688.55",
+          "excess_per_exposure": "0.7255925106381938859752520723"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.02043111382113821138211382114",
+          "adjusted_excess": "0.00449411289884178936483739837",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "472.01",
+          "excess_per_exposure": "0.007117033708862153776988813010"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.04562090759377859103385178408",
+          "adjusted_excess": "0.01552516190215472878316559927",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "290.36",
+          "excess_per_exposure": "0.08578746700343231635615936907"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "-0.01959265349329569513055751588",
+          "adjusted_excess": "-0.03855633139933461016478475653",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-408.70",
+          "excess_per_exposure": "-0.3545781893634347837350125558"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1332185467872554235384524443",
+          "adjusted_excess": "-0.00095519129625407346899568482",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "265.32",
+          "excess_per_exposure": "-0.005551397748078052921965945724"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.06247144752530802141537886050",
+          "adjusted_excess": "0.03435312959128127586327823627",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "303.25",
+          "excess_per_exposure": "0.2741548037894584714083413804"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.1031842866876147217123479451",
+          "adjusted_excess": "-0.05467145630214976822325234110",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-426.89",
+          "excess_per_exposure": "-0.2760173155844997824193938883"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2240900644559861499533892662",
+          "adjusted_excess": "0.0793161424005104749234252231",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-336.34",
+          "excess_per_exposure": "0.1809796620171144830277706133"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.1288790558025117603901428510",
+          "adjusted_excess": "-0.06408787291761321411354710629",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-799.38",
+          "excess_per_exposure": "-0.8443238887448907680175870702"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0779229783499122293739028672",
+          "adjusted_excess": "-0.03511145328345074284669397308",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-650.70",
+          "excess_per_exposure": "-0.1675879449927045604469354002"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.1403255126015239052164447794",
+          "adjusted_excess": "-0.05712549950489462683831533115",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-712.21",
+          "excess_per_exposure": "-0.8573445267216244158897311528"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2817777681660899653979238754",
+          "adjusted_excess": "0.1663212890093959027335640138",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "689.75",
+          "excess_per_exposure": "0.3635847967736655668525982531"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.1287748736266395624606747011",
+          "adjusted_excess": "0.05533954665728502674120323313",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "138.24",
+          "excess_per_exposure": "0.1532276399217503133492143957"
+        }
+      },
+      "rank_median": 6.0,
+      "rank_worst": 6.0,
+      "rank_hit_rate": 5.5,
+      "borda": 5.833333333333333,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "93774.80",
+      "median_excess_per_exposure": "0.2664505104489202380203059902",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.001365136870790593011026253125",
+          "worst_annualized_adjusted_excess": "-0.109094373083148033441048",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.0906027462578714310989311644",
+          "worst_annualized_adjusted_excess": "-0.1447823209851037469852869473",
+          "hit_rate": 0.8333333333333334,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.08778330779575805556111464885",
+          "worst_annualized_adjusted_excess": "0.04320545257891566300399356036",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.07351908138985000015636823258",
+          "worst_annualized_adjusted_excess": "0.06980935988365710395165920867",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.04454743125043313648502423372",
+          "worst_annualized_adjusted_excess": "0.03924777461297039517668363622",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.06972038287295853131753818653",
+          "worst_annualized_adjusted_excess": "-0.1241596372037635321024489326",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.05513021660392607104917720261",
+          "worst_annualized_adjusted_excess": "-0.05690360300660708212794030115",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c07-chop",
+      "display_name": "Sector Oversold Reversion",
+      "ranked": true,
+      "median_adjusted_excess": "0.02542656270375140994318846001",
+      "worst_adjusted_excess": "-0.2032019946180069478086296444",
+      "best_adjusted_excess": "0.2341863720958164094159305513",
+      "hit_rate": 0.6296296296296297,
+      "iqr": "0.07950105485371337816606775056",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 727,
+      "mean_exposure": 0.09395492029347888,
+      "worst_drawdown": "-0.23619383955549478",
+      "notes": [
+        "excess_per_exposure unavailable for 2 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.513940625673303879440779519",
+          "adjusted_excess": "0.0552486253628326385281123283",
+          "trades": 120,
+          "reason": null,
+          "realised_pnl": "2116.54",
+          "excess_per_exposure": "0.6095489443576094581310966638"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.402036850294008581872119511",
+          "adjusted_excess": "-0.0213142092323107230004767707",
+          "trades": 114,
+          "reason": null,
+          "realised_pnl": "2095.01",
+          "excess_per_exposure": "-0.2411576964291028919682393177"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.5256183864310355262361556618",
+          "adjusted_excess": "0.1700570622958473513139260425",
+          "trades": 52,
+          "reason": null,
+          "realised_pnl": "2313.87",
+          "excess_per_exposure": "2.099041952065736761886219283"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.172647524076919001960057212",
+          "adjusted_excess": "-0.1830846081750833596551358796",
+          "trades": 57,
+          "reason": null,
+          "realised_pnl": "-926.56",
+          "excess_per_exposure": "-2.186584854155879512370898933"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.4283486350898568382576911362",
+          "adjusted_excess": "0.2341863720958164094159305513",
+          "trades": 57,
+          "reason": null,
+          "realised_pnl": "3021.57",
+          "excess_per_exposure": "2.516888099347898838665653311"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.1256313671408404821370398523",
+          "adjusted_excess": "0.1252398772979733987968291888",
+          "trades": 35,
+          "reason": null,
+          "realised_pnl": "1498.60",
+          "excess_per_exposure": "1.401394519229172438154343259"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.3665434683975313896573739093",
+          "adjusted_excess": "0.02835968630156085733134709513",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "703.58",
+          "excess_per_exposure": "0.2950210972138574365570087176"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.2666510411280496864877715373",
+          "adjusted_excess": "-0.05747098162251835076431606788",
+          "trades": 40,
+          "reason": null,
+          "realised_pnl": "-364.35",
+          "excess_per_exposure": "-0.6289576643628545025771647397"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.5020817056434844296582597422",
+          "adjusted_excess": "0.1092612616348615403233934294",
+          "trades": 32,
+          "reason": null,
+          "realised_pnl": "1656.45",
+          "excess_per_exposure": "1.293930916985904484056070481"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0834731874253447714192637637",
+          "adjusted_excess": "0.04898626966179565465142795092",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "573.13",
+          "excess_per_exposure": "0.8282470864021386330558041674"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.2118914063675372145997775070",
+          "adjusted_excess": "0.01758596938114499257085341951",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "325.86",
+          "excess_per_exposure": "0.2866242271103733191354311721"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "0.00375064042303172737955346651",
+          "adjusted_excess": "0.01983669578662436041421856639",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "222.95",
+          "excess_per_exposure": "0.1496392584304956447304972327"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.3390044722890850197616712728",
+          "adjusted_excess": "-0.1832052430136451792636177231",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "-1729.47",
+          "excess_per_exposure": "-2.965673510023726732629402669"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.1281475914220710472371770324",
+          "adjusted_excess": "0.06841541544057365904421868313",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "606.82",
+          "excess_per_exposure": "0.5968496714748593819937936109"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.0514249649030906233630172865",
+          "adjusted_excess": "0.05648379832372970141435306443",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "645.88",
+          "excess_per_exposure": "0.8085747584134462524958924707"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.02900211382113821138211382114",
+          "adjusted_excess": "0.03328649887041876370071138211",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "386.30",
+          "excess_per_exposure": "0.4213036033339019777863078832"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.06818290759377859103385178408",
+          "adjusted_excess": "-0.000912981216186037811527904849",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "64.74",
+          "excess_per_exposure": "-0.009227091865660435409395508175"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.00258734650670430486944248412",
+          "adjusted_excess": "-0.01516944315455187043189837685",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "-186.90",
+          "excess_per_exposure": "-0.09168024050810892230545639514"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1661215467872554235384524443",
+          "adjusted_excess": "-0.01141815877519654785127386652",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-63.71",
+          "excess_per_exposure": null
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.05484044752530802141537886050",
+          "adjusted_excess": "0.02542656270375140994318846001",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "226.94",
+          "excess_per_exposure": "0.2991234794293883727693288042"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.05717328668761472171234794512",
+          "adjusted_excess": "0.002078143343434029182092524033",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "33.22",
+          "excess_per_exposure": null
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.0257160644559861499533892662",
+          "adjusted_excess": "-0.2032019946180069478086296444",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "-2320.08",
+          "excess_per_exposure": "-1.818025209120222494077262182"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.2398160558025117603901428510",
+          "adjusted_excess": "0.05554646926411884116589702646",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "309.99",
+          "excess_per_exposure": "0.4725151113199436072078151849"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0847019783499122293739028672",
+          "adjusted_excess": "-0.03965575873444432771357519017",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "-582.91",
+          "excess_per_exposure": "-0.3042887918303887702612605818"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.2925295126015239052164447794",
+          "adjusted_excess": "0.1088026565899815980398559826",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "809.83",
+          "excess_per_exposure": "0.8273582561648380546419182428"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.0060287681660899653979238754",
+          "adjusted_excess": "-0.1804938405569156275605536332",
+          "trades": 21,
+          "reason": null,
+          "realised_pnl": "-2067.74",
+          "excess_per_exposure": "-1.461543222012224564606570684"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.1644198736266395624606747011",
+          "adjusted_excess": "0.06603465899683446148540728909",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "494.69",
+          "excess_per_exposure": "0.4582215378678188010259737043"
+        }
+      },
+      "rank_median": 8.0,
+      "rank_worst": 8.0,
+      "rank_hit_rate": 8.0,
+      "borda": 8.0,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "9864.25",
+      "median_excess_per_exposure": "0.2991234794293883727693288042",
+      "incommensurable_exposure": true,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.000907385075236306405279352105",
+          "worst_annualized_adjusted_excess": "-0.03006447831700088192259290052",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.03445144616587914663920109078",
+          "worst_annualized_adjusted_excess": "-0.1825405466559330710891986436",
+          "hit_rate": 0.8333333333333334,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.02378567291710342979583911500",
+          "worst_annualized_adjusted_excess": "-0.01882923604805190522083129615",
+          "hit_rate": 0.75,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.03283987486088895150051951080",
+          "worst_annualized_adjusted_excess": "-0.03249327380577419262181448947",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "0.008470626401382672383653178065",
+          "worst_annualized_adjusted_excess": "0.00710523984406015973991969265",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.07797211031993941171228350705",
+          "worst_annualized_adjusted_excess": "-0.3578329820479392424626581536",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.06577281461759463073903801335",
+          "worst_annualized_adjusted_excess": "-0.1798592147273165934738822871",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c09-convex",
+      "display_name": "Flight-to-Quality Insurance",
+      "ranked": true,
+      "median_adjusted_excess": "-0.003298884637533875789634146342",
+      "worst_adjusted_excess": "-0.1512314430644295501795836203",
+      "best_adjusted_excess": "0.08344725710846998821799307958",
+      "hit_rate": 0.4444444444444444,
+      "iqr": "0.04359914830505450174153749870",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 562,
+      "mean_exposure": 0.0774823822819854,
+      "worst_drawdown": "-0.047751560077748056",
+      "notes": [
+        "excess_per_exposure unavailable for 4 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.682316625673303879440779519",
+          "adjusted_excess": "-0.0950363948361935886703383162",
+          "trades": 87,
+          "reason": null,
+          "realised_pnl": "432.78",
+          "excess_per_exposure": "-1.185663230258289632069144134"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.545830850294008581872119511",
+          "adjusted_excess": "-0.1512314430644295501795836203",
+          "trades": 93,
+          "reason": null,
+          "realised_pnl": "657.07",
+          "excess_per_exposure": "-1.820547027711654015079587408"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.7867823864310355262361556618",
+          "adjusted_excess": "-0.08741735653446999673424922835",
+          "trades": 49,
+          "reason": null,
+          "realised_pnl": "-297.77",
+          "excess_per_exposure": "-1.148074261556344683827817698"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.041190524076919001960057212",
+          "adjusted_excess": "-0.04583005068862036022090374526",
+          "trades": 41,
+          "reason": null,
+          "realised_pnl": "388.01",
+          "excess_per_exposure": "-0.5848452298416387508381829376"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.7035996350898568382576911362",
+          "adjusted_excess": "-0.03722290284053539542720073104",
+          "trades": 52,
+          "reason": null,
+          "realised_pnl": "269.06",
+          "excess_per_exposure": "-0.4240138077370283305912665504"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.3021513671408404821370398523",
+          "adjusted_excess": "-0.04900827330392226070583125203",
+          "trades": 32,
+          "reason": null,
+          "realised_pnl": "-266.60",
+          "excess_per_exposure": "-0.6041341999938727736394426729"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.4003754683975313896573739093",
+          "adjusted_excess": "-0.00354854845745722452649499893",
+          "trades": 28,
+          "reason": null,
+          "realised_pnl": "365.26",
+          "excess_per_exposure": "-0.03868704929735417466725867267"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.2085310411280496864877715373",
+          "adjusted_excess": "0.00562259446282483470862678672",
+          "trades": 22,
+          "reason": null,
+          "realised_pnl": "216.85",
+          "excess_per_exposure": "0.08058640003231233577524318816"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.6555097056434844296582597422",
+          "adjusted_excess": "-0.04994843187033514073827637663",
+          "trades": 36,
+          "reason": null,
+          "realised_pnl": "122.17",
+          "excess_per_exposure": "-0.5365023753780463387154198518"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.1416861874253447714192637637",
+          "adjusted_excess": "-0.01414072080926698720979476599",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "-9.00",
+          "excess_per_exposure": "-0.1503557245002545842294916884"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.2548824063675372145997775070",
+          "adjusted_excess": "-0.02515121494557181057371404354",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "-104.05",
+          "excess_per_exposure": "-0.4169818370057266446033184889"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.01693335957696827262044653349",
+          "adjusted_excess": "0.000159512806149081521739130435",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "16.11",
+          "excess_per_exposure": "0.002037953105539851310792421959"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.1590614722890850197616712728",
+          "adjusted_excess": "-0.001145796553626547682981189268",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "69.96",
+          "excess_per_exposure": null
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.08014259142207104723717703242",
+          "adjusted_excess": "0.01743959876404547859459824747",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "126.77",
+          "excess_per_exposure": "0.2470442930574598895073964076"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.1105359649030906233630172865",
+          "adjusted_excess": "-0.00485529424233892090099528549",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "54.77",
+          "excess_per_exposure": "-0.05451616720539060135127322837"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.06447711382113821138211382114",
+          "adjusted_excess": "-0.003298884637533875789634146342",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "31.55",
+          "excess_per_exposure": "-0.03456996116586136837666477705"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.07885290759377859103385178408",
+          "adjusted_excess": "-0.007377752777517632087831655993",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-41.96",
+          "excess_per_exposure": null
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.02894134650670430486944248412",
+          "adjusted_excess": "0.01005089881036394810021171489",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "76.64",
+          "excess_per_exposure": "0.08959594590410287664199231348"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1739505467872554235384524443",
+          "adjusted_excess": "-0.01531452124330648889585919489",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-142.00",
+          "excess_per_exposure": null
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.04957144752530802141537886050",
+          "adjusted_excess": "0.02034955824752203136324316742",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "174.25",
+          "excess_per_exposure": "0.2236802795504034702063251772"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.03579728668761472171234794512",
+          "adjusted_excess": "0.01868562898820894129359425069",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "246.98",
+          "excess_per_exposure": "0.1880110991758915409947018041"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2818260644559861499533892662",
+          "adjusted_excess": "0.04540682269727770529364762285",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "241.02",
+          "excess_per_exposure": "0.5492855334144625999685574969"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.2021770558025117603901428510",
+          "adjusted_excess": "0.003216296572181422288205083942",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-66.40",
+          "excess_per_exposure": null
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1474809783499122293739028672",
+          "adjusted_excess": "0.01477328001363784938194850790",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "44.88",
+          "excess_per_exposure": "0.2053882156194342294942102339"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.2164655126015239052164447794",
+          "adjusted_excess": "0.01819148840357971835887130537",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "49.19",
+          "excess_per_exposure": "0.2899490897102925175213242261"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2689657681660899653979238754",
+          "adjusted_excess": "0.08344725710846998821799307958",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "561.63",
+          "excess_per_exposure": "0.6508444498947782221660267767"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.1078978736266395624606747011",
+          "adjusted_excess": "0.000896739804979039252698320505",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "-70.53",
+          "excess_per_exposure": "0.01296659092333585341385695322"
+        }
+      },
+      "rank_median": 10.0,
+      "rank_worst": 7.0,
+      "rank_hit_rate": 11.0,
+      "borda": 9.333333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "3146.64",
+      "median_excess_per_exposure": "-0.03456996116586136837666477705",
+      "incommensurable_exposure": true,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.006542721266600560605537377145",
+          "worst_annualized_adjusted_excess": "-0.03060544786463720161160823315",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.003018756351812059707101897791",
+          "worst_annualized_adjusted_excess": "-0.02494054925189127114143761687",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "-0.006549804390707175222243031635",
+          "worst_annualized_adjusted_excess": "-0.01582084466297454202189986351",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.00486963880367179519078689129",
+          "worst_annualized_adjusted_excess": "-0.01511303229193788299991239570",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.004611569028321374972517274586",
+          "worst_annualized_adjusted_excess": "-0.00500963657078831061707880471",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.02789629503061135907646924178",
+          "worst_annualized_adjusted_excess": "0.00441286698789512692978562269",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.01812550360824040779877123761",
+          "worst_annualized_adjusted_excess": "0.000894969556719061014919411451",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c19-volatility",
+      "display_name": "C19 - Panic-Bid: financials/energy shock reversion",
+      "ranked": true,
+      "median_adjusted_excess": "0.006876663766045484242292256479",
+      "worst_adjusted_excess": "-0.3897326583498390776119580399",
+      "best_adjusted_excess": "0.2273852276103033229249162352",
+      "hit_rate": 0.5555555555555556,
+      "iqr": "0.2166235727555946165125833624",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 934,
+      "mean_exposure": 0.13398051396553257,
+      "worst_drawdown": "-0.40667984392003653",
+      "notes": [
+        "excess_per_exposure unavailable for 1 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.852333625673303879440779519",
+          "adjusted_excess": "-0.3514713581098388717206318465",
+          "trades": 152,
+          "reason": null,
+          "realised_pnl": "-1267.39",
+          "excess_per_exposure": "-2.698752826399868861253318001"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.515474850294008581872119511",
+          "adjusted_excess": "-0.2260389654483545402023626636",
+          "trades": 147,
+          "reason": null,
+          "realised_pnl": "960.63",
+          "excess_per_exposure": "-1.832678397624764000838289379"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.5188333864310355262361556618",
+          "adjusted_excess": "0.1425454003558291550565877867",
+          "trades": 73,
+          "reason": null,
+          "realised_pnl": "2381.72",
+          "excess_per_exposure": "1.128426988744327838452148997"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.285138524076919001960057212",
+          "adjusted_excess": "-0.3512830781713296821534142077",
+          "trades": 84,
+          "reason": null,
+          "realised_pnl": "-2051.47",
+          "excess_per_exposure": "-2.596092297836939021207120101"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.4217766350898568382576911362",
+          "adjusted_excess": "0.2273852276103033229249162352",
+          "trades": 63,
+          "reason": null,
+          "realised_pnl": "3087.29",
+          "excess_per_exposure": "2.042027130359102254040201777"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.1880993671408404821370398523",
+          "adjusted_excess": "0.05569051564621335772396568574",
+          "trades": 39,
+          "reason": null,
+          "realised_pnl": "873.92",
+          "excess_per_exposure": "0.4839601868775302713407627220"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.3574934683975313896573739093",
+          "adjusted_excess": "0.00362477080370957505852309003",
+          "trades": 58,
+          "reason": null,
+          "realised_pnl": "794.08",
+          "excess_per_exposure": "0.02089733709609109140461747803"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.4921280411280496864877715373",
+          "adjusted_excess": "-0.2837917754859286244976375145",
+          "trades": 40,
+          "reason": null,
+          "realised_pnl": "-2619.12",
+          "excess_per_exposure": "-2.986018713907196058738015144"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.4711427056434844296582597422",
+          "adjusted_excess": "0.1258379901100741291871131877",
+          "trades": 38,
+          "reason": null,
+          "realised_pnl": "1965.84",
+          "excess_per_exposure": "1.187704956247465569766214940"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0684751874253447714192637637",
+          "adjusted_excess": "0.05371427707604017593549788251",
+          "trades": 15,
+          "reason": null,
+          "realised_pnl": "723.11",
+          "excess_per_exposure": "0.4066430580681070537037603377"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.1740324063675372145997775070",
+          "adjusted_excess": "0.05485259100042171008105101446",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "704.45",
+          "excess_per_exposure": "0.8600479361903028570796078100"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.04359835957696827262044653349",
+          "adjusted_excess": "-0.02872583816438125299280258519",
+          "trades": 22,
+          "reason": null,
+          "realised_pnl": "-250.54",
+          "excess_per_exposure": "-0.1450778188531222099414078628"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.5427344722890850197616712728",
+          "adjusted_excess": "-0.3897326583498390776119580399",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "-3766.77",
+          "excess_per_exposure": "-4.957085914773309626244925656"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.1270955914220710472371770324",
+          "adjusted_excess": "0.06994954734662144368932038835",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "596.30",
+          "excess_per_exposure": "0.4573056765896819334502991103"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.0170840350969093766369827135",
+          "adjusted_excess": "0.1244281864261393399685699319",
+          "trades": 9,
+          "reason": null,
+          "realised_pnl": "1330.97",
+          "excess_per_exposure": "1.665197053993417537466073700"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "0.01590588617886178861788617886",
+          "adjusted_excess": "0.06887996422199638587906504065",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "835.38",
+          "excess_per_exposure": "0.3178118576602671099163480531"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.06209590759377859103385178408",
+          "adjusted_excess": "0.008618377527717543963403476670",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "125.61",
+          "excess_per_exposure": "0.1631963037847289189285385341"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "-0.03179465349329569513055751588",
+          "adjusted_excess": "-0.04780980790906341380592801694",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "-530.72",
+          "excess_per_exposure": "-0.1933159853765538215075603841"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.2121715467872554235384524443",
+          "adjusted_excess": "-0.06837866849421686325441863215",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-524.21",
+          "excess_per_exposure": "-0.6845316835911436377188475475"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03929544752530802141537886050",
+          "adjusted_excess": "0.009414375344406499661001098824",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "71.49",
+          "excess_per_exposure": "0.1335931918477751321555915634"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.05293428668761472171234794512",
+          "adjusted_excess": "0.006876663766045484242292256479",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "75.61",
+          "excess_per_exposure": null
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "-0.1255879355440138500466107338",
+          "adjusted_excess": "-0.3299996951815301901884405380",
+          "trades": 21,
+          "reason": null,
+          "realised_pnl": "-3833.12",
+          "excess_per_exposure": "-1.595295176245234671361049080"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.2582300558025117603901428510",
+          "adjusted_excess": "0.07997662675700721512278278883",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "494.13",
+          "excess_per_exposure": "0.5464169506187864201947633894"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.0501039783499122293739028672",
+          "adjusted_excess": "-0.05648814108897776014482153305",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "-928.89",
+          "excess_per_exposure": "-0.2219015643424043495327583440"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.2711765126015239052164447794",
+          "adjusted_excess": "0.09173239148918496133676630663",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "596.30",
+          "excess_per_exposure": "0.6044928932684782898312937559"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "-0.1727412318339100346020761246",
+          "adjusted_excess": "-0.3440696446859143548442906574",
+          "trades": 31,
+          "reason": null,
+          "realised_pnl": "-3855.44",
+          "excess_per_exposure": "-1.765403519273480621723660915"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.0595868736266395624606747011",
+          "adjusted_excess": "-0.03832223674781667634674023523",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "-553.64",
+          "excess_per_exposure": "-0.2584928876373202651083943593"
+        }
+      },
+      "rank_median": 9.0,
+      "rank_worst": 11.0,
+      "rank_hit_rate": 9.0,
+      "borda": 9.666666666666666,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "-4564.48",
+      "median_excess_per_exposure": "0.0772452644719331117801045207",
+      "incommensurable_exposure": true,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.01542363493785910372291897338",
+          "worst_annualized_adjusted_excess": "-0.1365586220148347361977377692",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.0540649076653199933017625698",
+          "worst_annualized_adjusted_excess": "-0.3885113376165349355175659812",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.01106282611480254081471406973",
+          "worst_annualized_adjusted_excess": "-0.1030712698115508315457110245",
+          "hit_rate": 0.75,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.02858028537844256213205521583",
+          "worst_annualized_adjusted_excess": "-0.06627894144318658683297056543",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.01746613231447747130139685457",
+          "worst_annualized_adjusted_excess": "-0.02722938654809319336909491695",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.1087436001684983906682736998",
+          "worst_annualized_adjusted_excess": "-0.5244412485963450397187813134",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.03817290047012989023420294275",
+          "worst_annualized_adjusted_excess": "-0.3430308627768094570316302531",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c18-meanrev",
+      "display_name": "Defensive Snapback \u2014 Staples, Healthcare & Energy",
+      "ranked": true,
+      "median_adjusted_excess": "-0.01070601677244598683989021043",
+      "worst_adjusted_excess": "-0.2335709165358750882099909944",
+      "best_adjusted_excess": "0.04661000954534036674202461694",
+      "hit_rate": 0.4074074074074074,
+      "iqr": "0.04429461942858554815666853425",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 3785,
+      "mean_exposure": 0.13662045607444726,
+      "worst_drawdown": "-0.09162256329692287",
+      "notes": [],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.686134625673303879440779519",
+          "adjusted_excess": "-0.2003391034126807002118259395",
+          "trades": 628,
+          "reason": null,
+          "realised_pnl": "394.60",
+          "excess_per_exposure": "-1.441640420006879219544448721"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.483588850294008581872119511",
+          "adjusted_excess": "-0.2335709165358750882099909944",
+          "trades": 639,
+          "reason": null,
+          "realised_pnl": "1279.49",
+          "excess_per_exposure": "-1.687263305176078203047193096"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.7779653864310355262361556618",
+          "adjusted_excess": "-0.1229361193047882220904194154",
+          "trades": 309,
+          "reason": null,
+          "realised_pnl": "-209.60",
+          "excess_per_exposure": "-0.9125989999923773123843879572"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.023764524076919001960057212",
+          "adjusted_excess": "-0.0914335870010544032521057371",
+          "trades": 326,
+          "reason": null,
+          "realised_pnl": "562.27",
+          "excess_per_exposure": "-0.6687464880278661384509498399"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.6587836350898568382576911362",
+          "adjusted_excess": "-0.0306538828498625505041120926",
+          "trades": 313,
+          "reason": null,
+          "realised_pnl": "717.22",
+          "excess_per_exposure": "-0.2187315365284684101883367653"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.2364653671408404821370398523",
+          "adjusted_excess": "0.00446124385909574032359648170",
+          "trades": 176,
+          "reason": null,
+          "realised_pnl": "390.26",
+          "excess_per_exposure": "0.03555743789658952485768821075"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.4370644683975313896573739093",
+          "adjusted_excess": "-0.05890195658904795664822302617",
+          "trades": 188,
+          "reason": null,
+          "realised_pnl": "-1.63",
+          "excess_per_exposure": "-0.4381138654757947076999497549"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.1762060411280496864877715373",
+          "adjusted_excess": "0.01953334752727144900181272473",
+          "trades": 204,
+          "reason": null,
+          "realised_pnl": "540.10",
+          "excess_per_exposure": "0.1304329050293936125649644815"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.6506557056434844296582597422",
+          "adjusted_excess": "-0.06860779386930263343036767045",
+          "trades": 169,
+          "reason": null,
+          "realised_pnl": "170.71",
+          "excess_per_exposure": "-0.5346860537240843322284471147"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.1296731874253447714192637637",
+          "adjusted_excess": "-0.01163568413254286881854707351",
+          "trades": 74,
+          "reason": null,
+          "realised_pnl": "111.13",
+          "excess_per_exposure": "-0.07201047750989970446255561058"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.1913084063675372145997775070",
+          "adjusted_excess": "0.01789385650266395038406526461",
+          "trades": 78,
+          "reason": null,
+          "realised_pnl": "531.69",
+          "excess_per_exposure": "0.1240149066442363987897295347"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.02153035957696827262044653349",
+          "adjusted_excess": "-0.004363401147466538076527614571",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "-29.86",
+          "excess_per_exposure": "-0.05874576190531392857819796170"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.1627664722890850197616712728",
+          "adjusted_excess": "-0.01910035430822522397432468575",
+          "trades": 61,
+          "reason": null,
+          "realised_pnl": "32.91",
+          "excess_per_exposure": "-0.1416509476197563017485964355"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.09770459142207104723717703242",
+          "adjusted_excess": "0.04033294912858645961074944248",
+          "trades": 69,
+          "reason": null,
+          "realised_pnl": "302.39",
+          "excess_per_exposure": "0.2695759837990631036769495348"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.0853819649030906233630172865",
+          "adjusted_excess": "0.01777418336039811419591409115",
+          "trades": 57,
+          "reason": null,
+          "realised_pnl": "306.31",
+          "excess_per_exposure": "0.1603846246060187395229882662"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.07314811382113821138211382114",
+          "adjusted_excess": "-0.01642883769599303048932926829",
+          "trades": 34,
+          "reason": null,
+          "realised_pnl": "-55.16",
+          "excess_per_exposure": "-0.1018174238413154443805864976"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.07540190759377859103385178408",
+          "adjusted_excess": "-0.01070601677244598683989021043",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "-7.45",
+          "excess_per_exposure": "-0.08024061430042911875883880673"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.00727934650670430486944248412",
+          "adjusted_excess": "-0.01137315273969150124382498236",
+          "trades": 25,
+          "reason": null,
+          "realised_pnl": "-139.98",
+          "excess_per_exposure": "-0.09219222595361540058829002683"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1385835467872554235384524443",
+          "adjusted_excess": "-0.00962422564087407357687533251",
+          "trades": 44,
+          "reason": null,
+          "realised_pnl": "211.67",
+          "excess_per_exposure": "-0.04993225428781316092421589421"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03179944752530802141537886050",
+          "adjusted_excess": "0.004734686884488724896546887056",
+          "trades": 33,
+          "reason": null,
+          "realised_pnl": "-3.47",
+          "excess_per_exposure": "0.02995134626369139112278664661"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.02906528668761472171234794512",
+          "adjusted_excess": "0.02352910067933920293687583611",
+          "trades": 34,
+          "reason": null,
+          "realised_pnl": "314.30",
+          "excess_per_exposure": "0.1801566674031897917820476744"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2425890644559861499533892662",
+          "adjusted_excess": "0.02184976898404329111100013317",
+          "trades": 31,
+          "reason": null,
+          "realised_pnl": "-151.35",
+          "excess_per_exposure": "0.1522575758799929232471010487"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.2186570558025117603901428510",
+          "adjusted_excess": "0.04427658628709454711514392992",
+          "trades": 41,
+          "reason": null,
+          "realised_pnl": "98.40",
+          "excess_per_exposure": "0.2684849860661673476744576864"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1064849783499122293739028672",
+          "adjusted_excess": "-0.02050815197737314642334698654",
+          "trades": 26,
+          "reason": null,
+          "realised_pnl": "-365.08",
+          "excess_per_exposure": "-0.1832843491731971373360428768"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.2255665126015239052164447794",
+          "adjusted_excess": "0.04661000954534036674202461694",
+          "trades": 69,
+          "reason": null,
+          "realised_pnl": "140.20",
+          "excess_per_exposure": "0.3025523805975772884017799822"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2241147681660899653979238754",
+          "adjusted_excess": "0.04192876023359820536332179930",
+          "trades": 67,
+          "reason": null,
+          "realised_pnl": "113.12",
+          "excess_per_exposure": "0.2914271848296522449544515072"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.0885928736266395624606747011",
+          "adjusted_excess": "-0.01847745289697245087362663956",
+          "trades": 24,
+          "reason": null,
+          "realised_pnl": "-263.58",
+          "excess_per_exposure": "-0.2695243521970786858933850215"
+        }
+      },
+      "rank_median": 12.0,
+      "rank_worst": 9.0,
+      "rank_hit_rate": 12.5,
+      "borda": 11.166666666666666,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "4989.61",
+      "median_excess_per_exposure": "-0.07201047750989970446255561058",
+      "incommensurable_exposure": true,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.02228750447965587108338958702",
+          "worst_annualized_adjusted_excess": "-0.03356530741715295040560717977",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.00669625353958482330489325225",
+          "worst_annualized_adjusted_excess": "-0.01901793679930805442348245450",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "-0.00756392596098176796831467290",
+          "worst_annualized_adjusted_excess": "-0.01832812671067960780357161642",
+          "hit_rate": 0.5,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.01057622171344935200162860529",
+          "worst_annualized_adjusted_excess": "-0.02030130266139121327166165466",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.008831988471183979960414610915",
+          "worst_annualized_adjusted_excess": "-0.01079255247421295812218699745",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.03425775047808519953601597397",
+          "worst_annualized_adjusted_excess": "-0.04162742127320596720572689421",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.04177663347987675148095740839",
+          "worst_annualized_adjusted_excess": "-0.01840394326175272740192838149",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c21-uncorrelated",
+      "display_name": "C21 - Uncorrelated: global macro trend across commodities, precious metals and EM equities",
+      "ranked": true,
+      "median_adjusted_excess": "-0.004750954654632856067073170732",
+      "worst_adjusted_excess": "-0.4553523614189630749695396516",
+      "best_adjusted_excess": "0.2415765033740178103719224725",
+      "hit_rate": 0.48148148148148145,
+      "iqr": "0.07177284461711870720140191838",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 952,
+      "mean_exposure": 0.24116871986389268,
+      "worst_drawdown": "-0.18920513827739371",
+      "notes": [],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.624328625673303879440779519",
+          "adjusted_excess": "-0.3062059925660023606366882526",
+          "trades": 145,
+          "reason": null,
+          "realised_pnl": "1012.66",
+          "excess_per_exposure": "-1.296745358603426121716058178"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.303021850294008581872119511",
+          "adjusted_excess": "-0.4553523614189630749695396516",
+          "trades": 171,
+          "reason": null,
+          "realised_pnl": "3085.16",
+          "excess_per_exposure": "-1.556773375005839153802962525"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.7409563864310355262361556618",
+          "adjusted_excess": "-0.1553759517943722544307934394",
+          "trades": 75,
+          "reason": null,
+          "realised_pnl": "160.49",
+          "excess_per_exposure": "-0.6861336765681394929661199499"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.092685524076919001960057212",
+          "adjusted_excess": "-0.3022940660189160832468082851",
+          "trades": 91,
+          "reason": null,
+          "realised_pnl": "-126.94",
+          "excess_per_exposure": "-1.127330644523586783685221302"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.4123156350898568382576911362",
+          "adjusted_excess": "0.0962965089542780594958879074",
+          "trades": 80,
+          "reason": null,
+          "realised_pnl": "3181.90",
+          "excess_per_exposure": "0.3170221086660271330698023687"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.1429743671408404821370398523",
+          "adjusted_excess": "0.07001323766562041378542729939",
+          "trades": 38,
+          "reason": null,
+          "realised_pnl": "1325.17",
+          "excess_per_exposure": "0.3085901046927723059065352907"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.5373874683975313896573739093",
+          "adjusted_excess": "-0.2034817234927234960842732496",
+          "trades": 51,
+          "reason": null,
+          "realised_pnl": "-1004.86",
+          "excess_per_exposure": "-0.8631568454617644317352651223"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.1055480411280496864877715373",
+          "adjusted_excess": "0.06869657639567933527978366169",
+          "trades": 39,
+          "reason": null,
+          "realised_pnl": "1246.68",
+          "excess_per_exposure": "0.2825558622318674059674599670"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.4267547056434844296582597422",
+          "adjusted_excess": "0.0001716395251629038283715355",
+          "trades": 59,
+          "reason": null,
+          "realised_pnl": "2409.72",
+          "excess_per_exposure": "0.0004759473551835232449019834038"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.1388251874253447714192637637",
+          "adjusted_excess": "-0.02335257885186506713052448691",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "19.61",
+          "excess_per_exposure": "-0.1298797203802568421177444640"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.1814724063675372145997775070",
+          "adjusted_excess": "-0.03150247505296409622556550299",
+          "trades": 22,
+          "reason": null,
+          "realised_pnl": "630.05",
+          "excess_per_exposure": "-0.08149242576622149846230828160"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.03985635957696827262044653349",
+          "adjusted_excess": "-0.02439632322633672105060223267",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "-213.12",
+          "excess_per_exposure": "-0.1466818349004450348365858621"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.1183854722890850197616712728",
+          "adjusted_excess": "0.00964477386678863575644111616",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "476.72",
+          "excess_per_exposure": "0.04211684448159071463415078636"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.01618859142207104723717703242",
+          "adjusted_excess": "-0.04588561009726327985493208389",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "-512.77",
+          "excess_per_exposure": "-0.5741932746142169875491369660"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "0.1807870350969093766369827135",
+          "adjusted_excess": "0.2415765033740178103719224725",
+          "trades": 20,
+          "reason": null,
+          "realised_pnl": "2968.00",
+          "excess_per_exposure": "0.5075014825148772277614969016"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.06531011382113821138211382114",
+          "adjusted_excess": "-0.004750954654632856067073170732",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "23.22",
+          "excess_per_exposure": "-0.04542897864483406282947438300"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.09295290759377859103385178408",
+          "adjusted_excess": "-0.03865449781357385397987191217",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "-182.96",
+          "excess_per_exposure": "-0.1417504030885717181922728904"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.03152034650670430486944248412",
+          "adjusted_excess": "0.01254920700675471334897671136",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "102.43",
+          "excess_per_exposure": "0.1157805110664469505233074053"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1100175467872554235384524443",
+          "adjusted_excess": "0.00058011370805736448542885854",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "497.33",
+          "excess_per_exposure": "0.001885412822158883009868476566"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.01403744752530802141537886050",
+          "adjusted_excess": "-0.01367311271846928196525845744",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-181.09",
+          "excess_per_exposure": "-0.09908772983073165634616599173"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.00231728668761472171234794512",
+          "adjusted_excess": "0.03763153569735245621130572753",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "581.78",
+          "excess_per_exposure": "0.1107991383321946373500687307"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.1968200644559861499533892662",
+          "adjusted_excess": "0.01431586495889971505859635104",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "-609.04",
+          "excess_per_exposure": "0.04905011336336002882811627144"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.3174720558025117603901428510",
+          "adjusted_excess": "0.1952727323809934832333520349",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "1086.55",
+          "excess_per_exposure": "0.4707613087231823453921438057"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1217449783499122293739028672",
+          "adjusted_excess": "-0.00818577382822758751097132826",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-212.48",
+          "excess_per_exposure": "-0.08961016019815245644732203122"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.2919825126015239052164447794",
+          "adjusted_excess": "0.1352043853852571747278740685",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "804.36",
+          "excess_per_exposure": "0.5222358850911612567040992787"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.1596307681660899653979238754",
+          "adjusted_excess": "-0.00776416635666124391003460208",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "-531.72",
+          "excess_per_exposure": "-0.03638658708488987770783606596"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.1438898736266395624606747011",
+          "adjusted_excess": "0.03575718067034700798606069406",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "289.39",
+          "excess_per_exposure": "0.6028469111060949839135542186"
+        }
+      },
+      "rank_median": 11.0,
+      "rank_worst": 13.0,
+      "rank_hit_rate": 10.0,
+      "borda": 11.333333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "16326.24",
+      "median_excess_per_exposure": "-0.03638658708488987770783606596",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.007096739127857349230661147165",
+          "worst_annualized_adjusted_excess": "-0.07785697084654001077914266152",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.02392264869701377459595163550",
+          "worst_annualized_adjusted_excess": "-0.04606381514912541094875336847",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "0.01508395582646539290479496073",
+          "worst_annualized_adjusted_excess": "-0.06513698346310992810090326501",
+          "hit_rate": 0.75,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.02383100103131501072360846764",
+          "worst_annualized_adjusted_excess": "-0.04488887587467232146678183810",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.01404308322542661038279173125",
+          "worst_annualized_adjusted_excess": "-0.01523145176667669158036708592",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.0130716712217399073877637373",
+          "worst_annualized_adjusted_excess": "-0.01762705841309763012003595885",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.03561582097431876262026188265",
+          "worst_annualized_adjusted_excess": "-0.00771860335045783724761468229",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c11-breakout",
+      "display_name": "Cross-Asset Breakout",
+      "ranked": true,
+      "median_adjusted_excess": "-0.01152753314065612651093640889",
+      "worst_adjusted_excess": "-0.723200132636379516618106691",
+      "best_adjusted_excess": "0.1955578231191104730103806228",
+      "hit_rate": 0.4074074074074074,
+      "iqr": "0.09918198596541184823027868893",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 308,
+      "mean_exposure": 0.34310841216993687,
+      "worst_drawdown": "-0.09540954771275201",
+      "notes": [],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.524297625673303879440779519",
+          "adjusted_excess": "-0.4530597165881458985414271014",
+          "trades": 47,
+          "reason": null,
+          "realised_pnl": "2012.97",
+          "excess_per_exposure": "-1.194757220694412811576991781"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.281406850294008581872119511",
+          "adjusted_excess": "-0.723200132636379516618106691",
+          "trades": 47,
+          "reason": null,
+          "realised_pnl": "3301.31",
+          "excess_per_exposure": "-1.793039682583405038425779238"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.6993293864310355262361556618",
+          "adjusted_excess": "-0.2650998276075004695273255462",
+          "trades": 29,
+          "reason": null,
+          "realised_pnl": "576.76",
+          "excess_per_exposure": "-0.6217379998010528413130131525"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-0.972142524076919001960057212",
+          "adjusted_excess": "-0.3820792351024312189807702493",
+          "trades": 26,
+          "reason": null,
+          "realised_pnl": "1078.49",
+          "excess_per_exposure": "-0.8422505703312759451793573300"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.5082236350898568382576911362",
+          "adjusted_excess": "-0.0355236819872591840389887298",
+          "trades": 21,
+          "reason": null,
+          "realised_pnl": "2222.82",
+          "excess_per_exposure": "-0.1006581766189130974851930176"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.2028353671408404821370398523",
+          "adjusted_excess": "-0.0454854372916189125312194592",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "726.56",
+          "excess_per_exposure": "-0.1060664707636497930402255372"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.3776764683975313896573739093",
+          "adjusted_excess": "-0.1291980328417977050670355395",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "592.25",
+          "excess_per_exposure": "-0.2995748949123822803492303219"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.1674840411280496864877715373",
+          "adjusted_excess": "0.01573898190144746065198656800",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "627.32",
+          "excess_per_exposure": "0.07710434978103404197666844632"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.4588997056434844296582597422",
+          "adjusted_excess": "-0.1203046351104583189999755376",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "2088.27",
+          "excess_per_exposure": "-0.2440683577833179827067093752"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.0984391874253447714192637637",
+          "adjusted_excess": "-0.04271434288575529654142686502",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "423.47",
+          "excess_per_exposure": "-0.07069709081998805735174868382"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.2465274063675372145997775070",
+          "adjusted_excess": "-0.1167413930463226717433914287",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-20.50",
+          "excess_per_exposure": "-0.2488472084053503780038380173"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.02839735957696827262044653349",
+          "adjusted_excess": "-0.01337445907117710143397473560",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "-98.53",
+          "excess_per_exposure": "-0.07043125396327509751920711224"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.0770284722890850197616712728",
+          "adjusted_excess": "0.03258085372099543294404326765",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "890.29",
+          "excess_per_exposure": "0.09584538325116350148535097686"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.04497659142207104723717703242",
+          "adjusted_excess": "-0.01152753314065612651093640889",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-224.89",
+          "excess_per_exposure": "-0.07094961385655656766370741231"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.0229669649030906233630172865",
+          "adjusted_excess": "0.03623709432634887375589313779",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "930.46",
+          "excess_per_exposure": "0.07400200201748588963529219581"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.05348411382113821138211382114",
+          "adjusted_excess": "-0.01578100959478642577235772358",
+          "trades": 5,
+          "reason": null,
+          "realised_pnl": "141.48",
+          "excess_per_exposure": "-0.03566115456466664461678097237"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.05892690759377859103385178408",
+          "adjusted_excess": "0.007455689105330269408966148216",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "157.30",
+          "excess_per_exposure": "0.06727070080762310470279341647"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.02095134650670430486944248412",
+          "adjusted_excess": "0.003125243356185099182780522230",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-3.26",
+          "excess_per_exposure": "0.01926751577461333221494821435"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1109955467872554235384524443",
+          "adjusted_excess": "0.02039815969143465153395992197",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "487.55",
+          "excess_per_exposure": "0.1149146776827654770457498689"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.02723444752530802141537886050",
+          "adjusted_excess": "-0.000478412075393060750941014191",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-49.12",
+          "excess_per_exposure": "-0.003468804259353936947333318704"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "0.04020571331238527828765205488",
+          "adjusted_excess": "0.05736193657169523691005817752",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "1007.01",
+          "excess_per_exposure": "0.08006926138591018651373267871"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2678060644559861499533892662",
+          "adjusted_excess": "0.1311042691195762005270342256",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "100.82",
+          "excess_per_exposure": "0.2791942784649296258696960916"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.1918010558025117603901428510",
+          "adjusted_excess": "0.02355085654617824289154546632",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-170.16",
+          "excess_per_exposure": "0.1212275474192134261471713154"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1243359783499122293739028672",
+          "adjusted_excess": "0.01405077250360527613736102985",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-186.57",
+          "excess_per_exposure": "0.06142765632193716765775330853"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.1818535126015239052164447794",
+          "adjusted_excess": "-0.00486050308232880778238298585",
+          "trades": 3,
+          "reason": null,
+          "realised_pnl": "-296.93",
+          "excess_per_exposure": "-0.04140632655526145513370112361"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2896117681660899653979238754",
+          "adjusted_excess": "0.1955578231191104730103806228",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "768.09",
+          "excess_per_exposure": "0.3504476507909413887703034125"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.0830018736266395624606747011",
+          "adjusted_excess": "-0.01808438257238581052465998742",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "-319.49",
+          "excess_per_exposure": "-0.1499367426867287786309140619"
+        }
+      },
+      "rank_median": 13.0,
+      "rank_worst": 14.0,
+      "rank_hit_rate": 12.5,
+      "borda": 13.166666666666666,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "16763.77",
+      "median_excess_per_exposure": "-0.04140632655526145513370112361",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "0.01030486872447983410787936770",
+          "worst_annualized_adjusted_excess": "-0.03338601546904113291715124983",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.01250081626207596483469704936",
+          "worst_annualized_adjusted_excess": "-0.1157206949343929615496882269",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "-0.01957991353872411650639190362",
+          "worst_annualized_adjusted_excess": "-0.03612919874732862069077428873",
+          "hit_rate": 0.25,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.03959873023092166231346043167",
+          "worst_annualized_adjusted_excess": "-0.05090804444147301866414185082",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.02394960284178178246540290760",
+          "worst_annualized_adjusted_excess": "-0.02638665839247060704481449367",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.03873200748516536223055359433",
+          "worst_annualized_adjusted_excess": "0.02364956858529463312777384836",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.00483188266638442881087455379",
+          "worst_annualized_adjusted_excess": "-0.01801166852011913107994080837",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c14-riskmanaged-wide",
+      "display_name": "C14 - Risk-managed: flight-to-quality basket, built for the worst window",
+      "ranked": true,
+      "median_adjusted_excess": "-0.01295769751034054161280846064",
+      "worst_adjusted_excess": "-0.4075868850643977537500662183",
+      "best_adjusted_excess": "0.1506924102602677844290657439",
+      "hit_rate": 0.37037037037037035,
+      "iqr": "0.04920773690066374292643603902",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 683,
+      "mean_exposure": 0.19657039922108624,
+      "worst_drawdown": "-0.07430943900227305",
+      "notes": [
+        "excess_per_exposure unavailable for 5 of 27 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure"
+      ],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.699315625673303879440779519",
+          "adjusted_excess": "-0.3698131162677344654602675058",
+          "trades": 114,
+          "reason": null,
+          "realised_pnl": "262.79",
+          "excess_per_exposure": "-1.611108880298313954604630989"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.428349850294008581872119511",
+          "adjusted_excess": "-0.4075868850643977537500662183",
+          "trades": 112,
+          "reason": null,
+          "realised_pnl": "1831.88",
+          "excess_per_exposure": "-1.801749878912133880605537754"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.7787523864310355262361556618",
+          "adjusted_excess": "-0.2104672592653434450160382497",
+          "trades": 65,
+          "reason": null,
+          "realised_pnl": "-217.47",
+          "excess_per_exposure": "-0.8442381838148557689417825406"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.005914524076919001960057212",
+          "adjusted_excess": "-0.2178722457394958593960904803",
+          "trades": 61,
+          "reason": null,
+          "realised_pnl": "740.77",
+          "excess_per_exposure": "-0.8059626190650129485738049360"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.6213946350898568382576911362",
+          "adjusted_excess": "-0.0238436765773449867415473652",
+          "trades": 51,
+          "reason": null,
+          "realised_pnl": "1091.11",
+          "excess_per_exposure": "-0.1310065997631744816560995015"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.2881573671408404821370398523",
+          "adjusted_excess": "-0.08663605521255086766206971440",
+          "trades": 43,
+          "reason": null,
+          "realised_pnl": "-126.66",
+          "excess_per_exposure": "-0.3226641541041497394798712634"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.3998714683975313896573739093",
+          "adjusted_excess": "-0.0727832475768025615875718238",
+          "trades": 41,
+          "reason": null,
+          "realised_pnl": "370.30",
+          "excess_per_exposure": "-0.2895744224193538219940685559"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.2177910411280496864877715373",
+          "adjusted_excess": "-0.02084721482725970433894980833",
+          "trades": 22,
+          "reason": null,
+          "realised_pnl": "124.25",
+          "excess_per_exposure": "-0.1442453798460576459026206314"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.5393877056434844296582597422",
+          "adjusted_excess": "-0.0388365033524451949920497077",
+          "trades": 37,
+          "reason": null,
+          "realised_pnl": "1283.39",
+          "excess_per_exposure": "-0.1551194398833019675021719358"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.1304661874253447714192637637",
+          "adjusted_excess": "-0.03894162945388999717396025627",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "103.20",
+          "excess_per_exposure": "-0.1112923710344452783730202370"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.2381604063675372145997775070",
+          "adjusted_excess": "-0.05365519237550675063834295703",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "63.17",
+          "excess_per_exposure": "-0.2187260753781024118803493655"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.03017135957696827262044653349",
+          "adjusted_excess": "-0.01295769751034054161280846064",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-116.27",
+          "excess_per_exposure": "-0.1805761264705814924526353391"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.1344044722890850197616712728",
+          "adjusted_excess": "-0.01343151840051267852961279012",
+          "trades": 8,
+          "reason": null,
+          "realised_pnl": "316.53",
+          "excess_per_exposure": "-0.04947161628254426750900666388"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.06668559142207104723717703242",
+          "adjusted_excess": "0.000532232631880963834388304463",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "-7.80",
+          "excess_per_exposure": null
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.0334319649030906233630172865",
+          "adjusted_excess": "0.05604515313920900995285489786",
+          "trades": 16,
+          "reason": null,
+          "realised_pnl": "825.81",
+          "excess_per_exposure": "0.2450256974362709770753232855"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.04480011382113821138211382114",
+          "adjusted_excess": "-0.00334229148761130510315040650",
+          "trades": 7,
+          "reason": null,
+          "realised_pnl": "228.32",
+          "excess_per_exposure": "-0.008636193205861572358748310273"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.07785990759377859103385178408",
+          "adjusted_excess": "-0.004568882807558478730832570906",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-32.03",
+          "excess_per_exposure": null
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "0.01738334650670430486944248412",
+          "adjusted_excess": "-0.003466534731323722152787579393",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "-38.94",
+          "excess_per_exposure": null
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1733465467872554235384524443",
+          "adjusted_excess": "-0.02989337042479106712921912869",
+          "trades": 4,
+          "reason": null,
+          "realised_pnl": "-135.96",
+          "excess_per_exposure": "-0.2930216437499649430595646480"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "0.03136644752530802141537886050",
+          "adjusted_excess": "0.000455752473550629953475323218",
+          "trades": 1,
+          "reason": null,
+          "realised_pnl": "-7.80",
+          "excess_per_exposure": null
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "0.02511771331238527828765205488",
+          "adjusted_excess": "0.06874126429567868587250723330",
+          "trades": 10,
+          "reason": null,
+          "realised_pnl": "856.13",
+          "excess_per_exposure": "0.2464786411851546696829132233"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2640400644559861499533892662",
+          "adjusted_excess": "0.1069084378850366317186043415",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "63.16",
+          "excess_per_exposure": "0.2739060481649836779362246589"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.2137010558025117603901428510",
+          "adjusted_excess": "0.02891385453273284468063527686",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "48.84",
+          "excess_per_exposure": "0.2512585320565705266429506565"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1375919783499122293739028672",
+          "adjusted_excess": "0.001396460589606667932636044472",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "-54.01",
+          "excess_per_exposure": null
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.2164305126015239052164447794",
+          "adjusted_excess": "0.01710408547484609842133467303",
+          "trades": 2,
+          "reason": null,
+          "realised_pnl": "48.84",
+          "excess_per_exposure": "0.2960952802572472741966883537"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2748897681660899653979238754",
+          "adjusted_excess": "0.1506924102602677844290657439",
+          "trades": 18,
+          "reason": null,
+          "realised_pnl": "620.87",
+          "excess_per_exposure": "0.3619165235035859597404029715"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.0990478736266395624606747011",
+          "adjusted_excess": "0.00442219138232407010793282028",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "-159.03",
+          "excess_per_exposure": "0.02501008493255444613522712278"
+        }
+      },
+      "rank_median": 14.0,
+      "rank_worst": 12.0,
+      "rank_hit_rate": 14.0,
+      "borda": 13.333333333333334,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "7983.39",
+      "median_excess_per_exposure": "-0.1376259898046160637793600664",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.007430253482794445784639432985",
+          "worst_annualized_adjusted_excess": "-0.06220540347013705944338412089",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.01318775012307386968340418932",
+          "worst_annualized_adjusted_excess": "-0.05317979639886430660856238313",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "-0.01317744540188714316870721874",
+          "worst_annualized_adjusted_excess": "-0.02692590193504336768416322530",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.02827199835932953257440107525",
+          "worst_annualized_adjusted_excess": "-0.03413425327539064121388956833",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.01785201282979116995453664336",
+          "worst_annualized_adjusted_excess": "-0.02163893884656281887252615256",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.05249004844646530740367982198",
+          "worst_annualized_adjusted_excess": "0.00184952661029542217387622590",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.01704192634218746179774119280",
+          "worst_annualized_adjusted_excess": "0.00440899886724067044343749926",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        }
+      }
+    },
+    {
+      "agent_id": "c20-rotation",
+      "display_name": "Strategy C20 - Defensive/Reflation Sector Rotation",
+      "ranked": true,
+      "median_adjusted_excess": "-0.04686052060545225424713227821",
+      "worst_adjusted_excess": "-0.9294294629772459415426180009",
+      "best_adjusted_excess": "0.2258991443738898389132967934",
+      "hit_rate": 0.3333333333333333,
+      "iqr": "0.1426774434967038943376998697",
+      "n_windows_run": 27,
+      "n_windows_eligible": 27,
+      "total_trades": 1537,
+      "mean_exposure": 0.36752604863259464,
+      "worst_drawdown": "-0.24768849987197838",
+      "notes": [],
+      "windows": {
+        "h10y-1": {
+          "status": "run",
+          "excess": "-1.617237625673303879440779519",
+          "adjusted_excess": "-0.5205842690636673000689947344",
+          "trades": 241,
+          "reason": null,
+          "realised_pnl": "1083.57",
+          "excess_per_exposure": "-1.428300957645368661703274224"
+        },
+        "h10y-2": {
+          "status": "run",
+          "excess": "-2.575208850294008581872119511",
+          "adjusted_excess": "-0.9294294629772459415426180009",
+          "trades": 251,
+          "reason": null,
+          "realised_pnl": "363.29",
+          "excess_per_exposure": "-2.513299458190406213660186159"
+        },
+        "h5y-1": {
+          "status": "run",
+          "excess": "-0.7444373864310355262361556618",
+          "adjusted_excess": "-0.2712177899482107084427767355",
+          "trades": 121,
+          "reason": null,
+          "realised_pnl": "125.68",
+          "excess_per_exposure": "-0.7234799456455701464468473423"
+        },
+        "h5y-2": {
+          "status": "run",
+          "excess": "-1.053862524076919001960057212",
+          "adjusted_excess": "-0.3779154791697584179689569315",
+          "trades": 111,
+          "reason": null,
+          "realised_pnl": "261.29",
+          "excess_per_exposure": "-1.010149959626907984453483336"
+        },
+        "h5y-3": {
+          "status": "run",
+          "excess": "-0.7322866350898568382576911362",
+          "adjusted_excess": "-0.2683318941377458822646969236",
+          "trades": 142,
+          "reason": null,
+          "realised_pnl": "-17.81",
+          "excess_per_exposure": "-0.7353866186645084379635509453"
+        },
+        "h3y-1": {
+          "status": "run",
+          "excess": "-0.3329033671408404821370398523",
+          "adjusted_excess": "-0.1562343548235536775708545988",
+          "trades": 81,
+          "reason": null,
+          "realised_pnl": "-574.12",
+          "excess_per_exposure": "-0.4355412910525925774979015787"
+        },
+        "h3y-2": {
+          "status": "run",
+          "excess": "-0.3696364683975313896573739093",
+          "adjusted_excess": "-0.1021314838046133225367099383",
+          "trades": 63,
+          "reason": null,
+          "realised_pnl": "672.65",
+          "excess_per_exposure": "-0.2634139401342109971633239375"
+        },
+        "h3y-3": {
+          "status": "run",
+          "excess": "-0.1221040411280496864877715373",
+          "adjusted_excess": "0.02462715462900462827315681553",
+          "trades": 70,
+          "reason": null,
+          "realised_pnl": "1081.12",
+          "excess_per_exposure": "0.06791131992570607684250769595"
+        },
+        "h3y-4": {
+          "status": "run",
+          "excess": "-0.7758437056434844296582597422",
+          "adjusted_excess": "-0.3423680177632152653049242888",
+          "trades": 98,
+          "reason": null,
+          "realised_pnl": "-1081.17",
+          "excess_per_exposure": "-0.9759115277347594712774758321"
+        },
+        "h1y-1": {
+          "status": "run",
+          "excess": "-0.1088911874253447714192637637",
+          "adjusted_excess": "-0.02607006899177306582147898794",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "318.95",
+          "excess_per_exposure": "-0.06331926594943508608079927334"
+        },
+        "h1y-2": {
+          "status": "run",
+          "excess": "-0.2528964063675372145997775070",
+          "adjusted_excess": "-0.1039240410469099749483498437",
+          "trades": 25,
+          "reason": null,
+          "realised_pnl": "-84.19",
+          "excess_per_exposure": "-0.2660286801185984397129965589"
+        },
+        "h1y-3": {
+          "status": "run",
+          "excess": "-0.04071735957696827262044653349",
+          "adjusted_excess": "-0.02868430018922547223119858989",
+          "trades": 26,
+          "reason": null,
+          "realised_pnl": "-221.73",
+          "excess_per_exposure": "-0.08169366508441845201529408903"
+        },
+        "h1y-4": {
+          "status": "run",
+          "excess": "-0.1794714722890850197616712728",
+          "adjusted_excess": "-0.06585970634376134508929898072",
+          "trades": 28,
+          "reason": null,
+          "realised_pnl": "-134.14",
+          "excess_per_exposure": "-0.2085298706716221460219895061"
+        },
+        "h1y-5": {
+          "status": "run",
+          "excess": "0.08320359142207104723717703242",
+          "adjusted_excess": "0.03856425283157685462235037056",
+          "trades": 28,
+          "reason": null,
+          "realised_pnl": "157.38",
+          "excess_per_exposure": "0.1139810438546202242209364022"
+        },
+        "h1y-6": {
+          "status": "run",
+          "excess": "-0.1411209649030906233630172865",
+          "adjusted_excess": "-0.06889565132949188056574122576",
+          "trades": 30,
+          "reason": null,
+          "realised_pnl": "-251.08",
+          "excess_per_exposure": "-0.1825352248176097843173396713"
+        },
+        "h6m-1": {
+          "status": "run",
+          "excess": "-0.03741711382113821138211382114",
+          "adjusted_excess": "0.00248429389759969060467479675",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "302.15",
+          "excess_per_exposure": "0.006058917036846677188428149452"
+        },
+        "h6m-2": {
+          "status": "run",
+          "excess": "-0.09954290759377859103385178408",
+          "adjusted_excess": "-0.05180144000403426173833485819",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "-248.86",
+          "excess_per_exposure": "-0.1436846404526989012688579158"
+        },
+        "h6m-3": {
+          "status": "run",
+          "excess": "-0.01147265349329569513055751588",
+          "adjusted_excess": "-0.02628870801744127403493295695",
+          "trades": 17,
+          "reason": null,
+          "realised_pnl": "-327.50",
+          "excess_per_exposure": "-0.08656998495201337054005490550"
+        },
+        "h6m-4": {
+          "status": "run",
+          "excess": "-0.1421665467872554235384524443",
+          "adjusted_excess": "-0.04762779606125518998049299522",
+          "trades": 13,
+          "reason": null,
+          "realised_pnl": "175.84",
+          "excess_per_exposure": "-0.1166746957239220363235957956"
+        },
+        "h6m-5": {
+          "status": "run",
+          "excess": "-0.01728355247469197858462113950",
+          "adjusted_excess": "-0.03920005675999522143057536296",
+          "trades": 19,
+          "reason": null,
+          "realised_pnl": "-494.30",
+          "excess_per_exposure": "-0.1231817751144916156221661605"
+        },
+        "h6m-6": {
+          "status": "run",
+          "excess": "-0.02585328668761472171234794512",
+          "adjusted_excess": "0.00970315538474940111377282768",
+          "trades": 12,
+          "reason": null,
+          "realised_pnl": "346.42",
+          "excess_per_exposure": "0.02353738418242232213618207163"
+        },
+        "b6m-1": {
+          "status": "run",
+          "excess": "0.2377390644559861499533892662",
+          "adjusted_excess": "0.07244197243884765572546277799",
+          "trades": 11,
+          "reason": null,
+          "realised_pnl": "-199.85",
+          "excess_per_exposure": "0.2019977402862674180366905017"
+        },
+        "b6m-2": {
+          "status": "run",
+          "excess": "0.3413250558025117603901428510",
+          "adjusted_excess": "0.2258991443738898389132967934",
+          "trades": 6,
+          "reason": null,
+          "realised_pnl": "1325.08",
+          "excess_per_exposure": "0.5050970790936188718335703877"
+        },
+        "b6m-3": {
+          "status": "run",
+          "excess": "0.1008339783499122293739028672",
+          "adjusted_excess": "0.01549333573819473504242246929",
+          "trades": 14,
+          "reason": null,
+          "realised_pnl": "-421.59",
+          "excess_per_exposure": "0.03842755360060582815421649759"
+        },
+        "b1y-1": {
+          "status": "run",
+          "excess": "0.3072175126015239052164447794",
+          "adjusted_excess": "0.1696357982389340110575232354",
+          "trades": 22,
+          "reason": null,
+          "realised_pnl": "956.71",
+          "excess_per_exposure": "0.4851748721587455993507995648"
+        },
+        "b1y-2": {
+          "status": "run",
+          "excess": "0.2119457681660899653979238754",
+          "adjusted_excess": "0.08086478154875063666089965397",
+          "trades": 20,
+          "reason": null,
+          "realised_pnl": "-8.57",
+          "excess_per_exposure": "0.2105711480415391294804654273"
+        },
+        "b1y-3": {
+          "status": "run",
+          "excess": "0.0365438736266395624606747011",
+          "adjusted_excess": "-0.04686052060545225424713227821",
+          "trades": 43,
+          "reason": null,
+          "realised_pnl": "-784.07",
+          "excess_per_exposure": "-0.1707530566192711314901619184"
+        }
+      },
+      "rank_median": 15.0,
+      "rank_worst": 15.0,
+      "rank_hit_rate": 15.0,
+      "borda": 15.0,
+      "pareto_optimal": false,
+      "provenance_violation": false,
+      "total_realised_pnl": "2321.15",
+      "median_excess_per_exposure": "-0.1231817751144916156221661605",
+      "incommensurable_exposure": false,
+      "per_horizon_ladder": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.06367988370691988200350664845",
+          "worst_annualized_adjusted_excess": "-0.1053640151442747142184143151",
+          "hit_rate": 0.3333333333333333,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "ladder",
+          "n_windows": 6,
+          "median_annualized_adjusted_excess": "-0.04719065695606959752492683764",
+          "worst_annualized_adjusted_excess": "-0.1030215062787741257428249088",
+          "hit_rate": 0.16666666666666666,
+          "gate_cleared": true
+        },
+        "3y": {
+          "horizon": "3y",
+          "arm": "ladder",
+          "n_windows": 4,
+          "median_annualized_adjusted_excess": "-0.03888219286853835646705925848",
+          "worst_annualized_adjusted_excess": "-0.1033498443739141104776972002",
+          "hit_rate": 0.25,
+          "gate_cleared": true
+        },
+        "5y": {
+          "horizon": "5y",
+          "arm": "ladder",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "-0.04279881672465224745490780866",
+          "worst_annualized_adjusted_excess": "-0.05388892745201520456654806578",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        },
+        "10y": {
+          "horizon": "10y",
+          "arm": "ladder",
+          "n_windows": 2,
+          "median_annualized_adjusted_excess": "-0.03766630001795161004157716245",
+          "worst_annualized_adjusted_excess": "-0.04719708981268641968516698049",
+          "hit_rate": 0.0,
+          "gate_cleared": true
+        }
+      },
+      "per_horizon_bear": {
+        "6m": {
+          "horizon": "6m",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.1208384910913775697870412912",
+          "worst_annualized_adjusted_excess": "0.0244222467189610492896424961",
+          "hit_rate": 1.0,
+          "gate_cleared": true
+        },
+        "1y": {
+          "horizon": "1y",
+          "arm": "bear",
+          "n_windows": 3,
+          "median_annualized_adjusted_excess": "0.08058212603088161491465424331",
+          "worst_annualized_adjusted_excess": "-0.04668030341942752069654558885",
+          "hit_rate": 0.6666666666666666,
+          "gate_cleared": true
+        }
+      }
+    }
+  ],
+  "unranked": [],
+  "min_ranked_per_horizon": 2,
+  "horizon_order": [
+    "6m",
+    "1y",
+    "3y",
+    "5y",
+    "10y"
+  ]
+}

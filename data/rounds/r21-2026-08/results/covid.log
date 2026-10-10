@@ -1,0 +1,13 @@
+window: 2020-02-19 -> 2020-06-30
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+8 cards
+[1/8] r1 r21-channel-breakout-off: 1s trades=7 ret=-2.27% dd=-4.74% rej=0
+[2/8] r1 r21-channel-breakout-on: 1s trades=7 ret=-2.27% dd=-4.74% rej=0
+[3/8] r1 r21-ma-crossover-off: 1s trades=1 ret=+2.85% dd=-0.96% rej=0
+[4/8] r1 r21-ma-crossover-on: 1s trades=1 ret=+2.85% dd=-0.96% rej=0
+[5/8] r1 r21-rsi-pullback-off: 2s trades=7 ret=-11.41% dd=-27.48% rej=0
+[6/8] r1 r21-rsi-pullback-on: 2s trades=7 ret=-11.41% dd=-27.48% rej=0
+[7/8] r1 r21-vol-compression-off: 1s trades=11 ret=-10.74% dd=-12.61% rej=1
+[8/8] r1 r21-vol-compression-on: 2s trades=11 ret=-10.74% dd=-12.61% rej=1
+r1: 8 agents, 0 discoveries
+overall: 8 agents, 0 discoveries at alpha=0.1

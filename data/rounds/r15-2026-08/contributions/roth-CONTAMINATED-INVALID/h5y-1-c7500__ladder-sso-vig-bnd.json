@@ -1,0 +1,19 @@
+{
+  "agent_id": "ladder-sso-vig-bnd",
+  "purpose": "roth",
+  "window": "h5y-1",
+  "start": "2013-09-03",
+  "end": "2018-08-31",
+  "sessions": 1260,
+  "seed": "30000",
+  "contribution": "7500",
+  "funding_shape": "annual_contribution",
+  "irr": 0.21955222189294077,
+  "time_weighted_cagr": 0.22158458005542858,
+  "max_drawdown": -0.2704331971113886,
+  "volatility": 0.21802928187787654,
+  "mar": 0.81936900655048,
+  "multiple": 2.2277730738890518,
+  "profit": 92082.98054167887,
+  "cash_constraint_modelled": false
+}

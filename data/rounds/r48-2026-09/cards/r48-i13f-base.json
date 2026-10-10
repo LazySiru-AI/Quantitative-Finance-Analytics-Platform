@@ -1,0 +1,31 @@
+{
+  "agent_id": "r48-i13f-base",
+  "display_name": "i13f base",
+  "discipline": "momentum",
+  "purpose": "trading",
+  "desk_only": false,
+  "thesis": "Round 48 cell on the taxable trading book: base `i13f` (`I-13f-duquesne-2026q2`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/candidates/I-13f-duquesne-2026q2.json` -- entry 'close > sma(50) and close > sma(200) and rsi(14) > 50', exit 'close crosses_below sma(50)', stop 0.12, take-profit None, hold cap 120, 6 slots at 0.15 each. This base carries 13F point-in-time provenance: its universe was not knowable before 2026-08-14 (the filing date), so it is expected UNRANKED on every main window that starts before that date -- reported, not interpreted, per PROTOCOL.md section 5 and section 9's r2 amendment. This is the BASE cell: the seated card unchanged except for its identifying fields. Its sibling risk1pct cell changes exactly one thing against it, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+  "falsification": "Baseline against which this base's risk1pct cell is contrasted. Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+  "universe": [
+    "GOOGL",
+    "AMD",
+    "EQIX",
+    "LLY",
+    "RDDT",
+    "IREN",
+    "AMZN",
+    "TSM"
+  ],
+  "entry": "close > sma(50) and close > sma(200) and rsi(14) > 50",
+  "exit": "close crosses_below sma(50)",
+  "stop_loss_pct": "0.12",
+  "take_profit_pct": null,
+  "max_hold_days": 120,
+  "max_positions": 6,
+  "position_pct": "0.15",
+  "rank_by": null,
+  "designed_through": "2026-02-13",
+  "reference_only": false,
+  "source_thesis_hash": null,
+  "source_persona": null
+}

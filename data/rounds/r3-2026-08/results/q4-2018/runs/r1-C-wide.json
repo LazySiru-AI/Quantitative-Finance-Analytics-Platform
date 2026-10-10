@@ -1,0 +1,59 @@
+{
+  "card": {
+    "agent_id": "C-wide",
+    "display_name": "C-wide - C-trend rules, mechanically chosen universe",
+    "discipline": "trend",
+    "thesis": "The same experiment as B-wide, on the slower book. C-trend's rules are unchanged -- close>sma(200) as the regime filter, ema(20)/ema(50) as the trigger, ema(20) crossing back below ema(50) as the exit, 12% stop, 120-day cap, 5 slots at 18% -- and only the nine names change, from a hand-picked AI/semi list to the nine most heavily traded long-history index constituents by median dollar volume through the design cutoff. C-trend's own memo argues its edge comes from excluding speculative names whose golden crosses do not sustain; a liquidity screen is a different and much blunter way of excluding them, and this card measures what that costs. As with B-wide, a nine-name universe is swapped rather than widened, so universe and selection rule move together.",
+    "universe": [
+      "NVDA",
+      "AAPL",
+      "MSFT",
+      "AMZN",
+      "AMD",
+      "MSTR",
+      "NFLX",
+      "MU",
+      "UNH"
+    ],
+    "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+    "exit": "ema(20) crosses_below ema(50)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 120,
+    "max_positions": 5,
+    "position_pct": "0.18",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 65,
+  "starting_equity": "10000.00",
+  "ending_equity": "9833.40",
+  "total_return": "-0.016660000000000008",
+  "max_drawdown": "-0.02263560590549374",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.4307692307692308,
+  "capital_exposure": 0.07137156923076923,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "UNH",
+      "entry_date": "2018-11-08",
+      "entry_price": "276.14",
+      "exit_date": "2018-12-20",
+      "exit_price": "248.38",
+      "quantity": "6",
+      "exit_reason": "rule",
+      "pnl": "-166.60",
+      "return_pct": "-0.1005528596605586538229400546",
+      "bars_held": 28
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.2004503736053771878945033949",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

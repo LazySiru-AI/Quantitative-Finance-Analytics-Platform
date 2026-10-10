@@ -1,0 +1,113 @@
+/**
+ * FolderTabs.tsx.
+ *
+ * Built on the same mono/uppercase pill vocabulary as `.timeframe-tab` in styles.css, so a rail
+ * built from this component and one of the pre-existing pill rows read as the same visual language
+ * rather than two competing tab styles landing on the same page mid-migration.
+ *
+ * The folder metaphor is literal: an inactive tab is a flat pill the same colour as the rail's
+ * background, and the active tab lifts onto the panel's own background colour with its bottom edge
+ * erased against the rail's border -- the same trick a physical folder tab uses, a flap that is
+ * visually part of whichever page is on top. This assumes the rail sits directly above a `.panel`
+ * (or the page background, `--bg`, when there is no card) and shares its colour; a caller nesting
+ * `FolderTabs` inside something with a different background should override `--folder-tabs-panel-bg`
+ * rather than fighting the border-erase trick from outside.
+ */
+
+.folder-tabs {
+  --folder-tabs-panel-bg: var(--panel);
+  display: flex;
+  flex-direction: column;
+}
+
+.folder-tabs-rail {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  border-bottom: 1px solid var(--border);
+}
+
+/* A secondary rail sits directly under a primary one and must read as subordinate to it, not as a
+   second, equal-weight row of tabs -- this is the whole point of the `sm` size existing. */
+.folder-tabs-sm {
+  margin-top: 0.5rem;
+}
+.folder-tabs-sm .folder-tabs-rail {
+  border-bottom-color: color-mix(in srgb, var(--border) 60%, transparent);
+}
+
+.folder-tab {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: -1px; /* sit flush on the rail's border-bottom so the active tab can erase it */
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.folder-tabs-sm .folder-tab {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+}
+
+.folder-tab:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.folder-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.folder-tab[aria-selected="true"] {
+  color: var(--accent);
+  background: var(--folder-tabs-panel-bg);
+  border-color: var(--border-strong);
+  /* Erases the rail's border-bottom under just this tab, the "connected to the panel below it"
+     part of the folder metaphor. */
+  border-bottom: 1px solid var(--folder-tabs-panel-bg);
+}
+
+.folder-tab-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.folder-tab-badge-ok { color: var(--up); }
+.folder-tab-badge-warn { color: var(--warn); }
+.folder-tab-badge-bad { color: var(--down); }
+.folder-tab-badge-neutral { color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .folder-tab {
+    transition: none;
+  }
+}
+
+/* The owned `role="tabpanel"` (rendered only when a caller passes `children`). Deliberately carries
+   no box of its own -- the panels it wraps already are `.panel` cards -- so the only thing it adds
+   is a focus ring, which it must have: the element is `tabIndex={0}` so a keyboard user can move
+   INTO the panel from the rail, and a focusable element with no visible focus state is exactly the
+   failure the tabpanel wiring was added to fix. */
+.folder-tabs-panel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

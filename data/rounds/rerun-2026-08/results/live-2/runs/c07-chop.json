@@ -1,0 +1,73 @@
+{
+  "card": {
+    "agent_id": "c07-chop",
+    "display_name": "Sector Oversold Reversion",
+    "discipline": "mean-reversion",
+    "purpose": "trading",
+    "thesis": "Sector SPDRs oscillate around a short-term fair-value anchor because most of their daily volume comes from liquidity providers, index rebalancers and short-horizon momentum traders rather than investors repricing fundamentals -- fundamentals for a nine-sector basket do not change materially week to week. When RSI(14) drops below 30 AND the close is also below the 20-day, 2-stddev Bollinger lower band, two independent measures (momentum exhaustion and a statistically stretched price relative to recent volatility) agree that the move has overshot. The other side of that trade is forced or reflexive selling that does not price on fair value -- stop-loss cascades, volatility-targeting deleveraging, tax-loss and rebalancing flows -- and it does not persist once the flow clears, which is why we exit on the close reclaiming the 20-day mean rather than holding for a trend. This mechanism needs mean reversion to actually be the dominant force, which is true in a range-bound market and false in a fast one-directional break, where 'oversold' does not mean 'done falling' and the entry buys into a crash that keeps crashing. We measured this directly: in chop-2015 the rule produced 23 trades averaging +2.42% (70% win rate); in chop-2011, 25 trades averaging +0.93% (72% win rate). In covid the same rule, unchanged, produced 18 trades averaging -6.53% with a 17% win rate and 15 of 18 exits were stops -- see the memo for the full comparison and the sensitivity check confirming this split is not an artifact of the specific thresholds chosen.",
+    "universe": [
+      "XLF",
+      "XLK",
+      "XLU",
+      "XLP",
+      "XLV",
+      "XLI",
+      "XLE",
+      "XLB",
+      "XLY"
+    ],
+    "entry": "rsi(14) < 30 and close < bb_lower(20, 2)",
+    "exit": "close crosses_above sma(20)",
+    "stop_loss_pct": "0.07",
+    "take_profit_pct": null,
+    "max_hold_days": 15,
+    "max_positions": 4,
+    "position_pct": "0.20",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 21,
+  "starting_equity": "10000.00",
+  "ending_equity": "10119.97",
+  "total_return": "0.011997000000000035",
+  "max_drawdown": "-0.009111239791537717",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.5714285714285714,
+  "capital_exposure": 0.14988514285714286,
+  "win_rate": 1.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLK",
+      "entry_date": "2026-03-31",
+      "entry_price": "129.21",
+      "exit_date": "2026-04-07",
+      "exit_price": "136.10",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "103.29",
+      "return_pct": "0.05329308877021902329541057194",
+      "bars_held": 4
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2026-03-23",
+      "entry_price": "109.83",
+      "exit_date": "2026-04-09",
+      "exit_price": "110.76",
+      "quantity": "18",
+      "exit_reason": "rule",
+      "pnl": "16.68",
+      "return_pct": "0.008437281859844001335397128896",
+      "bars_held": 12
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "0.08093215824162442729500586024",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

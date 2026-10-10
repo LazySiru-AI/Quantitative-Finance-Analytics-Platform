@@ -1,0 +1,3 @@
+{"cash_delta": "-1479.00", "fees": "0.00", "gross": "1479.00", "order_id": "s1-buy-xle", "price": "59.16", "quantity": "25", "reference_open": "59.13", "session": 1, "side": "buy", "status": "filled", "symbol": "XLE", "trade_date": "2026-05-18"}
+{"cash_delta": "-1802.34", "fees": "0.00", "gross": "1802.34", "order_id": "s1-buy-aapl", "price": "300.39", "quantity": "6", "reference_open": "300.24", "session": 1, "side": "buy", "status": "filled", "symbol": "AAPL", "trade_date": "2026-05-18"}
+{"cash_delta": "-2128.02", "fees": "0.00", "gross": "2128.02", "order_id": "s4-buy-qqq", "price": "709.34", "quantity": "3", "reference_open": "708.99", "session": 4, "side": "buy", "status": "filled", "symbol": "QQQ", "trade_date": "2026-05-21"}

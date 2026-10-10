@@ -1,0 +1,41 @@
+{
+  "card": {
+    "agent_id": "c14-riskmanaged-wide",
+    "display_name": "C14 - Risk-managed: flight-to-quality basket, built for the worst window",
+    "discipline": "risk-managed",
+    "thesis": "This card is not trying to top the median-return table. It is designed for the worst-window column of the Pareto frontier: when equities are in genuine distress, capital does not evaporate, it moves -- into long and intermediate Treasuries, into gold, and to a lesser extent into investment-grade credit -- because those are the instruments large pools of capital are mandated or incentivised to hold when risk appetite collapses (pension and insurance duration-matching flows, safe-haven gold demand, and credit's senior claim relative to equity). The other side of every one of my trades is whoever is still selling those instruments into the flight, or the momentum/carry trader whose short-duration or short-vol position gets forced out; I am not claiming an edge over them in normal markets, only that I am positioned to be a buyer of what they are forced to sell exactly when SPY is worst. I measured this rather than assumed it, using only data through 2026-02-13. Buy-and-hold cumulative return of my four names, TLT/IEF/GLD/LQD, against SPY over every window fully inside the design cutoff: gfc (Oct07-Mar09) TLT +25.1% IEF +20.2% GLD +23.9% LQD -6.8% vs SPY -55.2%; covid (Feb-Jun20) TLT +13.3% IEF +7.9% GLD +10.3% LQD +3.7% vs SPY -7.9%; q4-2018 TLT +4.6% IEF +3.3% GLD +5.8% LQD -1.1% vs SPY -19.3%; chop-2011 TLT +34.3% IEF +14.5% GLD +6.1% LQD +9.0% vs SPY +1.3%. Every one of those four is a case where equities were flat-to-crushed and this basket was flat-to-strongly-positive. But I also measured the counter-case rather than hide it: bear-2022 TLT -29.3% IEF -15.4% GLD -7.3% LQD -21.1% vs SPY -24.5% -- when the shock is rate hikes rather than a growth/credit scare, duration is not a hedge, it is a second source of loss, and my basket did no better than equities and TLT individually did worse. I also checked equity 'defensive sector' alternatives (XLU, XLP) before excluding them: both fell 28-42% during gfc and 11-21% during covid, worse than SPY's own covid drawdown in XLU's case -- they are equities first and defensive second, and a credit-crisis or liquidity-crisis regime takes them down with everything else, so they do not belong in a card whose whole claim is about crisis behaviour. I also checked SLV as a second precious-metal sleeve and excluded it: -22% in chop-2011, -17% in bear-2022, -5% in gfc -- an inconsistent diversifier that would have added a name without adding ballast on the exact days that matter.",
+    "universe": [
+      "TLT",
+      "IEF",
+      "GLD",
+      "LQD"
+    ],
+    "entry": "close > sma(150) and ema(10) crosses_above ema(30) and rsi(14) < 70",
+    "exit": "ema(10) crosses_below ema(30)",
+    "stop_loss_pct": "0.08",
+    "take_profit_pct": null,
+    "max_hold_days": 120,
+    "max_positions": 4,
+    "position_pct": "0.20",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 21,
+  "starting_equity": "10000.00",
+  "ending_equity": "10000.00",
+  "total_return": "0.0",
+  "max_drawdown": "0.0",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.0,
+  "capital_exposure": 0.0,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [],
+  "rejections": [],
+  "benchmark_return": "0.02835358908735210172989052513",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

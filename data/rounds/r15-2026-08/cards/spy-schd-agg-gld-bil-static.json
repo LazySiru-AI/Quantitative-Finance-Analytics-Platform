@@ -1,0 +1,31 @@
+{
+  "agent_id": "spy-schd-agg-gld-bil-static",
+  "display_name": "Whole-Market Core-Satellite, Static (No Tilt)",
+  "thesis": "This card holds the identical five sleeves and identical weights as the already-frozen spy-schd-agg-gld-bil-atr-tilt (SPY 40% -- whole-market equity core, proxying for a true total-market fund since no VTI history is stored; SCHD 20% -- dividend/quality equity, a different factor from SPY rather than a levered copy; AGG 20% -- investment-grade aggregate bonds; GLD 10% -- gold, the one sleeve with low correlation to both equity and nominal bonds; BIL 10% -- T-bills, dry powder), for one reason: to isolate exactly one decision against that card, per PROTOCOL.md section 7 -- whether the ATR volatility tilt earns its own complexity, holding every other choice (which five assets, what weights, what rebalance band) fixed. This card has no rules at all. It moves only when a sleeve's own weight drifts more than band_pct (5%) from its target, at which point the broker's own band-rebalance logic trims the overweight sleeve(s) back toward target and tops up the underweight one(s) -- a mechanical, non-predictive rebalance, not a signal-driven one. Round 15's own section 4 already names the discriminating question this card exists to answer under a new funding shape: ALLOCATION-FAMILY.md found, under a single lump-sum run, that the ATR tilt's extra turnover (15.4x vs 2.6x of starting capital in the PRIMARY window) bought a MAR improvement of only 0.38 to 0.40 and, in the CRISIS window, produced a worse MAR (0.01 vs 0.02) than this exact static blend despite a shallower drawdown -- 'not a strategy that clearly earns its complexity.' That finding was measured under a single lump sum. This card exists so the savings arm's $20,000-seed-plus-$1,000/month drip can ask the same question under a genuinely different funding shape, where a monthly contribution buys into whichever sleeve is currently underweight regardless of what the tilt is doing, which could change the tilt's edge in either direction. Falsification: this card's implicit claim -- that a plain, no-tilt band-rebalance is not worse than the ATR-tilted sibling once contributions are added -- is falsified if spy-schd-agg-gld-bil-atr-tilt posts a materially higher median adjusted-excess or IRR than this card across the savings arm's eligible windows, by a margin that survives PROTOCOL.md section 7's own noise-floor caveat (a sigma near 21 points has been measured for ordering effects alone in this program; a tilt-vs-static gap inside that band has shown nothing). It is also falsified in the other direction if this static blend's own drawdowns in a genuine crisis window are deep enough that the tilt's shallower drawdown was worth its cost after all -- ALLOCATION-FAMILY.md's own CRISIS-window number (-36.3% max drawdown for the static blend against the tilt's -32.6%) is exactly that possibility, just not yet tested under a contribution stream. Who is on the other side of this trade: everyone this book buys from on a band-triggered rebalance is, structurally, someone who let a winning sleeve run past a 5%-of-book drift without trimming it, or who sold a laggard sleeve down through the band -- in a trending market that counterparty is right and this card's rebalance discipline costs it forgone concentration in the winner; in a mean-reverting or range-bound market that counterparty is wrong and the discipline is the entire edge. There is no directional bet in the base weights themselves; the only 'view' this card holds is that five uncorrelated-ish sleeves, periodically reset to a fixed mix, beat both a single-asset hold and an actively-tilted version of the same mix -- a claim about rebalancing itself, not about market direction. Parameter count against the ten-parameter budget: 4 free sleeve weights (the fifth is determined by the sum-to-one constraint) plus 1 band_pct = 5 of 10, the smallest budget in this round's field because there is no rule to add parameters. Expected window eligibility: bound by SCHD's 2011-10-20 start, the same constraint the ATR-tilt sibling already carries -- eligible on all five of the round's long windows (h10y-1, h10y-2, h5y-1, h5y-2, h5y-3), none of which begins before SCHD existed, and eligible across the trading arm's full main-window matrix back to late 2011.",
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "SCHD",
+      "target_weight": "0.20"
+    },
+    {
+      "symbol": "AGG",
+      "target_weight": "0.20"
+    },
+    {
+      "symbol": "GLD",
+      "target_weight": "0.10"
+    },
+    {
+      "symbol": "BIL",
+      "target_weight": "0.10"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [],
+  "designed_through": "2026-02-13",
+  "purpose": "savings"
+}

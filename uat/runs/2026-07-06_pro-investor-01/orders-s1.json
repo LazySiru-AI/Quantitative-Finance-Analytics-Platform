@@ -1,0 +1,39 @@
+{
+  "orders": [
+    {
+      "order_id": "s1-xlf-buy",
+      "session": 1,
+      "decided_on": "2026-07-02",
+      "symbol": "XLF",
+      "side": "buy",
+      "quantity": "35",
+      "order_type": "market_on_open",
+      "thesis": "XLF closed 55.62 on 2026-07-02, above sma20 (53.4345), sma50 (52.3148) and sma200 (52.5717) -- confirmed uptrend across three timeframes -- with change_20d +9.34% and change_1d +1.53%, the strongest momentum on my watchlist. Sector leadership read confirms the macro page's rotation into financials.",
+      "invalidation": "Close back below sma20 (53.43) ends the leadership read; a rollover in the 20d change from +9.34% toward flat without a new high invalidates the momentum thesis.",
+      "stop_level": "53.00",
+      "regime": "transitional",
+      "conviction": 4,
+      "evidence": [
+        "close=55.62, sma20=53.4345, sma50=52.3148, sma200=52.5717, change_1d=+1.53%, change_20d=+9.34% via brief-s1.json watchlist.XLF (as of 2026-07-02)",
+        "range_52w.high=56.40 -- close sits within 1.4% of the 52-week high via brief-s1.json watchlist.XLF"
+      ]
+    },
+    {
+      "order_id": "s1-spy-buy",
+      "session": 1,
+      "decided_on": "2026-07-02",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "SPY closed 744.78 on 2026-07-02, still above sma20 (741.08), sma50 (737.43) and sma200 (692.29) -- the long-term uptrend is intact -- but change_20d is -1.25% and change_1d -0.13%, a short-term pullback while XLF and rotation-linked sectors lead. Sized smaller than XLF as the core-index leg rather than the conviction leg given the deceleration.",
+      "invalidation": "Close below sma50 (737.43) would break the medium-term trend this position depends on; continued 20d deceleration without stabilization above sma20 would also invalidate.",
+      "stop_level": "736.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=744.78, sma20=741.0760, sma50=737.4256, sma200=692.2864, change_1d=-0.13%, change_20d=-1.25% via brief-s1.json benchmark/watchlist.SPY (as of 2026-07-02)"
+      ]
+    }
+  ]
+}

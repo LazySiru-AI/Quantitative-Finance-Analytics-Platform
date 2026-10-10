@@ -1,0 +1,53 @@
+window: 2020-02-19 -> 2020-06-30
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+48 cards
+[1/48] r1 r17-band-breakout-off-none: 1s trades=7 ret=-0.62% dd=-8.96% rej=0
+[2/48] r1 r17-band-breakout-off-stop-tp: 1s trades=7 ret=-0.62% dd=-8.96% rej=0
+[3/48] r1 r17-band-breakout-off-stop: 1s trades=7 ret=-0.62% dd=-8.96% rej=0
+[4/48] r1 r17-band-breakout-on-none: 1s trades=7 ret=-1.56% dd=-5.51% rej=0
+[5/48] r1 r17-band-breakout-on-stop-tp: 1s trades=7 ret=-1.56% dd=-5.51% rej=0
+[6/48] r1 r17-band-breakout-on-stop: 1s trades=7 ret=-1.56% dd=-5.51% rej=0
+[7/48] r1 r17-band-reversion-off-none: 1s trades=7 ret=-14.21% dd=-31.06% rej=0
+[8/48] r1 r17-band-reversion-off-stop-tp: 1s trades=16 ret=-15.03% dd=-25.97% rej=42
+[9/48] r1 r17-band-reversion-off-stop: 1s trades=16 ret=-15.03% dd=-25.97% rej=42
+[10/48] r1 r17-band-reversion-on-none: 1s trades=7 ret=-10.95% dd=-26.53% rej=0
+[11/48] r1 r17-band-reversion-on-stop-tp: 1s trades=8 ret=-13.92% dd=-16.71% rej=0
+[12/48] r1 r17-band-reversion-on-stop: 1s trades=8 ret=-13.92% dd=-16.71% rej=0
+[13/48] r1 r17-channel-breakout-off-none: 1s trades=8 ret=-0.10% dd=-11.35% rej=0
+[14/48] r1 r17-channel-breakout-off-stop-tp: 1s trades=8 ret=-0.10% dd=-11.35% rej=0
+[15/48] r1 r17-channel-breakout-off-stop: 1s trades=8 ret=-0.10% dd=-11.35% rej=0
+[16/48] r1 r17-channel-breakout-on-none: 1s trades=7 ret=-2.27% dd=-4.74% rej=0
+[17/48] r1 r17-channel-breakout-on-stop-tp: 1s trades=7 ret=-2.27% dd=-4.74% rej=0
+[18/48] r1 r17-channel-breakout-on-stop: 1s trades=7 ret=-2.27% dd=-4.74% rej=0
+[19/48] r1 r17-ma-crossover-off-none: 1s trades=9 ret=+5.66% dd=-8.02% rej=0
+[20/48] r1 r17-ma-crossover-off-stop-tp: 1s trades=9 ret=+5.66% dd=-8.02% rej=0
+[21/48] r1 r17-ma-crossover-off-stop: 1s trades=9 ret=+5.66% dd=-8.02% rej=0
+[22/48] r1 r17-ma-crossover-on-none: 1s trades=1 ret=+2.85% dd=-0.96% rej=0
+[23/48] r1 r17-ma-crossover-on-stop-tp: 1s trades=1 ret=+2.85% dd=-0.96% rej=0
+[24/48] r1 r17-ma-crossover-on-stop: 1s trades=1 ret=+2.85% dd=-0.96% rej=0
+[25/48] r1 r17-macd-cross-off-none: 1s trades=13 ret=+14.07% dd=-8.93% rej=0
+[26/48] r1 r17-macd-cross-off-stop-tp: 2s trades=14 ret=+15.05% dd=-9.06% rej=0
+[27/48] r1 r17-macd-cross-off-stop: 2s trades=13 ret=+14.07% dd=-8.93% rej=0
+[28/48] r1 r17-macd-cross-on-none: 1s trades=4 ret=+0.12% dd=-2.08% rej=0
+[29/48] r1 r17-macd-cross-on-stop-tp: 1s trades=4 ret=+0.12% dd=-2.08% rej=0
+[30/48] r1 r17-macd-cross-on-stop: 1s trades=4 ret=+0.12% dd=-2.08% rej=0
+[31/48] r1 r17-momentum-state-off-none: 2s trades=14 ret=-4.03% dd=-12.34% rej=3
+[32/48] r1 r17-momentum-state-off-stop-tp: 2s trades=14 ret=-4.03% dd=-12.34% rej=3
+[33/48] r1 r17-momentum-state-off-stop: 2s trades=14 ret=-4.03% dd=-12.34% rej=3
+[34/48] r1 r17-momentum-state-on-none: 2s trades=12 ret=-6.41% dd=-10.25% rej=0
+[35/48] r1 r17-momentum-state-on-stop-tp: 2s trades=12 ret=-6.91% dd=-10.25% rej=0
+[36/48] r1 r17-momentum-state-on-stop: 2s trades=12 ret=-6.91% dd=-10.25% rej=0
+[37/48] r1 r17-rsi-pullback-off-none: 2s trades=16 ret=-6.96% dd=-32.69% rej=0
+[38/48] r1 r17-rsi-pullback-off-stop-tp: 3s trades=29 ret=-0.63% dd=-27.55% rej=64
+[39/48] r1 r17-rsi-pullback-off-stop: 3s trades=29 ret=-0.63% dd=-27.55% rej=64
+[40/48] r1 r17-rsi-pullback-on-none: 2s trades=8 ret=-10.90% dd=-27.48% rej=0
+[41/48] r1 r17-rsi-pullback-on-stop-tp: 2s trades=9 ret=-13.83% dd=-16.35% rej=0
+[42/48] r1 r17-rsi-pullback-on-stop: 2s trades=9 ret=-13.83% dd=-16.35% rej=0
+[43/48] r1 r17-vol-compression-off-none: 2s trades=13 ret=-10.61% dd=-12.72% rej=4
+[44/48] r1 r17-vol-compression-off-stop-tp: 2s trades=13 ret=-10.82% dd=-12.94% rej=4
+[45/48] r1 r17-vol-compression-off-stop: 2s trades=13 ret=-10.82% dd=-12.94% rej=4
+[46/48] r1 r17-vol-compression-on-none: 2s trades=12 ret=-10.97% dd=-12.95% rej=4
+[47/48] r1 r17-vol-compression-on-stop-tp: 2s trades=12 ret=-11.19% dd=-13.16% rej=4
+[48/48] r1 r17-vol-compression-on-stop: 2s trades=12 ret=-11.19% dd=-13.16% rej=4
+r1: 48 agents, 0 discoveries
+overall: 48 agents, 0 discoveries at alpha=0.1

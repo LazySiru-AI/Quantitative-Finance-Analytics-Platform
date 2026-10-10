@@ -1,0 +1,290 @@
+/* =============================================================================
+   Manager (Phase 1 -- the deterministic change feed).
+
+   Reuses .panel, .subtitle, .disclaimer, .muted, .tile-grid, .stat, .data-table,
+   .callout/.callout-warn/.callout-danger, .badge, .placeholder from styles.css --
+   nothing there is modified, only built on top of. Every class this file adds is
+   prefixed `mgr-`. Density is the whole point of this page (see `Manager.tsx`'s
+   own docstring), so every rule here trims padding/line-height rather than adding
+   any -- there is no card here that wants to be taller than its content.
+   ============================================================================= */
+
+.mgr-header-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Pushed to the end of the stat strip: a way out of the page, not one more stat. */
+.mgr-header-link {
+  margin-left: auto;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.mgr-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mgr-window-toggle {
+  display: flex;
+  gap: 0.3rem;
+}
+
+/* --- Attention panel: one row per item, as dense as this app gets ----------- */
+
+.mgr-attention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.mgr-attention-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.mgr-attention-row:last-child { border-bottom: none; }
+.mgr-attention-headline { flex: 1; min-width: 0; }
+
+/* --- Changes-by-area cards ---------------------------------------------------
+   The grid itself is `CardGrid` (Card.css) now -- equal track heights, so a row of
+   area cards lines up at the bottom and each list scrolls inside its own card
+   instead of leaving the dead whitespace a content-sized `.panel` left behind.
+   Only the list *inside* a card is styled here. */
+
+.mgr-area-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mgr-change-row {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.mgr-change-row:last-child { border-bottom: none; }
+.mgr-change-headline { line-height: 1.4; }
+.mgr-change-detail {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+.mgr-change-figures {
+  margin: 0.2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* --- Source-ref chips -------------------------------------------------------- */
+
+.mgr-ref-chips {
+  margin: 0.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.mgr-ref-chip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  color: var(--text);
+  text-decoration: none;
+}
+a.mgr-ref-chip:hover { border-color: var(--accent); }
+
+.mgr-gaps-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.25rem;
+}
+.mgr-gaps-list li { margin-bottom: 0.25rem; }
+
+/* =============================================================================
+   Phase C -- brief runner, synthesis, data health, commissions, chat.
+   Same density rule as Phase 1 above: every class here trims rather than adds.
+   ============================================================================= */
+
+/* --- Brief runner + progress -------------------------------------------------- */
+
+.mgr-brief-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.mgr-brief-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+.mgr-brief-stage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.mgr-brief-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.82rem;
+}
+
+/* --- Synthesis ----------------------------------------------------------------- */
+
+/* The heading and, under Korean, the "English only" pill that discloses the body's language. The
+   pill sits on the heading line rather than above the first bullet so it reads as a property of the
+   whole section, which is what it is. */
+.mgr-synthesis-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.mgr-synthesis-head h3 { margin-bottom: 0.2rem; }
+
+.mgr-synthesis-group { margin-bottom: 0.5rem; }
+.mgr-synthesis-group h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.82rem;
+}
+.mgr-synthesis-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.mgr-synthesis-bullet {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.mgr-synthesis-bullet:last-child { border-bottom: none; }
+
+/* The collapsed remainder of a long synthesis group. Quiet by design: the first paragraph is the
+   one that must be read, and this is the affordance for the rest -- not a second heading competing
+   with the group's own. */
+.mgr-synthesis-more { margin: 0.1rem 0 0.35rem; }
+.mgr-synthesis-more-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+.mgr-synthesis-more > .collapsible-summary:hover .mgr-synthesis-more-label { color: var(--text); }
+
+/* --- Data health ----------------------------------------------------------------- */
+
+.mgr-data-health { margin: 0.75rem 0; }
+.mgr-data-health p { margin: 0.2rem 0; font-size: 0.85rem; }
+
+/* --- Commissions ----------------------------------------------------------------- */
+
+.mgr-commissions { margin-top: 0.75rem; }
+.mgr-commission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mgr-commission-row {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.mgr-commission-row:last-child { border-bottom: none; }
+.mgr-commission-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.mgr-commission-rationale { margin: 0.15rem 0; line-height: 1.4; }
+/* A failed commission's raw payload, behind the InfoNote disclosure. Monospace and scrollable in
+   its own box: it is a machine payload, and a long one must not stretch the row it sits in. */
+.mgr-commission-failure { margin: 0.2rem 0; }
+.mgr-commission-raw {
+  margin: 0;
+  max-height: 12rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.mgr-commission-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+/* --- Chat -------------------------------------------------------------------- */
+
+.mgr-chat-caveat { margin-top: 0.1rem; }
+.mgr-chat-thread-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+.mgr-chat-turn {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.mgr-chat-turn:last-child { border-bottom: none; }
+.mgr-chat-question { margin: 0 0 0.2rem; }
+.mgr-chat-answer { margin: 0.2rem 0; }
+.mgr-chat-degraded { margin: 0.3rem 0; font-size: 0.8rem; }
+.mgr-chat-grounding-issues { margin: 0.2rem 0 0; padding-left: 1.1rem; }
+.mgr-chat-turn-commissions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.25rem 0 0;
+}
+.mgr-chat-turn-cost { margin: 0.15rem 0 0; font-size: 0.72rem; }
+.mgr-chat-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.mgr-chat-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.8rem;
+}
+.mgr-chat-refresh {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+}
+.mgr-chat-send-row { display: flex; }

@@ -1,0 +1,146 @@
+/**
+ * PersonaTraderCard -- the model-driven persona paper trader (Phase 10). Reuses `.panel`,
+ * `.tile-grid`/`.stat.tile`, `.table-wrap`/`.data-table`/`.position-table`, `.warning-list`,
+ * `.callout`/`.callout-danger`, `.download-link`, `.muted` and `.status-pill` from `styles.css`
+ * and `StatusPill.css` wholesale, same as `PersonaBookCard.tsx`'s own idiom. Only what those don't
+ * already cover -- the header row, the caveat spacing, the sparkline, and the decision log -- gets
+ * rules here.
+ */
+
+.persona-trader-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.persona-trader-caveat {
+  margin: 0.35rem 0;
+}
+
+.persona-trader-tiles {
+  margin-top: 0.5rem;
+}
+
+.persona-trader-date-value {
+  font-size: 0.95rem;
+}
+
+.persona-trader-warnings {
+  margin-top: 0.5rem;
+}
+
+.persona-trader-section {
+  margin-top: 0.9rem;
+}
+
+.persona-trader-empty {
+  margin: 0.35rem 0;
+}
+
+/* --- equity curve sparkline ------------------------------------------------------------------- */
+
+.persona-trader-sparkline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.persona-trader-sparkline {
+  width: 100%;
+  max-width: 420px;
+  height: 56px;
+  color: var(--accent);
+}
+
+.persona-trader-sparkline-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  max-width: 420px;
+}
+
+/* --- decision log ------------------------------------------------------------------------------ */
+
+.persona-trader-decision-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-trader-decision {
+  border-left: 2px solid var(--border);
+  padding-left: 0.6rem;
+}
+
+.persona-trader-decision-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.persona-trader-decision-dates {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.persona-trader-decision-commentary {
+  margin: 0.3rem 0;
+}
+
+.persona-trader-decision-trades,
+.persona-trader-decision-rejections ul {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+.persona-trader-decision-rejections {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.persona-trader-show-all {
+  margin-top: 0.5rem;
+}
+
+/* --- controls ------------------------------------------------------------------------------------ */
+
+.persona-trader-controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-trader-control-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.persona-trader-backfill-field {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.persona-trader-inline-error {
+  margin: 0;
+}
+
+.persona-trader-reset-confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}

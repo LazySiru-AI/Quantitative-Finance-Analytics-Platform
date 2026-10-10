@@ -1,0 +1,36 @@
+{
+ "medians": {
+  "A-rotation": "-0.07157925448489737915904936015",
+  "B3-concentrated": "0.1389222747333657699211629133",
+  "B3-concentrated-cap126": "0.08818713626590616322434774925",
+  "B-momentum": "0.1215538398061462623935101539",
+  "B-momentum-cap126": "0.1196740404926365018788573700",
+  "C-trend": "0.0502521370506535051541477822"
+ },
+ "trades": {
+  "A-rotation": 189,
+  "B3-concentrated": 56,
+  "B3-concentrated-cap126": 58,
+  "B-momentum": 70,
+  "B-momentum-cap126": 74,
+  "C-trend": 59
+ },
+ "time_exits": {
+  "A-rotation": 0,
+  "B3-concentrated": 2,
+  "B3-concentrated-cap126": 3,
+  "B-momentum": 3,
+  "B-momentum-cap126": 4,
+  "C-trend": 1
+ },
+ "windows": [
+  "q4-2018",
+  "covid",
+  "bear-2022",
+  "chop-2015",
+  "chop-2011",
+  "bull-2024",
+  "recent"
+ ],
+ "inert": false
+}

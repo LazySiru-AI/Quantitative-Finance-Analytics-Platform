@@ -1,0 +1,183 @@
+{
+  "findings": [
+    {
+      "finding_id": "ticker-page-search-does-not-work",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:35:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/ticker",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Ticker page symbol search still does not navigate on click",
+      "observed": "Set the ticker symbol textbox to XLK via the native value setter plus a bubbling input event, then clicked Go: the page stayed on 'No symbol yet.' Reloaded and clicked the SPY preset button directly (real DOM click, not a synthetic one): no navigation. Clicked the QQQ preset button: no navigation. Per the persona's protocol I cross-checked with direct navigation: /ticker/XLK loads fully (quote, chart, indicator overlays, decision table, coverage table). In the same session, the identical preset-button click pattern on /backtest (clicking the QQQ button there) worked on the first try and loaded the drawdown profile immediately -- so the click mechanism itself is not broadly failing in this session, only on this page's controls.",
+      "expected": "Clicking a preset symbol button or submitting the symbol form on /ticker should navigate to /ticker/<symbol>, the same way the equivalent button does on /backtest.",
+      "why_it_matters": "This was previously logged and marked 'not reproduced' -- a harness artifact where synthetic clicks weren't reaching React handlers. This session used the same click tooling successfully on an adjacent page (Backtest) moments later, which weakens that explanation for Ticker specifically and is worth a second look at the source. A trader who doesn't already know the /ticker/<symbol> URL pattern is stuck at the empty-state screen.",
+      "repro": [
+        "Navigate to /ticker",
+        "Set the symbol textbox to XLK via native value setter + input event, click Go -> no navigation",
+        "Reload; click the SPY preset button -> no navigation",
+        "Click the QQQ preset button -> no navigation",
+        "Navigate directly to /ticker/XLK -> loads fully",
+        "For comparison, on /backtest click the QQQ preset button -> loads fully on first click"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "rules-tester-placeholder-example-does-not-parse",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:20:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/rules",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Rule tester's own placeholder example fails to parse",
+      "observed": "The expression tester's input placeholder reads 'e.g. rsi:14 < 30 and close > sma:200'. Typing that example verbatim returns NOT VALID: \"unexpected character ':'\" -- a raw tokenizer error, not the improved field/indicator hint the same page describes one line above it ('indicators take their parameters in parentheses -- sma(20), rsi(14), bb_lower(20, 2)'). Separately typing 'sma20 > sma50' does get the good hint ('did you mean sma(20)? Indicators take their parameters in parentheses, not glued to the name').",
+      "expected": "The placeholder text shown inside the input is the first thing a new user is likely to copy. It should use the grammar's actual call syntax, e.g. 'rsi(14) < 30 and close > sma(200)', matching the catalog directly below it and the sentence directly above it.",
+      "why_it_matters": "The prior fix to the grammar's error message specifically closed the gap where a user reasonably concludes indicators aren't supported. This placeholder reopens the same gap for anyone who tries the suggested example instead of typing their own: the message they get back names no field, no indicator and no fix -- just a syntax error -- which is a worse first experience than the one that was fixed.",
+      "repro": [
+        "Navigate to /rules",
+        "Set the expression textbox to the input's own placeholder text: 'rsi:14 < 30 and close > sma:200'",
+        "Observe: NOT VALID -- unexpected character ':'"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "fear-greed-component-score-column-always-empty",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:18:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/macro",
+      "kind": "gap",
+      "severity": "minor",
+      "title": "Fear & Greed component table's Score column has no data for any component",
+      "observed": "The component table's header row reads Component / Raw / Score / Rating / As of. All seven rows (Market Momentum, Stock Price Strength, Stock Price Breadth, Put and Call Options, Market Volatility, Junk Bond Demand, Safe Haven Demand) render '--' under Score. Checked the underlying response directly (GET /api/macro/snapshot): every component object carries a populated raw_value, raw_unit and rating, but \"score\": null in all seven. Only the top-level composite (\"score\": 64.49) is ever populated.",
+      "expected": "Either compute and show a real per-component Score (distinct from the categorical Rating), or don't present a column that never has one -- drop it, or state plainly that only the composite carries a numeric score.",
+      "why_it_matters": "The persona's rule is that partial or absent data must be labelled at the point it's displayed, not left as a silent blank. A column headed 'Score' next to seven em-dashes reads like a data outage rather than a deliberate design choice, and I could only tell which it was by reading the API response directly -- not from the page.",
+      "repro": [
+        "Navigate to /macro",
+        "Scroll to the Fear & Greed component table",
+        "Observe the Score column reads '--' for all 7 rows",
+        "Confirm via GET /api/macro/snapshot: components[*].score is null for all 7 entries"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "activity-import-panel-transient-500",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:10:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/activity",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "Activity page's Import panel intermittently shows a raw 'Internal Server Error'",
+      "observed": "The first navigation to /activity this session rendered the Import panel as only the heading 'Import' and the text 'Internal Server Error', with GET /api/import returning a 500 in the network log. Reloading the page, and every visit after, rendered the panel correctly: 'reading <data dir>... No broker exports found... Copy the CSVs your brokers export into that directory, then reload this page.' A direct fetch('/api/import') afterward returned 200 with a valid JSON body.",
+      "expected": "The Import panel should not fail on an ordinary first visit, or, if this is a genuine transient backend condition, should show something more actionable than the bare phrase 'Internal Server Error' with no retry control.",
+      "why_it_matters": "This is the panel the fixed onboarding flow now points new users toward from the empty Portfolio and Tax pages. A first-time user who lands here at the wrong moment sees a dead end with no explanation and no retry button, on the one page whose entire job is telling them what to do next.",
+      "repro": [
+        "Navigate to /activity as the first request of the session",
+        "Observe the Import region render only 'Internal Server Error'",
+        "Reload the page",
+        "Observe the Import region now renders correctly"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "backtest-event-study-no-technical-indicators",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:19:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/rules",
+      "kind": "friction",
+      "severity": "polish",
+      "title": "Rule grammar's unknown-field hint now correctly points to indicator call syntax",
+      "observed": "Typed 'sma20 > sma50' into the /rules expression tester, as instructed. Got: NOT VALID -- \"unknown price field 'sma20' -- did you mean sma(20)? Indicators take their parameters in parentheses, not glued to the name.\" This is a large improvement over the prior message, which only listed OHLCV fields: it names the exact indicator, the exact call form, and the reason.",
+      "expected": "Confirms the previously reported gap is closed for this exact input.",
+      "why_it_matters": "This was the input previously logged as leading a momentum trader to wrongly conclude the engine only supports raw OHLCV. It no longer does, for this case; worth keeping in the regression set given how load-bearing rule-writing is to this persona's process.",
+      "repro": [
+        "Navigate to /rules",
+        "Type 'sma20 > sma50' into the expression tester",
+        "Observe the corrected hint"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "rules-page-missing",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:40:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/rules, /screener",
+      "kind": "gap",
+      "severity": "polish",
+      "title": "/rules page now exists and unknown routes get a real, self-describing 404",
+      "observed": "/rules loads a dedicated page with the full 12-rule catalog and an expression tester, reachable from the top nav without first picking a symbol. Separately, guessing a route that doesn't exist (/screener) no longer silently redirects: it renders 'Nothing is routed at /screener' plus a list of all nine real routes with a one-line description of each.",
+      "expected": "Confirms both halves of the previously reported gap (missing page, silent catch-all redirect) are closed.",
+      "why_it_matters": "Both halves matter to this persona specifically: the silent redirect was what made a missing route indistinguishable from an unbuilt feature, and that ambiguity is gone now.",
+      "repro": [
+        "Click Rules in the top nav -> catalog and tester load",
+        "Navigate to /screener -> real 404 naming the path and listing every valid route"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "first-run-onboarding-missing",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:08:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/portfolio, /activity",
+      "kind": "gap",
+      "severity": "polish",
+      "title": "Empty-ledger onboarding now points to a working Activity/Import page instead of a bare 'data/' instruction",
+      "observed": "With a fresh, empty ledger this session, /portfolio's empty state reads 'Copy your broker exports into data/ and import them from the Activity page' with 'Activity' rendered as an actual link, and /activity carries a real Import panel that names the exact directory it is reading and states plainly that nothing is uploaded. (See the separate finding on a one-time 500 from this same panel.)",
+      "expected": "Confirms the previously reported gap (developer-only instruction with no UI affordance behind it) is closed.",
+      "why_it_matters": "A first-time user now has a concrete next step and a page to take it on, rather than a filesystem path with no control behind it.",
+      "repro": [
+        "With an empty ledger, load /portfolio",
+        "Read the empty-state message and follow the Activity link",
+        "Observe the Import panel on /activity"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "empty-tax-year-blank-panel",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-14T19:25:00Z",
+      "session_date": "2026-08-10",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "friction",
+      "severity": "polish",
+      "title": "Tax page distinguishes 'nothing imported' from 'zero gains' and states plainly that it is not advice",
+      "observed": "With an empty ledger, /tax reads: 'Nothing imported yet. Copy your broker exports into data/ and import them from the Activity page -- Robinhood, Webull and SoFi are detected by header signature. This is an absence of data, not a report of zero gains, so no figures are shown below.' The page header also states: 'This is a calculation, not tax advice. Reconcile every figure below against your actual 1099-B forms before filing.'",
+      "expected": "Confirms the previously reported blank-panel / ambiguous-empty-state gap is closed, and separately confirms the 'nothing is advice' principle is honoured in the page copy.",
+      "why_it_matters": "An investor deciding whether to trust a zero-gains figure needs to know whether it means 'nothing happened' or 'nothing was loaded'; this page now says which, plainly, at the point where it matters.",
+      "repro": [
+        "With an empty ledger, navigate to /tax",
+        "Read the empty-state message"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

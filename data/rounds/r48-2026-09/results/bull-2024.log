@@ -1,0 +1,15 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r48-arot-base: 5s trades=39 ret=+10.74% dd=-22.88% rej=74
+[2/10] r1 r48-arot-risk1pct: 4s trades=41 ret=+5.56% dd=-6.60% rej=0
+[3/10] r1 r48-b3-base: 2s trades=15 ret=+12.52% dd=-15.83% rej=0
+[4/10] r1 r48-b3-risk1pct: 2s trades=11 ret=+7.63% dd=-7.16% rej=2
+[5/10] r1 r48-bmom-base: 3s trades=19 ret=+15.20% dd=-15.22% rej=0
+[6/10] r1 r48-bmom-risk1pct: 3s trades=15 ret=+9.42% dd=-7.98% rej=5
+[7/10] r1 r48-ctrend-base: 2s trades=15 ret=+22.75% dd=-13.33% rej=0
+[8/10] r1 r48-ctrend-risk1pct: 2s trades=15 ret=+10.60% dd=-5.84% rej=0
+[9/10] r1 r48-i13f-base: FAILED GuardFailed: r48-i13f-base: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against RDDT (failed): causality: sma_200: only 105 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[10/10] r1 r48-i13f-risk1pct: FAILED GuardFailed: r48-i13f-risk1pct: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against RDDT (failed): causality: sma_200: only 105 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+r1: 8 agents, 0 discoveries
+overall: 8 agents, 0 discoveries at alpha=0.1

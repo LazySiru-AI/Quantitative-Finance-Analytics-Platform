@@ -1,0 +1,12 @@
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+7 cards
+[1/7] r1 r26-arot-base: 4s trades=47 ret=+95.28% dd=-13.24% rej=12
+[2/7] r1 r26-arot-rankby: 4s trades=48 ret=+92.66% dd=-13.37% rej=12
+[3/7] r1 r26-b3-base: 2s trades=12 ret=+40.05% dd=-30.41% rej=0
+[4/7] r1 r26-b3-fastexit: 2s trades=19 ret=+12.71% dd=-11.86% rej=0
+[5/7] r1 r26-b3-tp20: 2s trades=17 ret=+2.30% dd=-13.40% rej=0
+[6/7] r1 r26-ctrend-base: 2s trades=14 ret=-2.24% dd=-17.99% rej=0
+[7/7] r1 r26-ctrend-stop08: 2s trades=14 ret=-1.03% dd=-16.96% rej=0
+r1: 7 agents, 2 discoveries
+overall: 7 agents, 2 discoveries at alpha=0.1

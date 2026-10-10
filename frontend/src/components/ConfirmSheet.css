@@ -1,0 +1,127 @@
+/**
+ * ConfirmSheet.tsx.
+ *
+ * Built on the same surface as `.panel` (background, border, radius) so a confirmation sheet reads
+ * as "a panel, temporarily on top of everything" rather than as a different visual system arriving
+ * out of nowhere. `tone` only changes the border and the confirm button -- the backdrop and body
+ * copy stay identical across neutral/warn/bad, because the thing that should carry the weight of
+ * "this is dangerous" is the button someone is about to press, not the whole sheet's chrome.
+ */
+
+.confirm-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+}
+
+.confirm-sheet {
+  width: min(30rem, 100%);
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+}
+
+.confirm-sheet-warn {
+  border-color: color-mix(in srgb, var(--warn) 55%, var(--border-strong));
+}
+
+.confirm-sheet-bad {
+  border-color: color-mix(in srgb, var(--down) 55%, var(--border-strong));
+}
+
+.confirm-sheet-question {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.confirm-sheet-preview {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.confirm-sheet-preview-title {
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.confirm-sheet-preview-body {
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.confirm-sheet-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.confirm-sheet-cancel,
+.confirm-sheet-confirm {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirm-sheet-cancel {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+}
+
+.confirm-sheet-cancel:hover:not(:disabled) {
+  border-color: var(--text);
+}
+
+.confirm-sheet-confirm {
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+
+.confirm-sheet-confirm:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 85%, white);
+}
+
+/* Tone follows through to the confirm button -- this is the one place colour is allowed to say
+   "this is different from an ordinary confirm", per the `tone`-only-changes-the-button rule above. */
+.confirm-sheet-warn .confirm-sheet-confirm {
+  background: var(--warn);
+  border-color: var(--warn);
+  color: var(--bg);
+}
+
+.confirm-sheet-bad .confirm-sheet-confirm {
+  background: var(--down);
+  border-color: var(--down);
+  color: var(--bg);
+}
+
+.confirm-sheet-cancel:disabled,
+.confirm-sheet-confirm:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

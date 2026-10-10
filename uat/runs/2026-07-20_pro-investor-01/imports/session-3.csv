@@ -1,0 +1,3 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+07/22/2026,07/22/2026,07/23/2026,SPY,"SPY paper fill, UAT persona pro-investor-01",Buy,1,$746.99,($746.99)
+07/22/2026,07/22/2026,07/23/2026,XLE,"XLE paper fill, UAT persona pro-investor-01",Buy,10,$59.30,($593.00)

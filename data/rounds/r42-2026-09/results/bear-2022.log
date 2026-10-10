@@ -1,0 +1,10 @@
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 1s trades=7 ret=-3.06% dd=-6.71% rej=0
+[2/5] r1 r42-breakout-q25: 1s trades=6 ret=-4.32% dd=-7.02% rej=0
+[3/5] r1 r42-reclaim-control: 2s trades=33 ret=-37.31% dd=-38.83% rej=19
+[4/5] r1 r42-reclaim-wick-body: 2s trades=24 ret=-36.21% dd=-40.70% rej=9
+[5/5] r1 r42-reclaim-wick: 2s trades=36 ret=-36.88% dd=-42.51% rej=4
+r1: 5 agents, 3 discoveries
+overall: 5 agents, 3 discoveries at alpha=0.1

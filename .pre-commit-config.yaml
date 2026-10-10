@@ -1,0 +1,91 @@
+# Pre-commit hooks for this repo.
+#
+# Why detect-secrets over gitleaks: this is a pure-Python repo already built around a `.venv`, and
+# detect-secrets ships as a pip package with an official pre-commit entry point
+# (Yelp/detect-secrets), so `pre-commit install` pulls it into its own managed hook environment
+# with no external binary or Go toolchain needed -- gitleaks would need its Go binary built or
+# downloaded per machine, which is one more thing to go wrong on a Windows box with no Go installed.
+# detect-secrets also has a baseline file (`.secrets.baseline`, committed below) so pre-existing
+# high-entropy strings in test fixtures and docs/research data don't block every future commit --
+# only *new* findings do.
+#
+# Install once per clone: `pip install pre-commit detect-secrets` then `pre-commit install`.
+# See MIGRATION.md, step 2a, for the full explanation of why this exists.
+repos:
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        name: detect-secrets (secret scan)
+        args: ["--baseline", ".secrets.baseline"]
+        # `data/.*` used to be excluded wholesale, which also hid every path under it that IS
+        # tracked and pushed -- notably data/rounds/** (round briefs, cards, reports), data/loop/'s
+        # five tracked exception files, data/universe/, data/calendar/ and data/README.md (see
+        # .gitignore's own "data/rounds/ IS TRACKED, DELIBERATELY" banner). Verified against
+        # `git ls-files data`. Narrowed to the specific untracked/derived subtrees below -- personal
+        # or rebuildable data that .gitignore already keeps out of any commit, so excluding it here
+        # too is defense in depth, not the thing doing the real work.
+        exclude: >
+          (?x)^(
+            \.venv/.*|
+            frontend/node_modules/.*|
+            tools/vendor/.*|
+            data/cache/.*|
+            data/store/.*|
+            data/statements/.*|
+            data/1099/.*|
+            data/paperdesk/.*
+          )$
+
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check (backend + tests + strategy-program)
+        # `./` prefix is load-bearing on Windows: pre-commit shlex-splits `entry`, which eats bare
+        # backslashes, so backslash-separated paths (`.venv\Scripts\...`) arrive mangled. A forward-
+        # slash relative path survives shlex, but plain `.venv/Scripts/python.exe` (no `./` prefix)
+        # then fails Windows CreateProcess with WinError 2 even though the file exists -- verified
+        # directly with subprocess.run. `./.venv/Scripts/python.exe` is the form that survives both.
+        entry: ./.venv/Scripts/python.exe -m ruff check
+        language: system
+        types: [python]
+        # `files` decides *when* the hook fires; `args` decides *what* it then checks (the two are
+        # independent because `pass_filenames: false`). Both need strategy-program/ or editing a
+        # research tool would commit without ever running the check that covers it.
+        files: ^(backend|tests|strategy-program)/
+        pass_filenames: false
+        args: ["backend", "tests", "strategy-program"]
+
+      - id: check-no-pii
+        name: check for e-mail/username leaks (default mode; --strict adds money/account-id — see tools/check_no_pii.py)
+        # Same `./` prefix requirement as ruff-check above (Windows shlex + CreateProcess).
+        entry: ./.venv/Scripts/python.exe tools/check_no_pii.py
+        language: system
+        # Every tracked file type is in scope (docs, .claude briefs, JSON, .py, .cmd), unlike
+        # ruff-check above -- so no `types`/`files` filter; `pass_filenames: true` (the default)
+        # lets pre-commit pass only the staged files, matching this script's own argv contract.
+
+      # Whole-tree sweep at push time, default mode (e-mail / Windows-username paths). The hook
+      # above only sees the files in the commit being made; this one re-checks every tracked file
+      # right before anything leaves the machine, so a leak that slipped in through a commit made
+      # with hooks uninstalled (which is exactly how the 2026-09-07 audit found two) is still
+      # stopped at the push. `pass_filenames: false` + no args = the script's own git-ls-files scope.
+      - id: check-no-pii-tree
+        name: check for e-mail/username leaks across the whole tree (pre-push)
+        entry: ./.venv/Scripts/python.exe tools/check_no_pii.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
+      # Strict mode (dollar figures + account identifiers) is a judgment call, not a gate -- see
+      # tools/check_no_pii.py and docs/BEFORE-PUBLISHING.md -- so it is `manual`: run it with
+      #   pre-commit run check-no-pii-strict --hook-stage manual
+      # before ever widening the repo's audience.
+      - id: check-no-pii-strict
+        name: check for dollar-figure/account-identifier mentions (manual, pre-publish)
+        entry: ./.venv/Scripts/python.exe tools/check_no_pii.py --strict
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [manual]

@@ -1,0 +1,215 @@
+{
+  "cash": "2973.99",
+  "positions": {
+    "SPY": "3",
+    "XLE": "41",
+    "XLK": "13"
+  },
+  "unsettled": [
+    [
+      "2026-07-22",
+      "836.98"
+    ],
+    [
+      "2026-07-24",
+      "2082.90"
+    ]
+  ],
+  "fills": [
+    {
+      "order_id": "s1-1",
+      "session": 1,
+      "trade_date": "2026-07-20",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2",
+      "price": "747.43",
+      "reference_open": "747.06",
+      "gross": "1494.86",
+      "fees": "0.00",
+      "cash_delta": "-1494.86"
+    },
+    {
+      "order_id": "s1-2",
+      "session": 1,
+      "trade_date": "2026-07-20",
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": "10",
+      "price": "84.35",
+      "reference_open": "84.31",
+      "gross": "843.50",
+      "fees": "0.00",
+      "cash_delta": "-843.50"
+    },
+    {
+      "order_id": "s2-1",
+      "session": 2,
+      "trade_date": "2026-07-21",
+      "symbol": "TLT",
+      "side": "sell",
+      "quantity": "10",
+      "price": "83.70",
+      "reference_open": "83.74",
+      "gross": "837.00",
+      "fees": "0.02",
+      "cash_delta": "836.98"
+    },
+    {
+      "order_id": "s2-2",
+      "session": 2,
+      "trade_date": "2026-07-21",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "25",
+      "price": "58.19",
+      "reference_open": "58.16",
+      "gross": "1454.75",
+      "fees": "0.00",
+      "cash_delta": "-1454.75"
+    },
+    {
+      "order_id": "s2-3",
+      "session": 2,
+      "trade_date": "2026-07-21",
+      "symbol": "XLK",
+      "side": "buy",
+      "quantity": "13",
+      "price": "179.65",
+      "reference_open": "179.56",
+      "gross": "2335.45",
+      "fees": "0.00",
+      "cash_delta": "-2335.45"
+    },
+    {
+      "order_id": "s2-4",
+      "session": 2,
+      "trade_date": "2026-07-21",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "3",
+      "price": "706.92",
+      "reference_open": "706.57",
+      "gross": "2120.76",
+      "fees": "0.00",
+      "cash_delta": "-2120.76"
+    },
+    {
+      "order_id": "s3-1",
+      "session": 3,
+      "trade_date": "2026-07-22",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "1",
+      "price": "746.99",
+      "reference_open": "746.62",
+      "gross": "746.99",
+      "fees": "0.00",
+      "cash_delta": "-746.99"
+    },
+    {
+      "order_id": "s3-2",
+      "session": 3,
+      "trade_date": "2026-07-22",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "10",
+      "price": "59.30",
+      "reference_open": "59.27",
+      "gross": "593.00",
+      "fees": "0.00",
+      "cash_delta": "-593.00"
+    },
+    {
+      "order_id": "s4-1",
+      "session": 4,
+      "trade_date": "2026-07-23",
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": "3",
+      "price": "694.32",
+      "reference_open": "694.67",
+      "gross": "2082.96",
+      "fees": "0.06",
+      "cash_delta": "2082.90"
+    },
+    {
+      "order_id": "s5-1",
+      "session": 5,
+      "trade_date": "2026-07-24",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "6",
+      "price": "59.43",
+      "reference_open": "59.4",
+      "gross": "356.58",
+      "fees": "0.00",
+      "cash_delta": "-356.58"
+    }
+  ],
+  "rejections": [
+    {
+      "order_id": "s2-5",
+      "session": 2,
+      "symbol": "GLD",
+      "side": "buy",
+      "quantity": "6",
+      "reason": "$2231.34 exceeds $1750.68 of settled cash (total cash $2587.66; unsettled proceeds are not spendable in a cash account)",
+      "rule": "insufficient_cash"
+    },
+    {
+      "order_id": "s2-6",
+      "session": 2,
+      "symbol": "AAPL",
+      "side": "buy",
+      "quantity": "20",
+      "reason": "$6465.80 exceeds $1750.68 of settled cash (total cash $2587.66; unsettled proceeds are not spendable in a cash account)",
+      "rule": "insufficient_cash"
+    },
+    {
+      "order_id": "s2-7",
+      "session": 2,
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": "1",
+      "reason": "$83.78 is below the $500.00 minimum clip for a new position",
+      "rule": "min_clip"
+    },
+    {
+      "order_id": "s2-8",
+      "session": 2,
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2.5",
+      "reason": "mandate is whole shares only; 2.5 is fractional",
+      "rule": "fractional_shares"
+    },
+    {
+      "order_id": "s2-8",
+      "session": 2,
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2.5",
+      "reason": "mandate is whole shares only; 2.5 is fractional",
+      "rule": "fractional_shares"
+    },
+    {
+      "order_id": "s3-3",
+      "session": 3,
+      "symbol": "IBM",
+      "side": "buy",
+      "quantity": "5",
+      "reason": "no stored open for IBM on 2026-07-22; the order cannot be filled at a price that was ever real",
+      "rule": "unpriceable"
+    },
+    {
+      "order_id": "s4-2",
+      "session": 4,
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "10",
+      "reason": "XLE would be 26.7% of the book against a 25% cap",
+      "rule": "max_single_name_weight"
+    }
+  ]
+}

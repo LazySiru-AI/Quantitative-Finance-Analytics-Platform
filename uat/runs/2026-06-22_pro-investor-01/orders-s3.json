@@ -1,0 +1,65 @@
+[
+  {
+    "order_id": "s3-1",
+    "session": 3,
+    "decided_on": "2026-06-23",
+    "symbol": "XLV",
+    "side": "buy",
+    "quantity": "9",
+    "order_type": "market_on_open",
+    "thesis": "XLV close 152.18 closed back above sma20 151.03 for the first time this week, up 1.4% on the day, and sits above both sma50 (148.03) and sma200 (149.50) -- the stacked-MA confirmation my process wants, on the watchlist name that had been the weakest of the four through session 2.",
+    "invalidation": "A close back below sma50 (~148) undoes the reclaim of sma20 this thesis rests on.",
+    "stop_level": "147.50",
+    "regime": "risk-on",
+    "conviction": 2,
+    "evidence": [
+      "XLV close 152.18, sma20 151.0340, sma50 148.0254, sma200 149.4965 via session brief watchlist",
+      "1D change +1.4%, first close above sma20 since session 1 via session brief watchlist"
+    ]
+  },
+  {
+    "order_id": "s3-2",
+    "session": 3,
+    "decided_on": "2026-06-23",
+    "symbol": "TLT",
+    "side": "buy",
+    "quantity": "1",
+    "order_type": "market_on_open",
+    "thesis": "Deliberate mandate-boundary probe, not a real trade decision: 1 share of TLT at ~$86 is well under the $500 minimum clip, submitted specifically to re-test that the min_clip rule still rejects a new position below the floor and that the rejection is recorded exactly once (defect #5 in this run's assignment).",
+    "invalidation": "n/a -- probe order, not intended to fill.",
+    "stop_level": null,
+    "regime": "risk-on",
+    "conviction": 1,
+    "evidence": ["TLT close 86.20 via session brief watchlist -- 1 share is $86.20 notional, below the $500 minimum clip"]
+  },
+  {
+    "order_id": "s3-3",
+    "session": 3,
+    "decided_on": "2026-06-23",
+    "symbol": "XLV",
+    "side": "buy",
+    "quantity": "10",
+    "order_type": "market_on_open",
+    "thesis": "Deliberate mandate-boundary probe, not a real trade decision: submitted immediately after s3-1's 9-share XLV fill specifically to push the XLV position past the 25% single-name cap and confirm max_single_name_weight still rejects it, recorded exactly once.",
+    "invalidation": "n/a -- probe order, not intended to fill.",
+    "stop_level": null,
+    "regime": "risk-on",
+    "conviction": 1,
+    "evidence": ["XLV close 152.18 via session brief -- 9 (s3-1) + 10 more shares at ~152 is roughly $2,890, about 29% of the ~$9,988 equity going into session 3, above the 25% cap"]
+  },
+  {
+    "order_id": "s3-4",
+    "session": 3,
+    "decided_on": "2026-06-23",
+    "symbol": "ZZZZ",
+    "side": "buy",
+    "quantity": "5",
+    "order_type": "market_on_open",
+    "thesis": "Deliberate mandate-boundary probe, not a real trade decision: ZZZZ is not a real, priced instrument in this store, submitted specifically to re-test that an unpriceable symbol is rejected cleanly and recorded exactly once rather than crashing the session.",
+    "invalidation": "n/a -- probe order, not intended to fill.",
+    "stop_level": "n/a",
+    "regime": "risk-on",
+    "conviction": 1,
+    "evidence": ["ZZZZ is not in the session brief universe or watchlist"]
+  }
+]

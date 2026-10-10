@@ -1,0 +1,33 @@
+macro pin : none -- this field is price-only
+mandate   : SAVINGS, starting_cash $100,000
+benchmark : 30-70-spy-agg (30/70 SPY/AGG, recomputed per window)
+windows   : rank ('h10y-1', 'h10y-2', 'h5y-1', 'h5y-2', 'h5y-3') | report ('h3y-1', 'h3y-2', 'h3y-3', 'h3y-4') | bear ('b6m-1', 'b6m-2', 'b6m-3', 'b1y-1', 'b1y-2', 'b1y-3')
+
+card                     horizon     h10y-1    h10y-2     h5y-1     h5y-2     h5y-3
+r43-agg-trend-bil        maxDD       -15.6%    -15.4%     -5.7%    -13.5%    -15.4%
+r43-agg-trend-bil-sma100 maxDD       -15.9%    -15.7%     -5.8%    -12.5%    -15.6%
+r43-agg-trend-gld        maxDD       -16.9%    -16.8%     -6.5%    -13.7%    -16.5%
+r43-control              maxDD       -16.9%    -17.9%     -5.5%    -13.1%    -17.0%
+r43-gld-trend            maxDD       -17.3%    -17.3%     -6.3%    -13.8%    -16.7%
+r43-price-placebo-spy    maxDD       -16.2%    -16.2%     -5.3%    -11.9%    -16.1%
+
+== treatment minus control (drawdown & MAR), judged rungs ==
+card                      fired  dd_margin  mar_margin  cagr_margin verdict
+r43-agg-trend-bil             5      +1.34      +0.008        +0.01 measured
+r43-agg-trend-bil-sma100      5      +0.96      +0.008        -0.09 measured
+r43-agg-trend-gld             5      -0.04      +0.012        +0.21 measured
+r43-gld-trend                 5      -0.38      -0.004        +0.28 measured
+r43-price-placebo-spy         5      +0.94      -0.003        -0.30 measured
+
+== primary minus placebo (r43-agg-trend-bil minus r43-price-placebo-spy), judged rungs ==
+  both fired in 5 rungs; dd_margin +0.67pp  mar_margin +0.025  primary beats placebo (P2 falsified)
+
+== bear-window firing (each treatment's condition, treatment vs control) ==
+  r43-agg-trend-bil        2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r43-agg-trend-bil-sma100 2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r43-agg-trend-gld        2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r43-gld-trend            2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r43-price-placebo-spy    2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+
+wrote data/rounds/r43-2026-09/analysis.json
+wrote data/rounds/r43-2026-09/ANALYSIS.md

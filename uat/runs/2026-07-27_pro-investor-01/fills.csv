@@ -1,0 +1,8 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+07/30/2026,07/30/2026,07/31/2026,QQQ,"QQQ paper fill, UAT persona pro-investor-01",Buy,1,$675.10,($675.10)
+07/29/2026,07/29/2026,07/30/2026,QQQ,"QQQ paper fill, UAT persona pro-investor-01",Sell,1,$675.17,$675.17
+07/29/2026,07/29/2026,07/30/2026,,Regulatory fees on QQQ sale (s3-1),FEE,,,($0.02)
+07/28/2026,07/28/2026,07/29/2026,QQQ,"QQQ paper fill, UAT persona pro-investor-01",Buy,1,$676.57,($676.57)
+07/27/2026,07/27/2026,07/28/2026,XLE,"XLE paper fill, UAT persona pro-investor-01",Buy,33,$58.44,"($1,928.52)"
+07/27/2026,07/27/2026,07/28/2026,SPY,"SPY paper fill, UAT persona pro-investor-01",Buy,2,$745.28,"($1,490.56)"
+07/24/2026,07/24/2026,07/24/2026,,UAT opening deposit for persona pro-investor-01,ACH,,,"$10,000.00"

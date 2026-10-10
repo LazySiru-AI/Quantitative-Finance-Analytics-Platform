@@ -1,0 +1,38 @@
+{
+  "findings": [
+    {
+      "finding_id": "export-lacks-portfolio-statement",
+      "run_id": "2026-07-13_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 5,
+      "session_date": "2026-07-17",
+      "observed_at": "2026-08-16T18:40:00Z",
+      "surface": "api",
+      "locator": "GET /api/portfolio/statement.md",
+      "kind": "gap",
+      "severity": "polish",
+      "blocked_decision": false,
+      "title": "Portfolio statement export now exists and carries the wash-sale-adjusted basis through",
+      "observed": "GET /api/portfolio/statement.md renders a full Markdown statement: totals (cost basis, market value, unrealized, cash split settled/unsettled, total equity), a holdings table with per-symbol priced-as-of dates, weights, and a cash-by-account table with its derivation window. XLV's cost basis in the statement reads $1,149.26 -- the same wash-sale-adjusted figure as /portfolio and the tax API, not the raw $1,123.01 repurchase cost.",
+      "expected": "A single document of positions, basis, cash and valuation as of a date, usable as an end-of-week record -- present, and consistent with the other surfaces that show the same figures.",
+      "why_it_matters": "This is the artifact I would actually archive at the end of a trading week. It is only useful if the numbers in it agree with everywhere else I have already checked them, and they do here."
+    },
+    {
+      "finding_id": "portfolio-api-money-fields-carry-float-precision-noise",
+      "run_id": "2026-07-13_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 5,
+      "session_date": "2026-07-17",
+      "observed_at": "2026-08-16T18:41:00Z",
+      "surface": "api",
+      "locator": "GET /api/portfolio",
+      "kind": "defect",
+      "severity": "polish",
+      "blocked_decision": false,
+      "title": "Portfolio API money fields are clean decimal strings, no binary-float noise",
+      "observed": "GET /api/portfolio's position rows carry money fields as clean strings, e.g. XLV: cost_basis '1149.26', basis_per_share '164.18', market_value '1171.59', wash_sale_adjustment '26.25'. No trailing binary-float digits (e.g. no '...097656250'-style artifacts) on any figure checked across all three positions this week.",
+      "expected": "Money fields precise to the cent as strings, not floats leaking their binary representation.",
+      "why_it_matters": "A figure I cannot trust past the second decimal is a figure I cannot reconcile against my own fill records; this week every number checked matched to the cent."
+    }
+  ]
+}

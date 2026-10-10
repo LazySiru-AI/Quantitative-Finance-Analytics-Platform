@@ -1,0 +1,21 @@
+{
+  "orders": [
+    {
+      "order_id": "s2-qqq-buy",
+      "session": 2,
+      "decided_on": "2026-06-08",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "QQQ closed 716.07 on 2026-06-08, +1.56% on the day -- the sharpest single-day move of the four watchlist names -- while still holding above sma50 (670.65) and sma200 (622.57). Reads as the pullback stabilizing; still below sma20 (722.25) so sized smaller than the session-1 entries.",
+      "invalidation": "A close back below sma50 (~670.65), or a failure to reclaim sma20 within the week, ends the stabilization read.",
+      "stop_level": "670.00",
+      "regime": "transitional",
+      "conviction": 2,
+      "evidence": [
+        "close=716.07, sma20=722.2530, sma50=670.6548, sma200=622.5710, change_1d=+1.56%, change_5d=-3.59% via brief-s2 watchlist.QQQ (as of 2026-06-08)"
+      ]
+    }
+  ]
+}

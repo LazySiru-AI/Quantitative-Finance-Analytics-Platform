@@ -1,0 +1,23 @@
+{
+  "agent_id": "sso-vig-bnd-static",
+  "display_name": "SSO/VIG/BND Static Core-Satellite (Roth, No Tilt)",
+  "thesis": "Holds the identical three sleeves and weights as this round's own sso-vig-bnd-mean-reversion (SSO 35% / VIG 40% / BND 25%), with both tilt rules removed, isolating exactly one decision -- tilt vs. no tilt -- against that sibling, the same pairing this round gives the savings and trading arms. It moves only on band-triggered rebalance (5% drift). This is the Roth arm's only pure buy-and-hold-with-rebalancing entrant and the natural third leg of a three-way Roth comparison this round did not have before: ladder-sso-vig-bnd (a state machine, drawdown-gated), sso-vig-bnd-mean-reversion (a continuous tilt, always-on), and this card (no conditional logic at all). Falsification: falsified if either of the other two Roth cards beats this one on median IRR or CAGR across the Roth arm's contribution-funded windows by a margin outside PROTOCOL.md section 7's noise floor -- that would mean either mechanism (ladder or tilt) earns its complexity under annual $7,500 contributions on top of a $30,000 seed. It is falsified in the opposite direction, and this is the more interesting failure for a Roth-purpose card specifically, if this static blend's own worst-window drawdown is deep enough that a tax-advantaged, decades-long account -- the one purpose in this round with no stated horizon ceiling at all (PurposeSpec.horizon_years_max is None for ROTH) -- would clearly have been better served by either form of defensive conditioning despite the extra turnover. Who is on the other side of the trade: identical in kind to every other static card in this round -- the counterparty on each band-triggered rebalance is someone letting a winner run past 5% drift or selling a laggard through it; in SSO's case specifically, that counterparty is levered to the same S&P 500 beta this card holds unlevered-adjacent at 35% weight, so the trade is a bet on rebalancing discipline, not on any view of index direction. Parameter count against the ten-parameter budget: 2 free sleeve weights plus 1 band_pct = 3 of 10. Expected window eligibility: identical to sso-vig-bnd-mean-reversion -- bound by BND's 2007-04-10 start, eligible in all five of the round's long windows, comfortably clearing the >=3-window gate.",
+  "sleeves": [
+    {
+      "symbol": "SSO",
+      "target_weight": "0.35"
+    },
+    {
+      "symbol": "VIG",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "BND",
+      "target_weight": "0.25"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [],
+  "designed_through": "2026-02-13",
+  "purpose": "roth"
+}

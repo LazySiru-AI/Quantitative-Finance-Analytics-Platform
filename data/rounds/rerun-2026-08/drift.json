@@ -1,0 +1,7365 @@
+{
+  "compared": 1051,
+  "identical": 989,
+  "median_abs_pp": 0.0,
+  "worst_abs_pp": 74.63690000000001,
+  "rows": [
+    {
+      "drift_pp": -74.63690000000001,
+      "agent_id": "B3-concentrated",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "74.64 -> 0.00"
+    },
+    {
+      "drift_pp": -54.97070000000001,
+      "agent_id": "A-rotation",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "45.09 -> -9.88"
+    },
+    {
+      "drift_pp": -54.8211,
+      "agent_id": "B3-concentrated",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "51.63 -> -3.19"
+    },
+    {
+      "drift_pp": -51.97970000000001,
+      "agent_id": "B-momentum",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "51.98 -> 0.00"
+    },
+    {
+      "drift_pp": -51.97970000000001,
+      "agent_id": "B2-hold-90",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "51.98 -> 0.00"
+    },
+    {
+      "drift_pp": -51.97970000000001,
+      "agent_id": "B4-tight-stop",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "51.98 -> 0.00"
+    },
+    {
+      "drift_pp": -50.01150000000001,
+      "agent_id": "B3-concentrated",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "48.77 -> -1.24"
+    },
+    {
+      "drift_pp": -45.08810000000001,
+      "agent_id": "A-rotation",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "37.36 -> -7.73"
+    },
+    {
+      "drift_pp": -37.88100000000001,
+      "agent_id": "B3-concentrated",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "37.88 -> 0.00"
+    },
+    {
+      "drift_pp": -34.466499999999996,
+      "agent_id": "B-momentum",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "31.97 -> -2.50"
+    },
+    {
+      "drift_pp": -34.466499999999996,
+      "agent_id": "B4-tight-stop",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "31.97 -> -2.50"
+    },
+    {
+      "drift_pp": -33.75379999999999,
+      "agent_id": "B-momentum",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "32.90 -> -0.85"
+    },
+    {
+      "drift_pp": -33.75379999999999,
+      "agent_id": "B2-hold-90",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "32.90 -> -0.85"
+    },
+    {
+      "drift_pp": -33.75379999999999,
+      "agent_id": "B4-tight-stop",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "32.90 -> -0.85"
+    },
+    {
+      "drift_pp": -32.3849,
+      "agent_id": "B2-hold-90",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "29.89 -> -2.50"
+    },
+    {
+      "drift_pp": -32.2961,
+      "agent_id": "A-rotation",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "55.82 -> 23.52"
+    },
+    {
+      "drift_pp": -29.5466,
+      "agent_id": "B-momentum",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "29.55 -> 0.00"
+    },
+    {
+      "drift_pp": -29.5466,
+      "agent_id": "B2-hold-90",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "29.55 -> 0.00"
+    },
+    {
+      "drift_pp": -29.5466,
+      "agent_id": "B4-tight-stop",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "29.55 -> 0.00"
+    },
+    {
+      "drift_pp": -25.27060000000001,
+      "agent_id": "A-rotation",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "45.53 -> 20.26"
+    },
+    {
+      "drift_pp": -17.142699999999998,
+      "agent_id": "C-trend",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "17.14 -> 0.00"
+    },
+    {
+      "drift_pp": -14.776,
+      "agent_id": "c20-rotation",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "7.04 -> -7.74"
+    },
+    {
+      "drift_pp": -12.842400000000008,
+      "agent_id": "C-trend",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "12.84 -> 0.00"
+    },
+    {
+      "drift_pp": -12.690699999999989,
+      "agent_id": "c20-rotation",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "17.19 -> 4.50"
+    },
+    {
+      "drift_pp": -11.12700000000001,
+      "agent_id": "c20-rotation",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "9.41 -> -1.72"
+    },
+    {
+      "drift_pp": -10.415099999999999,
+      "agent_id": "C-trend",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "9.49 -> -0.92"
+    },
+    {
+      "drift_pp": -9.809800000000003,
+      "agent_id": "B3-concentrated",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "16.09 -> 6.28"
+    },
+    {
+      "drift_pp": 7.318800000000003,
+      "agent_id": "A-rotation",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "22.59 -> 29.91"
+    },
+    {
+      "drift_pp": -7.113299999999989,
+      "agent_id": "c20-rotation",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "6.16 -> -0.95"
+    },
+    {
+      "drift_pp": -7.0968000000000035,
+      "agent_id": "c20-rotation",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "5.30 -> -1.80"
+    },
+    {
+      "drift_pp": -7.075900000000002,
+      "agent_id": "B-momentum",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "11.80 -> 4.72"
+    },
+    {
+      "drift_pp": -7.075900000000002,
+      "agent_id": "B2-hold-90",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "11.80 -> 4.72"
+    },
+    {
+      "drift_pp": -7.075900000000002,
+      "agent_id": "B4-tight-stop",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "11.80 -> 4.72"
+    },
+    {
+      "drift_pp": 4.512400000000005,
+      "agent_id": "c21-uncorrelated",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-4.51 -> 0.00"
+    },
+    {
+      "drift_pp": 4.512400000000005,
+      "agent_id": "c21-uncorrelated",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-4.44 -> 0.07"
+    },
+    {
+      "drift_pp": -4.477299999999984,
+      "agent_id": "C-trend",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "1.87 -> -2.61"
+    },
+    {
+      "drift_pp": 3.7576000000000054,
+      "agent_id": "c21-uncorrelated",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-5.28 -> -1.53"
+    },
+    {
+      "drift_pp": 2.011099999999999,
+      "agent_id": "H-trend-diversified",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-3.14 -> -1.13"
+    },
+    {
+      "drift_pp": 2.0056000000000074,
+      "agent_id": "c21-uncorrelated",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-4.32 -> -2.32"
+    },
+    {
+      "drift_pp": -1.9832000000000072,
+      "agent_id": "H-trend-diversified",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "1.02 -> -0.96"
+    },
+    {
+      "drift_pp": -1.7243999999999926,
+      "agent_id": "c18-meanrev",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-1.02 -> -2.75"
+    },
+    {
+      "drift_pp": -1.6199999999999992,
+      "agent_id": "c18-meanrev",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "2.02 -> 0.40"
+    },
+    {
+      "drift_pp": -1.167600000000002,
+      "agent_id": "c11-breakout",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.90 -> -0.26"
+    },
+    {
+      "drift_pp": -1.1648000000000103,
+      "agent_id": "c18-meanrev",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "1.62 -> 0.46"
+    },
+    {
+      "drift_pp": 1.0772999999999922,
+      "agent_id": "c11-breakout",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.82 -> 0.26"
+    },
+    {
+      "drift_pp": 1.0144000000000153,
+      "agent_id": "c18-meanrev",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.14 -> 0.87"
+    },
+    {
+      "drift_pp": 1.0048000000000057,
+      "agent_id": "c21-uncorrelated",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.35 -> 1.36"
+    },
+    {
+      "drift_pp": 0.9935999999999945,
+      "agent_id": "H-trend-diversified",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-1.48 -> -0.49"
+    },
+    {
+      "drift_pp": 0.9781999999999957,
+      "agent_id": "c07-chop",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.22 -> 1.20"
+    },
+    {
+      "drift_pp": 0.392300000000001,
+      "agent_id": "H-trend-diversified",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.39 -> 0.00"
+    },
+    {
+      "drift_pp": 0.286199999999992,
+      "agent_id": "C-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "5.64 -> 5.92"
+    },
+    {
+      "drift_pp": 0.23849999999998595,
+      "agent_id": "B-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "12.77 -> 13.00"
+    },
+    {
+      "drift_pp": -0.2215000000000078,
+      "agent_id": "c07-chop",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.22 -> 0.00"
+    },
+    {
+      "drift_pp": -0.2215000000000078,
+      "agent_id": "c07-chop",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.22 -> 0.00"
+    },
+    {
+      "drift_pp": -0.2215000000000078,
+      "agent_id": "c07-chop",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.22 -> 0.00"
+    },
+    {
+      "drift_pp": -0.2215000000000078,
+      "agent_id": "c07-chop",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.22 -> 0.00"
+    },
+    {
+      "drift_pp": 0.17040000000001498,
+      "agent_id": "c09-convex",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.10 -> 0.27"
+    },
+    {
+      "drift_pp": 0.14380000000000503,
+      "agent_id": "c18-meanrev",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "1.24 -> 1.39"
+    },
+    {
+      "drift_pp": -0.143099999999996,
+      "agent_id": "c11-breakout",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.14 -> 0.00"
+    },
+    {
+      "drift_pp": 0.13999999999999568,
+      "agent_id": "c19-volatility",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.14 -> 0.00"
+    },
+    {
+      "drift_pp": -0.10920000000000929,
+      "agent_id": "c11-breakout",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.11 -> 0.00"
+    },
+    {
+      "drift_pp": -0.03990000000000382,
+      "agent_id": "c11-breakout",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.04 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "13f-legal",
+      "source_round": "r1-2026-08",
+      "old_to_new": "17.79 -> 17.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "13f-legal",
+      "source_round": "r2-2026-08",
+      "old_to_new": "17.79 -> 17.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-33.27 -> -33.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-33.27 -> -33.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-33.27 -> -33.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-35.65 -> -35.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-35.65 -> -35.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-28.58 -> -28.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-28.58 -> -28.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-33.27 -> -33.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-33.27 -> -33.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-33.61 -> -33.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-33.61 -> -33.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-10.17 -> -10.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-10.17 -> -10.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-10.17 -> -10.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-5.63 -> -5.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-5.63 -> -5.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-0.60 -> -0.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.60 -> -0.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-6.71 -> -6.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.71 -> -6.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-8.35 -> -8.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-8.35 -> -8.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-6.58 -> -6.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.58 -> -6.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-3.94 -> -3.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-3.94 -> -3.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-15.62 -> -15.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-15.62 -> -15.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "G-volatility",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-20.72 -> -20.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "G-volatility",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-20.72 -> -20.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "bear-2022",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-3.11 -> -3.11"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-3.11 -> -3.11"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "10.74 -> 10.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "10.74 -> 10.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "10.74 -> 10.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "23.30 -> 23.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "23.30 -> 23.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "20.55 -> 20.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "20.55 -> 20.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "5.32 -> 5.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "5.32 -> 5.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "10.74 -> 10.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "10.74 -> 10.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "15.20 -> 15.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "15.20 -> 15.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "15.20 -> 15.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "15.20 -> 15.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "25.26 -> 25.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "25.26 -> 25.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "27.69 -> 27.69"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "27.69 -> 27.69"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "12.52 -> 12.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "12.52 -> 12.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "12.52 -> 12.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "14.49 -> 14.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "14.49 -> 14.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.75 -> 22.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.75 -> 22.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "22.75 -> 22.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "22.75 -> 22.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "2.22 -> 2.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.22 -> 2.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "1.13 -> 1.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.13 -> 1.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "1.82 -> 1.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.82 -> 1.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "6.49 -> 6.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "6.49 -> 6.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "0.30 -> 0.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.30 -> 0.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-11.85 -> -11.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-11.85 -> -11.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "F-fastrev",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-7.05 -> -7.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "F-fastrev",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-7.05 -> -7.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "G-volatility",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "15.78 -> 15.78"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "G-volatility",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "15.78 -> 15.78"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "bull-2024",
+      "source_round": "r1-2026-08",
+      "old_to_new": "11.13 -> 11.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "11.13 -> 11.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "0.46 -> 0.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.46 -> 0.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.46 -> 0.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "1.10 -> 1.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.10 -> 1.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "6.23 -> 6.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "6.23 -> 6.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-2.37 -> -2.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.37 -> -2.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-1.07 -> -1.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.07 -> -1.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "19.51 -> 19.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "19.51 -> 19.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "21.85 -> 21.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "21.85 -> 21.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "21.85 -> 21.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-7.21 -> -7.21"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-7.21 -> -7.21"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "2.05 -> 2.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.05 -> 2.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-5.76 -> -5.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-5.76 -> -5.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-1.32 -> -1.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.32 -> -1.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "2.51 -> 2.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.51 -> 2.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "18.97 -> 18.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "18.97 -> 18.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "covid",
+      "source_round": "r1-2026-08",
+      "old_to_new": "10.24 -> 10.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "10.24 -> 10.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "gfc",
+      "source_round": "r1-2026-08",
+      "old_to_new": "0.83 -> 0.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.83 -> 0.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "gfc",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-20.78 -> -20.78"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-20.78 -> -20.78"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "gfc",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-13.90 -> -13.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-13.90 -> -13.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "gfc",
+      "source_round": "r1-2026-08",
+      "old_to_new": "1.38 -> 1.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.38 -> 1.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "gfc",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-1.15 -> -1.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.15 -> -1.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "95.28 -> 95.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "95.28 -> 95.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "95.28 -> 95.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "82.61 -> 82.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "82.61 -> 82.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "72.17 -> 72.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "72.17 -> 72.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "164.70 -> 164.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "164.70 -> 164.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "102.74 -> 102.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "102.74 -> 102.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "24.27 -> 24.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "24.27 -> 24.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "24.27 -> 24.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.27 -> 24.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "2.38 -> 2.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.38 -> 2.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.19 -> 22.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.19 -> 22.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "40.05 -> 40.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "40.05 -> 40.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "40.05 -> 40.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.18 -> 22.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.18 -> 22.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "8.92 -> 8.92"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "8.92 -> 8.92"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "10.47 -> 10.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "10.47 -> 10.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "3.43 -> 3.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "3.43 -> 3.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "12.05 -> 12.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "12.05 -> 12.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "1.71 -> 1.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.71 -> 1.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.44 -> 22.44"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.44 -> 22.44"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "E-asymmetric",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "26.86 -> 26.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "E-asymmetric",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "26.86 -> 26.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "F-fastrev",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "36.45 -> 36.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "F-fastrev",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "36.45 -> 36.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "G-volatility",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "22.62 -> 22.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "G-volatility",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "22.62 -> 22.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "recent",
+      "source_round": "r1-2026-08",
+      "old_to_new": "-3.65 -> -3.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-3.65 -> -3.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "7.91 -> 7.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-10.82 -> -10.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.70 -> -0.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.19 -> -1.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "bear-2022",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.25 -> -1.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "6.86 -> 6.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "7.72 -> 7.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.11 -> -2.11"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-4.52 -> -4.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "bull-2024",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.08 -> 0.08"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-17.03 -> -17.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-17.03 -> -17.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-13.56 -> -13.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-16.80 -> -16.80"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-16.90 -> -16.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-19.12 -> -19.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-5.17 -> -5.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.36 -> -0.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.37 -> -1.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.22 -> -0.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "4.44 -> 4.44"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.93 -> 1.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.68 -> 2.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "3.75 -> 3.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.61 -> 2.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "chop-2011",
+      "source_round": "r2-2026-08",
+      "old_to_new": "6.73 -> 6.73"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-7.18 -> -7.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-7.18 -> -7.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-4.87 -> -4.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-9.27 -> -9.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "3.68 -> 3.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-7.30 -> -7.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "10.03 -> 10.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "17.57 -> 17.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "23.26 -> 23.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "23.26 -> 23.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "11.00 -> 11.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "11.00 -> 11.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "11.00 -> 11.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.19 -> -2.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-3.77 -> -3.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.04 -> -6.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-3.98 -> -3.98"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.47 -> -2.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "11.51 -> 11.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "6.00 -> 6.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-5.64 -> -5.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.23 -> -1.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.90 -> -6.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.95 -> -1.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "chop-2015",
+      "source_round": "r2-2026-08",
+      "old_to_new": "7.54 -> 7.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-16.66 -> -16.66"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.11 -> -6.11"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.95 -> 0.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.49 -> 2.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "covid",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.88 -> 2.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-8.04 -> -8.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-4.25 -> -4.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "1.03 -> 1.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-9.59 -> -9.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "gfc",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-4.92 -> -4.92"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-15.79 -> -15.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-15.79 -> -15.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A1-alpha-order",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-15.94 -> -15.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A2-cash-headroom",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-17.52 -> -17.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A3-no-target",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-15.79 -> -15.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A4-tight-stop",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-15.39 -> -15.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B1-with-target",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.31 -> -1.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.31 -> -1.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c01-meanrev",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-3.70 -> -3.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c02-volatility",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-4.53 -> -4.53"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c03-breakout",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.60 -> -2.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c04-riskmanaged",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-2.74 -> -2.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c05-trend",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.98 -> -1.98"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c06-13f-momentum",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-9.51 -> -9.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.52 -> -6.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-6.73 -> -6.73"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.71 -> 0.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-1.79 -> -1.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "-0.91 -> -0.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "q4-2018",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "0.55 -> 0.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c08-generalist",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "15.87 -> 15.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "2.33 -> 2.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c10-momentum",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "10.60 -> 10.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "recent",
+      "source_round": "r2-2026-08",
+      "old_to_new": "11.90 -> 11.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-3.91 -> -3.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-8.00 -> -8.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.09 -> -0.09"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.23 -> -1.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "0.62 -> 0.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-9.01 -> -9.01"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "bear-2022",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-3.91 -> -3.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "6.47 -> 6.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "22.03 -> 22.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.45 -> -0.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-10.77 -> -10.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "3.37 -> 3.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "8.46 -> 8.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "10.16 -> 10.16"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "bull-2024",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.87 -> -0.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "1.05 -> 1.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "1.37 -> 1.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "1.56 -> 1.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.05 -> -1.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "2.70 -> 2.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-12.68 -> -12.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.72 -> -0.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "chop-2011",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.07 -> -1.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "11.90 -> 11.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "10.35 -> 10.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.06 -> -0.06"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "8.35 -> 8.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.01 -> -1.01"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-6.29 -> -6.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "11.64 -> 11.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "chop-2015",
+      "source_round": "r3-2026-08",
+      "old_to_new": "4.34 -> 4.34"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "19.33 -> 19.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "20.74 -> 20.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-2.29 -> -2.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "0.96 -> 0.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "2.32 -> 2.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-21.71 -> -21.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-4.50 -> -4.50"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "covid",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.87 -> -1.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-16.07 -> -16.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-10.15 -> -10.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-0.89 -> -0.89"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-24.93 -> -24.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-3.44 -> -3.44"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "13.34 -> 13.34"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-39.45 -> -39.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "gfc",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-17.07 -> -17.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-3.02 -> -3.02"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-1.67 -> -1.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "0.47 -> 0.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-8.42 -> -8.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-5.54 -> -5.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-6.41 -> -6.41"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "q4-2018",
+      "source_round": "r3-2026-08",
+      "old_to_new": "-2.89 -> -2.89"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c12-meanrev-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "0.39 -> 0.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c13-breakout-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "31.83 -> 31.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "6.59 -> 6.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c15-volatility-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "3.71 -> 3.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c16-dispersion-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "19.14 -> 19.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c17-defensive-trend-wide",
+      "window": "recent",
+      "source_round": "r3-2026-08",
+      "old_to_new": "5.56 -> 5.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "6.64 -> 6.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "6.64 -> 6.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "9.79 -> 9.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "5.99 -> 5.99"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "7.12 -> 7.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "2.17 -> 2.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.06 -> -0.06"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.38 -> -0.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.25 -> -1.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-3.39 -> -3.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-6.56 -> -6.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-2.29 -> -2.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.36 -> -1.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "banks-2023",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.31 -> 1.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "25.20 -> 25.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "5.24 -> 5.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "43.45 -> 43.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "24.60 -> 24.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "14.67 -> 14.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "4.56 -> 4.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.28 -> -0.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.33 -> -0.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-2.04 -> -2.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "2.14 -> 2.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "5.25 -> 5.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "13.86 -> 13.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "3.01 -> 3.01"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "inflation-2021",
+      "source_round": "r4-2026-08",
+      "old_to_new": "9.64 -> 9.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "3.39 -> 3.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "3.39 -> 3.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "5.53 -> 5.53"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "3.39 -> 3.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.48 -> 1.48"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "5.73 -> 5.73"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "0.50 -> 0.50"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "2.41 -> 2.41"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.98 -> 1.98"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.87 -> -1.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "8.35 -> 8.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "0.75 -> 0.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.64 -> -0.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "oil-2014",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-4.71 -> -4.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "0.96 -> 0.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.37 -> -0.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "7.20 -> 7.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.29 -> 1.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "6.93 -> 6.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.44 -> 1.44"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "4.85 -> 4.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "recovery-2009",
+      "source_round": "r4-2026-08",
+      "old_to_new": "11.47 -> 11.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "10.83 -> 10.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "10.83 -> 10.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "15.86 -> 15.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "10.83 -> 10.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "12.32 -> 12.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.36 -> -0.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.54 -> -0.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.49 -> -0.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.30 -> -0.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "0.11 -> 0.11"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.31 -> -0.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.93 -> 1.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "taper-2013",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.55 -> -0.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.12 -> -1.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.12 -> -1.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.51 -> -1.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.12 -> -1.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-4.42 -> -4.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.96 -> 1.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.10 -> -0.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.13 -> -0.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-5.71 -> -5.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-0.58 -> -0.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-2.84 -> -2.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "-1.94 -> -1.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "volmageddon-2018",
+      "source_round": "r4-2026-08",
+      "old_to_new": "1.00 -> 1.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-35.13 -> -35.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.59 -> -7.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.59 -> -7.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-11.40 -> -11.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.45 -> -6.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.12 -> -7.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.10 -> 8.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.49 -> 0.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.97 -> -2.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.49 -> 0.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.40 -> 1.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.96 -> 5.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "9.57 -> 9.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.04 -> 8.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "b1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.60 -> -5.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "23.42 -> 23.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.27 -> 8.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "13.93 -> 13.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.55 -> 4.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.15 -> 7.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.90 -> 6.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-20.68 -> -20.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.62 -> 5.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.68 -> 7.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.21 -> 6.21"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.13 -> 1.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-38.55 -> -38.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.09 -> -0.09"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.32 -> -5.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "b1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.72 -> 7.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-18.31 -> -18.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "11.94 -> 11.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.24 -> 6.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.03 -> 10.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "11.94 -> 11.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.38 -> 1.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.95 -> 4.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.71 -> -0.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.19 -> -3.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.59 -> -1.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.64 -> -2.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.54 -> -5.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.84 -> -7.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.89 -> 2.89"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "b1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.22 -> 0.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "20.38 -> 20.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.36 -> 1.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.91 -> 5.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.39 -> 2.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.43 -> 1.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.36 -> -3.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-23.20 -> -23.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.41 -> 2.41"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.01 -> 1.01"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.63 -> 0.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.51 -> -1.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-38.33 -> -38.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.00 -> -2.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.09 -> -6.09"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "b6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.45 -> -3.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-22.21 -> -22.21"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.59 -> -7.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.59 -> -7.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-11.40 -> -11.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.45 -> -6.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.99 -> -7.99"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.10 -> 3.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.66 -> -0.66"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.70 -> -1.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.49 -> 0.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.98 -> 0.98"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.94 -> 4.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "13.25 -> 13.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.87 -> 10.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "b6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.45 -> -0.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.15 -> -1.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.20 -> -6.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.20 -> -6.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-9.10 -> -9.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.76 -> -5.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.51 -> -6.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.83 -> -5.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.45 -> 0.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.87 -> -1.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.54 -> -0.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.65 -> -3.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-9.29 -> -9.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.22 -> -4.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.12 -> -2.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "b6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.94 -> -0.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "227.84 -> 227.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "260.31 -> 260.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "238.05 -> 238.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "203.32 -> 203.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "260.53 -> 260.53"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "138.97 -> 138.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "21.17 -> 21.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.33 -> 4.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "20.13 -> 20.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.63 -> 2.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.95 -> 3.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-12.67 -> -12.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.84 -> 10.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.13 -> 10.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h10y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "81.00 -> 81.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "322.62 -> 322.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "318.50 -> 318.50"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "248.18 -> 248.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "285.41 -> 285.41"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "281.36 -> 281.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "205.75 -> 205.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "20.95 -> 20.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.57 -> 6.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "33.01 -> 33.01"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "18.32 -> 18.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "12.79 -> 12.79"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "9.61 -> 9.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.63 -> 3.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "30.85 -> 30.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h10y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "122.45 -> 122.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "18.59 -> 18.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "11.76 -> 11.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "16.90 -> 16.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.03 -> 10.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "12.02 -> 12.02"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "12.34 -> 12.34"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.73 -> 5.73"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.09 -> -0.09"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.23 -> 4.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.03 -> 1.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.11 -> 1.11"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.23 -> 7.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.19 -> 3.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.20 -> 0.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h1y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.91 -> 2.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "74.05 -> 74.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "80.42 -> 80.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "45.83 -> 45.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "104.72 -> 104.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "80.42 -> 80.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "27.42 -> 27.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.26 -> 3.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.04 -> -1.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.20 -> -0.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.63 -> 0.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.32 -> 5.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.04 -> 7.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.84 -> -0.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.30 -> 6.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h1y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "17.09 -> 17.09"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "11.82 -> 11.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.82 -> 0.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "24.45 -> 24.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.36 -> 4.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.82 -> 0.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-13.76 -> -13.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.23 -> 2.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.16 -> 0.16"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.99 -> -0.99"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.16 -> -1.16"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.30 -> -0.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.51 -> -2.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.22 -> -2.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.13 -> -2.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h1y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.42 -> -3.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "69.76 -> 69.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "58.57 -> 58.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "51.56 -> 51.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "61.57 -> 61.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "58.57 -> 58.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "34.92 -> 34.92"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-17.29 -> -17.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.70 -> 0.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.90 -> 8.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.17 -> 3.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.33 -> 0.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-37.67 -> -37.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.34 -> -1.34"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.77 -> 4.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h1y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "28.78 -> 28.78"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-25.14 -> -25.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.31 -> -4.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.31 -> -4.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-6.44 -> -6.44"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.05 -> -4.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.55 -> -0.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.07 -> 6.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.27 -> 1.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.25 -> -2.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.08 -> -0.08"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.02 -> 3.02"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.96 -> 5.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.57 -> 1.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.13 -> -5.13"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h1y-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-8.25 -> -8.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "69.42 -> 69.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "19.25 -> 19.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "18.64 -> 18.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.76 -> 3.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "18.40 -> 18.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "36.89 -> 36.89"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.46 -> 6.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.55 -> 0.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "9.30 -> 9.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.26 -> 8.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.06 -> 3.06"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "13.31 -> 13.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.51 -> -2.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "29.68 -> 29.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h1y-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "32.51 -> 32.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "69.17 -> 69.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "99.67 -> 99.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "75.20 -> 75.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "68.77 -> 68.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "100.65 -> 100.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "41.75 -> 41.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "14.99 -> 14.99"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.67 -> -2.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.27 -> 7.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.27 -> -1.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.90 -> 3.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.74 -> 8.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.74 -> -5.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "13.25 -> 13.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h3y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "32.47 -> 32.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "57.77 -> 57.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "77.05 -> 77.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "97.18 -> 97.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "98.06 -> 98.06"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "75.20 -> 75.20"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "32.83 -> 32.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.04 -> 7.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.65 -> 3.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.92 -> 5.92"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.70 -> 3.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.02 -> -0.02"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.94 -> 7.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.73 -> 6.73"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-10.05 -> -10.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h3y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "21.46 -> 21.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "75.43 -> 75.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "65.29 -> 65.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "44.76 -> 44.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "77.39 -> 77.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "65.83 -> 65.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "42.80 -> 42.80"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.64 -> -3.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.17 -> 2.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.27 -> 6.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.24 -> 1.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.40 -> 5.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-26.19 -> -26.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.81 -> 10.81"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "12.47 -> 12.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h3y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "30.52 -> 30.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "132.62 -> 132.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "93.06 -> 93.06"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "61.59 -> 61.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "69.61 -> 69.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "56.75 -> 56.75"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "93.25 -> 93.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "16.56 -> 16.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.22 -> 1.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "20.88 -> 20.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "12.83 -> 12.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.71 -> 1.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "19.66 -> 19.66"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-10.81 -> -10.81"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "24.10 -> 24.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h3y-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "58.15 -> 58.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "136.70 -> 136.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "184.32 -> 184.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "150.74 -> 150.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "121.12 -> 121.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "186.92 -> 186.92"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "90.82 -> 90.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "23.14 -> 23.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.98 -> -2.98"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.77 -> 5.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.17 -> -2.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.10 -> -2.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "23.82 -> 23.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.26 -> 1.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.60 -> 1.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h5y-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "48.71 -> 48.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "184.99 -> 184.99"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "213.96 -> 213.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "193.28 -> 193.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "219.77 -> 219.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "211.27 -> 211.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "105.65 -> 105.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-9.27 -> -9.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.88 -> 3.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.78 -> 10.78"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.41 -> 7.41"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.62 -> 5.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-20.51 -> -20.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.61 -> 2.61"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.27 -> -1.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h5y-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "61.94 -> 61.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "128.35 -> 128.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "103.84 -> 103.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "61.70 -> 61.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "91.40 -> 91.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "68.07 -> 68.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "100.43 -> 100.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "30.22 -> 30.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.69 -> 2.69"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "22.23 -> 22.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.91 -> 10.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.17 -> 7.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "30.87 -> 30.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.18 -> -0.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "31.82 -> 31.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h5y-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "64.43 -> 64.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.60 -> 8.60"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.63 -> 6.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.63 -> 6.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "7.82 -> 7.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.63 -> 6.63"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.72 -> 4.72"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.86 -> 3.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.32 -> 0.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.41 -> 1.41"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.28 -> 2.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.55 -> -0.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.35 -> 8.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.02 -> 3.02"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.23 -> 0.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h6m-1",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.66 -> -1.66"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "20.91 -> 20.91"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.56 -> 6.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.56 -> 6.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.43 -> 6.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "6.56 -> 6.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.90 -> 2.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.65 -> 0.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.42 -> -0.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.57 -> 1.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.32 -> -0.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.07 -> -0.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.26 -> 1.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.49 -> -2.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.83 -> -1.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h6m-2",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.15 -> 2.15"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-8.10 -> -8.10"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.25 -> 0.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.25 -> 0.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.30 -> 0.30"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.25 -> 0.25"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.09 -> -4.09"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.87 -> -1.87"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.77 -> 0.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.03 -> -0.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.39 -> -0.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.40 -> -1.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.31 -> -5.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.27 -> -3.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.02 -> 1.02"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h6m-3",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.95 -> 0.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "33.29 -> 33.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.86 -> 10.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.86 -> 10.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "13.45 -> 13.45"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.86 -> 10.86"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.65 -> 2.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.64 -> -0.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.42 -> -1.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.88 -> 4.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.36 -> -1.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.12 -> 2.12"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-5.24 -> -5.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.76 -> 1.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "4.97 -> 4.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h6m-4",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.73 -> 10.73"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-13.70 -> -13.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.03 -> 3.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.27 -> 2.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "1.74 -> 1.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.49 -> -0.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.08 -> -0.08"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-0.03 -> -0.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.71 -> 0.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.94 -> -4.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-1.81 -> -1.81"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h6m-5",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-3.54 -> -3.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "46.19 -> 46.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.31 -> -7.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-7.31 -> -7.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-10.96 -> -10.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-9.40 -> -9.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-4.27 -> -4.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.33 -> 0.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "2.47 -> 2.47"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "10.07 -> 10.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "8.56 -> 8.56"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.14 -> 3.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "0.76 -> 0.76"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "3.46 -> 3.46"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "5.82 -> 5.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "h6m-6",
+      "source_round": "r5-2026-08",
+      "old_to_new": "-2.74 -> -2.74"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.96 -> -0.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B2-hold-90",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.96 -> -0.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-1.39 -> -1.39"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B4-tight-stop",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.96 -> -0.96"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c07-chop",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.29 -> -0.29"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c11-breakout",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.97 -> -0.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c18-meanrev",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "1.71 -> 1.71"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c20-rotation",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "11.57 -> 11.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-1.00 -> -1.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "live-1",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "5.14 -> 5.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "H-trend-diversified",
+      "window": "live-2",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.33 -> 0.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "live-3",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "live-4",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c09-convex",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.17 -> -0.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "live-5",
+      "source_round": "r11-2026-08",
+      "old_to_new": "-0.14 -> -0.14"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c14-riskmanaged-wide",
+      "window": "live-6",
+      "source_round": "r11-2026-08",
+      "old_to_new": "0.00 -> 0.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-26.58 -> -26.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-28.22 -> -28.22"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-31.85 -> -31.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-lowvol",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-rs",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-stretch",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.77 -> -6.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-lowvol",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-10.17 -> -10.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-rs",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-10.17 -> -10.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-stretch",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-10.17 -> -10.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-lowvol",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-rs",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-stretch",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.97 -> -6.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "2.17 -> 2.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "2.24 -> 2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "2.24 -> 2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "2.24 -> 2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.17 -> -6.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "bear-2022",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.17 -> -6.17"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "20.33 -> 20.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "31.64 -> 31.64"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "26.32 -> 26.32"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-lowvol",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "12.55 -> 12.55"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-rs",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "14.59 -> 14.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-stretch",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "14.59 -> 14.59"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-lowvol",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "12.52 -> 12.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-rs",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "14.42 -> 14.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-stretch",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "12.52 -> 12.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-lowvol",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "19.28 -> 19.28"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-rs",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "16.51 -> 16.51"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-stretch",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "21.43 -> 21.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "11.66 -> 11.66"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "13.23 -> 13.23"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "11.49 -> 11.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "13.40 -> 13.40"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.77 -> 0.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "bull-2024",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.77 -> 0.77"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-8.18 -> -8.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-17.04 -> -17.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-16.49 -> -16.49"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-4.68 -> -4.68"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-4.38 -> -4.38"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-9.08 -> -9.08"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-8.52 -> -8.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-4.04 -> -4.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "chop-2011",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-4.04 -> -4.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-13.52 -> -13.52"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.70 -> 0.70"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-5.90 -> -5.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-lowvol",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-rs",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-stretch",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.58 -> 24.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-lowvol",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "23.26 -> 23.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-rs",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "23.26 -> 23.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-stretch",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "23.26 -> 23.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-lowvol",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "11.00 -> 11.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-rs",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "11.00 -> 11.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-stretch",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "11.00 -> 11.00"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.04 -> -6.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-6.04 -> -6.04"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-5.05 -> -5.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-5.54 -> -5.54"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "6.03 -> 6.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "chop-2015",
+      "source_round": "r14-2026-08",
+      "old_to_new": "6.03 -> 6.03"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-0.33 -> -0.33"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "6.82 -> 6.82"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "3.16 -> 3.16"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-lowvol",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-rs",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-stretch",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "22.93 -> 22.93"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-lowvol",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "21.85 -> 21.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-rs",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "21.85 -> 21.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-stretch",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "21.85 -> 21.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-lowvol",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-rs",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-stretch",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "15.90 -> 15.90"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-31.83 -> -31.83"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-31.37 -> -31.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-39.43 -> -39.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-30.58 -> -30.58"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.35 -> -1.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "covid",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.35 -> -1.35"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "gfc",
+      "source_round": "r14-2026-08",
+      "old_to_new": "18.57 -> 18.57"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "gfc",
+      "source_round": "r14-2026-08",
+      "old_to_new": "20.26 -> 20.26"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "gfc",
+      "source_round": "r14-2026-08",
+      "old_to_new": "31.85 -> 31.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "gfc",
+      "source_round": "r14-2026-08",
+      "old_to_new": "31.85 -> 31.85"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "gfc",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.97 -> 0.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "gfc",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.97 -> 0.97"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-15.95 -> -15.95"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-17.18 -> -17.18"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-15.94 -> -15.94"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-lowvol",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-rs",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-stretch",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-0.88 -> -0.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-lowvol",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.31 -> -1.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-rs",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.31 -> -1.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-stretch",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.31 -> -1.31"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-lowvol",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-rs",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-stretch",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.84 -> -1.84"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-12.19 -> -12.19"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-11.88 -> -11.88"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-16.67 -> -16.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-12.36 -> -12.36"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.07 -> -1.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "q4-2018",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-1.07 -> -1.07"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-lowvol",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "52.37 -> 52.37"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-rs",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "93.67 -> 93.67"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "A-rotation-stretch",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "81.42 -> 81.42"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-lowvol",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.27 -> 24.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-rs",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "23.16 -> 23.16"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B-momentum-stretch",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "24.27 -> 24.27"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-lowvol",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "39.43 -> 39.43"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-rs",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "40.05 -> 40.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "B3-concentrated-stretch",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "40.05 -> 40.05"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-lowvol",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-rs",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "C-trend-stretch",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "-2.24 -> -2.24"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-lowvol",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.62 -> 0.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-rs",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.62 -> 0.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility-stretch",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.62 -> 0.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c19-volatility",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "0.62 -> 0.62"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated-rs",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "12.65 -> 12.65"
+    },
+    {
+      "drift_pp": 0.0,
+      "agent_id": "c21-uncorrelated",
+      "window": "recent",
+      "source_round": "r14-2026-08",
+      "old_to_new": "12.65 -> 12.65"
+    }
+  ]
+}

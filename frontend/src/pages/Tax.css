@@ -1,0 +1,183 @@
+/* =============================================================================
+   Tax page — the reconciliation pack, and the print stylesheet that turns the Form 8949 tab into
+   a working paper.
+
+   Everything else on this page (`.panel`, `.data-table`, `.callout`, `.tile-grid`, `.badge`,
+   `.download-link`, `.visually-hidden`) is styled in `styles.css` and is untouched here.
+
+   **Every `@media print` rule below is scoped under `.tax-page`**, the wrapper `Tax.tsx` renders
+   around the whole page. Vite bundles this file into the app-wide stylesheet, so an unscoped print
+   rule here would silently change how every other page prints — the "one page's CSS leaked into
+   another" failure, but invisible until someone hits Ctrl+P on an unrelated screen.
+   ============================================================================= */
+
+/* The link from the deferred tile row out to the whole-ledger Wash Sales page. */
+.tax-tile-link {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+/* --- reconciliation pack --------------------------------------------------------------------- */
+.tax-export-hint {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+}
+
+.tax-export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* The Print control is a `<button>` (it runs script; it does not go anywhere) wearing
+   `.download-link` so it sits in the same row as the three real links without a second visual
+   vocabulary for "take this away with you". The reset here is what a button needs to stop looking
+   like a form control. */
+.tax-print-button {
+  font: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+/* =============================================================================
+   Print — the Form 8949 tab as a working paper.
+
+   The target is a page a CPA can annotate: no navigation, no controls that do not exist on paper,
+   every table whole rather than clipped to a scroll box, and the not-advice line on every sheet.
+   ============================================================================= */
+@media print {
+  /* Ink and paper, not the app's dark ground. Printing a dark theme wastes toner and renders the
+     muted greys this page uses for caveats as near-invisible. */
+  .tax-page {
+    color: #000;
+    background: #fff;
+  }
+
+  /* Everything that is a control rather than a figure. The tab rail goes because on paper there is
+     no other tab to switch to -- the sheet is whatever was on screen. */
+  .tax-page .folder-tabs-rail,
+  .tax-page .year-select,
+  .tax-page .tax-export-actions,
+  .tax-page .filter-bar,
+  .tax-page .scroll-panel-actions,
+  .tax-page .tax-tile-link,
+  .tax-page .pager {
+    display: none !important;
+  }
+
+  /* Tables unclipped. `ScrollPanel`/`ScrollRegion` bound a table's height on screen precisely so a
+     1,300-row table does not own the viewport; on paper the browser paginates instead, and a
+     max-height here would print one screenful and silently drop the rest -- a truncated tax
+     workpaper that looks complete. */
+  .tax-page .scroll-region,
+  .tax-page .scroll-panel,
+  .tax-page .table-wrap {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* A closed `<details>` prints closed, which on this page hides the warning detail behind the
+     figures it qualifies. Everything is opened for print. */
+  .tax-page details > summary {
+    display: none;
+  }
+  .tax-page details > *:not(summary) {
+    display: revert;
+  }
+
+  /* Panels lose the card treatment -- borders and shadows are screen affordances, and on paper
+     they only cost ink and vertical space. */
+  .tax-page .panel {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    background: transparent;
+  }
+
+  /* Rows and boxes are not split across a page break where the browser will honour it. */
+  .tax-page tr,
+  .tax-page .form8949-box,
+  .tax-page .form8949-subtotal {
+    break-inside: avoid;
+  }
+
+  .tax-page thead {
+    display: table-header-group; /* repeat column headers on every printed page */
+  }
+
+  .tax-page .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+  }
+
+  .tax-page .data-table th,
+  .tax-page .data-table td {
+    border-bottom: 1px solid #999;
+  }
+
+  /* A caption is the table's title on paper, so the visually-hidden ones become visible here:
+     printed sheets get separated, and a page of numbers with no statement of which table and which
+     year it is is exactly the artifact that gets filed against the wrong return. */
+  .tax-page caption.visually-hidden {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 0.2rem;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+    text-align: left;
+    font-size: 9pt;
+    font-weight: 700;
+  }
+
+  /* The not-advice block, on every sheet.
+
+     `position: fixed` in a print context is what "repeat on every page" means: a fixed box is
+     painted once per printed page rather than once per document. The page body is given bottom
+     padding so the last rows of a table cannot run underneath it. This is COPY-STYLE.md rule 6 at
+     its most literal -- a printed workpaper that leaves the building without the disclaimer is the
+     one copy of these figures that reads as a filing. */
+  .tax-page .disclaimer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.2rem 0;
+    border-top: 1px solid #000;
+    font-size: 8pt;
+    background: #fff;
+  }
+
+  .tax-page {
+    padding-bottom: 3rem;
+  }
+
+  /* Links print as their text. A URL in parentheses after every ticker turns a table of disposals
+     into a wall of `/symbol/AAPL`. */
+  .tax-page a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* The app shell around the page. Same `@media print`, kept in its own block because these selectors
+   are NOT under `.tax-page` -- they are its ancestors and siblings -- and are therefore gated on the
+   page actually being on screen with `:has()`. Without that gate they would hide the sidebar when
+   printing any page in the app. */
+@media print {
+  body:has(.tax-page) .sidebar,
+  body:has(.tax-page) .app > nav,
+  body:has(.tax-page) .skip-link {
+    display: none !important;
+  }
+
+  body:has(.tax-page) .content {
+    max-width: none;
+    padding: 0;
+  }
+}

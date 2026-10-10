@@ -1,0 +1,1029 @@
+{
+ "g1859-fd7c2c196f35": {
+  "genome_id": "g1859-fd7c2c196f35",
+  "agent_id": "g1859-fd7c2c196f35",
+  "headline": "EMA 13/21 crossover, 135-day regime filter \u00b7 CSCO/AMAT/LRCX +3 \u00b7 Roth",
+  "short_id": "g1859\u00b7fd7c",
+  "purpose": "roth",
+  "discipline_label": "mean-reversion",
+  "discipline_label_note": "Self-declared tag from the card's own genome record. It is not derived from the entry/exit rule and is known to disagree with it on real cards -- an identical rule and universe has been seen labelled both 'breakout' and 'mean-reversion' across two generations. Read `headline` and `what_it_does` for what the rule actually does; see the `label-does-not-match-rule` caution when this specific card has a mislabelled sibling.",
+  "stage": "pending",
+  "requested_at": "2026-08-26T15:42:17.852832Z",
+  "what_it_does": {
+   "universe": [
+    "CSCO",
+    "AMAT",
+    "LRCX",
+    "KLAC",
+    "INTU",
+    "IGV"
+   ],
+   "universe_note": "6 names: 3 semiconductor equipment, 1 networking equipment, 1 software, and 1 software sector ETF.",
+   "entry_plain": "Buys when the price is above the 135-day average (a rising-market filter) and the 13-day average crosses above the 21-day average.",
+   "exit_plain": "Sells when the 13-day average crosses back below the 21-day average.",
+   "risk_plain": "Cuts a losing position at \u22128%. No profit target. Force-closes any position still open after 93 trading days.",
+   "sizing_plain": "At most 3 positions at once, 20% of the book each \u2014 so at most 60% invested, the rest in cash.",
+   "raw": {
+    "entry": "close > sma(135) and ema(13) crosses_above ema(21)",
+    "exit": "ema(13) crosses_below ema(21)",
+    "stop_loss_pct": "0.08",
+    "take_profit_pct": null,
+    "max_hold_days": 93,
+    "max_positions": 3,
+    "position_pct": "0.2"
+   }
+  },
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 13/21-day EMA crossover trigger inside a 135-day SMA regime filter on CSCO, AMAT, LRCX, KLAC, INTU, IGV, with a 8% stop and a 93-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "origin": {
+   "generation": 1859,
+   "origin_kind": "mutation",
+   "parents": [
+    "g1855-4a8d06c30426"
+   ],
+   "note": "mutated from g1855-4a8d06c30426"
+  },
+  "evidence": [
+   {
+    "generation": 1859,
+    "round_id": "r17-auto-20260826-153647-g1859",
+    "rank": 1,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "bull-2024",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.2465181788788578626915809364",
+    "worst_excess": "-0.1093743367454490237061650321",
+    "hit_rate": 0.6,
+    "total_trades": 51,
+    "holdout_median_excess": "0.1487857552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.010976693876434436
+   },
+   {
+    "generation": 1863,
+    "round_id": "r17-auto-20260826-154131-g1863",
+    "rank": 1,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.2465181788788578626915809364",
+    "worst_excess": "-0.01254912556528432598864620418",
+    "hit_rate": 0.8,
+    "total_trades": 54,
+    "holdout_median_excess": "0.1487857552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.06889396232724344
+   },
+   {
+    "generation": 1867,
+    "round_id": "r17-auto-20260826-154557-g1867",
+    "rank": 8,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "bull-2024",
+     "gfc"
+    ],
+    "median_excess": "0.003139442172233583276528061804",
+    "worst_excess": "-0.1093743367454490237061650321",
+    "hit_rate": 0.6,
+    "total_trades": 46,
+    "holdout_median_excess": "0.1487857552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.0047898822888096
+   }
+  ],
+  "context": {
+   "field_median_excess_this_generation": "0.04155444217223358327652806180",
+   "field_median_excess_same_purpose": "0.02235644217223358327652806180",
+   "field_median_excess_all_purposes": "0.05653555271339227978518151485",
+   "field_holdout_median_same_purpose": "0.1287887552623824866024516738",
+   "field_holdout_median_all_purposes": "0.1501927552623824866024516738",
+   "field_holdout_positive_fraction_same_purpose": 0.9005016722408027,
+   "field_holdout_positive_fraction_all_purposes": 0.94331641285956,
+   "holdout_measurements_same_purpose": 1196,
+   "holdout_measurements_all_purposes": 2364,
+   "percentile_all_time": 0.9975124378109452,
+   "candidates_ever_run": 1887,
+   "generations_with_outcomes": 231,
+   "noise_floor_pp": "21.2",
+   "margin_over_noise_pp": "3.45181788788578626915809364"
+  },
+  "cautions": [
+   {
+    "code": "holdout-does-not-discriminate",
+    "severity": "serious",
+    "text": "94.3% of the 2364 holdout measurements this search has recorded, across every purpose, also came back positive. This card's +14.88% is above its own purpose's field holdout median (+12.88%), so a positive holdout here is not evidence that this card is better than a coin flip from the same generator."
+   },
+   {
+    "code": "q-above-5pct",
+    "severity": "serious",
+    "text": "q = 0.069 \u2014 after correcting for the 1887 distinct hypotheses this search has tested, roughly 7 in 100 cards clearing this bar would be expected to be false positives."
+   },
+   {
+    "code": "template-is-not-distinct",
+    "severity": "serious",
+    "text": "This card's entry/exit template (parameters masked) is shared by 24 other card(s) in the pending/shelved set. The numbers differ; the shape of the rule does not."
+   }
+  ],
+  "overlap": {
+   "with_shelved": [
+    {
+     "genome_id": "g1679-12eaf5c6bd56",
+     "headline": "EMA 13/23 crossover, 119-day regime filter \u00b7 INTU/LRCX/CSCO +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1707-6b248c4b849d",
+     "headline": "EMA 8/31 crossover, 170-day regime filter \u00b7 INTU/LRCX/CRM +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1731-6d28de7a5e4c",
+     "headline": "EMA 14/21 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1731-85327a6b6a50",
+     "headline": "EMA 11/26 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1751-051dec45a041",
+     "headline": "EMA 12/21 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1751-9b4544bf2556",
+     "headline": "EMA 12/26 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1755-60b22dc5f630",
+     "headline": "EMA 12/26 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1755-c30de399e7f4",
+     "headline": "EMA 12/24 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1763-b3154a945165",
+     "headline": "EMA 12/23 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1767-775be2277569",
+     "headline": "EMA 12/23 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1791-c29fafa19c2b",
+     "headline": "EMA 12/23 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1803-655c39d83d8b",
+     "headline": "EMA 12/15 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1815-d05786e4c611",
+     "headline": "EMA 12/15 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1823-e2a3d5060b09",
+     "headline": "EMA 12/15 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5555555555555556
+    },
+    {
+     "genome_id": "g1683-ce27fe274c98",
+     "headline": "EMA 13/23 crossover, 119-day regime filter \u00b7 CSCO/LRCX/CRM +6 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.5
+    },
+    {
+     "genome_id": "g1703-7dd05b30f905",
+     "headline": "EMA 8/29 crossover, 122-day regime filter \u00b7 INTU/LRCX/CRM +4 \u00b7 Roth",
+     "shared_tickers": [
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.4444444444444444
+    },
+    {
+     "genome_id": "g1679-944a6f327542",
+     "headline": "EMA 12/21 crossover, 126-day regime filter \u00b7 CSCO/LRCX/CRM +2 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CSCO",
+      "LRCX"
+     ],
+     "jaccard": 0.375
+    }
+   ],
+   "with_seated": [],
+   "note": "17 shelved cards already trade AMAT, CSCO, INTU, KLAC, LRCX in common with this one."
+  },
+  "what_a_decision_does": {
+   "shelve": "Keeps the card, names it, and tracks it. It places no orders and does not join the desk.",
+   "reject": "Declines it permanently. The loop will not re-file this genome even if it clears the gate again.",
+   "seat": "Adds it to the simulated paper desk's roster. The desk holds no real money and approving places no order.",
+   "retire": "Removes it from the shelf without ever seating it. Also permanent."
+  }
+ },
+ "g1823-e2a3d5060b09": {
+  "genome_id": "g1823-e2a3d5060b09",
+  "agent_id": "g1823-e2a3d5060b09",
+  "headline": "EMA 12/15 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+  "short_id": "g1823\u00b7e2a3",
+  "purpose": "roth",
+  "discipline_label": "mean-reversion",
+  "discipline_label_note": "Self-declared tag from the card's own genome record. It is not derived from the entry/exit rule and is known to disagree with it on real cards -- an identical rule and universe has been seen labelled both 'breakout' and 'mean-reversion' across two generations. Read `headline` and `what_it_does` for what the rule actually does; see the `label-does-not-match-rule` caution when this specific card has a mislabelled sibling.",
+  "stage": "shelved",
+  "requested_at": "2026-08-26T10:39:56.162402Z",
+  "what_it_does": {
+   "universe": [
+    "AMAT",
+    "CRM",
+    "INTU",
+    "AAPL",
+    "LRCX",
+    "KLAC",
+    "ADBE",
+    "CSCO"
+   ],
+   "universe_note": "8 names: 3 semiconductor equipment, 3 software, 1 consumer technology hardware, and 1 networking equipment.",
+   "entry_plain": "Buys when the price is above the 92-day average (a rising-market filter) and the 12-day average crosses above the 15-day average.",
+   "exit_plain": "Sells when the 12-day average crosses back below the 15-day average.",
+   "risk_plain": "Cuts a losing position at \u221210%. No profit target. Force-closes any position still open after 63 trading days.",
+   "sizing_plain": "At most 4 positions at once, 20% of the book each \u2014 so at most 80% invested, the rest in cash.",
+   "raw": {
+    "entry": "close > sma(92) and ema(12) crosses_above ema(15)",
+    "exit": "ema(12) crosses_below ema(15)",
+    "stop_loss_pct": "0.1",
+    "take_profit_pct": null,
+    "max_hold_days": 63,
+    "max_positions": 4,
+    "position_pct": "0.2"
+   }
+  },
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 12/15-day EMA crossover trigger inside a 92-day SMA regime filter on AMAT, CRM, INTU, AAPL, LRCX, KLAC, ADBE, CSCO, with a 10% stop and a 63-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "origin": {
+   "generation": 1823,
+   "origin_kind": "mutation",
+   "parents": [
+    "g1815-d05786e4c611"
+   ],
+   "note": "mutated from g1815-d05786e4c611"
+  },
+  "evidence": [
+   {
+    "generation": 1823,
+    "round_id": "r17-auto-20260826-103505-g1823",
+    "rank": 2,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2011",
+     "bull-2024",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.2267801788788578626915809364",
+    "worst_excess": "-0.1463163367454490237061650321",
+    "hit_rate": 0.8,
+    "total_trades": 91,
+    "holdout_median_excess": "0.1486977552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.013690600937049095
+   },
+   {
+    "generation": 1827,
+    "round_id": "r17-auto-20260826-103915-g1827",
+    "rank": 2,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "bull-2024",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.2267801788788578626915809364",
+    "worst_excess": "-0.1463163367454490237061650321",
+    "hit_rate": 0.6,
+    "total_trades": 95,
+    "holdout_median_excess": "0.1486977552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.005304382988236434
+   },
+   {
+    "generation": 1831,
+    "round_id": "r17-auto-20260826-104248-g1831",
+    "rank": 2,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.2267801788788578626915809364",
+    "worst_excess": "-0.005775125565284325988646204176",
+    "hit_rate": 0.8,
+    "total_trades": 97,
+    "holdout_median_excess": "0.1486977552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.016940207774970708
+   },
+   {
+    "generation": 1835,
+    "round_id": "r17-auto-20260826-104616-g1835",
+    "rank": 2,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "bull-2024",
+     "gfc"
+    ],
+    "median_excess": "0.1201654421722335832765280618",
+    "worst_excess": "-0.1463163367454490237061650321",
+    "hit_rate": 0.6,
+    "total_trades": 94,
+    "holdout_median_excess": "0.1486977552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.0037355325579781816
+   },
+   {
+    "generation": 1839,
+    "round_id": "r17-auto-20260826-104949-g1839",
+    "rank": 3,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "bull-2024",
+     "recent"
+    ],
+    "median_excess": "0.1201654421722335832765280618",
+    "worst_excess": "-0.1463163367454490237061650321",
+    "hit_rate": 0.6,
+    "total_trades": 92,
+    "holdout_median_excess": "0.1486977552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.049773043703602714
+   }
+  ],
+  "context": {
+   "field_median_excess_this_generation": "0.0996574421722335832765280618",
+   "field_median_excess_same_purpose": "0.02235644217223358327652806180",
+   "field_median_excess_all_purposes": "0.05653555271339227978518151485",
+   "field_holdout_median_same_purpose": "0.1287887552623824866024516738",
+   "field_holdout_median_all_purposes": "0.1501927552623824866024516738",
+   "field_holdout_positive_fraction_same_purpose": 0.9005016722408027,
+   "field_holdout_positive_fraction_all_purposes": 0.94331641285956,
+   "holdout_measurements_same_purpose": 1196,
+   "holdout_measurements_all_purposes": 2364,
+   "percentile_all_time": 0.9436152570480929,
+   "candidates_ever_run": 1887,
+   "generations_with_outcomes": 231,
+   "noise_floor_pp": "21.2",
+   "margin_over_noise_pp": "1.47801788788578626915809364"
+  },
+  "cautions": [
+   {
+    "code": "holdout-does-not-discriminate",
+    "severity": "serious",
+    "text": "94.3% of the 2364 holdout measurements this search has recorded, across every purpose, also came back positive. This card's +14.87% is above its own purpose's field holdout median (+12.88%), so a positive holdout here is not evidence that this card is better than a coin flip from the same generator."
+   },
+   {
+    "code": "shelf-crowding",
+    "severity": "note",
+    "text": "100% ticker overlap (AAPL, ADBE, AMAT, CRM, CSCO, INTU, KLAC, LRCX) with the already-shelved EMA 13/23 crossover, 119-day regime filter \u00b7 INTU/LRCX/CSCO +5 \u00b7 Roth (g1679-12eaf5c6bd56)."
+   },
+   {
+    "code": "label-does-not-match-rule",
+    "severity": "serious",
+    "text": "Labelled 'mean-reversion', but g1803-655c39d83d8b carries an identical rule and universe labelled 'pairs-rotation'; the discipline tag is not derived from the strategy."
+   },
+   {
+    "code": "template-is-not-distinct",
+    "severity": "serious",
+    "text": "This card's entry/exit template (parameters masked) is shared by 24 other card(s) in the pending/shelved set. The numbers differ; the shape of the rule does not."
+   }
+  ],
+  "overlap": {
+   "with_shelved": [
+    {
+     "genome_id": "g1679-12eaf5c6bd56",
+     "headline": "EMA 13/23 crossover, 119-day regime filter \u00b7 INTU/LRCX/CSCO +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1707-6b248c4b849d",
+     "headline": "EMA 8/31 crossover, 170-day regime filter \u00b7 INTU/LRCX/CRM +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1731-6d28de7a5e4c",
+     "headline": "EMA 14/21 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1731-85327a6b6a50",
+     "headline": "EMA 11/26 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1751-051dec45a041",
+     "headline": "EMA 12/21 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1751-9b4544bf2556",
+     "headline": "EMA 12/26 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1755-60b22dc5f630",
+     "headline": "EMA 12/26 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1755-c30de399e7f4",
+     "headline": "EMA 12/24 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1763-b3154a945165",
+     "headline": "EMA 12/23 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1767-775be2277569",
+     "headline": "EMA 12/23 crossover, 122-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1791-c29fafa19c2b",
+     "headline": "EMA 12/23 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1803-655c39d83d8b",
+     "headline": "EMA 12/15 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1815-d05786e4c611",
+     "headline": "EMA 12/15 crossover, 92-day regime filter \u00b7 AMAT/CRM/INTU +5 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 1.0
+    },
+    {
+     "genome_id": "g1683-ce27fe274c98",
+     "headline": "EMA 13/23 crossover, 119-day regime filter \u00b7 CSCO/LRCX/CRM +6 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.8888888888888888
+    },
+    {
+     "genome_id": "g1703-7dd05b30f905",
+     "headline": "EMA 8/29 crossover, 122-day regime filter \u00b7 INTU/LRCX/CRM +4 \u00b7 Roth",
+     "shared_tickers": [
+      "AAPL",
+      "ADBE",
+      "CRM",
+      "CSCO",
+      "INTU",
+      "KLAC",
+      "LRCX"
+     ],
+     "jaccard": 0.875
+    },
+    {
+     "genome_id": "g1679-944a6f327542",
+     "headline": "EMA 12/21 crossover, 126-day regime filter \u00b7 CSCO/LRCX/CRM +2 \u00b7 Roth",
+     "shared_tickers": [
+      "AMAT",
+      "CRM",
+      "CSCO",
+      "LRCX"
+     ],
+     "jaccard": 0.4444444444444444
+    }
+   ],
+   "with_seated": [],
+   "note": "16 shelved cards already trade AAPL, ADBE, AMAT, CRM, CSCO, INTU, KLAC, LRCX in common with this one."
+  },
+  "what_a_decision_does": {
+   "shelve": "Keeps the card, names it, and tracks it. It places no orders and does not join the desk.",
+   "reject": "Declines it permanently. The loop will not re-file this genome even if it clears the gate again.",
+   "seat": "Adds it to the simulated paper desk's roster. The desk holds no real money and approving places no order.",
+   "retire": "Removes it from the shelf without ever seating it. Also permanent."
+  }
+ },
+ "g009-30c484221799": {
+  "genome_id": "g009-30c484221799",
+  "agent_id": "g009-30c484221799",
+  "headline": "EMA 9/20 crossover, 50-day regime filter \u00b7 QCOM/TSM/AMZN +7 \u00b7 Trading",
+  "short_id": "g009\u00b730c4",
+  "purpose": "trading",
+  "discipline_label": "trend",
+  "discipline_label_note": "Self-declared tag from the card's own genome record. It is not derived from the entry/exit rule and is known to disagree with it on real cards -- an identical rule and universe has been seen labelled both 'breakout' and 'mean-reversion' across two generations. Read `headline` and `what_it_does` for what the rule actually does; see the `label-does-not-match-rule` caution when this specific card has a mislabelled sibling.",
+  "stage": "shelved",
+  "requested_at": "2026-08-25T04:30:53.650130Z",
+  "what_it_does": {
+   "universe": [
+    "QCOM",
+    "TSM",
+    "AMZN",
+    "ORCL",
+    "SMH",
+    "DVY",
+    "NFLX",
+    "INTC",
+    "MSFT",
+    "NVDA"
+   ],
+   "universe_note": "10 names: 3 semiconductor, 2 software, 1 dividend ETF, 1 internet retail/cloud, 1 media/streaming, 1 semiconductor foundry, and 1 semiconductor sector ETF.",
+   "entry_plain": "Buys when the price is above the 50-day average (a rising-market filter) and the 9-day average crosses above the 20-day average.",
+   "exit_plain": "Sells when the 9-day average crosses back below the 20-day average.",
+   "risk_plain": "Cuts a losing position at \u221214%. No profit target. Force-closes any position still open after 92 trading days.",
+   "sizing_plain": "At most 3 positions at once, 29% of the book each \u2014 so at most 87% invested, the rest in cash.",
+   "raw": {
+    "entry": "close > sma(50) and ema(9) crosses_above ema(20)",
+    "exit": "ema(9) crosses_below ema(20)",
+    "stop_loss_pct": "0.14",
+    "take_profit_pct": null,
+    "max_hold_days": 92,
+    "max_positions": 3,
+    "position_pct": "0.29"
+   }
+  },
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 9/20-day EMA crossover trigger inside a 50-day SMA regime filter on QCOM, TSM, AMZN, ORCL, SMH, DVY, NFLX, INTC, MSFT, NVDA, with a 14% stop and a 92-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "origin": {
+   "generation": 9,
+   "origin_kind": "crossover",
+   "parents": [
+    "g005-75326868cba4",
+    "g001-6ac015cae61c"
+   ],
+   "note": "crossed g005-75326868cba4 x g001-6ac015cae61c"
+  },
+  "evidence": [
+   {
+    "generation": 9,
+    "round_id": "r17-auto-20260825-042547-g0009",
+    "rank": 1,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "bull-2024",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.3051306201043565725781102659",
+    "worst_excess": "-0.1648843367454490237061650321",
+    "hit_rate": 0.8,
+    "total_trades": 107,
+    "holdout_median_excess": "0.2031927552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 0.00011968010988695893
+   },
+   {
+    "generation": 13,
+    "round_id": "r17-auto-20260825-043005-g0013",
+    "rank": 1,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "recent",
+     "gfc"
+    ],
+    "median_excess": "0.3051306201043565725781102659",
+    "worst_excess": "-0.1386845578277664167234719382",
+    "hit_rate": 0.8,
+    "total_trades": 103,
+    "holdout_median_excess": "0.2031927552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 4.9116641098826724e-05
+   },
+   {
+    "generation": 17,
+    "round_id": "r17-auto-20260825-043339-g0017",
+    "rank": 4,
+    "field_size": 10,
+    "windows": [
+     "bear-2022",
+     "chop-2015",
+     "chop-2011",
+     "bull-2024",
+     "gfc"
+    ],
+    "median_excess": "0.0892091788788578626915809364",
+    "worst_excess": "-0.1648843367454490237061650321",
+    "hit_rate": 0.6,
+    "total_trades": 110,
+    "holdout_median_excess": "0.2031927552623824866024516738",
+    "holdout_windows": [
+     "covid",
+     "q4-2018"
+    ],
+    "q_value": 2.0181226623640866e-06
+   }
+  ],
+  "context": {
+   "field_median_excess_this_generation": "0.0892091788788578626915809364",
+   "field_median_excess_same_purpose": "0.09207305271339227978518151485",
+   "field_median_excess_all_purposes": "0.05653555271339227978518151485",
+   "field_holdout_median_same_purpose": "0.1787592552623824866024516738",
+   "field_holdout_median_all_purposes": "0.1501927552623824866024516738",
+   "field_holdout_positive_fraction_same_purpose": 0.9871575342465754,
+   "field_holdout_positive_fraction_all_purposes": 0.94331641285956,
+   "holdout_measurements_same_purpose": 1168,
+   "holdout_measurements_all_purposes": 2364,
+   "percentile_all_time": 0.9965753424657534,
+   "candidates_ever_run": 1887,
+   "generations_with_outcomes": 231,
+   "noise_floor_pp": "21.2",
+   "margin_over_noise_pp": "9.31306201043565725781102659"
+  },
+  "cautions": [
+   {
+    "code": "holdout-does-not-discriminate",
+    "severity": "serious",
+    "text": "94.3% of the 2364 holdout measurements this search has recorded, across every purpose, also came back positive. This card's +20.32% is above its own purpose's field holdout median (+17.88%), so a positive holdout here is not evidence that this card is better than a coin flip from the same generator."
+   },
+   {
+    "code": "template-is-not-distinct",
+    "severity": "serious",
+    "text": "This card's entry/exit template (parameters masked) is shared by 24 other card(s) in the pending/shelved set. The numbers differ; the shape of the rule does not."
+   }
+  ],
+  "overlap": {
+   "with_shelved": [
+    {
+     "genome_id": "g1805-5919222d57c5",
+     "headline": "EMA 7/17 crossover, 67-day regime filter \u00b7 AMD/TXN/TSM +9 \u00b7 Trading",
+     "shared_tickers": [
+      "AMZN",
+      "INTC",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "QCOM",
+      "TSM"
+     ],
+     "jaccard": 0.5714285714285714
+    },
+    {
+     "genome_id": "g1809-145d2d5dbfeb",
+     "headline": "EMA 7/17 crossover, 67-day regime filter \u00b7 AMD/TXN/TSM +9 \u00b7 Trading",
+     "shared_tickers": [
+      "AMZN",
+      "INTC",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "QCOM",
+      "TSM"
+     ],
+     "jaccard": 0.5714285714285714
+    },
+    {
+     "genome_id": "g1725-0a9fcd74b740",
+     "headline": "EMA 7/17 crossover, 67-day regime filter \u00b7 AMD/TXN/TSM +8 \u00b7 Trading",
+     "shared_tickers": [
+      "AMZN",
+      "INTC",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "TSM"
+     ],
+     "jaccard": 0.5
+    },
+    {
+     "genome_id": "g1769-349119b209d7",
+     "headline": "EMA 7/17 crossover, 67-day regime filter \u00b7 AMD/TXN/TSM +8 \u00b7 Trading",
+     "shared_tickers": [
+      "AMZN",
+      "INTC",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "TSM"
+     ],
+     "jaccard": 0.5
+    }
+   ],
+   "with_seated": [],
+   "note": "4 shelved cards already trade AMZN, INTC, MSFT, NFLX, NVDA, ORCL, QCOM, TSM in common with this one."
+  },
+  "what_a_decision_does": {
+   "shelve": "Keeps the card, names it, and tracks it. It places no orders and does not join the desk.",
+   "reject": "Declines it permanently. The loop will not re-file this genome even if it clears the gate again.",
+   "seat": "Adds it to the simulated paper desk's roster. The desk holds no real money and approving places no order.",
+   "retire": "Removes it from the shelf without ever seating it. Also permanent."
+  }
+ }
+}

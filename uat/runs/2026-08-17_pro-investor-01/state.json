@@ -1,0 +1,95 @@
+{
+  "cash": "5043.41",
+  "positions": {
+    "NVDA": "5",
+    "SPY": "2",
+    "XLE": "36"
+  },
+  "unsettled": [
+    [
+      "2026-08-21",
+      "1423.42"
+    ]
+  ],
+  "fills": [
+    {
+      "order_id": "s1-xle-buy-1",
+      "session": 1,
+      "trade_date": "2026-08-17",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "24",
+      "price": "62.25",
+      "reference_open": "62.22",
+      "gross": "1494.00",
+      "fees": "0.00",
+      "cash_delta": "-1494.00"
+    },
+    {
+      "order_id": "s1-spy-buy-1",
+      "session": 1,
+      "trade_date": "2026-08-17",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2",
+      "price": "776.57",
+      "reference_open": "776.18",
+      "gross": "1553.14",
+      "fees": "0.00",
+      "cash_delta": "-1553.14"
+    },
+    {
+      "order_id": "s1-nvda-buy-1",
+      "session": 1,
+      "trade_date": "2026-08-17",
+      "symbol": "NVDA",
+      "side": "buy",
+      "quantity": "5",
+      "price": "226.09",
+      "reference_open": "225.98",
+      "gross": "1130.45",
+      "fees": "0.00",
+      "cash_delta": "-1130.45"
+    },
+    {
+      "order_id": "s2-xle-buy-1",
+      "session": 2,
+      "trade_date": "2026-08-18",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "12",
+      "price": "63.44",
+      "reference_open": "63.41",
+      "gross": "761.28",
+      "fees": "0.00",
+      "cash_delta": "-761.28"
+    },
+    {
+      "order_id": "s2-qqq-buy-1",
+      "session": 2,
+      "trade_date": "2026-08-18",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "price": "720.57",
+      "reference_open": "720.21",
+      "gross": "1441.14",
+      "fees": "0.00",
+      "cash_delta": "-1441.14"
+    },
+    {
+      "order_id": "s4-qqq-sell-1",
+      "session": 4,
+      "trade_date": "2026-08-20",
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": "2",
+      "price": "711.73",
+      "reference_open": "712.09",
+      "gross": "1423.46",
+      "fees": "0.04",
+      "cash_delta": "1423.42"
+    }
+  ],
+  "rejections": []
+}

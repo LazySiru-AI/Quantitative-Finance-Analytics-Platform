@@ -1,0 +1,136 @@
+{
+  "run_id": "2026-06-08_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-18T06:52:14.531310+00:00",
+  "window": {
+    "first_session": "2026-06-08",
+    "last_session": "2026-06-12",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "9992.12",
+    "pnl": "-7.88",
+    "return_pct_of_1": "-0.000788",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "0.003423",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 6,
+    "buys": 5,
+    "sells": 1,
+    "gross_traded": "7429.15",
+    "total_fees": "0.04",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-06-12",
+    "cash": "5366.57",
+    "settled_cash": "5366.57",
+    "positions_market_value": "4625.55",
+    "equity": "9992.12",
+    "return_since_inception_pct_of_1": "-0.000788",
+    "positions": [
+      {
+        "symbol": "SPY",
+        "quantity": "3",
+        "mark": "741.75",
+        "market_value": "2225.25",
+        "weight_pct_of_1": "0.222700"
+      },
+      {
+        "symbol": "XLF",
+        "quantity": "45",
+        "mark": "53.34",
+        "market_value": "2400.30",
+        "weight_pct_of_1": "0.240219"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 2,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-3.csv",
+      "session-4.csv",
+      "session-5.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "a1359574ca6cd8c964b797fdba2d1df8a7a14742",
+        "adapter": "robinhood",
+        "row_count": 3,
+        "usable_row_count": 3,
+        "inserted": 0,
+        "duplicates": 3,
+        "conflicts": [],
+        "instruments": 2,
+        "skipped": {},
+        "ledger_fingerprint": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "c4aaef89bc1e79c71f68fcfb4315a69112a9d268",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "34c5b079849895821ab44c6e1233a086be49fd3c",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "43cd07f0bc05fb199c291efa88791c25229aa90d",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "38571dc560ce60d9a8d33761b6e54e0158e44694",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+        "ledger_txn_count": 8
+      }
+    ],
+    "fingerprint_before_replay": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+    "fingerprint_after_replay": "6e2f53dc7f640b5f68708e70fdcc86f41072bd2c8b606b6efdd3bcfed200d7d1",
+    "ledger_txn_count": 8,
+    "idempotent": true
+  },
+  "findings_recorded": 5
+}

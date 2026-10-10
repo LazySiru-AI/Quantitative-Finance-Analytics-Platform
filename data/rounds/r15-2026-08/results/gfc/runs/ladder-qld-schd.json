@@ -1,0 +1,91 @@
+{
+  "card": {
+    "agent_id": "ladder-qld-schd",
+    "display_name": "Drawdown Ladder - QLD/SCHD/IEF",
+    "purpose": "trading",
+    "thesis": "A market-wide drawdown of 10%+ is, historically, a better-paying entry for leverage than any single stock's own price action, because it is priced off the index nobody can manipulate one name at a time. The base book (60% SCHD / 40% IEF) is a conservative income-and-duration hold with no leverage in it at all; as SPY's own closing price falls further below its all-time high, QLD is added in three steps (20% at -10%, 60% at -20%, 80% at -30%), funded out of IEF first and only then out of SCHD, so the sleeve most likely to be needed as ballast if the decline keeps going (SCHD, equity) is the one preserved longest. None of this fires on the way down alone: a rung only arms once SPY has closed back above its own 50-session moving average, i.e. once a bounce is already underway, not merely once a level has been crossed. That single gate is not decoration -- on the reference backtest's own 2006-2011 window (strategy-program/tools/drawdown_ladder.py), removing it lets the ladder reach its full 80% leveraged weight at the worst point of the 2008 decline, which produced a 0.06 MAR and a -72.7% max drawdown; adding the confirmation gate back moves those to a 0.25 MAR and a -55.0% max drawdown on the identical price history. The gate is what separates 'buying a leveraged bottom that recovery has already begun to confirm' from 'buying every day the index is merely still falling.' A rung fires once per drawdown cycle (no re-firing on a chop around one threshold) and the ladder fully exits back to the base 60/40 state on a new all-time high 10% above the high the cycle started from, or 60 sessions after that new high, whichever comes first -- so leverage cannot ratchet upward across repeated cycles the way a bare 'halve on a new high' rule would. This would be falsified by: (a) a period where SPY makes a confirmed bounce off a -10%/-20%/-30% drawdown that then fails and revisits new lows before the recovery clock or gain target ever closes the position, repeatedly enough that the confirmation gate is buying into fake bounces rather than real ones; (b) a period where QLD's own daily-leveraged decay against SPY (a 2x fund does not return exactly 2x the index over a multi-month holding period) erodes the strategy's edge faster than the timing signal adds value, which is most visible in a choppy, range-bound market rather than a clean crash-and-recover one; or (c) evidence that a static 60/40/plus-a-fixed-QLD-sleeve blend, rebalanced on a calendar with no drawdown signal at all, matches or beats the ladder on a risk-adjusted basis over the same window -- the reference script's own comparison against exactly that static benchmark is the bar this card has to clear, not the leveraged sleeve held alone.",
+    "signal_symbol": "SPY",
+    "defensive_symbol": "SCHD",
+    "bond_symbol": "IEF",
+    "leveraged_symbol": "QLD",
+    "base_defensive_weight": "0.60",
+    "base_bond_weight": "0.40",
+    "rungs": [
+      {
+        "drawdown": "-0.10",
+        "leveraged_weight": "0.20"
+      },
+      {
+        "drawdown": "-0.20",
+        "leveraged_weight": "0.60"
+      },
+      {
+        "drawdown": "-0.30",
+        "leveraged_weight": "0.80"
+      }
+    ],
+    "confirm_ma": 50,
+    "ath_haircut": "0.5",
+    "recovery_gain": "0.10",
+    "recovery_sessions": 60,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 356,
+  "starting_equity": "100000",
+  "ending_equity": "70152.97",
+  "total_return": "-0.29847029999999997",
+  "max_drawdown": "-0.3522833745059928",
+  "sharpe": -1.0254543078590779,
+  "sortino": -0.9344693445239511,
+  "volatility": 0.22071479657102414,
+  "exposure": 1.0,
+  "capital_exposure": 0.4515687246583133,
+  "win_rate": 1.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "IEF",
+      "entry_date": "2007-10-09",
+      "entry_price": "83.32",
+      "exit_date": "2008-03-25",
+      "exit_price": "91.14",
+      "quantity": "250",
+      "exit_reason": "rebalance_trim",
+      "pnl": "1954.33",
+      "return_pct": "0.09382285165626500240038406145",
+      "bars_held": 114
+    },
+    {
+      "symbol": "IEF",
+      "entry_date": "2007-10-09",
+      "entry_price": "83.32",
+      "exit_date": "2008-12-17",
+      "exit_price": "99.73",
+      "quantity": "229",
+      "exit_reason": "rebalance_trim",
+      "pnl": "3757.22",
+      "return_pct": "0.1969163974532868490399511957",
+      "bars_held": 301
+    },
+    {
+      "symbol": "QLD",
+      "entry_date": "2008-03-25",
+      "entry_price": "0.51",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "170958",
+      "exit_reason": "open_at_end",
+      "pnl": "-35558.58",
+      "return_pct": "-0.4044285557980151273238794573",
+      "bars_held": 241
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "benchmark_return": "-0.5622750642673521850899742931",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

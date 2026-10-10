@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "finding_id": "cash-settled-unsettled-split-fee-misattributed",
+      "run_id": "2026-07-13_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "session_date": "2026-07-15",
+      "observed_at": "2026-08-16T18:30:00Z",
+      "surface": "ui",
+      "locator": "/portfolio",
+      "kind": "defect",
+      "severity": "minor",
+      "blocked_decision": false,
+      "title": "Settled/unsettled cash split misattributes a sale's fee to settled cash instead of the unsettled proceeds it came from",
+      "observed": "Sold 7 XLV for gross proceeds $1,101.10 with a $0.03 SEC/TAF fee (net cash to me: $1,101.07, matching my own fill record). /portfolio's cash tiles after this fill: CASH $5,553.31, '$4,452.21 settled - $1,101.10 unsettled'. Settled dropped by exactly $0.03 (from the prior session's $4,452.24) even though the fee was charged against this sale's own unsettled proceeds, and unsettled shows the gross $1,101.10 rather than the net $1,101.07. The total ($5,553.31) is correct; only the split is off, by $0.03 in opposite directions. The harness's own independently-tracked paper-broker book agrees with the correct split: settled_cash 4452.24 (unchanged), the $0.03 fee absorbed inside the new unsettled bucket.",
+      "expected": "A regulatory fee on a sale should reduce the unsettled proceeds that sale produced, not the already-settled cash sitting untouched from before it.",
+      "why_it_matters": "This is a small dollar amount but the wrong bucket: it understates settled (redeployable) cash and overstates unsettled cash by the same amount every time a sale carries a fee. On a book with many small trades this compounds into a settled-cash figure I can no longer trust to the cent -- exactly the kind of provenance gap the mandate cares about.",
+      "repro": [
+        "Sell a position that incurs a SEC/TAF fee",
+        "Open /portfolio and read the CASH tile's settled/unsettled breakdown",
+        "Compare against the fill's own gross proceeds and fee: settled is short by the fee amount, unsettled is not"
+      ]
+    }
+  ]
+}

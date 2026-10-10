@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "finding_id": "wash-sale-repurchase-safe-date-not-displayed",
+      "run_id": "2026-07-13_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "session_date": "2026-07-16",
+      "observed_at": "2026-08-16T18:35:00Z",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "gap",
+      "severity": "major",
+      "blocked_decision": false,
+      "title": "Wash-sale per-symbol panel's repurchase-safe date is computed but never rendered",
+      "observed": "After my XLV loss sale (2026-07-15) and repurchase (2026-07-16), /tax's 'Wash sales by symbol' row for XLV shows a 'Repurchase status' cell containing only a badge that reads 'safe to repurchase' -- no date. GET /api/tax/report?year=2026 carries the real number the badge is summarizing: wash_sale_summary.symbols[0].repurchase_safe_on = '2026-08-15', days_until_safe = 0, window_is_open = false. The DOM confirms the gap directly: the cell is <span class=\"badge wash-window-safe\">safe to repurchase</span> with no data attribute, no title tooltip, and no text node carrying the date anywhere in the row.",
+      "expected": "The page's own explanatory copy promises this: 'This date tells you when a new purchase will stop creating a new wash sale on this symbol's most recent loss sale.' A date is promised and computed server-side; only the boolean-ish badge reaches the screen.",
+      "why_it_matters": "Whether I can safely rebuy a name without a new disallowance is a real sizing decision, and right now the only way to get the actual date is to read the API directly. A badge that just says 'safe' or (presumably) 'not yet safe' with no date gives me nothing to plan the next few sessions around.",
+      "repro": [
+        "Sell a position at a loss, then repurchase it (or wait) so a wash-sale event exists for the symbol",
+        "Open /tax, select the year of the loss sale",
+        "Read the 'Wash sales by symbol' table's Repurchase status column -- only a badge, no date",
+        "Compare against GET /api/tax/report?year=<Y>, which carries wash_sale_summary.symbols[].repurchase_safe_on"
+      ]
+    },
+    {
+      "finding_id": "wash-sale-tolled-holding-period-not-displayed",
+      "run_id": "2026-07-13_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "session_date": "2026-07-16",
+      "observed_at": "2026-08-16T18:36:00Z",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "gap",
+      "severity": "minor",
+      "blocked_decision": false,
+      "title": "Wash-sale's tolled holding-period start date is computed but not shown anywhere in the UI",
+      "observed": "GET /api/tax/report?year=2026's wash_sales[0] entry for the XLV wash sale carries holding_period_tolled_to: '2026-07-13' -- the original lot's acquisition date, correctly rolled onto the replacement lot per the wash-sale rule. Neither /tax's Wash sales by symbol panel, its Wash sales table, nor /portfolio's XLV position row (which shows only '7 ST / 0 LT') states this date or otherwise flags that the replacement lot's holding period did not restart on its own 2026-07-16 purchase date.",
+      "expected": "Since the deferred-loss add-back is shown on the position (cost basis $1,149.26, correctly $1,123.01 + $26.25), the holding-period toll that travels with the same wash sale should be equally visible -- it determines whether a future sale of this exact lot is short- or long-term.",
+      "why_it_matters": "I can currently see that my basis went up because of the wash sale, but not that my clock for long-term treatment on these replacement shares was set back to 2026-07-13, not the 2026-07-16 purchase I actually made. That is exactly the kind of number I would get wrong by trusting the acquisition date on the position row.",
+      "repro": [
+        "Trigger a wash sale (loss sale followed by a replacement purchase within 30 days)",
+        "Call GET /api/tax/report?year=<Y> and read wash_sales[].holding_period_tolled_to",
+        "Search /tax and /portfolio for the same date -- not present in either"
+      ]
+    },
+    {
+      "finding_id": "wash-sale-basis-correctly-adjusted",
+      "run_id": "2026-07-13_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "session_date": "2026-07-16",
+      "observed_at": "2026-08-16T18:37:00Z",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "polish",
+      "blocked_decision": false,
+      "title": "Wash-sale disclosure is now complete, not terse: disallowed amount, basis rollover and 8949 code all cross-check",
+      "observed": "Full loss-then-repurchase pair this run: sold 7 XLV at a $26.25 loss (2026-07-15), repurchased 7 XLV the next session (2026-07-16, inside 30 days). /tax now shows: WASH-SALE DISALLOWED (DEFERRED) $26.25; the XLV disposal row's own gain/loss zeroed to $0.00 ('after any Section 1091 disallowance'); a 'Wash sales by symbol' row (XLV, deferred $26.25, permanently disallowed $0.00, 1 loss sale); a full 'Wash sales' detail table (date, symbol, account, qty replaced/sold 7/7, loss $26.25, disallowed $26.25, treatment 'DEFERRED TO REPLACEMENT BASIS'); and Form 8949 Box A carrying code 'W', adjustment $26.25, gain/loss $0.00 on the same row. /portfolio's XLV position cost basis is $1,149.26 -- exactly the $1,123.01 repurchase cost plus the $26.25 disallowed loss. Every figure agrees with the others and with my own fill records to the cent.",
+      "expected": "A wash sale's disallowed amount, its effect on the current disposal's reportable gain, and where the disallowed loss went (replacement basis) should all be visible and mutually consistent -- they are.",
+      "why_it_matters": "This was the headline test for my week: does the tool tell me what a wash sale actually cost me. It does, completely, and the numbers check out against my own records -- the two gaps I filed separately (no rendered repurchase-safe date, no rendered tolled holding period) are both about fields that exist in the API but do not reach the screen, not about the arithmetic being wrong."
+    }
+  ]
+}

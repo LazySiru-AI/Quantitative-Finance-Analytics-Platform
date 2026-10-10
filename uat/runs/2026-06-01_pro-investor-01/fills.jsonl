@@ -1,0 +1,3 @@
+{"cash_delta": "-2212.23", "fees": "0.00", "gross": "2212.23", "order_id": "s1-qqq-buy", "price": "737.41", "quantity": "3", "reference_open": "737.04", "session": 1, "side": "buy", "status": "filled", "symbol": "QQQ", "trade_date": "2026-06-01"}
+{"cash_delta": "-619.91", "fees": "0.00", "gross": "619.91", "order_id": "s2-smh-buy", "price": "619.91", "quantity": "1", "reference_open": "619.6", "session": 2, "side": "buy", "status": "filled", "symbol": "SMH", "trade_date": "2026-06-02"}
+{"cash_delta": "729.67", "fees": "0.02", "gross": "729.69", "order_id": "s5-qqq-trim", "price": "729.69", "quantity": "1", "reference_open": "730.06", "session": 5, "side": "sell", "status": "filled", "symbol": "QQQ", "trade_date": "2026-06-05"}

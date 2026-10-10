@@ -1,0 +1,15 @@
+{
+  "orders": [
+    {
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": 6,
+      "thesis": "Smaller continuation add, deliberately sized below the 25% cap after yesterday's rejection at a 10-share add (26.7%). Trend still accelerating: 20-day change now +10.85%, still above every MA.",
+      "invalidation": "A close below sma50 (56.71) ends the continuation thesis.",
+      "stop_level": "56.75",
+      "regime": "risk-on within energy",
+      "conviction": 4,
+      "evidence": "close 59.38 > sma20 55.69 > sma50 56.71 > sma200 52.16; change_5d +4.14%; change_20d +10.85%; sized to ~6.9% notional add to stay under the 25% single-name cap after yesterday's rejection"
+    }
+  ]
+}

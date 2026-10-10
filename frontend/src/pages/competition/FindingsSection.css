@@ -1,0 +1,168 @@
+/*
+ * FindingsSection -- every class here is prefixed `findings-` so it cannot collide with the `comp-`
+ * classes `Competition.css` owns or the `selection-` classes `Competition.tsx`'s own Selection view
+ * uses. Reuses `.panel`, `.section-heading`, `.muted`, `.placeholder`, `.filter-bar`,
+ * `.timeframe-tabs`/`.timeframe-tab`, `.badge`/`.state-pill` conventions, and the design tokens from
+ * `styles.css` rather than reinventing any of them or hardcoding a hex value.
+ *
+ * `.findings-body` is the one place this file departs from `.data-table`'s monospace-everything
+ * habit on purpose: `styles.css`'s own header comment notes a wall of monospace body copy is
+ * measurably harder to read, and a round's write-up is exactly that kind of long prose. It stays in
+ * `--font-sans`, capped near 68ch, with `white-space: pre-wrap` so the source markdown's paragraph
+ * breaks survive without ever being parsed as markup.
+ */
+
+.findings-controls { margin-bottom: 1rem; }
+.findings-round-note { padding: 0.3rem 0; }
+
+/* --- Carried forward -- pinned agenda, most prominent thing on the page ------------------------- */
+
+.findings-carried-panel {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: 0 0 28px -14px var(--glow-cyan);
+}
+.findings-carried-heading { margin-bottom: 0.15rem; }
+.findings-carried-subtitle { margin: 0 0 0.85rem; max-width: 68ch; }
+
+/* --- Full record -------------------------------------------------------------------------------- */
+
+.findings-filter-panel { margin-bottom: 1rem; }
+.findings-full-record-subtitle { margin: 0 0 0.85rem; max-width: 68ch; }
+.findings-kind-filter { flex-wrap: wrap; }
+
+.findings-kind-group { }
+.findings-kind-group-heading {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.findings-kind-group-count { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: normal; }
+
+.findings-entry-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+/* --- One entry ------------------------------------------------------------------------------------ */
+
+.findings-entry {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+}
+.findings-entry-pinned {
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel-2));
+}
+/* A defect is a fault in the measuring instrument, not in a strategy -- it can invalidate a result
+   rather than merely qualify it, so the whole entry gets a visibly different treatment, not just its
+   chip. Wins over `.findings-entry-pinned` on specificity is irrelevant here: a carried-forward
+   defect should read as a defect first. */
+.findings-entry[data-kind="defect"] {
+  border-left-color: var(--down);
+  background: color-mix(in srgb, var(--down) 8%, var(--panel-2));
+}
+
+.findings-entry-summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+.findings-entry-summary::-webkit-details-marker { display: none; }
+.findings-entry-summary::before {
+  content: "▸";
+  color: var(--muted);
+  font-family: var(--font-mono);
+  transition: transform 0.1s ease;
+}
+details[open] > .findings-entry-summary::before { transform: rotate(90deg); display: inline-block; }
+
+.findings-entry-title {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.findings-entry-body { margin-top: 0.6rem; }
+
+.findings-body {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text);
+  max-width: 68ch;
+  margin: 0 0 0.5rem;
+  white-space: pre-wrap;
+}
+
+.findings-source {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* --- Kind chip -- attribute-selected, never an interpolated class name, so an arbitrary `kind`
+   string from the backend can never produce an invalid CSS class. Unknown kinds fall through to the
+   base `.findings-kind-chip` look, matching `findingKindLabel`'s own raw-key fallback. -------------- */
+
+.findings-kind-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  flex-shrink: 0;
+}
+.findings-kind-chip[data-kind="follow-up"] {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+/* Never let this look like an ordinary finding chip -- `--down`, filled, bold, not just outlined. */
+.findings-kind-chip[data-kind="defect"] {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 55%, transparent);
+  background: color-mix(in srgb, var(--down) 16%, transparent);
+  font-weight: 700;
+}
+.findings-kind-chip[data-kind="decision"] {
+  color: var(--accent-2);
+  border-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
+}
+
+/* The "carries forward" badge is deliberately a different colour family from every kind chip above
+   (warm amber) so it never reads as one more kind -- it is a flag layered on top of whichever kind
+   the entry already has, including `"defect"`. */
+.findings-carries-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px dashed color-mix(in srgb, var(--warn) 55%, transparent);
+  color: var(--warn);
+  flex-shrink: 0;
+}
+
+/* --- Sources ---------------------------------------------------------------------------------------- */
+
+.findings-sources-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+.findings-sources-list li { margin-bottom: 0.2rem; }

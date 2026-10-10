@@ -1,0 +1,135 @@
+{
+  "cash": "8102.82",
+  "positions": {
+    "TLT": "6",
+    "XLV": "9"
+  },
+  "unsettled": [
+    [
+      "2026-06-26",
+      "1796.17"
+    ],
+    [
+      "2026-06-29",
+      "1130.58"
+    ]
+  ],
+  "fills": [
+    {
+      "order_id": "s1-1",
+      "session": 1,
+      "trade_date": "2026-06-22",
+      "symbol": "IWM",
+      "side": "buy",
+      "quantity": "6",
+      "price": "297.28",
+      "reference_open": "297.13",
+      "gross": "1783.68",
+      "fees": "0.00",
+      "cash_delta": "-1783.68"
+    },
+    {
+      "order_id": "s3-1",
+      "session": 3,
+      "trade_date": "2026-06-24",
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": "9",
+      "price": "153.21",
+      "reference_open": "153.13",
+      "gross": "1378.89",
+      "fees": "0.00",
+      "cash_delta": "-1378.89"
+    },
+    {
+      "order_id": "s4-1",
+      "session": 4,
+      "trade_date": "2026-06-25",
+      "symbol": "IWM",
+      "side": "sell",
+      "quantity": "6",
+      "price": "299.37",
+      "reference_open": "299.52",
+      "gross": "1796.22",
+      "fees": "0.05",
+      "cash_delta": "1796.17"
+    },
+    {
+      "order_id": "s4-2",
+      "session": 4,
+      "trade_date": "2026-06-25",
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": "13",
+      "price": "87.62",
+      "reference_open": "87.58",
+      "gross": "1139.06",
+      "fees": "0.00",
+      "cash_delta": "-1139.06"
+    },
+    {
+      "order_id": "s5-1",
+      "session": 5,
+      "trade_date": "2026-06-26",
+      "symbol": "TLT",
+      "side": "sell",
+      "quantity": "13",
+      "price": "86.97",
+      "reference_open": "87.01",
+      "gross": "1130.61",
+      "fees": "0.03",
+      "cash_delta": "1130.58"
+    },
+    {
+      "order_id": "s5-2",
+      "session": 5,
+      "trade_date": "2026-06-26",
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": "6",
+      "price": "87.05",
+      "reference_open": "87.01",
+      "gross": "522.30",
+      "fees": "0.00",
+      "cash_delta": "-522.30"
+    }
+  ],
+  "rejections": [
+    {
+      "order_id": "s3-2",
+      "session": 3,
+      "symbol": "TLT",
+      "side": "buy",
+      "quantity": "1",
+      "reason": "$87.19 is below the $500.00 minimum clip for a new position",
+      "rule": "min_clip"
+    },
+    {
+      "order_id": "s3-3",
+      "session": 3,
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": "10",
+      "reason": "XLV would be 29.0% of the book against a 25% cap",
+      "rule": "max_single_name_weight"
+    },
+    {
+      "order_id": "s3-4",
+      "session": 3,
+      "symbol": "ZZZZ",
+      "side": "buy",
+      "quantity": "5",
+      "reason": "no stored open for ZZZZ on 2026-06-24; the order cannot be filled at a price that was ever real",
+      "rule": "unpriceable"
+    },
+    {
+      "order_id": "s5-3",
+      "session": 5,
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": "45",
+      "reason": "$7038.00 exceeds $6972.24 of settled cash (total cash $8102.82; unsettled proceeds are not spendable in a cash account)",
+      "rule": "insufficient_cash"
+    }
+  ]
+}

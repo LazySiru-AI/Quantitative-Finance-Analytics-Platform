@@ -1,0 +1,123 @@
+/* =============================================================================
+   Competition tab -- Round narrative (RoundNarrativeCard.tsx).
+
+   Reuses .panel, .section-heading, .placeholder, .callout/.callout-warn, .badge
+   from styles.css -- nothing there is modified, only built on top of. Every
+   class this file adds is prefixed `comp-narrative-` so it cannot collide with
+   this page's own `comp-`/`selection-` prefixes (Competition.css) or the
+   sibling `summary-`/`findings-` sheets.
+   ============================================================================= */
+
+.comp-narrative-empty { padding: 0.25rem 0; }
+
+.comp-narrative-title { margin-bottom: 0.5rem; }
+
+/* The "how did it turn out" line -- one sentence, meant to read before anything else on the card. */
+.comp-narrative-headline {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.comp-narrative-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.comp-narrative-focus { margin-bottom: 1rem; }
+.comp-narrative-focus-body {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 68ch;
+  margin: 0;
+}
+
+/* `outcome` is hand-written prose, not table data -- stays in --font-sans, capped near 68ch, one <p>
+   per `\n\n`-delimited paragraph. Matches FindingsSection.css's own departure from the monospace
+   default for exactly the same reason: a wall of monospace prose is measurably harder to read. */
+.comp-narrative-outcome { margin: 0; }
+.comp-narrative-outcome-p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+  max-width: 68ch;
+  margin: 0 0 0.75rem;
+}
+.comp-narrative-outcome-p:last-child { margin-bottom: 0; }
+
+/* The outcome prose runs long on some rounds, so it sits behind the shared `Collapsible` (base
+   `.collapsible`/`.collapsible-summary`/`.collapsible-body` styling lives in Collapsible.css --
+   this card only adds its own spacing and the summary label's type). */
+.comp-narrative-panel .comp-narrative-outcome-collapsible { margin-bottom: 1rem; }
+.comp-narrative-panel .comp-narrative-outcome-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+/* An owner override is a first-class part of what happened -- three of this programme's rounds ended
+   in one -- so it gets the same amber `.callout-warn` treatment used elsewhere on the page for "this
+   needs your attention", never a quiet footnote. */
+.comp-narrative-override { margin-bottom: 1rem; }
+.comp-narrative-override-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+.comp-narrative-override-body {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.comp-narrative-seated { margin-bottom: 1rem; }
+.comp-narrative-seated-empty {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+}
+.comp-narrative-seated-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.comp-narrative-seated-chip { flex-shrink: 0; }
+
+.comp-narrative-carries { margin-bottom: 1rem; }
+.comp-narrative-carries-list {
+  margin: 0.3rem 0 0;
+  padding-left: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.comp-narrative-carries-list li { margin-bottom: 0.25rem; }
+
+/* Small, plain, at the bottom -- file paths a reader can go check the claim against, not a headline. */
+.comp-narrative-sources {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.comp-narrative-source { margin-bottom: 0.2rem; }

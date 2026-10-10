@@ -1,0 +1,38 @@
+{
+  "orders": [
+    {
+      "order_id": "s1-spy-buy",
+      "session": 1,
+      "decided_on": "2026-06-05",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "SPY closed 737.55 on 2026-06-05, below its own sma20 (746.29) but above sma50 (713.51) and sma200 (683.93) -- a pullback inside an intact longer-term uptrend. 20d change still +0.82% even as 5d is -2.50%, reading as a dip to buy rather than a trend break.",
+      "invalidation": "Close breaks and holds below sma50 (~713.51), turning the pullback into a trend break rather than a dip.",
+      "stop_level": "710.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=737.55, sma20=746.2930, sma50=713.5118, sma200=683.9265, change_5d=-2.58%, change_20d=+0.82% via brief-s1 watchlist.SPY (as of 2026-06-05)"
+      ]
+    },
+    {
+      "order_id": "s1-xlf-buy",
+      "session": 1,
+      "decided_on": "2026-06-05",
+      "symbol": "XLF",
+      "side": "buy",
+      "quantity": "30",
+      "order_type": "market_on_open",
+      "thesis": "XLF closed 52.30 on 2026-06-05, above sma20 (51.50) and sma50 (51.26), just reclaiming sma200 (52.57 is barely above spot, so the long-term test is still live) -- positive momentum across 1d (+0.21%), 5d (+1.40%) and 20d (+1.45%) is the most consistent multi-timeframe confirmation of the four names on the watchlist.",
+      "invalidation": "Close back below sma50 (~51.26) undoes the reclaim and the multi-timeframe alignment this thesis rests on.",
+      "stop_level": "51.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=52.30, sma20=51.4960, sma50=51.2632, sma200=52.5658, change_1d=+0.21%, change_5d=+1.40%, change_20d=+1.45% via brief-s1 watchlist.XLF (as of 2026-06-05)"
+      ]
+    }
+  ]
+}

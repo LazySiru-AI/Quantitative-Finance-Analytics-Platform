@@ -1,0 +1,27 @@
+window: 2020-02-19 -> 2020-06-30
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+22 cards
+[1/22] r1 A-rotation: 43s trades=13 ret=-0.65% dd=-17.85% rej=85
+[2/22] r1 A1-alpha-order: 45s trades=12 ret=-0.97% dd=-18.07% rej=101
+[3/22] r1 A2-cash-headroom: 47s trades=16 ret=+4.36% dd=-16.20% rej=65
+[4/22] r1 A3-no-target: 54s trades=10 ret=-3.46% dd=-17.85% rej=204
+[5/22] r1 A4-tight-stop: 43s trades=13 ret=-2.17% dd=-19.37% rej=86
+[6/22] r1 B-momentum: 45s trades=6 ret=+22.93% dd=-4.58% rej=0
+[7/22] r1 B1-with-target: 45s trades=8 ret=+19.51% dd=-4.58% rej=0
+[8/22] r1 B2-hold-90: 43s trades=6 ret=+22.93% dd=-4.58% rej=0
+[9/22] r1 B3-concentrated: 34s trades=4 ret=+21.85% dd=-6.03% rej=0
+[10/22] r1 B4-tight-stop: 43s trades=6 ret=+22.93% dd=-4.58% rej=0
+[11/22] r1 C-trend: 36s trades=7 ret=+15.83% dd=-4.88% rej=0
+[12/22] r1 c01-meanrev: 31s trades=7 ret=-7.21% dd=-8.27% rej=0
+[13/22] r1 c02-volatility: 20s trades=4 ret=+2.05% dd=-7.98% rej=0
+[14/22] r1 c03-breakout: 28s trades=7 ret=-5.76% dd=-8.17% rej=0
+[15/22] r1 c04-riskmanaged: 23s trades=10 ret=-1.50% dd=-8.01% rej=4
+[16/22] r1 c05-trend: 14s trades=6 ret=+2.51% dd=-2.80% rej=0
+[17/22] r1 c06-13f-momentum: 33s trades=21 ret=+18.97% dd=-7.06% rej=0
+[18/22] r1 D-13f-newbuys: FAILED GuardFailed: D-13f-newbuys: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against SNDK (failed): causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_200: only 0 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: rsi_14: only 0 bars against a 14-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[19/22] r1 E-asymmetric: FAILED GuardFailed: E-asymmetric: entry expression 'close > bb_upper(20,2) and macd_hist(12,26,9) > 0 and close > sma(50)' failed the lookahead guard against PLTR (failed): causality: bb_20_2: only 0 bars against a 19-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: macd_12_26_9: only 0 bars against a 33-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[20/22] r1 F-fastrev: FAILED GuardFailed: F-fastrev: entry expression 'rsi(3) < 15 and close < bb_lower(10,2)' failed the lookahead guard against CRDO (failed): causality: rsi_3: only 0 bars against a 3-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: bb_10_2: only 0 bars against a 9-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[21/22] r1 G-volatility: FAILED GuardFailed: G-volatility: entry expression 'high - low > atr(14) * 1.5 and close > open and close > sma(50)' failed the lookahead guard against COIN (failed): causality: atr_14: only 0 bars against a 13-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[22/22] r1 H-trend-diversified: 27s trades=3 ret=+10.24% dd=-3.23% rej=0
+r1: 18 agents, 0 discoveries
+overall: 18 agents, 0 discoveries at alpha=0.1

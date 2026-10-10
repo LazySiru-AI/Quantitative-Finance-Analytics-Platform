@@ -1,0 +1,382 @@
+{
+  "card": {
+    "agent_id": "r47-defense-dip-trim",
+    "display_name": "R47 basket / defense / dip-trim",
+    "discipline": "trend",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 47 dip-trim cell. Basket (defense): Creator A's defense-spending pillar: the four largest US pure-play defense primes (LMT, NOC, GD, RTX) -- round 44's basket, reused verbatim. Universe: LMT NOC GD RTX. Arm: dip-trim -- the dip entry (close < sma(50) and close > sma(200)) paired with the trim exit (close > sma(200) * 1.15): buy weakness, sell strength, Creator B's and Creator C's/Creator A's disciplines combined in one card. Purpose ROTH: no ticker this round trades is claimed by any savings- or trading-purpose card in the live library (app.evolution.promotion._library_cards, all six tiers), because Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss whose replacement is bought inside an IRA. Ticker disjointness from the taxable book is NECESSARY, not sufficient, under IRC section 1091; nothing here is a section 1091-safety claim. The Roth benchmark is SPY, price-only, no dividends -- power and defense are not US large-cap-growth books, so a raw adjusted_excess-vs-SPY reading is not this round's decision quantity; the decision quantity is arm-minus-passive within basket. Every note in the persona corpus that produced the underlying hypotheses has published=null (PERSONA-HYPOTHESES.md), so bull-2024 and recent are IN-SAMPLE to the hypothesis and any positive result confined to them is hindsight, not a finding -- the fair test is the six windows ending by 2022-10 (gfc, chop-2011, chop-2015, q4-2018, covid, bear-2022), reported separately. Pre-registered 2026-09-09, before any card ran. Not investment advice; no influencer is endorsed. See strategy-program/ROUND-47-PLAN.md.",
+    "falsification": "Pre-registered decision rule (PROTOCOL.md section 7 floor, 21.2pp): an edge requires median(r47-defense-dip-trim) minus median(r47-defense-passive) > 21.2pp AND BH q<0.10 over all 12 cells this round runs (denominator against `r47-control-passive`). A margin inside the floor is a null whichever side it lands on, and the pre-registered prediction is null on every arm. Nothing is promoted from this round regardless of outcome -- it is a pre-registered measurement study. Predicted not to beat the better of its own two component arms (dip, trim) on median adjusted excess -- combining a filter and an exit is not expected to out-earn the better of the two alone.",
+    "universe": [
+      "LMT",
+      "NOC",
+      "GD",
+      "RTX"
+    ],
+    "entry": "close < sma(50) and close > sma(200)",
+    "exit": "close > sma(200) * 1.15",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 249,
+  "starting_equity": "10000.00",
+  "ending_equity": "11491.38",
+  "total_return": "0.149138",
+  "max_drawdown": "-0.12082793689887261",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.7871485943775101,
+  "capital_exposure": 0.5155722409638555,
+  "win_rate": 0.6190476190476191,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "RTX",
+      "entry_date": "2025-09-10",
+      "entry_price": "152.08",
+      "exit_date": "2025-09-11",
+      "exit_price": "154.95",
+      "quantity": "16",
+      "exit_reason": "rule",
+      "pnl": "45.85",
+      "return_pct": "0.01884287874802735402419779064",
+      "bars_held": 1
+    },
+    {
+      "symbol": "RTX",
+      "entry_date": "2025-10-13",
+      "entry_price": "158.53",
+      "exit_date": "2025-10-22",
+      "exit_price": "174.40",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "237.97",
+      "return_pct": "0.1000735928005214575579806136",
+      "bars_held": 7
+    },
+    {
+      "symbol": "RTX",
+      "entry_date": "2025-12-02",
+      "entry_price": "169.46",
+      "exit_date": "2025-12-05",
+      "exit_price": "171.91",
+      "quantity": "14",
+      "exit_reason": "rule",
+      "pnl": "34.23",
+      "return_pct": "0.01442818364215744128407883866",
+      "bars_held": 3
+    },
+    {
+      "symbol": "GD",
+      "entry_date": "2025-11-25",
+      "entry_price": "338.96",
+      "exit_date": "2026-01-07",
+      "exit_price": "361.82",
+      "quantity": "7",
+      "exit_reason": "rule",
+      "pnl": "159.95",
+      "return_pct": "0.06741208402171347651640311541",
+      "bars_held": 28
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2025-11-06",
+      "entry_price": "473.35",
+      "exit_date": "2026-01-12",
+      "exit_price": "548.69",
+      "quantity": "5",
+      "exit_reason": "rule",
+      "pnl": "376.62",
+      "return_pct": "0.1591296081123904087884229429",
+      "bars_held": 44
+    },
+    {
+      "symbol": "NOC",
+      "entry_date": "2025-10-30",
+      "entry_price": "586.23",
+      "exit_date": "2026-01-15",
+      "exit_price": "640.05",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "215.21",
+      "return_pct": "0.09177711819592992511471606707",
+      "bars_held": 52
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-03-24",
+      "entry_price": "613.26",
+      "exit_date": "2026-03-25",
+      "exit_price": "612.19",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-4.35",
+      "return_pct": "-0.001773309852264944721651501810",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-03-26",
+      "entry_price": "620.11",
+      "exit_date": "2026-03-27",
+      "exit_price": "625.39",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "21.05",
+      "return_pct": "0.008486397574623857057618809566",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-03-30",
+      "entry_price": "621.34",
+      "exit_date": "2026-03-31",
+      "exit_price": "604.20",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-68.63",
+      "return_pct": "-0.02761370586152509093250072424",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-01",
+      "entry_price": "609.12",
+      "exit_date": "2026-04-02",
+      "exit_price": "616.39",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "29.01",
+      "return_pct": "0.01190652088258471237194641450",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NOC",
+      "entry_date": "2026-03-24",
+      "entry_price": "670.34",
+      "exit_date": "2026-04-06",
+      "exit_price": "700.65",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "90.87",
+      "return_pct": "0.04518602500223767043589820091",
+      "bars_held": 8
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-06",
+      "entry_price": "623.42",
+      "exit_date": "2026-04-07",
+      "exit_price": "635.28",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "47.37",
+      "return_pct": "0.01899602194347309999679188990",
+      "bars_held": 1
+    },
+    {
+      "symbol": "RTX",
+      "entry_date": "2026-03-23",
+      "entry_price": "197.27",
+      "exit_date": "2026-04-09",
+      "exit_price": "203.12",
+      "quantity": "12",
+      "exit_reason": "rule",
+      "pnl": "70.13",
+      "return_pct": "0.02962521755293083928963687670",
+      "bars_held": 12
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-08",
+      "entry_price": "612.58",
+      "exit_date": "2026-04-09",
+      "exit_price": "627.68",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "45.25",
+      "return_pct": "0.02462263432259187915591977102",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-09",
+      "entry_price": "628.30",
+      "exit_date": "2026-04-10",
+      "exit_price": "618.97",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-28.04",
+      "return_pct": "-0.01487612074911135869276884715",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-10",
+      "entry_price": "619.59",
+      "exit_date": "2026-04-13",
+      "exit_price": "617.56",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-8.19",
+      "return_pct": "-0.003304604657918946400038735293",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-13",
+      "entry_price": "618.18",
+      "exit_date": "2026-04-14",
+      "exit_price": "616.69",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-6.03",
+      "return_pct": "-0.002438610113559157526933902747",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-14",
+      "entry_price": "617.31",
+      "exit_date": "2026-04-15",
+      "exit_price": "610.69",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-26.55",
+      "return_pct": "-0.01075229625309811925936725470",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-15",
+      "entry_price": "611.31",
+      "exit_date": "2026-04-16",
+      "exit_price": "610.40",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-3.71",
+      "return_pct": "-0.001517233482193976869346158250",
+      "bars_held": 1
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-16",
+      "entry_price": "611.02",
+      "exit_date": "2026-04-17",
+      "exit_price": "604.03",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-28.03",
+      "return_pct": "-0.01146852803508886779483486629",
+      "bars_held": 1
+    },
+    {
+      "symbol": "RTX",
+      "entry_date": "2026-04-20",
+      "entry_price": "197.90",
+      "exit_date": "2026-07-28",
+      "exit_price": "220.88",
+      "quantity": "12",
+      "exit_reason": "rule",
+      "pnl": "275.68",
+      "return_pct": "0.1160855651002189658076469597",
+      "bars_held": 68
+    },
+    {
+      "symbol": "GD",
+      "entry_date": "2026-02-03",
+      "entry_price": "349.25",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "7",
+      "exit_reason": "open_at_end",
+      "pnl": "309.61",
+      "return_pct": "0.1266428060128847530422333572",
+      "bars_held": 135
+    },
+    {
+      "symbol": "NOC",
+      "entry_date": "2026-04-07",
+      "entry_price": "690.49",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "3",
+      "exit_reason": "open_at_end",
+      "pnl": "-304.05",
+      "return_pct": "-0.1467798230242291705890020131",
+      "bars_held": 92
+    },
+    {
+      "symbol": "LMT",
+      "entry_date": "2026-04-17",
+      "entry_price": "604.63",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "4",
+      "exit_reason": "open_at_end",
+      "pnl": "10.16",
+      "return_pct": "0.004200916262838430114284769198",
+      "bars_held": 84
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "LMT",
+      "reason": "$2451.24 exceeds $1793.78 of settled cash (total cash $4242.47; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "LMT",
+      "reason": "$1878.03 exceeds $1762.03 of settled cash (total cash $4263.52; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "LMT",
+      "reason": "$2419.20 exceeds $1778.16 of settled cash (total cash $4194.89; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "LMT",
+      "reason": "$2468.04 exceeds $1758.41 of settled cash (total cash $4223.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NOC",
+      "reason": "$2104.05 exceeds $1730.22 of settled cash (total cash $3832.11; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "RTX",
+      "reason": "$2382.12 exceeds $1826.18 of settled cash (total cash $4267.71; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "RTX",
+      "reason": "$2348.16 exceeds $1849.19 of settled cash (total cash $4265.24; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "0.2061513798956434274218897341",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

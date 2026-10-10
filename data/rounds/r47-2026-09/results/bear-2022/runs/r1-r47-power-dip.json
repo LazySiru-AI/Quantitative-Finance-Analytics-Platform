@@ -1,0 +1,106 @@
+{
+  "card": {
+    "agent_id": "r47-power-dip",
+    "display_name": "R47 basket / power / dip",
+    "discipline": "trend",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 47 dip cell. Basket (power): Creator A's and Creator D's electricity-infrastructure-as-AI-bottleneck thesis: two regulated utilities (NEE, DUK), one merchant/renewable utility (SO), one uranium miner (CCJ) -- round 44's basket, reused verbatim (ROUND-44-PLAN.md section 2). Universe: NEE DUK SO CCJ. Arm: dip -- Creator C's and Creator A's 'accumulate on a pullback inside an uptrend' entry (close < sma(50) and close > sma(200)) paired with round 44's never-true exit (close < 0): a filled slot is never sold by this rule. 'Then hold', not a round-trip. Purpose ROTH: no ticker this round trades is claimed by any savings- or trading-purpose card in the live library (app.evolution.promotion._library_cards, all six tiers), because Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss whose replacement is bought inside an IRA. Ticker disjointness from the taxable book is NECESSARY, not sufficient, under IRC section 1091; nothing here is a section 1091-safety claim. The Roth benchmark is SPY, price-only, no dividends -- power and defense are not US large-cap-growth books, so a raw adjusted_excess-vs-SPY reading is not this round's decision quantity; the decision quantity is arm-minus-passive within basket. Every note in the persona corpus that produced the underlying hypotheses has published=null (PERSONA-HYPOTHESES.md), so bull-2024 and recent are IN-SAMPLE to the hypothesis and any positive result confined to them is hindsight, not a finding -- the fair test is the six windows ending by 2022-10 (gfc, chop-2011, chop-2015, q4-2018, covid, bear-2022), reported separately. Pre-registered 2026-09-09, before any card ran. Not investment advice; no influencer is endorsed. See strategy-program/ROUND-47-PLAN.md.",
+    "falsification": "Pre-registered decision rule (PROTOCOL.md section 7 floor, 21.2pp): an edge requires median(r47-power-dip) minus median(r47-power-passive) > 21.2pp AND BH q<0.10 over all 12 cells this round runs (denominator against `r47-control-passive`). A margin inside the floor is a null whichever side it lands on, and the pre-registered prediction is null on every arm. Nothing is promoted from this round regardless of outcome -- it is a pre-registered measurement study. Predicted to sit out the start of every window until the first qualifying pullback, so its session exposure is below the passive arm's and its adjusted-excess gap from passive is mostly attributable to that entry delay, not to the pullback condition itself -- reported per window in ROUND-47-PLAN.md's days-to-first-entry table.",
+    "universe": [
+      "NEE",
+      "DUK",
+      "SO",
+      "CCJ"
+    ],
+    "entry": "close < sma(50) and close > sma(200)",
+    "exit": "close < 0",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 196,
+  "starting_equity": "10000.00",
+  "ending_equity": "8898.26",
+  "total_return": "-0.110174",
+  "max_drawdown": "-0.23098143364448664",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 1.0,
+  "capital_exposure": 0.8428927040816326,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "CCJ",
+      "entry_date": "2022-01-03",
+      "entry_price": "22.62",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "114",
+      "exit_reason": "open_at_end",
+      "pnl": "-36.48",
+      "return_pct": "-0.01414677276746242263483642794",
+      "bars_held": 195
+    },
+    {
+      "symbol": "NEE",
+      "entry_date": "2022-01-07",
+      "entry_price": "85.81",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "29",
+      "exit_reason": "open_at_end",
+      "pnl": "-378.74",
+      "return_pct": "-0.1521967136697354620673581168",
+      "bars_held": 191
+    },
+    {
+      "symbol": "SO",
+      "entry_date": "2022-02-11",
+      "entry_price": "66.26",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "37",
+      "exit_reason": "open_at_end",
+      "pnl": "-176.12",
+      "return_pct": "-0.07183821309990944763054633263",
+      "bars_held": 167
+    },
+    {
+      "symbol": "DUK",
+      "entry_date": "2022-05-11",
+      "entry_price": "109.17",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "22",
+      "exit_reason": "open_at_end",
+      "pnl": "-510.40",
+      "return_pct": "-0.2125125950352660987450764862",
+      "bars_held": 106
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "DUK",
+      "reason": "$2489.75 exceeds $2481.21 of settled cash (total cash $2481.21; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.2513961788788578626915809364",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

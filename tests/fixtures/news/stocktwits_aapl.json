@@ -1,0 +1,3179 @@
+{
+ "symbol": {
+  "id": 686,
+  "symbol": "AAPL",
+  "symbol_mic": "AAPL.XNAS",
+  "symbol_display": "AAPL",
+  "exchange": "NASDAQ",
+  "region": "US",
+  "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+  "title": "Apple Inc",
+  "aliases": [],
+  "deeplink": "symbol/AAPL",
+  "external_id": null,
+  "is_following": false,
+  "watchlist_count": 990095,
+  "has_pricing": true,
+  "instrument_class": "Stock",
+  "live_event": false,
+  "trade_status": "FRACTIONAL"
+ },
+ "cursor": {
+  "more": true,
+  "since": 662713090,
+  "max": 662702479
+ },
+ "regions": [],
+ "filters": [],
+ "messages": [
+  {
+   "id": 662713090,
+   "body": "$AAPL Full penetration. Bearish crime? Penetration. And this goes on and on and back and forth. Smells bear crime, back to the lab, full penetration.",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " Full penetration. Bearish crime? Penetration. And this goes on and on and back and forth. Smells bear crime, back to the lab, full penetration."
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:55:21Z",
+   "discussion": false,
+   "source": {
+    "id": 2269,
+    "title": "StockTwits Web",
+    "url": "https://stocktwits.com"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.90"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": {
+     "basic": "Bullish"
+    },
+    "discussable": null
+   },
+   "user": {
+    "id": 5763002,
+    "username": "skcots_13",
+    "name": "DelmonicaPerez",
+    "avatar_url": "https://avatars.stocktwits.com/production/5763002/thumb-1744219559.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/5763002/thumb-1744219559.png",
+    "join_date": "2021-07-28",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 210,
+    "following": 13,
+    "ideas": 20395,
+    "watchlist_stocks_count": 66,
+    "like_count": 7835,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662712935,
+   "body": "$AAPL  BACK TO $315",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": "  BACK TO $315"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:53:47Z",
+   "discussion": false,
+   "source": {
+    "id": 2269,
+    "title": "StockTwits Web",
+    "url": "https://stocktwits.com"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.85"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": {
+     "basic": "Bullish"
+    },
+    "discussable": null
+   },
+   "user": {
+    "id": 187280,
+    "username": "MKFin",
+    "name": "M",
+    "avatar_url": "https://avatars.stocktwits.com/production/187280/thumb-1363215281.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/187280/thumb-1363215281.png",
+    "join_date": "2012-10-07",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 268,
+    "following": 564,
+    "ideas": 7866,
+    "watchlist_stocks_count": 300,
+    "like_count": 3387,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 1,
+    "user_ids": [
+     5763002
+    ]
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662712828,
+   "body": "$AAPL really doesn\u2019t like that 313 level today",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " really doesn\u2019t like that 313 level today"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:52:45Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.92"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 9578725,
+    "username": "bskewl3",
+    "name": "B",
+    "avatar_url": "http://avatars.stocktwits.com/images/default_avatar_10_thumb.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/images/default_avatar_10_thumb.png",
+    "join_date": "2024-11-12",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 1,
+    "following": 0,
+    "ideas": 303,
+    "watchlist_stocks_count": 2,
+    "like_count": 323,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662712531,
+   "body": "\ud83d\udea8 SWING TRADE ALERT \ud83d\udea8\n\nContract: $AAPL 08/26 315C  \nEntry: @1.35\n\n\ud83d\ude80 Fill confirmed!",
+   "tokenized_body": [
+    {
+     "type": "text",
+     "data": {
+      "text": "\ud83d\udea8 SWING TRADE ALERT \ud83d\udea8\n\nContract: "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " 08/26 315C  \nEntry: @1.35\n\n\ud83d\ude80 Fill confirmed!"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:49:51Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "313.17"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 11026795,
+    "username": "theta_slayer21",
+    "name": "Carrick",
+    "avatar_url": "http://avatars.stocktwits.com/images/default_avatar_4_thumb.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/images/default_avatar_4_thumb.png",
+    "join_date": "2026-06-17",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "NG",
+    "search_regions": [],
+    "followers": 10,
+    "following": 2,
+    "ideas": 125,
+    "watchlist_stocks_count": 2,
+    "like_count": 125,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 1,
+    "user_ids": [
+     1362367
+    ]
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662711790,
+   "body": "$AAPL lmao straight ripper",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " lmao straight ripper"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:42:23Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.20"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 3664694,
+    "username": "2good4u",
+    "name": "john dingo",
+    "avatar_url": "http://avatars.stocktwits.com/images/default_avatar_13_thumb.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/images/default_avatar_13_thumb.png",
+    "join_date": "2020-06-21",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 119,
+    "following": 64,
+    "ideas": 15374,
+    "watchlist_stocks_count": 61,
+    "like_count": 778,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662711607,
+   "body": "$BB with comments like this, I&#39;m supposed to believe that the market is all knowing? $AMZN  \n \nThe market was told years ago that BlackBerry is an automotive software giant by Foxconn... In 2023. $AAPL  \n \n2023 \n \nThe blind eyes are real sour grapes. $NVDA  \n \nMake the laggards pay.",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$BB",
+      "symbol": "BB",
+      "symbol_display": "BB",
+      "logo_url": "https://logos.stocktwits-cdn.com/BB.png",
+      "deeplink": "symbol/BB"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " with comments like this, I'm supposed to believe that the market is all knowing? "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AMZN",
+      "symbol": "AMZN",
+      "symbol_display": "AMZN",
+      "logo_url": "https://logos.stocktwits-cdn.com/AMZN.png",
+      "deeplink": "symbol/AMZN"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": "  \n \nThe market was told years ago that BlackBerry is an automotive software giant by Foxconn... In 2023. "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": "  \n \n2023 \n \nThe blind eyes are real sour grapes. "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$NVDA",
+      "symbol": "NVDA",
+      "symbol_display": "NVDA",
+      "logo_url": "https://logos.stocktwits-cdn.com/NVDA.png",
+      "deeplink": "symbol/NVDA"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": "  \n \nMake the laggards pay."
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:41:04Z",
+   "discussion": false,
+   "source": {
+    "id": 2269,
+    "title": "StockTwits Web",
+    "url": "https://stocktwits.com"
+   },
+   "prices": [
+    {
+     "id": 3379,
+     "symbol": "BB",
+     "symbol_mic": "BB.XNYS",
+     "price": "7.70"
+    },
+    {
+     "id": 864,
+     "symbol": "AMZN",
+     "symbol_mic": "AMZN.XNAS",
+     "price": "263.06"
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.24"
+    },
+    {
+     "id": 2925,
+     "symbol": "NVDA",
+     "symbol_mic": "NVDA.XNAS",
+     "price": "210.35"
+    }
+   ],
+   "reshare_message": {
+    "reshared_count": 1,
+    "reshared_deleted": false,
+    "reshared_user_deleted": false,
+    "parent_reshared_deleted": false,
+    "message": {
+     "id": 662711004,
+     "body": "$BB so did they get out of AI businesses,  back to phones?",
+     "tokenized_body": [
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$BB",
+        "symbol": "BB",
+        "symbol_display": "BB",
+        "logo_url": "https://logos.stocktwits-cdn.com/BB.png",
+        "deeplink": "symbol/BB"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " so did they get out of AI businesses,  back to phones?"
+       }
+      }
+     ],
+     "created_at": "2026-08-24T16:35:22Z",
+     "discussion": false,
+     "user": {
+      "id": 5840083,
+      "username": "Munited1m",
+      "name": "Sam",
+      "avatar_url": "https://avatars.stocktwits.com/production/5840083/thumb-1688488943.png",
+      "avatar_url_ssl": "https://avatars.stocktwits.com/production/5840083/thumb-1688488943.png",
+      "join_date": "2021-08-29",
+      "official": false,
+      "identity": "User",
+      "classification": [
+       "premium",
+       "premium_edge"
+      ],
+      "badges": [],
+      "home_country": "US",
+      "search_regions": [],
+      "followers": 79,
+      "following": 22,
+      "ideas": 5436,
+      "watchlist_stocks_count": 292,
+      "like_count": 4980,
+      "plus_tier": "",
+      "premium_room": "",
+      "trade_app": false,
+      "trade_status": "PENDING_MFA",
+      "subscribers_count": 3,
+      "subscribed_to_count": 1,
+      "following_stocks": 0,
+      "location": "Corrupted Earth",
+      "bio": "Charts? F U. It's all about the fundamentals of the company, nothing else matters",
+      "website_url": null,
+      "trading_strategy": {
+       "assets_frequently_traded": [],
+       "approach": null,
+       "approaches": [],
+       "holding_period": null,
+       "holding_periods": [],
+       "experience": null,
+       "interests": []
+      },
+      "trading_profile": {
+       "industry": [],
+       "trading_experience": [],
+       "approach": [],
+       "risk_profile": [],
+       "holding_period": [],
+       "capitalization_bias": [],
+       "long_short": [],
+       "asset_classes_traded": []
+      }
+     },
+     "source": {
+      "id": 2095,
+      "title": "StockTwits For Android ",
+      "url": "http://www.stocktwits.com/mobile"
+     },
+     "symbols": [
+      {
+       "id": 3379,
+       "symbol": "BB",
+       "symbol_mic": "BB.XNYS",
+       "symbol_display": "BB",
+       "exchange": "NYSE",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/BB.png",
+       "title": "BlackBerry Ltd",
+       "aliases": [
+        "RIMM",
+        "BBRY"
+       ],
+       "deeplink": "symbol/BB",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 150504,
+       "has_pricing": true,
+       "instrument_class": "Stock",
+       "live_event": false,
+       "sector": "TechnologyServices",
+       "industry": "PackagedSoftware",
+       "trending": false,
+       "trending_score": 3.26492,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": true
+       },
+       "cusip": "09228F103",
+       "isin": "CA09228F1036",
+       "sentiment_change": -2.38,
+       "volume_change": 2.82,
+       "should_seo_index": true
+      }
+     ],
+     "prices": [
+      {
+       "id": 3379,
+       "symbol": "BB",
+       "symbol_mic": "BB.XNYS",
+       "price": "7.70"
+      }
+     ],
+     "likes": {
+      "total": 2,
+      "user_ids": [
+       9985231,
+       4048987
+      ]
+     },
+     "mentioned_users": [],
+     "entities": {
+      "media": [],
+      "sentiment": {
+       "basic": "Bullish"
+      },
+      "discussable": null
+     }
+    }
+   },
+   "mentioned_users": [],
+   "entities": {
+    "media": [
+     {
+      "id": 14260746,
+      "type": "image",
+      "thumb": "https://media.stocktwits-cdn.com/api/3/media/14260746/thumb.webp",
+      "medium": "https://media.stocktwits-cdn.com/api/3/media/14260746/medium.webp",
+      "large": "https://media.stocktwits-cdn.com/api/3/media/14260746/large.webp",
+      "original": "https://media.stocktwits-cdn.com/api/3/media/14260746/original.png",
+      "url": "https://media.stocktwits-cdn.com/api/3/media/14260746/default.webp",
+      "height": 1721,
+      "width": 1080,
+      "ratio": 0.627542,
+      "provider": null,
+      "provider_id": null
+     }
+    ],
+    "chart": {
+     "id": 14260746,
+     "type": "image",
+     "thumb": "https://media.stocktwits-cdn.com/api/3/media/14260746/thumb.webp",
+     "medium": "https://media.stocktwits-cdn.com/api/3/media/14260746/medium.webp",
+     "large": "https://media.stocktwits-cdn.com/api/3/media/14260746/large.webp",
+     "original": "https://media.stocktwits-cdn.com/api/3/media/14260746/original.png",
+     "url": "https://media.stocktwits-cdn.com/api/3/media/14260746/default.webp",
+     "height": 1721,
+     "width": 1080,
+     "ratio": 0.627542
+    },
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 6635624,
+    "username": "snowPOW",
+    "name": "BP",
+    "avatar_url": "https://avatars.stocktwits.com/production/6635624/thumb-1653117110.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/6635624/thumb-1653117110.png",
+    "join_date": "2022-05-21",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "CA",
+    "search_regions": [],
+    "followers": 200,
+    "following": 159,
+    "ideas": 18830,
+    "watchlist_stocks_count": 28,
+    "like_count": 30744,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 4,
+    "user_ids": [
+     5840083,
+     2959648,
+     420998,
+     495989
+    ]
+   },
+   "symbols": [
+    {
+     "id": 3379,
+     "symbol": "BB",
+     "symbol_mic": "BB.XNYS",
+     "symbol_display": "BB",
+     "exchange": "NYSE",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/BB.png",
+     "title": "BlackBerry Ltd",
+     "aliases": [
+      "RIMM",
+      "BBRY"
+     ],
+     "deeplink": "symbol/BB",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 150504,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -2.38,
+     "volume_change": 2.82
+    },
+    {
+     "id": 864,
+     "symbol": "AMZN",
+     "symbol_mic": "AMZN.XNAS",
+     "symbol_display": "AMZN",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AMZN.png",
+     "title": "Amazon.com Inc",
+     "aliases": [],
+     "deeplink": "symbol/AMZN",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 700030,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.45,
+     "volume_change": -3.96
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    },
+    {
+     "id": 2925,
+     "symbol": "NVDA",
+     "symbol_mic": "NVDA.XNAS",
+     "symbol_display": "NVDA",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/NVDA.png",
+     "title": "NVIDIA Corp",
+     "aliases": [],
+     "deeplink": "symbol/NVDA",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 661188,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "earnings_cta": "up_earn_tab",
+     "earnings_id": "2c072ed5-d0a5-4224-9a62-705e71239bd4",
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": 1.53,
+     "volume_change": 10.83
+    }
+   ]
+  },
+  {
+   "id": 662711527,
+   "body": "$SPY $QQQ $SPX $TSLA $AAPL  who\u2019s ready for a BOND RUN ??",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$SPY",
+      "symbol": "SPY",
+      "symbol_display": "SPY",
+      "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+      "deeplink": "symbol/SPY"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$QQQ",
+      "symbol": "QQQ",
+      "symbol_display": "QQQ",
+      "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+      "deeplink": "symbol/QQQ"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$SPX",
+      "symbol": "SPX",
+      "symbol_display": "SPX",
+      "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+      "deeplink": "symbol/SPX"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$TSLA",
+      "symbol": "TSLA",
+      "symbol_display": "TSLA",
+      "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+      "deeplink": "symbol/TSLA"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": "  who\u2019s ready for a BOND RUN ??"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:40:18Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 7271,
+     "symbol": "SPY",
+     "symbol_mic": "SPY.ARCX",
+     "price": "764.32"
+    },
+    {
+     "id": 9581,
+     "symbol": "QQQ",
+     "symbol_mic": "QQQ.XNAS",
+     "price": "708.31"
+    },
+    {
+     "id": 679,
+     "symbol": "SPX",
+     "symbol_mic": "SPX.I",
+     "price": "7666.93"
+    },
+    {
+     "id": 8660,
+     "symbol": "TSLA",
+     "symbol_mic": "TSLA.XNAS",
+     "price": "355.21"
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.26"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [
+     {
+      "id": 14260749,
+      "type": "gif",
+      "thumb": null,
+      "medium": null,
+      "large": null,
+      "original": null,
+      "url": null,
+      "height": 304,
+      "width": 480,
+      "ratio": 1.57895,
+      "provider": "giphy",
+      "provider_id": "XnjvNROVynOTaOApgC"
+     }
+    ],
+    "giphy": {
+     "id": "XnjvNROVynOTaOApgC"
+    },
+    "sentiment": {
+     "basic": "Bearish"
+    },
+    "discussable": null
+   },
+   "user": {
+    "id": 10634918,
+    "username": "Tj_strippers_and_blow",
+    "name": "White dude",
+    "avatar_url": "https://avatars.stocktwits.com/production/10634918/thumb-1775861394.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/10634918/thumb-1775861394.png",
+    "join_date": "2025-10-29",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 110,
+    "following": 25,
+    "ideas": 5186,
+    "watchlist_stocks_count": 27,
+    "like_count": 3605,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 4,
+    "user_ids": [
+     10966453,
+     6968449,
+     1496474,
+     1791543
+    ]
+   },
+   "symbols": [
+    {
+     "id": 7271,
+     "symbol": "SPY",
+     "symbol_mic": "SPY.ARCX",
+     "symbol_display": "SPY",
+     "exchange": "NYSEArca",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+     "title": "SPDR S&P 500 ETF Trust",
+     "aliases": [],
+     "deeplink": "symbol/SPY",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 636369,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": true,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.23,
+     "volume_change": 0.21
+    },
+    {
+     "id": 9581,
+     "symbol": "QQQ",
+     "symbol_mic": "QQQ.XNAS",
+     "symbol_display": "QQQ",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+     "title": "Invesco QQQ Trust Series 1",
+     "aliases": [
+      "QQQQ"
+     ],
+     "deeplink": "symbol/QQQ",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 278755,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.41,
+     "volume_change": 2.19
+    },
+    {
+     "id": 679,
+     "symbol": "SPX",
+     "symbol_mic": "SPX.I",
+     "symbol_display": "SPX",
+     "exchange": "INDEX",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+     "title": "S&P 500 Index",
+     "aliases": [],
+     "deeplink": "symbol/SPX",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 114122,
+     "has_pricing": true,
+     "instrument_class": "INDEX",
+     "live_event": false,
+     "sentiment_change": 0.63,
+     "volume_change": 0.0
+    },
+    {
+     "id": 8660,
+     "symbol": "TSLA",
+     "symbol_mic": "TSLA.XNAS",
+     "symbol_display": "TSLA",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+     "title": "Tesla Inc",
+     "aliases": [],
+     "deeplink": "symbol/TSLA",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 1062509,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "earnings_cta": "res_earn_tab",
+     "earnings_id": "e92cb3fb-d89f-4af7-b63e-e499b0ca84a4",
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.36,
+     "volume_change": 3.78
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662711254,
+   "body": "$SPY $QQQ $SPX $AAPL $TSLA alright people you heard it Scotty will do &quot;whatever it takes&quot;",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$SPY",
+      "symbol": "SPY",
+      "symbol_display": "SPY",
+      "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+      "deeplink": "symbol/SPY"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$QQQ",
+      "symbol": "QQQ",
+      "symbol_display": "QQQ",
+      "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+      "deeplink": "symbol/QQQ"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$SPX",
+      "symbol": "SPX",
+      "symbol_display": "SPX",
+      "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+      "deeplink": "symbol/SPX"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$TSLA",
+      "symbol": "TSLA",
+      "symbol_display": "TSLA",
+      "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+      "deeplink": "symbol/TSLA"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " alright people you heard it Scotty will do \"whatever it takes\""
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:37:45Z",
+   "discussion": false,
+   "source": {
+    "id": 2095,
+    "title": "StockTwits For Android ",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 7271,
+     "symbol": "SPY",
+     "symbol_mic": "SPY.ARCX",
+     "price": "764.61"
+    },
+    {
+     "id": 9581,
+     "symbol": "QQQ",
+     "symbol_mic": "QQQ.XNAS",
+     "price": "708.67"
+    },
+    {
+     "id": 679,
+     "symbol": "SPX",
+     "symbol_mic": "SPX.I",
+     "price": "7668.61"
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.21"
+    },
+    {
+     "id": 8660,
+     "symbol": "TSLA",
+     "symbol_mic": "TSLA.XNAS",
+     "price": "356.29"
+    }
+   ],
+   "reshare_message": {
+    "reshared_count": 2,
+    "reshared_deleted": false,
+    "reshared_user_deleted": false,
+    "parent_reshared_deleted": false,
+    "parent_reshared_url": "/Stoxpo/message/662710019",
+    "parent_reshared_message_id": 662710019,
+    "message": {
+     "id": 662710971,
+     "body": "$SPY $QQQ $SPX $AAPL $TSLA so much for free markets huh !! lol \ud83d\ude02 it\u2019s so good that we\u2019ll do anything !!! Lmfao \ud83e\udd23 absolute clown show",
+     "tokenized_body": [
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$SPY",
+        "symbol": "SPY",
+        "symbol_display": "SPY",
+        "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+        "deeplink": "symbol/SPY"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$QQQ",
+        "symbol": "QQQ",
+        "symbol_display": "QQQ",
+        "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+        "deeplink": "symbol/QQQ"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$SPX",
+        "symbol": "SPX",
+        "symbol_display": "SPX",
+        "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+        "deeplink": "symbol/SPX"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$AAPL",
+        "symbol": "AAPL",
+        "symbol_display": "AAPL",
+        "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+        "deeplink": "symbol/AAPL"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$TSLA",
+        "symbol": "TSLA",
+        "symbol_display": "TSLA",
+        "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+        "deeplink": "symbol/TSLA"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " so much for free markets huh !! lol \ud83d\ude02 it\u2019s so good that we\u2019ll do anything !!! Lmfao \ud83e\udd23 absolute clown show"
+       }
+      }
+     ],
+     "created_at": "2026-08-24T16:35:07Z",
+     "discussion": false,
+     "user": {
+      "id": 10634918,
+      "username": "Tj_strippers_and_blow",
+      "name": "White dude",
+      "avatar_url": "https://avatars.stocktwits.com/production/10634918/thumb-1775861394.png",
+      "avatar_url_ssl": "https://avatars.stocktwits.com/production/10634918/thumb-1775861394.png",
+      "join_date": "2025-10-29",
+      "official": false,
+      "identity": "User",
+      "classification": [],
+      "badges": [],
+      "home_country": "US",
+      "search_regions": [],
+      "followers": 110,
+      "following": 25,
+      "ideas": 5186,
+      "watchlist_stocks_count": 27,
+      "like_count": 3606,
+      "plus_tier": "",
+      "premium_room": "",
+      "trade_app": false,
+      "trade_status": "PENDING_MFA",
+      "subscribers_count": 2,
+      "subscribed_to_count": 6,
+      "following_stocks": 0,
+      "location": "",
+      "bio": null,
+      "website_url": null,
+      "trading_strategy": {
+       "assets_frequently_traded": [],
+       "approach": null,
+       "approaches": [],
+       "holding_period": null,
+       "holding_periods": [],
+       "experience": null,
+       "interests": []
+      },
+      "trading_profile": {
+       "industry": [],
+       "trading_experience": [],
+       "approach": [],
+       "risk_profile": [],
+       "holding_period": [],
+       "capitalization_bias": [],
+       "long_short": [],
+       "asset_classes_traded": []
+      }
+     },
+     "source": {
+      "id": 1149,
+      "title": "StockTwits for iOS",
+      "url": "http://www.stocktwits.com/mobile"
+     },
+     "symbols": [
+      {
+       "id": 7271,
+       "symbol": "SPY",
+       "symbol_mic": "SPY.ARCX",
+       "symbol_display": "SPY",
+       "exchange": "NYSEArca",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+       "title": "SPDR S&P 500 ETF Trust",
+       "aliases": [],
+       "deeplink": "symbol/SPY",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 636366,
+       "has_pricing": true,
+       "instrument_class": "ExchangeTradedFund",
+       "live_event": false,
+       "sector": "Miscellaneous",
+       "industry": "InvestmentTrustsOrMutualFunds",
+       "trending": false,
+       "trending_score": 0.351915,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": false
+       },
+       "cusip": "78462F103",
+       "isin": "US78462F1030",
+       "sentiment_change": -0.23,
+       "volume_change": 0.21,
+       "should_seo_index": true
+      },
+      {
+       "id": 9581,
+       "symbol": "QQQ",
+       "symbol_mic": "QQQ.XNAS",
+       "symbol_display": "QQQ",
+       "exchange": "NASDAQ",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+       "title": "Invesco QQQ Trust Series 1",
+       "aliases": [
+        "QQQQ"
+       ],
+       "deeplink": "symbol/QQQ",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 278752,
+       "has_pricing": true,
+       "instrument_class": "ExchangeTradedFund",
+       "live_event": false,
+       "sector": "Miscellaneous",
+       "industry": "InvestmentTrustsOrMutualFunds",
+       "trending": false,
+       "trending_score": 0.739386,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": false
+       },
+       "cusip": "46090E103",
+       "isin": "US46090E1038",
+       "sentiment_change": -0.41,
+       "volume_change": 2.19,
+       "should_seo_index": true
+      },
+      {
+       "id": 679,
+       "symbol": "SPX",
+       "symbol_mic": "SPX.I",
+       "symbol_display": "SPX",
+       "exchange": "INDEX",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+       "title": "S&P 500 Index",
+       "aliases": [],
+       "deeplink": "symbol/SPX",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 114121,
+       "has_pricing": true,
+       "instrument_class": "INDEX",
+       "live_event": false,
+       "sector": "Miscellaneous",
+       "industry": "InvestmentTrustsOrMutualFunds",
+       "trending": false,
+       "trending_score": 5.00352,
+       "trends": null,
+       "features": {
+        "alerts_price": false,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": false
+       },
+       "cusip": null,
+       "isin": null,
+       "sentiment_change": 0.63,
+       "volume_change": 0.0,
+       "should_seo_index": true
+      },
+      {
+       "id": 686,
+       "symbol": "AAPL",
+       "symbol_mic": "AAPL.XNAS",
+       "symbol_display": "AAPL",
+       "exchange": "NASDAQ",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+       "title": "Apple Inc",
+       "aliases": [],
+       "deeplink": "symbol/AAPL",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 990096,
+       "has_pricing": true,
+       "instrument_class": "Stock",
+       "live_event": false,
+       "sector": "ElectronicTechnology",
+       "industry": "TelecommunicationsEquipment",
+       "trending": false,
+       "trending_score": -2.68507,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": true
+       },
+       "cusip": "037833100",
+       "isin": "US0378331005",
+       "sentiment_change": -0.95,
+       "volume_change": -6.85,
+       "should_seo_index": true
+      },
+      {
+       "id": 8660,
+       "symbol": "TSLA",
+       "symbol_mic": "TSLA.XNAS",
+       "symbol_display": "TSLA",
+       "exchange": "NASDAQ",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+       "title": "Tesla Inc",
+       "aliases": [],
+       "deeplink": "symbol/TSLA",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 1062507,
+       "has_pricing": true,
+       "instrument_class": "Stock",
+       "live_event": false,
+       "earnings_cta": "res_earn_tab",
+       "earnings_id": "e92cb3fb-d89f-4af7-b63e-e499b0ca84a4",
+       "sector": "ConsumerDurables",
+       "industry": "MotorVehicles",
+       "trending": false,
+       "trending_score": 0.289464,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": true
+       },
+       "cusip": "88160R101",
+       "isin": "US88160R1014",
+       "sentiment_change": -0.36,
+       "volume_change": 3.78,
+       "should_seo_index": true
+      }
+     ],
+     "prices": [
+      {
+       "id": 7271,
+       "symbol": "SPY",
+       "symbol_mic": "SPY.ARCX",
+       "price": "764.59"
+      },
+      {
+       "id": 9581,
+       "symbol": "QQQ",
+       "symbol_mic": "QQQ.XNAS",
+       "price": "708.45"
+      },
+      {
+       "id": 679,
+       "symbol": "SPX",
+       "symbol_mic": "SPX.I",
+       "price": "7668.61"
+      },
+      {
+       "id": 686,
+       "symbol": "AAPL",
+       "symbol_mic": "AAPL.XNAS",
+       "price": "312.13"
+      },
+      {
+       "id": 8660,
+       "symbol": "TSLA",
+       "symbol_mic": "TSLA.XNAS",
+       "price": "356.65"
+      }
+     ],
+     "likes": {
+      "total": 1,
+      "user_ids": [
+       919352
+      ]
+     },
+     "mentioned_users": [],
+     "entities": {
+      "media": [],
+      "sentiment": {
+       "basic": "Bearish"
+      },
+      "discussable": null
+     }
+    }
+   },
+   "mentioned_users": [],
+   "entities": {
+    "media": [
+     {
+      "id": 14260689,
+      "type": "gif",
+      "thumb": null,
+      "medium": null,
+      "large": null,
+      "original": null,
+      "url": null,
+      "height": 525,
+      "width": 933,
+      "ratio": 1.77714,
+      "provider": "giphy",
+      "provider_id": "qjSXMi9PLQA6asuKam"
+     }
+    ],
+    "giphy": {
+     "id": "qjSXMi9PLQA6asuKam"
+    },
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 1124524,
+    "username": "Tell_It_Like_It_Is",
+    "name": "Straight_Forward",
+    "avatar_url": "http://avatars.stocktwits.com/images/default_avatar_3_thumb.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/images/default_avatar_3_thumb.png",
+    "join_date": "2017-07-14",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 102,
+    "following": 9,
+    "ideas": 10903,
+    "watchlist_stocks_count": 99,
+    "like_count": 615,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 2,
+    "user_ids": [
+     10634918,
+     3209997
+    ]
+   },
+   "symbols": [
+    {
+     "id": 7271,
+     "symbol": "SPY",
+     "symbol_mic": "SPY.ARCX",
+     "symbol_display": "SPY",
+     "exchange": "NYSEArca",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+     "title": "SPDR S&P 500 ETF Trust",
+     "aliases": [],
+     "deeplink": "symbol/SPY",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 636369,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": true,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.23,
+     "volume_change": 0.21
+    },
+    {
+     "id": 9581,
+     "symbol": "QQQ",
+     "symbol_mic": "QQQ.XNAS",
+     "symbol_display": "QQQ",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+     "title": "Invesco QQQ Trust Series 1",
+     "aliases": [
+      "QQQQ"
+     ],
+     "deeplink": "symbol/QQQ",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 278755,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.41,
+     "volume_change": 2.19
+    },
+    {
+     "id": 679,
+     "symbol": "SPX",
+     "symbol_mic": "SPX.I",
+     "symbol_display": "SPX",
+     "exchange": "INDEX",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+     "title": "S&P 500 Index",
+     "aliases": [],
+     "deeplink": "symbol/SPX",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 114122,
+     "has_pricing": true,
+     "instrument_class": "INDEX",
+     "live_event": false,
+     "sentiment_change": 0.63,
+     "volume_change": 0.0
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    },
+    {
+     "id": 8660,
+     "symbol": "TSLA",
+     "symbol_mic": "TSLA.XNAS",
+     "symbol_display": "TSLA",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+     "title": "Tesla Inc",
+     "aliases": [],
+     "deeplink": "symbol/TSLA",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 1062509,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "earnings_cta": "res_earn_tab",
+     "earnings_id": "e92cb3fb-d89f-4af7-b63e-e499b0ca84a4",
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.36,
+     "volume_change": 3.78
+    }
+   ]
+  },
+  {
+   "id": 662711064,
+   "body": "$AAPL I\u2019ll wait for am drop",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " I\u2019ll wait for am drop"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:35:55Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.17"
+    }
+   ],
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 4211416,
+    "username": "bagholder56",
+    "name": "Keeprolling",
+    "avatar_url": "https://avatars.stocktwits.com/production/4211416/thumb-1661906600.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/4211416/thumb-1661906600.png",
+    "join_date": "2020-10-20",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "search_regions": [],
+    "followers": 7,
+    "following": 8,
+    "ideas": 227,
+    "watchlist_stocks_count": 104,
+    "like_count": 187,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662710971,
+   "body": "$SPY $QQQ $SPX $AAPL $TSLA so much for free markets huh !! lol \ud83d\ude02 it\u2019s so good that we\u2019ll do anything !!! Lmfao \ud83e\udd23 absolute clown show",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$SPY",
+      "symbol": "SPY",
+      "symbol_display": "SPY",
+      "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+      "deeplink": "symbol/SPY"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$QQQ",
+      "symbol": "QQQ",
+      "symbol_display": "QQQ",
+      "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+      "deeplink": "symbol/QQQ"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$SPX",
+      "symbol": "SPX",
+      "symbol_display": "SPX",
+      "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+      "deeplink": "symbol/SPX"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$TSLA",
+      "symbol": "TSLA",
+      "symbol_display": "TSLA",
+      "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+      "deeplink": "symbol/TSLA"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " so much for free markets huh !! lol \ud83d\ude02 it\u2019s so good that we\u2019ll do anything !!! Lmfao \ud83e\udd23 absolute clown show"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:35:07Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 7271,
+     "symbol": "SPY",
+     "symbol_mic": "SPY.ARCX",
+     "price": "764.59"
+    },
+    {
+     "id": 9581,
+     "symbol": "QQQ",
+     "symbol_mic": "QQQ.XNAS",
+     "price": "708.45"
+    },
+    {
+     "id": 679,
+     "symbol": "SPX",
+     "symbol_mic": "SPX.I",
+     "price": "7668.61"
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.13"
+    },
+    {
+     "id": 8660,
+     "symbol": "TSLA",
+     "symbol_mic": "TSLA.XNAS",
+     "price": "356.65"
+    }
+   ],
+   "reshare_message": {
+    "reshared_count": 2,
+    "reshared_deleted": false,
+    "reshared_user_deleted": false,
+    "parent_reshared_deleted": false,
+    "message": {
+     "id": 662710019,
+     "body": "FOX Business Reporter Charles Gasparino Says On X That According To Sources, Treasury Secretary Scott Bessent Will Do Whatever It Takes To Counter Bond Vigilantes Shorting Long End Of Curve, Including Buybacks, Selling Short-Term Debt, And Possible Elimination Of 20-Year Bond $SPY",
+     "tokenized_body": [
+      {
+       "type": "text",
+       "data": {
+        "text": "FOX Business Reporter Charles Gasparino Says On X That According To Sources, Treasury Secretary Scott Bessent Will Do Whatever It Takes To Counter Bond Vigilantes Shorting Long End Of Curve, Including Buybacks, Selling Short-Term Debt, And Possible Elimination Of 20-Year Bond "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$SPY",
+        "symbol": "SPY",
+        "symbol_display": "SPY",
+        "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+        "deeplink": "symbol/SPY"
+       }
+      }
+     ],
+     "created_at": "2026-08-24T16:26:52Z",
+     "discussion": false,
+     "user": {
+      "id": 8789114,
+      "username": "Stoxpo",
+      "name": "Stoxpo",
+      "avatar_url": "https://avatars.stocktwits.com/production/8789114/thumb-1710871091.png",
+      "avatar_url_ssl": "https://avatars.stocktwits.com/production/8789114/thumb-1710871091.png",
+      "join_date": "2024-01-15",
+      "official": false,
+      "identity": "User",
+      "classification": [],
+      "badges": [],
+      "home_country": "US",
+      "search_regions": [],
+      "followers": 101,
+      "following": 3,
+      "ideas": 2501,
+      "watchlist_stocks_count": 4,
+      "like_count": 220,
+      "plus_tier": "",
+      "premium_room": "",
+      "trade_app": false,
+      "trade_status": "PENDING_MFA",
+      "subscribers_count": 12,
+      "subscribed_to_count": 0,
+      "following_stocks": 0,
+      "location": null,
+      "bio": "We are dedicated to delivering breaking news and insightful analysis from the world of stocks and finance, empowering investors, traders, and professionals.",
+      "website_url": "https://stoxpo.com/",
+      "trading_strategy": {
+       "assets_frequently_traded": [],
+       "approach": null,
+       "approaches": [],
+       "holding_period": null,
+       "holding_periods": [],
+       "experience": null,
+       "interests": []
+      },
+      "trading_profile": {
+       "industry": [],
+       "trading_experience": [],
+       "approach": [],
+       "risk_profile": [],
+       "holding_period": [],
+       "capitalization_bias": [],
+       "long_short": [],
+       "asset_classes_traded": []
+      }
+     },
+     "source": {
+      "id": 2269,
+      "title": "StockTwits Web",
+      "url": "https://stocktwits.com"
+     },
+     "symbols": [
+      {
+       "id": 7271,
+       "symbol": "SPY",
+       "symbol_mic": "SPY.ARCX",
+       "symbol_display": "SPY",
+       "exchange": "NYSEArca",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+       "title": "SPDR S&P 500 ETF Trust",
+       "aliases": [],
+       "deeplink": "symbol/SPY",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 636366,
+       "has_pricing": true,
+       "instrument_class": "ExchangeTradedFund",
+       "live_event": false,
+       "sector": "Miscellaneous",
+       "industry": "InvestmentTrustsOrMutualFunds",
+       "trending": false,
+       "trending_score": 0.89466,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": false
+       },
+       "cusip": "78462F103",
+       "isin": "US78462F1030",
+       "sentiment_change": -0.23,
+       "volume_change": 0.21,
+       "should_seo_index": true
+      }
+     ],
+     "prices": [
+      {
+       "id": 7271,
+       "symbol": "SPY",
+       "symbol_mic": "SPY.ARCX",
+       "price": "764.80"
+      }
+     ],
+     "likes": {
+      "total": 2,
+      "user_ids": [
+       1523447,
+       543842
+      ]
+     },
+     "mentioned_users": [],
+     "entities": {
+      "media": [],
+      "sentiment": null,
+      "discussable": null
+     }
+    }
+   },
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": {
+     "basic": "Bearish"
+    },
+    "discussable": null
+   },
+   "user": {
+    "id": 10634918,
+    "username": "Tj_strippers_and_blow",
+    "name": "White dude",
+    "avatar_url": "https://avatars.stocktwits.com/production/10634918/thumb-1775861394.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/10634918/thumb-1775861394.png",
+    "join_date": "2025-10-29",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 110,
+    "following": 25,
+    "ideas": 5186,
+    "watchlist_stocks_count": 27,
+    "like_count": 3605,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 1,
+    "user_ids": [
+     919352
+    ]
+   },
+   "reshares": {
+    "reshared_count": 2,
+    "user_ids": [
+     1124524,
+     10478435
+    ]
+   },
+   "symbols": [
+    {
+     "id": 7271,
+     "symbol": "SPY",
+     "symbol_mic": "SPY.ARCX",
+     "symbol_display": "SPY",
+     "exchange": "NYSEArca",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/SPY.png",
+     "title": "SPDR S&P 500 ETF Trust",
+     "aliases": [],
+     "deeplink": "symbol/SPY",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 636369,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": true,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.23,
+     "volume_change": 0.21
+    },
+    {
+     "id": 9581,
+     "symbol": "QQQ",
+     "symbol_mic": "QQQ.XNAS",
+     "symbol_display": "QQQ",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/QQQ.png",
+     "title": "Invesco QQQ Trust Series 1",
+     "aliases": [
+      "QQQQ"
+     ],
+     "deeplink": "symbol/QQQ",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 278755,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.41,
+     "volume_change": 2.19
+    },
+    {
+     "id": 679,
+     "symbol": "SPX",
+     "symbol_mic": "SPX.I",
+     "symbol_display": "SPX",
+     "exchange": "INDEX",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/SPX.png",
+     "title": "S&P 500 Index",
+     "aliases": [],
+     "deeplink": "symbol/SPX",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 114122,
+     "has_pricing": true,
+     "instrument_class": "INDEX",
+     "live_event": false,
+     "sentiment_change": 0.63,
+     "volume_change": 0.0
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    },
+    {
+     "id": 8660,
+     "symbol": "TSLA",
+     "symbol_mic": "TSLA.XNAS",
+     "symbol_display": "TSLA",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/TSLA.png",
+     "title": "Tesla Inc",
+     "aliases": [],
+     "deeplink": "symbol/TSLA",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 1062509,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "earnings_cta": "res_earn_tab",
+     "earnings_id": "e92cb3fb-d89f-4af7-b63e-e499b0ca84a4",
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.36,
+     "volume_change": 3.78
+    }
+   ]
+  },
+  {
+   "id": 662710815,
+   "body": "$MAGS We are done here.\n\nWith Treasury fixing long end below inflation, $AAPL bleeds its uninvested cash pile while the MAGS without FCF have to take on higher interest debt to foment their build.\n\nATM Puts as stock replacement through January 2027",
+   "tokenized_body": [
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$MAGS",
+      "symbol": "MAGS",
+      "symbol_display": "MAGS",
+      "logo_url": "https://logos.stocktwits-cdn.com/MAGS.png",
+      "deeplink": "symbol/MAGS"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " We are done here.\n\nWith Treasury fixing long end below inflation, "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " bleeds its uninvested cash pile while the MAGS without FCF have to take on higher interest debt to foment their build.\n\nATM Puts as stock replacement through January 2027"
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:33:41Z",
+   "discussion": false,
+   "source": {
+    "id": 1149,
+    "title": "StockTwits for iOS",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 2572,
+     "symbol": "MAGS",
+     "symbol_mic": "MAGS.BATS",
+     "price": "67.59"
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "312.05"
+    }
+   ],
+   "reshare_message": {
+    "reshared_count": 3,
+    "reshared_deleted": false,
+    "reshared_user_deleted": false,
+    "parent_reshared_deleted": false,
+    "message": {
+     "id": 657471606,
+     "body": "$AAPL $NDX.X  has to make room for 2 new trillion dollar companies in $SPCX AND SK Hynix, as well as adding another 1% of $MU.\n\nAs such, we&#39;re having to sell the $MAGS to make room for the next 8-10%.\n\nIs what it is. Have patience and snag levered longs",
+     "tokenized_body": [
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$AAPL",
+        "symbol": "AAPL",
+        "symbol_display": "AAPL",
+        "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+        "deeplink": "symbol/AAPL"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$NDX",
+        "symbol": "NDX.X",
+        "symbol_display": "NDX",
+        "logo_url": "https://logos.stocktwits-cdn.com/NDX-X.png",
+        "deeplink": "coins/indexed-finance"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": "  has to make room for 2 new trillion dollar companies in "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$SPCX",
+        "symbol": "SPCX",
+        "symbol_display": "SPCX",
+        "logo_url": "https://logos.stocktwits-cdn.com/SPCX.png",
+        "deeplink": "symbol/SPCX"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " AND SK Hynix, as well as adding another 1% of "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$MU",
+        "symbol": "MU",
+        "symbol_display": "MU",
+        "logo_url": "https://logos.stocktwits-cdn.com/MU.png",
+        "deeplink": "symbol/MU"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": ".\n\nAs such, we're having to sell the "
+       }
+      },
+      {
+       "type": "cashTag",
+       "data": {
+        "text": "$MAGS",
+        "symbol": "MAGS",
+        "symbol_display": "MAGS",
+        "logo_url": "https://logos.stocktwits-cdn.com/MAGS.png",
+        "deeplink": "symbol/MAGS"
+       }
+      },
+      {
+       "type": "text",
+       "data": {
+        "text": " to make room for the next 8-10%.\n\nIs what it is. Have patience and snag levered longs"
+       }
+      }
+     ],
+     "created_at": "2026-06-25T15:07:42Z",
+     "discussion": false,
+     "user": {
+      "id": 5325143,
+      "username": "DontAtMe69",
+      "name": "DontAtMe69",
+      "avatar_url": "http://avatars.stocktwits.com/images/default_avatar_6_thumb.png",
+      "avatar_url_ssl": "https://avatars.stocktwits.com/images/default_avatar_6_thumb.png",
+      "join_date": "2021-04-07",
+      "official": false,
+      "identity": "User",
+      "classification": [],
+      "badges": [],
+      "home_country": "US",
+      "search_regions": [],
+      "followers": 69,
+      "following": 18,
+      "ideas": 4923,
+      "watchlist_stocks_count": 56,
+      "like_count": 833,
+      "plus_tier": "",
+      "premium_room": "",
+      "trade_app": false,
+      "trade_status": "PENDING_MFA",
+      "subscribers_count": 4,
+      "subscribed_to_count": 1,
+      "following_stocks": 0,
+      "location": "",
+      "bio": null,
+      "website_url": null,
+      "trading_strategy": {
+       "assets_frequently_traded": [],
+       "approach": null,
+       "approaches": [],
+       "holding_period": null,
+       "holding_periods": [],
+       "experience": null,
+       "interests": []
+      },
+      "trading_profile": {
+       "industry": [],
+       "trading_experience": [],
+       "approach": [],
+       "risk_profile": [],
+       "holding_period": [],
+       "capitalization_bias": [],
+       "long_short": [],
+       "asset_classes_traded": []
+      }
+     },
+     "source": {
+      "id": 1149,
+      "title": "StockTwits for iOS",
+      "url": "http://www.stocktwits.com/mobile"
+     },
+     "symbols": [
+      {
+       "id": 686,
+       "symbol": "AAPL",
+       "symbol_mic": "AAPL.XNAS",
+       "symbol_display": "AAPL",
+       "exchange": "NASDAQ",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+       "title": "Apple Inc",
+       "aliases": [],
+       "deeplink": "symbol/AAPL",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 990093,
+       "has_pricing": true,
+       "instrument_class": "Stock",
+       "live_event": false,
+       "sector": "ElectronicTechnology",
+       "industry": "TelecommunicationsEquipment",
+       "trending": false,
+       "trending_score": -2.58493,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": true
+       },
+       "cusip": "037833100",
+       "isin": "US0378331005",
+       "sentiment_change": -0.95,
+       "volume_change": -6.85,
+       "should_seo_index": true
+      },
+      {
+       "id": 39283,
+       "symbol": "NDX.X",
+       "symbol_mic": "NDX.X",
+       "symbol_display": "NDX",
+       "exchange": "CRYPTO",
+       "region": "X",
+       "logo_url": "https://logos.stocktwits-cdn.com/NDX-X.png",
+       "title": "NDX6900",
+       "aliases": [],
+       "deeplink": "coins/indexed-finance",
+       "external_id": "indexed-finance",
+       "is_following": false,
+       "watchlist_count": 50,
+       "has_pricing": true,
+       "instrument_class": "CRYPTO",
+       "live_event": false,
+       "sector": null,
+       "industry": null,
+       "trending": false,
+       "trending_score": 0.0,
+       "trends": null,
+       "features": {
+        "alerts_price": false,
+        "social_data": true,
+        "trending_messages": false,
+        "earnings": false
+       },
+       "cusip": null,
+       "isin": null,
+       "should_seo_index": true
+      },
+      {
+       "id": 282365,
+       "symbol": "SPCX",
+       "symbol_mic": "SPCX.XNAS",
+       "symbol_display": "SPCX",
+       "exchange": "NASDAQ",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/SPCX.png",
+       "title": "SpaceX",
+       "aliases": [],
+       "deeplink": "symbol/SPCX",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 103469,
+       "has_pricing": true,
+       "instrument_class": "Stock",
+       "live_event": false,
+       "sector": "Communications",
+       "industry": "SpecialtyTelecommunications",
+       "trending": false,
+       "trending_score": -2.08446,
+       "trends": null,
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": true
+       },
+       "cusip": "84615Q103",
+       "isin": "US84615Q1031",
+       "sentiment_change": -2.38,
+       "volume_change": -9.16,
+       "should_seo_index": true
+      },
+      {
+       "id": 6403,
+       "symbol": "MU",
+       "symbol_mic": "MU.XNAS",
+       "symbol_display": "MU",
+       "exchange": "NASDAQ",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/MU.png",
+       "title": "Micron Technology Inc",
+       "aliases": [],
+       "deeplink": "symbol/MU",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 214346,
+       "has_pricing": true,
+       "instrument_class": "Stock",
+       "live_event": false,
+       "sector": "ElectronicTechnology",
+       "industry": "Semiconductors",
+       "trending": false,
+       "trending_score": -0.245337,
+       "trends": null,
+       "trade_status": "FRACTIONAL",
+       "features": {
+        "alerts_price": true,
+        "social_data": true,
+        "trending_messages": true,
+        "earnings": true
+       },
+       "cusip": "595112103",
+       "isin": "US5951121038",
+       "sentiment_change": -2.07,
+       "volume_change": -4.15,
+       "should_seo_index": true
+      },
+      {
+       "id": 2572,
+       "symbol": "MAGS",
+       "symbol_mic": "MAGS.BATS",
+       "symbol_display": "MAGS",
+       "exchange": "BATS",
+       "region": "US",
+       "logo_url": "https://logos.stocktwits-cdn.com/MAGS.png",
+       "title": "Roundhill Magnificent Seven ETF",
+       "aliases": [],
+       "deeplink": "symbol/MAGS",
+       "external_id": null,
+       "is_following": false,
+       "watchlist_count": 3670,
+       "has_pricing": true,
+       "instrument_class": "ExchangeTradedFund",
+       "live_event": false,
+       "sector": "Miscellaneous",
+       "industry": "InvestmentTrustsOrMutualFunds",
+       "trending": false,
+       "trending_score": -0.615118,
+       "trends": null,
+       "trade_status": "WHOLE",
+       "features": {
+        "alerts_price": false,
+        "social_data": true,
+        "trending_messages": false,
+        "earnings": false
+       },
+       "cusip": "53656G498",
+       "isin": "US53656G4982",
+       "sentiment_change": -11.43,
+       "volume_change": 0.0,
+       "should_seo_index": true
+      }
+     ],
+     "prices": [
+      {
+       "id": 686,
+       "symbol": "AAPL",
+       "symbol_mic": "AAPL.XNAS",
+       "price": "276.86"
+      },
+      {
+       "id": 39283,
+       "symbol": "NDX.X",
+       "symbol_mic": "NDX.X",
+       "price": "0.001882"
+      },
+      {
+       "id": 282365,
+       "symbol": "SPCX",
+       "symbol_mic": "SPCX.XNAS",
+       "price": "153.49"
+      },
+      {
+       "id": 6403,
+       "symbol": "MU",
+       "symbol_mic": "MU.XNAS",
+       "price": "1189.24"
+      },
+      {
+       "id": 2572,
+       "symbol": "MAGS",
+       "symbol_mic": "MAGS.BATS",
+       "price": "61.31"
+      }
+     ],
+     "likes": {
+      "total": 2,
+      "user_ids": [
+       10999772,
+       11081342
+      ]
+     },
+     "mentioned_users": [],
+     "entities": {
+      "media": [],
+      "sentiment": null,
+      "discussable": null
+     }
+    }
+   },
+   "mentioned_users": [],
+   "entities": {
+    "media": [],
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 5325143,
+    "username": "DontAtMe69",
+    "name": "DontAtMe69",
+    "avatar_url": "http://avatars.stocktwits.com/images/default_avatar_6_thumb.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/images/default_avatar_6_thumb.png",
+    "join_date": "2021-04-07",
+    "official": false,
+    "identity": "User",
+    "classification": [],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 69,
+    "following": 18,
+    "ideas": 4923,
+    "watchlist_stocks_count": 56,
+    "like_count": 833,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "symbols": [
+    {
+     "id": 2572,
+     "symbol": "MAGS",
+     "symbol_mic": "MAGS.BATS",
+     "symbol_display": "MAGS",
+     "exchange": "BATS",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/MAGS.png",
+     "title": "Roundhill Magnificent Seven ETF",
+     "aliases": [],
+     "deeplink": "symbol/MAGS",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 3670,
+     "has_pricing": true,
+     "instrument_class": "ExchangeTradedFund",
+     "live_event": false,
+     "trade_status": "WHOLE",
+     "sentiment_change": -11.43,
+     "volume_change": 0.0
+    },
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    }
+   ]
+  },
+  {
+   "id": 662710081,
+   "body": "@zuby34 @itsphd @Jeremymartin007 @judgeyoung2 @jenbunn @ZY786 @jeremy4 @TraderRapp @Tradermikes40 @tonyctl \n\n$AAPL $nvda\ncubie have never used 200 averages.",
+   "tokenized_body": [
+    {
+     "type": "mention",
+     "data": {
+      "text": "@zuby34",
+      "user_id": 1367630,
+      "username": "zuby34",
+      "deeplink": "/zuby34"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@itsphd",
+      "user_id": 5823136,
+      "username": "itsphd",
+      "deeplink": "/itsphd"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@Jeremymartin007",
+      "user_id": 8778033,
+      "username": "Jeremymartin007",
+      "deeplink": "/Jeremymartin007"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@judgeyoung2",
+      "user_id": 9392128,
+      "username": "judgeyoung2",
+      "deeplink": "/judgeyoung2"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@jenbunn",
+      "user_id": 768204,
+      "username": "jenbunn",
+      "deeplink": "/jenbunn"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@ZY786",
+      "user_id": 3257136,
+      "username": "ZY786",
+      "deeplink": "/ZY786"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@jeremy4",
+      "user_id": 554872,
+      "username": "jeremy4",
+      "deeplink": "/jeremy4"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@TraderRapp",
+      "user_id": 6101291,
+      "username": "TraderRapp",
+      "deeplink": "/TraderRapp"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@Tradermikes40",
+      "user_id": 9043771,
+      "username": "Tradermikes40",
+      "deeplink": "/Tradermikes40"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "mention",
+     "data": {
+      "text": "@tonyctl",
+      "user_id": 651170,
+      "username": "tonyctl",
+      "deeplink": "/tonyctl"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " \n\n"
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$AAPL",
+      "symbol": "AAPL",
+      "symbol_display": "AAPL",
+      "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+      "deeplink": "symbol/AAPL"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": " "
+     }
+    },
+    {
+     "type": "cashTag",
+     "data": {
+      "text": "$NVDA",
+      "symbol": "NVDA",
+      "symbol_display": "NVDA",
+      "logo_url": "https://logos.stocktwits-cdn.com/NVDA.png",
+      "deeplink": "symbol/NVDA"
+     }
+    },
+    {
+     "type": "text",
+     "data": {
+      "text": "\ncubie have never used 200 averages."
+     }
+    }
+   ],
+   "created_at": "2026-08-24T16:27:23Z",
+   "discussion": false,
+   "source": {
+    "id": 2095,
+    "title": "StockTwits For Android ",
+    "url": "http://www.stocktwits.com/mobile"
+   },
+   "prices": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "price": "311.82"
+    },
+    {
+     "id": 2925,
+     "symbol": "NVDA",
+     "symbol_mic": "NVDA.XNAS",
+     "price": "210.76"
+    }
+   ],
+   "conversation": {
+    "parent_message_id": 658940483,
+    "in_reply_to_message_id": 662709583,
+    "parent": false,
+    "replies": 7
+   },
+   "mentioned_users": [
+    "@zuby34",
+    "@itsphd",
+    "@Jeremymartin007",
+    "@judgeyoung2",
+    "@jenbunn",
+    "@ZY786",
+    "@jeremy4",
+    "@TraderRapp",
+    "@Tradermikes40",
+    "@tonyctl"
+   ],
+   "entities": {
+    "media": [],
+    "sentiment": null,
+    "discussable": null
+   },
+   "user": {
+    "id": 494832,
+    "username": "cubie",
+    "name": "Chau N.",
+    "avatar_url": "https://avatars.stocktwits.com/production/494832/thumb-1672856663.png",
+    "avatar_url_ssl": "https://avatars.stocktwits.com/production/494832/thumb-1672856663.png",
+    "join_date": "2015-04-01",
+    "official": false,
+    "identity": "User",
+    "classification": [
+     "premium"
+    ],
+    "badges": [],
+    "home_country": "US",
+    "search_regions": [],
+    "followers": 10956,
+    "following": 107,
+    "ideas": 159021,
+    "watchlist_stocks_count": 300,
+    "like_count": 10959,
+    "plus_tier": "",
+    "premium_room": "",
+    "trade_app": false,
+    "trade_status": "PENDING_MFA"
+   },
+   "likes": {
+    "total": 1,
+    "user_ids": [
+     1367630
+    ]
+   },
+   "symbols": [
+    {
+     "id": 686,
+     "symbol": "AAPL",
+     "symbol_mic": "AAPL.XNAS",
+     "symbol_display": "AAPL",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/AAPL.png",
+     "title": "Apple Inc",
+     "aliases": [],
+     "deeplink": "symbol/AAPL",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 990095,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": -0.95,
+     "volume_change": -6.85
+    },
+    {
+     "id": 2925,
+     "symbol": "NVDA",
+     "symbol_mic": "NVDA.XNAS",
+     "symbol_display": "NVDA",
+     "exchange": "NASDAQ",
+     "region": "US",
+     "logo_url": "https://logos.stocktwits-cdn.com/NVDA.png",
+     "title": "NVIDIA Corp",
+     "aliases": [],
+     "deeplink": "symbol/NVDA",
+     "external_id": null,
+     "is_following": false,
+     "watchlist_count": 661188,
+     "has_pricing": true,
+     "instrument_class": "Stock",
+     "live_event": false,
+     "earnings_cta": "up_earn_tab",
+     "earnings_id": "2c072ed5-d0a5-4224-9a62-705e71239bd4",
+     "trade_status": "FRACTIONAL",
+     "sentiment_change": 1.53,
+     "volume_change": 10.83
+    }
+   ]
+  }
+ ],
+ "response": {
+  "status": 200
+ }
+}

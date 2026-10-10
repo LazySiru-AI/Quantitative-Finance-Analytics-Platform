@@ -1,0 +1,53 @@
+== Gate A (floor) -- unchanged, recomputed ==
+Gate A survivors (8): A-rotation, B-momentum, B2-hold-90, B3-concentrated, B4-tight-stop, C-trend, H-trend-diversified, c07-chop
+
+== Gate L (floor) -- carried forward from round 9 section 2 ==
+  FAIL c07-chop                 all cash for 92 sessions; last trade closed 2026-04-07, past the 60-session line
+  FAIL c14-riskmanaged-wide     zero trades in the out-of-sample window
+Gate L survivors (7): A-rotation, B-momentum, B2-hold-90, B3-concentrated, B4-tight-stop, C-trend, H-trend-diversified
+
+== The live matrix -- adjusted excess per sub-window, whole field ==
+card                        live-1    live-2    live-3    live-4    live-5    live-6    median   hits
+B-momentum                  -0.85%    +3.23%    +0.00%    +0.00%    -0.82%    -3.32%    -0.41%    1/6
+B2-hold-90                  -0.85%    +3.23%    +0.00%    +0.00%    -0.82%    -3.32%    -0.41%    1/6
+B3-concentrated             -1.23%    +4.40%    +0.00%    +0.00%    -1.19%    -4.31%    -0.60%    1/6
+B4-tight-stop               -0.85%    +3.23%    +0.00%    +0.00%    -0.82%    -3.32%    -0.41%    1/6
+A-rotation                  +0.05%   +25.15%   +16.70%   +22.83%    -9.44%    -8.82%    +8.37%    4/6
+c20-rotation               +12.77%    -5.18%    +2.81%    -8.05%    -0.76%    -2.98%    -1.87%    2/6
+C-trend                     +0.00%    +3.60%    +0.00%    +0.00%    -0.88%    -3.14%    +0.00%    1/6
+H-trend-diversified         +0.00%    +0.21%    -1.08%    +0.00%    -0.47%    -1.87%    -0.24%    1/6
+c07-chop                    -0.12%    -0.01%    +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    0/6
+c18-meanrev                 +2.66%    -5.21%    +0.44%    +1.19%    +0.61%    +0.24%    +0.53%    5/6
+c09-convex                  +0.00%    +0.00%    +0.00%    +0.00%    -0.13%    +0.12%    +0.00%    1/6
+c19-volatility              +0.00%    +0.00%    +0.00%    +0.00%    -0.03%    +0.00%    +0.00%    0/6
+c14-riskmanaged-wide        +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    0/6
+c21-uncorrelated            -0.79%    +0.38%    -2.62%    +0.00%    +0.08%    -1.76%    -0.40%    2/6
+c11-breakout                -0.58%    +0.10%    +0.00%    +0.00%    +0.00%    -0.58%    +0.00%    1/6
+
+== Gate C -- positive adjusted excess in >= 3 of 6 ==
+  FAIL B-momentum               1/6
+  FAIL B2-hold-90               1/6
+  FAIL B3-concentrated          1/6
+  FAIL B4-tight-stop            1/6
+  pass A-rotation               4/6
+  FAIL C-trend                  1/6
+  FAIL H-trend-diversified      1/6
+Gate C survivors (1): A-rotation
+
+== Ranking -- live median, then live hit rate, then backtest rank range (tie-breaks) ==
+card                      live median   hits  S-range   10y QQQ
+A-rotation                     +8.37%    4/6        9    +0.63%
+
+== Distinctness -- one per discipline, one per base family; seat count is an output ==
+  SEAT A-rotation             (pairs-rotation)
+
+== Round 11 ranked roster: 1 of a possible 4 ==
+  1. A-rotation
+  + ladder-qld-schd (seated outside the competition, unranked)
+
+== Pre-committed expectations (ROUND-11-PLAN.md section 6) ==
+  1. B3-concentrated expected to lead the live matrix. Leader is 'A-rotation'.
+     B3-concentrated -0.60% vs A-rotation +8.37% -> CONTRADICTED
+  2. Momentum seat decided by the rule: none seated
+  3. Gate C expected to eliminate at least one card. Eliminated: ['B-momentum', 'B2-hold-90', 'B3-concentrated', 'B4-tight-stop', 'C-trend', 'H-trend-diversified']
+  4. Seat count 2-4 expected. Got 1 -> CONTRADICTED

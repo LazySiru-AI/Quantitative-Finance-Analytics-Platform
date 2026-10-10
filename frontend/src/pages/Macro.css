@@ -1,0 +1,22 @@
+/**
+ * Page-local styles for Macro.tsx. Plain CSS, imported by the page -- this app has no CSS Modules
+ * or Tailwind (see `frontend/src/styles.css`'s own docstring).
+ *
+ * `.macro-embed` exists because `ScrollPanel` (`.panel.scroll-panel`) wraps three components
+ * (`FearGreedGauge`, `MacroKeyIndicators`, `MacroNewsPanel`) that already render their own `.panel`
+ * card -- those live in `components/` and are out of this page's scope to edit, so bounding them for
+ * the height-cut pass would otherwise nest two `.panel` borders/backgrounds around one card. This
+ * strips the outer one instead of duplicating the inner component's markup here.
+ */
+
+.macro-embed.scroll-panel {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.macro-embed .panel {
+  margin-bottom: 0;
+}

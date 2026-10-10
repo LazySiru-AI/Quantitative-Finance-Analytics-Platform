@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    // "node" is required by vite.config.ts, which imports node:url to resolve the "@" alias.
+    // Without it `npm run typecheck` fails on the config file itself while all of src/ is clean.
+    "types": ["vite/client", "node"],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    // On since 2026-08-14. Its absence is why `outcomeLabel()` could return `undefined` at runtime
+    // from a switch whose union had gained a member: every branch returned a string, the function
+    // was typed to return a string, and the implicit fall-off-the-end path was invisible to the
+    // compiler. See docs/reports/defects-1.md.
+    "noImplicitReturns": true,
+
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": ["src", "vite.config.ts", "vitest.config.ts"]
+}

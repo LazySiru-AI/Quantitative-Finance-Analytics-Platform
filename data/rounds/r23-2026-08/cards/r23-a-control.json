@@ -1,0 +1,23 @@
+{
+  "agent_id": "r23-a-control",
+  "display_name": "Round 23 a-control",
+  "purpose": "savings",
+  "thesis": "Round 23 arm. A static 35/40/25 XLK/XLP/XLU allocation, rotating out of technology into consumer staples as the US yield curve inverts. Arm A applies no tilt; arm B applies a constant 0.172 shift whenever the curve is inverted; arm C sizes the shift by how inverted it is (-0.5 * macro(T10Y2Y)). B's constant is C's pooled mean shift over firing sessions, computed from the pinned series before any card ran, so the two arms move the same average weight and differ only in how it is distributed. A purpose-built three-sector allocation (plan Amendments 1 and 2); it bears on no seated card's record. Not a proposal to trade anything; nothing in this round is promotable. See strategy-program/ROUND-23-PLAN.md.",
+  "sleeves": [
+    {
+      "symbol": "XLK",
+      "target_weight": "0.35"
+    },
+    {
+      "symbol": "XLP",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "XLU",
+      "target_weight": "0.25"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [],
+  "designed_through": "2026-02-13"
+}

@@ -1,0 +1,8 @@
+window: 2023-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+3 of 12 cards selected by --only='a07-ord-rand05,a07-ord-rand06,a07-ord-rand07'
+[1/3] r1 a07-ord-rand05: 390s trades=125 ret=+113.60% dd=-16.52% rej=117
+[2/3] r1 a07-ord-rand06: 389s trades=122 ret=+161.83% dd=-16.82% rej=132
+[3/3] r1 a07-ord-rand07: 378s trades=120 ret=+122.91% dd=-13.95% rej=31
+r1: 3 agents, 2 discoveries
+overall: 3 agents, 2 discoveries at alpha=0.1

@@ -1,0 +1,2744 @@
+{
+  "card": {
+    "agent_id": "r35-absolute-2-rank",
+    "display_name": "R35 country rotation / absolute / 2 slots / rank",
+    "discipline": "mean-reversion",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 35 cell. Form: c20-rotation's absolute per-symbol filter verbatim -- price above its own 100-day average with 14-day RSI between 50 and 75, an established but not extended move, exited when the trend breaks or RSI falls under 40. Applied identically across eight country and regional equity ETFs with a binding 2-slot cap and 0.44 of the book per slot, so at most 88% of capital is deployed -- the same budget every card in this field carries, which is what makes the slot cap a question about concentration rather than about how much money is in the market. Slots are filled by distance above the 200-day trend (highest first), the stated chooser rather than the arbitrary one. The hypothesis under test is not that this rule is good -- the programme's record across rounds 1-33 is that no durable edge has been found, and that record is the prior this card argues against. It is that country dispersion is a source this shape has never been pointed at, and that a rotation which cannot beat its own universe's buy-and-hold on that axis has been shown not to carry information there. This engine has no cross-symbol operator -- entry and exit are evaluated per instrument against that instrument's own bars only -- so the rotation here is produced entirely by the universe, the slot cap and the fill order, exactly as c20-rotation's own thesis says of the sector version. The universe is eight single-country and regional equity ETFs chosen on one mechanical criterion and one legal one: enough stored history to clear every window in the matrix including gfc, and total absence from every savings- or trading-purpose card in the library, because this card is roth-purpose and Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss replaced inside an IRA. EEM, EWZ, FXI and INDA belong in this universe on the merits and are excluded on that second criterion alone. Ticker disjointness is necessary and not sufficient under IRC section 1091: VWO tracks a different index from the taxable book's EEM and ILF is not EWZ, but the economic exposures are close, and nothing here claims the roster is section 1091-safe. EFA contains EWJ, EWG and EWU, so this is not eight independent bets; that redundancy is left in and counted against the field under Benjamini-Hochberg rather than papered over with extra cells. The benchmark is SPY, price-only, in USD, which is the wrong benchmark for a non-US book and is pre-registered as this round's known confound -- the field carries its own within-universe passive control (r35-passive-8-order) so the rotation can be read against buy-and-hold of the same eight names rather than only against a decade of US outperformance. Not a proposal to trade anything. See strategy-program/ROUND-35-PLAN.md.",
+    "falsification": "Wrong if this cell's median exposure-adjusted excess over the eight main windows fails to beat the field's passive control (r35-passive-8-order) by more than 21.2 percentage points, the programme's measured ordering-noise floor. Beating SPY is not the test and failing to beat SPY is not the falsification: a non-US book measured against a US price-only benchmark over 2011-2026 inherits an asset-class gap no rule can close, which is why the control is in the field. A margin inside 21.2pp is a null for this cell whichever side of the control it lands on.",
+    "universe": [
+      "EWJ",
+      "EWG",
+      "EWU",
+      "EWC",
+      "EWY",
+      "ILF",
+      "EFA",
+      "VWO"
+    ],
+    "entry": "close > sma(100) and rsi(14) > 50 and rsi(14) < 75",
+    "exit": "close < sma(100) or rsi(14) < 40",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 2,
+    "position_pct": "0.44",
+    "rank_by": "close / sma(200)",
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 260,
+  "starting_equity": "10000.00",
+  "ending_equity": "8238.70",
+  "total_return": "-0.17613",
+  "max_drawdown": "-0.19101188364227628",
+  "sharpe": -1.5404924021329514,
+  "sortino": -0.9727014993388311,
+  "volatility": 0.11735148207385454,
+  "exposure": 0.5653846153846154,
+  "capital_exposure": 0.30282291538461537,
+  "win_rate": 0.0625,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-05-27",
+      "entry_price": "36.80",
+      "exit_date": "2011-06-07",
+      "exit_price": "36.54",
+      "quantity": "120",
+      "exit_reason": "rule",
+      "pnl": "-31.34",
+      "return_pct": "-0.007096920289855072463768115942",
+      "bars_held": 6
+    },
+    {
+      "symbol": "EWY",
+      "entry_date": "2011-05-31",
+      "entry_price": "66.02",
+      "exit_date": "2011-06-13",
+      "exit_price": "62.59",
+      "quantity": "67",
+      "exit_reason": "rule",
+      "pnl": "-229.94",
+      "return_pct": "-0.05198334290377859264718515873",
+      "bars_held": 9
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2011-06-08",
+      "entry_price": "26.52",
+      "exit_date": "2011-06-13",
+      "exit_price": "26.18",
+      "quantity": "164",
+      "exit_reason": "rule",
+      "pnl": "-55.91",
+      "return_pct": "-0.01285500128756943678034065409",
+      "bars_held": 3
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2011-06-15",
+      "entry_price": "26.16",
+      "exit_date": "2011-06-16",
+      "exit_price": "25.68",
+      "quantity": "164",
+      "exit_reason": "rule",
+      "pnl": "-78.86",
+      "return_pct": "-0.01838125606026702468859550981",
+      "bars_held": 1
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2011-06-22",
+      "entry_price": "26.26",
+      "exit_date": "2011-06-23",
+      "exit_price": "25.48",
+      "quantity": "162",
+      "exit_reason": "rule",
+      "pnl": "-126.50",
+      "return_pct": "-0.02973587957086306921290419640",
+      "bars_held": 1
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2011-06-30",
+      "entry_price": "26.58",
+      "exit_date": "2011-07-12",
+      "exit_price": "25.17",
+      "quantity": "166",
+      "exit_reason": "rule",
+      "pnl": "-234.20",
+      "return_pct": "-0.05307913369051828079813611104",
+      "bars_held": 7
+    },
+    {
+      "symbol": "EWY",
+      "entry_date": "2011-06-29",
+      "entry_price": "63.90",
+      "exit_date": "2011-08-03",
+      "exit_price": "62.79",
+      "quantity": "69",
+      "exit_reason": "rule",
+      "pnl": "-76.72",
+      "return_pct": "-0.01740037649406908439364042548",
+      "bars_held": 24
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2011-07-13",
+      "entry_price": "42.62",
+      "exit_date": "2011-08-05",
+      "exit_price": "40.18",
+      "quantity": "104",
+      "exit_reason": "rule",
+      "pnl": "-253.89",
+      "return_pct": "-0.05727944626935710933833880807",
+      "bars_held": 17
+    },
+    {
+      "symbol": "EFA",
+      "entry_date": "2011-10-28",
+      "entry_price": "54.90",
+      "exit_date": "2011-11-01",
+      "exit_price": "50.24",
+      "quantity": "79",
+      "exit_reason": "rule",
+      "pnl": "-368.26",
+      "return_pct": "-0.08490927117198127781236309977",
+      "bars_held": 2
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-10-25",
+      "entry_price": "33.42",
+      "exit_date": "2011-11-02",
+      "exit_price": "32.84",
+      "quantity": "131",
+      "exit_reason": "rule",
+      "pnl": "-76.12",
+      "return_pct": "-0.01738685524506512076235375809",
+      "bars_held": 6
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-11-03",
+      "entry_price": "33.54",
+      "exit_date": "2011-11-10",
+      "exit_price": "33.02",
+      "quantity": "133",
+      "exit_reason": "rule",
+      "pnl": "-69.30",
+      "return_pct": "-0.01553526033330194896902363243",
+      "bars_held": 5
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-11-14",
+      "entry_price": "33.26",
+      "exit_date": "2011-11-17",
+      "exit_price": "32.42",
+      "quantity": "131",
+      "exit_reason": "rule",
+      "pnl": "-110.18",
+      "return_pct": "-0.02528769399549237329759057713",
+      "bars_held": 3
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-12-01",
+      "entry_price": "32.82",
+      "exit_date": "2011-12-13",
+      "exit_price": "32.36",
+      "quantity": "134",
+      "exit_reason": "rule",
+      "pnl": "-61.78",
+      "return_pct": "-0.01404767751734926828380947184",
+      "bars_held": 8
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-12-27",
+      "entry_price": "32.34",
+      "exit_date": "2011-12-29",
+      "exit_price": "31.82",
+      "quantity": "136",
+      "exit_reason": "rule",
+      "pnl": "-70.86",
+      "return_pct": "-0.01611098985048564880497653607",
+      "bars_held": 2
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2011-12-30",
+      "entry_price": "32.32",
+      "exit_date": "2012-04-11",
+      "exit_price": "33.68",
+      "quantity": "136",
+      "exit_reason": "rule",
+      "pnl": "184.81",
+      "return_pct": "0.04204508226557949912638322656",
+      "bars_held": 69
+    },
+    {
+      "symbol": "EWY",
+      "entry_date": "2012-04-18",
+      "entry_price": "58.95",
+      "exit_date": "2012-05-10",
+      "exit_price": "57.57",
+      "quantity": "74",
+      "exit_reason": "rule",
+      "pnl": "-102.25",
+      "return_pct": "-0.02343947000435550053870664558",
+      "bars_held": 16
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4412.10 exceeds $656.07 of settled cash (total cash $4834.15; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4386.15 exceeds $4007.44 of settled cash (total cash $4007.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4218.72 exceeds $4007.44 of settled cash (total cash $4007.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4202.66 exceeds $4007.44 of settled cash (total cash $4007.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4356.48 exceeds $4041.90 of settled cash (total cash $4041.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4390.62 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4421.04 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4489.57 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4350.06 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4353.16 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4329.78 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4351.20 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4300.92 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4308.08 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4307.49 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4281.60 exceeds $3890.90 of settled cash (total cash $3890.90; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4236.94 exceeds $3828.76 of settled cash (total cash $3828.76; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4366.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4348.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4351.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4364.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4355.91 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4359.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4326.21 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4331.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4280.22 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4336.02 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4406.63 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4323.86 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4454.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4372.83 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4377.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4295.16 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4377.49 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4385.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4398.52 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4446.66 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4322.78 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4332.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4373.06 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4362.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4281.52 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4482.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4455.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4385.37 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4421.79 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4388.86 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4416.68 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4395.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4435.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4400.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4408.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4402.18 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4420.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4422.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4409.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4354.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4431.18 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4366.95 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4387.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4376.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4382.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4362.54 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4396.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4396.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4394.25 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4372.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4400.30 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4428.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4325.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4345.68 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4312.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4336.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4324.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4335.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4328.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4333.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4346.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4338.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4420.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4336.92 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4350.47 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4338.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4396.11 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4377.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4409.43 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4395.30 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4429.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4444.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4466.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4351.47 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4389.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4364.11 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4381.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4382.04 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4338.41 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4375.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4293.81 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4242.75 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4303.34 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4367.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4326.05 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4289.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4297.51 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4416.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4445.98 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4399.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4426.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4421.04 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4405.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4453.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4443.38 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4404.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4409.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4430.03 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4442.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4441.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4499.04 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4397.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4394.25 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4398.55 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4398.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4408.13 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4403.55 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4409.94 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4451.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4404.75 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4450.06 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4398.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4417.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4382.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4425.96 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4329.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4292.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4319.37 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4347.28 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4325.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4355.02 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4327.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4409.86 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4364.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4361.25 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4364.92 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4404.22 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4420.92 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4365.09 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4400.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4374.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4421.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4403.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4384.53 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4379.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4401.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4391.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4393.38 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4384.71 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4421.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4406.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4388.16 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4405.94 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4309.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4276.46 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4284.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4271.09 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4319.73 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4312.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4313.54 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4470.28 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4446.02 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4471.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4445.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4424.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4434.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4435.25 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4337.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4320.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4370.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4361.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4346.46 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4409.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4377.36 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4423.36 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4434.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4414.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4423.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4481.58 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4424.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4413.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4304.58 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4352.52 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4359.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4375.62 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4381.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4378.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4366.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4404.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4414.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4392.63 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4402.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4464.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4424.22 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4407.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4387.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4400.04 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4393.62 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4431.28 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4380.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4379.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4431.45 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4397.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4381.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4378.58 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4373.82 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4393.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4356.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4384.98 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4393.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4340.84 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4368.87 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4373.38 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4393.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4356.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4398.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4424.42 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4408.28 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4401.42 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4393.62 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4417.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4406.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4375.98 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4333.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4294.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4307.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4296.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4340.38 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4300.76 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4366.96 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4423.51 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4400.64 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4398.57 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4423.22 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4404.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4407.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4401.92 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4369.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4397.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4382.64 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4415.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4386.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4439.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4419.77 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4408.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4382.19 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4419.74 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4393.34 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4393.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4399.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4415.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4350.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4330.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4362.12 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4363.06 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4338.68 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4344.74 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4378.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4372.57 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4348.61 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4329.11 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4375.81 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4375.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4367.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4368.43 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4277.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4293.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4237.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4275.81 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4258.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4348.98 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4300.83 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4466.25 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4451.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4367.59 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4357.99 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4348.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4378.77 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4392.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4344.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4401.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4330.36 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4302.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4390.75 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4353.46 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4349.07 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4335.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4363.56 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4392.96 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4417.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4397.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4418.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4411.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4347.36 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4415.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4352.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4377.66 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4375.26 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4346.58 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4359.36 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4423.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4395.33 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4415.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4395.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4386.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4424.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4420.68 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4350.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4371.30 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4352.18 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4390.03 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4410.14 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4412.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4349.35 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4338.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4362.30 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4374.23 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4321.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4356.72 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4389.57 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4321.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4307.76 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4306.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4293.90 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4326.48 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4304.52 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4325.92 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4368.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4358.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4341.84 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4336.02 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4392.08 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4314.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4323.79 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4337.97 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4338.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4384.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4336.64 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4387.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4375.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4350.40 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4444.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4411.88 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4417.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4411.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4375.52 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4382.10 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4375.62 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4391.61 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4401.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4436.30 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4394.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4384.02 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4339.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4370.51 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4395.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4359.22 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4359.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4365.09 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4301.44 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4378.32 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4339.20 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4438.84 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4408.56 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4379.13 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4372.70 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4374.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4373.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4384.02 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4413.60 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "ILF",
+      "reason": "$4398.94 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4363.96 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4333.50 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4404.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4363.92 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4314.24 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4278.80 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4292.42 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4307.00 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4401.17 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4279.68 exceeds $3760.62 of settled cash (total cash $3760.62; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4381.50 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4409.44 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4427.22 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4316.76 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4409.44 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4374.72 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4373.06 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4369.56 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4426.50 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4410.00 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4376.43 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4407.00 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4388.28 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4349.92 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4361.85 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4358.20 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4393.35 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4390.00 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4346.46 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4406.65 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4314.56 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4344.96 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4320.54 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4361.52 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4359.74 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4390.00 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4380.30 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4364.64 exceeds $3978.65 of settled cash (total cash $3978.65; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.0004544421722335832765280618041",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

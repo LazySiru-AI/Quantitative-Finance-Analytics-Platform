@@ -1,0 +1,19 @@
+{
+  "round_id": "r14-2026-08",
+  "title": "Round 14 - naming the chooser",
+  "focus": "Measure how much the tournament engine's tie-breaking rule, which decides which qualifying name takes a scarce slot when more names qualify than there are slots, actually moves results, compared against the arbitrary-ordering noise floor the programme's protocol already records.",
+  "headline": "Round 14 selects nothing: on four of five test cards the choice of ranking key is worth well under 1.3 points of median adjusted excess, but for A-rotation, the field's scarcest-slot card, the key flips the sign of the result by nearly nine points.",
+  "outcome": "This round seats no card, changes no gate and touches no earlier results tree - it measures one property of the engine, and the desk roster is unchanged. A pre-registered control had to pass before any other number could be read, and it very nearly appeared to fail: an early contention census counted trade-log row order as a change, when the underlying trade sets and ending equity were actually identical. Corrected to compare sorted trade sets, the control diverged by exactly zero across all eight windows, and the round proceeded.\n\nFive base cards and their variants were each run under three different slot-selection keys plus the as-typed order, on the same windows per family. On four of the five bases, the entire choice of chooser, including making no choice at all, was worth under 1.3 points of median adjusted excess - the 53.9-point spread PROTOCOL.md section 7 records from ordering alone does not generalise to this narrower kind of choice.\n\nThe one exception is A-rotation, which has the fewest slots of any card in the field: it showed 8.88 points of spread and is the only card where a key change flips the sign of the result. The round is careful to frame this as a caution rather than a conclusion - A-rotation is the card seated on the desk by owner override, but the version actually seated and run is the unranked, as-typed order, not any of the alternate keys tested here, so the seated card's own recorded figures are not shown to be mis-scored.\n\nHeadroom (spare qualifying names beyond available slots) turned out not to predict which cards were actually contested: two cards with identical universe size and slot count sat at opposite ends of the contention spectrum. A run shortfall, 164 of 176 expected runs, was traced entirely to honest lookahead-guard refusals on symbols without sufficient pre-window history, not to store contention, and fell on whole card families rather than biasing any single comparison.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "Do not license re-running rounds 1-5 with a new ranking key even if one proves out here - the frozen matrices those rounds and their gates depend on should not be treated as re-testable; apply any adopted key only to new cards from here.",
+    "A-rotation's backtest record would read about nine points differently under a different, equally defensible slot-selection key; this is a caution about how sensitive that specific card's backtest figures are, not a claim that its seated, as-run figures are wrong.",
+    "Headroom (spare qualifying names versus slots) does not predict which cards are actually contested by the choice of ranking key, so a future round designed to test ranking-key sensitivity should select its field on measured contention instead."
+  ],
+  "sources": [
+    "strategy-program/ROUND-14-PLAN.md",
+    "data/rounds/r14-2026-08/SELECTION.md",
+    "strategy-program/PROTOCOL.md"
+  ]
+}

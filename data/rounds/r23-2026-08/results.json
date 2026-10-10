@@ -1,0 +1,80 @@
+{
+  "inv-2000": {
+    "a-control": {
+      "ending_equity": 96851.94,
+      "total_return": -3.148059999999997,
+      "max_drawdown": -24.632585275654538,
+      "capital_exposure": 98.77358934705708,
+      "trades": 33,
+      "rejections": 20
+    },
+    "b-binary": {
+      "ending_equity": 107423.6,
+      "total_return": 7.423599999999997,
+      "max_drawdown": -20.617842738075865,
+      "capital_exposure": 98.5836397269594,
+      "trades": 23,
+      "rejections": 18
+    },
+    "c-sized": {
+      "ending_equity": 108181.44,
+      "total_return": 8.181440000000006,
+      "max_drawdown": -21.355440161087692,
+      "capital_exposure": 97.73267311183979,
+      "trades": 62,
+      "rejections": 48
+    }
+  },
+  "inv-2006": {
+    "a-control": {
+      "ending_equity": 124197.65,
+      "total_return": 24.197650000000003,
+      "max_drawdown": -6.350817016503207,
+      "capital_exposure": 99.80695295313421,
+      "trades": 4,
+      "rejections": 2
+    },
+    "b-binary": {
+      "ending_equity": 123656.85,
+      "total_return": 23.656849999999995,
+      "max_drawdown": -6.233671951836883,
+      "capital_exposure": 98.42881716702018,
+      "trades": 33,
+      "rejections": 22
+    },
+    "c-sized": {
+      "ending_equity": 124233.95,
+      "total_return": 24.233949999999993,
+      "max_drawdown": -6.360012126064074,
+      "capital_exposure": 99.41925297786291,
+      "trades": 19,
+      "rejections": 13
+    }
+  },
+  "inv-2022": {
+    "a-control": {
+      "ending_equity": 116237.39,
+      "total_return": 16.237389999999998,
+      "max_drawdown": -19.92970914880545,
+      "capital_exposure": 98.74927858689796,
+      "trades": 13,
+      "rejections": 6
+    },
+    "b-binary": {
+      "ending_equity": 107958.99,
+      "total_return": 7.958989999999999,
+      "max_drawdown": -18.550990000325264,
+      "capital_exposure": 97.58969499165117,
+      "trades": 19,
+      "rejections": 12
+    },
+    "c-sized": {
+      "ending_equity": 103624.0,
+      "total_return": 3.624000000000005,
+      "max_drawdown": -18.828423955240215,
+      "capital_exposure": 97.33407000551762,
+      "trades": 108,
+      "rejections": 75
+    }
+  }
+}

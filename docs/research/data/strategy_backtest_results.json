@@ -1,0 +1,926 @@
+{
+  "QQQ": {
+    "symbol": "QQQ",
+    "templates": {
+      "band_reversion": {
+        "entry": "close < bb_lower(20,2)",
+        "exit": "close > sma(20)",
+        "max_holding_bars": 40,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 1.2081202124278243,
+          "cagr": 0.02937021015105823,
+          "volatility": 0.17355095015302424,
+          "sharpe": 0.25297954596046984,
+          "sortino": 0.12368569928539007,
+          "max_drawdown": -0.56888235220471,
+          "exposure": 0.2221255618384805,
+          "trades": 118,
+          "trades_per_year": 4.312064965197216,
+          "win_rate": 0.7457627118644068
+        },
+        "buy_hold_metrics": {
+          "total_return": 13.014483501670718,
+          "cagr": 0.1012838717634208,
+          "volatility": 0.26944614417950585,
+          "sharpe": 0.4925880621757732,
+          "sortino": 0.47522196452870336,
+          "max_drawdown": -0.8296390703529309,
+          "exposure": 0.9998550094243874,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.2765540782303928,
+        "open_trades": 0,
+        "closed_trades": 118,
+        "wins": 88,
+        "losses": 30,
+        "best_trade": 0.1251243128435784,
+        "worst_trade": -0.3645842445739873,
+        "exit_reason_counts": {
+          "signal": 116,
+          "horizon": 2,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "1999-03-10 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6897
+      },
+      "trend_following": {
+        "entry": "ema(50) crosses_above ema(200)",
+        "exit": "ema(50) crosses_below ema(200)",
+        "max_holding_bars": null,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 13.37149784475476,
+          "cagr": 0.10229670243562716,
+          "volatility": 0.1630135641471395,
+          "sharpe": 0.6792493006091421,
+          "sortino": 0.5385738412146187,
+          "max_drawdown": -0.30335747429935833,
+          "exposure": 0.7201681890677106,
+          "trades": 14,
+          "trades_per_year": 0.511600928074246,
+          "win_rate": 0.6153846153846154
+        },
+        "buy_hold_metrics": {
+          "total_return": 13.014483501670718,
+          "cagr": 0.1012838717634208,
+          "volatility": 0.26944614417950585,
+          "sharpe": 0.4925880621757732,
+          "sortino": 0.47522196452870336,
+          "max_drawdown": -0.8296390703529309,
+          "exposure": 0.9998550094243874,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.19532893233502158,
+        "open_trades": 1,
+        "closed_trades": 13,
+        "wins": 8,
+        "losses": 5,
+        "best_trade": 0.945003266920392,
+        "worst_trade": -0.09233325700501926,
+        "exit_reason_counts": {
+          "signal": 13,
+          "horizon": 0,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "1999-03-10 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6897
+      },
+      "momentum_persistence": {
+        "entry": "close > sma(200)",
+        "exit": "close < sma(200)",
+        "max_holding_bars": null,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 6.951405430857939,
+          "cagr": 0.07871036665836417,
+          "volatility": 0.1677239576678665,
+          "sharpe": 0.5358298112572651,
+          "sortino": 0.4197097071133223,
+          "max_drawdown": -0.5429443881713489,
+          "exposure": 0.7223430477018994,
+          "trades": 87,
+          "trades_per_year": 3.1792343387471,
+          "win_rate": 0.26744186046511625
+        },
+        "buy_hold_metrics": {
+          "total_return": 13.014483501670718,
+          "cagr": 0.1012838717634208,
+          "volatility": 0.26944614417950585,
+          "sharpe": 0.4925880621757732,
+          "sortino": 0.47522196452870336,
+          "max_drawdown": -0.8296390703529309,
+          "exposure": 0.9998550094243874,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.718419334723233,
+        "open_trades": 1,
+        "closed_trades": 86,
+        "wins": 23,
+        "losses": 63,
+        "best_trade": 0.7747007661613377,
+        "worst_trade": -0.08749439793549552,
+        "exit_reason_counts": {
+          "signal": 86,
+          "horizon": 0,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "1999-03-10 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6897
+      },
+      "oversold_bounce": {
+        "entry": "rsi(14) < 30",
+        "exit": "rsi(14) > 50",
+        "max_holding_bars": 10,
+        "stop_loss_pct": 0.15,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 0.8763461376964603,
+          "cagr": 0.023263903951761256,
+          "volatility": 0.11465565768766565,
+          "sharpe": 0.2571314624592318,
+          "sortino": 0.0668882877638532,
+          "max_drawdown": -0.2899403854370012,
+          "exposure": 0.058286211396259245,
+          "trades": 43,
+          "trades_per_year": 1.5713457076566126,
+          "win_rate": 0.7209302325581395
+        },
+        "buy_hold_metrics": {
+          "total_return": 13.014483501670718,
+          "cagr": 0.1012838717634208,
+          "volatility": 0.26944614417950585,
+          "sharpe": 0.4925880621757732,
+          "sortino": 0.47522196452870336,
+          "max_drawdown": -0.8296390703529309,
+          "exposure": 0.9998550094243874,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.08048538558927798,
+        "open_trades": 0,
+        "closed_trades": 43,
+        "wins": 31,
+        "losses": 12,
+        "best_trade": 0.2070896194965539,
+        "worst_trade": -0.15381586171119377,
+        "exit_reason_counts": {
+          "signal": 13,
+          "horizon": 27,
+          "stop": 3,
+          "end_of_data": 0
+        },
+        "first_bar": "1999-03-10 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6897
+      },
+      "volatility_contraction": {
+        "entry": "bb_upper(20,2) - bb_lower(20,2) < close * 0.04",
+        "exit": null,
+        "max_holding_bars": 20,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 0.47536859617869665,
+          "cagr": 0.014313298110171457,
+          "volatility": 0.0770974586840674,
+          "sharpe": 0.22297587385789033,
+          "sortino": 0.10294859852377562,
+          "max_drawdown": -0.2520972488678498,
+          "exposure": 0.2496737712048717,
+          "trades": 82,
+          "trades_per_year": 2.996519721577726,
+          "win_rate": 0.6219512195121951
+        },
+        "buy_hold_metrics": {
+          "total_return": 13.014483501670718,
+          "cagr": 0.1012838717634208,
+          "volatility": 0.26944614417950585,
+          "sharpe": 0.4925880621757732,
+          "sortino": 0.47522196452870336,
+          "max_drawdown": -0.8296390703529309,
+          "exposure": 0.9998550094243874,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.12607882912674384,
+        "open_trades": 0,
+        "closed_trades": 82,
+        "wins": 51,
+        "losses": 31,
+        "best_trade": 0.07601211393243767,
+        "worst_trade": -0.11810809656421206,
+        "exit_reason_counts": {
+          "signal": 0,
+          "horizon": 82,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "1999-03-10 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6897
+      }
+    },
+    "drawdown_episodes": [
+      {
+        "peak_date": "2000-03-27",
+        "trough_date": "2002-10-09",
+        "depth": -0.8296390703529309,
+        "bars_to_trough": 636,
+        "recovery_date": "2016-09-06",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2021-11-19",
+        "trough_date": "2022-12-28",
+        "depth": -0.3561721518084682,
+        "bars_to_trough": 277,
+        "recovery_date": "2023-12-15",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2020-02-19",
+        "trough_date": "2020-03-16",
+        "depth": -0.285593695231535,
+        "bars_to_trough": 18,
+        "recovery_date": "2020-06-05",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2018-08-29",
+        "trough_date": "2018-12-24",
+        "depth": -0.2315519129335516,
+        "bars_to_trough": 80,
+        "recovery_date": "2019-04-17",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2025-02-19",
+        "trough_date": "2025-04-08",
+        "depth": -0.2288330692157109,
+        "bars_to_trough": 34,
+        "recovery_date": "2025-06-24",
+        "still_underwater": false
+      }
+    ],
+    "drawdown_current": {
+      "peak_date": "2026-06-02",
+      "depth": -0.11315266928614398,
+      "bars_underwater": 47
+    },
+    "drawdown_episodes_considered": 188
+  },
+  "SOXX": {
+    "symbol": "SOXX",
+    "templates": {
+      "band_reversion": {
+        "entry": "close < bb_lower(20,2)",
+        "exit": "close > sma(20)",
+        "max_holding_bars": 40,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 2.478256791810271,
+          "cagr": 0.05109198766290479,
+          "volatility": 0.1921547227401661,
+          "sharpe": 0.3552249159500342,
+          "sortino": 0.16915292041186752,
+          "max_drawdown": -0.5766006266381922,
+          "exposure": 0.22585249801744647,
+          "trades": 110,
+          "trades_per_year": 4.397208121827411,
+          "win_rate": 0.6818181818181818
+        },
+        "buy_hold_metrics": {
+          "total_return": 21.25886584316253,
+          "cagr": 0.13205081234946858,
+          "volatility": 0.3361080023714304,
+          "sharpe": 0.5370475578515234,
+          "sortino": 0.5330190653469062,
+          "max_drawdown": -0.704984251919611,
+          "exposure": 0.9998413957176844,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.4044450239035595,
+        "open_trades": 0,
+        "closed_trades": 110,
+        "wins": 75,
+        "losses": 35,
+        "best_trade": 0.13545706154922654,
+        "worst_trade": -0.2800645728786355,
+        "exit_reason_counts": {
+          "signal": 109,
+          "horizon": 1,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-13 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6305
+      },
+      "trend_following": {
+        "entry": "ema(50) crosses_above ema(200)",
+        "exit": "ema(50) crosses_below ema(200)",
+        "max_holding_bars": null,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 16.29349373369698,
+          "cagr": 0.12068585725275804,
+          "volatility": 0.23249967339749708,
+          "sharpe": 0.6068285603157605,
+          "sortino": 0.48004578731561426,
+          "max_drawdown": -0.3425381539295528,
+          "exposure": 0.6808881839809675,
+          "trades": 14,
+          "trades_per_year": 0.5596446700507615,
+          "win_rate": 0.6923076923076923
+        },
+        "buy_hold_metrics": {
+          "total_return": 21.25886584316253,
+          "cagr": 0.13205081234946858,
+          "volatility": 0.3361080023714304,
+          "sharpe": 0.5370475578515234,
+          "sortino": 0.5330190653469062,
+          "max_drawdown": -0.704984251919611,
+          "exposure": 0.9998413957176844,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.23504297908503702,
+        "open_trades": 1,
+        "closed_trades": 13,
+        "wins": 9,
+        "losses": 4,
+        "best_trade": 0.7676398235234516,
+        "worst_trade": -0.11858551289953001,
+        "exit_reason_counts": {
+          "signal": 13,
+          "horizon": 0,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-13 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6305
+      },
+      "momentum_persistence": {
+        "entry": "close > sma(200)",
+        "exit": "close < sma(200)",
+        "max_holding_bars": null,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 15.909434170299857,
+          "cagr": 0.11968018413530901,
+          "volatility": 0.21849293753040983,
+          "sharpe": 0.6269970147089193,
+          "sortino": 0.4927212226366716,
+          "max_drawdown": -0.4062852075167601,
+          "exposure": 0.6691514670896114,
+          "trades": 91,
+          "trades_per_year": 3.637690355329949,
+          "win_rate": 0.2222222222222222
+        },
+        "buy_hold_metrics": {
+          "total_return": 21.25886584316253,
+          "cagr": 0.13205081234946858,
+          "volatility": 0.3361080023714304,
+          "sharpe": 0.5370475578515234,
+          "sortino": 0.5330190653469062,
+          "max_drawdown": -0.704984251919611,
+          "exposure": 0.9998413957176844,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -1.6016849236921793,
+        "open_trades": 1,
+        "closed_trades": 90,
+        "wins": 20,
+        "losses": 70,
+        "best_trade": 1.039645795875174,
+        "worst_trade": -0.09415576934197856,
+        "exit_reason_counts": {
+          "signal": 90,
+          "horizon": 0,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-13 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6305
+      },
+      "oversold_bounce": {
+        "entry": "rsi(14) < 30",
+        "exit": "rsi(14) > 50",
+        "max_holding_bars": 10,
+        "stop_loss_pct": 0.15,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": -0.026871849675390802,
+          "cagr": -0.0010882959809314086,
+          "volatility": 0.13692309247421813,
+          "sharpe": 0.06011216472916717,
+          "sortino": 0.01588014174498994,
+          "max_drawdown": -0.3313585478812885,
+          "exposure": 0.06328310864393338,
+          "trades": 41,
+          "trades_per_year": 1.638959390862944,
+          "win_rate": 0.4878048780487805
+        },
+        "buy_hold_metrics": {
+          "total_return": 21.25886584316253,
+          "cagr": 0.13205081234946858,
+          "volatility": 0.3361080023714304,
+          "sharpe": 0.5370475578515234,
+          "sortino": 0.5330190653469062,
+          "max_drawdown": -0.704984251919611,
+          "exposure": 0.9998413957176844,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.03971436978992049,
+        "open_trades": 0,
+        "closed_trades": 41,
+        "wins": 20,
+        "losses": 21,
+        "best_trade": 0.18281669589041916,
+        "worst_trade": -0.19003192317383233,
+        "exit_reason_counts": {
+          "signal": 10,
+          "horizon": 27,
+          "stop": 4,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-13 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6305
+      },
+      "volatility_contraction": {
+        "entry": "bb_upper(20,2) - bb_lower(20,2) < close * 0.04",
+        "exit": null,
+        "max_holding_bars": 20,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 0.454919783923996,
+          "cagr": 0.015101405291202408,
+          "volatility": 0.06782926913539176,
+          "sharpe": 0.25507319845225995,
+          "sortino": 0.07250236053113784,
+          "max_drawdown": -0.25517362813314837,
+          "exposure": 0.0999206978588422,
+          "trades": 30,
+          "trades_per_year": 1.1992385786802031,
+          "win_rate": 0.7333333333333333
+        },
+        "buy_hold_metrics": {
+          "total_return": 21.25886584316253,
+          "cagr": 0.13205081234946858,
+          "volatility": 0.3361080023714304,
+          "sharpe": 0.5370475578515234,
+          "sortino": 0.5330190653469062,
+          "max_drawdown": -0.704984251919611,
+          "exposure": 0.9998413957176844,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.04430890770722451,
+        "open_trades": 0,
+        "closed_trades": 30,
+        "wins": 22,
+        "losses": 8,
+        "best_trade": 0.09760310267966177,
+        "worst_trade": -0.13097758004387894,
+        "exit_reason_counts": {
+          "signal": 0,
+          "horizon": 30,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-13 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6305
+      }
+    },
+    "drawdown_episodes": [
+      {
+        "peak_date": "2001-08-02",
+        "trough_date": "2008-11-20",
+        "depth": -0.704984251919611,
+        "bars_to_trough": 1836,
+        "recovery_date": "2014-03-20",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2021-12-27",
+        "trough_date": "2022-10-14",
+        "depth": -0.46244806463181554,
+        "bars_to_trough": 202,
+        "recovery_date": "2023-12-14",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2024-07-10",
+        "trough_date": "2025-04-08",
+        "depth": -0.41670117026393005,
+        "bars_to_trough": 187,
+        "recovery_date": "2025-09-18",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2020-02-19",
+        "trough_date": "2020-03-20",
+        "depth": -0.3425381539295528,
+        "bars_to_trough": 22,
+        "recovery_date": "2020-06-05",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2026-06-22",
+        "trough_date": "2026-07-29",
+        "depth": -0.29008718482579243,
+        "bars_to_trough": 26,
+        "recovery_date": null,
+        "still_underwater": true
+      }
+    ],
+    "drawdown_current": {
+      "peak_date": "2026-06-22",
+      "depth": -0.29008718482579243,
+      "bars_underwater": 34
+    },
+    "drawdown_episodes_considered": 149
+  },
+  "IGV": {
+    "symbol": "IGV",
+    "templates": {
+      "band_reversion": {
+        "entry": "close < bb_lower(20,2)",
+        "exit": "close > sma(20)",
+        "max_holding_bars": 40,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 1.07062752664079,
+          "cagr": 0.029532513624573875,
+          "volatility": 0.16729055079682745,
+          "sharpe": 0.25739119722745635,
+          "sortino": 0.12171407052486732,
+          "max_drawdown": -0.46944328683951164,
+          "exposure": 0.22735205457718546,
+          "trades": 107,
+          "trades_per_year": 4.278641701047286,
+          "win_rate": 0.6728971962616822
+        },
+        "buy_hold_metrics": {
+          "total_return": 9.774676689151304,
+          "cagr": 0.09972238219280039,
+          "volatility": 0.2653834704634015,
+          "sharpe": 0.4908971801069688,
+          "sortino": 0.47543869428776575,
+          "max_drawdown": -0.6146881201821577,
+          "exposure": 0.9998413453910836,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.2338447965737327,
+        "open_trades": 0,
+        "closed_trades": 107,
+        "wins": 72,
+        "losses": 35,
+        "best_trade": 0.12987930333037934,
+        "worst_trade": -0.27450479039531694,
+        "exit_reason_counts": {
+          "signal": 106,
+          "horizon": 1,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-17 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6303
+      },
+      "trend_following": {
+        "entry": "ema(50) crosses_above ema(200)",
+        "exit": "ema(50) crosses_below ema(200)",
+        "max_holding_bars": null,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 4.36647760589275,
+          "cagr": 0.06949389517860771,
+          "volatility": 0.18458735711589186,
+          "sharpe": 0.4565843539744882,
+          "sortino": 0.36942502601211,
+          "max_drawdown": -0.416944056863378,
+          "exposure": 0.7547199746152625,
+          "trades": 16,
+          "trades_per_year": 0.6397968898762297,
+          "win_rate": 0.5
+        },
+        "buy_hold_metrics": {
+          "total_return": 9.774676689151304,
+          "cagr": 0.09972238219280039,
+          "volatility": 0.2653834704634015,
+          "sharpe": 0.4908971801069688,
+          "sortino": 0.47543869428776575,
+          "max_drawdown": -0.6146881201821577,
+          "exposure": 0.9998413453910836,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.08655423631500003,
+        "open_trades": 0,
+        "closed_trades": 16,
+        "wins": 8,
+        "losses": 8,
+        "best_trade": 0.5938342237173466,
+        "worst_trade": -0.1076953517509317,
+        "exit_reason_counts": {
+          "signal": 16,
+          "horizon": 0,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-17 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6303
+      },
+      "momentum_persistence": {
+        "entry": "close > sma(200)",
+        "exit": "close < sma(200)",
+        "max_holding_bars": null,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 3.517858461961514,
+          "cagr": 0.062157673214157994,
+          "volatility": 0.16943808966250118,
+          "sharpe": 0.4409379824064908,
+          "sortino": 0.3492151259104085,
+          "max_drawdown": -0.3195423267277506,
+          "exposure": 0.73901316833254,
+          "trades": 98,
+          "trades_per_year": 3.918755950491907,
+          "win_rate": 0.27835051546391754
+        },
+        "buy_hold_metrics": {
+          "total_return": 9.774676689151304,
+          "cagr": 0.09972238219280039,
+          "volatility": 0.2653834704634015,
+          "sharpe": 0.4908971801069688,
+          "sortino": 0.47543869428776575,
+          "max_drawdown": -0.6146881201821577,
+          "exposure": 0.9998413453910836,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.46267981576797723,
+        "open_trades": 1,
+        "closed_trades": 97,
+        "wins": 27,
+        "losses": 70,
+        "best_trade": 0.8270599602490623,
+        "worst_trade": -0.0776388001642031,
+        "exit_reason_counts": {
+          "signal": 97,
+          "horizon": 0,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-17 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6303
+      },
+      "oversold_bounce": {
+        "entry": "rsi(14) < 30",
+        "exit": "rsi(14) > 50",
+        "max_holding_bars": 10,
+        "stop_loss_pct": 0.15,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": -0.21161132845881803,
+          "cagr": -0.009462490835242754,
+          "volatility": 0.12273433923200149,
+          "sharpe": -0.01613547148067664,
+          "sortino": -0.004278580964278168,
+          "max_drawdown": -0.5373128373800686,
+          "exposure": 0.06885610026971284,
+          "trades": 43,
+          "trades_per_year": 1.7194541415423674,
+          "win_rate": 0.5813953488372093
+        },
+        "buy_hold_metrics": {
+          "total_return": 9.774676689151304,
+          "cagr": 0.09972238219280039,
+          "volatility": 0.2653834704634015,
+          "sharpe": 0.4908971801069688,
+          "sortino": 0.47543869428776575,
+          "max_drawdown": -0.6146881201821577,
+          "exposure": 0.9998413453910836,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.03299613939094981,
+        "open_trades": 0,
+        "closed_trades": 43,
+        "wins": 25,
+        "losses": 18,
+        "best_trade": 0.12929924609850763,
+        "worst_trade": -0.15042500000000014,
+        "exit_reason_counts": {
+          "signal": 8,
+          "horizon": 31,
+          "stop": 4,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-17 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6303
+      },
+      "volatility_contraction": {
+        "entry": "bb_upper(20,2) - bb_lower(20,2) < close * 0.04",
+        "exit": null,
+        "max_holding_bars": 20,
+        "stop_loss_pct": null,
+        "costs": {
+          "slippage_bps": 5.0,
+          "commission_per_trade": 0.0,
+          "notional": 10000.0
+        },
+        "strategy_metrics": {
+          "total_return": 0.2595743891593598,
+          "cagr": 0.009270735070494807,
+          "volatility": 0.0735535635218082,
+          "sharpe": 0.16236345350961234,
+          "sortino": 0.06247828788440997,
+          "max_drawdown": -0.23237503925182046,
+          "exposure": 0.18324607329842932,
+          "trades": 55,
+          "trades_per_year": 2.1993018089495395,
+          "win_rate": 0.6
+        },
+        "buy_hold_metrics": {
+          "total_return": 9.774676689151304,
+          "cagr": 0.09972238219280039,
+          "volatility": 0.2653834704634015,
+          "sharpe": 0.4908971801069688,
+          "sortino": 0.47543869428776575,
+          "max_drawdown": -0.6146881201821577,
+          "exposure": 0.9998413453910836,
+          "trades": 0,
+          "trades_per_year": 0.0,
+          "win_rate": null
+        },
+        "cost_drag": -0.07121711629203298,
+        "open_trades": 0,
+        "closed_trades": 55,
+        "wins": 33,
+        "losses": 22,
+        "best_trade": 0.18045138929372118,
+        "worst_trade": -0.11142035036051712,
+        "exit_reason_counts": {
+          "signal": 0,
+          "horizon": 55,
+          "stop": 0,
+          "end_of_data": 0
+        },
+        "first_bar": "2001-07-17 00:00:00+00:00",
+        "last_bar": "2026-08-10 00:00:00+00:00",
+        "bars": 6303
+      }
+    },
+    "drawdown_episodes": [
+      {
+        "peak_date": "2001-07-17",
+        "trough_date": "2002-10-07",
+        "depth": -0.6218404595565076,
+        "bars_to_trough": 305,
+        "recovery_date": "2007-10-04",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2007-10-31",
+        "trough_date": "2008-11-20",
+        "depth": -0.4981440255304349,
+        "bars_to_trough": 267,
+        "recovery_date": "2010-10-26",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2021-11-09",
+        "trough_date": "2022-11-04",
+        "depth": -0.4585460939164584,
+        "bars_to_trough": 249,
+        "recovery_date": "2024-09-24",
+        "still_underwater": false
+      },
+      {
+        "peak_date": "2025-09-22",
+        "trough_date": "2026-04-10",
+        "depth": -0.36607523908167194,
+        "bars_to_trough": 138,
+        "recovery_date": null,
+        "still_underwater": true
+      },
+      {
+        "peak_date": "2020-02-19",
+        "trough_date": "2020-03-16",
+        "depth": -0.3029587328344344,
+        "bars_to_trough": 18,
+        "recovery_date": "2020-05-29",
+        "still_underwater": false
+      }
+    ],
+    "drawdown_current": {
+      "peak_date": "2025-09-22",
+      "depth": -0.36607523908167194,
+      "bars_underwater": 221
+    },
+    "drawdown_episodes_considered": 214
+  }
+}

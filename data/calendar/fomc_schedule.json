@@ -1,0 +1,87 @@
+{
+  "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "retrieved_at": "2026-08-25",
+  "note": "Committed fallback used when the live page is unreachable. Regenerate with backend/app/market/fomc.py's parser when the Fed publishes a new year.",
+  "meetings": [
+    {
+      "date": "2026-01-27",
+      "end_date": "2026-01-28",
+      "projections": false
+    },
+    {
+      "date": "2026-03-17",
+      "end_date": "2026-03-18",
+      "projections": true
+    },
+    {
+      "date": "2026-04-28",
+      "end_date": "2026-04-29",
+      "projections": false
+    },
+    {
+      "date": "2026-06-16",
+      "end_date": "2026-06-17",
+      "projections": true
+    },
+    {
+      "date": "2026-07-28",
+      "end_date": "2026-07-29",
+      "projections": false
+    },
+    {
+      "date": "2026-09-15",
+      "end_date": "2026-09-16",
+      "projections": true
+    },
+    {
+      "date": "2026-10-27",
+      "end_date": "2026-10-28",
+      "projections": false
+    },
+    {
+      "date": "2026-12-08",
+      "end_date": "2026-12-09",
+      "projections": true
+    },
+    {
+      "date": "2027-01-26",
+      "end_date": "2027-01-27",
+      "projections": false
+    },
+    {
+      "date": "2027-03-16",
+      "end_date": "2027-03-17",
+      "projections": true
+    },
+    {
+      "date": "2027-04-27",
+      "end_date": "2027-04-28",
+      "projections": false
+    },
+    {
+      "date": "2027-06-08",
+      "end_date": "2027-06-09",
+      "projections": true
+    },
+    {
+      "date": "2027-07-27",
+      "end_date": "2027-07-28",
+      "projections": false
+    },
+    {
+      "date": "2027-09-14",
+      "end_date": "2027-09-15",
+      "projections": true
+    },
+    {
+      "date": "2027-10-26",
+      "end_date": "2027-10-27",
+      "projections": false
+    },
+    {
+      "date": "2027-12-07",
+      "end_date": "2027-12-08",
+      "projections": true
+    }
+  ]
+}

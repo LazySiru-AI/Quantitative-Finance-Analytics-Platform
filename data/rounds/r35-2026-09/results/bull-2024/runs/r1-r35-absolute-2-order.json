@@ -1,0 +1,308 @@
+{
+  "card": {
+    "agent_id": "r35-absolute-2-order",
+    "display_name": "R35 country rotation / absolute / 2 slots / order",
+    "discipline": "mean-reversion",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 35 cell. Form: c20-rotation's absolute per-symbol filter verbatim -- price above its own 100-day average with 14-day RSI between 50 and 75, an established but not extended move, exited when the trend breaks or RSI falls under 40. Applied identically across eight country and regional equity ETFs with a binding 2-slot cap and 0.44 of the book per slot, so at most 88% of capital is deployed -- the same budget every card in this field carries, which is what makes the slot cap a question about concentration rather than about how much money is in the market. Slots are filled in the order the universe is written, which is the arbitrary tiebreak PROTOCOL section 7 measures at sigma = 21.2 points. The hypothesis under test is not that this rule is good -- the programme's record across rounds 1-33 is that no durable edge has been found, and that record is the prior this card argues against. It is that country dispersion is a source this shape has never been pointed at, and that a rotation which cannot beat its own universe's buy-and-hold on that axis has been shown not to carry information there. This engine has no cross-symbol operator -- entry and exit are evaluated per instrument against that instrument's own bars only -- so the rotation here is produced entirely by the universe, the slot cap and the fill order, exactly as c20-rotation's own thesis says of the sector version. The universe is eight single-country and regional equity ETFs chosen on one mechanical criterion and one legal one: enough stored history to clear every window in the matrix including gfc, and total absence from every savings- or trading-purpose card in the library, because this card is roth-purpose and Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss replaced inside an IRA. EEM, EWZ, FXI and INDA belong in this universe on the merits and are excluded on that second criterion alone. Ticker disjointness is necessary and not sufficient under IRC section 1091: VWO tracks a different index from the taxable book's EEM and ILF is not EWZ, but the economic exposures are close, and nothing here claims the roster is section 1091-safe. EFA contains EWJ, EWG and EWU, so this is not eight independent bets; that redundancy is left in and counted against the field under Benjamini-Hochberg rather than papered over with extra cells. The benchmark is SPY, price-only, in USD, which is the wrong benchmark for a non-US book and is pre-registered as this round's known confound -- the field carries its own within-universe passive control (r35-passive-8-order) so the rotation can be read against buy-and-hold of the same eight names rather than only against a decade of US outperformance. Not a proposal to trade anything. See strategy-program/ROUND-35-PLAN.md.",
+    "falsification": "Wrong if this cell's median exposure-adjusted excess over the eight main windows fails to beat the field's passive control (r35-passive-8-order) by more than 21.2 percentage points, the programme's measured ordering-noise floor. Beating SPY is not the test and failing to beat SPY is not the falsification: a non-US book measured against a US price-only benchmark over 2011-2026 inherits an asset-class gap no rule can close, which is why the control is in the field. A margin inside 21.2pp is a null for this cell whichever side of the control it lands on.",
+    "universe": [
+      "EWJ",
+      "EWG",
+      "EWU",
+      "EWC",
+      "EWY",
+      "ILF",
+      "EFA",
+      "VWO"
+    ],
+    "entry": "close > sma(100) and rsi(14) > 50 and rsi(14) < 75",
+    "exit": "close < sma(100) or rsi(14) < 40",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 2,
+    "position_pct": "0.44",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 250,
+  "starting_equity": "10000.00",
+  "ending_equity": "10442.49",
+  "total_return": "0.04424899999999998",
+  "max_drawdown": "-0.1330563028439662",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.908,
+  "capital_exposure": 0.741047928,
+  "win_rate": 0.21428571428571427,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "EWJ",
+      "entry_date": "2024-08-21",
+      "entry_price": "70.92",
+      "exit_date": "2024-09-09",
+      "exit_price": "69.24",
+      "quantity": "62",
+      "exit_reason": "rule",
+      "pnl": "-104.29",
+      "return_pct": "-0.02371822862653057511416771282",
+      "bars_held": 12
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2024-09-10",
+      "entry_price": "36.59",
+      "exit_date": "2024-10-24",
+      "exit_price": "36.53",
+      "quantity": "119",
+      "exit_reason": "rule",
+      "pnl": "-7.28",
+      "return_pct": "-0.001671945083034580325707763291",
+      "bars_held": 32
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2024-10-25",
+      "entry_price": "41.59",
+      "exit_date": "2024-11-01",
+      "exit_price": "40.81",
+      "quantity": "106",
+      "exit_reason": "rule",
+      "pnl": "-82.82",
+      "return_pct": "-0.01878626484051409310111737673",
+      "bars_held": 5
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2024-08-21",
+      "entry_price": "31.92",
+      "exit_date": "2024-11-07",
+      "exit_price": "32.49",
+      "quantity": "138",
+      "exit_reason": "rule",
+      "pnl": "78.51",
+      "return_pct": "0.01782309033453198212923613381",
+      "bars_held": 55
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2024-11-08",
+      "entry_price": "69.43",
+      "exit_date": "2024-11-13",
+      "exit_price": "67.96",
+      "quantity": "62",
+      "exit_reason": "rule",
+      "pnl": "-91.27",
+      "return_pct": "-0.02120260368995460733251871228",
+      "bars_held": 3
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2024-12-02",
+      "entry_price": "70.32",
+      "exit_date": "2024-12-17",
+      "exit_price": "67.77",
+      "quantity": "63",
+      "exit_reason": "rule",
+      "pnl": "-160.78",
+      "return_pct": "-0.03629214294743304982212832042",
+      "bars_held": 11
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2024-11-06",
+      "entry_price": "41.30",
+      "exit_date": "2024-12-18",
+      "exit_price": "41.06",
+      "quantity": "106",
+      "exit_reason": "rule",
+      "pnl": "-25.58",
+      "return_pct": "-0.005843117547626661793594956371",
+      "bars_held": 29
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2024-12-18",
+      "entry_price": "32.81",
+      "exit_date": "2024-12-19",
+      "exit_price": "32.10",
+      "quantity": "134",
+      "exit_reason": "rule",
+      "pnl": "-95.28",
+      "return_pct": "-0.02167158720266391298612090417",
+      "bars_held": 1
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2025-01-24",
+      "entry_price": "41.60",
+      "exit_date": "2025-01-28",
+      "exit_price": "41.36",
+      "quantity": "106",
+      "exit_reason": "rule",
+      "pnl": "-25.58",
+      "return_pct": "-0.005800979680696661828737300435",
+      "bars_held": 2
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2025-01-29",
+      "entry_price": "41.39",
+      "exit_date": "2025-02-03",
+      "exit_price": "40.14",
+      "quantity": "106",
+      "exit_reason": "rule",
+      "pnl": "-132.64",
+      "return_pct": "-0.03023244152493310297355573081",
+      "bars_held": 3
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2025-02-06",
+      "entry_price": "69.31",
+      "exit_date": "2025-02-10",
+      "exit_price": "68.81",
+      "quantity": "63",
+      "exit_reason": "rule",
+      "pnl": "-31.63",
+      "return_pct": "-0.007243738162797461599943204329",
+      "bars_held": 2
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2025-01-16",
+      "entry_price": "32.79",
+      "exit_date": "2025-04-07",
+      "exit_price": "33.33",
+      "quantity": "134",
+      "exit_reason": "rule",
+      "pnl": "72.21",
+      "return_pct": "0.01643429695074490311480110882",
+      "bars_held": 55
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2025-02-11",
+      "entry_price": "36.19",
+      "exit_date": "2025-04-07",
+      "exit_price": "33.18",
+      "quantity": "121",
+      "exit_reason": "rule",
+      "pnl": "-364.34",
+      "return_pct": "-0.08320183421291210987008419750",
+      "bars_held": 38
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2025-04-15",
+      "entry_price": "37.14",
+      "exit_date": "2025-06-18",
+      "exit_price": "40.33",
+      "quantity": "119",
+      "exit_reason": "rule",
+      "pnl": "379.46",
+      "return_pct": "0.08585728313942701474774077644",
+      "bars_held": 44
+    },
+    {
+      "symbol": "EWU",
+      "entry_date": "2025-04-16",
+      "entry_price": "36.68",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "120",
+      "exit_reason": "open_at_end",
+      "pnl": "604.80",
+      "return_pct": "0.1374045801526717557251908397",
+      "bars_held": 86
+    },
+    {
+      "symbol": "EWJ",
+      "entry_date": "2025-06-20",
+      "entry_price": "72.49",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "60",
+      "exit_reason": "open_at_end",
+      "pnl": "429.00",
+      "return_pct": "0.09863429438543247344461305008",
+      "bars_held": 42
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4397.82 exceeds $1198.00 of settled cash (total cash $5490.75; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4379.55 exceeds $1136.54 of settled cash (total cash $5483.47; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWJ",
+      "reason": "$4393.62 exceeds $1022.85 of settled cash (total cash $5506.32; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWG",
+      "reason": "$4378.36 exceeds $984.89 of settled cash (total cash $5254.27; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWU",
+      "reason": "$4407.86 exceeds $592.60 of settled cash (total cash $4927.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4411.05 exceeds $592.60 of settled cash (total cash $4927.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EFA",
+      "reason": "$4401.10 exceeds $592.60 of settled cash (total cash $4927.50; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4382.40 exceeds $207.97 of settled cash (total cash $5007.09; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWY",
+      "reason": "$4483.38 exceeds $207.97 of settled cash (total cash $5007.09; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "VWO",
+      "reason": "$4388.93 exceeds $207.97 of settled cash (total cash $5007.09; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "0.1399503367454490237061650321",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,113 @@
+{
+  "card": {
+    "agent_id": "c05-trend",
+    "display_name": "Cross-Asset 200dma Trend",
+    "discipline": "trend",
+    "thesis": "The 200-day moving average is not a statistical artifact -- it is a level thousands of participants mechanically watch and react to at the same time (managed-futures CTAs, trend-following mutual funds, and technically-oriented traders all use variants of it), so a break of it triggers correlated follow-on flow rather than random noise. The other side of the trade is supplied by participants who are slow or unwilling to move: index funds and 401k flows that buy/sell on a schedule unrelated to price level, and holders exhibiting the disposition effect who keep underwater positions past the point a trend-follower would already have exited, cushioning the trend-follower's fills. Applying the identical rule independently across three assets whose price drivers are structurally different (US equity beta, long-duration interest-rate risk, and a non-yielding hard asset with its own supply/demand book) means the three trend signals are not forced to fire together -- when equity trend breaks down in a genuine flight-to-quality event, rate or gold trend can still be up, which a single-asset or single-sector trend book cannot offer. This is not a hedge (the rules do not compare symbols to each other -- the engine cannot do that); it is three independent bets whose bad years are not the same years, which the correlation numbers in the memo support. What I expect to go wrong: fast V-shaped shocks. A 200-day average reacts on the order of weeks, not days, so a crash-and-snapback that completes inside a single quarter (COVID is the designed example) will be entered late on the way down and re-entered late on the way back up, capturing the worst of both transitions rather than avoiding them.",
+    "universe": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ],
+    "entry": "close crosses_above sma(200)",
+    "exit": "close crosses_below sma(200)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 3,
+    "position_pct": "0.33",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "10250.93",
+  "total_return": "0.025093000000000032",
+  "max_drawdown": "-0.027993000000000046",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.7634408602150538,
+  "capital_exposure": 0.3286759569892473,
+  "win_rate": 0.5,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "SPY",
+      "entry_date": "2020-03-03",
+      "entry_price": "309.65",
+      "exit_date": "2020-03-04",
+      "exit_price": "305.97",
+      "quantity": "10",
+      "exit_reason": "rule",
+      "pnl": "-36.89",
+      "return_pct": "-0.01191345067011141611496851284",
+      "bars_held": 1
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2020-03-05",
+      "entry_price": "305.13",
+      "exit_date": "2020-03-06",
+      "exit_price": "293.00",
+      "quantity": "10",
+      "exit_reason": "rule",
+      "pnl": "-121.38",
+      "return_pct": "-0.03977976600137646249139710943",
+      "bars_held": 1
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2020-05-28",
+      "entry_price": "304.80",
+      "exit_date": "2020-06-12",
+      "exit_price": "308.09",
+      "quantity": "10",
+      "exit_reason": "rule",
+      "pnl": "32.81",
+      "return_pct": "0.01076443569553805774278215223",
+      "bars_held": 11
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2020-06-15",
+      "entry_price": "298.17",
+      "exit_date": "2020-06-29",
+      "exit_price": "301.26",
+      "quantity": "10",
+      "exit_reason": "rule",
+      "pnl": "30.81",
+      "return_pct": "0.01033303149210182110876345709",
+      "bars_held": 10
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2020-03-24",
+      "entry_price": "153.58",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "22",
+      "exit_reason": "open_at_end",
+      "pnl": "303.38",
+      "return_pct": "0.08979033728350045578851412944",
+      "bars_held": 68
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2020-06-30",
+      "entry_price": "304.14",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "10",
+      "exit_reason": "open_at_end",
+      "pnl": "42.20",
+      "return_pct": "0.01387518905767080949562701388",
+      "bars_held": 0
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

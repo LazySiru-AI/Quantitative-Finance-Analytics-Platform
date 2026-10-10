@@ -1,0 +1,99 @@
+{
+  "findings": [
+    {
+      "finding_id": "portfolio-settled-unsettled-cash-split-incorrect",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-08-14T20:05:00Z",
+      "session_date": "2026-08-11",
+      "surface": "api",
+      "locator": "GET /api/portfolio",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Settled/unsettled cash split reports $10,000 settled and -$7,018.14 unsettled",
+      "observed": "GET /api/portfolio returns cash_balance=\"2981.86\" (correct) but settled_cash=\"10000.00\" and unsettled_cash=\"-7018.14\". The Portfolio page and the downloaded statement.md both render this verbatim: 'CASH $2,981.86 / $10,000.00 settled . -$7,018.14 unsettled', and the Cash-by-account table shows the same two figures under Settled/Unsettled column headers. The session's own state (uat/runs/2026-08-10_pro-investor-01/state.json) carries unsettled: [] -- nothing pending settlement -- and the session brief's book.settled_cash is \"2981.86\", identical to cash_balance. There has been no sale this run; six buys totalling $7,018.14 are the only trades, so there is no sale proceeds that could be 'unsettled' at all, and nothing should be negative.",
+      "expected": "Settled cash should equal the actual $2,981.86 cash balance, as the brief's own book.settled_cash does, with unsettled at $0.00 -- an account that has only ever deposited and bought has nothing pending settlement.",
+      "why_it_matters": "This is the exact figure the mandate's 'no same-day reuse of unsettled proceeds' rule depends on. Reading '$10,000.00 settled' tells a trader the full starting capital is free to deploy, when only $2,981.86 actually is -- precisely the over-sizing trap a settled/unsettled split exists to prevent. I sized this session's order off the brief's figure instead, but a user without that cross-check would not know to.",
+      "repro": [
+        "Navigate to /portfolio with the session-2 ledger loaded",
+        "Read the Cash tile: '$2,981.86 / $10,000.00 settled . -$7,018.14 unsettled'",
+        "Confirm via GET /api/portfolio: settled_cash=\"10000.00\", unsettled_cash=\"-7018.14\", cash_balance=\"2981.86\"",
+        "Confirm via GET /api/portfolio/statement.md: the same three figures appear in the Cash by account table",
+        "Compare against uat/runs/2026-08-10_pro-investor-01/state.json (unsettled: []) and brief-s2.json book.settled_cash (\"2981.86\")"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "tax-year-activity-message-contradicts-transaction-count",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-08-14T20:12:00Z",
+      "session_date": "2026-08-11",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Tax page says 2026 has none of the ledger's 7 transactions, when all 7 are dated in 2026",
+      "observed": "The Tax page's year selector defaults to 2025 on load, not 2026 -- the year every transaction in the ledger actually falls in, and the current calendar year. Selecting 2026 (native select value setter + change event) shows: 'No 2026 activity in the ledger. It holds 7 transactions, none of them in this tax year -- pick another year above.' But GET /api/portfolio/transactions?start_date=2026-01-01&end_date=2026-12-31 returns total=7, total_bought=7018.14, total_sold=0 -- and the Activity page lists all 7 rows dated 2026-08-07 through 2026-08-10. The claim that none of the 7 fall in tax year 2026 is false; all of them do.",
+      "expected": "For 2026, the page should reflect that there is activity but no disposals yet -- gains legitimately read $0 with an explanation, matching the already-fixed empty-tax-year copy pattern -- not assert that the year holds none of the ledger's transactions when the Activity page shows otherwise.",
+      "why_it_matters": "This is the exact ambiguity a prior fix (the empty-tax-year copy, closed 2026-08-14) was meant to resolve: telling 'nothing imported' apart from 'nothing happened'. This message asserts a third, false thing -- that transactions visible on the Activity page for this year don't exist for tax purposes -- which reads as the tax engine and the ledger having gone out of sync, not as 'no gains yet'.",
+      "repro": [
+        "Navigate to /tax",
+        "Read the year selector's initial value: 2025 (document.querySelector('select').value), not 2026",
+        "Switch to 2026",
+        "Read: 'No 2026 activity in the ledger. It holds 7 transactions, none of them in this tax year'",
+        "Confirm via GET /api/portfolio/transactions?start_date=2026-01-01&end_date=2026-12-31: total=7, total_bought=7018.14",
+        "Confirm on /activity: all 7 rows are dated between 2026-08-07 and 2026-08-10"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "portfolio-derived-state-not-built-badge-unexplained",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-08-14T20:18:00Z",
+      "session_date": "2026-08-11",
+      "surface": "ui",
+      "locator": "/portfolio",
+      "kind": "gap",
+      "severity": "minor",
+      "title": "Portfolio's stat strip shows 'Derived state: not built' with no explanation anywhere",
+      "observed": "The stat strip at the top of /portfolio reads Accounts 1 / Instruments 6 / Imports 1 / Transactions 7 / Derived state: NOT BUILT, the last rendered as a negatively-styled badge (class 'badge none'). Neither the badge nor its label carries a title or aria-label. GET /api/health/stores shows the source: derived.status = \"never_built\", alongside the ledger and bar-store row counts -- an internal store health check, undescribed anywhere in the UI.",
+      "expected": "Either explain in-page what 'derived state' refers to and why 'not built' is normal here -- the page's own cost basis, market value and weight figures are plainly derived and correct -- or don't surface an unexplained internal store-health flag beside the ledger stats a user reads as a status summary.",
+      "why_it_matters": "This sits directly beside correct, working totals as a negatively-styled badge, on the one page whose job is to say whether the numbers can be trusted. With no way to interpret it, the choice is between ignoring an alarming-looking flag or distrusting figures that are, in fact, fine.",
+      "repro": [
+        "Navigate to /portfolio",
+        "Read the stat strip: 'Derived state: not built'",
+        "Inspect the badge element: no title/aria-label present",
+        "Confirm via GET /api/health/stores: derived.status = \"never_built\""
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "decision-table-significance-rating-has-no-explained-threshold",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-08-14T20:25:00Z",
+      "session_date": "2026-08-11",
+      "surface": "ui",
+      "locator": "/ticker/:symbol",
+      "kind": "gap",
+      "severity": "minor",
+      "title": "Decision table's per-rule significance rating names no threshold or test",
+      "observed": "On /ticker/XLE the decision table rates all 11 evaluable rules' significance ('insufficient' x10, 'weak' x1) against a 6,952-bar/27-year sample, with sample sizes and independent-sample counts shown per rule and horizon (e.g. RSI(14) Oversold: sample=177, independent=40 @ 20 bars -> insufficient). Neither the table, its row detail, nor GET /api/rules/decisions?symbol=XLE&interval=1d names the rule that separates insufficient from sufficient -- no minimum independent-sample count, confidence level, or test is stated. No tooltip or title attribute is attached to the significance badge.",
+      "expected": "Given how central 'a sample size you'd accept' is to trusting any of these rules, the page should state the actual bar -- e.g. 'requires N independent, non-overlapping occurrences' -- the way the Backtest page's Scan feature next door does name its method explicitly (Benjamini-Hochberg correction at a chosen target FDR).",
+      "why_it_matters": "I can't tell from the page whether 'insufficient' means 5 independent samples would have passed or 500 wouldn't, so I can't judge whether a rule elsewhere in the app that does read 'significant' is a result worth acting on, only that this particular one isn't. The Backtest page's explicit statistical method makes the silence here more conspicuous, not less.",
+      "repro": [
+        "Navigate to /ticker/XLE",
+        "Read the decision table's Significance column: every row 'insufficient' except EMA 50/200 Death Cross ('weak')",
+        "Inspect the significance badge for a title/aria-label: none present",
+        "Confirm via GET /api/rules/decisions?symbol=XLE&interval=1d: each horizon carries sample_size, independent_sample_size and significance, with no threshold field or description"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

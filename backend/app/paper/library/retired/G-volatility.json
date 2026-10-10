@@ -1,0 +1,28 @@
+{
+  "agent_id": "G-volatility",
+  "display_name": "G - Range expansion: beat the blind window",
+  "discipline": "volatility",
+  "thesis": "A true-range day 1.5x its own ATR(14) is the market printing new information faster than participants can absorb it -- an earnings reaction, a guidance change, a sector-wide repricing. When that expansion day also closes above open and above the 50-day trend, the imbalance is more likely a repricing that continues than a one-day panic that mean-reverts: momentum research (e.g. post-earnings drift) shows large-surprise days keep drifting for weeks because slow-moving capital (index funds, institutions with review cycles, retail attention) re-rates the name over days rather than instantly. The counterparty is whoever sells into that expansion bar at the old price because they have not yet re-priced the new information, or is forced to sell into the move on a stop or a mandate -- both hand the follow-through to whoever holds after the bar closes. This is genuinely a volatility-discipline: the trigger is range relative to ATR, not a moving-average cross or an oversold oscillator, so it is selecting for the size of the move as well as its direction. The engine's structural weakness for this discipline is that stop_loss_pct and position_pct are single numbers with no per-symbol ATR scaling, so I measured ATR-to-price across the full 43-symbol universe through 2026-02-13 and it spans roughly 0.04% (SGOV) to 10.5% (OKLO) -- a ~260x range in which one stop cannot fit both ends. Rather than accept that mismatch, I built a 12-symbol universe (NVDA, AMD, MU, INTC, MRVL, DELL, AVGO, TSLA, COIN, NET, SNOW, PLTR) whose trailing-year ATR/price ratios cluster tightly between 3.68% and 5.98% (mean 4.76%, max/min ratio 1.6x, versus 260x for the full list) -- comparable-enough volatility that one stop and one size are a defensible approximation rather than a silent lie the thesis pretends isn't there. I deliberately excluded the very-low-vol cash/bond/gold names (SGOV, AGG, GLD, SCHD -- ATR/price under 2%, where a 10% stop is nearly un-hittable noise) and the extreme-vol small caps (IREN, APLD, OKLO, NBIS, BE, CRDO, SNDK -- ATR/price above 6.5%, where a 10% stop is routine chop) for the same reason. ATR/price also persists strongly in this universe (lag-1 autocorrelation 0.94-0.99, lag-5 0.79-0.94 across all 43 names, measured through 2026-02-13) -- volatility regimes here are not one-day noise, they cluster for weeks, which is what makes an ATR-relative trigger meaningful rather than arbitrary.",
+  "universe": [
+    "NVDA",
+    "AMD",
+    "MU",
+    "INTC",
+    "MRVL",
+    "DELL",
+    "AVGO",
+    "TSLA",
+    "COIN",
+    "NET",
+    "SNOW",
+    "PLTR"
+  ],
+  "entry": "high - low > atr(14) * 1.5 and close > open and close > sma(50)",
+  "exit": "close < sma(10)",
+  "stop_loss_pct": "0.10",
+  "take_profit_pct": "0.15",
+  "max_hold_days": 20,
+  "max_positions": 4,
+  "position_pct": "0.20",
+  "designed_through": "2026-02-13"
+}

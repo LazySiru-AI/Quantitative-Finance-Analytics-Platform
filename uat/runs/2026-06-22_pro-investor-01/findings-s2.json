@@ -1,0 +1,36 @@
+[
+  {
+    "finding_id": "report-current-drawdown-frozen-at-episode-trough-not-live-price",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 2,
+    "observed_at": "2026-08-18T06:40:00Z",
+    "session_date": "2026-06-23",
+    "surface": "ui",
+    "locator": "/report/XLE",
+    "kind": "defect",
+    "severity": "major",
+    "title": "Report's 'Current Drawdown' is frozen at the episode's trough, not the live gap to peak",
+    "observed": "On /report/XLE the 'Drawdown profile' card reads: 'Current drawdown (close basis) 15.6%, peak 2026-03-27 -> trough 2026-07-01, 96 bars+ (ongoing) underwater'. No 'as of' line and no 'fell N% to its low' line. DOM: <span class=\"bt-current-drawdown-depth\">15.6%</span> with only two meta spans (peak, underwater count). The API backing this same page (GET /api/report?symbol=XLE&interval=1d) returns drawdown.current = {depth: -0.1558..., depth_now: -0.01039..., last_value: 61.91, last_value_date: '2026-08-14', still_underwater: true} -- 15.6% is 'depth' (the episode's worst point), the live gap to peak is 1.0% ('depth_now'). Loading the SAME symbol on /backtest (DrawdownTable component, real .click()-driven symbol load) renders the correct card for the identical episode: 'Current drawdown (Close basis) 1.0%, as of 2026-08-14, peak 2026-03-27 (62.56), fell 15.6% to its low on 2026-07-01, 96 bars+ (ongoing) underwater'.",
+    "expected": "The headline 'Current drawdown' figure should be the live gap from peak to the latest print (depth_now, 1.0%), with the episode's worst point shown as a labelled secondary fact ('fell 15.6% to its low on 2026-07-01') -- exactly what /backtest's card already does for the same symbol and the same episode, and exactly the behaviour this finding_id was closed against on 2026-08-14.",
+    "why_it_matters": "This is the exact defect the fix (R2-8, commit history 2026-08-14) was supposed to close, and it is closed on /backtest but not on /report -- the only page named in the finding's own title. Report.tsx ships its own separate DrawdownPanel component (frontend/src/pages/Report.tsx:307-345) that duplicates DrawdownTable.tsx's markup and CSS classes but never picked up the depth_now logic; its own comment at line 300-303 claims it 'reuses ... the bt-current-drawdown ... presentation from Phase 7's DrawdownTable', which is true only of the styling, not the fix. A trader reading /report/XLE mid-week sees '15.6%' and reasonably concludes the position is still down double digits from peak when it is actually down about 1%; step 5 of my process (review, mark the book) runs off this exact page.",
+    "repro": [
+      "Ensure the store holds XLE bars with a still-open drawdown episode where the last print has recovered materially off the episode trough (true now: peak 2026-03-27 62.56, trough 2026-07-01 52.81, last 2026-08-14 61.91).",
+      "Navigate to /report/XLE, wait for the page to load.",
+      "Read the 'Drawdown profile (close basis)' card's headline percentage and compare it to GET /api/report?symbol=XLE&interval=1d -> drawdown.current.depth_now for the same episode.",
+      "Compare against /backtest, load XLE via the quick-pick button (real click), and read the same card there -- it shows the corrected figure."
+    ],
+    "evidence": [],
+    "blocked_decision": false,
+    "suggested_fix": "Have Report.tsx's DrawdownPanel render episode.depth_now ?? episode.depth for the headline (with the 'fell N% to its low on <trough_date>' secondary line and the 'as of <last_value_date>' line) instead of episode.depth directly -- ideally by importing DrawdownTable's own CurrentDrawdownCard rather than maintaining a second copy of the same markup, since that is how this duplication was introduced.",
+    "verification": {
+      "status": "confirmed",
+      "checked_against": [
+        "frontend/src/pages/Report.tsx:307-345 (DrawdownPanel, line 335: formatDepth(drawdown.current.depth) -- no depth_now reference in the file)",
+        "frontend/src/components/DrawdownTable.tsx:148-198 (CurrentDrawdownCard -- has the fix: `const now = episode.depth_now ?? episode.depth`)",
+        "GET /api/report?symbol=XLE&interval=1d (drawdown.current.depth=-0.1558, depth_now=-0.0104, last_value_date=2026-08-14)"
+      ],
+      "note": "This is a regression relative to how the backlog records this finding as fixed. The fix (R2-8) landed only in DrawdownTable.tsx, used by /backtest. Report.tsx maintains an independent, unfixed duplicate of the same card for /report/:symbol -- confirmed live against both pages for the same symbol (XLE) and the same episode in the same session, with the API response read directly to rule out a stale-cache explanation."
+    }
+  }
+]

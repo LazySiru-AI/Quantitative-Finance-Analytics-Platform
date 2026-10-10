@@ -1,0 +1,4 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+06/25/2026,06/25/2026,06/26/2026,IWM,"IWM paper fill, UAT persona pro-investor-01",Sell,6,$299.37,"$1,796.22"
+06/25/2026,06/25/2026,06/26/2026,,Regulatory fees on IWM sale (s4-1),FEE,,,($0.05)
+06/25/2026,06/25/2026,06/26/2026,TLT,"TLT paper fill, UAT persona pro-investor-01",Buy,13,$87.62,"($1,139.06)"

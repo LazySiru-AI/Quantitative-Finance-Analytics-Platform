@@ -1,0 +1,21 @@
+{
+  "round_id": "r4-2026-08",
+  "title": "Round 4 - which cards belong together, and a matrix that reverses everything",
+  "focus": "Round 4 shifted from ranking single cards to asking which cards belong together, aiming to confirm or reject B2-hold-90 and c14-riskmanaged-wide on genuinely new windows, test four new cards' claimed diversification, and score the combined book from round 3.",
+  "headline": "Round 3's combined-book finding did not replicate: run unchanged on six windows they had never seen, the same three cards were beaten on every axis by B-momentum alone, because the correlation that made the combination work flipped sign from +0.04 to -0.554.",
+  "outcome": "Fourteen cards were run across six entirely new windows with a bull-weighted mean benchmark return, the opposite mix from round 3's bear-weighted eight windows. Round 4's own finding, stated as its section heading, was that round 3's conclusions were properties of round 3's windows rather than of the cards.\n\nB2-hold-90 was not promoted: it lost to its own base, B-momentum, on all three axes, and the take-profit and max-hold-days axis had by this point been tested three separate ways with no version beating the base twice, so the axis was recommended closed.\n\nc14-riskmanaged-wide was not confirmed as a standalone rankable card - its median swung from positive to sharply negative and its worst window collapsed - but its correlation claim replicated and strengthened in the opposite direction its round-3 evidence suggested, so it was kept in the library as a labelled hedging leg only, never again scored on median.\n\nAll four cards submitted specifically to be uncorrelated diversifiers failed that test: the two built explicitly for it were the most correlated cards in the field with B-momentum, because analysts had measured daily-return correlation while the scorer used window-level correlation, which is dominated by equity beta rather than trade timing.\n\nA separate, un-pre-registered control arm re-ran the five-card A family, retired earlier on the reasoning that their apparent strength was purely a rising-market artifact. Re-run on round 4's six windows, A-rotation posted a positive median and worst window and beat every surviving candidate, finishing ahead of B-momentum on the composite score - falsifying the specific retirement claim, even though the four A variants remained dominated by their own base on both matrices. The retirement log was amended and A-rotation was reinstated to candidates as a high-exposure comparator.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "A-rotation is reinstated to candidates as a high-exposure comparator after the control arm falsified its specific retirement reasoning, and should be carried into round 5.",
+    "The take-profit/max-hold-days variant axis (B2-hold-90 and siblings) is recommended closed - three tests across three rounds found no version beating the base twice.",
+    "Verdicts about which cards are best or diversify are conditional on the window matrix's regime mix, proven here by the same frozen cards reversing completely between round 3's bear-weighted and round 4's bull-weighted matrices.",
+    "c14-riskmanaged-wide should be treated only as a labelled hedge leg going forward, never scored on median as a standalone candidate again."
+  ],
+  "sources": [
+    "strategy-program/ROUND-4-PLAN.md",
+    "data/rounds/r4-2026-08/BRIEF.md",
+    "data/rounds/r4-2026-08/REPORT.md",
+    "data/rounds/PROGRAMME-REPORT.md"
+  ]
+}

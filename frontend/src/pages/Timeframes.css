@@ -1,0 +1,219 @@
+/**
+ * Page-local styles for Timeframes.tsx. Plain CSS, imported by the page -- this app has no CSS
+ * Modules or Tailwind (see `frontend/src/styles.css`'s own docstring). Reuses `.panel`, `.subtitle`,
+ * `.data-table`/`.table-wrap`, `.placeholder`, `.muted`, `.timeframe-tab`, `.decision-horizon-label`,
+ * `.warnings-strip`/`.warning-chip` from the global stylesheet rather than redefining any of them.
+ *
+ * The colour rules below implement contract §5's UI requirements, not just a look:
+ *  - `.tf-cell-insufficient` never gets `.tf-lift-value`'s pos/neg colouring -- see `Timeframes.tsx`'s
+ *    `MatrixCell`, which has no code path from an insufficient cell to that class at all. The CSS
+ *    here only has to make the *hatched* treatment visually distinct from a real number, not prevent
+ *    the number from appearing -- that guarantee lives in the component, not the stylesheet.
+ *  - `.tf-cell-na` (interval not computed for this rule/scope/horizon) is a third, plainer treatment
+ *    again, so a reader's eye can tell "not measured" apart from "measured, but rejected by the
+ *    sample gate" apart from "a real edge" without reading the text.
+ */
+
+.tf-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.tf-scope-switch {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tf-scope-key {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.tf-scope-key select {
+  font-family: var(--font-mono);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.82rem;
+}
+
+.tf-horizon-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tf-coverage {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tf-coverage-headline {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+.tf-coverage-headline strong { color: var(--accent); text-shadow: 0 0 8px var(--glow-cyan); }
+
+/* --- the matrix itself ----------------------------------------------------------------------- */
+
+.tf-matrix th,
+.tf-matrix td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tf-matrix th:first-child,
+.tf-matrix td:first-child {
+  text-align: left;
+  font-family: var(--font-mono);
+}
+
+.tf-interval-lowconf { color: var(--warn); }
+
+.tf-lowconf-marker {
+  color: var(--warn);
+  font-weight: 700;
+  cursor: help;
+}
+
+.tf-cell {
+  padding: 0.25rem;
+  min-width: 5.5rem;
+}
+
+.tf-cell-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.4rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+.tf-cell-btn:hover { border-color: var(--border-strong); }
+
+.tf-cell-na {
+  color: var(--muted);
+}
+.tf-cell-na .muted { font-size: 0.8rem; }
+
+/* Insufficient cells: hatched block, no coloured number, ever. This is a visually distinct *kind*
+   of answer, not a muted version of a real one -- it must never sit on the same green/red scale a
+   reader compares real cells against by eye (contract §5 rule 1). */
+.tf-cell-insufficient .tf-cell-btn {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--panel-2) 0px,
+    var(--panel-2) 5px,
+    var(--border) 5px,
+    var(--border) 6px
+  );
+}
+.tf-insufficient-block { display: none; }
+.tf-insufficient-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tf-lift-value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.tf-lift-value.pos { color: var(--up); }
+.tf-lift-value.neg { color: var(--down); }
+
+.tf-cell-sub {
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+/* --- drill-down -------------------------------------------------------------------------------- */
+
+.tf-drilldown-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.tf-drilldown-head h2 { margin: 0; flex: 1; }
+
+.tf-drilldown-ticker-link {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.tf-drilldown-ticker-link:hover { color: var(--text); text-decoration: underline; }
+
+.tf-drilldown-close {
+  font-family: var(--font-mono);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.tf-drilldown-close:hover { color: var(--text); border-color: var(--border-strong); }
+
+/* `CardGrid` (`height="md"`, from `@/components/Card`) supplies the grid display, the equal-row-
+   height machinery (`grid-auto-rows`) and `align-items: stretch` -- this class only overrides its
+   column template to the fixed chart-plus-stats split a drill-down needs. `align-items: start` is
+   deliberately NOT set here: `stretch` is what makes the shorter of the two cards (whichever one
+   that is, on any given cell) fill the same row height as its sibling, off the happy path included. */
+.tf-drilldown-body {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .tf-drilldown-body { grid-template-columns: 1fr; }
+}
+
+.tf-stats-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.82rem;
+}
+.tf-stats-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 0.3rem;
+}
+.tf-stats-list dt { color: var(--muted); }
+.tf-stats-list dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  text-align: right;
+}
+.tf-stats-list dd.pos { color: var(--up); }
+.tf-stats-list dd.neg { color: var(--down); }
+
+.tf-stats-warnings { flex-direction: column !important; align-items: flex-start !important; }
+.tf-stats-warnings ul { margin: 0.2rem 0 0; padding-left: 1.1rem; }

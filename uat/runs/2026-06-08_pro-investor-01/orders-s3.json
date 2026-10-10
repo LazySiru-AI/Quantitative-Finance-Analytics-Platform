@@ -1,0 +1,21 @@
+{
+  "orders": [
+    {
+      "order_id": "s3-xlf-add",
+      "session": 3,
+      "decided_on": "2026-06-09",
+      "symbol": "XLF",
+      "side": "buy",
+      "quantity": "15",
+      "order_type": "market_on_open",
+      "thesis": "XLF is the only one of the four watchlist names positive across all three timeframes as of 2026-06-09 (1d +0.94%, 5d +1.94%, 20d +2.50%), now essentially at its sma200 (52.46 close vs 52.56 sma200) after starting the week below it. Adding to a trend that continues to confirm, still under the 25% single-name cap.",
+      "invalidation": "A close back below sma50 (~51.41) reverses the reclaim this add is funded on.",
+      "stop_level": "51.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=52.46, sma20=51.5965, sma50=51.4146, sma200=52.5602, change_1d=+0.94%, change_5d=+1.94%, change_20d=+2.50% via brief-s3 watchlist.XLF (as of 2026-06-09)"
+      ]
+    }
+  ]
+}

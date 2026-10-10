@@ -1,0 +1,25 @@
+{
+  "agent_id": "C-wide",
+  "display_name": "C-wide - C-trend rules, mechanically chosen universe",
+  "discipline": "trend",
+  "thesis": "The same experiment as B-wide, on the slower book. C-trend's rules are unchanged -- close>sma(200) as the regime filter, ema(20)/ema(50) as the trigger, ema(20) crossing back below ema(50) as the exit, 12% stop, 120-day cap, 5 slots at 18% -- and only the nine names change, from a hand-picked AI/semi list to the nine most heavily traded long-history index constituents by median dollar volume through the design cutoff. C-trend's own memo argues its edge comes from excluding speculative names whose golden crosses do not sustain; a liquidity screen is a different and much blunter way of excluding them, and this card measures what that costs. As with B-wide, a nine-name universe is swapped rather than widened, so universe and selection rule move together.",
+  "universe": [
+    "NVDA",
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "AMD",
+    "MSTR",
+    "NFLX",
+    "MU",
+    "UNH"
+  ],
+  "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+  "exit": "ema(20) crosses_below ema(50)",
+  "stop_loss_pct": "0.12",
+  "take_profit_pct": null,
+  "max_hold_days": 120,
+  "max_positions": 5,
+  "position_pct": "0.18",
+  "designed_through": "2026-02-13"
+}

@@ -1,0 +1,29 @@
+{
+  "agent_id": "r17-vol-compression-on-stop",
+  "display_name": "vol-compression / regime on / stop",
+  "discipline": "volatility",
+  "purpose": "trading",
+  "thesis": "Round 17 factorial cell. Form: a volatility-compression entry -- 10-day ATR under 2% of price while the 10-day EMA leads the 30-day inside a 200-day SMA regime filter -- exited when ATR expands past 5% or the regime filter breaks. Brackets: stop. This card is one cell of a pre-registered 8x2x3 grid whose only purpose is to measure whether strategy form, the regime filter and the bracket policy each change a result by more than this programme's own measured noise floor of 21.2 percentage points. It is not a proposal to trade anything. Every parameter is the textbook constant frozen in app.evolution.ruleforms before this round was conceived; nothing here was tuned, and the universe is the mechanically defined GICS sector ETF set rather than any thesis-picked list, so that stock selection cannot flatter a form. See strategy-program/ROUND-17-PLAN.md for the pre-registration, the five falsifiable predictions and the correction applied across all cells.",
+  "universe": [
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLY",
+    "XLP",
+    "XLU",
+    "XLB",
+    "XLRE",
+    "XLC"
+  ],
+  "entry": "close > sma(200) and ema(10) > ema(30) and atr(10) / close < 0.02",
+  "exit": "atr(10) / close > 0.05 or close crosses_below sma(200)",
+  "stop_loss_pct": "0.12",
+  "take_profit_pct": null,
+  "max_hold_days": 180,
+  "max_positions": 6,
+  "position_pct": "0.15",
+  "rank_by": null,
+  "designed_through": "2026-02-13"
+}

@@ -1,0 +1,248 @@
+/* =============================================================================
+   Vibe Trading (agent: VibeTrading).
+
+   Reuses .panel, .subtitle, .muted, .callout/.callout-warn/.callout-danger,
+   .comp-run-cta from styles.css / Competition.css -- nothing there is modified,
+   only built on top of. Every class this file adds is prefixed `vibe-`.
+   ============================================================================= */
+
+.vibe-explainer ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.vibe-explainer li {
+  line-height: 1.5;
+}
+
+/* --- Preset picker -------------------------------------------------------- */
+
+.vibe-preset-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.vibe-preset-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 220px;
+  max-width: 320px;
+  text-align: left;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+  color: var(--text);
+}
+.vibe-preset-card:hover {
+  border-color: var(--border-strong);
+}
+.vibe-preset-card.selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
+  box-shadow: 0 0 12px -6px var(--glow-cyan);
+}
+.vibe-preset-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* --- Run form --------------------------------------------------------------- */
+
+.vibe-run-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 520px;
+}
+
+.vibe-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+.vibe-field input,
+.vibe-field textarea {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 0.45rem 0.6rem;
+  font-family: var(--font-mono);
+}
+.vibe-field textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+.vibe-agent-unavailable {
+  font-family: var(--font-mono);
+}
+
+/* --- DAG board ---------------------------------------------------------------
+   Layers stack top-to-bottom -- a layer never depends on one below it, so this
+   ordering is also the dependency order. Within a layer, stages that ran in
+   parallel sit side by side. */
+
+.vibe-dag {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.vibe-dag-layer-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.vibe-dag-layer-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Base stage card. State-specific rules below override border/background/color
+   so `degraded`/`blocked`/`failed` are never visually confusable -- they are
+   three different claims about what happened to a stage, not shades of the
+   same "something went wrong" state. */
+.vibe-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 160px;
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.vibe-stage.selected {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.vibe-stage-seat {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* pending -- hasn't started; dim, no color signal. */
+.vibe-stage-pending {
+  opacity: 0.65;
+}
+
+/* running -- animated to read as "in progress" at a glance. */
+.vibe-stage-running {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px -4px var(--glow-cyan);
+}
+
+/* succeeded -- ran clean. */
+.vibe-stage-succeeded {
+  border-color: color-mix(in srgb, var(--up) 55%, var(--border));
+}
+
+/* degraded -- ran, produced output, but a grounding check flagged it. Amber, not
+   red: this stage has a result to look at, unlike `failed`. */
+.vibe-stage-degraded {
+  border-color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 10%, var(--panel-2));
+}
+
+/* failed -- ran and errored. Solid red fill: this stage was attempted and did
+   not produce a usable result. */
+.vibe-stage-failed {
+  border-color: var(--down);
+  background: color-mix(in srgb, var(--down) 16%, var(--panel-2));
+}
+
+/* blocked -- never ran at all, because an upstream dependency failed. A hatched
+   pattern rather than a solid fill: visually distinct from `failed`'s solid red
+   so "stopped before it could start" never reads as "ran and broke". Magenta,
+   the app's second accent, keeps it from being confused with `running`'s cyan
+   or `failed`'s red. */
+.vibe-stage-blocked {
+  border-color: var(--accent-2);
+  border-style: dashed;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--panel-2),
+    var(--panel-2) 6px,
+    color-mix(in srgb, var(--accent-2) 12%, var(--panel-2)) 6px,
+    color-mix(in srgb, var(--accent-2) 12%, var(--panel-2)) 12px
+  );
+}
+
+/* skipped -- not run by design (e.g. an optional branch this run didn't take). */
+.vibe-stage-skipped {
+  opacity: 0.5;
+  font-style: italic;
+}
+
+/* --- Per-stage / final report -------------------------------------------------- */
+
+.vibe-stage-detail,
+.vibe-final-report {
+  margin-top: 1rem;
+}
+
+/* Scrolling/height-capping now comes from the shared `ScrollRegion` this element is wrapped in
+   (see VibeTrading.tsx) -- this rule only carries the typography/box styling that is not
+   `ScrollRegion`'s concern. */
+.vibe-output-md {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.vibe-grounding-issues ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+/* --- Recent runs --------------------------------------------------------------- */
+
+.vibe-recent-runs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.vibe-recent-runs button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.vibe-recent-runs button:hover {
+  border-color: var(--border-strong);
+}

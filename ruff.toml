@@ -1,0 +1,24 @@
+# Ruff configuration for the whole repository.
+#
+# This lives at the root rather than in backend/pyproject.toml because ruff resolves configuration
+# per file, walking up from each file to the nearest config. With the config under backend/, the
+# tests/ tree sat above it and silently ran on ruff defaults instead -- which is how a set of
+# per-file-ignores appeared to have no effect.
+
+line-length = 100
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[lint.per-file-ignores]
+# Test-only ergonomics, deliberately allowed:
+#   RUF012 - parametrisation tables read better as plain class attributes than wrapped in ClassVar
+#   DTZ001 - naive datetimes are the *subject* of the timezone tests, not an oversight
+#   ISC004 - multi-line string literals inside fixture tables
+"tests/**" = ["RUF012", "DTZ001", "ISC004"]
+
+[lint.isort]
+# `app` is installed editable, so ruff would otherwise sort it as third-party.
+known-first-party = ["app", "tests"]

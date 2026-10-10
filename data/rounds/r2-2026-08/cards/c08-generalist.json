@@ -1,0 +1,15 @@
+{
+  "agent_id": "c08-generalist",
+  "display_name": "Cross-Asset Trend Filter",
+  "discipline": "trend",
+  "thesis": "A directional move confirmed by both price above its 200-day average and the 50-day average itself above the 200-day tends to persist for months, not days: information about a regime change (a growth slowdown, a rate cycle turning, a flight to quality) diffuses slowly through institutional flows -- pension rebalancing, CTA and risk-parity positioning, 401k contribution timing -- that chase a confirmed trend rather than anticipate the turn. The counterparties who fund this are short-horizon mean-reversion and reversal traders who fade extended moves and value investors anchored to a stale price, both of whom get run over by continuation exactly when the trend has already cleared this rule's confirmation bar. The universe spans four macro-sensitive asset classes on purpose -- broad equity beta (SPY), growth beta (QQQ), a defensive equity proxy (XLU), duration (TLT) and a monetary hedge (GLD) -- so that when equities are trend-negative, capital has somewhere else in the same universe to be trend-positive: bonds and gold trending up specifically when equities trend down is a structural flight-to-quality correlation, not a coincidence, and it is what this card is actually betting on to avoid being flat-to-negative in every falling regime at once. I expect this to lose in bull-2024: a rule that requires both conditions to already be true cannot buy the first leg of a smooth, low-volatility rally, so it structurally captures less than its exposure-adjusted share of a market that never gives it a drawdown to sidestep, and it pays whipsaw costs getting positioned late.",
+  "universe": ["SPY", "QQQ", "XLU", "TLT", "GLD"],
+  "entry": "close > sma(200) and sma(50) > sma(200)",
+  "exit": "close < sma(200)",
+  "stop_loss_pct": "0.15",
+  "take_profit_pct": null,
+  "max_hold_days": null,
+  "max_positions": 4,
+  "position_pct": "0.25",
+  "designed_through": "2026-02-13"
+}

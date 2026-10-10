@@ -1,0 +1,1651 @@
+/* =============================================================================
+   Competition tab (agent: Competition).
+
+   Reuses .panel, .section-heading, .subtitle, .muted, .tile/.tile-grid, .stat,
+   .data-table/.table-wrap, .badge, .state-pill, .callout/.callout-info/
+   .callout-warn/.callout-danger, .filter-bar, .view-tabs/.timeframe-tab,
+   .placeholder, .warning-list from styles.css -- nothing there is modified,
+   only built on top of. Every class this file adds for the Leaderboard/Agent/
+   Library & Run views is prefixed `comp-`; the Selection view added later
+   (its own scope note) prefixes its classes `selection-` instead.
+   ============================================================================= */
+
+/* --- Page header + primary action ---------------------------------------------
+   `.comp-page-head` wraps the h1/subtitle on the left and the "Run a round" CTA on the right -- the
+   one action on this page that changes anything, promoted out of the Library tab's form furniture
+   per the TSX doc comment. `align-items: flex-start` is deliberate: the subtitle wraps to two lines
+   on a narrow panel and the button must not stretch to match its height. */
+.comp-page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* The page's single most important action -- filled rather than outlined like every other button
+   here (`.symbol-submit` included), so it reads as *the* thing to do rather than one more control
+   sitting among the tabs and pickers below it. */
+.comp-run-cta {
+  font-family: var(--font-mono);
+  background: color-mix(in srgb, var(--accent) 16%, var(--panel-2));
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.6rem 1.15rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 0 14px -6px var(--glow-cyan);
+}
+.comp-run-cta:hover {
+  background: color-mix(in srgb, var(--accent) 26%, var(--panel-2));
+  box-shadow: 0 0 18px -4px var(--glow-cyan);
+}
+/* Its own focus ring, not just the shared `input/select/button:focus-visible` box-shadow -- this is
+   now the first interactive control on the page, so a keyboard reader tabbing in should never lose
+   it against the glow above. */
+.comp-run-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* --- Tab rail (six views) -------------------------------------------------------
+   `[aria-label="Competition view"]` scopes this to just this page's `.view-tabs` instance --
+   `Ticker.tsx`'s chart-layout switch and `Portfolio.tsx`'s positions view share the bare
+   `.view-tabs`/`.timeframe-tab` classes and must not pick up a rule meant for a six-item rail. Six
+   tabs is one more than any other `.view-tabs` user in this app carries, and the shared rule has no
+   `flex-wrap`, so without this a narrow viewport pushed the rail into horizontal overflow instead of
+   wrapping to a second line. */
+.view-tabs[aria-label="Competition view"] {
+  flex-wrap: wrap;
+  row-gap: 0.4rem;
+}
+
+/* --- Controls (round + rank-by pickers) -------------------------------------- */
+
+/* The selected round's own authored title, moved out of the `<option>` text (see
+   `competition/roundOption.ts`) to a line under the select, where a sentence costs the control
+   nothing. Shared by the Findings and Selection pickers -- one class, since it is one treatment of
+   one fact. `flex-basis: 100%` puts it on its own row inside the `.filter-bar` flex row. */
+.comp-round-title {
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+  flex-basis: 100%;
+}
+
+.comp-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+/* --- Numeric columns --------------------------------------------------------
+   Tabular figures so a column of excess/return numbers lines up by digit
+   rather than jittering with sign and digit-width changes -- explicit here
+   even though the root stylesheet already sets tabular-nums globally. */
+.comp-num { font-variant-numeric: tabular-nums; }
+.comp-num.pos { color: var(--up); }
+.comp-num.neg { color: var(--down); }
+
+/* --- Leaderboard table -------------------------------------------------------- */
+
+.comp-leaderboard-table { min-width: 960px; }
+
+/* Header treatment: raised background + a stronger rule under it so the header reads as a fixed
+   reference frame rather than just the first row of data. Also doubles as the sticky header's own
+   opaque background (below), so scrolled-past rows never show through it.
+
+   Scoped under `.scroll-region` (the table is always inside one now -- see `LeaderboardSection.tsx`)
+   rather than bare `.comp-leaderboard-table thead th`: the primitive's own generic
+   `.scroll-region table thead th` rule in `ScrollPanel.css` also sets `background` (to `var(--panel)`,
+   for a plain scrolling table), and by selector specificity alone (three type selectors vs. this
+   rule's two) that generic rule would otherwise win over an unscoped version of this one, silently
+   flattening the raised header back to the ordinary panel background. */
+.scroll-region .comp-leaderboard-table thead th {
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+/* Tighter cell padding buys back scan room on a table that routinely runs 15-20+ columns wide once
+   every window is checked -- the default `.data-table` padding (0.45rem 0.6rem) was sized for a
+   handful of columns, not this table's per-window sprawl. */
+.comp-leaderboard-table th, .comp-leaderboard-table td {
+  padding: 0.4rem 0.5rem;
+}
+
+/* SPY's own result, pinned as a row rather than only shown in a drill-down, so
+   "excess" always has something on screen to be excess *of*. */
+.comp-spy-row {
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel-2));
+  font-weight: 600;
+}
+.comp-spy-row td:nth-child(2) {
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+
+/* Zebra banding, keyed off row *position* rather than a new per-row class: `:nth-of-type(even)`
+   counts every <tr> including the pinned SPY row above them (always position 1, always odd), so the
+   first agent row lands on "even" and the stripe start is predictable regardless of how many rows a
+   round produced. A tint of --accent over --panel-2 rather than a new grey, matching the pattern
+   `.comp-spy-row`/`.comp-unrealised-row` already use below. */
+.comp-agent-row:nth-of-type(even) {
+  background: color-mix(in srgb, var(--accent) 4%, var(--panel-2));
+}
+/* Deliberately a stronger mix than the zebra tint above (and than the shared
+   `.data-table tbody tr:hover`), so hover reads clearly no matter which stripe or podium row it
+   lands on. */
+.comp-agent-row:hover {
+  background: color-mix(in srgb, var(--accent) 12%, var(--panel-2));
+}
+/* The open row, while its drill-down drawer is showing under the table. */
+.comp-agent-row-open {
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
+}
+
+/* The rank cell's real control -- the one that replaced `role="button"` on the whole `<tr>` (see
+   `LeaderboardSection.tsx`). It has to look like the plain rank number it stands in for, so it
+   carries no chrome of its own until it is focused, where it takes the page's ordinary focus ring. */
+.comp-row-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.comp-row-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Podium (top 3 by rank). Keyed off the `comp-rank-1`/`-2`/`-3` classes the markup now emits, not
+   off `:nth-of-type()`. The positional version worked only while this table happened to be sorted by
+   rank ascending, and would have silently decorated the wrong three rows the moment a different
+   `rank_by` reordered them -- a wrong podium that still looks authoritative. Weight, a left accent
+   bar, and a size-graded marker glyph carry the signal together -- never colour alone -- and the
+   marker is a plain dot rather than a repeated "1"/"2"/"3", so it never doubles up on the rank
+   number the cell already prints. Kept visually distinct from `.comp-spy-row`'s own full-row tint +
+   name glow above: SPY is a reference row, never a podium finish. */
+.comp-agent-row.comp-rank-1,
+.comp-agent-row.comp-rank-2,
+.comp-agent-row.comp-rank-3 {
+  font-weight: 700;
+}
+.comp-agent-row.comp-rank-1 { box-shadow: inset 3px 0 0 var(--accent); }
+.comp-agent-row.comp-rank-2 {
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--accent) 65%, var(--muted));
+}
+.comp-agent-row.comp-rank-3 {
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--accent) 35%, var(--muted));
+}
+.comp-agent-row.comp-rank-1 td:first-child::before,
+.comp-agent-row.comp-rank-2 td:first-child::before,
+.comp-agent-row.comp-rank-3 td:first-child::before {
+  content: "CF"; /* a shape marker, size-graded per rank below, so the podium reads even under a
+                        colour vision deficiency and even before the eye reaches the rank digit. */
+  margin-right: 0.35em;
+  vertical-align: middle;
+  color: var(--accent);
+}
+.comp-agent-row.comp-rank-1 td:first-child::before { font-size: 0.85em; }
+.comp-agent-row.comp-rank-2 td:first-child::before {
+  font-size: 0.65em;
+  color: color-mix(in srgb, var(--accent) 65%, var(--muted));
+}
+.comp-agent-row.comp-rank-3 td:first-child::before {
+  font-size: 0.5em;
+  color: color-mix(in srgb, var(--accent) 35%, var(--muted));
+}
+
+/* Sticky header + pinned identity columns.
+   `styles.css`'s `.table-wrap` sets `overflow-x: auto` (its only declared overflow axis). Per the
+   CSS Overflow spec, when one of overflow-x/overflow-y is not `visible` the other is *computed* as
+   `auto` too -- so `.table-wrap` is already an overflow-y scroll container despite never declaring
+   one, and despite having no bounded height to actually scroll within. That silently becomes the
+   nearest scrolling ancestor `position: sticky` positions against, ahead of the page's own scroll --
+   the classic "sticky doesn't stick" gotcha.
+
+   The bound is now the shared `ScrollRegion` primitive (`@/components/ScrollPanel`, `size="lg"`),
+   which `LeaderboardSection.tsx` wraps around `.table-wrap` -- `.scroll-region { max-height: ...;
+   overflow-y: auto; }` and `.scroll-region table thead th { position: sticky; top: 0; ... }` in
+   `ScrollPanel.css` do what a hand-rolled `comp-leaderboard-scroll` used to do here, and that class
+   and its two rules are gone. What survives below is only what the primitive does not know about: the
+   *pinned* (horizontal) identity columns, plus the header treatment for those two pinned cells
+   specifically (higher specificity than the primitive's own generic `thead th` rule, so it still
+   wins). */
+/* A fixed width on the rank column is what makes the second column's `left` offset predictable --
+   without it, the offset would drift with the widest rank value actually rendered. */
+.comp-leaderboard-table th:nth-child(1),
+.comp-leaderboard-table td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 2.75rem;
+  width: 2.75rem;
+  background: var(--panel);
+}
+.comp-leaderboard-table th:nth-child(2),
+.comp-leaderboard-table td:nth-child(2) {
+  position: sticky;
+  left: 2.75rem;
+  z-index: 1;
+  background: var(--panel);
+}
+.comp-leaderboard-table thead th:nth-child(1),
+.comp-leaderboard-table thead th:nth-child(2) {
+  z-index: 3;
+  background: var(--bg-raised);
+}
+/* The pinned columns need their own opaque background per row-state, or a scrolled-past window
+   column shows through the seam between "pinned" and "scrolling" territory. Higher specificity than
+   the base pinned-column rule above (extra class/pseudo-class terms), so these win regardless of
+   source order; the hover override is written after the zebra one so a hovered even row still shows
+   hover, not the stripe, when both would otherwise match. */
+.comp-leaderboard-table tbody tr.comp-spy-row td:nth-child(1),
+.comp-leaderboard-table tbody tr.comp-spy-row td:nth-child(2) {
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel-2));
+}
+.comp-leaderboard-table tbody tr.comp-agent-row:nth-of-type(even) td:nth-child(1),
+.comp-leaderboard-table tbody tr.comp-agent-row:nth-of-type(even) td:nth-child(2) {
+  background: color-mix(in srgb, var(--accent) 4%, var(--panel-2));
+}
+.comp-leaderboard-table tbody tr.comp-agent-row:hover td:nth-child(1),
+.comp-leaderboard-table tbody tr.comp-agent-row:hover td:nth-child(2) {
+  background: color-mix(in srgb, var(--accent) 12%, var(--panel-2));
+}
+
+.comp-window-header {
+  display: table-cell;
+}
+.comp-provenance-chip {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+  font-size: 0.6rem;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: normal;
+  white-space: normal;
+  cursor: help;
+}
+.comp-provenance-note { margin-top: 0.75rem; }
+
+.comp-agent-row { cursor: pointer; }
+.comp-agent-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* --- Empty / not-found states ---------------------------------------------------
+   `.placeholder` is a shared class from styles.css, reused across many pages for muted loading/
+   error/empty text -- restyling it bare here would leak into every other page once this stylesheet
+   loads (CSS imports are not component-scoped). Scoped instead to just this page's own subtree via
+   the tab rail's unique `aria-label` as a sibling anchor: every panel this page renders ends up a
+   flattened sibling of that rail in the DOM, since React fragments (this file's TSX returns several)
+   add no wrapper element of their own. A round with no scored results -- the exact "there's nothing"
+   failure the user reported -- now renders one of these; giving it real presence here is what makes
+   it read as a designed state instead of a blank table. */
+.view-tabs[aria-label="Competition view"] ~ .panel .placeholder {
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--border-strong);
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--accent) 3%, transparent);
+  line-height: 1.7;
+}
+
+/* Ineligible rows (fewer windows run than the comparable set) stay on screen,
+   just visibly de-emphasised -- never hidden, matching the "provisional
+   evidence" treatment `.evidence-provisional` already established.
+
+   This used to be `opacity: 0.55` on the whole row, which is the one way of dimming that also dims
+   the text: `--muted` clears 4.5:1 on `--panel-2` on its own, but blended 55% into the panel behind
+   it the chip fell well under, and every figure in the row went with it. The de-emphasis now runs
+   through non-text properties only -- a dashed left bar and a flatter ground -- so an ineligible
+   row still reads as provisional at a glance while every character in it stays legible. */
+.comp-ineligible-row td {
+  color: var(--muted);
+}
+/* On the first cell, not the `<tr>`: the two identity columns are `position: sticky` with their own
+   backgrounds (see the pinned-column block above), and a row-level inset shadow paints behind them. */
+.comp-ineligible-row td:first-child {
+  box-shadow: inset 3px 0 0 var(--border-strong);
+}
+.comp-ineligible-chip {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--muted);
+  border-style: dashed;
+  font-size: 0.62rem;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+/* --- Agent drill-down, now an inline drawer under the Leaderboard table --------------------------
+   Used to be its own top-level tab (`view === "agent"`) that showed nothing but a "select a card"
+   placeholder until a leaderboard row was clicked -- a dead tab a reader could open and find empty.
+   `Competition.tsx` now renders this directly under `LeaderboardSection`'s table once a row is
+   selected, wrapped in `.comp-agent-drawer` for the dashed separator below; `.comp-agent-panel-head`
+   is this drawer's own version of `.comp-loop-head`/`.comp-gens-head` above (heading or status on the
+   left, one action on the right), reused here for the close control. */
+.comp-agent-drawer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-strong);
+}
+.comp-agent-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.comp-agent-close {
+  font-family: var(--font-mono);
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.comp-agent-close:hover { border-color: var(--accent); color: var(--text); }
+.comp-agent-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.comp-agent-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.4rem 0;
+  flex-wrap: wrap;
+}
+.comp-agent-universe {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.comp-drilldown-window { margin-top: 1rem; }
+
+.comp-concentration { margin: 0.75rem 0; }
+
+.comp-rejections { color: var(--warn); font-size: 0.82rem; }
+
+.comp-trades-table { min-width: 820px; }
+
+/* A trade still open at the window's end: its P&L is a mark against the last
+   price, not money taken -- a faint tint plus the inline chip below, never
+   folded into an ordinary realised row without a visible difference. */
+.comp-unrealised-row { background: color-mix(in srgb, var(--accent-2) 5%, transparent); }
+.comp-mark-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: var(--accent-2);
+  border-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
+  font-size: 0.6rem;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: nowrap;
+  cursor: help;
+}
+
+/* --- Library table --------------------------------------------------------------
+   Was a `.tile-grid` of full-prose `CardTile` cards, one full card per strategy --
+   several screens for a four-tier library. One ROW per card instead: the scannable
+   fields (universe/entry/exit/params) as columns, the thesis and remaining detail
+   behind each row's own collapsed `<details>` (`.comp-card-detail`). */
+
+.comp-card-table td { vertical-align: top; }
+.comp-card-name { font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; }
+.comp-card-agent-id { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); }
+.comp-card-universe-cell { font-size: 0.78rem; color: var(--muted); }
+.comp-card-rule-cell {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  max-width: 220px;
+  white-space: normal;
+  word-break: break-word;
+}
+.comp-card-sizing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.comp-card-detail summary {
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: var(--link, var(--accent, var(--text)));
+  white-space: nowrap;
+}
+.comp-card-detail-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  max-width: 320px;
+}
+.comp-card-thesis {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0.2rem 0 0;
+}
+
+/* --- Run form ------------------------------------------------------------------- */
+
+.comp-run-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+}
+.comp-checkbox-fieldset {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+}
+.comp-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.4rem 0.75rem;
+  margin-top: 0.4rem;
+}
+.comp-checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+/* A non-main window (13f-legal) reads as secondary: dimmer, and its own tint on the row. */
+.comp-checkbox-item-secondary { opacity: 0.75; }
+
+.comp-window-label { display: flex; flex-direction: column; gap: 0.1rem; }
+.comp-window-key { font-family: var(--font-mono); font-weight: 600; }
+.comp-window-dates {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+.comp-window-desc { font-size: 0.76rem; color: var(--muted); }
+.comp-window-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* --- Horizon-grouped windows (round 5's ladder) --------------------------------- */
+
+/* One heading + grid per horizon rung, so 27 windows read as five short, labelled groups instead of
+   one undifferentiated wall of checkboxes. */
+.comp-horizon-group { margin-top: 0.7rem; }
+.comp-horizon-group:first-of-type { margin-top: 0.5rem; }
+.comp-horizon-heading {
+  margin: 0 0 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.comp-horizon-count {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+/* The bear supplement was hand-picked for a falling benchmark; the ladder was sampled by calendar
+   with no regard to direction. Warm/down-toned so it reads as "this one goes against the grain" at a
+   glance, distinct from the neutral `.comp-provenance-chip`. */
+.comp-bear-chip {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+  font-size: 0.6rem;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: normal;
+  white-space: normal;
+  cursor: help;
+}
+
+.comp-job-error { margin-top: 0.75rem; }
+
+/* --- Job progress panel ---------------------------------------------------------- */
+
+.comp-job-panel {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.comp-job-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.comp-job-progress-text {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.comp-job-current {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+/* A blinking terminal cursor after the "currently running" line reads as a live process rather than
+   a static status string. Guarded below for reduced motion. */
+.comp-job-current::after {
+  content: "\2588";
+  margin-left: 0.3em;
+  color: var(--accent);
+  animation: comp-job-cursor-blink 1s step-end infinite;
+}
+@keyframes comp-job-cursor-blink {
+  50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .comp-job-current::after { animation: none; }
+}
+
+/* `:has()` lets the whole panel pick up a live cue from its own status pill without needing a
+   parallel "is this job running" class on `.comp-job-panel` itself. */
+.comp-job-panel:has(.comp-job-status-running) {
+  border-top-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+.comp-job-cancel {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+  margin-left: auto;
+}
+/* The bounding box + scroll are now the shared `ScrollRegion` primitive (`size="sm"`), which
+   `LibrarySection.tsx`/`LoopPanel.tsx` wrap around this `<pre>`. The font/colour/background/padding/
+   `white-space: pre-wrap` stay here, on the `<pre>` itself, rather than moving to the wrapping
+   `ScrollRegion` `<div>` -- `white-space` is a property the `<pre>` element's own UA stylesheet sets
+   explicitly (not merely inherits), so a value declared only on an ancestor would lose to it and the
+   log text would stop wrapping. */
+.comp-job-log {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  white-space: pre-wrap;
+  margin: 0;
+}
+/* An accent top rule reads as a terminal titlebar without needing a literal one, and the inset
+   shadow gives the pane a hint of depth against the flat panel behind it -- both derived from
+   existing tokens, no new colour. Only the top edge changes; left/right/bottom keep the plain
+   `border` above. */
+.comp-job-log {
+  border-top: 2px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  box-shadow: inset 0 0 12px -6px color-mix(in srgb, var(--bg) 90%, transparent);
+}
+
+.comp-job-status-queued { color: var(--muted); }
+.comp-job-status-running {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  /* A soft pulse while running, distinct from the static ok/failed pills below -- "in progress"
+     should read as *moving*. Guarded for reduced motion. */
+  animation: comp-job-pulse 1.8s ease-in-out infinite;
+}
+@keyframes comp-job-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 35%, transparent); }
+  50% { box-shadow: 0 0 10px 2px color-mix(in srgb, var(--accent) 35%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .comp-job-status-running { animation: none; }
+}
+.comp-job-status-succeeded {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.comp-job-status-failed {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+.comp-job-status-cancelled { color: var(--muted); border-style: dashed; }
+
+/* --- Per-run results inside a job ------------------------------------------------- */
+
+.comp-job-results-table { min-width: 480px; }
+.comp-job-result-ok {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.comp-job-result-failed {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+
+/* --- Selection view -------------------------------------------------------------
+   The gate tables and resulting desk roster for a round. Own prefix (`selection-`)
+   per that feature's scope note -- everything else on this page keeps `comp-`. */
+
+.selection-notes { margin-bottom: 0; }
+.selection-notes ul { margin-top: 0.4rem; }
+
+.selection-roster-table, .selection-ranking-table { min-width: 760px; }
+.selection-gate-table { min-width: 480px; }
+
+.selection-note-cell {
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: normal;
+  max-width: 320px;
+}
+
+/* A seat won outside the rule (owner override / outside-competition) must never read the same as one
+   the rule produced on its own -- a warm tint on the row, on top of the seated-by badge below, so the
+   distinction survives even a quick scan down the roster. */
+.selection-seat-nonrule-row { background: color-mix(in srgb, var(--warn) 6%, transparent); }
+
+.selection-seated-by-rule {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.selection-seated-by-outside-competition,
+.selection-seated-by-owner-override {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+
+/* A failed gate: `.state-pill.state-false` alone is only muted grey, not alarmed enough for "this
+   card was rejected here" -- red text/border on the pill plus a faint tint on the row, so a failure
+   reads at a glance down the table rather than only from the "Fail" text. */
+.selection-gate-fail-row { background: color-mix(in srgb, var(--down) 6%, transparent); }
+.selection-gate-fail-pill {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+
+
+/* --- Classes introduced with the Summary/Findings restructure ------------------ */
+
+/* The card's thesis is real content. It previously borrowed `.placeholder` purely for that class's
+   muted styling, which was harmless until `.placeholder` gained a designed "there is nothing here"
+   treatment on this page -- at which point a card's actual thesis started rendering as though the
+   card had none. Its own class, with the muted look it was really after. */
+.comp-agent-thesis {
+  margin: 0.5rem 0 0;
+  max-width: 68ch;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Proportional run progress. CSS cannot divide `completed_runs` by `total_runs`, so `JobProgressPanel`
+   hands the ratio down as `--comp-job-pct` and this draws it. The fallback keeps the bar at zero
+   width rather than full if the property is ever missing -- a bar that reads "complete" for a job
+   that has not started would be the worst possible default. */
+.comp-job-progress-bar {
+  position: relative;
+  height: 4px;
+  margin: 0.6rem 0;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--border) 60%, var(--panel-2));
+  overflow: hidden;
+}
+.comp-job-progress-bar::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: var(--comp-job-pct, 0%);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 70%, transparent), var(--accent));
+  box-shadow: 0 0 8px -2px var(--glow-cyan);
+  transition: width 240ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .comp-job-progress-bar::before { transition: none; }
+}
+
+/* Failed runs sit inside the same progress line as the completed count, so the failure is read at
+   the same moment as the progress rather than found later in the log. `--down` plus the word
+   "failed" -- colour is not carrying this alone. */
+.comp-job-failed {
+  color: var(--down);
+  font-weight: 600;
+}
+
+/* --- Two-button header (loop toggle added next to the round CTA) ---------------
+   Wraps `.comp-run-cta` (Plan the next round) and the loop toggle so the pair sit side by side and
+   wrap to a second line together on a narrow viewport, rather than `.comp-page-head`'s own
+   `justify-content: space-between` squeezing the second button against the subtitle. */
+.comp-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Both header buttons now reuse the shared quiet `.symbol-submit` (see `Competition.tsx`'s own note
+   on why): this adds only the mono/uppercase chrome the old accent-filled `.comp-run-cta` carried,
+   never its fill or its glow. */
+.comp-header-action {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.comp-header-action:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* Stopping a running process stays a visibly different kind of act from starting or planning one --
+   colour and border only, on a control that is otherwise identical to its siblings. */
+.comp-header-action-stop {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 55%, var(--border));
+}
+.comp-header-action-stop:hover:not(:disabled) {
+  border-color: var(--down);
+  box-shadow: none;
+}
+
+/* The loop toggle and the pill reporting what the loop is actually doing, kept on one line so the
+   state is read with the control rather than somewhere else on the page. */
+.comp-loop-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* The loop's own danger variant of `.comp-run-cta`, following `.comp-job-cancel`'s pattern: same
+   shape and weight, colour overridden to `--down` so "stop a running process" reads as a different
+   kind of action from "start" or "plan" rather than just a re-coloured twin. */
+.comp-loop-stop {
+  font-family: var(--font-mono);
+  background: color-mix(in srgb, var(--down) 14%, var(--panel-2));
+  border: 1px solid var(--down);
+  color: var(--down);
+  padding: 0.6rem 1.15rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.comp-loop-stop:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--down) 24%, var(--panel-2));
+}
+.comp-loop-stop:focus-visible {
+  outline: 2px solid var(--down);
+  outline-offset: 2px;
+}
+.comp-loop-stop:disabled,
+.comp-run-cta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* A small live dot next to the "Loop" tab label while the loop is running/stopping -- the tab rail's
+   own version of `.comp-job-status-running`'s pulse, scaled down to sit inline in a tab. Guarded for
+   reduced motion like every other animated cue on this page. */
+.comp-tab-live {
+  display: inline-block;
+  margin-left: 0.35em;
+  color: var(--accent);
+  animation: comp-job-pulse 1.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .comp-tab-live { animation: none; }
+}
+
+/* --- Loop panel (the endless competition/feedback loop) ------------------------- */
+
+.comp-loop-panel { display: flex; flex-direction: column; gap: 1rem; }
+
+.comp-loop-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.comp-loop-heading { margin: 0; }
+
+.comp-loop-empty { padding: 0.75rem 1rem; }
+
+.comp-loop-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.comp-loop-phase { margin-left: 0.5rem; }
+
+.comp-loop-subheading {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.comp-loop-best { border-top: 1px solid var(--border); padding-top: 0.75rem; }
+.comp-loop-best-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+/* The holdout column sits beside the selection column so a reader compares them directly, but its own
+   label carries the "never used for selection" note inline rather than leaving it to a tooltip -- see
+   `api/evolution.ts`'s `Standing` docstring on why folding it under the same heading as
+   `median_excess` overstates what a promoted genome's evidence actually supports. */
+.comp-loop-holdout-note {
+  display: block;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.9em;
+  color: var(--muted);
+}
+
+.comp-loop-promotions { border-top: 1px solid var(--border); padding-top: 0.75rem; }
+.comp-loop-promotion-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.comp-loop-promotion-tile { gap: 0.4rem; }
+.comp-loop-promotion-reason { font-size: 0.82rem; color: var(--text); margin: 0; }
+.comp-loop-promotion-stats {
+  display: flex;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.comp-loop-findings { border-top: 1px solid var(--border); padding-top: 0.75rem; }
+.comp-loop-findings-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.comp-loop-finding-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+.comp-loop-finding-summary { color: var(--text); }
+
+.comp-loop-log-wrap { border-top: 1px solid var(--border); padding-top: 0.75rem; }
+.comp-loop-log { margin-top: 0; }
+
+.comp-loop-error { margin-top: 0; }
+
+/* --- Start form + read-only started config --------------------------------------
+   The start form (population/max_workers/goal/focus/avoid) shown while the loop is not running, and
+   the read-only summary of `status.config` shown in its place while it is. Reuses `.filter-bar` for
+   the two side-by-side select rows, `.bt-control-label`/`.bt-entry-select` for the label+select shape,
+   `.symbol-input`/`.bt-scan-input` for the text/textarea fields, and `.status-grid`/`.stat` for the
+   read-only summary -- nothing here restyles those, only lays this panel's own wrapper out around
+   them, per this stylesheet's own `comp-` prefix convention. */
+
+.comp-loop-form-wrap {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* `.filter-bar` already wraps and gaps its children; this just keeps the two selects from stretching
+   full-width on a wide panel, and lets them stack cleanly at a narrow one since `.filter-bar` itself
+   already wraps. */
+.comp-loop-form-row.filter-bar { row-gap: 0.6rem; }
+.comp-loop-form-row .bt-entry-select { min-width: 5.5rem; }
+
+.comp-loop-form-hint {
+  margin: -0.2rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.comp-loop-goal-label { width: 100%; }
+.comp-loop-goal-input {
+  width: 100%;
+  min-height: 4.5rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* The pre-flight notice for goal text shaped like a config directive (`LoopPanel.tsx`'s
+   `GoalDirectiveWarnings`). Sits directly under the goal textarea, above its static hint. Reuses
+   `.callout`/`.callout-warn` from `styles.css` for the amber treatment and adds only the list shape --
+   amber, not the red of `.callout-danger`, because nothing here is an error: the loop will start and
+   run correctly, it just will not do the thing the sentence asks for. */
+.comp-loop-goal-warnings {
+  margin: -0.2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 68ch;
+}
+.comp-loop-goal-warnings-label {
+  font-weight: 600;
+}
+.comp-loop-goal-warnings-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  line-height: 1.5;
+}
+/* The reader's own words, quoted back so they can see which part of the sentence is meant. Wraps
+   rather than scrolls -- a goal is prose, and a horizontal scrollbar inside a warning is worse than a
+   second line. */
+.comp-loop-goal-warning-quote {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  overflow-wrap: anywhere;
+}
+.comp-loop-goal-warning-legality { font-weight: 600; }
+.comp-loop-goal-warnings-foot {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* Two tickers fields side by side on a wide panel, one per line once `.filter-bar`'s own wrap kicks in
+   on a narrow one -- the form "must stay usable at a narrow viewport" per this task's own brief. */
+.comp-loop-symbols-input { width: 100%; min-width: 12rem; }
+
+.comp-loop-running-config {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* The run's stated goal, rendered beside the findings for the generation it was declared for -- see
+   `LoopPanel.tsx`'s `LatestFindings` docstring on why this is explicitly marked as intent, not a
+   finding, and never fed back into anything that steers the search. */
+.comp-loop-goal-display {
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-left: 2px solid var(--border-strong);
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--accent) 3%, transparent);
+}
+.comp-loop-goal-display-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.comp-loop-goal-display-note {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+.comp-loop-goal-text {
+  margin: 0.3rem 0 0;
+  color: var(--text);
+  line-height: 1.5;
+  max-width: 68ch;
+}
+
+/* --- Generations panel (GenerationsPanel: the whole-field, whole-history browser) --------------------
+   Own `comp-gens-` prefix, matching the `selection-` precedent for a feature added later that mostly
+   reuses the page's shared furniture (`.panel`, `.data-table`/`.table-wrap`, `.badge`, `.state-pill`,
+   `.callout*`, `.placeholder`, `.status-grid`/`.stat`, `.comp-loop-subheading`,
+   `.comp-loop-holdout-note`, `.comp-agent-row`, `.comp-ineligible-row`/`.comp-ineligible-chip`,
+   `.verdict-*` badges) and adds only what none of those already cover: the streak row, the expanded
+   generation detail, and the sparkline trend tiles. */
+
+.comp-gens-panel {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comp-gens-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.comp-gens-head .comp-loop-subheading { margin: 0; }
+
+.comp-gens-unreadable { margin: 0; }
+
+/* The bounding box is now the shared `ScrollRegion` primitive (`size="lg"`), wrapping `.table-wrap`
+   in `GenerationsPanel.tsx` -- `comp-gens-scroll` and its `max-height`/`overflow-y` are gone. */
+.comp-gens-table { min-width: 900px; }
+.comp-gens-table th, .comp-gens-table td { vertical-align: top; }
+
+.comp-gens-row { cursor: pointer; }
+.comp-gens-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* The holdout-gap cell reuses the leaderboard's tabular-nums numeric styling but gets its own class so
+   a reader scanning the row can tell at a glance it is a percentage-*point* figure, not one more
+   fraction-based percentage among the others -- see `api/evolution.ts`'s `formatPctPoints` docstring
+   on why the unit itself (`pp` vs `%`) already carries most of that signal; this is the visual
+   reinforcement of the same point, not a duplicate of it. */
+.comp-gens-holdout-cell { font-style: italic; }
+
+/* --- Failure streak row -------------------------------------------------------------------------
+   The single most important row this table renders: one line standing in for up to hundreds of
+   individually useless failed-generation rows. Treated visually like a single alarmed leaderboard row
+   (`.selection-gate-fail-row`'s tint, reused conceptually) rather than blending into the ordinary
+   generation rows above and below it -- a reader scrolling past should immediately register "this is a
+   different kind of row", not mistake it for one more generation with unusually verbose status text. */
+.comp-gens-streak-row {
+  cursor: pointer;
+  background: color-mix(in srgb, var(--down) 6%, transparent);
+}
+.comp-gens-streak-row:hover {
+  background: color-mix(in srgb, var(--down) 12%, transparent);
+}
+/* Colour/border used to live here directly; the badge is now a `StatusPill tone="bad"`, which supplies
+   its own colour, so only the layout spacing remains. */
+.comp-gens-streak-badge {
+  margin-right: 0.5rem;
+}
+.comp-gens-streak-label {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.comp-gens-streak-error {
+  font-family: var(--font-mono);
+  color: var(--muted);
+}
+.comp-gens-streak-scope {
+  margin-left: 0.5rem;
+}
+.comp-gens-streak-detail-row td { padding-top: 0; }
+.comp-gens-streak-detail {
+  padding: 0.5rem 0.75rem 0.75rem;
+  border-left: 2px solid color-mix(in srgb, var(--down) 45%, transparent);
+}
+.comp-gens-streak-full-error {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  white-space: pre-wrap;
+  margin: 0.5rem 0 0;
+}
+
+/* --- Expanded generation detail -------------------------------------------------------------------- */
+
+.comp-gens-detail-row td { padding-top: 0.5rem; padding-bottom: 0.75rem; }
+.comp-gens-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.comp-gens-detail-section {
+  border-top: 1px solid var(--border);
+  padding-top: 0.65rem;
+}
+.comp-gens-standings-table { min-width: 780px; }
+
+.comp-gens-finding-group { margin-bottom: 0.5rem; }
+.comp-gens-finding-group:last-child { margin-bottom: 0; }
+
+.comp-gens-plan-summary { cursor: pointer; }
+/* The bounding box + scroll are now the shared `ScrollRegion` primitive (`size="sm"`), which
+   `GenerationsPanel.tsx` wraps around this `<pre>`. The rest of the box styling stays here, on the
+   `<pre>` itself -- see `.comp-job-log`'s own comment above on why `white-space: pre-wrap` in
+   particular cannot move to the wrapping `ScrollRegion` `<div>` without losing text wrapping. */
+.comp-gens-plan-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  white-space: pre-wrap;
+  margin: 0.5rem 0 0;
+}
+
+/* A per-candidate review note, joined by genome_id onto its own standing row -- kept visually inside
+   that row's own name cell rather than a separate column, so the note is never mistaken for belonging
+   to a different candidate. */
+.comp-gens-review-note {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text);
+  max-width: 46ch;
+}
+
+.comp-gens-review-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.comp-gens-postmortem {
+  color: var(--text);
+  line-height: 1.55;
+  max-width: 72ch;
+  margin: 0 0 0.75rem;
+}
+
+.comp-gens-direction { margin-top: 0.5rem; }
+.comp-gens-direction-headline {
+  font-weight: 600;
+  color: var(--text);
+  margin: 0.3rem 0;
+}
+.comp-gens-direction-list {
+  margin: 0.3rem 0;
+  padding-left: 1.2rem;
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.comp-gens-direction-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+/* Amendments are the loop retuning its own configuration -- deliberately wrapped in the shared
+   `.callout-warn` treatment (see `styles.css`) rather than plain prose, so a self-modifying change
+   catches a reader's eye instead of blending into the surrounding review text. */
+.comp-gens-amendments { margin-top: 0.75rem; }
+.comp-gens-amendments-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.comp-gens-amendments-list li {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.comp-gens-amendment-value {
+  font-family: var(--font-mono);
+  margin: 0 0.5rem;
+  color: var(--accent);
+}
+.comp-gens-amendment-reason { color: var(--muted); }
+
+/* --- Trend section: purpose-scoped sparklines -------------------------------------------------------
+   The lane is restated in the heading (see `GenerationTrends`'s own docstring) -- styled here as an
+   ordinary subsection rather than singled out, since the correctness point is carried by the text and
+   the shared `purpose` selector, not by a visual callout. */
+
+.comp-gens-trends {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+.comp-gens-trend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.comp-gens-trend-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  background: var(--panel-2);
+}
+.comp-gens-trend-tile .label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.comp-gens-sparkline {
+  width: 100%;
+  height: 3rem;
+}
+.comp-gens-sparkline-line {
+  stroke: var(--accent);
+  stroke-width: 1.75;
+  vector-effect: non-scaling-stroke;
+}
+.comp-gens-sparkline-zero {
+  stroke: var(--border-strong);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+.comp-gens-sparkline-empty {
+  padding: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.comp-gens-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.comp-gens-pagination-summary { font-family: var(--font-mono); }
+
+/* --- B5: review queue (PendingSeatsPanel rebuild, two-stage: pending/shelved/decided) ----------------
+   Every class here is prefixed `comp-review-` per this workstream's own scope fence, and reuses the
+   page's shared furniture (`.badge`, `.callout`/`.callout-warn`/`.callout-danger`, `.data-table`/
+   `.table-wrap`, `.status-grid`, `.btn`/`.btn-secondary`, `.comp-loop-subheading`) rather than
+   inventing parallel versions of any of them. */
+.comp-review {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border, #2a2a2a);
+}
+.comp-review-error,
+.comp-review-notice {
+  margin-bottom: 1rem;
+}
+.comp-review-empty {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.comp-review-group {
+  margin-bottom: 1.75rem;
+}
+.comp-review-group-heading {
+  margin: 0 0 0.4rem;
+}
+.comp-review-group-blurb {
+  margin: 0 0 1rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+/* One candidate card -- shared by the "waiting for review" and "review shelf" groups; see
+   `CandidateRow` in `PendingSeatsPanel.tsx` for why one shape serves both. */
+.comp-review-row {
+  border: 1px solid var(--border, #2a2a2a);
+  border-radius: 6px;
+  padding: 0.875rem 1rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface-raised, rgba(255, 255, 255, 0.02));
+}
+.comp-review-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.375rem;
+}
+.comp-review-row-name {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  min-width: 0;
+}
+.comp-review-headline {
+  font-weight: 600;
+  color: var(--text, #e8e8e8);
+}
+/* The short id is a subordinate chip, never the primary name -- see candidateName.ts's own docstring
+   on why the hash is not the problem, the hash being the *only* thing on screen is. */
+.comp-review-short-id {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.comp-review-summary {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.comp-review-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.625rem;
+}
+
+/* The dossier disclosure -- a plain button, not a native <details>/<summary> (jsdom does not
+   implement click-to-toggle for <details>, see PendingSeatsPanel.tsx's own docstring on why this is a
+   controlled button instead). `CandidateDossier` mounts (and only then fetches) the first time this is
+   opened, and then only ever hides/shows via the [hidden] attribute on `.comp-review-dossier-panel`,
+   never unmounts -- so re-opening a row never re-fetches its dossier. */
+.comp-review-dossier-toggle {
+  cursor: pointer;
+  font-size: 0.8125rem;
+  color: var(--accent, #6cc6ff);
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+}
+.comp-review-dossier-panel[hidden] {
+  display: none;
+}
+.comp-review-dossier-loading,
+.comp-review-dossier-error {
+  font-size: 0.8125rem;
+  margin: 0.5rem 0 0;
+}
+.comp-review-dossier {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border, #2a2a2a);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.comp-review-dossier-section h5 {
+  margin: 0 0 0.4rem;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+/* What it does -- deliberately the first section and styled with no less weight than the evidence
+   below it, since the whole point is that a strategy's own trading logic renders above every number. */
+.comp-review-universe {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+}
+/* `discipline_label` is a self-declared label, verified NOT to describe the rule (a mutation flipped
+   it between two byte-identical strategies) -- always rendered together with the backend's own
+   `discipline_label_note` caveat, never bare. See CandidateDossier.tsx's own comment at this markup
+   and candidateName.ts's module docstring. */
+.comp-review-discipline-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.comp-review-discipline-label-value {
+  margin: 0 0 0.15rem;
+}
+.comp-review-discipline-note {
+  margin: 0;
+  font-style: italic;
+}
+.comp-review-plain-rules {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  row-gap: 0.35rem;
+  font-size: 0.8125rem;
+}
+.comp-review-plain-rules dt {
+  font-weight: 600;
+  color: var(--muted);
+}
+.comp-review-plain-rules dd {
+  margin: 0;
+}
+
+.comp-review-thesis {
+  font-style: italic;
+  margin: 0 0 0.4rem;
+  font-size: 0.8125rem;
+}
+.comp-review-origin,
+.comp-review-origin-note,
+.comp-review-overlap-note {
+  margin: 0 0 0.3rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* The non-negotiable ordering: the field's own baseline, stated before the card's own figure --
+   see CandidateDossier.tsx's module docstring. Styled as a callout so it cannot be skimmed past like
+   an ordinary paragraph. */
+.comp-review-holdout-check {
+  font-size: 0.8125rem;
+  margin: 0 0 0.75rem;
+}
+.comp-review-no-evidence,
+.comp-review-no-cautions {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.comp-review-evidence-table {
+  font-size: 0.78rem;
+}
+.comp-review-windows-cell {
+  max-width: 16rem;
+  color: var(--muted);
+}
+/* "A number never appears alone" -- every figure cell stacks the field comparison above the card's
+   own value, field first, so the field baseline is read before the card's figure even within one
+   table cell, not only in the callout above the table. */
+.comp-review-field-first {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.comp-review-field-value {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.comp-review-card-value {
+  font-weight: 600;
+}
+.comp-review-context-grid {
+  margin-top: 0.75rem;
+}
+
+/* What's wrong with it -- never collapsed, never hidden when non-empty (see CandidateDossier.tsx). */
+.comp-review-caution-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.comp-review-caution {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  border-left: 3px solid var(--border, #2a2a2a);
+}
+.comp-review-caution-severity {
+  flex: 0 0 auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+.comp-review-caution-text {
+  color: var(--text, #e8e8e8);
+}
+/* `blocking` is the strongest treatment on the page short of an actual error state -- a card with a
+   blocking caution cleared the gate on paper but the margin analysis says the gate itself may be
+   wrong for it. `serious` is amber, matching `.callout-warn` elsewhere. `note` is the quietest --
+   still never hidden, just not visually shouting. */
+.comp-review-caution-blocking {
+  border-left-color: var(--down, #ff6b6b);
+  background: rgba(255, 107, 107, 0.12);
+}
+.comp-review-caution-blocking .comp-review-caution-severity {
+  color: var(--down, #ff6b6b);
+}
+.comp-review-caution-serious {
+  border-left-color: var(--warn, #e0a940);
+  background: rgba(224, 169, 64, 0.1);
+}
+.comp-review-caution-serious .comp-review-caution-severity {
+  color: var(--warn, #e0a940);
+}
+.comp-review-caution-note {
+  border-left-color: var(--border, #2a2a2a);
+  background: transparent;
+}
+.comp-review-caution-note .comp-review-caution-severity {
+  color: var(--muted);
+}
+
+/* What each button does -- rendered next to the row's own action buttons, not a tooltip. */
+.comp-review-decision-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  row-gap: 0.35rem;
+  font-size: 0.78rem;
+}
+.comp-review-decision-list dt {
+  font-weight: 600;
+  color: var(--muted);
+}
+.comp-review-decision-list dd {
+  margin: 0;
+}
+.comp-review-purpose-line {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* Decided -- greyed, collapsed, never removed; same treatment the old seat-approval
+   queue this replaces used for its own decided items. */
+.comp-review-decided {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.comp-review-decided ul {
+  list-style: none;
+  padding: 0.5rem 0 0;
+  margin: 0;
+}
+.comp-review-decided li {
+  padding: 0.25rem 0;
+}
+.comp-review-muted {
+  color: var(--muted);
+}
+/* Seated, rejected, and retired are all "decided" and none of them is an error state -- a rejection or
+   a retirement is the pipeline working as designed, so none of the three is painted as a failure. */
+.comp-review-status-seated {
+  background: var(--ok-bg, rgba(80, 170, 120, 0.15));
+}
+.comp-review-status-rejected,
+.comp-review-status-retired {
+  background: var(--muted-bg, rgba(150, 150, 150, 0.15));
+}
+
+/* "Books to breed for" -- the purposes checkbox group on the loop start form.
+   A `fieldset` with its native border removed rather than a `div`: the three boxes are one control
+   answering one question, and a legend is what a screen reader reads before each box's own label. */
+.comp-loop-purposes {
+  border: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.comp-loop-purposes-legend {
+  padding: 0;
+  margin-bottom: 0.35rem;
+}
+
+.comp-loop-purposes-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.comp-loop-purpose-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+/* The last remaining book is disabled, not removed -- it must still read as a ticked box that cannot
+   be unticked, so the cursor and the dimming are the only difference. */
+.comp-loop-purpose-box:has(input:disabled) {
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* JournalPanel.tsx -- the loop's rolling per-generation digest. Markdown renders as pre-wrap text
+   (this app has no Markdown renderer), the same treatment the loop's plan text and desk outputs use. */
+.comp-journal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.comp-journal-entry {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+.comp-journal-entry:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.comp-journal-gen {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+.comp-journal-md {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted, var(--muted));
+}

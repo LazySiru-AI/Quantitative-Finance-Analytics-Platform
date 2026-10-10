@@ -1,0 +1,19 @@
+{
+  "round_id": "r2-2026-08",
+  "title": "Round 2 - eight regimes, a metric that can see insurance, and a promotion rule that cannot count",
+  "focus": "Does widening the window matrix to eight regimes, adding a genuine crash quarter and two directionless chop windows, change the ranking, and does a dominance view (median, worst window, hit rate, Pareto frontier) fix the median-only metric's blindness to hedge and convex payoffs that round 1 exposed?",
+  "headline": "The programme's own two-consecutive-rounds promotion rule does not survive contact with a deterministic engine: re-scoring a frozen card on an old window in a later round recomputes the identical number rather than sampling anything new.",
+  "outcome": "Twenty-seven cards, round 1's twenty-two carried forward unchanged plus five new challengers, traded across eight market regimes. Re-running a round-1 card on a round-1 window in round 2 reproduced the identical figure on twenty of twenty checked pairs, verified bit-identical, which means a promotion rule requiring a positive median in two consecutive rounds counts one measurement twice unless the second round brings genuinely new windows.\n\nThe dominance view earned its place: c09-convex, designed to test whether it was worth adding, reached the Pareto frontier at 4th of 22 by Borda composite, where round 1's median-only rule would have placed it 11th.\n\nBut decomposing the GFC window showed capital exposure correlates strongly and positively with adjusted excess in a falling market, because the adjustment credits exposure proportional to a negative benchmark - so per unit of capital actually deployed, the ordering in that window inverts.\n\nThe two new chop windows mostly re-measured variance the matrix already carried, and the single most redundant pair in the whole eight-window matrix was not a chop pair at all but q4-2018 and bear-2022.\n\nApplying the promotion rule mechanically would have replaced B-momentum with B2-hold-90 on margins comfortably inside the ordering noise floor the same protocol document calls meaningless - no such promotion was made, and the rule was flagged for amendment.\n\nA third engine defect, a concurrent read colliding with the tournament's write lock, recurred during round 2's own setup and cost an entire first attempt: 135 card-runs, zero results, from a run that survived being killed by taskkill.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "The two-consecutive-rounds promotion rule needs amendment, since re-scoring frozen cards on old windows double-counts a single measurement rather than confirming it.",
+    "Capital exposure correlates strongly with adjusted excess in falling markets, so per-unit-of-capital comparisons should be checked separately from the raw ranking in crash windows.",
+    "The chop windows added this round are largely redundant with existing bear windows and should not be assumed to add independent regime coverage.",
+    "A third engine defect (concurrent-read lock collision) was found; future rounds should refuse to start while another tournament process is alive."
+  ],
+  "sources": [
+    "data/rounds/r2-2026-08/REPORT.md",
+    "data/rounds/PROGRAMME-REPORT.md"
+  ]
+}

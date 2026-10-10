@@ -1,0 +1,53 @@
+window: 2015-04-07 -> 2016-04-15
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+48 cards
+[1/48] r1 r17-band-breakout-off-none: 1s trades=30 ret=-0.69% dd=-4.79% rej=1
+[2/48] r1 r17-band-breakout-off-stop-tp: 2s trades=30 ret=-0.69% dd=-4.79% rej=1
+[3/48] r1 r17-band-breakout-off-stop: 2s trades=30 ret=-0.69% dd=-4.79% rej=1
+[4/48] r1 r17-band-breakout-on-none: 1s trades=23 ret=-2.18% dd=-5.18% rej=0
+[5/48] r1 r17-band-breakout-on-stop-tp: 1s trades=23 ret=-2.18% dd=-5.18% rej=0
+[6/48] r1 r17-band-breakout-on-stop: 1s trades=23 ret=-2.18% dd=-5.18% rej=0
+[7/48] r1 r17-band-reversion-off-none: 1s trades=27 ret=-6.93% dd=-11.77% rej=0
+[8/48] r1 r17-band-reversion-off-stop-tp: 2s trades=33 ret=-5.68% dd=-9.09% rej=7
+[9/48] r1 r17-band-reversion-off-stop: 2s trades=33 ret=-5.68% dd=-9.09% rej=7
+[10/48] r1 r17-band-reversion-on-none: 1s trades=8 ret=-2.07% dd=-4.12% rej=0
+[11/48] r1 r17-band-reversion-on-stop-tp: 1s trades=8 ret=-2.89% dd=-4.12% rej=0
+[12/48] r1 r17-band-reversion-on-stop: 1s trades=8 ret=-2.89% dd=-4.12% rej=0
+[13/48] r1 r17-channel-breakout-off-none: 2s trades=20 ret=-2.29% dd=-9.13% rej=0
+[14/48] r1 r17-channel-breakout-off-stop-tp: 3s trades=20 ret=-2.29% dd=-9.13% rej=0
+[15/48] r1 r17-channel-breakout-off-stop: 3s trades=20 ret=-2.29% dd=-9.13% rej=0
+[16/48] r1 r17-channel-breakout-on-none: 1s trades=16 ret=-2.45% dd=-7.48% rej=0
+[17/48] r1 r17-channel-breakout-on-stop-tp: 2s trades=16 ret=-2.45% dd=-7.48% rej=0
+[18/48] r1 r17-channel-breakout-on-stop: 2s trades=16 ret=-2.45% dd=-7.48% rej=0
+[19/48] r1 r17-ma-crossover-off-none: 2s trades=32 ret=+2.61% dd=-6.10% rej=0
+[20/48] r1 r17-ma-crossover-off-stop-tp: 3s trades=32 ret=+2.61% dd=-6.10% rej=0
+[21/48] r1 r17-ma-crossover-off-stop: 3s trades=32 ret=+2.61% dd=-6.10% rej=0
+[22/48] r1 r17-ma-crossover-on-none: 1s trades=21 ret=-0.89% dd=-4.22% rej=0
+[23/48] r1 r17-ma-crossover-on-stop-tp: 2s trades=21 ret=-0.89% dd=-4.22% rej=0
+[24/48] r1 r17-ma-crossover-on-stop: 2s trades=21 ret=-0.89% dd=-4.22% rej=0
+[25/48] r1 r17-macd-cross-off-none: 3s trades=86 ret=-4.30% dd=-11.58% rej=1
+[26/48] r1 r17-macd-cross-off-stop-tp: 3s trades=86 ret=-4.30% dd=-11.58% rej=1
+[27/48] r1 r17-macd-cross-off-stop: 3s trades=86 ret=-4.30% dd=-11.58% rej=1
+[28/48] r1 r17-macd-cross-on-none: 2s trades=51 ret=-3.21% dd=-4.22% rej=0
+[29/48] r1 r17-macd-cross-on-stop-tp: 2s trades=51 ret=-3.21% dd=-4.22% rej=0
+[30/48] r1 r17-macd-cross-on-stop: 2s trades=51 ret=-3.21% dd=-4.22% rej=0
+[31/48] r1 r17-momentum-state-off-none: 2s trades=32 ret=+0.99% dd=-7.89% rej=6
+[32/48] r1 r17-momentum-state-off-stop-tp: 4s trades=32 ret=+0.99% dd=-7.89% rej=6
+[33/48] r1 r17-momentum-state-off-stop: 4s trades=32 ret=+0.99% dd=-7.89% rej=6
+[34/48] r1 r17-momentum-state-on-none: 2s trades=29 ret=-1.16% dd=-7.30% rej=1
+[35/48] r1 r17-momentum-state-on-stop-tp: 3s trades=29 ret=-1.16% dd=-7.30% rej=1
+[36/48] r1 r17-momentum-state-on-stop: 3s trades=29 ret=-1.16% dd=-7.30% rej=1
+[37/48] r1 r17-rsi-pullback-off-none: 3s trades=28 ret=-6.00% dd=-13.70% rej=1
+[38/48] r1 r17-rsi-pullback-off-stop-tp: 4s trades=35 ret=-8.68% dd=-16.17% rej=18
+[39/48] r1 r17-rsi-pullback-off-stop: 4s trades=35 ret=-8.68% dd=-16.17% rej=18
+[40/48] r1 r17-rsi-pullback-on-none: 2s trades=21 ret=-1.24% dd=-8.39% rej=0
+[41/48] r1 r17-rsi-pullback-on-stop-tp: 3s trades=21 ret=-4.48% dd=-7.70% rej=0
+[42/48] r1 r17-rsi-pullback-on-stop: 3s trades=21 ret=-4.48% dd=-7.70% rej=0
+[43/48] r1 r17-vol-compression-off-none: 3s trades=33 ret=-6.15% dd=-16.23% rej=29
+[44/48] r1 r17-vol-compression-off-stop-tp: 4s trades=36 ret=-6.66% dd=-15.41% rej=21
+[45/48] r1 r17-vol-compression-off-stop: 4s trades=36 ret=-6.66% dd=-15.41% rej=21
+[46/48] r1 r17-vol-compression-on-none: 2s trades=37 ret=-5.65% dd=-12.71% rej=0
+[47/48] r1 r17-vol-compression-on-stop-tp: 3s trades=37 ret=-5.65% dd=-12.71% rej=0
+[48/48] r1 r17-vol-compression-on-stop: 3s trades=37 ret=-5.65% dd=-12.71% rej=0
+r1: 48 agents, 9 discoveries
+overall: 48 agents, 9 discoveries at alpha=0.1

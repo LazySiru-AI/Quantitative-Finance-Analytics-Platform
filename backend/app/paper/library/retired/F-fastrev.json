@@ -1,0 +1,26 @@
+{
+  "agent_id": "F-fastrev",
+  "display_name": "F - Fast reversion: low-exposure satellite",
+  "discipline": "mean-reversion",
+  "thesis": "In liquid, heavily-owned AI/semiconductor-cycle names, a short, sharp price dislocation -- a 2-3 session air-pocket severe enough to push RSI(3) under 15 while price pierces a tight 10-day Bollinger band -- is usually forced-flow selling (stop cascades, options-dealer delta hedging, single-headline overreaction) rather than a genuine repricing of the business, and forced flow exhausts itself in days, not weeks. On this universe over 2021-02-13 through 2026-02-13, 306 such dislocations resolved (price closing back above ema(5)) in a median of 4 sessions and a mean of 4.4, with only 4.2% still unresolved after 10 sessions -- so the reversion this trades is fast almost every time it happens at all, which is exactly the profile a tight max_hold_days is built for. The other side of this trade is whoever sold into the panic at the worst print: momentum/CTA systematic sellers extending a move 1-3 sessions past where fundamentals justify, and retail stop-outs clearing into thin liquidity. Exiting on the first close back above ema(5) -- not waiting for a full return to the 10- or 20-day mean -- is deliberate: in the same sample the median bounce at that first ema(5) reclaim was +2.8% (mean +2.7%), most of which happens in the first 3-4 sessions, so waiting longer trades a small amount of extra upside for a large amount of extra exposure to the move failing. This is a high win-rate, small-average-win system by design, which is precisely the profile a single oversized loss can erase, so the stop is sized deliberately wider than the typical adverse move (median intra-hold drawdown was -3.6%, so a 7% stop is roughly twice the typical noise) rather than tight to the entry, and a 5% take-profit locks in the strong minority of bounces before they have a chance to round-trip.",
+  "universe": [
+    "AMD",
+    "MU",
+    "AVGO",
+    "QCOM",
+    "MRVL",
+    "CRDO",
+    "NET",
+    "SOXX",
+    "TSM",
+    "NVDA"
+  ],
+  "entry": "rsi(3) < 15 and close < bb_lower(10,2)",
+  "exit": "close crosses_above ema(5)",
+  "stop_loss_pct": 0.07,
+  "take_profit_pct": 0.05,
+  "max_hold_days": 8,
+  "max_positions": 6,
+  "position_pct": 0.15,
+  "designed_through": "2026-02-13"
+}

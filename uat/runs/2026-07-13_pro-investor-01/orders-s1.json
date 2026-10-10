@@ -1,0 +1,47 @@
+{
+  "orders": [
+    {
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": 3,
+      "thesis": "Broad market in a confirmed uptrend across timeframes: close 754.95 is above sma20 (743.81), sma50 (741.24) and sma200 (694.48), up +1.37% 5d and +4.07% 20d, sitting 0.6% off the 52w high of 759.57. Core beta exposure for a risk-on regime read.",
+      "invalidation": "A daily close back below the 50-day SMA (741.24) invalidates the uptrend read.",
+      "stop_level": "735.00",
+      "regime": "risk-on",
+      "conviction": "high",
+      "evidence": [
+        "brief session1 watchlist SPY: close 754.95, sma20 743.8115, sma50 741.2374, sma200 694.4818",
+        "change_5d_pct_of_1 0.013655, change_20d_pct_of_1 0.040693",
+        "range_52w high 759.57 vs close 754.95"
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": 3,
+      "thesis": "Tech-led momentum leadership confirms the risk-on read alongside SPY: close 725.51 above sma20/sma50/sma200, +1.81% 5d, +4.59% 20d, near its 52w high of 746.16.",
+      "invalidation": "A daily close back below the 50-day SMA (715.16) invalidates the momentum thesis.",
+      "stop_level": "705.00",
+      "regime": "risk-on",
+      "conviction": "high",
+      "evidence": [
+        "brief session1 watchlist QQQ: close 725.51, sma20 722.5650, sma50 715.1554, sma200 638.0017",
+        "change_5d_pct_of_1 0.018117, change_20d_pct_of_1 0.045871"
+      ]
+    },
+    {
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": 7,
+      "thesis": "Healthcare is the one watchlist name showing near-term weakness inside a longer uptrend: -0.82% 1d, -1.77% 5d, but still +5.23% 20d and above its 20/50/200 SMAs. Buying a small starter clip on the pullback, testing the 20-day SMA as support, as a tactical rotation candidate rather than a core position -- sized well under the other two names for that reason.",
+      "invalidation": "A daily close below the 20-day SMA (156.99) fails the dip-buy read and the position is exited at a loss.",
+      "stop_level": "155.00",
+      "regime": "risk-on with a laggard rotation candidate",
+      "conviction": "low",
+      "evidence": [
+        "brief session1 watchlist XLV: close 160.84, sma20 156.9895, sma50 151.3512, sma200 150.8553",
+        "change_1d_pct_of_1 -0.008201, change_5d_pct_of_1 -0.017711, change_20d_pct_of_1 0.052273"
+      ]
+    }
+  ]
+}

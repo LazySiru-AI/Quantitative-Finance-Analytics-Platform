@@ -1,0 +1,213 @@
+{
+  "card": {
+    "agent_id": "r48-ctrend-risk1pct",
+    "display_name": "ctrend risk1pct",
+    "discipline": "trend",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Round 48 cell on the taxable trading book: base `ctrend` (`C-trend`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/base/C-trend.json` -- entry 'close > sma(200) and ema(20) crosses_above ema(50)', exit 'ema(20) crosses_below ema(50)', stop 0.12, take-profit None, hold cap 120, 5 slots at 0.18 each. Arm `risk1pct`, round 45's follow-up question asked of every seated trading card: position size becomes Decimal('0.01') / this base's stop_loss_pct, quantised to 3dp (0.083 here, since every base in this round carries a 0.12 stop) -- slot count and every other field unchanged. Round 45 measured this exact resizing lower the tail (worst window, IQR) and mean exposure on Creator E's own card without moving the per-window sign pattern, at a cost to the median. Predicted here to repeat that shape on the four other bases, and to be near-inert on the fifth if its own position size barely moves relative to its stop. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+    "falsification": "Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+    "universe": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "ORCL",
+      "SOXX",
+      "NFLX",
+      "MU",
+      "META",
+      "QCOM"
+    ],
+    "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+    "exit": "ema(20) crosses_below ema(50)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 120,
+    "max_positions": 5,
+    "position_pct": "0.083",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 249,
+  "starting_equity": "10000.00",
+  "ending_equity": "9953.29",
+  "total_return": "-0.004670999999999981",
+  "max_drawdown": "-0.07789238262268139",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.5381526104417671,
+  "capital_exposure": 0.10105224497991967,
+  "win_rate": 0.2,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "NFLX",
+      "entry_date": "2025-10-22",
+      "entry_price": "114.35",
+      "exit_date": "2025-10-23",
+      "exit_price": "112.63",
+      "quantity": "6",
+      "exit_reason": "rule",
+      "pnl": "-10.34",
+      "return_pct": "-0.01507068940387698586211922460",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2025-12-31",
+      "entry_price": "189.66",
+      "exit_date": "2026-02-06",
+      "exit_price": "176.60",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-52.26",
+      "return_pct": "-0.06888642834546029737424865549",
+      "bars_held": 25
+    },
+    {
+      "symbol": "META",
+      "entry_date": "2026-02-02",
+      "entry_price": "714.96",
+      "exit_date": "2026-02-19",
+      "exit_price": "638.25",
+      "quantity": "1",
+      "exit_reason": "rule",
+      "pnl": "-76.73",
+      "return_pct": "-0.1073206892693297527134385140",
+      "bars_held": 12
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-02-11",
+      "entry_price": "192.55",
+      "exit_date": "2026-03-06",
+      "exit_price": "179.75",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-51.22",
+      "return_pct": "-0.06650220721890418073227733056",
+      "bars_held": 16
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2026-04-14",
+      "entry_price": "378.09",
+      "exit_date": "2026-06-29",
+      "exit_price": "373.43",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "-9.34",
+      "return_pct": "-0.01235155650770980454389166601",
+      "bars_held": 52
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-04-16",
+      "entry_price": "197.53",
+      "exit_date": "2026-06-30",
+      "exit_price": "197.14",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-1.58",
+      "return_pct": "-0.001999696248671087936009720043",
+      "bars_held": 51
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2026-04-08",
+      "entry_price": "370.48",
+      "exit_date": "2026-07-29",
+      "exit_price": "387.89",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "34.80",
+      "return_pct": "0.04696609803498164543295184625",
+      "bars_held": 77
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-07-16",
+      "entry_price": "210.28",
+      "exit_date": "2026-07-29",
+      "exit_price": "195.75",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-43.61",
+      "return_pct": "-0.06913004882379050155348424323",
+      "bars_held": 9
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-04-07",
+      "entry_price": "343.21",
+      "exit_date": "2026-07-30",
+      "exit_price": "491.32",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "296.19",
+      "return_pct": "0.4314996649281780833891786370",
+      "bars_held": 79
+    },
+    {
+      "symbol": "META",
+      "entry_date": "2026-07-15",
+      "entry_price": "663.93",
+      "exit_date": "2026-07-31",
+      "exit_price": "543.33",
+      "quantity": "1",
+      "exit_reason": "stop",
+      "pnl": "-120.62",
+      "return_pct": "-0.1816757790730950552016025786",
+      "bars_held": 12
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-08-06",
+      "entry_price": "221.64",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "3",
+      "exit_reason": "open_at_end",
+      "pnl": "-5.70",
+      "return_pct": "-0.008572459844793358599530770619",
+      "bars_held": 8
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-08-18",
+      "entry_price": "537.69",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "1",
+      "exit_reason": "open_at_end",
+      "pnl": "-6.30",
+      "return_pct": "-0.01171678848407074708475143670",
+      "bars_held": 0
+    }
+  ],
+  "rejections": [
+    "min_clip",
+    "min_clip"
+  ],
+  "rejection_details": [
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$420.76 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "TSM",
+      "reason": "$429.36 is below the $500.00 minimum clip for a new position"
+    }
+  ],
+  "benchmark_return": "0.2061513798956434274218897341",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

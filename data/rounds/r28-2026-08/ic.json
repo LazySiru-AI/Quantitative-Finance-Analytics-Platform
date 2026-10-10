@@ -1,0 +1,188 @@
+{
+  "cells": [
+    {
+      "universe": "U12",
+      "signal": "mom_12_1",
+      "horizon": 21,
+      "mean_ic": 0.032071281775423795,
+      "n_dates": 169,
+      "p_value": 0.25037481259370314,
+      "q_value": 0.4097951024487756
+    },
+    {
+      "universe": "U12",
+      "signal": "mom_12_1",
+      "horizon": 63,
+      "mean_ic": 0.0303946053946054,
+      "n_dates": 56,
+      "p_value": 0.5462268865567217,
+      "q_value": 0.6069187628408019
+    },
+    {
+      "universe": "U12",
+      "signal": "mom_6",
+      "horizon": 21,
+      "mean_ic": 0.036141570461097096,
+      "n_dates": 169,
+      "p_value": 0.2518740629685157,
+      "q_value": 0.4097951024487756
+    },
+    {
+      "universe": "U12",
+      "signal": "mom_6",
+      "horizon": 63,
+      "mean_ic": 0.037271062271062284,
+      "n_dates": 56,
+      "p_value": 0.5272363818090955,
+      "q_value": 0.6069187628408019
+    },
+    {
+      "universe": "U12",
+      "signal": "vol_60",
+      "horizon": 21,
+      "mean_ic": 0.04792623550020001,
+      "n_dates": 169,
+      "p_value": 0.09995002498750624,
+      "q_value": 0.36814925870398135
+    },
+    {
+      "universe": "U12",
+      "signal": "vol_60",
+      "horizon": 63,
+      "mean_ic": 0.0898934398934399,
+      "n_dates": 56,
+      "p_value": 0.02148925537231384,
+      "q_value": 0.21489255372313842
+    },
+    {
+      "universe": "U12",
+      "signal": "reversal_1m",
+      "horizon": 21,
+      "mean_ic": 9.517110108826637e-05,
+      "n_dates": 169,
+      "p_value": 0.9955022488755623,
+      "q_value": 0.9955022488755623
+    },
+    {
+      "universe": "U12",
+      "signal": "reversal_1m",
+      "horizon": 63,
+      "mean_ic": 0.02531218781218782,
+      "n_dates": 56,
+      "p_value": 0.4802598700649675,
+      "q_value": 0.6003248375812094
+    },
+    {
+      "universe": "U12",
+      "signal": "dist_sma200",
+      "horizon": 21,
+      "mean_ic": 0.04485041585633303,
+      "n_dates": 169,
+      "p_value": 0.11044477761119441,
+      "q_value": 0.36814925870398135
+    },
+    {
+      "universe": "U12",
+      "signal": "dist_sma200",
+      "horizon": 63,
+      "mean_ic": 0.07396769896769897,
+      "n_dates": 56,
+      "p_value": 0.21839080459770116,
+      "q_value": 0.4097951024487756
+    },
+    {
+      "universe": "U9",
+      "signal": "mom_12_1",
+      "horizon": 21,
+      "mean_ic": 0.051050420168067226,
+      "n_dates": 204,
+      "p_value": 0.06996501749125437,
+      "q_value": 0.3498250874562719
+    },
+    {
+      "universe": "U9",
+      "signal": "mom_12_1",
+      "horizon": 63,
+      "mean_ic": 0.06001400560224089,
+      "n_dates": 68,
+      "p_value": 0.33183408295852074,
+      "q_value": 0.4424454439446943
+    },
+    {
+      "universe": "U9",
+      "signal": "mom_6",
+      "horizon": 21,
+      "mean_ic": 0.05840336134453782,
+      "n_dates": 204,
+      "p_value": 0.05347326336831584,
+      "q_value": 0.3498250874562719
+    },
+    {
+      "universe": "U9",
+      "signal": "mom_6",
+      "horizon": 63,
+      "mean_ic": 0.056757703081232506,
+      "n_dates": 68,
+      "p_value": 0.2988505747126437,
+      "q_value": 0.42692939244663386
+    },
+    {
+      "universe": "U9",
+      "signal": "vol_60",
+      "horizon": 21,
+      "mean_ic": 0.04116479925303455,
+      "n_dates": 204,
+      "p_value": 0.15742128935532235,
+      "q_value": 0.4097951024487756
+    },
+    {
+      "universe": "U9",
+      "signal": "vol_60",
+      "horizon": 63,
+      "mean_ic": 0.06684173669467787,
+      "n_dates": 68,
+      "p_value": 0.19940029985007496,
+      "q_value": 0.4097951024487756
+    },
+    {
+      "universe": "U9",
+      "signal": "reversal_1m",
+      "horizon": 21,
+      "mean_ic": 0.043172268907563024,
+      "n_dates": 204,
+      "p_value": 0.17891054472763618,
+      "q_value": 0.4097951024487756
+    },
+    {
+      "universe": "U9",
+      "signal": "reversal_1m",
+      "horizon": 63,
+      "mean_ic": 0.017366946778711482,
+      "n_dates": 68,
+      "p_value": 0.6296851574212894,
+      "q_value": 0.6628264814960941
+    },
+    {
+      "universe": "U9",
+      "signal": "dist_sma200",
+      "horizon": 21,
+      "mean_ic": 0.06872082166199814,
+      "n_dates": 204,
+      "p_value": 0.010994502748625687,
+      "q_value": 0.21489255372313842
+    },
+    {
+      "universe": "U9",
+      "signal": "dist_sma200",
+      "horizon": 63,
+      "mean_ic": 0.053711484593837545,
+      "n_dates": 68,
+      "p_value": 0.26636681659170414,
+      "q_value": 0.4097951024487756
+    }
+  ],
+  "survivors": 0,
+  "seed": 28,
+  "boot": 2000,
+  "block": 12
+}

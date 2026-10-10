@@ -1,0 +1,68 @@
+{
+  "findings": [
+    {
+      "finding_id": "wash-sale-tolled-holding-period-not-displayed",
+      "run_id": "2026-07-27_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "session_date": "2026-07-30",
+      "observed_at": "2026-08-18T06:44:00Z",
+      "surface": "ui",
+      "locator": "/tax, /wash-sales",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "Wash-sale's tolled holding-period start date is now shown for a still-held replacement lot, not just on disposal rows",
+      "observed": "Sold 1 QQQ at a loss 2026-07-29, repurchased 1 QQQ 2026-07-30 inside the window -- a full disallowance, replacement lot still held (not sold). /tax's 'Wash sales by symbol' row reads 'QQQ (holding tolled to 2026-07-28)' -- the tolled date inline next to the symbol, for a lot I am still holding and have not disposed of. Portfolio cost basis for the QQQ position is $676.50 = $675.10 fill price + $1.40 disallowed loss rolled in, cross-checked against the wash-sale table's own $1.40 deferred figure.",
+      "expected": "A replacement lot that absorbed a disallowed loss and is still held should surface its tolled holding period somewhere, since it was previously invisible until the lot was eventually sold. Confirmed present.",
+      "why_it_matters": "Tolling converts a short-term holding into long-term at the original acquisition date. A trader deciding whether to sell now or wait for long-term treatment needs this date before the sale, not after.",
+      "repro": [
+        "Sell a lot at a loss",
+        "Repurchase inside 30 days without selling the replacement",
+        "Open /tax -- read the 'Wash sales by symbol' row for the tolled date beside the symbol name"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "wash-sale-open-window-zero-disallowed-reads-as-live-warning",
+      "run_id": "2026-07-27_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "session_date": "2026-07-29",
+      "observed_at": "2026-08-18T06:45:00Z",
+      "surface": "ui",
+      "locator": "/wash-sales",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "POSITIVE: A $0.00-disallowed open-window row on /wash-sales reads as an actionable warning, not an empty one",
+      "observed": "After session 3's loss sale and before I repurchased, the QQQ row on /wash-sales read: badge 'NOT YET TRIGGERED', '12 DAYS LEFT', 'safe from 2026-08-29', 'DEFERRED $0.00'. Expanding it showed the individual sale row with the Treatment column reading 'NOT YET TRIGGERED -- REPURCHASE NOW CREATES A WASH SALE' in full words, not just a status chip. This is exactly the case where nothing has been disallowed yet and the number could easily read as nothing-to-see -- it did not.",
+      "expected": "The most actionable state on this page (a fresh loss with an open window, before any wash sale exists) needed explicit, present-tense language rather than a bare $0.00, or it would read as an empty row. It has that language.",
+      "why_it_matters": "This is the one moment the page can still change a decision -- warning that a repurchase right now would create a wash sale, while the loss is still fully usable if I wait. A silent $0.00 here would be read as 'nothing to worry about' by anyone skimming totals, which is the opposite of true.",
+      "repro": [
+        "Sell a lot at a loss and do not repurchase",
+        "Open /wash-sales -- read the symbol card's badge and the expanded row's Treatment column"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "wash-sale-figures-reconstructible-across-four-surfaces",
+      "run_id": "2026-07-27_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "session_date": "2026-07-30",
+      "observed_at": "2026-08-18T06:46:00Z",
+      "surface": "ui",
+      "locator": "/wash-sales, /tax, /portfolio",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "POSITIVE: Wash-sale totals walk back to the sale across /wash-sales, /tax and /portfolio",
+      "observed": "One full-disallowance wash sale (1 QQQ, $1.40 loss). /wash-sales top tile: DEFERRED $1.40. Expanded QQQ card: 1 sale, $1.40 loss, $1.40 disallowed, 'DEFERRED TO REPLACEMENT BASIS'. /tax's summary tile: WASH-SALE DISALLOWED (DEFERRED) $1.40; its Wash sales by symbol panel: QQQ deferred $1.40; its Wash sales table: 1.40 loss, 1.40 disallowed; Form 8949: code W, adjustment $1.40, gain/loss $0.00. /portfolio's QQQ cost basis: $676.50 = fill price $675.10 + the $1.40 rolled-in loss. All five figures agree to the cent and none required leaving the page to derive.",
+      "expected": "A provenance-literal user should be able to walk any total back to the row it came from without recomputing anything by hand. Confirmed across five separate renderings of the same $1.40.",
+      "why_it_matters": "A number I cannot reconstruct is a number I will not act on. This is the strongest form of that guarantee I have seen on this app -- every surface that touches a wash sale agrees, which is what lets me trust the top-line total without re-deriving it every time.",
+      "repro": [
+        "Trigger a full-disallowance wash sale",
+        "Compare /wash-sales top tile, expanded symbol row, /tax summary tile, wash-sale table, Form 8949, and /portfolio's cost basis for the affected symbol"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

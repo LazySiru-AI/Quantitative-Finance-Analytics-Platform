@@ -1,0 +1,14 @@
+window: 2011-05-26 -> 2012-06-06
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+9 cards
+[1/9] r1 r35-absolute-2-order: 3s trades=17 ret=-17.98% dd=-18.60% rej=412
+[2/9] r1 r35-absolute-2-rank: 3s trades=16 ret=-17.61% dd=-19.10% rej=416
+[3/9] r1 r35-absolute-4-order: 3s trades=40 ret=-17.00% dd=-19.67% rej=273
+[4/9] r1 r35-absolute-4-rank: 3s trades=40 ret=-17.78% dd=-20.11% rej=275
+[5/9] r1 r35-macross-2-order: 1s trades=5 ret=-10.86% dd=-11.65% rej=0
+[6/9] r1 r35-macross-2-rank: 1s trades=5 ret=-10.42% dd=-11.69% rej=0
+[7/9] r1 r35-macross-4-order: 1s trades=10 ret=-9.87% dd=-10.60% rej=0
+[8/9] r1 r35-macross-4-rank: 1s trades=10 ret=-9.87% dd=-10.60% rej=0
+[9/9] r1 r35-passive-8-order: 2s trades=8 ret=-15.62% dd=-22.36% rej=0
+r1: 9 agents, 6 discoveries
+overall: 9 agents, 6 discoveries at alpha=0.1

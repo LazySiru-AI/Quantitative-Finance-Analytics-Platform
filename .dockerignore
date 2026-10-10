@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# Build context excludes for `docker compose build` (context is the repo
+# root for both backend/Dockerfile and frontend/Dockerfile).
+#
+# The two entries below are the ones that matter most: the user's real
+# brokerage data and the API secret must never leave the host, which means
+# they must never even enter the build context sent to the Docker daemon --
+# let alone land in an image layer. Neither Dockerfile has a `COPY . .` or a
+# `COPY data ...`; keep it that way. data/ is mounted as a volume at runtime
+# (see docker-compose.yml) and .env is injected as environment variables via
+# `env_file:` (also docker-compose.yml) -- never copied in.
+# ---------------------------------------------------------------------------
+data/
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Version control / editors / OS cruft
+# ---------------------------------------------------------------------------
+.git/
+.gitattributes
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Python -- rebuilt from backend/pyproject.toml inside the image
+# ---------------------------------------------------------------------------
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Node / frontend -- rebuilt from frontend/package.json inside the image
+# ---------------------------------------------------------------------------
+**/node_modules/
+frontend/dist/
+.vite/
+**/*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Not needed inside either image
+# ---------------------------------------------------------------------------
+docs/
+tests/
+tools/
+.claude/
+.mcp.json
+HANDOFF.md
+MIGRATION.md
+README.md

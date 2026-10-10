@@ -1,0 +1,149 @@
+{
+  "run_id": "2026-07-20_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-16T18:15:53.322106+00:00",
+  "window": {
+    "first_session": "2026-07-20",
+    "last_session": "2026-07-24",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "9921.64",
+    "pnl": "-78.36",
+    "return_pct_of_1": "-0.007836",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "-0.004258",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 10,
+    "buys": 8,
+    "sells": 2,
+    "gross_traded": "12865.85",
+    "total_fees": "0.08",
+    "rejections": 7,
+    "rejections_by_rule": {
+      "fractional_shares": 2,
+      "insufficient_cash": 2,
+      "max_single_name_weight": 1,
+      "min_clip": 1,
+      "unpriceable": 1
+    }
+  },
+  "final_book": {
+    "as_of": "2026-07-24",
+    "cash": "2973.99",
+    "settled_cash": "2973.99",
+    "positions_market_value": "6947.65",
+    "equity": "9921.64",
+    "return_since_inception_pct_of_1": "-0.007836",
+    "positions": [
+      {
+        "symbol": "SPY",
+        "quantity": "3",
+        "mark": "738.93",
+        "market_value": "2216.79",
+        "weight_pct_of_1": "0.223430"
+      },
+      {
+        "symbol": "XLE",
+        "quantity": "41",
+        "mark": "59.62",
+        "market_value": "2444.42",
+        "weight_pct_of_1": "0.246373"
+      },
+      {
+        "symbol": "XLK",
+        "quantity": "13",
+        "mark": "175.88",
+        "market_value": "2286.44",
+        "weight_pct_of_1": "0.230450"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 3,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-3.csv",
+      "session-4.csv",
+      "session-5.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "55c322380aabb619e54f49cdc58b38c53804e17a",
+        "adapter": "robinhood",
+        "row_count": 3,
+        "usable_row_count": 3,
+        "inserted": 0,
+        "duplicates": 3,
+        "conflicts": [],
+        "instruments": 2,
+        "skipped": {},
+        "ledger_fingerprint": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+        "ledger_txn_count": 13
+      },
+      {
+        "import_id": "aed1a199f94999e21486c437d0db89089a61855a",
+        "adapter": "robinhood",
+        "row_count": 5,
+        "usable_row_count": 5,
+        "inserted": 0,
+        "duplicates": 5,
+        "conflicts": [],
+        "instruments": 4,
+        "skipped": {},
+        "ledger_fingerprint": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+        "ledger_txn_count": 13
+      },
+      {
+        "import_id": "4c12a1931709721630f79a3189031e8abe7c28b7",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 2,
+        "skipped": {},
+        "ledger_fingerprint": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+        "ledger_txn_count": 13
+      },
+      {
+        "import_id": "1cccde0dd36063c7497b2458390b88f97eef9267",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+        "ledger_txn_count": 13
+      },
+      {
+        "import_id": "7e83442c54d45874c72fe54b208311c15277ae67",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+        "ledger_txn_count": 13
+      }
+    ],
+    "fingerprint_before_replay": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+    "fingerprint_after_replay": "ad8fc4b236057e304c24f3587efdb2599e5f9e4ef65ccf4cf3713ef1c153abd0",
+    "ledger_txn_count": 13,
+    "idempotent": true
+  },
+  "findings_recorded": 2
+}

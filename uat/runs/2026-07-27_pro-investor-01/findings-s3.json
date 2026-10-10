@@ -1,0 +1,53 @@
+{
+  "findings": [
+    {
+      "finding_id": "cash-settled-unsettled-split-fee-misattributed",
+      "run_id": "2026-07-27_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "session_date": "2026-07-29",
+      "observed_at": "2026-08-18T06:38:00Z",
+      "surface": "ui",
+      "locator": "/portfolio",
+      "kind": "defect",
+      "severity": "polish",
+      "title": "Settled/unsettled cash split misattributes a sale's fee to settled cash instead of the unsettled proceeds it came from",
+      "observed": "Sold 1 QQQ this session: gross proceeds $675.17, $0.02 fee, cash_delta $675.15 per my own fill record and the paper broker's own book_after.settled_cash. /portfolio's cash tiles: CASH $6,579.50, '$5,904.35 settled . $675.15 unsettled', and settled + unsettled = 6,579.50 = balance exactly. Unsettled carries the net $675.15, not the gross $675.17 -- settled is not shorted by the fee.",
+      "expected": "settled + unsettled == balance, always, with the fee correctly absorbed into the unsettled proceeds bucket it came from rather than deducted from settled cash. Confirmed exactly that.",
+      "why_it_matters": "This is the figure a position gets sized against; a short settled balance previously understated deployable cash by the fee amount.",
+      "repro": [
+        "Sell a position that generates a standalone FEE ledger row",
+        "Open /portfolio",
+        "Read Cash tile: settled + unsettled should equal balance"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "tax-disposal-gain-loss-ignores-standalone-fee-transaction",
+      "run_id": "2026-07-27_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "session_date": "2026-07-29",
+      "observed_at": "2026-08-18T06:41:00Z",
+      "surface": "data",
+      "locator": "GET /api/tax/report, /tax, /wash-sales",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "Realised gain/loss ignores a sale's standalone FEE ledger row, understating every loss by the fee",
+      "observed": "Sold 1 QQQ for gross $675.17, cost basis $676.57, with a separate $0.02 Fee row in the ledger (Activity page: 'Sell QQQ ... $675.17' then a distinct 'Fee ... -$0.02' row, same import, consecutive rows). My own fill record and the paper broker's settled_cash agree the net economic result was $675.15, a $1.42 loss. /tax and GET /api/tax/report both report proceeds=675.17, cost_basis=676.57, fees=0.00, gain_loss=-1.40, fees_unknown=false, disallowed_loss=0.00 -- Form 8949's Adjustment column is also $0.00. The wash-sales panel's expanded QQQ row repeats the same $1.40, not $1.42. The $0.02 fee is not subtracted anywhere in the tax computation and the API explicitly asserts fees_unknown=false, i.e. it is confident there is no fee when there is one.",
+      "expected": "Disposal.fees should reflect the fee actually charged on the sale. app/core/lots.py's Disposal.gain_loss property is `proceeds - fees - cost_basis` and clearly designed to net a fee -- but it reads fees only from the SELL transaction's own `.fees` field (`per_share_fees = txn.fees / qty`), never looking up a standalone FEE-action row tied to the same sale. Robinhood and SoFi's real exports carry standalone FEE/EMRF/transfer-fee rows too (already established by the confirmed cash-settled-unsettled-split-fee-misattributed fix), so this is not a harness-only artifact.",
+      "why_it_matters": "Form 8949 is the document filed with the IRS. A gain/loss column that silently drops SEC/TAF fees understates every loss (or overstates every gain) that has a standalone fee row, by exactly the fee each time -- small per trade, systematic across a real ledger with hundreds of sales, and it is asserted as certain (fees_unknown=false) rather than flagged.",
+      "repro": [
+        "Sell a position, generating a SELL row plus a separate FEE row in the ledger (see Activity page)",
+        "GET /api/tax/report?year=<year> -- read the matching gains.rows[].fees field: 0.00",
+        "Compare to the SELL fill's own fee and cash_delta, or the portfolio's unsettled-cash figure, which does account for the fee correctly"
+      ],
+      "evidence": [
+        "GET /api/tax/report?year=2026: gains.rows[0] = {proceeds: 675.17, cost_basis: 676.57, fees: 0.00, gain_loss: -1.40, fees_unknown: false}",
+        "Activity page ledger rows: 'Sell QQQ 1 $675.17 -> $675.17' then 'Fee -- -- -$0.02', same import ab62388f",
+        "Paper broker fill record: gross=675.17, fees=0.02, cash_delta=675.15 (true net loss -1.42)"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

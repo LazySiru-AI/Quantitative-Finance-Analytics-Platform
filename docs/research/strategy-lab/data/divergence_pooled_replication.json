@@ -1,0 +1,620 @@
+{
+  "family": "divergence-pooled-replication",
+  "pre_declared": true,
+  "note": "Pools independent triggers across the 13-symbol replication universe into one binomial cell per idea, separate BH ledger (m=4). Buys event count, not independence: the 13 symbols overlap heavily in calendar time and several are correlated sector/factor exposures, so this is closer to a handful of independent looks than to 13. See the report for what this pooling does and does not establish.",
+  "symbols_declared": [
+    "DIA",
+    "SOXX",
+    "IGV",
+    "XLF",
+    "XLE",
+    "XLP",
+    "XLU",
+    "XLY",
+    "XLI",
+    "XLB",
+    "XLC",
+    "TLT",
+    "GLD"
+  ],
+  "ideas_declared": [
+    "bullish_rsi_divergence",
+    "bullish_macd_divergence",
+    "bearish_rsi_divergence",
+    "bearish_macd_divergence"
+  ],
+  "screen_alpha": 0.1,
+  "small_sample_threshold": 30,
+  "cells": [
+    {
+      "idea": "bullish_rsi_divergence",
+      "horizon": 5,
+      "direction": "up",
+      "n_symbols": 13,
+      "pooled_successes": 903,
+      "pooled_n_independent": 1614,
+      "pooled_hit_rate": 0.5594795539033457,
+      "pooled_baseline_hit_rate": 0.5427754061225409,
+      "edge": 0.016704147780804757,
+      "p_value": 0.18545525111347602,
+      "all_guards_passed": true,
+      "q_value": 0.2058988068198396,
+      "verdict": "inconclusive"
+    },
+    {
+      "idea": "bullish_macd_divergence",
+      "horizon": 5,
+      "direction": "up",
+      "n_symbols": 13,
+      "pooled_successes": 442,
+      "pooled_n_independent": 776,
+      "pooled_hit_rate": 0.5695876288659794,
+      "pooled_baseline_hit_rate": 0.5423713151128556,
+      "edge": 0.027216313753123722,
+      "p_value": 0.1303373447419056,
+      "all_guards_passed": true,
+      "q_value": 0.2058988068198396,
+      "verdict": "inconclusive"
+    },
+    {
+      "idea": "bearish_rsi_divergence",
+      "horizon": 5,
+      "direction": "down",
+      "n_symbols": 13,
+      "pooled_successes": 1649,
+      "pooled_n_independent": 3088,
+      "pooled_hit_rate": 0.5340025906735751,
+      "pooled_baseline_hit_rate": 0.5454510694605907,
+      "edge": -0.011448478787015604,
+      "p_value": 0.2058988068198396,
+      "all_guards_passed": true,
+      "q_value": 0.2058988068198396,
+      "verdict": "inconclusive"
+    },
+    {
+      "idea": "bearish_macd_divergence",
+      "horizon": 5,
+      "direction": "down",
+      "n_symbols": 13,
+      "pooled_successes": 1086,
+      "pooled_n_independent": 2108,
+      "pooled_hit_rate": 0.5151802656546489,
+      "pooled_baseline_hit_rate": 0.5463843291994869,
+      "edge": -0.031204063544837957,
+      "p_value": 0.004154866297808934,
+      "all_guards_passed": true,
+      "q_value": 0.016619465191235736,
+      "verdict": "survived"
+    }
+  ],
+  "per_idea_detail": {
+    "bullish_rsi_divergence": [
+      {
+        "symbol": "DIA",
+        "guard_status": "passed",
+        "triggers": 239,
+        "n_raw": 239,
+        "n_independent": 112,
+        "hit_rate": 0.5815899581589958,
+        "baseline_hit_rate": 0.5636287274254514,
+        "median_forward": 0.0055490654205607726
+      },
+      {
+        "symbol": "SOXX",
+        "guard_status": "passed",
+        "triggers": 325,
+        "n_raw": 325,
+        "n_independent": 134,
+        "hit_rate": 0.5230769230769231,
+        "baseline_hit_rate": 0.546365516144425,
+        "median_forward": 0.0015455714063983272
+      },
+      {
+        "symbol": "IGV",
+        "guard_status": "passed",
+        "triggers": 297,
+        "n_raw": 297,
+        "n_independent": 118,
+        "hit_rate": 0.5420875420875421,
+        "baseline_hit_rate": 0.5540325151418553,
+        "median_forward": 0.005581434547998976
+      },
+      {
+        "symbol": "XLF",
+        "guard_status": "passed",
+        "triggers": 321,
+        "n_raw": 321,
+        "n_independent": 153,
+        "hit_rate": 0.5171339563862928,
+        "baseline_hit_rate": 0.5358534122060309,
+        "median_forward": 0.0016465262413589699
+      },
+      {
+        "symbol": "XLE",
+        "guard_status": "passed",
+        "triggers": 339,
+        "n_raw": 339,
+        "n_independent": 155,
+        "hit_rate": 0.5870206489675516,
+        "baseline_hit_rate": 0.5377617328519856,
+        "median_forward": 0.0056918737948170595
+      },
+      {
+        "symbol": "XLP",
+        "guard_status": "passed",
+        "triggers": 235,
+        "n_raw": 235,
+        "n_independent": 122,
+        "hit_rate": 0.6170212765957447,
+        "baseline_hit_rate": 0.5427084838849545,
+        "median_forward": 0.006176142101768978
+      },
+      {
+        "symbol": "XLU",
+        "guard_status": "passed",
+        "triggers": 314,
+        "n_raw": 314,
+        "n_independent": 130,
+        "hit_rate": 0.5509554140127388,
+        "baseline_hit_rate": 0.5366064981949459,
+        "median_forward": 0.0020663693345535084
+      },
+      {
+        "symbol": "XLY",
+        "guard_status": "passed",
+        "triggers": 265,
+        "n_raw": 265,
+        "n_independent": 127,
+        "hit_rate": 0.5660377358490566,
+        "baseline_hit_rate": 0.5473577822697083,
+        "median_forward": 0.007904089923961521
+      },
+      {
+        "symbol": "XLI",
+        "guard_status": "passed",
+        "triggers": 231,
+        "n_raw": 231,
+        "n_independent": 120,
+        "hit_rate": 0.5974025974025974,
+        "baseline_hit_rate": 0.5524566473988439,
+        "median_forward": 0.0069081202837548705
+      },
+      {
+        "symbol": "XLB",
+        "guard_status": "passed",
+        "triggers": 281,
+        "n_raw": 281,
+        "n_independent": 129,
+        "hit_rate": 0.6156583629893239,
+        "baseline_hit_rate": 0.5411424439624006,
+        "median_forward": 0.00917431192660545
+      },
+      {
+        "symbol": "XLC",
+        "guard_status": "passed",
+        "triggers": 95,
+        "n_raw": 95,
+        "n_independent": 41,
+        "hit_rate": 0.5789473684210527,
+        "baseline_hit_rate": 0.5623145400593472,
+        "median_forward": 0.003943871503164997
+      },
+      {
+        "symbol": "TLT",
+        "guard_status": "passed",
+        "triggers": 471,
+        "n_raw": 471,
+        "n_independent": 182,
+        "hit_rate": 0.5010615711252654,
+        "baseline_hit_rate": 0.5210028225136975,
+        "median_forward": 0.00010668945312497513
+      },
+      {
+        "symbol": "GLD",
+        "guard_status": "passed",
+        "triggers": 216,
+        "n_raw": 216,
+        "n_independent": 91,
+        "hit_rate": 0.5416666666666666,
+        "baseline_hit_rate": 0.5442014335600074,
+        "median_forward": 0.0021403499508927393
+      }
+    ],
+    "bullish_macd_divergence": [
+      {
+        "symbol": "DIA",
+        "guard_status": "passed",
+        "triggers": 95,
+        "n_raw": 95,
+        "n_independent": 48,
+        "hit_rate": 0.631578947368421,
+        "baseline_hit_rate": 0.5636287274254514,
+        "median_forward": 0.012144549763033252
+      },
+      {
+        "symbol": "SOXX",
+        "guard_status": "passed",
+        "triggers": 171,
+        "n_raw": 171,
+        "n_independent": 66,
+        "hit_rate": 0.543859649122807,
+        "baseline_hit_rate": 0.546365516144425,
+        "median_forward": 0.0031071224078969006
+      },
+      {
+        "symbol": "IGV",
+        "guard_status": "passed",
+        "triggers": 150,
+        "n_raw": 150,
+        "n_independent": 62,
+        "hit_rate": 0.62,
+        "baseline_hit_rate": 0.5540325151418553,
+        "median_forward": 0.012071375899674552
+      },
+      {
+        "symbol": "XLF",
+        "guard_status": "passed",
+        "triggers": 162,
+        "n_raw": 162,
+        "n_independent": 76,
+        "hit_rate": 0.6604938271604939,
+        "baseline_hit_rate": 0.5354615051278347,
+        "median_forward": 0.0154043693378344
+      },
+      {
+        "symbol": "XLE",
+        "guard_status": "passed",
+        "triggers": 185,
+        "n_raw": 185,
+        "n_independent": 82,
+        "hit_rate": 0.5783783783783784,
+        "baseline_hit_rate": 0.5373716929304612,
+        "median_forward": 0.005152340240670128
+      },
+      {
+        "symbol": "XLP",
+        "guard_status": "passed",
+        "triggers": 146,
+        "n_raw": 146,
+        "n_independent": 66,
+        "hit_rate": 0.5616438356164384,
+        "baseline_hit_rate": 0.5427084838849545,
+        "median_forward": 0.0023467555631532244
+      },
+      {
+        "symbol": "XLU",
+        "guard_status": "passed",
+        "triggers": 161,
+        "n_raw": 161,
+        "n_independent": 64,
+        "hit_rate": 0.5838509316770186,
+        "baseline_hit_rate": 0.5368603642671292,
+        "median_forward": 0.006677795873589076
+      },
+      {
+        "symbol": "XLY",
+        "guard_status": "passed",
+        "triggers": 72,
+        "n_raw": 72,
+        "n_independent": 41,
+        "hit_rate": 0.4861111111111111,
+        "baseline_hit_rate": 0.5473577822697083,
+        "median_forward": -5.595913574507616e-05
+      },
+      {
+        "symbol": "XLI",
+        "guard_status": "passed",
+        "triggers": 118,
+        "n_raw": 118,
+        "n_independent": 55,
+        "hit_rate": 0.5932203389830508,
+        "baseline_hit_rate": 0.5524566473988439,
+        "median_forward": 0.008622042122426343
+      },
+      {
+        "symbol": "XLB",
+        "guard_status": "passed",
+        "triggers": 124,
+        "n_raw": 124,
+        "n_independent": 57,
+        "hit_rate": 0.5564516129032258,
+        "baseline_hit_rate": 0.5411424439624006,
+        "median_forward": 0.004722215470299496
+      },
+      {
+        "symbol": "XLC",
+        "guard_status": "passed",
+        "triggers": 40,
+        "n_raw": 40,
+        "n_independent": 19,
+        "hit_rate": 0.65,
+        "baseline_hit_rate": 0.5623145400593472,
+        "median_forward": 0.015618471336323103
+      },
+      {
+        "symbol": "TLT",
+        "guard_status": "passed",
+        "triggers": 250,
+        "n_raw": 250,
+        "n_independent": 89,
+        "hit_rate": 0.484,
+        "baseline_hit_rate": 0.5210028225136975,
+        "median_forward": -0.0002432520651971526
+      },
+      {
+        "symbol": "GLD",
+        "guard_status": "passed",
+        "triggers": 124,
+        "n_raw": 124,
+        "n_independent": 51,
+        "hit_rate": 0.532258064516129,
+        "baseline_hit_rate": 0.5441826215022091,
+        "median_forward": 0.0021403499508927393
+      }
+    ],
+    "bearish_rsi_divergence": [
+      {
+        "symbol": "DIA",
+        "guard_status": "passed",
+        "triggers": 936,
+        "n_raw": 936,
+        "n_independent": 330,
+        "hit_rate": 0.5502136752136753,
+        "baseline_hit_rate": 0.5631925936316454,
+        "median_forward": 0.002044004827778001
+      },
+      {
+        "symbol": "SOXX",
+        "guard_status": "passed",
+        "triggers": 691,
+        "n_raw": 691,
+        "n_independent": 260,
+        "hit_rate": 0.5672937771345875,
+        "baseline_hit_rate": 0.5467282279891736,
+        "median_forward": 0.005715570361999767
+      },
+      {
+        "symbol": "IGV",
+        "guard_status": "passed",
+        "triggers": 761,
+        "n_raw": 761,
+        "n_independent": 270,
+        "hit_rate": 0.5505913272010512,
+        "baseline_hit_rate": 0.553733481929629,
+        "median_forward": 0.003920324371879724
+      },
+      {
+        "symbol": "XLF",
+        "guard_status": "passed",
+        "triggers": 685,
+        "n_raw": 683,
+        "n_independent": 254,
+        "hit_rate": 0.5065885797950219,
+        "baseline_hit_rate": 0.535863761004474,
+        "median_forward": 0.0003957352077832432
+      },
+      {
+        "symbol": "XLE",
+        "guard_status": "passed",
+        "triggers": 599,
+        "n_raw": 598,
+        "n_independent": 231,
+        "hit_rate": 0.4882943143812709,
+        "baseline_hit_rate": 0.53745129167268,
+        "median_forward": -0.0013275902153073171
+      },
+      {
+        "symbol": "XLP",
+        "guard_status": "passed",
+        "triggers": 627,
+        "n_raw": 627,
+        "n_independent": 257,
+        "hit_rate": 0.5406698564593302,
+        "baseline_hit_rate": 0.5431009545849002,
+        "median_forward": 0.0012718285280883812
+      },
+      {
+        "symbol": "XLU",
+        "guard_status": "passed",
+        "triggers": 661,
+        "n_raw": 661,
+        "n_independent": 253,
+        "hit_rate": 0.5143721633888049,
+        "baseline_hit_rate": 0.5364095169430425,
+        "median_forward": 0.0009025477392323733
+      },
+      {
+        "symbol": "XLY",
+        "guard_status": "passed",
+        "triggers": 725,
+        "n_raw": 725,
+        "n_independent": 275,
+        "hit_rate": 0.5558620689655173,
+        "baseline_hit_rate": 0.5475812274368231,
+        "median_forward": 0.002425200747674605
+      },
+      {
+        "symbol": "XLI",
+        "guard_status": "passed",
+        "triggers": 724,
+        "n_raw": 721,
+        "n_independent": 270,
+        "hit_rate": 0.5589459084604715,
+        "baseline_hit_rate": 0.5523012552301255,
+        "median_forward": 0.002254248709314899
+      },
+      {
+        "symbol": "XLB",
+        "guard_status": "passed",
+        "triggers": 617,
+        "n_raw": 614,
+        "n_independent": 244,
+        "hit_rate": 0.48534201954397393,
+        "baseline_hit_rate": 0.5406926406926407,
+        "median_forward": -0.0004392552225112589
+      },
+      {
+        "symbol": "XLC",
+        "guard_status": "passed",
+        "triggers": 284,
+        "n_raw": 284,
+        "n_independent": 97,
+        "hit_rate": 0.602112676056338,
+        "baseline_hit_rate": 0.5633663366336633,
+        "median_forward": 0.00575902781578852
+      },
+      {
+        "symbol": "TLT",
+        "guard_status": "passed",
+        "triggers": 391,
+        "n_raw": 391,
+        "n_independent": 170,
+        "hit_rate": 0.5115089514066496,
+        "baseline_hit_rate": 0.521341969772463,
+        "median_forward": 0.00045720558354145346
+      },
+      {
+        "symbol": "GLD",
+        "guard_status": "passed",
+        "triggers": 471,
+        "n_raw": 471,
+        "n_independent": 177,
+        "hit_rate": 0.524416135881104,
+        "baseline_hit_rate": 0.5445362718089991,
+        "median_forward": 0.001632095207670714
+      }
+    ],
+    "bearish_macd_divergence": [
+      {
+        "symbol": "DIA",
+        "guard_status": "passed",
+        "triggers": 837,
+        "n_raw": 837,
+        "n_independent": 264,
+        "hit_rate": 0.5471923536439666,
+        "baseline_hit_rate": 0.5631925936316454,
+        "median_forward": 0.0015947331897367967
+      },
+      {
+        "symbol": "SOXX",
+        "guard_status": "passed",
+        "triggers": 516,
+        "n_raw": 516,
+        "n_independent": 181,
+        "hit_rate": 0.5251937984496124,
+        "baseline_hit_rate": 0.5467282279891736,
+        "median_forward": 0.0019038846821687327
+      },
+      {
+        "symbol": "IGV",
+        "guard_status": "passed",
+        "triggers": 638,
+        "n_raw": 638,
+        "n_independent": 199,
+        "hit_rate": 0.5266457680250783,
+        "baseline_hit_rate": 0.553733481929629,
+        "median_forward": 0.0026680305074993083
+      },
+      {
+        "symbol": "XLF",
+        "guard_status": "passed",
+        "triggers": 601,
+        "n_raw": 596,
+        "n_independent": 204,
+        "hit_rate": 0.4949664429530201,
+        "baseline_hit_rate": 0.535863761004474,
+        "median_forward": -0.00014125913684148728
+      },
+      {
+        "symbol": "XLE",
+        "guard_status": "passed",
+        "triggers": 425,
+        "n_raw": 424,
+        "n_independent": 150,
+        "hit_rate": 0.5094339622641509,
+        "baseline_hit_rate": 0.53745129167268,
+        "median_forward": 0.0011315544200737326
+      },
+      {
+        "symbol": "XLP",
+        "guard_status": "passed",
+        "triggers": 461,
+        "n_raw": 461,
+        "n_independent": 161,
+        "hit_rate": 0.5097613882863341,
+        "baseline_hit_rate": 0.5431009545849002,
+        "median_forward": 0.0006840101887903849
+      },
+      {
+        "symbol": "XLU",
+        "guard_status": "passed",
+        "triggers": 396,
+        "n_raw": 396,
+        "n_independent": 153,
+        "hit_rate": 0.43434343434343436,
+        "baseline_hit_rate": 0.5364095169430425,
+        "median_forward": -0.0024984974262171056
+      },
+      {
+        "symbol": "XLY",
+        "guard_status": "passed",
+        "triggers": 616,
+        "n_raw": 616,
+        "n_independent": 210,
+        "hit_rate": 0.5243506493506493,
+        "baseline_hit_rate": 0.5475812274368231,
+        "median_forward": 0.0009299554848614111
+      },
+      {
+        "symbol": "XLI",
+        "guard_status": "passed",
+        "triggers": 538,
+        "n_raw": 538,
+        "n_independent": 182,
+        "hit_rate": 0.5037174721189591,
+        "baseline_hit_rate": 0.5523012552301255,
+        "median_forward": 8.810446228246782e-05
+      },
+      {
+        "symbol": "XLB",
+        "guard_status": "passed",
+        "triggers": 411,
+        "n_raw": 411,
+        "n_independent": 155,
+        "hit_rate": 0.48175182481751827,
+        "baseline_hit_rate": 0.5410830324909748,
+        "median_forward": -0.0003618027895319065
+      },
+      {
+        "symbol": "XLC",
+        "guard_status": "passed",
+        "triggers": 226,
+        "n_raw": 226,
+        "n_independent": 68,
+        "hit_rate": 0.584070796460177,
+        "baseline_hit_rate": 0.5639246778989098,
+        "median_forward": 0.004876489650939009
+      },
+      {
+        "symbol": "TLT",
+        "guard_status": "passed",
+        "triggers": 180,
+        "n_raw": 180,
+        "n_independent": 77,
+        "hit_rate": 0.6444444444444445,
+        "baseline_hit_rate": 0.521341969772463,
+        "median_forward": 0.004736199680543396
+      },
+      {
+        "symbol": "GLD",
+        "guard_status": "passed",
+        "triggers": 300,
+        "n_raw": 300,
+        "n_independent": 104,
+        "hit_rate": 0.48333333333333334,
+        "baseline_hit_rate": 0.5445362718089991,
+        "median_forward": -0.0006061302869968532
+      }
+    ]
+  }
+}

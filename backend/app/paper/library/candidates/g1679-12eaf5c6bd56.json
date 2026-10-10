@@ -1,0 +1,26 @@
+{
+  "agent_id": "g1679-12eaf5c6bd56",
+  "display_name": "auto g1679 · breakout (roth)",
+  "discipline": "breakout",
+  "purpose": "roth",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 13/23-day EMA crossover trigger inside a 119-day SMA regime filter on INTU, LRCX, CSCO, AAPL, ADBE, AMAT, KLAC, CRM, with a 7% stop and a 102-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "INTU",
+    "LRCX",
+    "CSCO",
+    "AAPL",
+    "ADBE",
+    "AMAT",
+    "KLAC",
+    "CRM"
+  ],
+  "entry": "close > sma(119) and ema(13) crosses_above ema(23)",
+  "exit": "ema(13) crosses_below ema(23)",
+  "stop_loss_pct": "0.07",
+  "take_profit_pct": null,
+  "max_hold_days": 102,
+  "max_positions": 3,
+  "position_pct": "0.3",
+  "rank_by": "rsi(14)",
+  "designed_through": "2026-02-13"
+}

@@ -1,0 +1,143 @@
+{
+  "run_id": "2026-08-10_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-14T20:28:27.714098+00:00",
+  "window": {
+    "first_session": "2026-08-10",
+    "last_session": "2026-08-13",
+    "sessions": 4
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "10098.09",
+    "pnl": "98.09",
+    "return_pct_of_1": "0.009809",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "0.006274",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 8,
+    "buys": 8,
+    "sells": 0,
+    "gross_traded": "9016.86",
+    "total_fees": "0.00",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-08-13",
+    "cash": "983.14",
+    "settled_cash": "983.14",
+    "positions_market_value": "9114.95",
+    "equity": "10098.09",
+    "return_since_inception_pct_of_1": "0.009809",
+    "positions": [
+      {
+        "symbol": "IWM",
+        "quantity": "3",
+        "mark": "303.5",
+        "market_value": "910.50",
+        "weight_pct_of_1": "0.090166"
+      },
+      {
+        "symbol": "QQQ",
+        "quantity": "2",
+        "mark": "732.07",
+        "market_value": "1464.14",
+        "weight_pct_of_1": "0.144992"
+      },
+      {
+        "symbol": "SPY",
+        "quantity": "2",
+        "mark": "777.88",
+        "market_value": "1555.76",
+        "weight_pct_of_1": "0.154065"
+      },
+      {
+        "symbol": "XLE",
+        "quantity": "22",
+        "mark": "61.06",
+        "market_value": "1343.32",
+        "weight_pct_of_1": "0.133027"
+      },
+      {
+        "symbol": "XLF",
+        "quantity": "17",
+        "mark": "58.26",
+        "market_value": "990.42",
+        "weight_pct_of_1": "0.098080"
+      },
+      {
+        "symbol": "XLK",
+        "quantity": "7",
+        "mark": "190.77",
+        "market_value": "1335.39",
+        "weight_pct_of_1": "0.132242"
+      },
+      {
+        "symbol": "XLV",
+        "quantity": "9",
+        "mark": "168.38",
+        "market_value": "1515.42",
+        "weight_pct_of_1": "0.150070"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 7,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-4.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "f73db8b1aba4a9aedd3a2f315cd4e078943ccedd",
+        "adapter": "robinhood",
+        "row_count": 7,
+        "usable_row_count": 7,
+        "inserted": 0,
+        "duplicates": 7,
+        "conflicts": [],
+        "instruments": 6,
+        "skipped": {},
+        "ledger_fingerprint": "5a05c2eedf2959c0d5c541dc6c98f0f507506d899f6b92f20892aa0675a8049d",
+        "ledger_txn_count": 9
+      },
+      {
+        "import_id": "e33d9abba2697e565139fc62f9cd5b3010fdab53",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "5a05c2eedf2959c0d5c541dc6c98f0f507506d899f6b92f20892aa0675a8049d",
+        "ledger_txn_count": 9
+      },
+      {
+        "import_id": "c470ca44e4a2ae7023f0addc63edd6e2c9e8e3d0",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "5a05c2eedf2959c0d5c541dc6c98f0f507506d899f6b92f20892aa0675a8049d",
+        "ledger_txn_count": 9
+      }
+    ],
+    "fingerprint_before_replay": "5a05c2eedf2959c0d5c541dc6c98f0f507506d899f6b92f20892aa0675a8049d",
+    "fingerprint_after_replay": "5a05c2eedf2959c0d5c541dc6c98f0f507506d899f6b92f20892aa0675a8049d",
+    "ledger_txn_count": 9,
+    "idempotent": true
+  },
+  "findings_recorded": 17
+}

@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "order_id": "s4-qqq-sell",
+      "session": 4,
+      "decided_on": "2026-06-10",
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "Full exit. QQQ is the weakest of the four watchlist names and deteriorating fastest: 5d -6.79% as of 2026-06-10 versus -3.82% (SPY), -8.16% (GLD, already broken) and +2.67% (XLF, still positive). GLD's 20d move worsened to -13.48%, which reads as broad risk-off rather than a rotation into safety, so I am trimming the weakest long ahead of its stated stop (693.69 close still above the 670.00 stop, but the rate of deterioration is the signal, not just the level).",
+      "invalidation": "n/a -- closing the position",
+      "stop_level": "n/a",
+      "regime": "risk-off",
+      "conviction": 2,
+      "evidence": [
+        "close=693.69, change_5d=-6.79%, change_20d=-1.92% via brief-s4 watchlist.QQQ (as of 2026-06-10)",
+        "GLD change_20d=-13.48%, change_5d=-8.16% via brief-s4 watchlist.GLD (as of 2026-06-10) -- broad risk-off cross-check"
+      ]
+    }
+  ]
+}

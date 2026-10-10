@@ -1,0 +1,47 @@
+[
+  {
+    "order_id": "s5-1",
+    "session": 5,
+    "decided_on": "2026-06-25",
+    "symbol": "TLT",
+    "side": "sell",
+    "quantity": "13",
+    "order_type": "market_on_open",
+    "thesis": "Closing the full TLT lot at a small loss (cost basis 87.62, session brief mark 87.35, 1D change -0.03% -- the reclaim of sma20/sma50 stalled the day after I bought it). Trimming the whole position rather than averaging down on a one-day-old thesis that already failed to follow through.",
+    "invalidation": "n/a -- this is the exit.",
+    "stop_level": "n/a",
+    "regime": "transitional",
+    "conviction": 2,
+    "evidence": ["TLT close 87.35 vs cost basis 87.62, 1D change -0.03% via session brief watchlist"]
+  },
+  {
+    "order_id": "s5-2",
+    "session": 5,
+    "decided_on": "2026-06-25",
+    "symbol": "TLT",
+    "side": "buy",
+    "quantity": "6",
+    "order_type": "market_on_open",
+    "thesis": "Re-entering TLT at roughly half the size I sold. Rates still look like they may be topping and I don't want zero exposure into the weekend, but I want less of it than the failed reclaim earned -- same day as s5-1's sale, which I know will create a wash sale on the loss just realized; recording that deliberately to re-test the tax-page disclosure of a repurchase-safe date and a tolled holding period on a lot I plan to keep open past the end of this run.",
+    "invalidation": "A close back below the prior sma50 (~85.6) invalidates the re-entry.",
+    "stop_level": "85.00",
+    "regime": "transitional",
+    "conviction": 2,
+    "evidence": ["Same-session repurchase of a symbol just sold at a loss (s5-1), deliberately inside the wash-sale window"]
+  },
+  {
+    "order_id": "s5-3",
+    "session": 5,
+    "decided_on": "2026-06-25",
+    "symbol": "XLV",
+    "side": "buy",
+    "quantity": "45",
+    "order_type": "market_on_open",
+    "thesis": "Deliberate mandate-boundary probe, not a real trade decision: sized to exceed settled cash while same-day TLT sale proceeds sit unsettled, to re-test that insufficient_cash is enforced against settled (not total) cash and that the rejection message quotes the same settled figure the portfolio page shows (defect #2's free cross-check).",
+    "invalidation": "n/a -- probe order, not intended to fill.",
+    "stop_level": null,
+    "regime": "transitional",
+    "conviction": 1,
+    "evidence": ["XLV close 155.63 via session brief -- 45 shares is roughly $7,003, sized to exceed settled cash while this session's TLT sale proceeds are still unsettled"]
+  }
+]

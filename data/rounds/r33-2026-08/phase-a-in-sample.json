@@ -1,0 +1,110 @@
+{
+  "in_sample": {
+    "start": "2004-12-28",
+    "end": "2017-12-29",
+    "sessions": 3276,
+    "grades": [
+      {
+        "selector_id": "mom12_1_hysteresis",
+        "n_dates": 3276,
+        "n_scored": 3199,
+        "mean_ic": 0.03983816005419827,
+        "bootstrap_p": 0.0158,
+        "bh_q": 0.1264,
+        "hit_rate": 0.57049077836824,
+        "binomial_p": 1.5970506266504612e-15,
+        "mean_churn": 0.037037037037037035,
+        "implied_dollars_per_day": 0.13064713064713065
+      },
+      {
+        "selector_id": "breakout_atr",
+        "n_dates": 3276,
+        "n_scored": 1033,
+        "mean_ic": 0.02774105661751767,
+        "bootstrap_p": 0.0777,
+        "bh_q": 0.21423999999999999,
+        "hit_rate": 0.5575992255566312,
+        "binomial_p": 0.00023774256464368734,
+        "mean_churn": 0.04365079365079365,
+        "implied_dollars_per_day": 0.09645909645909646
+      },
+      {
+        "selector_id": "meanrev_rsi",
+        "n_dates": 3276,
+        "n_scored": 654,
+        "mean_ic": 0.039214892963428075,
+        "bootstrap_p": 0.1074,
+        "bh_q": 0.21423999999999999,
+        "hit_rate": 0.5688073394495413,
+        "binomial_p": 0.0004918871795299257,
+        "mean_churn": 0.03968253968253968,
+        "implied_dollars_per_day": 0.10622710622710622
+      },
+      {
+        "selector_id": "trend_sticky",
+        "n_dates": 3276,
+        "n_scored": 3276,
+        "mean_ic": 0.020066527041326533,
+        "bootstrap_p": 0.1339,
+        "bh_q": 0.21423999999999999,
+        "hit_rate": 0.5405982905982906,
+        "binomial_p": 3.615605361888611e-06,
+        "mean_churn": 0.06715506715506715,
+        "implied_dollars_per_day": 0.16117216117216118
+      },
+      {
+        "selector_id": "signal_density",
+        "n_dates": 3276,
+        "n_scored": 1654,
+        "mean_ic": 0.00544159074103814,
+        "bootstrap_p": 0.5301,
+        "bh_q": 0.7068,
+        "hit_rate": 0.5096735187424426,
+        "binomial_p": 0.44592408825222346,
+        "mean_churn": 0.7417582417582418,
+        "implied_dollars_per_day": 2.336996336996337
+      },
+      {
+        "selector_id": "divers_mom6",
+        "n_dates": 3276,
+        "n_scored": 3276,
+        "mean_ic": 0.021919022588971344,
+        "bootstrap_p": 0.1198,
+        "bh_q": 0.21423999999999999,
+        "hit_rate": 0.5375457875457875,
+        "binomial_p": 1.8489952076739585e-05,
+        "mean_churn": 0.20177045177045178,
+        "implied_dollars_per_day": 1.2124542124542124
+      },
+      {
+        "selector_id": "control_card_universe",
+        "n_dates": 3276,
+        "n_scored": 0,
+        "mean_ic": null,
+        "bootstrap_p": null,
+        "bh_q": null,
+        "hit_rate": 0.0,
+        "binomial_p": 0.0,
+        "mean_churn": 0.07081807081807082,
+        "implied_dollars_per_day": 1.1477411477411477
+      },
+      {
+        "selector_id": "control_week_rotation",
+        "n_dates": 3276,
+        "n_scored": 3276,
+        "mean_ic": 0.004960604140332621,
+        "bootstrap_p": 0.7104,
+        "bh_q": 0.8118857142857143,
+        "hit_rate": 0.4905372405372405,
+        "binomial_p": 0.2865321818310741,
+        "mean_churn": 0.1454008954008954,
+        "implied_dollars_per_day": 0.8742368742368742
+      }
+    ]
+  },
+  "gate": {
+    "promoted_selector": "mom12_1_hysteresis",
+    "branch": "2",
+    "why": "6 entrant(s) not worse than either control; lowest mean churn wins; winner mean churn 0.037."
+  }
+}

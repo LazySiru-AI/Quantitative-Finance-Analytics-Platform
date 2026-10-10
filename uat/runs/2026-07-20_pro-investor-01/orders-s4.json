@@ -1,0 +1,26 @@
+{
+  "orders": [
+    {
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": 3,
+      "thesis": "Closing out. QQQ has stayed below both sma20 and sma50 for every session since I first evaluated it (session 1 through 4) despite bounces; the reversal I'd want to see (a close back above sma20) never happened. No confirmation, no reason to keep holding.",
+      "invalidation": "n/a -- exit",
+      "stop_level": "700.00",
+      "regime": "risk-off in this name specifically",
+      "conviction": 3,
+      "evidence": "close 705.35 < sma20 714.25 < sma50 719.17, unchanged relationship across 4 sessions; change_20d -1.16%"
+    },
+    {
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": 10,
+      "thesis": "Continuation add to the book's strongest trend: still above all three MAs, 20-day change now +8.70% and accelerating each session I've checked it.",
+      "invalidation": "A close below sma50 (56.66) ends the continuation thesis.",
+      "stop_level": "56.50",
+      "regime": "risk-on within energy",
+      "conviction": 4,
+      "evidence": "close 59.20 > sma20 55.40 > sma50 56.66 > sma200 52.09; change_5d +4.78%; change_20d +8.70%"
+    }
+  ]
+}

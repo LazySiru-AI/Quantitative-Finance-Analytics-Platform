@@ -1,0 +1,42 @@
+"Activity Date","Process Date","Settle Date","Instrument","Description","Trans Code","Quantity","Price","Amount"
+"6/12/2026","6/12/2026","6/15/2026","ZQXA","Zephyr Quantum Analytics
+CUSIP: 111AAA101","Buy","10","$12.50","($125.00)"
+"6/12/2026","6/12/2026","6/15/2026","ZQXA","Zephyr Quantum Analytics
+CUSIP: 111AAA101","Buy","10","$12.50","($125.00)"
+"6/11/2026","6/11/2026","6/12/2026","ZQXA","Zephyr Quantum Analytics
+CUSIP: 111AAA101","Sell","5","$970.38","$4,851.90"
+"6/10/2026","6/10/2026","6/11/2026","VLTR","
+CUSIP: 222BBB202","Sell","2","$50.00","$100.00"
+"6/9/2026","6/9/2026","6/9/2026","ZQXA","Cash Div: R/D 2026-06-01 P/D 2026-06-09 - 10 shares at 0.25","CDIV","","","$2.50"
+"6/8/2026","6/8/2026","6/8/2026","ZQXA","Stock Lending","SLIP","","","$0.03"
+"6/7/2026","6/7/2026","6/7/2026","","ACAT In Bonus Interest Payment","ABIP","","","$0.02"
+"6/6/2026","6/6/2026","6/6/2026","","Interest Payment","INT","","","$1.11"
+"6/5/2026","6/5/2026","6/6/2026","","Current Year Contribution","CFIR","","","$2,000.00"
+"6/5/2026","6/5/2026","6/5/2026","","Interest on Contribution (IRA Match)","MTCH","","","$60.00"
+"6/4/2026","6/4/2026","6/4/2026","","ACAT OUT FEE A/C 111111111","FEE","","","($100.00)"
+"6/3/2026","6/3/2026","6/3/2026","","Gold Subscription Fee","GOLD","","","($5.00)"
+"6/2/2026","6/2/2026","6/2/2026","","Cash reward","MISC","","","$5.84"
+"6/1/2026","6/1/2026","6/1/2026","","Early IRA Match Removal Fee as of 2026-05-31","EMRF","","","($450.00)"
+"5/29/2026","5/29/2026","5/30/2026","","ACH Deposit","ACH","","","$1,000.00"
+"5/28/2026","5/28/2026","5/29/2026","","ACH Withdrawal","ACH","","","($1,000.00)"
+"5/27/2026","5/27/2026","5/27/2026","","Instant bank transfer - account ending in 0000","RTP","","","$250.00"
+"5/26/2026","5/26/2026","5/26/2026","MRDN","Meridian Broad Horizon ETF
+CUSIP: 333CCC303","ITRF","30S","",""
+"5/26/2026","5/26/2026","5/26/2026","","Transfer from Brokerage to Brokerage","ITRF","","","($66.44)"
+"4/6/2026","4/6/2026","4/6/2026","VLTR","Voltaire Robotics
+CUSIP: 222BBB202","ACATI","20","",""
+"4/6/2026","4/6/2026","4/6/2026","ZQXA","Zephyr Quantum Analytics
+CUSIP: 111AAA101","ACATI","3","",""
+"4/6/2026","4/6/2026","4/6/2026","","ACAT IN control_num = 20260970000222, firm_id = 0158, acct_num = AAA11111","ACATI","","","($7.95)"
+"4/6/2026","4/6/2026","4/6/2026","","ACAT IN control_num = 20260970000333, firm_id = 0158, acct_num = BBB22222","ACATI","","","$9,876.54"
+"3/2/2026","3/2/2026","3/2/2026","KPTO","Kepler Optics
+CUSIP: 444DDD404","ACATO","25S","",""
+"3/2/2026","3/2/2026","3/2/2026","XYZ.B","Xanadu Holdings Inc. Class B
+CUSIP: 555EEE505","ACATO","5S","",""
+"3/2/2026","3/2/2026","3/2/2026","","ACAT OUT FEE A/C 222222222","FEE","","","($100.00)"
+"3/2/2026","3/2/2026","3/2/2026","","ACAT OUT control_num = 20260610000111, firm_id = 0158, acct_num = CCC33333","ACATO","","","$100.00"
+"2/10/2026","2/10/2026","2/10/2026","","RESIDUAL ACAT IN control_num = 20260410000444, firm_id = 0158, acct_num = DDD44444","ACATI","","","$1.06"
+"1/9/2026","1/9/2026","1/9/2026","SHNZ","MicroSectors Leveraged Metals ETN
+CUSIP: 666FFF606","Buy","100","$3.10","($310.00)"
+""
+"","","","","","","","","","The data provided is for informational purposes only. Please consult a professional tax service or personal tax advisor if you need instructions on how to calculate cost basis or questions regarding your specific tax situation."

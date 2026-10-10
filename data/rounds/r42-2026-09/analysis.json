@@ -1,0 +1,154 @@
+{
+  "round": 42,
+  "n_cells": 5,
+  "family_contrasts": {
+    "reclaim": {
+      "control": "r42-reclaim-control",
+      "treatments": [
+        {
+          "a": "r42-reclaim-wick",
+          "b": "r42-reclaim-control",
+          "median_diff": -0.016986468574884082,
+          "mean_paired_diff": -0.021180290635472096,
+          "windows_a_gt_b": 4,
+          "windows_a_lt_b": 4,
+          "n_windows": 8,
+          "p_signflip": 0.5546875,
+          "inside_floor": true,
+          "clears_floor": false
+        },
+        {
+          "a": "r42-reclaim-wick-body",
+          "b": "r42-reclaim-control",
+          "median_diff": -0.05873827920812248,
+          "mean_paired_diff": -0.03856124671062154,
+          "windows_a_gt_b": 3,
+          "windows_a_lt_b": 5,
+          "n_windows": 8,
+          "p_signflip": 0.390625,
+          "inside_floor": true,
+          "clears_floor": false
+        }
+      ]
+    },
+    "breakout": {
+      "control": "r42-breakout-control",
+      "treatments": [
+        {
+          "a": "r42-breakout-q25",
+          "b": "r42-breakout-control",
+          "median_diff": 0.01000228086362347,
+          "mean_paired_diff": -0.03282500428237747,
+          "windows_a_gt_b": 3,
+          "windows_a_lt_b": 5,
+          "n_windows": 8,
+          "p_signflip": 0.4765625,
+          "inside_floor": true,
+          "clears_floor": false
+        }
+      ]
+    }
+  },
+  "bh_vs_r42-reclaim-control": [
+    {
+      "cell": "r42-breakout-control",
+      "vs": "r42-reclaim-control",
+      "median_diff": -0.04441791791618881,
+      "p": 0.9140625,
+      "q": 1.0
+    },
+    {
+      "cell": "r42-breakout-q25",
+      "vs": "r42-reclaim-control",
+      "median_diff": -0.03441563705256534,
+      "p": 0.6953125,
+      "q": 1.0
+    },
+    {
+      "cell": "r42-reclaim-control",
+      "vs": "r42-reclaim-control",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    },
+    {
+      "cell": "r42-reclaim-wick",
+      "vs": "r42-reclaim-control",
+      "median_diff": -0.016986468574884082,
+      "p": 0.5546875,
+      "q": 1.0
+    },
+    {
+      "cell": "r42-reclaim-wick-body",
+      "vs": "r42-reclaim-control",
+      "median_diff": -0.05873827920812248,
+      "p": 0.390625,
+      "q": 1.0
+    }
+  ],
+  "bh_vs_r42-breakout-control": [
+    {
+      "cell": "r42-breakout-control",
+      "vs": "r42-breakout-control",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    },
+    {
+      "cell": "r42-breakout-q25",
+      "vs": "r42-breakout-control",
+      "median_diff": 0.01000228086362347,
+      "p": 0.4765625,
+      "q": 1.0
+    },
+    {
+      "cell": "r42-reclaim-control",
+      "vs": "r42-breakout-control",
+      "median_diff": 0.04441791791618881,
+      "p": 0.9140625,
+      "q": 1.0
+    },
+    {
+      "cell": "r42-reclaim-wick",
+      "vs": "r42-breakout-control",
+      "median_diff": 0.027431449341304724,
+      "p": 0.7734375,
+      "q": 1.0
+    },
+    {
+      "cell": "r42-reclaim-wick-body",
+      "vs": "r42-breakout-control",
+      "median_diff": -0.014320361291933679,
+      "p": 0.6015625,
+      "q": 1.0
+    }
+  ],
+  "trades": {
+    "r42-breakout-control": 145,
+    "r42-breakout-q25": 123,
+    "r42-reclaim-control": 179,
+    "r42-reclaim-wick": 218,
+    "r42-reclaim-wick-body": 140
+  },
+  "exposure": {
+    "r42-breakout-control": 0.28297695750150653,
+    "r42-breakout-q25": 0.25543058264523627,
+    "r42-reclaim-control": 0.49426491127515915,
+    "r42-reclaim-wick": 0.5141977520320404,
+    "r42-reclaim-wick-body": 0.3356082824161609
+  },
+  "predictions": {
+    "any_arm_clears_floor": false,
+    "reclaim_trade_ordering_wick_body_lt_wick_lt_control": false,
+    "reclaim_trades": {
+      "r42-reclaim-control": 179,
+      "r42-reclaim-wick": 218,
+      "r42-reclaim-wick-body": 140
+    },
+    "breakout_q25_fewer_trades_than_control": true,
+    "breakout_trades": {
+      "r42-breakout-control": 145,
+      "r42-breakout-q25": 123
+    }
+  }
+}

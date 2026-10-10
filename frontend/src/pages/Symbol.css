@@ -1,0 +1,21 @@
+/**
+ * Symbol.tsx -- the merged Ticker + Report page.
+ *
+ * Page-local spacing only. The tab rail itself (`FolderTabs.css`), the symbol-bar form and the
+ * mounted views (`TickerChartView`, `TickerDecisionView`, `ReportView`, `TickerHoldersView`,
+ * `TickerNewsView`) all reuse the shared classes already in `styles.css` -- nothing here duplicates
+ * either.
+ */
+
+.symbol-tabs {
+  margin: 0.75rem 0 1rem;
+}
+
+/* Cross-links row (UX refactor 3.3) under the symbol-bar form -- three `.download-link` pills
+   (that class itself is global/`styles.css`; only the row's own spacing lives here). */
+.symbol-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}

@@ -1,0 +1,23 @@
+matrix: r2 (8 windows, gate 5)
+## Ranked (by median adjusted_excess, descending)
+
+| rank | agent_id | display_name | median_adj_excess | worst | best | hit_rate | iqr | rank_median | rank_worst | rank_hit_rate | borda | pareto | windows(run/elig) | trades | mean_exposure | incommensurable_exposure | worst_dd | total_realised_pnl | median_excess_per_exposure | q4-2018 | covid | bear-2022 | chop-2015 | chop-2011 | bull-2024 | recent | gfc |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | r17-ma-crossover-on-stop | ma-crossover / regime on / stop | +0.17% | -13.16% | +3.57% | 50.00% | +7.11% | 1.5 | 2 | 1.5 | 1.67 | no | 8/8 | 155 | 30.26% | no | -11.99% | -$1,652.92 | +3.21% | +2.91% | +3.57% | +3.52% | -0.88% | -2.77% | -13.16% | -7.88% | +1.22% |
+| 2 | r17-ma-crossover-on-stop-tp | ma-crossover / regime on / stop-tp | +0.17% | -11.71% | +3.57% | 50.00% | +5.81% | 1.5 | 1 | 1.5 | 1.33 | yes | 8/8 | 157 | 29.12% | no | -10.73% | -$1,466.33 | +2.77% | +2.91% | +3.57% | +1.94% | -0.88% | -2.77% | -11.71% | -6.22% | +1.22% |
+
+## Pareto frontier -- the defensible choices, not a single ordering's winner
+
+A card is on the frontier when no other ranked card is at least as good on all of (median, worst-window, hit-rate) *and* strictly better on at least one. This is the honest answer to "which cards are defensible choices" -- a single ordering, whichever criterion it uses, cannot give that answer on its own.
+
+**Exposure caveat.** The worst-window criterion structurally favours low-exposure books -- a book that never puts much capital at risk cannot sustain a deep drawdown, so a small book reaches a shallow worst window almost for free, the same way a large negative benchmark structurally favours it on adjusted_excess (see the incommensurable-exposure flag above). Frontier membership earned mainly on the worst-window axis is not the same finding as frontier membership earned on the median, and both are weaker evidence for a card whose `mean_exposure` sits well below the field's -- read the column below beside every row rather than trusting frontier membership alone.
+
+| agent_id | display_name | median_adj_excess | worst | hit_rate | borda | mean_exposure | incommensurable_exposure |
+|---|---|---|---|---|---|---|---|
+| r17-ma-crossover-on-stop-tp | ma-crossover / regime on / stop-tp | +0.17% | -11.71% | 50.00% | 1.33 | 29.12% | no |
+
+## Unranked (fewer than 5 main windows run, zero trades in every window run, or a provenance violation (a run file for a window the eligibility map marks ineligible because the basket was not yet knowable there) -- excluded from the ranking, not placed last
+
+_Every scored card is ranked._
+
+wrote data\rounds\r34-2026-09\repro-r17\scorecard.json

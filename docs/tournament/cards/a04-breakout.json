@@ -1,0 +1,15 @@
+{
+  "agent_id": "a04-breakout",
+  "display_name": "Squeeze Release",
+  "discipline": "breakout",
+  "thesis": "A Bollinger squeeze (band width under 8% of price) marks a name where buyers and sellers have reached a temporary truce while they wait on a catalyst -- in this semiconductor/AI-capex-heavy universe that catalyst is usually an earnings print, a guidance revision, or a capacity/order headline. When price closes back above the upper band out of that compression, it is the market resolving the truce in one direction. The edge is not a high hit rate: it is that systematic trend-following flow (CTAs, momentum funds, dealer hedging) chases the resolved direction once it is confirmed, so a minority of breaks turn into extended continuation moves, while the majority are false starts that get run over by the same flow reversing. The counterparty on a losing trade is the trader who sold the breakout expecting mean reversion back into the range and was right only briefly. I measured this directly (see report): squeeze-then-close-above-band signals across 11 comparable-volatility names in this universe show a 36% win rate over a 60-session hold with a quick SMA(20) trend-break exit, mean winner +8.5% against mean loser -3.5% (profit factor ~1.35), and that ratio held up across a range of stop widths (6-10%), hold windows (40-90 sessions) and exit-SMA periods (10-30) rather than depending on one tuned combination -- so the strategy is built to survive on a few large winners paying for many small ones, not to be right often.",
+  "universe": ["SOXX", "QCOM", "TSM", "NVDA", "AVGO", "DELL", "ORCL", "AMD", "MU", "MRVL", "META"],
+  "entry": "(bb_upper(20,2) - bb_lower(20,2)) < close * 0.08 and close crosses_above bb_upper(20,2)",
+  "exit": "close crosses_below sma(20)",
+  "stop_loss_pct": "0.08",
+  "take_profit_pct": null,
+  "max_hold_days": 60,
+  "max_positions": 5,
+  "position_pct": "0.20",
+  "designed_through": "2026-02-13"
+}

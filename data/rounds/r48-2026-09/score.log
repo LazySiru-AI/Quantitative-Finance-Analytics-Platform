@@ -1,0 +1,44 @@
+matrix: r2 (8 windows, gate 5)
+## Ranked (by median adjusted_excess, descending)
+
+| rank | agent_id | display_name | median_adj_excess | worst | best | hit_rate | iqr | rank_median | rank_worst | rank_hit_rate | borda | pareto | windows(run/elig) | trades | mean_exposure | incommensurable_exposure | worst_dd | total_realised_pnl | median_excess_per_exposure | q4-2018 | covid | bear-2022 | chop-2015 | chop-2011 | bull-2024 | recent | gfc | 13f-legal |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | r48-b3-base | b3 base | +13.89% | -7.75% | +31.52% | 66.67% | +25.66% | 1 | 6 | 2.5 | 3.17 | yes | 6/6 | 56 | 38.47% | no | -30.41% | +$8,620.19 | +35.59% | -1.18% | +26.76% | -7.75% | +23.29% | not run | +4.50% | +31.52% | not run | not run |
+| 2 | r48-bmom-base | bmom base | +12.16% | -5.15% | +27.70% | 66.67% | +21.42% | 2 | 4 | 2.5 | 2.83 | yes | 6/6 | 70 | 34.90% | no | -26.51% | +$7,933.08 | +43.67% | -0.79% | +27.70% | -5.15% | +24.60% | not run | +7.40% | +16.91% | not run | not run |
+| 3 | r48-bmom-risk1pct | bmom risk1pct | +6.94% | -2.80% | +15.27% | 66.67% | +11.27% | 3 | 2.5 | 2.5 | 2.67 | yes | 6/6 | 65 | 18.51% | no | -16.11% | +$4,359.98 | +45.27% | -0.45% | +15.27% | -2.80% | +13.59% | not run | +5.46% | +8.42% | not run | not run |
+| 4 | r48-b3-risk1pct | b3 risk1pct | +6.66% | -2.80% | +10.34% | 66.67% | +8.97% | 4 | 2.5 | 2.5 | 3.00 | no | 6/6 | 52 | 14.31% | no | -14.65% | +$3,374.59 | +41.70% | -0.45% | +10.11% | -2.80% | +8.77% | not run | +4.55% | +10.34% | not run | not run |
+| 5 | r48-ctrend-base | ctrend base | +5.03% | -7.26% | +19.80% | 50.00% | +19.17% | 5 | 5 | 5.5 | 5.17 | no | 6/6 | 59 | 28.06% | no | -17.99% | +$3,860.83 | +29.42% | -0.97% | +19.80% | -5.82% | +11.02% | not run | +15.75% | -7.26% | not run | not run |
+| 6 | r48-ctrend-risk1pct | ctrend risk1pct | +2.35% | -2.71% | +9.18% | 50.00% | +8.93% | 6 | 1 | 5.5 | 4.17 | yes | 6/6 | 57 | 12.60% | no | -7.79% | +$1,857.47 | +30.80% | -0.43% | +9.18% | -2.71% | +5.14% | not run | +7.51% | -2.55% | not run | not run |
+| 7 | r48-arot-risk1pct | arot risk1pct | -1.59% | -7.92% | +19.84% | 42.86% | +7.05% | 7 | 7 | 7.5 | 7.17 | no | 7/7 | 215 | 14.85% | no | -10.33% | +$816.47 | -9.36% | -3.63% | +2.59% | -7.92% | -1.59% | -4.78% | +3.09% | +19.84% | not run | not run |
+| 8 | r48-arot-base | arot base | -7.16% | -27.41% | +80.25% | 42.86% | +16.13% | 8 | 8 | 7.5 | 7.83 | no | 7/7 | 189 | 48.81% | yes | -34.55% | +$3,321.91 | -14.67% | -8.76% | +4.94% | -27.41% | -7.16% | -17.01% | +1.56% | +80.25% | not run | not run |
+
+## Pareto frontier -- the defensible choices, not a single ordering's winner
+
+A card is on the frontier when no other ranked card is at least as good on all of (median, worst-window, hit-rate) *and* strictly better on at least one. This is the honest answer to "which cards are defensible choices" -- a single ordering, whichever criterion it uses, cannot give that answer on its own.
+
+**Exposure caveat.** The worst-window criterion structurally favours low-exposure books -- a book that never puts much capital at risk cannot sustain a deep drawdown, so a small book reaches a shallow worst window almost for free, the same way a large negative benchmark structurally favours it on adjusted_excess (see the incommensurable-exposure flag above). Frontier membership earned mainly on the worst-window axis is not the same finding as frontier membership earned on the median, and both are weaker evidence for a card whose `mean_exposure` sits well below the field's -- read the column below beside every row rather than trusting frontier membership alone.
+
+| agent_id | display_name | median_adj_excess | worst | hit_rate | borda | mean_exposure | incommensurable_exposure |
+|---|---|---|---|---|---|---|---|
+| r48-b3-base | b3 base | +13.89% | -7.75% | 66.67% | 3.17 | 38.47% | no |
+| r48-bmom-base | bmom base | +12.16% | -5.15% | 66.67% | 2.83 | 34.90% | no |
+| r48-bmom-risk1pct | bmom risk1pct | +6.94% | -2.80% | 66.67% | 2.67 | 18.51% | no |
+| r48-ctrend-risk1pct | ctrend risk1pct | +2.35% | -2.71% | 50.00% | 4.17 | 12.60% | no |
+
+## Unranked (fewer than 5 main windows run, zero trades in every window run, or a provenance violation (a run file for a window the eligibility map marks ineligible because the basket was not yet knowable there) -- excluded from the ranking, not placed last
+
+| agent_id | display_name | median_adj_excess | worst | best | hit_rate | iqr | rank_median | rank_worst | rank_hit_rate | borda | pareto | windows(run/elig) | trades | mean_exposure | incommensurable_exposure | worst_dd | total_realised_pnl | median_excess_per_exposure | q4-2018 | covid | bear-2022 | chop-2015 | chop-2011 | bull-2024 | recent | gfc | 13f-legal |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| r48-i13f-base | i13f base | +34.40% | +34.40% | +34.40% | 100.00% | n/a | n/a | n/a | n/a | n/a | no | 1/1 | 55 | 54.09% | yes | -18.91% | +$4,555.32 | +63.60% | not run | not run | not run | not run | not run | not run | +34.40% | not run | not run |
+| r48-i13f-risk1pct | i13f risk1pct | +21.87% | +21.87% | +21.87% | 100.00% | n/a | n/a | n/a | n/a | n/a | no | 1/1 | 42 | 28.83% | no | -11.88% | +$2,781.41 | +75.88% | not run | not run | not run | not run | not run | not run | +21.87% | not run | not run |
+
+## Notes
+
+- **r48-b3-base**: excess_per_exposure unavailable for 1 of 6 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r48-bmom-base**: excess_per_exposure unavailable for 1 of 6 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r48-bmom-risk1pct**: excess_per_exposure unavailable for 2 of 6 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r48-b3-risk1pct**: excess_per_exposure unavailable for 2 of 6 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r48-ctrend-base**: excess_per_exposure unavailable for 2 of 6 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+- **r48-ctrend-risk1pct**: excess_per_exposure unavailable for 2 of 6 run window(s) (exposure unmeasurable or below the 5% floor) -- excluded from median_excess_per_exposure
+
+wrote data\rounds\r48-2026-09\scorecard.json

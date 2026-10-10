@@ -1,0 +1,172 @@
+/**
+ * PersonaTimeline.tsx.
+ *
+ * Reuses `.panel`, `.placeholder`, `.muted`, `.callout` variants, `.badge`, `.persona-card-subhead`,
+ * `.persona-ticker-chip`, `.position-symbol` and `.persona-ticker-stance` variants verbatim (all
+ * defined globally, in `styles.css` / `pages/Personas.css`) -- only what is new for this component's
+ * own layout lives here, matching the convention `PersonaScorecard`'s block in `Personas.css`
+ * already establishes for the sibling component.
+ */
+
+.persona-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-timeline-caption {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.persona-timeline-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.persona-timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* --- stance evolution ------------------------------------------------------------------------- */
+
+.persona-timeline-stance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.persona-timeline-stance-track {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* A track whose stance actually changed is surfaced with a slightly stronger border rather than a
+   loud color, so it reads as "worth a second look" without competing with the stance colors
+   themselves (bullish/bearish already carry --up/--down). */
+.persona-timeline-stance-changed {
+  border-color: var(--border-strong);
+}
+
+.persona-timeline-stance-track-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.persona-timeline-changed-badge {
+  font-size: 0.68rem;
+}
+
+.persona-timeline-stance-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.persona-timeline-stance-point {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.persona-timeline-stance-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.persona-timeline-stance-reasoning {
+  flex: 1 1 100%;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* --- dated feed -------------------------------------------------------------------------------- */
+
+.persona-timeline-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.persona-timeline-entry {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.persona-timeline-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.persona-timeline-entry-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.persona-timeline-entry-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.persona-timeline-entry-title {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.persona-timeline-entry-title:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.persona-timeline-entry-summary {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.persona-timeline-entry-themes,
+.persona-timeline-entry-symbols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.persona-timeline-entry-themes li {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+}

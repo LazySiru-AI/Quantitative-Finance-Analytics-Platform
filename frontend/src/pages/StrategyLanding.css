@@ -1,0 +1,98 @@
+/* =============================================================================
+   Strategy Lab landing (page: StrategyLanding).
+
+   Reuses .panel, .subtitle, .tile-grid, .tile/.value/.value-emphasize/.label,
+   h1/h2, and StatusPill.css from styles.css -- nothing there is modified, only
+   built on top of. Every class this file adds is prefixed `sl-`.
+
+   Kept to one screen: no independent scroll container, three `.panel`s stacked
+   (verdict, funnel + counts, try-this), each of which fits without its own
+   internal scrolling in a normal viewport.
+   ============================================================================= */
+
+.sl-page {
+  max-width: 880px;
+}
+
+.sl-verdict {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.sl-verdict-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* --- Funnel ------------------------------------------------------------------ */
+
+.sl-funnel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.sl-funnel-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel-2);
+}
+
+.sl-funnel-arrow {
+  color: var(--muted);
+}
+
+.sl-counts {
+  margin-top: 0.25rem;
+}
+
+/* --- Try this ------------------------------------------------------------------ */
+
+.sl-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.sl-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sl-card:hover,
+.sl-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 14px -8px var(--glow-cyan);
+}
+
+.sl-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.sl-card-blurb {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}

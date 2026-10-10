@@ -1,0 +1,237 @@
+{
+  "descriptive_only": true,
+  "guarded_rule_engine": true,
+  "p_value": null,
+  "horizon": 10,
+  "note": "Same guarded swing operator as the primary family, run at horizon=10 to match momentum_divergence_diagnostic.py's naive-pandas comparison point exactly. This uses app.backtest.events.event_study (the same guarded engine as the primary family) so every number here passed the lookahead guard -- it differs from the primary family only in horizon (10 here vs 5 there) and in NOT being part of any BH ledger: it exists solely to check the earlier diagnostic's naive numbers against the real operator, not to screen a new hypothesis.",
+  "by_idea": {
+    "bullish_rsi_divergence": {
+      "SPY": {
+        "expression": "low < swing_low(5) and rsi(14) > rsi_at_swing_low(14,5)",
+        "triggers": 299,
+        "triggers_per_year": 8.927488151658768,
+        "n_independent": 108,
+        "hit_rate": 0.6006711409395973,
+        "baseline_hit_rate": 0.6012838801711841,
+        "mean_forward_return": 0.00455717294107133,
+        "median_forward_return": 0.009913388843800108,
+        "baseline_mean_forward_return": 0.003563443610537686
+      },
+      "QQQ": {
+        "expression": "low < swing_low(5) and rsi(14) > rsi_at_swing_low(14,5)",
+        "triggers": 325,
+        "triggers_per_year": 11.873006668599594,
+        "n_independent": 94,
+        "hit_rate": 0.5987654320987654,
+        "baseline_hit_rate": 0.5876618652698967,
+        "mean_forward_return": 0.006568107764843823,
+        "median_forward_return": 0.012951915151821813,
+        "baseline_mean_forward_return": 0.004343662985378466
+      },
+      "IWM": {
+        "expression": "low < swing_low(5) and rsi(14) > rsi_at_swing_low(14,5)",
+        "triggers": 268,
+        "triggers_per_year": 10.248254931714719,
+        "n_independent": 105,
+        "hit_rate": 0.6119402985074627,
+        "baseline_hit_rate": 0.5600243753808654,
+        "mean_forward_return": 0.0091876198723806,
+        "median_forward_return": 0.016192833876895407,
+        "baseline_mean_forward_return": 0.0031639627854874275
+      },
+      "XLK": {
+        "expression": "low < swing_low(5) and rsi(14) > rsi_at_swing_low(14,5)",
+        "triggers": 320,
+        "triggers_per_year": 11.602877697841727,
+        "n_independent": 95,
+        "hit_rate": 0.578125,
+        "baseline_hit_rate": 0.5783846264990609,
+        "mean_forward_return": 0.008801044255288428,
+        "median_forward_return": 0.009785986198094121,
+        "baseline_mean_forward_return": 0.0038614491562731184
+      },
+      "XLV": {
+        "expression": "low < swing_low(5) and rsi(14) > rsi_at_swing_low(14,5)",
+        "triggers": 275,
+        "triggers_per_year": 9.971223021582734,
+        "n_independent": 95,
+        "hit_rate": 0.6145454545454545,
+        "baseline_hit_rate": 0.5590232625343159,
+        "mean_forward_return": 0.004535920697952853,
+        "median_forward_return": 0.010109942742503764,
+        "baseline_mean_forward_return": 0.0028524738701424966
+      }
+    },
+    "bullish_macd_divergence": {
+      "SPY": {
+        "expression": "low < swing_low(5) and macd_macd(12,26,9) > macd_at_swing_low(12,26,9,5)",
+        "triggers": 127,
+        "triggers_per_year": 3.791943127962085,
+        "n_independent": 48,
+        "hit_rate": 0.6692913385826772,
+        "baseline_hit_rate": 0.6012838801711841,
+        "mean_forward_return": 0.012392390318432747,
+        "median_forward_return": 0.017800704959088698,
+        "baseline_mean_forward_return": 0.003563443610537686
+      },
+      "QQQ": {
+        "expression": "low < swing_low(5) and macd_macd(12,26,9) > macd_at_swing_low(12,26,9,5)",
+        "triggers": 179,
+        "triggers_per_year": 6.539286749782546,
+        "n_independent": 57,
+        "hit_rate": 0.5195530726256983,
+        "baseline_hit_rate": 0.5876618652698967,
+        "mean_forward_return": 0.00027314428967472476,
+        "median_forward_return": 0.0029348539956097763,
+        "baseline_mean_forward_return": 0.004343662985378466
+      },
+      "IWM": {
+        "expression": "low < swing_low(5) and macd_macd(12,26,9) > macd_at_swing_low(12,26,9,5)",
+        "triggers": 96,
+        "triggers_per_year": 3.671016691957511,
+        "n_independent": 41,
+        "hit_rate": 0.6458333333333334,
+        "baseline_hit_rate": 0.5596400244051251,
+        "mean_forward_return": 0.011468781779808179,
+        "median_forward_return": 0.014846315936924426,
+        "baseline_mean_forward_return": 0.003141011261509601
+      },
+      "XLK": {
+        "expression": "low < swing_low(5) and macd_macd(12,26,9) > macd_at_swing_low(12,26,9,5)",
+        "triggers": 185,
+        "triggers_per_year": 6.707913669064748,
+        "n_independent": 56,
+        "hit_rate": 0.5351351351351351,
+        "baseline_hit_rate": 0.5783846264990609,
+        "mean_forward_return": 0.007275872292843971,
+        "median_forward_return": 0.005161285400390625,
+        "baseline_mean_forward_return": 0.0038614491562731184
+      },
+      "XLV": {
+        "expression": "low < swing_low(5) and macd_macd(12,26,9) > macd_at_swing_low(12,26,9,5)",
+        "triggers": 124,
+        "triggers_per_year": 4.496115107913669,
+        "n_independent": 51,
+        "hit_rate": 0.6774193548387096,
+        "baseline_hit_rate": 0.5590232625343159,
+        "mean_forward_return": 0.012382457024117385,
+        "median_forward_return": 0.015901994710821876,
+        "baseline_mean_forward_return": 0.0028524738701424966
+      }
+    },
+    "bearish_rsi_divergence": {
+      "SPY": {
+        "expression": "high > swing_high(5) and rsi(14) < rsi_at_swing_high(14,5)",
+        "triggers": 1108,
+        "triggers_per_year": 33.082464454976304,
+        "n_independent": 280,
+        "hit_rate": 0.6353790613718412,
+        "baseline_hit_rate": 0.6022119158044952,
+        "mean_forward_return": 0.0030886029288159644,
+        "median_forward_return": 0.005861498794861086,
+        "baseline_mean_forward_return": 0.0036000842195837907
+      },
+      "QQQ": {
+        "expression": "high > swing_high(5) and rsi(14) < rsi_at_swing_high(14,5)",
+        "triggers": 792,
+        "triggers_per_year": 28.933603943171935,
+        "n_independent": 203,
+        "hit_rate": 0.5858585858585859,
+        "baseline_hit_rate": 0.5880553532410779,
+        "mean_forward_return": 0.0028987316312201546,
+        "median_forward_return": 0.00627637785156876,
+        "baseline_mean_forward_return": 0.004396406330895362
+      },
+      "IWM": {
+        "expression": "high > swing_high(5) and rsi(14) < rsi_at_swing_high(14,5)",
+        "triggers": 644,
+        "triggers_per_year": 24.626403641881637,
+        "n_independent": 179,
+        "hit_rate": 0.5629860031104199,
+        "baseline_hit_rate": 0.560195062480951,
+        "mean_forward_return": 0.003166621972796801,
+        "median_forward_return": 0.004641782955686846,
+        "baseline_mean_forward_return": 0.0031647857753926757
+      },
+      "XLK": {
+        "expression": "high > swing_high(5) and rsi(14) < rsi_at_swing_high(14,5)",
+        "triggers": 827,
+        "triggers_per_year": 29.986187050359714,
+        "n_independent": 203,
+        "hit_rate": 0.5525997581620314,
+        "baseline_hit_rate": 0.5782853838369235,
+        "mean_forward_return": 0.0006544103079728539,
+        "median_forward_return": 0.004800860404200469,
+        "baseline_mean_forward_return": 0.003867229316207597
+      },
+      "XLV": {
+        "expression": "high > swing_high(5) and rsi(14) < rsi_at_swing_high(14,5)",
+        "triggers": 704,
+        "triggers_per_year": 25.5263309352518,
+        "n_independent": 197,
+        "hit_rate": 0.5242165242165242,
+        "baseline_hit_rate": 0.5589128234783866,
+        "mean_forward_return": 0.0018961793926825636,
+        "median_forward_return": 0.0018784519946227762,
+        "baseline_mean_forward_return": 0.002851439863431653
+      }
+    },
+    "bearish_macd_divergence": {
+      "SPY": {
+        "expression": "high > swing_high(5) and macd_macd(12,26,9) < macd_at_swing_high(12,26,9,5)",
+        "triggers": 1056,
+        "triggers_per_year": 31.52985781990521,
+        "n_independent": 231,
+        "hit_rate": 0.6204933586337761,
+        "baseline_hit_rate": 0.6022119158044952,
+        "mean_forward_return": 0.002805228607849217,
+        "median_forward_return": 0.004964588207718501,
+        "baseline_mean_forward_return": 0.0036000842195837907
+      },
+      "QQQ": {
+        "expression": "high > swing_high(5) and macd_macd(12,26,9) < macd_at_swing_high(12,26,9,5)",
+        "triggers": 705,
+        "triggers_per_year": 25.75529138880835,
+        "n_independent": 172,
+        "hit_rate": 0.5914893617021276,
+        "baseline_hit_rate": 0.5882267230074312,
+        "mean_forward_return": 0.003260029797034192,
+        "median_forward_return": 0.006481006477452533,
+        "baseline_mean_forward_return": 0.004409024578945171
+      },
+      "IWM": {
+        "expression": "high > swing_high(5) and macd_macd(12,26,9) < macd_at_swing_high(12,26,9,5)",
+        "triggers": 547,
+        "triggers_per_year": 20.917147192716236,
+        "n_independent": 131,
+        "hit_rate": 0.5018315018315018,
+        "baseline_hit_rate": 0.561050061050061,
+        "mean_forward_return": -0.0009238261408834823,
+        "median_forward_return": 9.120472705181903e-05,
+        "baseline_mean_forward_return": 0.0032615220772027192
+      },
+      "XLK": {
+        "expression": "high > swing_high(5) and macd_macd(12,26,9) < macd_at_swing_high(12,26,9,5)",
+        "triggers": 700,
+        "triggers_per_year": 25.381294964028775,
+        "n_independent": 164,
+        "hit_rate": 0.5471428571428572,
+        "baseline_hit_rate": 0.5787037037037037,
+        "mean_forward_return": -0.0008544943321124286,
+        "median_forward_return": 0.0029283918003225606,
+        "baseline_mean_forward_return": 0.003929145902684416
+      },
+      "XLV": {
+        "expression": "high > swing_high(5) and macd_macd(12,26,9) < macd_at_swing_high(12,26,9,5)",
+        "triggers": 525,
+        "triggers_per_year": 19.035971223021583,
+        "n_independent": 144,
+        "hit_rate": 0.5239005736137667,
+        "baseline_hit_rate": 0.5589128234783866,
+        "mean_forward_return": 0.0008606819724977107,
+        "median_forward_return": 0.0016623233002850402,
+        "baseline_mean_forward_return": 0.002851439863431653
+      }
+    }
+  }
+}

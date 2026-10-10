@@ -1,0 +1,4 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+06/15/2026,06/15/2026,06/16/2026,IWM,"IWM paper fill, UAT persona pro-investor-01",Buy,7,$296.71,"($2,076.97)"
+06/15/2026,06/15/2026,06/16/2026,QQQ,"QQQ paper fill, UAT persona pro-investor-01",Buy,2,$738.47,"($1,476.94)"
+06/12/2026,06/12/2026,06/12/2026,,UAT opening deposit for persona pro-investor-01,ACH,,,"$10,000.00"

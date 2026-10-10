@@ -1,0 +1,37 @@
+{
+  "agent_id": "r43-price-placebo-spy",
+  "display_name": "SPY below its 200-day mean -> defensive (cash)",
+  "purpose": "savings",
+  "thesis": "Round 43 pre-registered cell, on the taxable savings book ($100,000 lump sum, 10-20 year horizon, benchmark 30/70 SPY/AGG, mandate: lowest drawdown of the three books, least return accepted). Base allocation on every card in this field, including the control: 30% SPY, 50% AGG, 10% GLD, 10% BIL -- round 38's own figures, reused unmodified. Cards differ in exactly one thing -- which sleeve's bars the tilt condition reads, and where the shifted weight goes -- and this round reports treatment MINUS CONTROL, never treatment against the benchmark alone. Every savings tilt this programme has previously run (the allocation family's ATR-tilt, round 38's real-yield and price-placebo cards) read the EQUITY sleeve's own bars or a macro series; this round reads the BOND sleeve's own bars instead, on the hypothesis (from PERSONA-DISCUSSION-2026-09-09.md section 3: Creator D on rising bond yields, Creator A on metals during macro stress) that the bond sleeve, not the equity sleeve, is the source of risk this book should read. The programme's prior is a null: round 38 measured every macro-conditioned savings tilt inside a fraction of a point of drawdown, beaten by its own price-only placebo. This round predicts a null too (see strategy-program/ROUND-43-PLAN.md section 5); it earns its place by testing an unread sleeve, not by expecting a different answer. It is not a proposal to trade anything, and nothing in a measurement round is promotable. Not investment advice. This cell's role: round 38's placebo, reproduced verbatim -- this round's comparator. When `close < sma(200)` is true of SPY's own bars -- there is no cross-symbol operator in this engine, so the condition is evaluated against SPY's own price history only -- ten points of the whole book move from SPY into BIL. Ten points is deliberately larger than the 5-point band: a shift smaller than the band could be absorbed by it and never trade, leaving a tilt that is present, plausible and unread. The threshold is a round number fixed by a concept before any measurement in this round existed (ROUND-43-PLAN.md section 4 justifies each individually), and no return series was read while choosing it -- what WAS read and is disclosed rather than hidden is the support of the regressor itself (section 6): how often this condition fires, which touches no price outcome and no card.",
+  "falsification": "This round's hypothesis is wrong, not merely unlucky, if the treatment-minus-control margin in max drawdown and MAR for r43-agg-trend-bil is a fraction of a percentage point across the eligible 5y and 10y rungs -- the pre-registered primary prediction (P1). It is also wrong, in the more interesting direction the round exists to test, if r43-agg-trend-bil does not beat r43-price-placebo-spy (round 38's own best cell, +0.94pp drawdown margin, reproduced verbatim in this field) on the drawdown margin (P2) -- that would show the bond-sleeve read adds nothing over the equity-sleeve read this programme has already measured. Named failure regimes: a 2013 taper-tantrum-style whipsaw where a bond-trend break reverts within weeks, and the 2019 bond rally the tilt sits out. Two of this round's fifteen windows (b6m-2, b1y-1) fall inside the 2021-2022 regime the corpus's bond-stress claim was voiced after publication of the underlying notes was made with 2022 already known -- a margin appearing only there is hindsight, not a finding. See ROUND-43-PLAN.md section 5 for the full prediction set and section 6 for the pre-registered support-of-regressor table.",
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "target_weight": "0.30"
+    },
+    {
+      "symbol": "AGG",
+      "target_weight": "0.50"
+    },
+    {
+      "symbol": "GLD",
+      "target_weight": "0.10"
+    },
+    {
+      "symbol": "BIL",
+      "target_weight": "0.10"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "close < sma(200)",
+      "on_symbol": "SPY",
+      "from_symbol": "SPY",
+      "to_symbol": "BIL",
+      "shift_pct": "0.10",
+      "shift_expr": null
+    }
+  ],
+  "designed_through": "2026-02-13"
+}

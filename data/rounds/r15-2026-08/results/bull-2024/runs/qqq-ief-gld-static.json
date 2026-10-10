@@ -1,0 +1,108 @@
+{
+  "card": {
+    "agent_id": "qqq-ief-gld-static",
+    "display_name": "QQQ/IEF/GLD Static Core-Satellite (Trading, No Tilt)",
+    "purpose": "trading",
+    "thesis": "Holds the identical three sleeves and weights as this round's own qqq-ief-gld-atr-tilt (QQQ 55% / IEF 25% / GLD 20%), with the single ATR rule removed, so the trading arm gets the same kind of no-tilt control the savings arm already gets from spy-schd-agg-gld-bil-static -- isolating exactly one decision (tilt vs. no tilt) against its sibling, per PROTOCOL.md section 7. It moves only on band-triggered rebalance (5% drift), the same mechanical, non-predictive trigger every static card in this round shares. This card exists because the trading arm's only existing entrant is ladder-qld-schd, a state-machine drawdown ladder with an armed/disarmed rung structure -- nothing in the trading arm today is a plain constant-weight blend, so there was no baseline in that purpose to tell whether any of the tilt or ladder machinery is earning its complexity against a $100,000 lump sum with no rebalancing signal at all. Falsification: falsified if qqq-ief-gld-atr-tilt clearly, and by a margin outside PROTOCOL.md section 7's own ordering-noise floor, beats this card on median adjusted_excess in the trading arm's main-window matrix -- that would mean the ATR defensive tilt earns its complexity specifically under a lump-sum, no-contribution funding shape, the opposite of what ALLOCATION-FAMILY.md found for the SPY-core tilt. It is equally falsified in the other direction if this static blend's own worst-window drawdown is deep enough, and the ATR sibling's shallower one valuable enough, that 'no tilt' is shown to be the wrong default even before accounting for turnover cost. Who is on the other side of the trade: the same counterparty as every other static card in this round -- whoever lets a winning sleeve run past the drift band, or sells a laggard down through it, on the other side of this book's mechanical rebalance. In QQQ's own history that counterparty has usually been right in the short run (QQQ is the single highest-CAGR core this programme has measured) and this card's discipline of trimming it back to 55% is a real, statable cost paid for diversification and rebalancing return, not a free option. Parameter count against the ten-parameter budget: 2 free sleeve weights plus 1 band_pct = 3 of 10. Expected window eligibility: identical to qqq-ief-gld-atr-tilt -- bound by GLD's 2004-11-18 start, eligible across the full main-window matrix and all five of the round's long windows.",
+    "sleeves": [
+      {
+        "symbol": "QQQ",
+        "target_weight": "0.55"
+      },
+      {
+        "symbol": "IEF",
+        "target_weight": "0.25"
+      },
+      {
+        "symbol": "GLD",
+        "target_weight": "0.20"
+      }
+    ],
+    "band_pct": "0.05",
+    "rules": [],
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 250,
+  "starting_equity": "100000",
+  "ending_equity": "116635.29",
+  "total_return": "0.16635289999999991",
+  "max_drawdown": "-0.12133887212945227",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 1.0,
+  "capital_exposure": 0.9900916750000416,
+  "win_rate": 1.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "GLD",
+      "entry_date": "2024-08-21",
+      "entry_price": "231.81",
+      "exit_date": "2025-04-11",
+      "exit_price": "297.81",
+      "quantity": "17",
+      "exit_reason": "rebalance_trim",
+      "pnl": "1121.86",
+      "return_pct": "0.2846804050984959792121844208",
+      "bars_held": 160
+    },
+    {
+      "symbol": "QQQ",
+      "entry_date": "2024-08-21",
+      "entry_price": "478.31",
+      "exit_date": "2025-06-30",
+      "exit_price": "550.98",
+      "quantity": "10",
+      "exit_reason": "rebalance_trim",
+      "pnl": "726.58",
+      "return_pct": "0.1519066841617137786876540329",
+      "bars_held": 213
+    },
+    {
+      "symbol": "QQQ",
+      "entry_date": "2024-08-21",
+      "entry_price": "478.31",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "115",
+      "exit_reason": "open_at_end",
+      "pnl": "10073.22",
+      "return_pct": "0.1831318672268601404497844407",
+      "bars_held": 249
+    },
+    {
+      "symbol": "IEF",
+      "entry_date": "2024-08-21",
+      "entry_price": "97.74",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "256",
+      "exit_reason": "open_at_end",
+      "pnl": "-568.32",
+      "return_pct": "-0.02271332105586249232658072437",
+      "bars_held": 249
+    },
+    {
+      "symbol": "GLD",
+      "entry_date": "2024-08-21",
+      "entry_price": "231.81",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "69",
+      "exit_reason": "open_at_end",
+      "pnl": "5281.95",
+      "return_pct": "0.3302273413571459384841033605",
+      "bars_held": 249
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "benchmark_return": "0.1399503367454490237061650321",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

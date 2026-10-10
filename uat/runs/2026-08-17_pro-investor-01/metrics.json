@@ -1,0 +1,115 @@
+{
+  "run_id": "2026-08-17_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-23T07:10:38.655162+00:00",
+  "window": {
+    "first_session": "2026-08-17",
+    "last_session": "2026-08-21",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "9939.49",
+    "pnl": "-60.51",
+    "return_pct_of_1": "-0.006051",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "-0.008995",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 6,
+    "buys": 5,
+    "sells": 1,
+    "gross_traded": "7803.47",
+    "total_fees": "0.04",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-08-21",
+    "cash": "5043.41",
+    "settled_cash": "5043.41",
+    "positions_market_value": "4896.08",
+    "equity": "9939.49",
+    "return_since_inception_pct_of_1": "-0.006051",
+    "positions": [
+      {
+        "symbol": "NVDA",
+        "quantity": "5",
+        "mark": "214.72",
+        "market_value": "1073.60",
+        "weight_pct_of_1": "0.108014"
+      },
+      {
+        "symbol": "SPY",
+        "quantity": "2",
+        "mark": "765.72",
+        "market_value": "1531.44",
+        "weight_pct_of_1": "0.154076"
+      },
+      {
+        "symbol": "XLE",
+        "quantity": "36",
+        "mark": "63.64",
+        "market_value": "2291.04",
+        "weight_pct_of_1": "0.230499"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 3,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-4.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "392109d94b4fdcdac994bb0e912b47ff45c8ecea",
+        "adapter": "robinhood",
+        "row_count": 4,
+        "usable_row_count": 4,
+        "inserted": 0,
+        "duplicates": 4,
+        "conflicts": [],
+        "instruments": 3,
+        "skipped": {},
+        "ledger_fingerprint": "719484f244c53567cdea2fcd86f3c41d2fdab745c5e256b36ab7bb51a3bae6fb",
+        "ledger_txn_count": 17
+      },
+      {
+        "import_id": "b63c86eb2096f18562087693ecd36d59cc27c09b",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 2,
+        "skipped": {},
+        "ledger_fingerprint": "719484f244c53567cdea2fcd86f3c41d2fdab745c5e256b36ab7bb51a3bae6fb",
+        "ledger_txn_count": 17
+      },
+      {
+        "import_id": "74ee0f5a98dd435e65205000ac542c41d227cabd",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "719484f244c53567cdea2fcd86f3c41d2fdab745c5e256b36ab7bb51a3bae6fb",
+        "ledger_txn_count": 17
+      }
+    ],
+    "fingerprint_before_replay": "719484f244c53567cdea2fcd86f3c41d2fdab745c5e256b36ab7bb51a3bae6fb",
+    "fingerprint_after_replay": "719484f244c53567cdea2fcd86f3c41d2fdab745c5e256b36ab7bb51a3bae6fb",
+    "ledger_txn_count": 17,
+    "idempotent": true
+  },
+  "findings_recorded": 9
+}

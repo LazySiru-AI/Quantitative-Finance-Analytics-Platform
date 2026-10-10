@@ -1,0 +1,25 @@
+{
+  "orders": [
+    {
+      "order_id": "s2-xle-buy",
+      "session": 2,
+      "decided_on": "2026-08-10",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "22",
+      "order_type": "market_on_open",
+      "thesis": "Adding a seventh position, energy, to broaden the sleeve beyond the six names put on session 1 (SPY, QQQ, XLK, IWM, XLF, XLV), all of which remain above their own sma20/50/200 with the tape still risk-on per the brief's benchmark (SPY close 773.03, above sma20 751.37/sma50 747.56/sma200 703.48, 20d +3.18%). XLE closed 60.18 on 2026-08-10, above sma20 (58.32), sma50 (56.68) and sma200 (53.07) -- confirmation across all three timeframes -- with accelerating momentum (1d +4.66%, 5d +2.36%, 20d +6.06%) and sitting at 96.2% of its 52-week high (62.56). This session I opened /ticker/XLE (real DOM submit on .symbol-form, per the retry protocol -- it navigated cleanly, unlike session 1) and read its decision table: 'Price Above 200-Bar SMA' is the one rule in a FIRING state, consistent with the trend read. I also read that every one of the 11 evaluable rules on XLE rates its own statistical significance 'insufficient' (one 'weak') over a 6,952-bar/27-year sample (GET /api/rules/decisions?symbol=XLE&interval=1d) -- so I am not leaning on any single mechanical rule as a validated edge here, only on the multi-timeframe trend/momentum confirmation my own process requires, sized down accordingly.",
+      "invalidation": "Close back below sma20 (~58.32) ends the breakout read. The Backtest drawdown study for XLE, viewed this session, shows the current pullback peaked 2026-03-27 and troughed 2026-07-01 without a full recovery back above the March high yet -- so a failure to hold above sma50 (56.68) would mean this recovery attempt failed rather than continued, and the position should be cut regardless of where the stop sits.",
+      "stop_level": "58.00",
+      "regime": "risk-on",
+      "conviction": 3,
+      "evidence": [
+        "close=60.18, sma20=58.3170, sma50=56.6752, sma200=53.0688, change_1d=+4.66%, change_5d=+2.36%, change_20d=+6.06% via brief-s2.json watchlist.XLE (as of 2026-08-10)",
+        "close 60.18 is 96.2% of the 52w range high of 62.56 (range 42.125-62.56) via brief-s2.json watchlist.XLE",
+        "SPY benchmark close=773.03, above sma20=751.3655/sma50=747.5576/sma200=703.4792, change_20d=+3.18% via brief-s2.json benchmark (as of 2026-08-10) -- regime confirmation",
+        "/ticker/XLE decision table (viewed this session): rule price_above_sma200 state=FIRING; all 11 evaluable rules rate significance 'insufficient' except ema_death_cross ('weak'), via GET /api/rules/decisions?symbol=XLE&interval=1d",
+        "Rules expression tester (viewed this session): 'close > sma(200) and close > sma(20) and close > sma(50)' parses VALID, understood as (close > sma(200)) and (close > sma(20)) and (close > sma(50)) -- confirms the screen I ran is exactly what I intended to express"
+      ]
+    }
+  ]
+}

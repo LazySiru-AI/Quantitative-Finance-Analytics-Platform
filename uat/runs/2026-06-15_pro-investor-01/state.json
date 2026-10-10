@@ -1,0 +1,108 @@
+{
+  "cash": "4799.11",
+  "positions": {
+    "AAPL": "2",
+    "IWM": "8",
+    "QQQ": "3"
+  },
+  "unsettled": [
+    [
+      "2026-06-19",
+      "1191.81"
+    ]
+  ],
+  "fills": [
+    {
+      "order_id": "s1-1",
+      "session": 1,
+      "trade_date": "2026-06-15",
+      "symbol": "IWM",
+      "side": "buy",
+      "quantity": "7",
+      "price": "296.71",
+      "reference_open": "296.56",
+      "gross": "2076.97",
+      "fees": "0.00",
+      "cash_delta": "-2076.97"
+    },
+    {
+      "order_id": "s1-2",
+      "session": 1,
+      "trade_date": "2026-06-15",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "price": "738.47",
+      "reference_open": "738.1",
+      "gross": "1476.94",
+      "fees": "0.00",
+      "cash_delta": "-1476.94"
+    },
+    {
+      "order_id": "s2-1",
+      "session": 2,
+      "trade_date": "2026-06-16",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "1",
+      "price": "742.62",
+      "reference_open": "742.25",
+      "gross": "742.62",
+      "fees": "0.00",
+      "cash_delta": "-742.62"
+    },
+    {
+      "order_id": "s2-2",
+      "session": 2,
+      "trade_date": "2026-06-16",
+      "symbol": "IWM",
+      "side": "buy",
+      "quantity": "1",
+      "price": "295.65",
+      "reference_open": "295.5",
+      "gross": "295.65",
+      "fees": "0.00",
+      "cash_delta": "-295.65"
+    },
+    {
+      "order_id": "s3-1",
+      "session": 3,
+      "trade_date": "2026-06-17",
+      "symbol": "AAPL",
+      "side": "buy",
+      "quantity": "4",
+      "price": "301.00",
+      "reference_open": "300.85",
+      "gross": "1204.00",
+      "fees": "0.00",
+      "cash_delta": "-1204.00"
+    },
+    {
+      "order_id": "s4-1",
+      "session": 4,
+      "trade_date": "2026-06-18",
+      "symbol": "AAPL",
+      "side": "sell",
+      "quantity": "4",
+      "price": "297.96",
+      "reference_open": "298.11",
+      "gross": "1191.84",
+      "fees": "0.03",
+      "cash_delta": "1191.81"
+    },
+    {
+      "order_id": "s4-2",
+      "session": 4,
+      "trade_date": "2026-06-18",
+      "symbol": "AAPL",
+      "side": "buy",
+      "quantity": "2",
+      "price": "298.26",
+      "reference_open": "298.11",
+      "gross": "596.52",
+      "fees": "0.00",
+      "cash_delta": "-596.52"
+    }
+  ],
+  "rejections": []
+}

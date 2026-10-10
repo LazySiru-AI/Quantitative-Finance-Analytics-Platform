@@ -1,0 +1,216 @@
+/* Live Tape -- a prominent panel above the book sections showing only symbols currently in play.
+   Every new selector here is prefixed `live-tape-`, per the project convention (see PaperDesk.css's
+   own header comment), so it can never collide with a class another page introduces in the shared
+   stylesheet. `.panel`, `.badge`, `.muted`, `.placeholder`, `.callout`/`.callout-warn` and
+   `.position-symbol` are defined in the shared `styles.css` and reused as-is. */
+
+.live-tape-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  /* Deliberately more prominent than an ordinary desk panel -- this is the page's headline, not
+     another card in the stack. */
+  border-color: var(--accent);
+}
+
+.live-tape-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.live-tape-title { margin: 0; }
+
+.live-tape-status {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* `market_state` is an open string from the backend (see api/paperlive.ts's module docstring) --
+   styled generically, never switched on, so an unrecognised value still renders legibly. */
+.live-tape-state-badge { text-transform: uppercase; }
+
+.live-tape-transport, .live-tape-asof { font-family: var(--font-mono); }
+
+.live-tape-note { margin: 0; max-width: 76ch; font-size: 0.85rem; }
+
+/* --- Account/status filter bar -------------------------------------------------
+   `.live-tape-filter-group` fieldsets read as a sibling of `.desk-visibility-item`
+   (PaperDesk.css) -- same item size and spacing, not a new control language. Browser UA styles
+   give a fieldset a border and a legend a notch in it; both are reset explicitly below so the
+   two groups render as a compact horizontal strip instead. */
+.live-tape-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem 1.5rem;
+}
+
+.live-tape-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* `flex-basis: 100%` forces the legend onto its own line above the checkboxes, inside the same
+   flex-wrap row -- no separate block wrapper needed for "label above a wrapping item row". */
+.live-tape-filter-group legend {
+  flex-basis: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.live-tape-filter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.15rem 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.live-tape-filter-item input[type="checkbox"] { cursor: pointer; }
+
+.live-tape-unhealthy, .live-tape-stream-error { padding: 0.75rem 1rem; border-radius: 6px; }
+
+/* The "everything's filtered out" case reuses `.placeholder` for its base treatment but, unlike
+   the plain "nothing in play at all" placeholder above it in the JSX, sits directly under the
+   filter bar the reader just adjusted -- a dashed top rule ties it visually to that control
+   (echoing the dashed-border convention `.state-pill.state-unknown` uses elsewhere in this app
+   for "conditional on something the reader can change") rather than reading as a hard dead end. */
+.live-tape-filtered-empty {
+  border-top: 1px dashed var(--border);
+  padding-top: 0.6rem;
+}
+
+.live-tape-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.live-tape-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2, var(--panel));
+}
+
+.live-tape-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.live-tape-symbol { font-size: 1.05rem; }
+
+.live-tape-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+
+.live-tape-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.live-tape-tag-held { color: var(--up); border-color: color-mix(in srgb, var(--up) 45%, transparent); }
+.live-tape-tag-signal { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.live-tape-tag-traded { color: var(--muted); }
+
+/* The book half of the badge (e.g. "Held · Trading") deliberately drops `.live-tape-tag`'s
+   uppercase/letter-spacing treatment rather than inheriting it -- a book label like "Roth IRA"
+   already carries its own capitalisation, and forcing it into the same all-caps run as the tag
+   word would make "HELD" and the book name compete instead of reading as primary/secondary.
+   Muted colour alone carries the subordination (no smaller font-size, which would risk this
+   wrapping onto a second line inside the badge). `white-space: nowrap` is what actually prevents
+   that wrap: the only whitespace in "Held · Trading" is the leading space inside this span, so
+   marking it non-breaking here is enough to keep the whole badge on one line without touching
+   `.live-tape-tag` itself. */
+.live-tape-tag-book {
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.live-tape-desks {
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Buy/sell action lines ----------------------------------------------------
+   The row's most actionable line -- deliberately heavier than the muted `.live-tape-desks` line
+   above it. "Buy"/"Sell" already carry the buy-vs-sell distinction in text, so per this app's
+   `moneyTone` convention (`api/portfolio.ts`'s docstring: colour reinforces, never carries alone)
+   weight/border/background do the primary visual work of making this line read as actionable,
+   with `--up`/`--down` layered on as reinforcement rather than the only signal. */
+.live-tape-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.live-tape-action {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.live-tape-action-buy {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+  background: color-mix(in srgb, var(--up) 10%, transparent);
+}
+
+.live-tape-action-sell {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+  background: color-mix(in srgb, var(--down) 10%, transparent);
+}
+
+.live-tape-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.live-tape-price { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 600; }
+
+.live-tape-change { font-size: 0.85rem; }
+.live-tape-change.pos { color: var(--up); }
+.live-tape-change.neg { color: var(--down); }
+
+.live-tape-stale-badge { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, transparent); }
+
+.live-tape-source { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; }
+
+.live-tape-quote-pending, .live-tape-quote-error { font-size: 0.8rem; }

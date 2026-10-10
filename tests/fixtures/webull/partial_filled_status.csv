@@ -1,0 +1,6 @@
+Name,Symbol,Side,Status,Filled,Total Qty,Price,Avg Price,Time-in-Force,Placed Time,Filled Time
+Redacted Equity Fund,AAAA,Sell,Partial Filled,7,30,@58.0500000000,58.0500000000,GTC,01/20/2026 04:33:49 EST,01/20/2026 04:34:22 EST
+Redacted Growth Fund,BBBB,Buy,Partial Filled,37,200,@140.5000000000,140.5000000000,GTC,02/11/2026 09:31:02 EST,02/11/2026 09:31:44 EST
+Redacted Index Fund,CCCC,Buy,Filled,10,10,@25.0000000000,25.0000000000,DAY,03/02/2026 10:00:00 EST,03/02/2026 10:00:05 EST
+Redacted Index Fund,CCCC,Sell,Cancelled,0,15,@30.0000000000,,DAY,03/03/2026 10:00:00 EST,
+Redacted Index Fund,DDDD,Buy,Partial Filled,0,50,@12.0000000000,,DAY,03/04/2026 10:00:00 EST,

@@ -1,0 +1,37 @@
+{
+  "orders": [
+    {
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": 1,
+      "thesis": "Bullish re-confirmation: close 748.28 has moved back above both sma20 (744.98) and sma50 (744.88) after the prior session's pullback, with a +0.83% 1-day move. Adding modestly to an existing winning position rather than starting a new one.",
+      "invalidation": "A close back below sma50 (744.88) ends the re-confirmation and the whole SPY thesis reverts to the session-1 read.",
+      "stop_level": "715.00",
+      "regime": "risk-on resuming",
+      "conviction": 3,
+      "evidence": "close 748.28 > sma20 744.98 > sma50 744.88; change_1d +0.83%; change_20d +0.52% (turned positive)"
+    },
+    {
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": 10,
+      "thesis": "Continuation add: uptrend still confirmed across all three MAs, momentum accelerating (20d change now +8.21%, up from +7.76% the prior session).",
+      "invalidation": "A close below sma50 (56.59) ends the continuation thesis.",
+      "stop_level": "56.00",
+      "regime": "risk-on within energy",
+      "conviction": 4,
+      "evidence": "close 58.50 > sma20 55.16 > sma50 56.59 > sma200 52.02; change_5d +2.72%; change_20d +8.21%"
+    },
+    {
+      "symbol": "IBM",
+      "side": "buy",
+      "quantity": 5,
+      "thesis": "DELIBERATE TEST, disclosed: IBM is not in the bar store's covered universe for this sandbox. Placing this to see how the broker and the application handle an order/position the store cannot price -- specifically whether a rejection is clear, and whether the withhold-rather-than-estimate discipline the cash module documents also holds for position pricing.",
+      "invalidation": "Test order -- not expected to fill.",
+      "stop_level": "200.00",
+      "regime": "n/a",
+      "conviction": 1,
+      "evidence": "Unpriced-symbol test, not a trade thesis."
+    }
+  ]
+}

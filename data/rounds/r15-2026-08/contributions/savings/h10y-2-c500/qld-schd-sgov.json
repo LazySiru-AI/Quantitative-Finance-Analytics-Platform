@@ -1,0 +1,19 @@
+{
+  "agent_id": "qld-schd-sgov",
+  "purpose": "savings",
+  "window": "h10y-2",
+  "start": "2020-06-01",
+  "end": "2026-02-13",
+  "sessions": 1435,
+  "seed": "20000",
+  "contribution": "500",
+  "funding_shape": "monthly_contribution",
+  "irr": 0.1561336142196913,
+  "time_weighted_cagr": 0.1629595159256989,
+  "max_drawdown": -0.3670608207462037,
+  "volatility": 0.2129646902055693,
+  "mar": 0.443957804034808,
+  "multiple": 1.8271784129553788,
+  "profit": 45081.22350606814,
+  "cash_constraint_modelled": false
+}

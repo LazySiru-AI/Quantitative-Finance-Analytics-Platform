@@ -1,0 +1,120 @@
+{
+  "signal_definition": "close > sma(200) and ema(20) crosses above ema(50)",
+  "horizon_sessions": 60,
+  "excluded": {
+    "names": {
+      "IREN": {
+        "first_bar_date": "2021-11-16",
+        "signal_count": 8,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 2.8029638579766925,
+        "median_forward_return_pct": -1.393070366104776
+      },
+      "OKLO": {
+        "first_bar_date": "2021-07-07",
+        "signal_count": 2,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 48.33428455888169,
+        "median_forward_return_pct": 48.33428455888169
+      },
+      "APLD": {
+        "first_bar_date": "2022-04-12",
+        "signal_count": 8,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 28.9636416066609,
+        "median_forward_return_pct": -4.201585601582042
+      },
+      "BE": {
+        "first_bar_date": "2018-07-24",
+        "signal_count": 11,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 38.91820571734056,
+        "median_forward_return_pct": 11.547938072157638
+      },
+      "KORU": {
+        "first_bar_date": "2013-04-09",
+        "signal_count": 15,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 6.4201725540569505,
+        "median_forward_return_pct": 11.652669288024242
+      }
+    },
+    "pooled": {
+      "signal_count": 44,
+      "mean_forward_return_pct": 19.89100600082874,
+      "median_forward_return_pct": 5.822074398868304
+    }
+  },
+  "included_control": {
+    "names": {
+      "NVDA": {
+        "first_bar_date": "1999-01-21",
+        "signal_count": 37,
+        "dropped_count": 2,
+        "mean_forward_return_pct": 13.018114673440445,
+        "median_forward_return_pct": 12.177791201584775
+      },
+      "AVGO": {
+        "first_bar_date": "2009-08-05",
+        "signal_count": 30,
+        "dropped_count": 1,
+        "mean_forward_return_pct": 6.933763439154234,
+        "median_forward_return_pct": 5.830641629120614
+      },
+      "TSM": {
+        "first_bar_date": "1997-10-08",
+        "signal_count": 44,
+        "dropped_count": 1,
+        "mean_forward_return_pct": 3.860264874586266,
+        "median_forward_return_pct": 0.2812031218738076
+      },
+      "ORCL": {
+        "first_bar_date": "1986-03-11",
+        "signal_count": 78,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 4.678858194345033,
+        "median_forward_return_pct": 3.0843047858921224
+      },
+      "SOXX": {
+        "first_bar_date": "2001-07-12",
+        "signal_count": 38,
+        "dropped_count": 1,
+        "mean_forward_return_pct": 3.111233448782693,
+        "median_forward_return_pct": 2.112582569378063
+      },
+      "NFLX": {
+        "first_bar_date": "2002-05-22",
+        "signal_count": 38,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 5.583838639800691,
+        "median_forward_return_pct": 3.7507264207518154
+      },
+      "MU": {
+        "first_bar_date": "1984-05-31",
+        "signal_count": 46,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 13.147914765773802,
+        "median_forward_return_pct": 8.600130197835565
+      },
+      "META": {
+        "first_bar_date": "2012-05-17",
+        "signal_count": 21,
+        "dropped_count": 1,
+        "mean_forward_return_pct": 8.92068259975383,
+        "median_forward_return_pct": 8.287458046214935
+      },
+      "QCOM": {
+        "first_bar_date": "1991-12-12",
+        "signal_count": 42,
+        "dropped_count": 0,
+        "mean_forward_return_pct": 5.807069734154218,
+        "median_forward_return_pct": 1.804378687628816
+      }
+    },
+    "pooled": {
+      "signal_count": 374,
+      "mean_forward_return_pct": 6.927630539448404,
+      "median_forward_return_pct": 4.715414530988749
+    }
+  }
+}

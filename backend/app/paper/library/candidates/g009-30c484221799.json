@@ -1,0 +1,28 @@
+{
+  "agent_id": "g009-30c484221799",
+  "display_name": "auto g009 · trend (trading)",
+  "discipline": "trend",
+  "purpose": "trading",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 9/20-day EMA crossover trigger inside a 50-day SMA regime filter on QCOM, TSM, AMZN, ORCL, SMH, DVY, NFLX, INTC, MSFT, NVDA, with a 14% stop and a 92-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "QCOM",
+    "TSM",
+    "AMZN",
+    "ORCL",
+    "SMH",
+    "DVY",
+    "NFLX",
+    "INTC",
+    "MSFT",
+    "NVDA"
+  ],
+  "entry": "close > sma(50) and ema(9) crosses_above ema(20)",
+  "exit": "ema(9) crosses_below ema(20)",
+  "stop_loss_pct": "0.14",
+  "take_profit_pct": null,
+  "max_hold_days": 92,
+  "max_positions": 3,
+  "position_pct": "0.29",
+  "rank_by": "close / sma(50)",
+  "designed_through": "2026-02-13"
+}

@@ -1,0 +1,145 @@
+/* EventCalendar (the "Calendar" card on Overview). Every new selector here is prefixed
+   `event-calendar-`, per the project convention (see the header comment of Overview.css /
+   Portfolio.css), so it can never collide with a class another page or component introduces.
+   Everything unprefixed referenced from EventCalendar.tsx (.panel, .placeholder, .callout/
+   .callout-warn, .badge, .muted) is defined in the shared stylesheet (styles.css) and reused as-is. */
+
+.event-calendar-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.event-calendar-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.event-calendar-heading {
+  margin: 0;
+}
+
+/* The scrolling body. Collapsed (the Overview default) it is capped to roughly one card's worth of
+   height and scrolls — a full earnings calendar can run dozens of rows, far taller than the Fear &
+   Greed card it sits beside, and the brief was "don't need this much height." Expanded, the cap
+   lifts and every row stands at full height. The Calendar heading and its expand control sit
+   OUTSIDE this region, so they never scroll away. The cap/scroll/expand behaviour itself now comes
+   from the shared `ScrollRegion` this element is (see EventCalendar.tsx, which drives its
+   `expanded` prop off this same component's own `expanded` prop -- the pre-existing expand control
+   stays the only toggle, `ScrollRegion`'s own `expandable` button is not used here) -- this rule
+   only carries the layout styling that is not `ScrollRegion`'s concern. */
+.event-calendar-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.event-calendar-coverage {
+  margin: 0;
+  font-size: 0.82rem;
+}
+
+.event-calendar-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.event-calendar-warning {
+  padding: 0.5rem 0.7rem;
+}
+
+.event-calendar-provenance {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.event-calendar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-calendar-row {
+  padding: 0.4rem 0 0.4rem 0.65rem;
+  border-left: 3px solid var(--border-strong);
+}
+
+.event-calendar-row-fomc {
+  border-left-color: var(--accent);
+}
+
+.event-calendar-row-earnings {
+  border-left-color: var(--accent-2);
+}
+
+/* Economic releases need a third accent, and the shared palette has two. Scoped to this component
+   rather than added to `:root` in styles.css: nothing else in the app renders this kind, and a
+   global token that one card uses is a token the next reader has to go looking for. Indigo reads as
+   clearly distinct from both the cyan `--accent` (FOMC) and the magenta `--accent-2` (earnings) at
+   the 3px border width these rows use, and is not `--warn`/`--up`/`--down`, all of which already
+   carry a meaning this card would be borrowing wrongly. */
+.event-calendar-panel {
+  --event-calendar-release: #8ea9ff;
+}
+
+.event-calendar-row-economic_release {
+  border-left-color: var(--event-calendar-release);
+}
+
+.event-calendar-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.event-calendar-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.event-calendar-relative {
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+.event-calendar-title {
+  font-size: 0.9rem;
+}
+
+.event-calendar-kind-badge.event-calendar-kind-fomc {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.event-calendar-kind-badge.event-calendar-kind-earnings {
+  color: var(--accent-2);
+  border-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
+}
+
+.event-calendar-kind-badge.event-calendar-kind-economic_release {
+  color: var(--event-calendar-release);
+  border-color: color-mix(in srgb, var(--event-calendar-release) 45%, transparent);
+}
+
+.event-calendar-badge-estimated {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+}
+
+.event-calendar-badge-snapshot {
+  color: var(--muted);
+}
+
+.event-calendar-row-detail {
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}

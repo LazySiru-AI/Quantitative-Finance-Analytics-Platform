@@ -1,0 +1,147 @@
+{
+  "card": {
+    "agent_id": "r26-b3-tp20",
+    "display_name": "Round 26 take-profit None -> 0.20",
+    "discipline": "momentum",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Institutional flow into AI/cloud-infrastructure leaders re-rates them in slow, multi-week waves, not single days: a fund building a position over weeks pushes the medium-term average through the long-term one, and that crossover is a public, mechanical signal other trend-following capital reacts to next, extending the move further than any one participant intended. On the design-window history of these 12 names, once close > sma(200) is already established and ema(20) crosses above ema(50) -- a fresh acceleration inside a standing uptrend, not a bottom-pick -- the resulting move has a median duration of roughly 3-4 weeks and stretches past two months at the 75th percentile (NVDA's longest such run reached 256 sessions, MSFT's 169, TSM's 189). The other side of this trade is whoever sells into that strength: value-discipline holders trimming into a re-rate, and short sellers pressing a name that 'already ran too far' -- both wrong, on average, while the wave is still building. I tested a fixed take-profit and a fast rule exit against simply riding the position to a stop or a genuine trend break, on this same entry: capping gains at 8-30% cut mean per-signal return to 2-9%, and a fast 20-day-EMA exit (even with a 3-day confirmation filter) cut it to 3-5% and win rate to 42-49% by whipsawing out of live trends on ordinary pullbacks. Letting the position run to a stop, a 200-day trend-break, or a 180-day backstop produced roughly triple the aggregate return of either capped variant, at the cost of a median trade near breakeven-to-slightly-negative -- this strategy's edge is concentrated in a minority of large winners, which is exactly what a take-profit would have amputated. It is deliberately not diversified across volatility regimes: the universe was chosen so one stop and one position size fit all 12 names reasonably rather than being tuned to any single one. Round 26 arm; see strategy-program/ROUND-26-PLAN.md. Derived from the seated card to test that card's own falsification condition -- it bears on no seated card's committed record and nothing in this round is promotable.",
+    "falsification": null,
+    "universe": [
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "MU",
+      "MRVL",
+      "TSM",
+      "META",
+      "MSFT",
+      "GOOGL",
+      "NOW",
+      "AMZN",
+      "NFLX"
+    ],
+    "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+    "exit": "close crosses_below sma(200)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": "0.20",
+    "max_hold_days": 180,
+    "max_positions": 4,
+    "position_pct": "0.22",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "11937.25",
+  "total_return": "0.19372499999999993",
+  "max_drawdown": "-0.04876667915736643",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.6989247311827957,
+  "capital_exposure": 0.45783555913978496,
+  "win_rate": 1.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "NFLX",
+      "entry_date": "2020-03-30",
+      "entry_price": "36.32",
+      "exit_date": "2020-04-17",
+      "exit_price": "43.08",
+      "quantity": "61",
+      "exit_reason": "target",
+      "pnl": "412.28",
+      "return_pct": "0.1860872391131653065645988301",
+      "bars_held": 13
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2020-04-08",
+      "entry_price": "101.10",
+      "exit_date": "2020-05-01",
+      "exit_price": "116.78",
+      "quantity": "21",
+      "exit_reason": "target",
+      "pnl": "329.21",
+      "return_pct": "0.1550609957138147049126277613",
+      "bars_held": 16
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2020-04-07",
+      "entry_price": "6.94",
+      "exit_date": "2020-05-18",
+      "exit_price": "8.76",
+      "quantity": "327",
+      "exit_reason": "target",
+      "pnl": "595.01",
+      "return_pct": "0.2621905542482968916620398523",
+      "bars_held": 28
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2020-06-04",
+      "entry_price": "48.88",
+      "exit_date": "2020-06-12",
+      "exit_price": "50.26",
+      "quantity": "44",
+      "exit_reason": "rule",
+      "pnl": "60.65",
+      "return_pct": "0.02819985865198631156077964589",
+      "bars_held": 6
+    },
+    {
+      "symbol": "META",
+      "entry_date": "2020-05-01",
+      "entry_price": "201.70",
+      "exit_date": "2020-06-24",
+      "exit_price": "241.08",
+      "quantity": "10",
+      "exit_reason": "target",
+      "pnl": "393.73",
+      "return_pct": "0.1952057511155180961824491820",
+      "bars_held": 37
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2020-04-14",
+      "entry_price": "52.27",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "43",
+      "exit_reason": "open_at_end",
+      "pnl": "14.62",
+      "return_pct": "0.006504687201071360244882341687",
+      "bars_held": 54
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2020-05-05",
+      "entry_price": "66.91",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "33",
+      "exit_reason": "open_at_end",
+      "pnl": "131.75",
+      "return_pct": "0.05966857334365927999166677989",
+      "bars_held": 39
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NOW",
+      "reason": "$2121.95 exceeds $1755.19 of settled cash (total cash $4207.50; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

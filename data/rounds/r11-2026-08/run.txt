@@ -1,0 +1,67 @@
+== Gate A (floor) -- unchanged, recomputed ==
+Gate A survivors (8): A-rotation, B-momentum, B2-hold-90, B3-concentrated, B4-tight-stop, C-trend, H-trend-diversified, c07-chop
+
+== Gate L (floor) -- carried forward from round 9 section 2 ==
+  FAIL c07-chop                 all cash for 92 sessions; last trade closed 2026-04-07, past the 60-session line
+  FAIL c14-riskmanaged-wide     zero trades in the out-of-sample window
+Gate L survivors (7): A-rotation, B-momentum, B2-hold-90, B3-concentrated, B4-tight-stop, C-trend, H-trend-diversified
+
+self-check: first sub-period reduces to score.adjusted_excess for all 15 cards
+
+== The live matrix -- adjusted excess per sub-window, whole field ==
+card                        live-1    live-2    live-3    live-4    live-5    live-6    median   hits
+B-momentum                  -0.85%   +10.50%   +12.89%   +17.12%   -12.62%    -2.58%    +4.82%    3/6
+B2-hold-90                  -0.85%   +10.50%   +12.89%   +17.12%   -12.62%    -3.84%    +4.82%    3/6
+B3-concentrated             -1.23%   +14.69%   +15.88%   +26.47%   -14.88%    +0.14%    +7.41%    4/6
+B4-tight-stop               -0.85%   +10.50%   +12.89%   +17.12%   -12.62%    -2.58%    +4.82%    3/6
+A-rotation                  +0.05%   +20.34%   +15.80%    +6.89%    -6.95%    -6.24%    +3.47%    4/6
+c20-rotation               +12.77%    -4.56%    +5.56%    -8.77%    -0.85%    -2.16%    -1.51%    2/6
+C-trend                     +0.00%    +3.74%    +4.71%    +3.62%    -6.60%    -8.20%    +1.81%    3/6
+H-trend-diversified         +0.00%    +0.22%    -0.06%    -1.45%    -1.11%    -2.73%    -0.58%    1/6
+c07-chop                    -0.12%    -1.30%    -0.00%    +0.00%    -0.00%    -0.00%    -0.00%    1/6
+c18-meanrev                 +2.66%    -4.89%    +0.48%    +1.32%    +0.34%    +0.20%    +0.41%    5/6
+c09-convex                  +0.00%    +0.00%    +0.00%    +0.00%    -0.18%    +0.09%    +0.00%    1/6
+c19-volatility              +0.00%    +0.00%    +0.00%    +0.00%    -0.16%    -0.00%    +0.00%    0/6
+c14-riskmanaged-wide        +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    +0.00%    0/6
+c21-uncorrelated            -0.79%    +0.47%    -5.57%    -0.21%    +0.07%    -1.71%    -0.50%    2/6
+c11-breakout                -0.58%    -0.14%    +0.01%    +0.00%    +0.00%    +0.04%    +0.00%    4/6
+
+== Gate C -- positive adjusted excess in >= 3 of 6 ==
+  pass B-momentum               3/6
+  pass B2-hold-90               3/6
+  pass B3-concentrated          4/6
+  pass B4-tight-stop            3/6
+  pass A-rotation               4/6
+  pass C-trend                  3/6
+  FAIL H-trend-diversified      1/6
+Gate C survivors (6): A-rotation, B-momentum, B2-hold-90, B3-concentrated, B4-tight-stop, C-trend
+
+== Ranking -- live median, then live hit rate, then backtest rank range (tie-breaks) ==
+card                      live median   hits  S-range   10y QQQ
+B3-concentrated                +7.41%    4/6        4    +1.90%
+B-momentum                     +4.82%    3/6        1    +3.92%
+B4-tight-stop                  +4.82%    3/6        1    +3.51%
+B2-hold-90                     +4.82%    3/6        6    +4.60%
+A-rotation                     +3.47%    4/6        9    +0.63%
+C-trend                        +1.81%    3/6        1    +1.28%
+
+== Distinctness -- one per discipline, one per base family; seat count is an output ==
+  SEAT B3-concentrated        (momentum)
+  skip B-momentum             -- momentum seat already taken
+  skip B4-tight-stop          -- momentum seat already taken
+  skip B2-hold-90             -- momentum seat already taken
+  SEAT A-rotation             (pairs-rotation)
+  SEAT C-trend                (trend)
+
+== Round 11 ranked roster: 3 of a possible 4 ==
+  1. B3-concentrated
+  2. A-rotation
+  3. C-trend
+  + ladder-qld-schd (seated outside the competition, unranked)
+
+== Pre-committed expectations (ROUND-11-PLAN.md section 6) ==
+  1. B3-concentrated expected to lead the live matrix. Leader is 'B3-concentrated'.
+     B3-concentrated +7.41% vs A-rotation +3.47% -> HELD
+  2. Momentum seat decided by the rule: B3-concentrated
+  3. Gate C expected to eliminate at least one card. Eliminated: ['H-trend-diversified']
+  4. Seat count 2-4 expected. Got 3 -> HELD

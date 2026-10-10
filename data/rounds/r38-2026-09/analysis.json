@@ -1,0 +1,1034 @@
+{
+  "round": 38,
+  "capital": 100000.0,
+  "benchmark_blend": "30-70-spy-agg",
+  "rank_tags": [
+    "h10y-1",
+    "h10y-2",
+    "h5y-1",
+    "h5y-2",
+    "h5y-3"
+  ],
+  "bench_return": {
+    "h10y-1": 0.3157847580124392,
+    "h10y-2": 0.43566661481161406,
+    "h5y-1": 0.2024755456298896,
+    "h5y-2": 0.3251196839547754,
+    "h5y-3": 0.08729735935860976,
+    "h3y-1": 0.08299333804141176,
+    "h3y-2": 0.16657801982044845,
+    "h3y-3": -0.025602964418910974,
+    "h3y-4": 0.20211638865435122,
+    "b6m-1": -0.07876316156131018,
+    "b6m-2": -0.1503953136198201,
+    "b6m-3": -0.041363879715020965,
+    "b1y-1": -0.163857175843764,
+    "b1y-2": -0.033351225654235914,
+    "b1y-3": -0.038197309088509275
+  },
+  "cards": {
+    "r38-breakeven-lo-2": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.023989802874792243,
+        "max_drawdown": -0.17492875203403613,
+        "total_return": 0.2671667,
+        "volatility": 0.05595615005987562,
+        "trades": 22
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.04735561614204009,
+        "max_drawdown": -0.17291083254408457,
+        "total_return": 0.5868758999999999,
+        "volatility": 0.06222824385248283,
+        "trades": 33
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.02710055054663174,
+        "max_drawdown": -0.04495480587019918,
+        "total_return": 0.14304889999999992,
+        "volatility": 0.034515848765086524,
+        "trades": 13
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.04778788951136659,
+        "max_drawdown": -0.1080207322183131,
+        "total_return": 0.2626599999999999,
+        "volatility": 0.05149708752526878,
+        "trades": 15
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.04596871693277005,
+        "max_drawdown": -0.17047498961409546,
+        "total_return": 0.2510759,
+        "volatility": 0.07092516735660931,
+        "trades": 16
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.01749755003464859,
+        "max_drawdown": -0.046565938628381764,
+        "total_return": 0.05341649999999998,
+        "volatility": 0.03271306285677122,
+        "trades": 9
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.04295624954684363,
+        "max_drawdown": -0.06289670916063672,
+        "total_return": 0.13410509999999998,
+        "volatility": 0.03551455373226291,
+        "trades": 12
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": -0.0027258903935476475,
+        "max_drawdown": -0.17454499208580443,
+        "total_return": -0.008155400000000035,
+        "volatility": 0.08319912443375879,
+        "trades": 13
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.1026674619315866,
+        "max_drawdown": -0.06086798606016652,
+        "total_return": 0.33810910000000005,
+        "volatility": 0.06492681895512735,
+        "trades": 16
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.09320727087784819,
+        "max_drawdown": -0.10398816095807195,
+        "total_return": -0.04811299999999996,
+        "volatility": null,
+        "trades": 4
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2216344620286571,
+        "max_drawdown": -0.13186086410149478,
+        "total_return": -0.11862649999999997,
+        "volatility": null,
+        "trades": 4
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.06417922609018911,
+        "max_drawdown": -0.048430933432826895,
+        "total_return": -0.03287629999999997,
+        "volatility": null,
+        "trades": 7
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.13926053242499437,
+        "max_drawdown": -0.17145929999999998,
+        "total_return": -0.13977260000000002,
+        "volatility": 0.09494129026976172,
+        "trades": 4
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.00527213429777551,
+        "max_drawdown": -0.10545414340937775,
+        "total_return": -0.005292999999999992,
+        "volatility": 0.0717832074911755,
+        "trades": 4
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.0265185808804439,
+        "max_drawdown": -0.04450414941107039,
+        "total_return": -0.026622400000000046,
+        "volatility": 0.036912443371834934,
+        "trades": 4
+      }
+    },
+    "r38-control": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.031509389457597736,
+        "max_drawdown": -0.16893695937441422,
+        "total_return": 0.3632373,
+        "volatility": 0.06250200020622365,
+        "trades": 13
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.05450992587293846,
+        "max_drawdown": -0.178804865719146,
+        "total_return": 0.6984367,
+        "volatility": 0.06774991994362892,
+        "trades": 22
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.03476353843298341,
+        "max_drawdown": -0.054663371155020846,
+        "total_return": 0.1863302,
+        "volatility": 0.04011311901017016,
+        "trades": 7
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.06176797514772869,
+        "max_drawdown": -0.13086961846865197,
+        "total_return": 0.3491021000000001,
+        "volatility": 0.06216610352235823,
+        "trades": 10
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.04596871693277005,
+        "max_drawdown": -0.17047498961409546,
+        "total_return": 0.2510759,
+        "volatility": 0.07092516735660931,
+        "trades": 16
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.02381033499982932,
+        "max_drawdown": -0.05865175737201911,
+        "total_return": 0.07314529999999997,
+        "volatility": 0.04290947484681195,
+        "trades": 5
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.055974337635312565,
+        "max_drawdown": -0.06950665077912055,
+        "total_return": 0.1769889,
+        "volatility": 0.04013785292204245,
+        "trades": 7
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.006681524470169453,
+        "max_drawdown": -0.17848986428598657,
+        "total_return": 0.020178800000000052,
+        "volatility": 0.09525363839991464,
+        "trades": 14
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.1026674619315866,
+        "max_drawdown": -0.06086798606016652,
+        "total_return": 0.33810910000000005,
+        "volatility": 0.06492681895512735,
+        "trades": 16
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.14271879633331896,
+        "max_drawdown": -0.13302918083056137,
+        "total_return": -0.07467080000000004,
+        "volatility": null,
+        "trades": 7
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2216344620286571,
+        "max_drawdown": -0.13186086410149478,
+        "total_return": -0.11862649999999997,
+        "volatility": null,
+        "trades": 4
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.08477136537692909,
+        "max_drawdown": -0.05904158848219354,
+        "total_return": -0.043660400000000044,
+        "volatility": null,
+        "trades": 4
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.13926053242499437,
+        "max_drawdown": -0.17145929999999998,
+        "total_return": -0.13977260000000002,
+        "volatility": 0.09494129026976172,
+        "trades": 4
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.027440821680241534,
+        "max_drawdown": -0.13403593894151122,
+        "total_return": -0.027548200000000023,
+        "volatility": 0.09138776375987255,
+        "trades": 7
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.03804096356421638,
+        "max_drawdown": -0.05693681934919048,
+        "total_return": -0.03818900000000003,
+        "volatility": 0.05023766664547256,
+        "trades": 4
+      }
+    },
+    "r38-nominal-hi-4": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.030639851552499042,
+        "max_drawdown": -0.1686220240486329,
+        "total_return": 0.3518026000000001,
+        "volatility": 0.0621543056419988,
+        "trades": 23
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.04784869339148545,
+        "max_drawdown": -0.178804865719146,
+        "total_return": 0.5943476000000001,
+        "volatility": 0.0641768589840286,
+        "trades": 55
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.03476353843298341,
+        "max_drawdown": -0.054663371155020846,
+        "total_return": 0.1863302,
+        "volatility": 0.04011311901017016,
+        "trades": 7
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.06176797514772869,
+        "max_drawdown": -0.13086961846865197,
+        "total_return": 0.3491021000000001,
+        "volatility": 0.06216610352235823,
+        "trades": 10
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.035908243948259644,
+        "max_drawdown": -0.16999784936187456,
+        "total_return": 0.19223879999999993,
+        "volatility": 0.06452334979899217,
+        "trades": 46
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.02381033499982932,
+        "max_drawdown": -0.05865175737201911,
+        "total_return": 0.07314529999999997,
+        "volatility": 0.04290947484681195,
+        "trades": 5
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.055974337635312565,
+        "max_drawdown": -0.06950665077912055,
+        "total_return": 0.1769889,
+        "volatility": 0.04013785292204245,
+        "trades": 7
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.0031230033636173715,
+        "max_drawdown": -0.17848986428598657,
+        "total_return": 0.00939829999999997,
+        "volatility": 0.09384851912498395,
+        "trades": 17
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.08877457734339389,
+        "max_drawdown": -0.05423596783366802,
+        "total_return": 0.2884899000000001,
+        "volatility": 0.05408766036836251,
+        "trades": 32
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.14271879633331896,
+        "max_drawdown": -0.13302918083056137,
+        "total_return": -0.07467080000000004,
+        "volatility": null,
+        "trades": 7
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2216344620286571,
+        "max_drawdown": -0.13186086410149478,
+        "total_return": -0.11862649999999997,
+        "volatility": null,
+        "trades": 4
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.08477136537692909,
+        "max_drawdown": -0.05904158848219354,
+        "total_return": -0.043660400000000044,
+        "volatility": null,
+        "trades": 4
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.14477481438512374,
+        "max_drawdown": -0.17092269999999998,
+        "total_return": -0.14530540000000003,
+        "volatility": 0.09315823667530695,
+        "trades": 10
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.027440821680241534,
+        "max_drawdown": -0.13403593894151122,
+        "total_return": -0.027548200000000023,
+        "volatility": 0.09138776375987255,
+        "trades": 7
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.03804096356421638,
+        "max_drawdown": -0.05693681934919048,
+        "total_return": -0.03818900000000003,
+        "volatility": 0.05023766664547256,
+        "trades": 4
+      }
+    },
+    "r38-price-placebo": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.028562058607498164,
+        "max_drawdown": -0.162238662161585,
+        "total_return": 0.32482769999999994,
+        "volatility": 0.05443979295594312,
+        "trades": 61
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.0501651054614356,
+        "max_drawdown": -0.1620616822021138,
+        "total_return": 0.6298741000000001,
+        "volatility": 0.059535381394117674,
+        "trades": 72
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.03177202596205375,
+        "max_drawdown": -0.05343721211068042,
+        "total_return": 0.1692806,
+        "volatility": 0.03816404482530111,
+        "trades": 21
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.058231407326876594,
+        "max_drawdown": -0.11909532955205548,
+        "total_return": 0.32680069999999994,
+        "volatility": 0.05516165503062271,
+        "trades": 29
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.04300197881775447,
+        "max_drawdown": -0.16108052078237722,
+        "total_return": 0.23348940000000007,
+        "volatility": 0.06327393718472787,
+        "trades": 44
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.019916948255139122,
+        "max_drawdown": -0.05434055925821013,
+        "total_return": 0.060948800000000025,
+        "volatility": 0.03736674168178421,
+        "trades": 18
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.053191830200020274,
+        "max_drawdown": -0.06425604302469001,
+        "total_return": 0.1677337000000001,
+        "volatility": 0.03788577447829287,
+        "trades": 16
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.003663264109666997,
+        "max_drawdown": -0.15740526114629982,
+        "total_return": 0.011030099999999932,
+        "volatility": 0.07821205606693225,
+        "trades": 34
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.09617275093107436,
+        "max_drawdown": -0.061337635571981575,
+        "total_return": 0.3147578,
+        "volatility": 0.0606869173664911,
+        "trades": 27
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.11059517810963893,
+        "max_drawdown": -0.12177551922084351,
+        "total_return": -0.057355900000000015,
+        "volatility": null,
+        "trades": 13
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2072275357274853,
+        "max_drawdown": -0.12507685940406965,
+        "total_return": -0.11044240000000005,
+        "volatility": null,
+        "trades": 17
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.06230684697255073,
+        "max_drawdown": -0.04747190991889272,
+        "total_return": -0.031901599999999974,
+        "volatility": null,
+        "trades": 10
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.1351729501562149,
+        "max_drawdown": -0.16278150000000002,
+        "total_return": -0.1356712,
+        "volatility": 0.07758681931918028,
+        "trades": 19
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.011318342093424305,
+        "max_drawdown": -0.12324782181674143,
+        "total_return": -0.011363000000000012,
+        "volatility": 0.07700339376380214,
+        "trades": 13
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.034777332275116035,
+        "max_drawdown": -0.055087785156316404,
+        "total_return": -0.034912900000000024,
+        "volatility": 0.04159438950060249,
+        "trades": 14
+      }
+    },
+    "r38-realyield-hi-1": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.03306673225764234,
+        "max_drawdown": -0.16490215863857816,
+        "total_return": 0.3839345999999999,
+        "volatility": 0.06087128161671682,
+        "trades": 25
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.05077106564550715,
+        "max_drawdown": -0.1730236222860264,
+        "total_return": 0.6392844,
+        "volatility": 0.06381947311117524,
+        "trades": 28
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.03476353843298341,
+        "max_drawdown": -0.054663371155020846,
+        "total_return": 0.1863302,
+        "volatility": 0.04011311901017016,
+        "trades": 7
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.0690867751596489,
+        "max_drawdown": -0.13068036513585757,
+        "total_return": 0.3962064999999999,
+        "volatility": 0.06296140754738107,
+        "trades": 19
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.03613423263294546,
+        "max_drawdown": -0.16709984316170534,
+        "total_return": 0.19353569999999998,
+        "volatility": 0.06342727315599266,
+        "trades": 19
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.02381033499982932,
+        "max_drawdown": -0.05865175737201911,
+        "total_return": 0.07314529999999997,
+        "volatility": 0.04290947484681195,
+        "trades": 5
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.06349523694629533,
+        "max_drawdown": -0.05287252010854726,
+        "total_return": 0.20224909999999996,
+        "volatility": 0.03884963122492507,
+        "trades": 14
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.00351790979846367,
+        "max_drawdown": -0.17384080237049004,
+        "total_return": 0.010590899999999959,
+        "volatility": 0.09187340804541233,
+        "trades": 15
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.08610011713947907,
+        "max_drawdown": -0.05390973041793001,
+        "total_return": 0.27908050000000006,
+        "volatility": 0.05393035952083129,
+        "trades": 11
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.14271879633331896,
+        "max_drawdown": -0.13302918083056137,
+        "total_return": -0.07467080000000004,
+        "volatility": null,
+        "trades": 7
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2216344620286571,
+        "max_drawdown": -0.13186086410149478,
+        "total_return": -0.11862649999999997,
+        "volatility": null,
+        "trades": 4
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.04750021215164191,
+        "max_drawdown": -0.039921235508015185,
+        "total_return": -0.024227499999999957,
+        "volatility": null,
+        "trades": 9
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.13873012108017801,
+        "max_drawdown": -0.16860070000000005,
+        "total_return": -0.13924040000000004,
+        "volatility": 0.08939702016462886,
+        "trades": 6
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.027440821680241534,
+        "max_drawdown": -0.13403593894151122,
+        "total_return": -0.027548200000000023,
+        "volatility": 0.09138776375987255,
+        "trades": 7
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.03804096356421638,
+        "max_drawdown": -0.05693681934919048,
+        "total_return": -0.03818900000000003,
+        "volatility": 0.05023766664547256,
+        "trades": 4
+      }
+    },
+    "r38-realyield-hi-2": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.031509389457597736,
+        "max_drawdown": -0.16893695937441422,
+        "total_return": 0.3632373,
+        "volatility": 0.06250200020622365,
+        "trades": 13
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.04895031599283084,
+        "max_drawdown": -0.178804865719146,
+        "total_return": 0.6111552,
+        "volatility": 0.06653516873442354,
+        "trades": 57
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.03476353843298341,
+        "max_drawdown": -0.054663371155020846,
+        "total_return": 0.1863302,
+        "volatility": 0.04011311901017016,
+        "trades": 7
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.06176797514772869,
+        "max_drawdown": -0.13086961846865197,
+        "total_return": 0.3491021000000001,
+        "volatility": 0.06216610352235823,
+        "trades": 10
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.036028886295814466,
+        "max_drawdown": -0.17047498961409546,
+        "total_return": 0.19293099999999996,
+        "volatility": 0.06842295508774382,
+        "trades": 48
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.02381033499982932,
+        "max_drawdown": -0.05865175737201911,
+        "total_return": 0.07314529999999997,
+        "volatility": 0.04290947484681195,
+        "trades": 5
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.055974337635312565,
+        "max_drawdown": -0.06950665077912055,
+        "total_return": 0.1769889,
+        "volatility": 0.04013785292204245,
+        "trades": 7
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.006681524470169453,
+        "max_drawdown": -0.17848986428598657,
+        "total_return": 0.020178800000000052,
+        "volatility": 0.09525363839991464,
+        "trades": 14
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.08504045006089478,
+        "max_drawdown": -0.05946029864363089,
+        "total_return": 0.2753650000000001,
+        "volatility": 0.05990361081005894,
+        "trades": 45
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.14271879633331896,
+        "max_drawdown": -0.13302918083056137,
+        "total_return": -0.07467080000000004,
+        "volatility": null,
+        "trades": 7
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2216344620286571,
+        "max_drawdown": -0.13186086410149478,
+        "total_return": -0.11862649999999997,
+        "volatility": null,
+        "trades": 4
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.08477136537692909,
+        "max_drawdown": -0.05904158848219354,
+        "total_return": -0.043660400000000044,
+        "volatility": null,
+        "trades": 4
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.13926053242499437,
+        "max_drawdown": -0.17145929999999998,
+        "total_return": -0.13977260000000002,
+        "volatility": 0.09494129026976172,
+        "trades": 4
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.027440821680241534,
+        "max_drawdown": -0.13403593894151122,
+        "total_return": -0.027548200000000023,
+        "volatility": 0.09138776375987255,
+        "trades": 7
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.03804096356421638,
+        "max_drawdown": -0.05693681934919048,
+        "total_return": -0.03818900000000003,
+        "volatility": 0.05023766664547256,
+        "trades": 4
+      }
+    },
+    "r38-realyield-lo-1": {
+      "h10y-1": {
+        "ok": true,
+        "sessions": 2517,
+        "cagr": 0.042277646224212706,
+        "max_drawdown": -0.19364760556703198,
+        "total_return": 0.512238,
+        "volatility": 0.07690482127887094,
+        "trades": 19
+      },
+      "h10y-2": {
+        "ok": true,
+        "sessions": 2515,
+        "cagr": 0.06352763525928462,
+        "max_drawdown": -0.18960994489292526,
+        "total_return": 0.8490857999999999,
+        "volatility": 0.07831903170745125,
+        "trades": 30
+      },
+      "h5y-1": {
+        "ok": true,
+        "sessions": 1260,
+        "cagr": 0.04680513961331001,
+        "max_drawdown": -0.06701076053287991,
+        "total_return": 0.2569824999999999,
+        "volatility": 0.05113508936684477,
+        "trades": 8
+      },
+      "h5y-2": {
+        "ok": true,
+        "sessions": 1259,
+        "cagr": 0.08135678567415705,
+        "max_drawdown": -0.16515321365322322,
+        "total_return": 0.4781219000000001,
+        "volatility": 0.07927292319398671,
+        "trades": 19
+      },
+      "h5y-3": {
+        "ok": true,
+        "sessions": 1256,
+        "cagr": 0.04725303725436758,
+        "max_drawdown": -0.18769845208765734,
+        "total_return": 0.2587511,
+        "volatility": 0.07696652826747577,
+        "trades": 19
+      },
+      "h3y-1": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.032230344642682374,
+        "max_drawdown": -0.07088323601055135,
+        "total_return": 0.09984090000000001,
+        "volatility": 0.05454147813986575,
+        "trades": 4
+      },
+      "h3y-2": {
+        "ok": true,
+        "sessions": 754,
+        "cagr": 0.07606115656840173,
+        "max_drawdown": -0.07171795043085405,
+        "total_return": 0.24525470000000005,
+        "volatility": 0.04961437088647579,
+        "trades": 12
+      },
+      "h3y-3": {
+        "ok": true,
+        "sessions": 756,
+        "cagr": 0.009726815636508679,
+        "max_drawdown": -0.19370768028135887,
+        "total_return": 0.02946519999999997,
+        "volatility": 0.11448365289233642,
+        "trades": 14
+      },
+      "h3y-4": {
+        "ok": true,
+        "sessions": 751,
+        "cagr": 0.1026674619315866,
+        "max_drawdown": -0.06086798606016652,
+        "total_return": 0.33810910000000005,
+        "volatility": 0.06492681895512735,
+        "trades": 16
+      },
+      "b6m-1": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.18810405374908679,
+        "max_drawdown": -0.16079334588885086,
+        "total_return": -0.09969209999999995,
+        "volatility": null,
+        "trades": 7
+      },
+      "b6m-2": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.2585280007872812,
+        "max_drawdown": -0.15388573110759474,
+        "total_return": -0.1399338,
+        "volatility": null,
+        "trades": 3
+      },
+      "b6m-3": {
+        "ok": true,
+        "sessions": 127,
+        "cagr": -0.07487783142940918,
+        "max_drawdown": -0.05992976963317309,
+        "total_return": -0.03846430000000001,
+        "volatility": null,
+        "trades": 10
+      },
+      "b1y-1": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.16005334839977503,
+        "max_drawdown": -0.1918223,
+        "total_return": -0.1606345,
+        "volatility": 0.11127313632428683,
+        "trades": 8
+      },
+      "b1y-2": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.04809283812920395,
+        "max_drawdown": -0.16160314966221923,
+        "total_return": -0.04827899999999996,
+        "volatility": 0.11285262100330655,
+        "trades": 6
+      },
+      "b1y-3": {
+        "ok": true,
+        "sessions": 253,
+        "cagr": -0.04932628884779322,
+        "max_drawdown": -0.06905511395784902,
+        "total_return": -0.04951709999999998,
+        "volatility": 0.06482538838678342,
+        "trades": 3
+      }
+    }
+  },
+  "vs_control": {
+    "r38-breakeven-lo-2": {
+      "fired_rungs": 4,
+      "dd_margin_pp": 0.780129922994155,
+      "mar_margin": -0.032050421624315345,
+      "cagr_margin_pp": -0.7591287234578581,
+      "verdict": "measured"
+    },
+    "r38-nominal-hi-4": {
+      "fired_rungs": 3,
+      "dd_margin_pp": 0.0314935325781307,
+      "mar_margin": -0.03725420141483171,
+      "cagr_margin_pp": -0.6661232481453006,
+      "verdict": "measured"
+    },
+    "r38-price-placebo": {
+      "fired_rungs": 5,
+      "dd_margin_pp": 0.9394468831718239,
+      "mar_margin": -0.0026912757589881986,
+      "cagr_margin_pp": -0.2991512470929658,
+      "verdict": "measured"
+    },
+    "r38-realyield-hi-1": {
+      "fired_rungs": 4,
+      "dd_margin_pp": 0.37049735941130923,
+      "mar_margin": 0.0012924589221430943,
+      "cagr_margin_pp": -0.10907587136933516,
+      "verdict": "measured"
+    },
+    "r38-realyield-hi-2": {
+      "fired_rungs": 2,
+      "dd_margin_pp": 0.0,
+      "mar_margin": -0.044699924333097135,
+      "cagr_margin_pp": -0.77497202585316,
+      "verdict": "measured"
+    },
+    "r38-realyield-lo-1": {
+      "fired_rungs": 5,
+      "dd_margin_pp": -1.722346247356188,
+      "mar_margin": 0.030186732598558197,
+      "cagr_margin_pp": 1.076825676661497,
+      "verdict": "measured"
+    }
+  }
+}

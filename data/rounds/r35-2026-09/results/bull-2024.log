@@ -1,0 +1,14 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+9 cards
+[1/9] r1 r35-absolute-2-order: 3s trades=16 ret=+4.42% dd=-13.31% rej=10
+[2/9] r1 r35-absolute-2-rank: 3s trades=13 ret=+5.82% dd=-11.25% rej=8
+[3/9] r1 r35-absolute-4-order: 3s trades=30 ret=+2.88% dd=-12.10% rej=7
+[4/9] r1 r35-absolute-4-rank: 3s trades=29 ret=+2.32% dd=-12.12% rej=6
+[5/9] r1 r35-macross-2-order: 1s trades=12 ret=+0.27% dd=-12.82% rej=0
+[6/9] r1 r35-macross-2-rank: 2s trades=12 ret=+0.27% dd=-12.82% rej=0
+[7/9] r1 r35-macross-4-order: 2s trades=19 ret=-0.50% dd=-10.29% rej=0
+[8/9] r1 r35-macross-4-rank: 2s trades=19 ret=-0.50% dd=-10.29% rej=0
+[9/9] r1 r35-passive-8-order: 2s trades=8 ret=+11.93% dd=-12.45% rej=0
+r1: 9 agents, 0 discoveries
+overall: 9 agents, 0 discoveries at alpha=0.1

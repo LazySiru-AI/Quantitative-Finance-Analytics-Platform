@@ -1,0 +1,23 @@
+{
+  "agent_id": "g1679-944a6f327542",
+  "display_name": "auto g1679 · pairs-rotation (roth)",
+  "discipline": "pairs-rotation",
+  "purpose": "roth",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 12/21-day EMA crossover trigger inside a 126-day SMA regime filter on CSCO, LRCX, CRM, AMAT, VUG, with a 8% stop, a 34% target and a 154-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "CSCO",
+    "LRCX",
+    "CRM",
+    "AMAT",
+    "VUG"
+  ],
+  "entry": "close > sma(126) and ema(12) crosses_above ema(21)",
+  "exit": "ema(12) crosses_below ema(21)",
+  "stop_loss_pct": "0.08",
+  "take_profit_pct": "0.34",
+  "max_hold_days": 154,
+  "max_positions": 3,
+  "position_pct": "0.3",
+  "rank_by": "rsi(14)",
+  "designed_through": "2026-02-13"
+}

@@ -1,0 +1,151 @@
+/**
+ * Scoped styles for `AllocationPie.tsx`. Classes are prefixed `alloc-pie-` to stay out of the
+ * shared `styles.css` namespace, the same convention `InstitutionsPanels.css` uses for
+ * `HoldingsPieChart.tsx` (imported the same way: `import "./AllocationPie.css";`). Reuses the
+ * shared `.panel`, `.badge`, `.placeholder`, `.muted`, `.view-tabs` and `.timeframe-tab` classes
+ * already defined in `styles.css` rather than redefining them here.
+ */
+
+:root {
+  /* Extends the design-token palette (--accent, --accent-2, --warn, --up, --down) with a fixed,
+     distinguishable set for donut slices beyond the first five. Deliberately its own numbered set
+     rather than `InstitutionsPanels.css`'s `--inst-pie-color-*` -- this component must not depend
+     on the Institutions page having loaded its CSS first. */
+  --alloc-pie-color-6: #4fc3ff;
+  --alloc-pie-color-7: #b6f24a;
+  --alloc-pie-color-8: #ff7a5c;
+  --alloc-pie-color-9: #9d7bff;
+  --alloc-pie-color-10: #5ce1e6;
+}
+
+.alloc-pie-panel {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.alloc-pie-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.alloc-pie-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.alloc-pie-toggle {
+  padding-right: 0;
+  border-right: none;
+}
+
+.alloc-pie-footnote {
+  margin: 1rem 0 0;
+  font-size: 0.82rem;
+}
+
+.alloc-pie-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.alloc-pie-donut {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  min-width: 140px;
+}
+
+.alloc-pie-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 240px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.alloc-pie-legend-row {
+  min-width: 0;
+}
+
+.alloc-pie-legend-btn,
+.alloc-pie-legend-static {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.alloc-pie-legend-btn {
+  background: none;
+  border: none;
+  padding: 0.15rem 0.25rem;
+  margin: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.alloc-pie-legend-btn:hover {
+  background: var(--panel-2);
+}
+
+.alloc-pie-legend-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.alloc-pie-legend-static {
+  padding: 0.15rem 0.25rem;
+  color: var(--muted);
+}
+
+.alloc-pie-swatch {
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.alloc-pie-legend-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alloc-pie-legend-value {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.alloc-pie-legend-percent {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  min-width: 3.5em;
+  text-align: right;
+}
+
+.alloc-pie-sector {
+  flex: 0 0 auto;
+}

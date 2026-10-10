@@ -1,0 +1,24 @@
+{
+  "orders": [
+    {
+      "order_id": "s4-xlv-buy",
+      "session": 4,
+      "decided_on": "2026-08-12",
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": "4",
+      "order_type": "market_on_open",
+      "thesis": "Deploying idle cash into the lowest-weight, strongest-price-action holding rather than opening an eighth name, in a regime I'm reading as risk-on: per brief-s4.json watchlist.XLV (as of 2026-08-12), close $168.44 sits above sma20 $163.62/sma50 $158.98/sma200 $153.29, with 20d +6.41% and 5d +2.61% -- confirmation across all three moving-average timeframes my process requires, and the close equals the 52-week high. I opened /report/XLV this session and read GET /api/report?symbol=XLV&interval=1d directly: drawdown.current shows peak $168.44 on 2026-08-10, trough $168.38 on 2026-08-13, depth -0.04% -- XLV is trading essentially at its own high right now. I checked the same field for my two largest sector names for contrast: XLE reports 'current drawdown' -15.6% and XLK -16.0%, both frozen at a mid-episode trough from over a month ago even though both last quoted within 1-4% of their own peaks on the same page -- I've filed that mismatch separately this session and am deliberately not leaning on that figure for XLE/XLK. XLV has no such ambiguity: its drawdown figure and its price both agree it's at a high. I also read GET /api/portfolio this session: XLV's pre-trade weight is 8.38% of total equity (weight_pct_of_1 0.083772), the lowest of my 7 holdings, leaving the most room under the 25% single-name cap and adding weight away from the QQQ+XLK tech overlap already concentrated in the book.",
+      "invalidation": "A daily close back below the 20-day SMA (163.62 as of 2026-08-12) breaks the at-highs uptrend this add is sized on. Also invalidated if /report/XLV's 'Price Above 200-Bar SMA'-type rule flips off FIRING on the decision table, or if the drawdown profile's current episode deepens materially beyond the ~0% read taken this session.",
+      "stop_level": "162.00",
+      "regime": "risk-on",
+      "conviction": 3,
+      "evidence": [
+        "close=168.44, sma20=163.6160, sma50=158.9842, sma200=153.2917, change_5d=+2.61%, change_20d=+6.41%, range_52w high=168.44=close via brief-s4.json watchlist.XLV (as of 2026-08-12)",
+        "GET /api/report?symbol=XLV&interval=1d (read this session): drawdown.current={peak_date:2026-08-10, peak_value:168.44, trough_date:2026-08-13, trough_value:168.38, depth:-0.00036, bars_underwater:3} -- effectively at highs, unlike the stale-trough reading on XLE/XLK",
+        "GET /api/portfolio (read this session): XLV market_value $842.20 pre-trade / weight_pct_of_1 0.083772 (lowest of 7 holdings); cash $1,661.42 available",
+        "Portfolio page /portfolio (read this session): stat strip confirms 7 open positions, room for an 8th under the mandate but chosen instead to add to the lowest-weight existing name"
+      ]
+    }
+  ]
+}

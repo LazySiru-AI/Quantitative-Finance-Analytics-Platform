@@ -1,0 +1,136 @@
+{
+  "run_id": "2026-08-03_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-12T20:55:14.786435+00:00",
+  "window": {
+    "first_session": "2026-08-03",
+    "last_session": "2026-08-07",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "10044.49",
+    "pnl": "44.49",
+    "return_pct_of_1": "0.004449",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "0.020576",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 6,
+    "buys": 5,
+    "sells": 1,
+    "gross_traded": "8032.60",
+    "total_fees": "0.03",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-08-07",
+    "cash": "4068.33",
+    "settled_cash": "4068.33",
+    "positions_market_value": "5976.16",
+    "equity": "10044.49",
+    "return_since_inception_pct_of_1": "0.004449",
+    "positions": [
+      {
+        "symbol": "IWM",
+        "quantity": "6",
+        "mark": "301.56",
+        "market_value": "1809.36",
+        "weight_pct_of_1": "0.180135"
+      },
+      {
+        "symbol": "XLE",
+        "quantity": "24",
+        "mark": "57.5",
+        "market_value": "1380.00",
+        "weight_pct_of_1": "0.137389"
+      },
+      {
+        "symbol": "XLF",
+        "quantity": "34",
+        "mark": "57.6",
+        "market_value": "1958.40",
+        "weight_pct_of_1": "0.194973"
+      },
+      {
+        "symbol": "XLV",
+        "quantity": "5",
+        "mark": "165.68",
+        "market_value": "828.40",
+        "weight_pct_of_1": "0.082473"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 4,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-3.csv",
+      "session-4.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "67b0847d6ccbeec47573ce8ce585027c775a91ba",
+        "adapter": "robinhood",
+        "row_count": 4,
+        "usable_row_count": 4,
+        "inserted": 0,
+        "duplicates": 4,
+        "conflicts": [],
+        "instruments": 3,
+        "skipped": {},
+        "ledger_fingerprint": "b251fe7262db767fe9422d6358e97e6088b25a870b95a0e16821c9d98c3c6f19",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "edc20ec00cd4995dc742f53c623a0771573b9862",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "b251fe7262db767fe9422d6358e97e6088b25a870b95a0e16821c9d98c3c6f19",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "99b98abc1ae0b36150236d3bd964cbe5b071f910",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "b251fe7262db767fe9422d6358e97e6088b25a870b95a0e16821c9d98c3c6f19",
+        "ledger_txn_count": 8
+      },
+      {
+        "import_id": "11d2b12326f467e3766cbc803bbc61443b000085",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "b251fe7262db767fe9422d6358e97e6088b25a870b95a0e16821c9d98c3c6f19",
+        "ledger_txn_count": 8
+      }
+    ],
+    "fingerprint_before_replay": "b251fe7262db767fe9422d6358e97e6088b25a870b95a0e16821c9d98c3c6f19",
+    "fingerprint_after_replay": "b251fe7262db767fe9422d6358e97e6088b25a870b95a0e16821c9d98c3c6f19",
+    "ledger_txn_count": 8,
+    "idempotent": true
+  },
+  "findings_recorded": 28
+}

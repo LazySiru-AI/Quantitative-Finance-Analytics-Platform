@@ -1,0 +1,92 @@
+{
+  "card": {
+    "agent_id": "c21-uncorrelated",
+    "display_name": "C21 - Uncorrelated: global macro trend across commodities, precious metals and EM equities",
+    "discipline": "risk-managed",
+    "thesis": "This card exists to be the leg of the combined book that does not move with B-momentum or C-trend, which trade the AI/semis capex cycle through NVDA/AVGO/TSM/META-type names. My universe -- DBC, USO, GDX, FXI, EWZ, SLV -- is priced by six different demand mechanisms with nothing to do with AI capex: global commodity supply/demand and inflation expectations (DBC, USO), monetary/safe-haven demand for precious metals plus mining-equity operating leverage (GDX, SLV), and two single-country equity markets whose dominant drivers are domestic policy and currency, not US tech earnings (FXI: China regulatory and property cycle; EWZ: Brazil commodity-and-political cycle). Measured over the trailing two years through 2026-02-13, daily-return correlation of each name to an equal-weighted composite of B-momentum's 12 tickers is 0.21-0.34 (DBC 0.268, USO 0.213, GDX 0.237, FXI 0.334, EWZ 0.338; SLV in the same 0.2-0.3 band) -- all well below the B-momentum/C-trend pairing this round measured at +0.57, and well below EEM (0.655), EFA (0.594) and HYG (0.563), which I tested and rejected precisely because they still smuggle in AI-heavy Taiwan/Korea tech (EEM/EFA both hold TSM-adjacent exposure) or equity risk-on credit beta (HYG). The counterparty on my trades is whoever is positioned for a US-tech-specific cycle and is surprised by an oil supply shock, a Fed tightening surprise that moves EM currencies, or a China policy shift -- none of which shows up in an NVDA earnings call. Unlike c14's TLT/IEF/GLD/LQD, which is duration-only and was flagged as idle 55 straight live sessions because close>sma(150) rejected all four correlated bond/gold names at once, this basket's six legs are only moderately correlated with each other (they are driven by oil, gold, China policy and Brazil politics separately), so over the trailing 90 sessions through cutoff at least one name was in its close>sma(100) regime on every single session (avg 4.7 of 6 names simultaneously), with zero idle days -- the diversification that keeps correlation to B-momentum low is the same diversification that keeps this card from ever going fully dark. Entry: close>sma(100) and ema(10) crosses_above ema(30) -- a faster regime filter than c14's sma(150) and no RSI overbought gate, chosen specifically to raise firing frequency rather than restrict it, since beating c14's idle-desk problem is this card's second job. Exit is the symmetric ema(10) crosses_below ema(30), backstopped by a 15% stop (matched to this basket's 14-37% annualized vol, well above bonds but below single growth stocks) and a 150-day time stop. Measured buy-and-hold evidence in the two windows built to be adversarial to a duration hedge: taper-2013, where TLT/IEF/GLD/LQD fell 0.2% to -11.7%, this basket averaged roughly flat (+0.1%, oil's own supply rally offsetting EWZ's EM sell-off); inflation-2021, where c14's basket was uniformly negative (-3.6% to -6.2%), this basket averaged roughly +6% on commodities' inflation rally offsetting weak gold miners and EM equities. Falsification: if this basket's daily correlation to B-momentum rises materially above the measured 0.2-0.35 band once trading windows include a genuine global risk-off event (all risk assets, including commodities and EM, selling off in the same session as AI names), or if the six legs stop diversifying each other's regime timing and start entering/exiting together the way c14's four did, the uncorrelated-leg thesis is wrong, not just underperforming.",
+    "universe": [
+      "DBC",
+      "USO",
+      "GDX",
+      "FXI",
+      "EWZ",
+      "SLV"
+    ],
+    "entry": "close > sma(100) and ema(10) crosses_above ema(30)",
+    "exit": "ema(10) crosses_below ema(30)",
+    "stop_loss_pct": "0.15",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 6,
+    "position_pct": "0.15",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 126,
+  "starting_equity": "10000.00",
+  "ending_equity": "10023.22",
+  "total_return": "0.0023219999999999352",
+  "max_drawdown": "-0.022199806190593918",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.6984126984126984,
+  "capital_exposure": 0.1045798253968254,
+  "win_rate": 0.3333333333333333,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "GDX",
+      "entry_date": "2014-09-02",
+      "entry_price": "26.17",
+      "exit_date": "2014-09-03",
+      "exit_price": "25.90",
+      "quantity": "56",
+      "exit_reason": "rule",
+      "pnl": "-15.17",
+      "return_pct": "-0.01035127463289480866859544735",
+      "bars_held": 1
+    },
+    {
+      "symbol": "EWZ",
+      "entry_date": "2014-08-20",
+      "entry_price": "50.87",
+      "exit_date": "2014-09-15",
+      "exit_price": "47.91",
+      "quantity": "29",
+      "exit_reason": "rule",
+      "pnl": "-85.88",
+      "return_pct": "-0.05821465127471648488710235014",
+      "bars_held": 17
+    },
+    {
+      "symbol": "FXI",
+      "entry_date": "2014-11-03",
+      "entry_price": "39.59",
+      "exit_date": "2014-11-21",
+      "exit_price": "39.98",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "14.38",
+      "return_pct": "0.009816838814060334646341213656",
+      "bars_held": 14
+    },
+    {
+      "symbol": "FXI",
+      "entry_date": "2014-11-24",
+      "entry_price": "40.17",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "37",
+      "exit_reason": "open_at_end",
+      "pnl": "109.89",
+      "return_pct": "0.07393577296489917849141150112",
+      "bars_held": 56
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "0.06763211382113821138211382114",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

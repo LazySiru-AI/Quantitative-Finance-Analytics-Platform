@@ -1,0 +1,107 @@
+{
+  "orders": [
+    {
+      "order_id": "s1-spy-buy",
+      "session": 1,
+      "decided_on": "2026-08-07",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "Brief watchlist (2026-08-07 close $773.26) shows SPY above its own sma20 ($750.17), sma50 ($747.19) and sma200 ($702.97), sitting at its 52-week high, with 5d +3.51% momentum -- broad risk-on confirmed across three timeframes. The benchmark leg of the sleeve.",
+      "invalidation": "Close reverses back below sma20 (~750.17), or the 52-week-high breakout fails and price re-enters the prior range.",
+      "stop_level": "750.00",
+      "regime": "risk-on",
+      "conviction": 4,
+      "evidence": [
+        "close=773.26, sma20=750.1725, sma50=747.1890, sma200=702.9705, change_5d=+3.51% via brief-s1.json watchlist.SPY (as of 2026-08-07)",
+        "close 773.26 sits at the 52w high of the 631.97-773.26 range via brief-s1.json watchlist.SPY"
+      ]
+    },
+    {
+      "order_id": "s1-qqq-buy",
+      "session": 1,
+      "decided_on": "2026-08-07",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "QQQ closed 723.03 on 2026-08-07, above sma20 (700.34), sma50 (714.57) and sma200 (647.85) per the watchlist brief, with 5d +5.09% against a softer 20d -0.34% -- a base that is reaccelerating this week, the strongest single-week momentum among the index-level names I checked.",
+      "invalidation": "Close back below sma50 (714.57) breaks the medium-term trend anchoring this position; a resumption of the 20d downtrend without a new 5d high invalidates the reacceleration read.",
+      "stop_level": "700.00",
+      "regime": "risk-on",
+      "conviction": 4,
+      "evidence": [
+        "close=723.03, sma20=700.3395, sma50=714.5674, sma200=647.8526, change_5d=+5.09%, change_20d=-0.34% via brief-s1.json watchlist.QQQ (as of 2026-08-07)"
+      ]
+    },
+    {
+      "order_id": "s1-xlk-buy",
+      "session": 1,
+      "decided_on": "2026-08-07",
+      "symbol": "XLK",
+      "side": "buy",
+      "quantity": "7",
+      "order_type": "market_on_open",
+      "thesis": "XLK (technology) closed 187.97 on 2026-08-07, above sma20/sma50/sma200 (178.89/183.34/156.46) with 5d +7.20% -- the strongest momentum of any name on the watchlist, consistent with tech sector leadership inside a risk-on tape.",
+      "invalidation": "Close below sma20 (178.89) ends the leadership read; XLK underperforming SPY on a rolling 5d basis would invalidate the sector-leadership thesis even while XLK itself stays above sma20.",
+      "stop_level": "178.50",
+      "regime": "risk-on",
+      "conviction": 4,
+      "evidence": [
+        "close=187.97, sma20=178.8935, sma50=183.3392, sma200=156.4647, change_5d=+7.20% via brief-s1.json watchlist.XLK (as of 2026-08-07)"
+      ]
+    },
+    {
+      "order_id": "s1-iwm-buy",
+      "session": 1,
+      "decided_on": "2026-08-07",
+      "symbol": "IWM",
+      "side": "buy",
+      "quantity": "3",
+      "order_type": "market_on_open",
+      "thesis": "IWM (small caps) closed 301.56 on 2026-08-07, within 0.05% of its own 52-week high (301.71) and above sma20/sma50/sma200 (294.77/293.87/267.17) -- breadth confirmation for the risk-on read beyond mega-cap tech.",
+      "invalidation": "Failure to make a fresh 52w high within the week, or a close back below sma20 (294.77), signals breadth is not confirming and the regime read should be revisited.",
+      "stop_level": "294.50",
+      "regime": "risk-on",
+      "conviction": 3,
+      "evidence": [
+        "close=301.56, range_52w.high=301.71, sma20=294.7720, sma50=293.8730, sma200=267.1721 via brief-s1.json watchlist.IWM (as of 2026-08-07)"
+      ]
+    },
+    {
+      "order_id": "s1-xlf-buy",
+      "session": 1,
+      "decided_on": "2026-08-07",
+      "symbol": "XLF",
+      "side": "buy",
+      "quantity": "17",
+      "order_type": "market_on_open",
+      "thesis": "XLF (financials) closed 57.60 on 2026-08-07, above sma20/sma50/sma200 (56.80/54.79/52.97) and near its 52-week high (58.00), with 20d +3.39% -- a second confirming sector alongside tech, added for diversification within the risk-on tilt.",
+      "invalidation": "Close below sma20 (56.80), or a reversal in the rate/credit backdrop that pressures financials specifically, breaks this leg.",
+      "stop_level": "56.75",
+      "regime": "risk-on",
+      "conviction": 3,
+      "evidence": [
+        "close=57.60, sma20=56.7965, sma50=54.7928, sma200=52.9658, change_20d=+3.39% via brief-s1.json watchlist.XLF (as of 2026-08-07)"
+      ]
+    },
+    {
+      "order_id": "s1-xlv-buy",
+      "session": 1,
+      "decided_on": "2026-08-07",
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": "5",
+      "order_type": "market_on_open",
+      "thesis": "XLV (healthcare) closed 165.68 on 2026-08-07, above sma20/sma50/sma200 (162.27/157.85/152.95) and close to its 52-week high (167.26) -- a lower-beta sector still confirming the uptrend, used to diversify the sleeve's factor exposure rather than concentrate purely in high-beta tech and small caps.",
+      "invalidation": "Close below sma20 (162.27) breaks the short-term trend; healthcare lagging while other sectors keep making highs would mean the position is not delivering the diversification intended.",
+      "stop_level": "162.00",
+      "regime": "risk-on",
+      "conviction": 3,
+      "evidence": [
+        "close=165.68, sma20=162.2710, sma50=157.8502, sma200=152.9529 via brief-s1.json watchlist.XLV (as of 2026-08-07)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+/* =============================================================================
+   Data page (`Data.tsx`) and its six tab panels (`pages/data/*`).
+
+   Reuses .panel/.subtitle/.placeholder/.muted/.callout/.data-table/.table-wrap/.tile-grid/.badge/
+   .status-grid/.year-select/.import-actions/.symbol-submit from the shared `styles.css` -- every
+   panel on this page is built from those existing primitives (the same ones `Tax.tsx`/
+   `Activity.tsx` already use), plus `FolderTabs`/`ConfirmSheet`/`StatusPill`/`StatTile`/`FilterBar`,
+   each of which ships its own CSS. This file adds only the handful of rules genuinely new to this
+   page's own layout, matching the precedent `Institutions.css`'s own docstring sets for a per-page
+   stylesheet that intentionally stays small.
+   ============================================================================= */
+
+/* The per-row action buttons on the Users table (Disable/Enable, Reset password, Revoke sessions)
+   render as adjacent inline `<button>`s separated by a literal space in the JSX -- this closes the
+   gap up to something clickable without a mis-click, without introducing a wrapper element around
+   three buttons that already sit in one `<td>`. */
+.data-table td button + button {
+  margin-left: 0.4rem;
+}
+
+/* The Sectors table's per-row `<select>` should not stretch to the column's full width just because
+   the column itself is comfortably wide -- a short, scannable control reads better in a table where
+   every row repeats it. */
+.data-table select {
+  min-width: 9rem;
+}
+
+/* The create-user and reset-password forms render as their own `.panel` beneath the table rather
+   than a modal -- consistent with `ImportPanel`'s own "decisions" block sitting inline beneath its
+   table. Labels stack their input on the next line, same as `Tax.tsx`'s `.year-select`, so a
+   password field is never mistaken for sitting beside its label on a narrow viewport. */
+.data-table + form.panel,
+form.panel + form.panel {
+  margin-top: 1rem;
+}
+
+form.panel label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+form.panel input {
+  display: block;
+  margin-top: 0.25rem;
+  width: 100%;
+  max-width: 22rem;
+}

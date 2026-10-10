@@ -1,0 +1,4 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+06/18/2026,06/18/2026,06/19/2026,AAPL,"AAPL paper fill, UAT persona pro-investor-01",Sell,4,$297.96,"$1,191.84"
+06/18/2026,06/18/2026,06/19/2026,,Regulatory fees on AAPL sale (s4-1),FEE,,,($0.03)
+06/18/2026,06/18/2026,06/19/2026,AAPL,"AAPL paper fill, UAT persona pro-investor-01",Buy,2,$298.26,($596.52)

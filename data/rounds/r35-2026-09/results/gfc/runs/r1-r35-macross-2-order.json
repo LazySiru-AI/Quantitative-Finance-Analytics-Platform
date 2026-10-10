@@ -1,0 +1,158 @@
+{
+  "card": {
+    "agent_id": "r35-macross-2-order",
+    "display_name": "R35 country rotation / macross / 2 slots / order",
+    "discipline": "trend",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 35 cell. Form: a 10/30-day EMA crossover trigger inside a 200-day SMA regime filter. Applied identically across eight country and regional equity ETFs with a binding 2-slot cap and 0.44 of the book per slot, so at most 88% of capital is deployed -- the same budget every card in this field carries, which is what makes the slot cap a question about concentration rather than about how much money is in the market. Slots are filled in the order the universe is written, which is the arbitrary tiebreak PROTOCOL section 7 measures at sigma = 21.2 points. The hypothesis under test is not that this rule is good -- the programme's record across rounds 1-33 is that no durable edge has been found, and that record is the prior this card argues against. It is that country dispersion is a source this shape has never been pointed at, and that a rotation which cannot beat its own universe's buy-and-hold on that axis has been shown not to carry information there. This engine has no cross-symbol operator -- entry and exit are evaluated per instrument against that instrument's own bars only -- so the rotation here is produced entirely by the universe, the slot cap and the fill order, exactly as c20-rotation's own thesis says of the sector version. The universe is eight single-country and regional equity ETFs chosen on one mechanical criterion and one legal one: enough stored history to clear every window in the matrix including gfc, and total absence from every savings- or trading-purpose card in the library, because this card is roth-purpose and Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss replaced inside an IRA. EEM, EWZ, FXI and INDA belong in this universe on the merits and are excluded on that second criterion alone. Ticker disjointness is necessary and not sufficient under IRC section 1091: VWO tracks a different index from the taxable book's EEM and ILF is not EWZ, but the economic exposures are close, and nothing here claims the roster is section 1091-safe. EFA contains EWJ, EWG and EWU, so this is not eight independent bets; that redundancy is left in and counted against the field under Benjamini-Hochberg rather than papered over with extra cells. The benchmark is SPY, price-only, in USD, which is the wrong benchmark for a non-US book and is pre-registered as this round's known confound -- the field carries its own within-universe passive control (r35-passive-8-order) so the rotation can be read against buy-and-hold of the same eight names rather than only against a decade of US outperformance. Not a proposal to trade anything. See strategy-program/ROUND-35-PLAN.md.",
+    "falsification": "Wrong if this cell's median exposure-adjusted excess over the eight main windows fails to beat the field's passive control (r35-passive-8-order) by more than 21.2 percentage points, the programme's measured ordering-noise floor. Beating SPY is not the test and failing to beat SPY is not the falsification: a non-US book measured against a US price-only benchmark over 2011-2026 inherits an asset-class gap no rule can close, which is why the control is in the field. A margin inside 21.2pp is a null for this cell whichever side of the control it lands on.",
+    "universe": [
+      "EWJ",
+      "EWG",
+      "EWU",
+      "EWC",
+      "EWY",
+      "ILF",
+      "EFA",
+      "VWO"
+    ],
+    "entry": "close > sma(200) and ema(10) crosses_above ema(30)",
+    "exit": "ema(10) crosses_below ema(30)",
+    "stop_loss_pct": "0.10",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 2,
+    "position_pct": "0.44",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 356,
+  "starting_equity": "10000.00",
+  "ending_equity": "8874.01",
+  "total_return": "-0.112599",
+  "max_drawdown": "-0.1442500671628819",
+  "sharpe": -0.762931119761357,
+  "sortino": -0.34965038653972563,
+  "volatility": 0.10374431540207303,
+  "exposure": 0.26685393258426965,
+  "capital_exposure": 0.14183066011235956,
+  "win_rate": 0.125,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "ILF",
+      "entry_date": "2007-12-06",
+      "entry_price": "52.06",
+      "exit_date": "2007-12-19",
+      "exit_price": "48.58",
+      "quantity": "84",
+      "exit_reason": "rule",
+      "pnl": "-292.45",
+      "return_pct": "-0.06687567458792967821012384977",
+      "bars_held": 9
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2007-11-30",
+      "entry_price": "36.13",
+      "exit_date": "2007-12-20",
+      "exit_price": "34.75",
+      "quantity": "123",
+      "exit_reason": "rule",
+      "pnl": "-169.88",
+      "return_pct": "-0.03822690870141471965508473241",
+      "bars_held": 14
+    },
+    {
+      "symbol": "ILF",
+      "entry_date": "2007-12-26",
+      "entry_price": "50.83",
+      "exit_date": "2008-01-03",
+      "exit_price": "49.50",
+      "quantity": "85",
+      "exit_reason": "rule",
+      "pnl": "-113.18",
+      "return_pct": "-0.02619573896841837266088808138",
+      "bars_held": 5
+    },
+    {
+      "symbol": "EWG",
+      "entry_date": "2007-12-28",
+      "entry_price": "35.97",
+      "exit_date": "2008-01-07",
+      "exit_price": "34.72",
+      "quantity": "124",
+      "exit_reason": "rule",
+      "pnl": "-155.14",
+      "return_pct": "-0.03478256970414413444895836136",
+      "bars_held": 5
+    },
+    {
+      "symbol": "EWC",
+      "entry_date": "2008-01-04",
+      "entry_price": "32.40",
+      "exit_date": "2008-01-07",
+      "exit_price": "31.78",
+      "quantity": "135",
+      "exit_reason": "rule",
+      "pnl": "-83.84",
+      "return_pct": "-0.01916780978509373571101966164",
+      "bars_held": 1
+    },
+    {
+      "symbol": "VWO",
+      "entry_date": "2008-02-27",
+      "entry_price": "50.36",
+      "exit_date": "2008-03-07",
+      "exit_price": "47.12",
+      "quantity": "86",
+      "exit_reason": "rule",
+      "pnl": "-278.77",
+      "return_pct": "-0.06436679165820049134602951771",
+      "bars_held": 7
+    },
+    {
+      "symbol": "ILF",
+      "entry_date": "2008-02-14",
+      "entry_price": "50.37",
+      "exit_date": "2008-03-20",
+      "exit_price": "47.65",
+      "quantity": "87",
+      "exit_reason": "rule",
+      "pnl": "-236.77",
+      "return_pct": "-0.05403006259427363943598976767",
+      "bars_held": 24
+    },
+    {
+      "symbol": "ILF",
+      "entry_date": "2008-04-02",
+      "entry_price": "52.91",
+      "exit_date": "2008-06-12",
+      "exit_price": "55.37",
+      "quantity": "83",
+      "exit_reason": "rule",
+      "pnl": "204.04",
+      "return_pct": "0.04646216694409465493802843200",
+      "bars_held": 50
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "EWC",
+      "reason": "$4411.86 exceeds $4278.44 of settled cash (total cash $4278.44; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.5622750642673521850899742931",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

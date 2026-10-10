@@ -1,0 +1,32 @@
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+27 cards
+[1/27] r1 A-rotation: 100s trades=22 ret=-33.27% dd=-34.55% rej=111
+[2/27] r1 A1-alpha-order: 99s trades=25 ret=-35.65% dd=-36.83% rej=116
+[3/27] r1 A2-cash-headroom: 101s trades=33 ret=-28.58% dd=-29.92% rej=71
+[4/27] r1 A3-no-target: 97s trades=22 ret=-33.27% dd=-34.55% rej=111
+[5/27] r1 A4-tight-stop: 82s trades=22 ret=-33.61% dd=-34.88% rej=111
+[6/27] r1 B-momentum: 79s trades=5 ret=-6.77% dd=-7.77% rej=0
+[7/27] r1 B1-with-target: 100s trades=5 ret=-6.77% dd=-7.77% rej=0
+[8/27] r1 B2-hold-90: 100s trades=5 ret=-6.77% dd=-7.77% rej=0
+[9/27] r1 B3-concentrated: 99s trades=5 ret=-10.17% dd=-11.61% rej=0
+[10/27] r1 B4-tight-stop: 100s trades=5 ret=-5.63% dd=-6.65% rej=0
+[11/27] r1 C-trend: 75s trades=5 ret=-6.97% dd=-7.60% rej=0
+[12/27] r1 c01-meanrev: 80s trades=8 ret=-0.60% dd=-3.11% rej=0
+[13/27] r1 c02-volatility: 52s trades=4 ret=-6.71% dd=-15.36% rej=0
+[14/27] r1 c03-breakout: 85s trades=9 ret=-8.35% dd=-10.94% rej=0
+[15/27] r1 c04-riskmanaged: 39s trades=18 ret=-6.58% dd=-6.58% rej=0
+[16/27] r1 c05-trend: 31s trades=13 ret=-3.94% dd=-6.22% rej=0
+[17/27] r1 c06-13f-momentum: 67s trades=25 ret=-15.62% dd=-15.62% rej=0
+[18/27] r1 c07-chop: 85s trades=15 ret=+7.91% dd=-2.35% rej=0
+[19/27] r1 c08-generalist: 57s trades=24 ret=-10.82% dd=-11.03% rej=1
+[20/27] r1 c09-convex: 18s trades=6 ret=-0.70% dd=-1.61% rej=0
+[21/27] r1 c10-momentum: 77s trades=13 ret=-1.19% dd=-8.00% rej=0
+[22/27] r1 c11-breakout: 33s trades=1 ret=-1.25% dd=-3.72% rej=0
+[23/27] r1 D-13f-newbuys: FAILED GuardFailed: D-13f-newbuys: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against SNDK (failed): causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_200: only 0 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: rsi_14: only 0 bars against a 14-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[24/27] r1 E-asymmetric: FAILED GuardFailed: E-asymmetric: entry expression 'close > bb_upper(20,2) and macd_hist(12,26,9) > 0 and close > sma(50)' failed the lookahead guard against NBIS (failed): causality: bb_20_2: only 0 bars against a 19-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: macd_12_26_9: only 0 bars against a 33-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[25/27] r1 F-fastrev: FAILED GuardFailed: F-fastrev: entry expression 'rsi(3) < 15 and close < bb_lower(10,2)' failed the lookahead guard against CRDO (failed): causality: rsi_3: only 0 bars against a 3-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: bb_10_2: only 0 bars against a 9-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[26/27] r1 G-volatility: 76s trades=15 ret=-20.72% dd=-21.04% rej=0
+[27/27] r1 H-trend-diversified: 50s trades=6 ret=-3.11% dd=-7.23% rej=0
+r1: 24 agents, 10 discoveries
+overall: 24 agents, 10 discoveries at alpha=0.1

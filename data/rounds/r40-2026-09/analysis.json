@@ -1,0 +1,165 @@
+{
+  "round": 40,
+  "n_cells": 8,
+  "arm_minus_control": {
+    "swing-structure/slots3": {
+      "a": "r40-swing-structure-slots3",
+      "b": "r40-none-slots3",
+      "median_diff": -0.01496486197163727,
+      "mean_paired_diff": -0.04001881780830736,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.8046875,
+      "inside_floor": true
+    },
+    "rsi-confirm/slots3": {
+      "a": "r40-rsi-confirm-slots3",
+      "b": "r40-none-slots3",
+      "median_diff": 0.0782395517667928,
+      "mean_paired_diff": 0.0372562625091093,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.5546875,
+      "inside_floor": true
+    },
+    "divergence-proxy-negative-control/slots3": {
+      "a": "r40-divergence-proxy-negative-control-slots3",
+      "b": "r40-none-slots3",
+      "median_diff": -0.03625748730522568,
+      "mean_paired_diff": -0.021482208136136268,
+      "windows_a_gt_b": 2,
+      "windows_a_lt_b": 5,
+      "n_windows": 8,
+      "p_signflip": 0.234375,
+      "inside_floor": true
+    },
+    "swing-structure/slots6": {
+      "a": "r40-swing-structure-slots6",
+      "b": "r40-none-slots6",
+      "median_diff": -0.010196405931686673,
+      "mean_paired_diff": -0.04466409008597973,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.671875,
+      "inside_floor": true
+    },
+    "rsi-confirm/slots6": {
+      "a": "r40-rsi-confirm-slots6",
+      "b": "r40-none-slots6",
+      "median_diff": 0.048248946726745824,
+      "mean_paired_diff": 0.011883225821484402,
+      "windows_a_gt_b": 5,
+      "windows_a_lt_b": 3,
+      "n_windows": 8,
+      "p_signflip": 0.8359375,
+      "inside_floor": true
+    },
+    "divergence-proxy-negative-control/slots6": {
+      "a": "r40-divergence-proxy-negative-control-slots6",
+      "b": "r40-none-slots6",
+      "median_diff": -0.000381000483427138,
+      "mean_paired_diff": -0.006523798827294284,
+      "windows_a_gt_b": 3,
+      "windows_a_lt_b": 5,
+      "n_windows": 8,
+      "p_signflip": 0.2734375,
+      "inside_floor": true
+    }
+  },
+  "bh": [
+    {
+      "cell": "r40-divergence-proxy-negative-control-slots3",
+      "vs": "r40-none-slots6",
+      "median_diff": -0.04991201897004763,
+      "p": 0.2109375,
+      "q": 0.9553571428571429
+    },
+    {
+      "cell": "r40-divergence-proxy-negative-control-slots6",
+      "vs": "r40-none-slots6",
+      "median_diff": -0.000381000483427138,
+      "p": 0.2734375,
+      "q": 0.9553571428571429
+    },
+    {
+      "cell": "r40-none-slots3",
+      "vs": "r40-none-slots6",
+      "median_diff": -0.013654531664821947,
+      "p": 0.65625,
+      "q": 0.9553571428571429
+    },
+    {
+      "cell": "r40-none-slots6",
+      "vs": "r40-none-slots6",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    },
+    {
+      "cell": "r40-rsi-confirm-slots3",
+      "vs": "r40-none-slots6",
+      "median_diff": 0.06458502010197086,
+      "p": 0.8125,
+      "q": 0.9553571428571429
+    },
+    {
+      "cell": "r40-rsi-confirm-slots6",
+      "vs": "r40-none-slots6",
+      "median_diff": 0.048248946726745824,
+      "p": 0.8359375,
+      "q": 0.9553571428571429
+    },
+    {
+      "cell": "r40-swing-structure-slots3",
+      "vs": "r40-none-slots6",
+      "median_diff": -0.02861939363645922,
+      "p": 0.6015625,
+      "q": 0.9553571428571429
+    },
+    {
+      "cell": "r40-swing-structure-slots6",
+      "vs": "r40-none-slots6",
+      "median_diff": -0.010196405931686673,
+      "p": 0.671875,
+      "q": 0.9553571428571429
+    }
+  ],
+  "min_q": 0.9553571428571429,
+  "trades": {
+    "r40-divergence-proxy-negative-control-slots3": 463,
+    "r40-divergence-proxy-negative-control-slots6": 819,
+    "r40-none-slots3": 456,
+    "r40-none-slots6": 834,
+    "r40-rsi-confirm-slots3": 171,
+    "r40-rsi-confirm-slots6": 202,
+    "r40-swing-structure-slots3": 94,
+    "r40-swing-structure-slots6": 99
+  },
+  "negctrl_minus_none": {
+    "slots3": {
+      "a": "r40-divergence-proxy-negative-control-slots3",
+      "b": "r40-none-slots3",
+      "median_diff": -0.03625748730522568,
+      "mean_paired_diff": -0.021482208136136268,
+      "windows_a_gt_b": 2,
+      "windows_a_lt_b": 5,
+      "n_windows": 8,
+      "p_signflip": 0.234375,
+      "inside_floor": true
+    },
+    "slots6": {
+      "a": "r40-divergence-proxy-negative-control-slots6",
+      "b": "r40-none-slots6",
+      "median_diff": -0.000381000483427138,
+      "mean_paired_diff": -0.006523798827294284,
+      "windows_a_gt_b": 3,
+      "windows_a_lt_b": 5,
+      "n_windows": 8,
+      "p_signflip": 0.2734375,
+      "inside_floor": true
+    }
+  }
+}

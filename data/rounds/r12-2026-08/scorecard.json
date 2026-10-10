@@ -1,0 +1,303 @@
+{
+  "store": {
+    "spy_rows": 8448,
+    "spy_last": "2026-08-21",
+    "expected_spy_rows": 8445,
+    "expected_spy_last": "2026-08-18"
+  },
+  "live_matrix": {
+    "B-momentum": {
+      "live-1": "-0.85%",
+      "live-2": "+10.50%",
+      "live-3": "+12.89%",
+      "live-4": "+17.12%",
+      "live-5": "-12.62%",
+      "live-6": "-2.58%"
+    },
+    "B2-hold-90": {
+      "live-1": "-0.85%",
+      "live-2": "+10.50%",
+      "live-3": "+12.89%",
+      "live-4": "+17.12%",
+      "live-5": "-12.62%",
+      "live-6": "-3.84%"
+    },
+    "B3-concentrated": {
+      "live-1": "-1.23%",
+      "live-2": "+14.69%",
+      "live-3": "+15.88%",
+      "live-4": "+26.47%",
+      "live-5": "-14.88%",
+      "live-6": "+0.14%"
+    },
+    "B4-tight-stop": {
+      "live-1": "-0.85%",
+      "live-2": "+10.50%",
+      "live-3": "+12.89%",
+      "live-4": "+17.12%",
+      "live-5": "-12.62%",
+      "live-6": "-2.58%"
+    },
+    "A-rotation": {
+      "live-1": "+0.05%",
+      "live-2": "+20.34%",
+      "live-3": "+15.80%",
+      "live-4": "+6.89%",
+      "live-5": "-6.95%",
+      "live-6": "-6.24%"
+    },
+    "c20-rotation": {
+      "live-1": "+12.77%",
+      "live-2": "-4.56%",
+      "live-3": "+5.56%",
+      "live-4": "-8.77%",
+      "live-5": "-0.85%",
+      "live-6": "-2.16%"
+    },
+    "C-trend": {
+      "live-1": "+0.00%",
+      "live-2": "+3.74%",
+      "live-3": "+4.71%",
+      "live-4": "+3.62%",
+      "live-5": "-6.60%",
+      "live-6": "-8.20%"
+    },
+    "H-trend-diversified": {
+      "live-1": "+0.00%",
+      "live-2": "+0.22%",
+      "live-3": "-0.06%",
+      "live-4": "-1.45%",
+      "live-5": "-1.11%",
+      "live-6": "-2.73%"
+    },
+    "c07-chop": {
+      "live-1": "-0.12%",
+      "live-2": "-1.30%",
+      "live-3": "-0.00%",
+      "live-4": "+0.00%",
+      "live-5": "-0.00%",
+      "live-6": "-0.00%"
+    },
+    "c18-meanrev": {
+      "live-1": "+2.66%",
+      "live-2": "-4.89%",
+      "live-3": "+0.48%",
+      "live-4": "+1.32%",
+      "live-5": "+0.34%",
+      "live-6": "+0.20%"
+    },
+    "c09-convex": {
+      "live-1": "+0.00%",
+      "live-2": "+0.00%",
+      "live-3": "+0.00%",
+      "live-4": "+0.00%",
+      "live-5": "-0.18%",
+      "live-6": "+0.09%"
+    },
+    "c19-volatility": {
+      "live-1": "+0.00%",
+      "live-2": "+0.00%",
+      "live-3": "+0.00%",
+      "live-4": "+0.00%",
+      "live-5": "-0.16%",
+      "live-6": "-0.00%"
+    },
+    "c14-riskmanaged-wide": {
+      "live-1": "+0.00%",
+      "live-2": "+0.00%",
+      "live-3": "+0.00%",
+      "live-4": "+0.00%",
+      "live-5": "+0.00%",
+      "live-6": "+0.00%"
+    },
+    "c21-uncorrelated": {
+      "live-1": "-0.79%",
+      "live-2": "+0.47%",
+      "live-3": "-5.57%",
+      "live-4": "-0.21%",
+      "live-5": "+0.07%",
+      "live-6": "-1.71%"
+    },
+    "c11-breakout": {
+      "live-1": "-0.58%",
+      "live-2": "-0.14%",
+      "live-3": "+0.01%",
+      "live-4": "+0.00%",
+      "live-5": "+0.00%",
+      "live-6": "+0.04%"
+    }
+  },
+  "live_summary": {
+    "B-momentum": {
+      "median": "+4.82%",
+      "hits": 3,
+      "n": 6
+    },
+    "B2-hold-90": {
+      "median": "+4.82%",
+      "hits": 3,
+      "n": 6
+    },
+    "B3-concentrated": {
+      "median": "+7.41%",
+      "hits": 4,
+      "n": 6
+    },
+    "B4-tight-stop": {
+      "median": "+4.82%",
+      "hits": 3,
+      "n": 6
+    },
+    "A-rotation": {
+      "median": "+3.47%",
+      "hits": 4,
+      "n": 6
+    },
+    "c20-rotation": {
+      "median": "-1.51%",
+      "hits": 2,
+      "n": 6
+    },
+    "C-trend": {
+      "median": "+1.81%",
+      "hits": 3,
+      "n": 6
+    },
+    "H-trend-diversified": {
+      "median": "-0.58%",
+      "hits": 1,
+      "n": 6
+    },
+    "c07-chop": {
+      "median": "-0.00%",
+      "hits": 1,
+      "n": 6
+    },
+    "c18-meanrev": {
+      "median": "+0.41%",
+      "hits": 5,
+      "n": 6
+    },
+    "c09-convex": {
+      "median": "+0.00%",
+      "hits": 1,
+      "n": 6
+    },
+    "c19-volatility": {
+      "median": "+0.00%",
+      "hits": 0,
+      "n": 6
+    },
+    "c14-riskmanaged-wide": {
+      "median": "+0.00%",
+      "hits": 0,
+      "n": 6
+    },
+    "c21-uncorrelated": {
+      "median": "-0.50%",
+      "hits": 2,
+      "n": 6
+    },
+    "c11-breakout": {
+      "median": "+0.00%",
+      "hits": 4,
+      "n": 6
+    }
+  },
+  "backtest_rank_range": {
+    "B-momentum": 1,
+    "B2-hold-90": 6,
+    "B3-concentrated": 4,
+    "B4-tight-stop": 1,
+    "A-rotation": 9,
+    "c20-rotation": 5,
+    "C-trend": 1,
+    "H-trend-diversified": 2,
+    "c07-chop": 4,
+    "c18-meanrev": 3,
+    "c09-convex": 1,
+    "c19-volatility": 3,
+    "c14-riskmanaged-wide": 1,
+    "c21-uncorrelated": 1,
+    "c11-breakout": 4
+  },
+  "gate_a_pass": [
+    "A-rotation",
+    "B-momentum",
+    "B2-hold-90",
+    "B3-concentrated",
+    "B4-tight-stop",
+    "C-trend",
+    "H-trend-diversified",
+    "c07-chop"
+  ],
+  "gate_l_pass": [
+    "A-rotation",
+    "B-momentum",
+    "B2-hold-90",
+    "B3-concentrated",
+    "B4-tight-stop",
+    "C-trend",
+    "H-trend-diversified"
+  ],
+  "gate_c_pass": [
+    "A-rotation",
+    "B-momentum",
+    "B2-hold-90",
+    "B3-concentrated",
+    "B4-tight-stop",
+    "C-trend"
+  ],
+  "ranked": [
+    "B3-concentrated",
+    "B-momentum",
+    "B4-tight-stop",
+    "B2-hold-90",
+    "A-rotation",
+    "C-trend"
+  ],
+  "novelty": {
+    "B3-concentrated": {
+      "count": null,
+      "fraction": null,
+      "n": null,
+      "first": true
+    },
+    "B-momentum": {
+      "count": 1.3243243243243243,
+      "fraction": 0.23318318318318318,
+      "n": 111,
+      "first": false
+    },
+    "B4-tight-stop": {
+      "count": 0.0,
+      "fraction": 0.0,
+      "n": 111,
+      "first": false
+    },
+    "B2-hold-90": {
+      "count": 0.08108108108108109,
+      "fraction": 0.014564564564564566,
+      "n": 111,
+      "first": false
+    },
+    "A-rotation": {
+      "count": 1.3220338983050848,
+      "fraction": 0.4985875706214689,
+      "n": 118,
+      "first": false
+    },
+    "C-trend": {
+      "count": 1.2134831460674158,
+      "fraction": 0.36985018726591756,
+      "n": 89,
+      "first": false
+    }
+  },
+  "seats": [
+    "B3-concentrated",
+    "B-momentum",
+    "A-rotation",
+    "C-trend"
+  ]
+}

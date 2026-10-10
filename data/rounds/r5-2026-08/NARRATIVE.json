@@ -1,0 +1,20 @@
+{
+  "round_id": "r5-2026-08",
+  "title": "Round 5 - the horizon ladder",
+  "focus": "Every window measured in rounds 1 through 4 was between 45 and 284 sessions long. Does the ranking depend on how long the competition holds cards open, six months versus ten years, separate from the regime-mix question round 4 had just answered?",
+  "headline": "The best annualized figure in the field falls from +31.6% at one year to +7.6% at ten years - the same cards, the same engine, the same metric, the same calendar.",
+  "outcome": "Fifteen cards, round 4's field plus A-rotation reinstated, were run across 27 windows: a 21-window ladder sampled evenly at five horizons from six months to ten years, plus a separate 6-window bear arm never pooled into the ladder's medians. The card leading the field at six months and one year, A-rotation, fell to rank 5 of 15 at ten years.\n\nThe variant experiments that had occupied three prior rounds measured essentially nothing at a long hold: B2-hold-90 differed from B-momentum by nearly twelve points at one year and was inside half a point of it at ten, confirming that the whole take-profit/max-hold axis had mostly been measuring the length of the window rather than the merit of the rule.\n\nThe bear arm identified the field's real hedges by inverting the ladder ranking: c20-rotation, last of fifteen at every ladder horizon, was first in the bear arm, a swing large enough to read as an unlabelled hedge rather than a failed strategy.\n\nRe-deriving every ladder result against QQQ instead of SPY left the ordering largely unchanged but roughly halved the magnitudes - for a field of AI and semiconductor-heavy books, QQQ is the more demanding and more relevant benchmark.\n\nThe caveat that limits every figure in the round: every top card's universe was chosen by an analyst writing in 2026 and then run backward from 2013, a decade in which knowing which semiconductor names to hold was worth the most, and the programme's survivorship gate does not catch a thesis-picked basket the way it catches a mechanically index-derived one. Every long-rung figure is stated as an upper bound for this reason.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "Every long-horizon figure in this round is an upper bound, since analysts picked 2026-era winners and ran them backward from 2013, and the survivorship gate does not catch thesis-picked baskets.",
+    "The take-profit/max-hold-days variant axis is effectively unmeasurable at a multi-year hold and should stay closed.",
+    "QQQ should be used alongside SPY as a benchmark for AI/semiconductor-heavy books, since it roughly halves their apparent edge without much reordering the field.",
+    "The bear arm and the ladder ranking mostly disagree on which cards are hedges, so round 6's paper-desk selection needs to weigh both rather than the ladder alone."
+  ],
+  "sources": [
+    "strategy-program/ROUND-5-PLAN.md",
+    "data/rounds/r5-2026-08/REPORT.md",
+    "data/rounds/PROGRAMME-REPORT.md"
+  ]
+}

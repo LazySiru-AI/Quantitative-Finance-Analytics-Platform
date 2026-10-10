@@ -1,0 +1,23 @@
+{
+  "orders": [
+    {
+      "order_id": "s4-spy-add",
+      "session": 4,
+      "decided_on": "2026-07-08",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "1",
+      "order_type": "market_on_open",
+      "thesis": "SPY closed 745.40 on 2026-07-08, still above sma20 (741.6025), sma50 (739.6414) and sma200 (693.6012). 20d change has turned positive again (+0.84%) after the pullback earlier in the week. QQQ and XLE both still fail my two-timeframe confirmation test (QQQ now below both sma20 and sma50; XLE below sma50) so I am not chasing either. XLF is intact but already near my sizing comfort zone from session 1, so I am adding to the confirmed index leg instead of increasing single-name concentration.",
+      "invalidation": "A close back below sma50 (739.64) would break the medium-term trend this add depends on.",
+      "stop_level": "736.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=745.40, sma20=741.6025, sma50=739.6414, sma200=693.6012, change_1d=-0.31%, change_20d=+0.84% via brief-s4.json watchlist.SPY (as of 2026-07-08)",
+        "QQQ close=711.44 below sma20=720.2015 and sma50=712.6152 via brief-s4.json watchlist.QQQ (as of 2026-07-08) -- confirms the pass",
+        "XLE close=55.60 below sma50=56.8448 via brief-s4.json watchlist.XLE (as of 2026-07-08) -- confirms the pass"
+      ]
+    }
+  ]
+}

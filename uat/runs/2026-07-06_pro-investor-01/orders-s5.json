@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "order_id": "s5-qqq-rebuy",
+      "session": 5,
+      "decided_on": "2026-07-09",
+      "symbol": "QQQ",
+      "side": "buy",
+      "quantity": "2",
+      "order_type": "market_on_open",
+      "thesis": "QQQ closed 723.28 on 2026-07-09, back above sma20 (720.9740), sma50 (713.7962) and sma200 (637.3852) -- the pullback that stopped me out in session 3 has fully reversed, with 1d +1.66%. I am aware this repurchase falls inside the 30-day wash-sale window from my 2026-07-08 loss sale (the /tax page's own wash-sale panel put the safe-to-repurchase date at 2026-08-08); re-entering anyway because the trend thesis, not the tax treatment, drives the call, and a disallowed loss is deferred into the new lot's basis, not lost. Deliberately testing whether the per-ticker wash-sale panel updates the deferred amount and window status once this fill lands.",
+      "invalidation": "A close back below sma20 (720.97) would repeat the same failure pattern as the first attempt.",
+      "stop_level": "715.00",
+      "regime": "transitional",
+      "conviction": 3,
+      "evidence": [
+        "close=723.28, sma20=720.9740, sma50=713.7962, sma200=637.3852, change_1d=+1.66% via brief-s5.json watchlist.QQQ (as of 2026-07-09)",
+        "repurchase_safe_on=2026-08-08 via GET /api/tax/report?year=2026 wash_sale_summary.symbols[0], read on /tax in session 3"
+      ]
+    }
+  ]
+}

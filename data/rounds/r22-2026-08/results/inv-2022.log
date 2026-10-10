@@ -1,0 +1,13 @@
+window: 2022-01-03 -> 2024-12-31
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+8 cards
+[1/8] r1 r21-channel-breakout-off: 5s trades=35 ret=-2.61% dd=-18.99% rej=27
+[2/8] r1 r21-channel-breakout-on: 3s trades=19 ret=-10.94% dd=-12.04% rej=0
+[3/8] r1 r21-ma-crossover-off: 4s trades=69 ret=-1.99% dd=-13.61% rej=0
+[4/8] r1 r21-ma-crossover-on: 2s trades=17 ret=-2.94% dd=-8.22% rej=0
+[5/8] r1 r21-rsi-pullback-off: 5s trades=84 ret=+7.04% dd=-7.74% rej=0
+[6/8] r1 r21-rsi-pullback-on: 3s trades=28 ret=-3.47% dd=-7.74% rej=0
+[7/8] r1 r21-vol-compression-off: 7s trades=61 ret=+1.63% dd=-15.46% rej=553
+[8/8] r1 r21-vol-compression-on: 3s trades=20 ret=-5.89% dd=-10.37% rej=2
+r1: 8 agents, 5 discoveries
+overall: 8 agents, 5 discoveries at alpha=0.1

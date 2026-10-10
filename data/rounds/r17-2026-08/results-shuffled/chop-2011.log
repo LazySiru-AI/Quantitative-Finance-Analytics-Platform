@@ -1,0 +1,7 @@
+window: 2011-05-26 -> 2012-06-06
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+2 cards
+[1/2] r1 r17-band-reversion-off-stop-shuf: 2s trades=41 ret=+8.52% dd=-10.90% rej=7
+[2/2] r1 r17-vol-compression-off-stop-shuf: 4s trades=31 ret=-0.26% dd=-9.11% rej=4
+r1: 2 agents, 1 discoveries
+overall: 2 agents, 1 discoveries at alpha=0.1

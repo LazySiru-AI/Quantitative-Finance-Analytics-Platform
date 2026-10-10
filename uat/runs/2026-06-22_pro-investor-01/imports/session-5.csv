@@ -1,0 +1,4 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+06/26/2026,06/26/2026,06/29/2026,TLT,"TLT paper fill, UAT persona pro-investor-01",Sell,13,$86.97,"$1,130.61"
+06/26/2026,06/26/2026,06/29/2026,,Regulatory fees on TLT sale (s5-1),FEE,,,($0.03)
+06/26/2026,06/26/2026,06/29/2026,TLT,"TLT paper fill, UAT persona pro-investor-01",Buy,6,$87.05,($522.30)

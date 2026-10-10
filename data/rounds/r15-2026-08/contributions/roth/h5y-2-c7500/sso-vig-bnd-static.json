@@ -1,0 +1,19 @@
+{
+  "agent_id": "sso-vig-bnd-static",
+  "purpose": "roth",
+  "window": "h5y-2",
+  "start": "2016-02-16",
+  "end": "2021-02-12",
+  "sessions": 1259,
+  "seed": "30000",
+  "contribution": "7500",
+  "funding_shape": "annual_contribution",
+  "irr": 0.17554661616805134,
+  "time_weighted_cagr": 0.1734876871899409,
+  "max_drawdown": -0.3619202577968632,
+  "volatility": 0.20259127429428261,
+  "mar": 0.47935334774025057,
+  "multiple": 1.8429101310804976,
+  "profit": 63218.259831037314,
+  "cash_constraint_modelled": false
+}

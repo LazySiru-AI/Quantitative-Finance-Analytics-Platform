@@ -1,0 +1,15 @@
+window: 2020-02-19 -> 2020-06-30
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r48-arot-base: 6s trades=13 ret=+0.46% dd=-17.85% rej=85
+[2/10] r1 r48-arot-risk1pct: 5s trades=14 ret=+1.08% dd=-4.66% rej=0
+[3/10] r1 r48-b3-base: 3s trades=4 ret=+21.85% dd=-6.03% rej=0
+[4/10] r1 r48-b3-risk1pct: 3s trades=4 ret=+8.26% dd=-2.43% rej=0
+[5/10] r1 r48-bmom-base: 4s trades=6 ret=+22.93% dd=-4.58% rej=0
+[6/10] r1 r48-bmom-risk1pct: 4s trades=6 ret=+12.66% dd=-2.68% rej=0
+[7/10] r1 r48-ctrend-base: 3s trades=6 ret=+15.90% dd=-4.88% rej=0
+[8/10] r1 r48-ctrend-risk1pct: 2s trades=6 ret=+7.37% dd=-2.45% rej=0
+[9/10] r1 r48-i13f-base: FAILED GuardFailed: r48-i13f-base: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against RDDT (failed): causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_200: only 0 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: rsi_14: only 0 bars against a 14-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[10/10] r1 r48-i13f-risk1pct: FAILED GuardFailed: r48-i13f-risk1pct: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against RDDT (failed): causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_200: only 0 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: rsi_14: only 0 bars against a 14-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+r1: 8 agents, 0 discoveries
+overall: 8 agents, 0 discoveries at alpha=0.1

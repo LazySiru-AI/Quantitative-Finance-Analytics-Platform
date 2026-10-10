@@ -1,0 +1,15 @@
+{
+  "round_id": "r13-2026-08",
+  "title": "Round 13 - savings-family backtest, not a selection round",
+  "focus": "The round-13 directory contains no competition selection, pre-registered plan, brief or report - it holds only an unrelated savings-family contribution and allocation backtest.",
+  "headline": "Round 13 recorded no competition selection at all - the only file in its directory is a savings-family contribution/allocation backtest, with no SELECTION.md, BRIEF.md, REPORT.md or pre-registered plan of any kind.",
+  "outcome": "Unlike every other round in this programme, data/rounds/r13-2026-08/ contains a single file, savings-family-run.txt, and nothing else - no SELECTION.md, no BRIEF.md, no REPORT.md, and no strategy-program/ROUND-13-PLAN.md exists anywhere in the repository.\n\nThat file is a monthly-contribution savings backtest, unrelated to the StrategyCard tournament and paper-desk competition documented in every other round. It compares several allocation strategies, a broad-market core, a diversified multi-asset core, a horizon glidepath, and a volatility-trimmed core, against SPY buy-and-hold and static 60/40 benchmarks, at two monthly contribution levels, over multi-decade windows including a 2008 GFC slice, reporting balance, IRR, time-weighted return, maximum drawdown, MAR and turnover cost for each.\n\nNo StrategyCard was gated, ranked, promoted, retired, seated or dropped from the paper desk during round 13. No owner decision or override of any competition rule was made. The round number was simply consumed by this separate piece of work rather than by a competition round, and this narrative records that honestly rather than manufacturing a selection that never happened.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "Round 13 recorded no selection decision, so whichever round resumes the competition inherits the paper desk roster unchanged from round 12/round 11's override, with no new competition evidence to apply from round 13."
+  ],
+  "sources": [
+    "data/rounds/r13-2026-08/savings-family-run.txt"
+  ]
+}

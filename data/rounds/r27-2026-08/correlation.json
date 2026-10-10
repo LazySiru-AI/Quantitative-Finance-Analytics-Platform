@@ -1,0 +1,1842 @@
+{
+  "q4-2018": {
+    "start": "2018-09-21",
+    "end": "2018-12-24",
+    "sessions": 64,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.6334406623680573,
+    "min": 0.3501499934736378,
+    "min_pair": "INTC-AMD",
+    "max": 0.8743186371927577,
+    "max_pair": "MU-SOXX",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 64,
+        "corr": 0.6899138997428212,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 64,
+        "corr": 0.6056305317608949,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 64,
+        "corr": 0.697165797279161,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 64,
+        "corr": 0.8743186371927577,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 64,
+        "corr": 0.6711518666064901,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 64,
+        "corr": 0.5962003986604121,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 64,
+        "corr": 0.5312514462079807,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 64,
+        "corr": 0.7763865154780748,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 64,
+        "corr": 0.3501499934736378,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 64,
+        "corr": 0.5518315806148189,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 64,
+        "corr": 0.7960684230403765,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 64,
+        "corr": 0.5713551691552377,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 64,
+        "corr": 0.5641978074917027,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 64,
+        "corr": 0.5506742448428869,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 64,
+        "corr": 0.6234942163328654,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 64,
+        "corr": 0.5856908538860499,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 64,
+        "corr": 0.6754582365390978,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 64,
+        "corr": 0.5665352372443508,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 64,
+        "corr": 0.5228039241078487,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 64,
+        "corr": 0.4389022774603377,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 64,
+        "corr": 0.584026311776585,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 64,
+        "corr": 0.8259149117700431,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 64,
+        "corr": 0.744629933244784,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 64,
+        "corr": 0.6748770718520664,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 64,
+        "corr": 0.5684017109403768,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 64,
+        "corr": 0.6771207829686412,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 64,
+        "corr": 0.7706671030401248,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 64,
+        "corr": 0.7983667409526506,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 64,
+        "corr": 0.6965432796314587,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 64,
+        "corr": 0.8262335293744542,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 64,
+        "corr": 0.5339618343123043,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 64,
+        "corr": 0.5040926372870977,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 64,
+        "corr": 0.6398179830923151,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 64,
+        "corr": 0.5304267637740224,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 64,
+        "corr": 0.639833542667725,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 64,
+        "corr": 0.5497686514476118,
+        "used": true
+      }
+    ]
+  },
+  "covid": {
+    "start": "2020-02-19",
+    "end": "2020-06-30",
+    "sessions": 93,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.8340773987497354,
+    "min": 0.723561830548441,
+    "min_pair": "AMD-AVGO",
+    "max": 0.9342172907115068,
+    "max_pair": "MU-SOXX",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 93,
+        "corr": 0.8571087242927617,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 93,
+        "corr": 0.7603980227239776,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 93,
+        "corr": 0.8398950744379442,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 93,
+        "corr": 0.9342172907115068,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 93,
+        "corr": 0.8238676387605322,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 93,
+        "corr": 0.8410973459001513,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 93,
+        "corr": 0.852182051126723,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 93,
+        "corr": 0.806808514521269,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 93,
+        "corr": 0.8299908383803197,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 93,
+        "corr": 0.860594861081407,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 93,
+        "corr": 0.9211887674220477,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 93,
+        "corr": 0.8355336201375643,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 93,
+        "corr": 0.7688277387124159,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 93,
+        "corr": 0.8633499097875934,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 93,
+        "corr": 0.742799112355488,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 93,
+        "corr": 0.7698852439722278,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 93,
+        "corr": 0.8634279478380056,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 93,
+        "corr": 0.8889847842865906,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 93,
+        "corr": 0.723561830548441,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 93,
+        "corr": 0.7896698042037001,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 93,
+        "corr": 0.7517353652016279,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 93,
+        "corr": 0.9144294547504904,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 93,
+        "corr": 0.8185830819326113,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 93,
+        "corr": 0.8254338245505836,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 93,
+        "corr": 0.8289562450330582,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 93,
+        "corr": 0.763199459817919,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 93,
+        "corr": 0.9132971954575104,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 93,
+        "corr": 0.8943421066193434,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 93,
+        "corr": 0.9243150706842632,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 93,
+        "corr": 0.8652936910713512,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 93,
+        "corr": 0.8093375145843036,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 93,
+        "corr": 0.81333533427626,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 93,
+        "corr": 0.8279097187881478,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 93,
+        "corr": 0.875179832572242,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 93,
+        "corr": 0.8385209589143873,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 93,
+        "corr": 0.7895283795357061,
+        "used": true
+      }
+    ]
+  },
+  "bear-2022": {
+    "start": "2022-01-03",
+    "end": "2022-10-12",
+    "sessions": 196,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.7946268731747759,
+    "min": 0.6248801729484887,
+    "min_pair": "INTC-TSM",
+    "max": 0.9426615314308581,
+    "max_pair": "SOXX-MRVL",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 196,
+        "corr": 0.7231842906328786,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 196,
+        "corr": 0.7482878037788352,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 196,
+        "corr": 0.6952413222274528,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 196,
+        "corr": 0.8569746539946178,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 196,
+        "corr": 0.7920988987565517,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 196,
+        "corr": 0.7446439815222996,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 196,
+        "corr": 0.766634737691561,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 196,
+        "corr": 0.7791693899042175,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 196,
+        "corr": 0.7134624973051058,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 196,
+        "corr": 0.6248801729484887,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 196,
+        "corr": 0.8086586458884492,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 196,
+        "corr": 0.7473160773130557,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 196,
+        "corr": 0.7387461667512744,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 196,
+        "corr": 0.7421384857914317,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 196,
+        "corr": 0.7152985344393167,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 196,
+        "corr": 0.7085421978485057,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 196,
+        "corr": 0.9031202085468854,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 196,
+        "corr": 0.884829771488335,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 196,
+        "corr": 0.7846845509988555,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 196,
+        "corr": 0.7643684188830303,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 196,
+        "corr": 0.8711683421816933,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 196,
+        "corr": 0.8252738716529623,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 196,
+        "corr": 0.7451306880683752,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 196,
+        "corr": 0.7193869248163601,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 196,
+        "corr": 0.7619961259574051,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 196,
+        "corr": 0.7495992987612154,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 196,
+        "corr": 0.940021390177771,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 196,
+        "corr": 0.9022693932430454,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 196,
+        "corr": 0.8934343451488664,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 196,
+        "corr": 0.9426615314308581,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 196,
+        "corr": 0.8329018192349631,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 196,
+        "corr": 0.8112677865289754,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 196,
+        "corr": 0.9017513521259436,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 196,
+        "corr": 0.8099264800357024,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 196,
+        "corr": 0.8496893325093726,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 196,
+        "corr": 0.8078079457072732,
+        "used": true
+      }
+    ]
+  },
+  "chop-2015": {
+    "start": "2015-04-07",
+    "end": "2016-04-15",
+    "sessions": 259,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.45895877848526545,
+    "min": 0.20837427852056456,
+    "min_pair": "AMD-MRVL",
+    "max": 0.8234743158289604,
+    "max_pair": "SOXX-AVGO",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 259,
+        "corr": 0.5234513131863419,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 259,
+        "corr": 0.36292839926281023,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 259,
+        "corr": 0.48819463845473343,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 259,
+        "corr": 0.6655116817322888,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 259,
+        "corr": 0.4346226724605343,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 259,
+        "corr": 0.45360708892554397,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 259,
+        "corr": 0.4028471665656914,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 259,
+        "corr": 0.33420624515877295,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 259,
+        "corr": 0.4257381014567992,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 259,
+        "corr": 0.5820319549066515,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 259,
+        "corr": 0.796359701144656,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 259,
+        "corr": 0.5256734163381792,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 259,
+        "corr": 0.556098016073903,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 259,
+        "corr": 0.45697532326889484,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 259,
+        "corr": 0.36449077804099805,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 259,
+        "corr": 0.2735373887398992,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 259,
+        "corr": 0.4211925048255508,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 259,
+        "corr": 0.31259658889316294,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 259,
+        "corr": 0.29437561792140376,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 259,
+        "corr": 0.23745323507969052,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 259,
+        "corr": 0.20837427852056456,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 259,
+        "corr": 0.6904229294577059,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 259,
+        "corr": 0.41432238269573346,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 259,
+        "corr": 0.45799104685291137,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 259,
+        "corr": 0.4685603254771386,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 259,
+        "corr": 0.31065853637475027,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 259,
+        "corr": 0.7019933152653717,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 259,
+        "corr": 0.8234743158289604,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 259,
+        "corr": 0.6173449362994242,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 259,
+        "corr": 0.4785171149397893,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 259,
+        "corr": 0.5696254314364804,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 259,
+        "corr": 0.46279261205414546,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 259,
+        "corr": 0.34203607416005644,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 259,
+        "corr": 0.41550057259777756,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 259,
+        "corr": 0.3022208937766884,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 259,
+        "corr": 0.34678942729555223,
+        "used": true
+      }
+    ]
+  },
+  "chop-2011": {
+    "start": "2011-05-26",
+    "end": "2012-06-06",
+    "sessions": 260,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.6461663938473454,
+    "min": 0.4697234609686289,
+    "min_pair": "MU-AVGO",
+    "max": 0.8292986529871315,
+    "max_pair": "SOXX-NVDA",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 260,
+        "corr": 0.5968452787328867,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 260,
+        "corr": 0.6277950813464881,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 260,
+        "corr": 0.5424743929948328,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 260,
+        "corr": 0.7390185833315348,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 260,
+        "corr": 0.6443163323395732,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 260,
+        "corr": 0.4697234609686289,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 260,
+        "corr": 0.5989554510519721,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 260,
+        "corr": 0.5498999313538616,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 260,
+        "corr": 0.6520213474209957,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 260,
+        "corr": 0.6573225778413453,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 260,
+        "corr": 0.8173631753919949,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 260,
+        "corr": 0.6483130793730058,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 260,
+        "corr": 0.5198827324630625,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 260,
+        "corr": 0.6869447565692769,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 260,
+        "corr": 0.5817540297207751,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 260,
+        "corr": 0.6383018210527465,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 260,
+        "corr": 0.8058916844894148,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 260,
+        "corr": 0.6895918132449681,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 260,
+        "corr": 0.5355716492323898,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 260,
+        "corr": 0.6532103668871833,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 260,
+        "corr": 0.6079130370409596,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 260,
+        "corr": 0.7865277368952557,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 260,
+        "corr": 0.6194460518994861,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 260,
+        "corr": 0.48837617024424534,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 260,
+        "corr": 0.662092781262528,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 260,
+        "corr": 0.536697456011989,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 260,
+        "corr": 0.8292986529871315,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 260,
+        "corr": 0.748970939438607,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 260,
+        "corr": 0.8143137748851295,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 260,
+        "corr": 0.7557957659591606,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 260,
+        "corr": 0.6068856028441363,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 260,
+        "corr": 0.7093175763619392,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 260,
+        "corr": 0.6768867061954822,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 260,
+        "corr": 0.6418103359375952,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 260,
+        "corr": 0.5390241959338392,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 260,
+        "corr": 0.5834358488000108,
+        "used": true
+      }
+    ]
+  },
+  "bull-2024": {
+    "start": "2024-08-21",
+    "end": "2025-08-20",
+    "sessions": 250,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.6111926056696337,
+    "min": 0.2737986551727629,
+    "min_pair": "INTC-TSM",
+    "max": 0.8359006021622928,
+    "max_pair": "SOXX-QCOM",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 250,
+        "corr": 0.4569170426504033,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 250,
+        "corr": 0.6194838202661,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 250,
+        "corr": 0.6293392676304317,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 250,
+        "corr": 0.799964013560033,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 250,
+        "corr": 0.6238707381159316,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 250,
+        "corr": 0.6223151067550974,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 250,
+        "corr": 0.6387141116556444,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 250,
+        "corr": 0.5929382571301087,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 250,
+        "corr": 0.4269197928064166,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 250,
+        "corr": 0.2737986551727629,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 250,
+        "corr": 0.5558981935815588,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 250,
+        "corr": 0.369729756751312,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 250,
+        "corr": 0.3048251027769584,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 250,
+        "corr": 0.48192677021794145,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 250,
+        "corr": 0.35835747725002104,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 250,
+        "corr": 0.663260278926008,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 250,
+        "corr": 0.8313197720940425,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 250,
+        "corr": 0.6740503485903088,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 250,
+        "corr": 0.544688706078912,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 250,
+        "corr": 0.6927640911263037,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 250,
+        "corr": 0.5869420370649455,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 250,
+        "corr": 0.7795582329070166,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 250,
+        "corr": 0.7674472069149815,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 250,
+        "corr": 0.6990910990117849,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 250,
+        "corr": 0.5464498356004053,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 250,
+        "corr": 0.6394733118384346,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 250,
+        "corr": 0.7957738927333456,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 250,
+        "corr": 0.7665254559703722,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 250,
+        "corr": 0.8359006021622928,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 250,
+        "corr": 0.7461264139406723,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 250,
+        "corr": 0.6572111447409351,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 250,
+        "corr": 0.5880439401817519,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 250,
+        "corr": 0.6762854905764447,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 250,
+        "corr": 0.5542814445054395,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 250,
+        "corr": 0.6753255710022652,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 250,
+        "corr": 0.5274168218194294,
+        "used": true
+      }
+    ]
+  },
+  "recent": {
+    "start": "2025-08-21",
+    "end": "2026-08-18",
+    "sessions": 249,
+    "pairs_total": 36,
+    "pairs_used": 36,
+    "mean": 0.5198183418491102,
+    "min": 0.19068274293171253,
+    "min_pair": "NVDA-QCOM",
+    "max": 0.8125526248942898,
+    "max_pair": "MU-SOXX",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 249,
+        "corr": 0.5578950485187455,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 249,
+        "corr": 0.5673792978240291,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 249,
+        "corr": 0.6243380667289351,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 249,
+        "corr": 0.8125526248942898,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 249,
+        "corr": 0.4400794191878188,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 249,
+        "corr": 0.485247612194078,
+        "used": true
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 249,
+        "corr": 0.3938084614764531,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 249,
+        "corr": 0.503433128072236,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 249,
+        "corr": 0.5550109553100975,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 249,
+        "corr": 0.4734172792993964,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 249,
+        "corr": 0.714749111149041,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 249,
+        "corr": 0.3668481835112176,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 249,
+        "corr": 0.3854194189990422,
+        "used": true
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 249,
+        "corr": 0.4438944285306544,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 249,
+        "corr": 0.45630551815424925,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 249,
+        "corr": 0.6078866125809688,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 249,
+        "corr": 0.759119712856856,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 249,
+        "corr": 0.47418491076012925,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 249,
+        "corr": 0.43271623335843745,
+        "used": true
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 249,
+        "corr": 0.4477530466115013,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 249,
+        "corr": 0.5030526531167057,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 249,
+        "corr": 0.7906534256401899,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 249,
+        "corr": 0.6273474203469109,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 249,
+        "corr": 0.6045786938880994,
+        "used": true
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 249,
+        "corr": 0.30375324290026506,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 249,
+        "corr": 0.5314266385865533,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 249,
+        "corr": 0.5868280848120386,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 249,
+        "corr": 0.6480169679018656,
+        "used": true
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 249,
+        "corr": 0.5753814227295242,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 249,
+        "corr": 0.7240838652751413,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 249,
+        "corr": 0.5083662335253394,
+        "used": true
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 249,
+        "corr": 0.19068274293171253,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 249,
+        "corr": 0.3834554693826044,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 249,
+        "corr": 0.3294389434141765,
+        "used": true
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 249,
+        "corr": 0.4809696173752789,
+        "used": true
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 249,
+        "corr": 0.42338581472338377,
+        "used": true
+      }
+    ]
+  },
+  "gfc": {
+    "start": "2007-10-09",
+    "end": "2009-03-09",
+    "sessions": 356,
+    "pairs_total": 36,
+    "pairs_used": 28,
+    "mean": 0.5987580136008929,
+    "min": 0.4328356785768857,
+    "min_pair": "AMD-QCOM",
+    "max": 0.8710031189699379,
+    "max_pair": "INTC-SOXX",
+    "pairs": [
+      {
+        "pair": "MU-INTC",
+        "sessions": 356,
+        "corr": 0.48242266595170524,
+        "used": true
+      },
+      {
+        "pair": "MU-AMD",
+        "sessions": 356,
+        "corr": 0.5605390297211603,
+        "used": true
+      },
+      {
+        "pair": "MU-TSM",
+        "sessions": 356,
+        "corr": 0.4982480761491074,
+        "used": true
+      },
+      {
+        "pair": "MU-SOXX",
+        "sessions": 356,
+        "corr": 0.6376003942281075,
+        "used": true
+      },
+      {
+        "pair": "MU-NVDA",
+        "sessions": 356,
+        "corr": 0.4800105500854336,
+        "used": true
+      },
+      {
+        "pair": "MU-AVGO",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "MU-QCOM",
+        "sessions": 356,
+        "corr": 0.45438901110491686,
+        "used": true
+      },
+      {
+        "pair": "MU-MRVL",
+        "sessions": 356,
+        "corr": 0.4685276780326105,
+        "used": true
+      },
+      {
+        "pair": "INTC-AMD",
+        "sessions": 356,
+        "corr": 0.5523856994630469,
+        "used": true
+      },
+      {
+        "pair": "INTC-TSM",
+        "sessions": 356,
+        "corr": 0.7340259870834708,
+        "used": true
+      },
+      {
+        "pair": "INTC-SOXX",
+        "sessions": 356,
+        "corr": 0.8710031189699379,
+        "used": true
+      },
+      {
+        "pair": "INTC-NVDA",
+        "sessions": 356,
+        "corr": 0.6870598542725168,
+        "used": true
+      },
+      {
+        "pair": "INTC-AVGO",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "INTC-QCOM",
+        "sessions": 356,
+        "corr": 0.6685111923781195,
+        "used": true
+      },
+      {
+        "pair": "INTC-MRVL",
+        "sessions": 356,
+        "corr": 0.6249919645218982,
+        "used": true
+      },
+      {
+        "pair": "AMD-TSM",
+        "sessions": 356,
+        "corr": 0.4512274557279937,
+        "used": true
+      },
+      {
+        "pair": "AMD-SOXX",
+        "sessions": 356,
+        "corr": 0.6547509399735318,
+        "used": true
+      },
+      {
+        "pair": "AMD-NVDA",
+        "sessions": 356,
+        "corr": 0.4694451209118667,
+        "used": true
+      },
+      {
+        "pair": "AMD-AVGO",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "AMD-QCOM",
+        "sessions": 356,
+        "corr": 0.4328356785768857,
+        "used": true
+      },
+      {
+        "pair": "AMD-MRVL",
+        "sessions": 356,
+        "corr": 0.5529651583361463,
+        "used": true
+      },
+      {
+        "pair": "TSM-SOXX",
+        "sessions": 356,
+        "corr": 0.7704389486755933,
+        "used": true
+      },
+      {
+        "pair": "TSM-NVDA",
+        "sessions": 356,
+        "corr": 0.6243268317315849,
+        "used": true
+      },
+      {
+        "pair": "TSM-AVGO",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "TSM-QCOM",
+        "sessions": 356,
+        "corr": 0.6189581798127785,
+        "used": true
+      },
+      {
+        "pair": "TSM-MRVL",
+        "sessions": 356,
+        "corr": 0.5691342188896378,
+        "used": true
+      },
+      {
+        "pair": "SOXX-NVDA",
+        "sessions": 356,
+        "corr": 0.7906921513334271,
+        "used": true
+      },
+      {
+        "pair": "SOXX-AVGO",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "SOXX-QCOM",
+        "sessions": 356,
+        "corr": 0.6895422562127276,
+        "used": true
+      },
+      {
+        "pair": "SOXX-MRVL",
+        "sessions": 356,
+        "corr": 0.7535450877156138,
+        "used": true
+      },
+      {
+        "pair": "NVDA-AVGO",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "NVDA-QCOM",
+        "sessions": 356,
+        "corr": 0.5591991339104577,
+        "used": true
+      },
+      {
+        "pair": "NVDA-MRVL",
+        "sessions": 356,
+        "corr": 0.5910944224571297,
+        "used": true
+      },
+      {
+        "pair": "AVGO-QCOM",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "AVGO-MRVL",
+        "sessions": 0,
+        "corr": null,
+        "used": false
+      },
+      {
+        "pair": "QCOM-MRVL",
+        "sessions": 356,
+        "corr": 0.5173535745975945,
+        "used": true
+      }
+    ]
+  }
+}

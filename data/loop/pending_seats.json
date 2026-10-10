@@ -1,0 +1,855 @@
+{
+  "requests": [
+    {
+      "agent_id": "g1859-fd7c2c196f35",
+      "decided_at": null,
+      "decided_note": "",
+      "generations": [
+        1859,
+        1863
+      ],
+      "genome_id": "g1859-fd7c2c196f35",
+      "holdout_median_excess": "0.1487857552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1859-fd7c2c196f35.json",
+      "median_excess": "0.2465181788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.06889396232724344,
+      "reason": "cleared generation 1863's gate (median excess 24.65pp > 21.2pp margin) with 2 distinct window sets across generations (1859, 1863), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T15:42:17.852832Z",
+      "status": "pending",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1855-4a8d06c30426",
+      "decided_at": null,
+      "decided_note": "",
+      "generations": [
+        1855,
+        1859
+      ],
+      "genome_id": "g1855-4a8d06c30426",
+      "holdout_median_excess": "0.1864357552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1855-4a8d06c30426.json",
+      "median_excess": "0.2290181788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.01930427574072496,
+      "reason": "cleared generation 1859's gate (median excess 22.90pp > 21.2pp margin) with 2 distinct window sets across generations (1855, 1859), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T15:37:25.611147Z",
+      "status": "pending",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1855-2ff5b8e319dd",
+      "decided_at": null,
+      "decided_note": "",
+      "generations": [
+        1855,
+        1859
+      ],
+      "genome_id": "g1855-2ff5b8e319dd",
+      "holdout_median_excess": "0.1768312552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1855-2ff5b8e319dd.json",
+      "median_excess": "0.2333901788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0024655296966123777,
+      "reason": "cleared generation 1859's gate (median excess 23.34pp > 21.2pp margin) with 2 distinct window sets across generations (1855, 1859), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T15:37:25.575795Z",
+      "status": "pending",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1809-145d2d5dbfeb",
+      "decided_at": "2026-08-26T16:00:49.246489Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1829,
+        1833
+      ],
+      "genome_id": "g1809-145d2d5dbfeb",
+      "holdout_median_excess": "0.2212897552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1809-145d2d5dbfeb.json",
+      "median_excess": "0.2572208744347156740113537958",
+      "purpose": "trading",
+      "q_value": 4.1573617829338934e-07,
+      "reason": "seated automatically before approval was required; cleared generation 1833's gate (median excess 25.72pp > 21.2pp margin) with 2 distinct window sets across generations (1829, 1833), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:45:33.638880Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1823-e2a3d5060b09",
+      "decided_at": "2026-08-26T16:00:49.376687Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1823,
+        1827
+      ],
+      "genome_id": "g1823-e2a3d5060b09",
+      "holdout_median_excess": "0.1486977552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1823-e2a3d5060b09.json",
+      "median_excess": "0.2267801788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.005304382988236434,
+      "reason": "seated automatically before approval was required; cleared generation 1827's gate (median excess 22.68pp > 21.2pp margin) with 2 distinct window sets across generations (1823, 1827), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:39:56.162402Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1815-d05786e4c611",
+      "decided_at": "2026-08-26T16:00:49.449396Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1823,
+        1827
+      ],
+      "genome_id": "g1815-d05786e4c611",
+      "holdout_median_excess": "0.1486977552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1815-d05786e4c611.json",
+      "median_excess": "0.2267801788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.005304382988236434,
+      "reason": "seated automatically before approval was required; cleared generation 1827's gate (median excess 22.68pp > 21.2pp margin) with 2 distinct window sets across generations (1823, 1827), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:39:56.116566Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1805-5919222d57c5",
+      "decided_at": "2026-08-26T16:00:49.471344Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1805,
+        1809
+      ],
+      "genome_id": "g1805-5919222d57c5",
+      "holdout_median_excess": "0.2194102552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1805-5919222d57c5.json",
+      "median_excess": "0.2191886201043565725781102659",
+      "purpose": "trading",
+      "q_value": 6.216804914664015e-07,
+      "reason": "seated automatically before approval was required; cleared generation 1809's gate (median excess 21.92pp > 21.2pp margin) with 2 distinct window sets across generations (1805, 1809), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:23:28.969170Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1803-655c39d83d8b",
+      "decided_at": "2026-08-26T16:00:49.501304Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1803,
+        1807
+      ],
+      "genome_id": "g1803-655c39d83d8b",
+      "holdout_median_excess": "0.1486977552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1803-655c39d83d8b.json",
+      "median_excess": "0.2267801788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.01030570828432349,
+      "reason": "seated automatically before approval was required; cleared generation 1807's gate (median excess 22.68pp > 21.2pp margin) with 2 distinct window sets across generations (1803, 1807), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:21:33.731192Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1791-c29fafa19c2b",
+      "decided_at": "2026-08-26T16:00:49.535101Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1799,
+        1803
+      ],
+      "genome_id": "g1791-c29fafa19c2b",
+      "holdout_median_excess": "0.1448907552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1791-c29fafa19c2b.json",
+      "median_excess": "0.2221331788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0013277689424133102,
+      "reason": "seated automatically before approval was required; cleared generation 1803's gate (median excess 22.21pp > 21.2pp margin) with 2 distinct window sets across generations (1799, 1803), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:17:53.809952Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1769-349119b209d7",
+      "decided_at": "2026-08-26T16:00:49.558785Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1781,
+        1785
+      ],
+      "genome_id": "g1769-349119b209d7",
+      "holdout_median_excess": "0.2204997552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1769-349119b209d7.json",
+      "median_excess": "0.2504498744347156740113537958",
+      "purpose": "trading",
+      "q_value": 3.505923044456703e-06,
+      "reason": "seated automatically before approval was required; cleared generation 1785's gate (median excess 25.04pp > 21.2pp margin) with 2 distinct window sets across generations (1781, 1785), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T10:01:56.277305Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1767-775be2277569",
+      "decided_at": "2026-08-26T16:00:49.583498Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1775,
+        1779
+      ],
+      "genome_id": "g1767-775be2277569",
+      "holdout_median_excess": "0.1646707552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1767-775be2277569.json",
+      "median_excess": "0.2290181788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0028738905395960137,
+      "reason": "seated automatically before approval was required; cleared generation 1779's gate (median excess 22.90pp > 21.2pp margin) with 2 distinct window sets across generations (1775, 1779), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:56:11.153033Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1763-b3154a945165",
+      "decided_at": "2026-08-26T16:00:49.606296Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1775,
+        1779
+      ],
+      "genome_id": "g1763-b3154a945165",
+      "holdout_median_excess": "0.1646707552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1763-b3154a945165.json",
+      "median_excess": "0.2290181788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0028738905395960137,
+      "reason": "seated automatically before approval was required; cleared generation 1779's gate (median excess 22.90pp > 21.2pp margin) with 2 distinct window sets across generations (1775, 1779), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:56:11.114339Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1755-c30de399e7f4",
+      "decided_at": "2026-08-26T16:00:49.636729Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1755,
+        1759
+      ],
+      "genome_id": "g1755-c30de399e7f4",
+      "holdout_median_excess": "0.1757642552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1755-c30de399e7f4.json",
+      "median_excess": "0.2331321788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.009386072343084648,
+      "reason": "seated automatically before approval was required; cleared generation 1759's gate (median excess 23.31pp > 21.2pp margin) with 2 distinct window sets across generations (1755, 1759), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:38:45.183542Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1755-60b22dc5f630",
+      "decided_at": "2026-08-26T16:00:49.662551Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1755,
+        1759
+      ],
+      "genome_id": "g1755-60b22dc5f630",
+      "holdout_median_excess": "0.1732327552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1755-60b22dc5f630.json",
+      "median_excess": "0.2331321788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.07215019677104331,
+      "reason": "seated automatically before approval was required; cleared generation 1759's gate (median excess 23.31pp > 21.2pp margin) with 2 distinct window sets across generations (1755, 1759), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:38:45.145683Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1751-9b4544bf2556",
+      "decided_at": "2026-08-26T16:00:49.690088Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1751,
+        1755
+      ],
+      "genome_id": "g1751-9b4544bf2556",
+      "holdout_median_excess": "0.1834192552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1751-9b4544bf2556.json",
+      "median_excess": "0.2282601788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.011971556250039586,
+      "reason": "seated automatically before approval was required; cleared generation 1755's gate (median excess 22.83pp > 21.2pp margin) with 2 distinct window sets across generations (1751, 1755), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:35:08.839425Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1751-051dec45a041",
+      "decided_at": "2026-08-26T16:00:49.732854Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1751,
+        1755
+      ],
+      "genome_id": "g1751-051dec45a041",
+      "holdout_median_excess": "0.1586262552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1751-051dec45a041.json",
+      "median_excess": "0.2290181788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0039453999853598124,
+      "reason": "seated automatically before approval was required; cleared generation 1755's gate (median excess 22.90pp > 21.2pp margin) with 2 distinct window sets across generations (1751, 1755), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:35:08.809783Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1725-0a9fcd74b740",
+      "decided_at": "2026-08-26T16:00:49.757785Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1733,
+        1737
+      ],
+      "genome_id": "g1725-0a9fcd74b740",
+      "holdout_median_excess": "0.2204997552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1725-0a9fcd74b740.json",
+      "median_excess": "0.2504498744347156740113537958",
+      "purpose": "trading",
+      "q_value": 2.9963316365547244e-06,
+      "reason": "seated automatically before approval was required; cleared generation 1737's gate (median excess 25.04pp > 21.2pp margin) with 2 distinct window sets across generations (1733, 1737), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:18:28.740354Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1731-85327a6b6a50",
+      "decided_at": "2026-08-26T16:00:49.785514Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1731,
+        1735
+      ],
+      "genome_id": "g1731-85327a6b6a50",
+      "holdout_median_excess": "0.1932837552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1731-85327a6b6a50.json",
+      "median_excess": "0.2150051788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.008541820284055113,
+      "reason": "seated automatically before approval was required; cleared generation 1735's gate (median excess 21.50pp > 21.2pp margin) with 2 distinct window sets across generations (1731, 1735), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:16:42.024903Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1731-6d28de7a5e4c",
+      "decided_at": "2026-08-26T16:00:49.806509Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1731,
+        1735
+      ],
+      "genome_id": "g1731-6d28de7a5e4c",
+      "holdout_median_excess": "0.1796052552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1731-6d28de7a5e4c.json",
+      "median_excess": "0.2266081788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.015280668063127402,
+      "reason": "seated automatically before approval was required; cleared generation 1735's gate (median excess 22.66pp > 21.2pp margin) with 2 distinct window sets across generations (1731, 1735), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T09:16:41.985569Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1707-6b248c4b849d",
+      "decided_at": "2026-08-26T16:00:49.831382Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1707,
+        1711
+      ],
+      "genome_id": "g1707-6b248c4b849d",
+      "holdout_median_excess": "0.1550367552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1707-6b248c4b849d.json",
+      "median_excess": "0.2227941788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0006761127371317135,
+      "reason": "seated automatically before approval was required; cleared generation 1711's gate (median excess 22.28pp > 21.2pp margin) with 2 distinct window sets across generations (1707, 1711), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T08:55:18.494644Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1703-7dd05b30f905",
+      "decided_at": "2026-08-26T16:00:49.858696Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1703,
+        1707
+      ],
+      "genome_id": "g1703-7dd05b30f905",
+      "holdout_median_excess": "0.1836222552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1703-7dd05b30f905.json",
+      "median_excess": "0.2282121788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.010812626952142199,
+      "reason": "seated automatically before approval was required; cleared generation 1707's gate (median excess 22.82pp > 21.2pp margin) with 2 distinct window sets across generations (1703, 1707), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T08:51:36.100915Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1683-ce27fe274c98",
+      "decided_at": "2026-08-26T16:00:49.876881Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1683,
+        1687
+      ],
+      "genome_id": "g1683-ce27fe274c98",
+      "holdout_median_excess": "0.1804797552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1683-ce27fe274c98.json",
+      "median_excess": "0.2233901788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0001737206889133545,
+      "reason": "seated automatically before approval was required; cleared generation 1687's gate (median excess 22.34pp > 21.2pp margin) with 2 distinct window sets across generations (1683, 1687), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T08:32:46.609820Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1679-12eaf5c6bd56",
+      "decided_at": "2026-08-26T16:00:49.906567Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1679,
+        1683
+      ],
+      "genome_id": "g1679-12eaf5c6bd56",
+      "holdout_median_excess": "0.1804797552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1679-12eaf5c6bd56.json",
+      "median_excess": "0.2233901788788578626915809364",
+      "purpose": "roth",
+      "q_value": 0.0017605923247380755,
+      "reason": "seated automatically before approval was required; cleared generation 1683's gate (median excess 22.34pp > 21.2pp margin) with 2 distinct window sets across generations (1679, 1683), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T08:28:24.839499Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g1679-944a6f327542",
+      "decided_at": "2026-08-26T16:00:49.932017Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        1679,
+        1683
+      ],
+      "genome_id": "g1679-944a6f327542",
+      "holdout_median_excess": "0.1156162552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g1679-944a6f327542.json",
+      "median_excess": "0.2426356201043565725781102659",
+      "purpose": "roth",
+      "q_value": 0.004657470565668665,
+      "reason": "seated automatically before approval was required; cleared generation 1683's gate (median excess 24.26pp > 21.2pp margin) with 2 distinct window sets across generations (1679, 1683), meeting the 2-generation requirement",
+      "requested_at": "2026-08-26T08:28:24.790059Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2011",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    },
+    {
+      "agent_id": "g009-30c484221799",
+      "decided_at": "2026-08-26T16:00:49.946564Z",
+      "decided_note": "un-seated 2026-08-26 by owner (seated without review); see docs/research/loop/ reviewed in the 25-card backlog; duplicates already merged by repair_pending_seats",
+      "generations": [
+        9,
+        13
+      ],
+      "genome_id": "g009-30c484221799",
+      "holdout_median_excess": "0.2031927552623824866024516738",
+      "library_path": "backend\\app\\paper\\library\\candidates\\g009-30c484221799.json",
+      "median_excess": "0.3051306201043565725781102659",
+      "purpose": "trading",
+      "q_value": 4.9116641098826724e-05,
+      "reason": "seated automatically before approval was required; cleared generation 13's gate (median excess 30.51pp > 21.2pp margin) with 2 distinct window sets across generations (9, 13), meeting the 2-generation requirement",
+      "requested_at": "2026-08-25T04:30:53.650130Z",
+      "status": "shelved",
+      "window_sets": [
+        [
+          "bear-2022",
+          "bull-2024",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ],
+        [
+          "bear-2022",
+          "chop-2011",
+          "chop-2015",
+          "gfc",
+          "recent"
+        ]
+      ]
+    }
+  ],
+  "version": 1
+}

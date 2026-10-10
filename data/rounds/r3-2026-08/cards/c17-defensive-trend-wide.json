@@ -1,0 +1,28 @@
+{
+  "agent_id": "c17-defensive-trend-wide",
+  "display_name": "c17 - Defensive Trend Wide (ex-AI/semi)",
+  "discipline": "trend",
+  "thesis": "C-trend's mechanism -- a close>sma(200) regime filter plus an ema(20)/ema(50) crossover trigger -- is measured on AI-capex-cycle names whose multi-quarter earnings-revision cascades are the stated source of the serial correlation it exploits. This card asks whether the same mechanical rule captures any edge on twelve large-cap names picked from staples, healthcare, utilities, industrials, energy and financials -- sectors whose trends are not driven by earnings-revision cascades but by slower macro cycles: rate-sensitive rotation into/out of utilities and REIT-adjacent industrials, defensive-vs-cyclical rotation around growth scares, and multi-year commodity or credit cycles for energy and financials. The other side of this trade is the same in kind as C-trend's, different in speed: momentum and growth allocators who ignore 'boring' dividend payers during risk-on stretches, ceding the slow continuation to whoever is still holding when the rotation turns, plus value investors who sell a defensive name the moment it looks 'expensive' relative to its own history and miss the back half of a multi-quarter re-rating. I measured this rather than assumed it (detail in point 3): the entry fires plausibly across every name (28-47 signals per symbol over 22 years, comparable per-symbol frequency to C-trend's), but the edge it captures is real and measurably weaker than the AI-complex version -- a finding the brief asked this card to surface honestly rather than paper over with a flattering universe.",
+  "universe": [
+    "PG",
+    "KO",
+    "PEP",
+    "JNJ",
+    "ABT",
+    "NEE",
+    "SO",
+    "MMM",
+    "HON",
+    "XOM",
+    "JPM",
+    "MCD"
+  ],
+  "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+  "exit": "ema(20) crosses_below ema(50)",
+  "stop_loss_pct": "0.08",
+  "take_profit_pct": null,
+  "max_hold_days": 120,
+  "max_positions": 6,
+  "position_pct": "0.15",
+  "designed_through": "2026-02-13"
+}

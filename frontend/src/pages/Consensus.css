@@ -1,0 +1,105 @@
+/* Consensus page (`Consensus.tsx`). Every new selector here is prefixed `consensus-` per this
+   project's convention (see `Portfolio.css`'s own header comment), so it can never collide with a
+   class another page introduces in the shared stylesheet. Everything unprefixed referenced from
+   `Consensus.tsx` (.panel, .subtitle, .disclaimer, .placeholder, .muted, .badge, .view-tabs,
+   .timeframe-tab, .table-wrap, .data-table, .num, .collapsible*) is defined in the shared
+   `styles.css` or by `Collapsible.css` and reused as-is, matching every other page in this app.
+   Nothing here re-specifies panel chrome, table borders, or tab styling. */
+
+.consensus-view-panel { margin-bottom: 1rem; }
+
+/* --- Provenance strip -------------------------------------------------------------------------- */
+
+.consensus-provenance-line { margin: 0 0 0.5rem; line-height: 1.6; }
+.consensus-provenance:has(.consensus-unchecked) .consensus-provenance-line { margin-bottom: 0.75rem; }
+
+.consensus-unchecked-title { font-family: var(--font-mono); font-size: 0.85rem; }
+
+.consensus-unchecked-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* --- Ranked table -------------------------------------------------------------------------------- */
+
+.consensus-denominator { margin: 0 0 0.75rem; font-size: 0.82rem; line-height: 1.5; }
+
+.consensus-table td, .consensus-table th { vertical-align: top; }
+
+.consensus-issuer-cell { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.consensus-issuer-name { font-weight: 500; }
+
+.consensus-ticker-badge {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-decoration: none;
+}
+.consensus-ticker-badge:hover, .consensus-ticker-badge:focus-visible {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* The drill-down row sits directly under its ranked row with no divider of its own -- the ranked
+   row's own bottom border (from `.data-table`) already separates each CUSIP group from the next,
+   so a second rule here would double it. Zero vertical padding on the wrapping cell: `Collapsible`'s
+   own `.collapsible-summary`/`.collapsible-body` supply their own spacing. */
+.consensus-movers-row td { padding-top: 0; padding-bottom: 0.5rem; border-top: none; }
+.consensus-movers-row:hover { background: none; }
+
+.consensus-movers-title { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+
+/* --- Movers list ----------------------------------------------------------------------------------
+   One row per fund that moved this CUSIP. Flex-wrap rather than a nested table: a mover row carries
+   six short fields (name, action, source, weight delta, shares delta, period) that read fine as a
+   wrapped line and would be a lot of table chrome for what is already inside one `<details>` inside
+   one table cell. */
+
+.consensus-movers-list {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.consensus-mover-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.consensus-mover-row:last-child { border-bottom: none; }
+
+.consensus-mover-name { font-weight: 500; flex: 1 1 220px; min-width: 0; }
+
+.consensus-mover-weight, .consensus-mover-shares {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.consensus-mover-period { font-family: var(--font-mono); font-size: 0.78rem; }
+
+/* Same five-way vocabulary and up/down/neutral tone as `.inst-action-*` in the shared stylesheet
+   (Institutions page), kept as an independent rule set here since this page's badges are not
+   guaranteed to stay coupled to that page's. */
+.badge.consensus-action-new, .badge.consensus-action-add {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.badge.consensus-action-exit, .badge.consensus-action-trim {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+.badge.consensus-action-hold { color: var(--muted); }
+
+/* 13F vs NPORT is a regime label, not a good/bad signal -- no up/down tone, unlike the action
+   badge beside it. */
+.consensus-source-badge { color: var(--muted); cursor: help; }

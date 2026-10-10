@@ -1,0 +1,161 @@
+{
+  "round": 34,
+  "n_cells": 16,
+  "form_marginals": {
+    "ma-crossover": -0.0022478228310666972,
+    "momentum-state": -0.013656375968893438,
+    "rsi-pullback": -0.03430786072617742,
+    "band-reversion": -0.019870651006670858,
+    "channel-breakout": -0.018957717694570254,
+    "band-breakout": -0.029010284543847548,
+    "macd-cross": -0.018771416886518663,
+    "vol-compression": -0.04436921150485877
+  },
+  "form_spread": 0.04212138867379207,
+  "regime_marginals": {
+    "on": -0.01824023932856157,
+    "off": -0.027057595962089342
+  },
+  "regime_spread": 0.008817356633527774,
+  "field_spread": 0.06404019106965253,
+  "bh_reference": "r34-band-breakout-on",
+  "bh": [
+    {
+      "cell": "r34-band-breakout-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.04534669589465719,
+      "p": 0.21875,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-band-breakout-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    },
+    {
+      "cell": "r34-band-reversion-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.03596775003314289,
+      "p": 0.390625,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-band-reversion-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.027658212935867676,
+      "p": 0.75,
+      "q": 0.9230769230769231
+    },
+    {
+      "cell": "r34-channel-breakout-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.03862338789312561,
+      "p": 0.203125,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-channel-breakout-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.02682844170008617,
+      "p": 0.625,
+      "q": 0.8333333333333334
+    },
+    {
+      "cell": "r34-ma-crossover-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.034831428250566364,
+      "p": 0.2734375,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-ma-crossover-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.06404019106965253,
+      "p": 0.3515625,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-macd-cross-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.006178825376460785,
+      "p": 0.5859375,
+      "q": 0.8333333333333334
+    },
+    {
+      "cell": "r34-macd-cross-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.059645605832854165,
+      "p": 0.3203125,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-momentum-state-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.02461729949068668,
+      "p": 0.53125,
+      "q": 0.8333333333333334
+    },
+    {
+      "cell": "r34-momentum-state-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.05143721355387873,
+      "p": 0.8515625,
+      "q": 0.9583333333333334
+    },
+    {
+      "cell": "r34-rsi-pullback-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.010354144452758292,
+      "p": 0.5078125,
+      "q": 0.8333333333333334
+    },
+    {
+      "cell": "r34-rsi-pullback-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.02439739907723916,
+      "p": 0.8984375,
+      "q": 0.9583333333333334
+    },
+    {
+      "cell": "r34-vol-compression-off",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.001088760841296596,
+      "p": 0.3828125,
+      "q": 0.8125
+    },
+    {
+      "cell": "r34-vol-compression-on",
+      "vs": "r34-band-breakout-on",
+      "median_diff": 0.013540081131338151,
+      "p": 0.40625,
+      "q": 0.8125
+    }
+  ],
+  "best_form": "ma-crossover",
+  "worst_form": "vol-compression",
+  "min_q": 0.8125,
+  "trades_by_form": {
+    "ma-crossover": 268,
+    "momentum-state": 359,
+    "rsi-pullback": 387,
+    "band-reversion": 279,
+    "channel-breakout": 159,
+    "band-breakout": 274,
+    "macd-cross": 610,
+    "vol-compression": 234
+  },
+  "fewest_trades_form": "channel-breakout",
+  "worst_window_trend_forms": {
+    "r34-ma-crossover-on": "bull-2024",
+    "r34-ma-crossover-off": "bull-2024",
+    "r34-momentum-state-on": "chop-2011",
+    "r34-momentum-state-off": "chop-2011",
+    "r34-macd-cross-on": "bull-2024",
+    "r34-macd-cross-off": "gfc",
+    "r34-vol-compression-on": "chop-2015",
+    "r34-vol-compression-off": "bull-2024"
+  },
+  "cells_complete_8of8": 16
+}

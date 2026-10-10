@@ -1,0 +1,17 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+12 cards
+[1/12] r1 r47-control-dip-trim: 1s trades=5 ret=+11.16% dd=-16.87% rej=0
+[2/12] r1 r47-control-dip: 1s trades=4 ret=+10.23% dd=-18.04% rej=0
+[3/12] r1 r47-control-passive: 2s trades=4 ret=+9.97% dd=-17.90% rej=0
+[4/12] r1 r47-control-trim: 1s trades=6 ret=+9.62% dd=-17.50% rej=0
+[5/12] r1 r47-defense-dip-trim: 1s trades=6 ret=+5.11% dd=-14.21% rej=0
+[6/12] r1 r47-defense-dip: 1s trades=4 ret=+6.71% dd=-15.47% rej=0
+[7/12] r1 r47-defense-passive: 1s trades=4 ret=+8.48% dd=-16.41% rej=0
+[8/12] r1 r47-defense-trim: 1s trades=8 ret=+5.42% dd=-15.17% rej=0
+[9/12] r1 r47-power-dip-trim: 1s trades=13 ret=+5.78% dd=-13.78% rej=0
+[10/12] r1 r47-power-dip: 1s trades=4 ret=+10.08% dd=-16.78% rej=0
+[11/12] r1 r47-power-passive: 1s trades=4 ret=+21.28% dd=-19.06% rej=0
+[12/12] r1 r47-power-trim: 1s trades=14 ret=+17.86% dd=-12.07% rej=0
+r1: 12 agents, 0 discoveries
+overall: 12 agents, 0 discoveries at alpha=0.1

@@ -1,0 +1,214 @@
+field: 10 cards from data/rounds/r44-2026-09/cards
+
+==============================================================
+WINDOW q4-2018  2018-09-21 -> 2018-12-24
+==============================================================
+tee: data/rounds/r44-2026-09/results/q4-2018.log: No such file or directory
+window: 2018-09-21 -> 2018-12-24
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=-20.41% dd=-20.41% rej=0
+[2/10] r1 r44-control-trim: 0s trades=4 ret=-20.41% dd=-20.41% rej=0
+[3/10] r1 r44-defense-passive: 1s trades=4 ret=-26.45% dd=-27.88% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=4 ret=-26.45% dd=-27.88% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=+2.51% dd=-8.91% rej=0
+[6/10] r1 r44-power-trim: 1s trades=7 ret=+4.50% dd=-8.36% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=-23.57% dd=-23.99% rej=0
+[8/10] r1 r44-realassets-trim: 0s trades=4 ret=-23.57% dd=-23.99% rej=0
+[9/10] r1 r44-semicap-passive: 1s trades=4 ret=-22.82% dd=-23.05% rej=0
+[10/10] r1 r44-semicap-trim: 1s trades=4 ret=-22.82% dd=-23.05% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1
+
+-- q4-2018: 10 run files, 0 FAILED lines
+grep: data/rounds/r44-2026-09/results/q4-2018.log: No such file or directory
+
+==============================================================
+WINDOW covid  2020-02-19 -> 2020-06-30
+==============================================================
+window: 2020-02-19 -> 2020-06-30
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=-11.57% dd=-36.25% rej=0
+[2/10] r1 r44-control-trim: 1s trades=4 ret=-11.57% dd=-36.25% rej=0
+[3/10] r1 r44-defense-passive: 1s trades=4 ret=-21.41% dd=-37.40% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=4 ret=-21.41% dd=-37.40% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=-12.23% dd=-35.09% rej=0
+[6/10] r1 r44-power-trim: 1s trades=9 ret=-6.11% dd=-32.34% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=-16.40% dd=-43.02% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=4 ret=-16.40% dd=-43.02% rej=0
+[9/10] r1 r44-semicap-passive: 1s trades=4 ret=+4.00% dd=-37.70% rej=1
+[10/10] r1 r44-semicap-trim: 1s trades=12 ret=+16.36% dd=-28.38% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1
+
+-- covid: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW bear-2022  2022-01-03 -> 2022-10-12
+==============================================================
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=-21.23% dd=-21.99% rej=0
+[2/10] r1 r44-control-trim: 1s trades=4 ret=-21.23% dd=-21.99% rej=0
+[3/10] r1 r44-defense-passive: 1s trades=4 ret=+9.95% dd=-12.71% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=25 ret=+17.61% dd=-7.91% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=-12.65% dd=-23.11% rej=0
+[6/10] r1 r44-power-trim: 1s trades=14 ret=-3.89% dd=-17.77% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=-4.50% dd=-26.80% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=15 ret=-7.30% dd=-19.14% rej=0
+[9/10] r1 r44-semicap-passive: 1s trades=4 ret=-46.80% dd=-47.28% rej=0
+[10/10] r1 r44-semicap-trim: 1s trades=7 ret=-44.12% dd=-44.49% rej=0
+r1: 10 agents, 1 discoveries
+overall: 10 agents, 1 discoveries at alpha=0.1
+
+-- bear-2022: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW chop-2015  2015-04-07 -> 2016-04-15
+==============================================================
+window: 2015-04-07 -> 2016-04-15
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=-1.58% dd=-15.52% rej=0
+[2/10] r1 r44-control-trim: 1s trades=4 ret=-1.58% dd=-15.52% rej=0
+[3/10] r1 r44-defense-passive: 1s trades=4 ret=+5.89% dd=-9.74% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=5 ret=+5.85% dd=-9.60% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=+2.37% dd=-15.01% rej=0
+[6/10] r1 r44-power-trim: 1s trades=4 ret=+2.37% dd=-15.01% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=-19.42% dd=-42.88% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=4 ret=-20.37% dd=-42.88% rej=0
+[9/10] r1 r44-semicap-passive: 1s trades=4 ret=+8.14% dd=-24.92% rej=0
+[10/10] r1 r44-semicap-trim: 1s trades=9 ret=+5.95% dd=-24.92% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1
+
+-- chop-2015: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW chop-2011  2011-05-26 -> 2012-06-06
+==============================================================
+window: 2011-05-26 -> 2012-06-06
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=-2.83% dd=-21.53% rej=0
+[2/10] r1 r44-control-trim: 1s trades=4 ret=-2.83% dd=-21.53% rej=0
+[3/10] r1 r44-defense-passive: 1s trades=4 ret=-6.81% dd=-23.50% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=9 ret=-4.48% dd=-22.32% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=+6.05% dd=-12.34% rej=0
+[6/10] r1 r44-power-trim: 1s trades=4 ret=+11.49% dd=-12.34% rej=72
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=-23.57% dd=-34.63% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=6 ret=-22.14% dd=-32.89% rej=0
+[9/10] r1 r44-semicap-passive: 1s trades=4 ret=-0.00% dd=-21.14% rej=0
+[10/10] r1 r44-semicap-trim: 1s trades=16 ret=+0.72% dd=-21.14% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1
+
+-- chop-2011: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW bull-2024  2024-08-21 -> 2025-08-20
+==============================================================
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=+9.97% dd=-17.90% rej=0
+[2/10] r1 r44-control-trim: 1s trades=6 ret=+9.62% dd=-17.50% rej=0
+[3/10] r1 r44-defense-passive: 2s trades=4 ret=+8.48% dd=-16.41% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=8 ret=+5.42% dd=-15.17% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=+21.28% dd=-19.06% rej=0
+[6/10] r1 r44-power-trim: 1s trades=14 ret=+17.86% dd=-12.07% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=+10.46% dd=-23.30% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=9 ret=+7.41% dd=-21.59% rej=0
+[9/10] r1 r44-semicap-passive: 1s trades=4 ret=-4.17% dd=-31.84% rej=0
+[10/10] r1 r44-semicap-trim: 1s trades=6 ret=-4.85% dd=-30.97% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1
+
+-- bull-2024: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW recent  2025-08-21 -> 2026-08-18
+==============================================================
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=+21.02% dd=-8.12% rej=0
+[2/10] r1 r44-control-trim: 1s trades=12 ret=+22.53% dd=-7.82% rej=0
+[3/10] r1 r44-defense-passive: 2s trades=4 ret=+23.58% dd=-19.81% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=24 ret=+18.63% dd=-10.57% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=+11.08% dd=-14.10% rej=0
+[6/10] r1 r44-power-trim: 1s trades=20 ret=+7.31% dd=-6.28% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=+62.67% dd=-20.52% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=19 ret=+22.02% dd=-5.38% rej=0
+[9/10] r1 r44-semicap-passive: 2s trades=4 ret=+172.31% dd=-37.82% rej=0
+[10/10] r1 r44-semicap-trim: 0s trades=6 ret=+18.99% dd=-2.31% rej=0
+r1: 10 agents, 4 discoveries
+overall: 10 agents, 4 discoveries at alpha=0.1
+
+-- recent: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW gfc  2007-10-09 -> 2009-03-09
+==============================================================
+window: 2007-10-09 -> 2009-03-09
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 2s trades=4 ret=-56.50% dd=-56.70% rej=0
+[2/10] r1 r44-control-trim: 2s trades=4 ret=-56.50% dd=-56.70% rej=0
+[3/10] r1 r44-defense-passive: 2s trades=4 ret=-53.04% dd=-54.47% rej=0
+[4/10] r1 r44-defense-trim: 2s trades=6 ret=-51.34% dd=-53.01% rej=0
+[5/10] r1 r44-power-passive: 2s trades=4 ret=-41.60% dd=-44.57% rej=1
+[6/10] r1 r44-power-trim: 2s trades=6 ret=-37.46% dd=-40.94% rej=1
+[7/10] r1 r44-realassets-passive: 2s trades=4 ret=-62.57% dd=-70.15% rej=0
+[8/10] r1 r44-realassets-trim: 2s trades=26 ret=-47.38% dd=-56.84% rej=0
+[9/10] r1 r44-semicap-passive: 2s trades=4 ret=-62.49% dd=-67.24% rej=0
+[10/10] r1 r44-semicap-trim: 2s trades=6 ret=-59.84% dd=-64.57% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1
+
+-- gfc: 10 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW 13f-legal  2025-11-17 -> 2026-08-18
+==============================================================
+window: 2025-11-17 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+0 of 10 cards selected by --only='c06-13f'
+no runs completed
+
+-- 13f-legal: 0 run files, 0
+0 FAILED lines
+
+==============================================================
+RECONCILIATION
+==============================================================
+window         runs   failed
+q4-2018          10        0
+covid            10      0
+0
+bear-2022        10      0
+0
+chop-2015        10      0
+0
+chop-2011        10      0
+0
+bull-2024        10      0
+0
+recent           10      0
+0
+gfc              10      0
+0
+13f-legal         0      0
+0
+
+Any IOException among the FAILED lines above means a card was lost to store
+contention rather than to an honest guard failure. Re-run that window alone.

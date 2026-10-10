@@ -1,0 +1,38 @@
+{
+  "agent_id": "qld-schd-sgov",
+  "display_name": "QLD/SCHD/SGOV buy-low/trim-high allocator",
+  "thesis": "This is a buy-low/trim-high rebalancer, not a trend follower, and the two are easy to confuse because both read the same indicators -- the difference is entirely in which direction the signal moves weight. Base allocation: 35% QLD (2x Nasdaq-100, the growth/beta sleeve), 40% SCHD (dividend equity, the compounding ballast), 25% SGOV (T-bills, dry powder and a volatility damper for the leveraged sleeve). QLD gets the smallest base weight of the three specifically because it is 2x levered -- at 35% notional it already contributes roughly as much daily variance to the book as SCHD and SGOV combined, and sizing it any larger would make the book's risk profile mostly a QLD bet wearing a three-sleeve label. Two tilt rules move weight between sleeves on conditions read off QLD's own price only (this engine has no cross-symbol operator; every condition is evaluated against one instrument's own bars): (1) when QLD closes below its own 150-day SMA -- weak relative to its own long-run trend -- shift 8 points of the book from SCHD into QLD, adding to the leveraged sleeve while it is depressed rather than waiting for confirmation it has turned; (2) when QLD closes above its own 20-day/2-sigma upper Bollinger band -- statistically extended relative to its own recent range -- shift 8 points from QLD into SGOV, trimming the leveraged sleeve into strength and parking the proceeds in T-bills rather than compounding the position further. Both conditions are deliberately mean-reversion, not momentum: a trend-following version of this card would do the opposite of each rule (add on the breakout above the band, cut on the break below the moving average), and stating the direction explicitly here is what makes this thesis checkable rather than a description of its own mechanism. The equity leg (QLD/SCHD) is unhedged and the SGOV sleeve is not a market-timing call, it is the mechanical destination for capital the tilt rules pull out of QLD -- there is no rule that increases SGOV's weight for any reason other than QLD's rule 2 firing, and no rule that spends SGOV's weight down except QLD's rule 1. Falsification: this thesis is wrong, not merely unlucky, if QLD's below-150-SMA dips are systematically followed by further, larger declines rather than reversion (i.e. rule 1 is buying into structural breakdowns, not oversold bounces) and/or if QLD's above-upper-band extensions are systematically followed by continued strength rather than mean reversion (i.e. rule 2 is trimming winners early in a sustained regime shift toward growth/leverage outperformance) -- a sustained one-way trend in the Nasdaq-100 in either direction is the regime that breaks this card, because a buy-low/trim-high rule fights a real trend on both ends: it re-buys a genuine breakdown and it trims a genuine breakout, giving back exactly the return a trend-following version of the same two conditions would have captured. A 5-point band (band_pct) on each sleeve is used rather than daily rebalancing to a point target, because PaperBroker charges slippage and floors whole shares on every fill, so rebalancing on drift smaller than ordinary day-to-day price noise between three dissimilar instruments would manufacture turnover that measures the simulation's own rounding, not the strategy.",
+  "sleeves": [
+    {
+      "symbol": "QLD",
+      "target_weight": "0.35"
+    },
+    {
+      "symbol": "SCHD",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "SGOV",
+      "target_weight": "0.25"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "close < sma(150)",
+      "on_symbol": "QLD",
+      "from_symbol": "SCHD",
+      "to_symbol": "QLD",
+      "shift_pct": "0.08"
+    },
+    {
+      "condition": "close > bb_upper(20,2)",
+      "on_symbol": "QLD",
+      "from_symbol": "QLD",
+      "to_symbol": "SGOV",
+      "shift_pct": "0.08"
+    }
+  ],
+  "designed_through": "2026-02-13",
+  "purpose": "savings"
+}

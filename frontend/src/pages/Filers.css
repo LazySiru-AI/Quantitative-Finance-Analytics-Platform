@@ -1,0 +1,17 @@
+/* Filers page (`Filers.tsx`) -- the merged Institutions/Consensus banner and tab rail.
+   Everything referenced from `Filers.tsx` itself besides the one rule below (.subtitle, .folder-tabs*)
+   is defined in the shared `styles.css` or `FolderTabs.css` and reused as-is. The two tab bodies
+   (`InstitutionsView`/`ConsensusView`) bring their own `Institutions.css`/`Consensus.css` imports
+   with them -- this file owns only the banner/tab-rail layer above those. */
+
+/* Breathing room between the tab rail and whichever view mounts under it -- `FolderTabs` itself ends
+   flush against its own bottom border (see `FolderTabs.css`), which reads fine sitting directly atop
+   a `.panel`'s card edge (e.g. Tax.tsx's tab rail) but needs a beat of space above `InstitutionsView`/
+   `ConsensusView`, both of which open with a bare `.panel.disclaimer` rather than a heading.
+
+   Scoped to `.filers-page .folder-tabs` rather than the bare `.folder-tabs` class -- that class is
+   global (`FolderTabs.css`, used by Tax, Personas, Agent Desk and others), and an unscoped rule here
+   would silently change every one of those pages' spacing instead of only this one's. */
+.filers-page .folder-tabs {
+  margin-bottom: 1rem;
+}

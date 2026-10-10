@@ -1,0 +1,519 @@
+/* Paper Desk page. Every new selector here is prefixed `desk-` per the project convention, so it
+   can never collide with a class another page introduces in the shared stylesheet. Everything
+   unprefixed referenced from PaperDesk.tsx (.panel, .stat, .tile-grid, .data-table, .table-wrap,
+   .badge, .state-pill, .callout/.callout-warn/.callout-danger, .disclaimer, .position-table,
+   .position-symbol, .warning-list, .muted, .placeholder, .download-link) is defined in the shared
+   `styles.css` and reused as-is, matching every other page in this app. */
+
+.desk-header-panel { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.desk-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.desk-header-grid { flex: 1; min-width: 0; }
+
+.desk-refresh-btn {
+  cursor: pointer;
+  white-space: nowrap;
+}
+.desk-refresh-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.desk-mark-note { margin: 0; }
+
+.desk-stale-callout, .desk-refresh-error { padding: 0.75rem 1rem; border-radius: 6px; }
+
+/* The fetch button's own progress line and result report. Deliberately typographic rather than
+   another boxed callout: the ordinary outcome ("40 symbols, nothing new") is routine information,
+   and a bordered panel around it every time would give a non-event the same visual weight as the
+   stale-mark warning directly above. Only the failure list inside it escalates, reusing the shared
+   `.callout-warn` treatment. */
+.desk-fetch-progress { margin: 0; }
+
+.desk-fetch-report { display: flex; flex-direction: column; gap: 0.35rem; }
+.desk-fetch-summary, .desk-fetch-mark { margin: 0; }
+
+.desk-fetch-failures { padding: 0.75rem 1rem; border-radius: 6px; }
+.desk-fetch-failure-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.desk-notes { margin: 0; }
+.desk-notes-list { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+
+/* Three desk cards per row on a wide viewport, dropping to two and then one as width decreases.
+   Explicit column counts rather than `Card.css`'s own `auto-fit`/`minmax` -- these cards are dense
+   (several tables each), and an auto-fit count that happens to squeeze in a fourth or fifth narrow
+   column on a very wide monitor would read as columns of squashed tables long before any individual
+   table itself overflowed. `.content`'s own 1400px max-width (`styles.css`) means three columns
+   land at roughly 440px each at full width -- comfortable for the tile rows and the upcoming-
+   signals lists, and for the tables the card body scrolls its own contents on both axes rather than
+   forcing the column wider. Two columns below 1300px keeps each card above roughly 400px on a
+   typical laptop width instead of thinning both at once; one column below 860px matches the
+   breakpoint at which `.sidebar` itself already collapses to a top bar (`styles.css`), so the two
+   layout shifts happen together rather than at two unrelated widths.
+
+   Written as `.card-grid.desk-grid` so it wins against `.card-grid`'s own `grid-template-columns`
+   on specificity rather than on stylesheet order, which is not something this file controls. Only
+   the columns are overridden: the row height (`grid-auto-rows`), `gap` and the `align-items:
+   stretch` that makes every card fill its track all stay the primitive's, and that last one is the
+   whole point -- this grid used to say `align-items: start`, which is exactly what let each panel
+   size itself and gave every row a ragged bottom edge. */
+.card-grid.desk-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 1300px) {
+  .card-grid.desk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .card-grid.desk-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* The visibility chooser sits above the grid as its own panel, one checkbox per desk the API
+   returned (see `DeskVisibilityChooser`). A plain flex-wrap row rather than a grid -- the count of
+   desks varies with the roster and there is no column alignment to preserve between labels of
+   very different lengths ("B-momentum" vs. "Drawdown Ladder - QLD/SCHD/IEF"). */
+.desk-visibility-panel { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem; }
+.desk-visibility-title { margin: 0; font-size: 0.95rem; }
+.desk-visibility-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+.desk-visibility-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.desk-visibility-item input[type="checkbox"] { cursor: pointer; }
+
+/* `.desk-panel` now names two different things, and only one of them needs a layout of its own:
+   a desk card (where it rides on `Card`'s root, which is already a `min-height: 0` flex column
+   filling its grid track) and the after-tax panel below the grid, which is a plain `.panel` and
+   still needs the column layout it always had. `:not(.card)` keeps the two apart instead of
+   handing the card a second, competing `display`/`gap` declaration whose winner would depend on
+   stylesheet order. */
+.desk-panel:not(.card) { display: flex; flex-direction: column; gap: 1rem; }
+
+/* The desk card's single scrolling body. `overflow` (not `overflow-y`) on both axes deliberately:
+   the tables inside no longer carry a `.table-wrap` of their own, because a horizontal scroller
+   nested in this vertical one traps the wheel -- so this element is where a wide holdings table
+   scrolls sideways too. Written as `.card-body.desk-panel-body` to beat both `.card-body` and
+   `.scroll-region` on specificity rather than on import order. */
+.card-body.desk-panel-body {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.desk-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.desk-panel-title { margin: 0; }
+.desk-discipline-badge { text-transform: capitalize; }
+
+/* The "seated from" pill sits inline in the head row. A promoted seat's pill is a link to the Loop
+   view; the link wrapper carries no chrome of its own so the StatusPill inside is what the reader
+   sees, and only its underline-on-hover marks it as clickable. */
+.desk-provenance-link { text-decoration: none; }
+.desk-provenance-link:hover .desk-provenance-badge { text-decoration: underline; }
+
+/* The first thing in the card body -- see `DeskHeadlineTiles` in DeskPanel.tsx. A full-width flex
+   row so it reads as one line of figures under the fixed head rather than competing with the
+   title and badges for space in it. */
+.desk-panel-headline-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  width: 100%;
+  font-size: 0.88rem;
+}
+.desk-panel-headline-stat { display: inline-flex; align-items: baseline; gap: 0.4rem; }
+.desk-panel-headline-value { font-weight: 600; font-variant-numeric: tabular-nums; }
+.desk-panel-headline-value.pos { color: var(--up); }
+.desk-panel-headline-value.neg { color: var(--down); }
+
+/* The card's long form: rejections, the live-quote projection and every book statistic. Closed by
+   default, so a reader comparing a row of desks pays nothing in height for it. Reuses
+   `Collapsible`'s own look; `.desk-panel-collapsible-title` only strips the extra margin an `<h3>`
+   normally carries so it sits flush in the summary row. */
+.desk-panel-collapsible { margin: 0; }
+.desk-panel-collapsible-title { margin: 0; font-size: 0.95rem; }
+
+.desk-tile-grid, .desk-pnl-grid { margin: 0; }
+
+/* Every numeric column in this page's tables reads as a column of aligned digits, not ragged text --
+   the module's own requirement, on top of what `.data-table` already gives every other page. */
+.desk-holdings-table td.num,
+.desk-signals-table td.num,
+.desk-decisions-table td.num,
+.desk-trades-table td.num,
+.desk-holdings-table th.num,
+.desk-signals-table th.num,
+.desk-decisions-table th.num,
+.desk-trades-table th.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.desk-section { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.desk-rejections { padding: 0.75rem 1rem; border-radius: 6px; }
+.desk-rejections .warning-list { margin-top: 0.5rem; }
+
+/* One row per rule group -- see `RejectionGroup` in DeskPanel.tsx. The `<summary>` line (rule label,
+   order count, affected symbols) is the always-visible part the task exists to add; only the
+   per-order sentences inside the `<details>` stay collapsed, matching this file's existing
+   `.desk-thesis-detail` disclosure pattern rather than a second hand-rolled toggle. */
+.desk-rejection-groups { list-style: none; margin: 0.5rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+.desk-rejection-group { margin: 0; }
+.desk-rejection-detail summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.83rem;
+  color: var(--text);
+}
+.desk-rejection-detail summary:hover { color: var(--warn); }
+.desk-rejection-detail .warning-list { font-size: 0.8rem; color: var(--muted); }
+
+.desk-blocked-badge { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, transparent); }
+
+.desk-action-badge { text-transform: uppercase; }
+.desk-action-enter {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.desk-action-exit {
+  color: var(--muted);
+}
+
+.desk-rules-section { margin-top: 0.25rem; }
+.desk-rules-block {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.desk-thesis-detail summary {
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+.desk-thesis-detail summary:hover { color: var(--text); }
+.desk-thesis-detail p { margin: 0.5rem 0 0; line-height: 1.6; }
+
+/* The drawdown ladder's own rules block (`DeskLadderDescription`) sits where `DeskRules` normally
+   would and reuses `.desk-rules-block` as-is. Its rung table (`LadderRungs`) no longer sits with it:
+   it is this card kind's forward-looking block and renders in the card body, styled by `.data-table`
+   like every other table here. The only thing genuinely new is the rung table's caption, which the
+   shared stylesheet does not otherwise style. */
+.desk-ladder-rungs-caption {
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 0.35rem;
+  caption-side: top;
+}
+
+/* A desk that has never traded. Muted rather than alarming: it is a legitimate state for a card
+   whose entry rule has not fired, and the point is that a reader can tell it apart from a desk that
+   traded to roughly flat -- not that it is an error. */
+.desk-panel-dormant {
+  border-style: dashed;
+}
+
+/* Colour and background now come from the shared StatusPill `warn` tone; this rule only carries
+   the layout tweak the pill does not. A dormant desk reads as amber ("attention: not trading"),
+   not the neutral grey it used to be. */
+.desk-dormant-badge {
+  font-weight: 600;
+}
+
+.desk-dormant-note {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+/* Page-level framing line: the reference-signal model, stated once above every desk panel. */
+.desk-framing-note { margin: -0.25rem 0 1rem; max-width: 76ch; line-height: 1.5; }
+
+/* "What it would do next" -- the forward-looking signals block. Given a visible accent border so
+   it reads as the panel's headline, not another table in the stack. */
+.desk-upcoming-section {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.9rem;
+}
+.desk-upcoming-note { margin: 0 0 0.5rem; font-size: 0.82rem; }
+.desk-upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+.desk-upcoming-list { display: flex; flex-direction: column; gap: 0.4rem; }
+.desk-upcoming-badge { align-self: flex-start; text-transform: uppercase; font-weight: 600; }
+.desk-upcoming-badge-buy {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+.desk-upcoming-badge-sell {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+.desk-upcoming-items { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+.desk-upcoming-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.desk-upcoming-price { color: var(--muted); font-size: 0.85rem; }
+
+/* Ranked entries. The row reads `#1  SYM ......... $price  1.0712`: the symbol takes the slack so
+   the two numbers stay right-aligned against each other down the list, which is the comparison the
+   whole feature exists to make easy. */
+.desk-upcoming-item .position-symbol { margin-right: auto; }
+.desk-upcoming-rank-value {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+.desk-upcoming-rank-note { margin: 0; font-size: 0.78rem; }
+.desk-upcoming-rank-note code { font-size: 0.95em; }
+.desk-rank-badge {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+/* Dimmed, not dropped: a name past the last free slot still qualified, and a reader wants to know
+   what the desk passed over. The dimming is redundant emphasis and never the only signal -- the
+   `#N` badge carries the position as text and `QueueNote` states the cutoff in words, so nothing
+   here depends on perceiving the opacity. */
+.desk-upcoming-item-outranked { opacity: 0.55; }
+
+/* Signals table: the ranking key column. */
+.desk-signals-rank-note { margin: 0 0 0.5rem; font-size: 0.78rem; }
+.desk-signals-rank-note code { font-size: 0.95em; }
+.desk-signals-rank-cell { white-space: nowrap; }
+.desk-signals-rank-cell .desk-rank-badge { margin-left: 0.4rem; }
+
+/* Live execution -- what the desk would trade RIGHT NOW against a real-time quote. Deliberately NOT
+   styled like `.desk-recent-list` (the audited "what it just did" history) below it or the plain
+   `.desk-section` tables elsewhere on the card: a dashed accent border, tinted background and an
+   explicit "Live" pill mark it as a projection recomputed on every refresh rather than a row of
+   settled fact, so a reader cannot mistake one for the other at a glance. */
+.desk-live-section {
+  border: 1px dashed color-mix(in srgb, var(--accent) 50%, transparent);
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+.desk-live-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.desk-live-badge {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.desk-live-headline { font-size: 0.92rem; }
+.desk-live-asof {
+  margin-left: auto;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+.desk-live-note { margin: 0.35rem 0 0; font-size: 0.8rem; line-height: 1.5; max-width: 68ch; }
+
+.desk-live-detail { margin-top: 0.5rem; }
+.desk-live-detail summary {
+  cursor: pointer;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+.desk-live-detail summary:hover { color: var(--text); }
+
+.desk-live-fills {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.desk-live-fill {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+.desk-live-side-badge { text-transform: uppercase; font-size: 0.72rem; }
+.desk-live-fill-price { font-family: var(--font-mono); }
+.desk-live-quote-price { font-family: var(--font-mono); font-size: 0.78rem; }
+.desk-live-fill-notional { margin-left: auto; font-family: var(--font-mono); font-size: 0.82rem; }
+
+/* Live rejections reuse `.desk-rejection-groups`/`RejectionGroup` verbatim (see `DeskPanel.tsx`);
+   only the top margin here differs from the historical callout's own spacing. */
+.desk-live-rejection-groups { margin-top: 0.5rem; }
+
+/* "What it just did" -- the recent-decisions list. */
+.desk-recent-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+.desk-recent-item {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+.desk-recent-date { color: var(--muted); font-variant-numeric: tabular-nums; }
+.desk-recent-detail { font-variant-numeric: tabular-nums; }
+.desk-recent-reason { font-size: 0.82rem; }
+
+/* Book statistics: demoted into a collapsed disclosure, not deleted -- still available for an
+   "is this strategy healthy" check, but no longer the first thing a reader sees. */
+.desk-book-stats-summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--muted);
+}
+.desk-book-stats-summary:hover { color: var(--text); }
+.desk-book-stats-body { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.75rem; }
+
+/* ---------------------------------------------------------------------------
+   Inception control -- sits above `.desk-content`, always fully visible and interactive even while
+   a recompute it triggered is in flight (see `.desk-content-busy` below), so the control's own
+   "Applying…" wording stays legible throughout rather than being dimmed along with everything else.
+   `.desk-inception-field` mirrors the shared `.filter-bar label` pattern (uppercase, letter-spaced
+   caption above the control) and `.desk-inception-field input[type="date"]` mirrors `.year-select
+   select`'s own look, so this reads as the same family of control as every other page filter.
+   --------------------------------------------------------------------------- */
+.desk-inception-panel { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.desk-inception-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.desk-inception-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.desk-inception-field input[type="date"] {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: normal;
+  font-family: var(--font-mono);
+}
+.desk-inception-apply, .desk-inception-reset {
+  cursor: pointer;
+  white-space: nowrap;
+}
+.desk-inception-apply:disabled, .desk-inception-reset:disabled { opacity: 0.6; cursor: not-allowed; }
+.desk-inception-hint { margin: 0; max-width: 76ch; }
+.desk-inception-error { padding: 0.75rem 1rem; border-radius: 6px; }
+
+/* The honesty label -- a custom inception can straddle the strategy design cutoff. Reused
+   `.callout-warn` per the task brief; only the spacing below is new. */
+.desk-insample-callout { margin-bottom: 1rem; padding: 0.75rem 1rem; border-radius: 6px; }
+
+/* The whole desk below the inception control -- dimmed and overlaid with a sticky status banner
+   while a new inception is being applied, so old equity/return figures are never left looking live
+   while they are silently replaced underneath. `position: relative` is only load-bearing for the
+   overlay's own `position: sticky` offset; the dimmed content is never taken out of flow, so the
+   page's height and scroll position do not jump when the overlay appears or disappears. */
+.desk-content { position: relative; }
+.desk-content-busy > *:not(.desk-recompute-overlay) {
+  opacity: 0.35;
+  pointer-events: none;
+  filter: grayscale(35%);
+  transition: opacity 0.15s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .desk-content-busy > *:not(.desk-recompute-overlay) { transition: none; }
+}
+
+.desk-recompute-overlay {
+  position: sticky;
+  top: 1rem;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: center;
+  padding: 1.1rem 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border-strong, var(--border));
+  border-radius: 8px;
+  box-shadow: 0 8px 28px -10px rgba(0, 0, 0, 0.45);
+}
+.desk-recompute-overlay p { margin: 0; font-size: 1rem; font-weight: 600; }
+.desk-recompute-detail {
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  color: var(--muted);
+  max-width: 52ch;
+}
+.desk-recompute-spinner {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  animation: desk-recompute-spin 0.8s linear infinite;
+}
+@keyframes desk-recompute-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .desk-recompute-spinner { animation: none; border-top-color: var(--border); }
+}
+
+@media (max-width: 640px) {
+  .desk-inception-row { align-items: stretch; }
+  .desk-inception-field { flex: 1 1 100%; }
+}

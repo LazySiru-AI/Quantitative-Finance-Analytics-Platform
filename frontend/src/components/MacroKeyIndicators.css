@@ -1,0 +1,103 @@
+/* =============================================================================
+   MacroKeyIndicators -- the four-up "key indicators" card at the top of the
+   Macro page. Deliberately scoped here (not in styles.css) and every class
+   prefixed macro-key- so it can't collide with .macro-tile's rules, which a
+   different component/worker owns. Visual language matches .macro-tile
+   (same tokens, same type scale) so the new card doesn't look bolted on.
+   ============================================================================= */
+
+.macro-key-card { display: flex; flex-direction: column; gap: 0.9rem; }
+
+/* auto-fit(260px): wider floor than .macro-tile-grid's 220px because each tile here also carries
+   a full MacroSeriesChart, not just a sparkline -- it needs the extra room to stay legible before
+   wrapping to two-up, then one-up, on narrow viewports. */
+.macro-key-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
+
+.macro-key-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.macro-key-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.macro-key-label {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.macro-key-value {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+.macro-key-value-empty { color: var(--muted); }
+
+.macro-key-changes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+}
+.macro-key-change-stat { display: flex; flex-direction: column; gap: 0.1rem; }
+.macro-key-change-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.macro-key-change-value { font-family: var(--font-mono); font-size: 0.85rem; }
+/* Only applied when tone="signed" (WTI, DXY, BTC) -- the 10-year yield's tone="neutral" tile never
+   reaches this class, matching how .macro-change-value.pos/.neg is scoped in the Movers grid. */
+.macro-key-change-value.pos { color: var(--up); }
+.macro-key-change-value.neg { color: var(--down); }
+
+.macro-key-chart {
+  margin: 0.2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0;
+}
+
+.macro-key-foot {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
+/* --- Unavailable slot -----------------------------------------------------
+   Renders in place of value/changes/chart when the snapshot doesn't carry this
+   entry yet (currently only reachable for BTC-USD -- see the component
+   docstring). A dashed border rather than the tile's normal solid one is the
+   one deliberate visual break: it reads as "this frame is waiting on data,"
+   not as a data point in its own right. */
+.macro-key-unavailable {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  justify-content: center;
+}
+.macro-key-unavailable-note {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}

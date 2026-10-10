@@ -1,0 +1,7 @@
+card                  univ  slots  headroom  windows   contested
+B3-concentrated         12      4         8        6         2/6
+c19-volatility          12      4         8        8         7/8
+B-momentum              12      6         6        6         2/6
+A-rotation               9      3         6        7         7/7
+C-trend                  9      5         4        6         1/6
+c21-uncorrelated         6      6         0        8         0/8

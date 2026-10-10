@@ -1,0 +1,21 @@
+== round 14: 22 cards scored over 8 regime windows ==
+   windows: q4-2018, covid, bear-2022, chop-2015, chop-2011, bull-2024, recent, gfc
+
+== CONTROL -- c21-uncorrelated, 6 names in 6 slots, no slot can be contested ==
+  base   -0.59
+  ranked -0.59
+  divergence +0.00  ->  PASS
+
+== SPREAD per base card: what the choice of chooser is worth ==
+base card             unranked (u  relative st  lowest vola  stretch in     spread        best
+B3-concentrated            +13.89       +14.52       +13.89       +13.89     +0.62 relative st
+c19-volatility              -2.64        -2.06        -2.21        -2.40     +0.58 relative st
+B-momentum                 +12.16       +11.30       +10.86       +11.86     +1.29 unranked (u
+A-rotation                  -7.16        +0.72        -8.16        -5.88     +8.88 relative st
+C-trend                     +5.03        +4.36        +5.03        +5.03     +0.67 unranked (u
+
+== against the pre-committed expectations (ROUND-14-PLAN.md section 6) ==
+  1. control diverges by exactly 0  ->  HELD (+0.00 pts)
+  2. spread under 53.9 pts on most cards  ->  HELD (5 of 5; max 8.88, median 0.67)
+  4. at least one base spreads under 5 pts  ->  HELD (4 of 5)
+  3. no single key wins on every base  ->  HELD ({'relative strength': 3, 'unranked (universe order)': 2})

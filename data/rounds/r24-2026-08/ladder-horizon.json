@@ -1,0 +1,177 @@
+[
+ {
+  "agent_id": "ladder-qld-schd",
+  "leveraged_symbol": "QLD",
+  "purpose": "trading",
+  "window": [
+   "2006-07-01",
+   "2026-08-28"
+  ],
+  "cycles": [
+   {
+    "entered": "2008-03-25",
+    "exited": "2013-03-15",
+    "open_at_end": false,
+    "calendar_days": 1816,
+    "months": 59.7
+   },
+   {
+    "entered": "2008-03-25",
+    "exited": "2013-06-11",
+    "open_at_end": false,
+    "calendar_days": 1904,
+    "months": 62.5
+   },
+   {
+    "entered": "2019-01-22",
+    "exited": "2019-04-30",
+    "open_at_end": false,
+    "calendar_days": 98,
+    "months": 3.2
+   },
+   {
+    "entered": "2019-01-22",
+    "exited": "2019-07-25",
+    "open_at_end": false,
+    "calendar_days": 184,
+    "months": 6.0
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-08-19",
+    "open_at_end": false,
+    "calendar_days": 120,
+    "months": 3.9
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-08-21",
+    "open_at_end": false,
+    "calendar_days": 122,
+    "months": 4.0
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-08-24",
+    "open_at_end": false,
+    "calendar_days": 125,
+    "months": 4.1
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-08-26",
+    "open_at_end": false,
+    "calendar_days": 127,
+    "months": 4.2
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-08-27",
+    "open_at_end": false,
+    "calendar_days": 128,
+    "months": 4.2
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-11-12",
+    "open_at_end": false,
+    "calendar_days": 205,
+    "months": 6.7
+   },
+   {
+    "entered": "2022-07-22",
+    "exited": "2024-01-22",
+    "open_at_end": false,
+    "calendar_days": 549,
+    "months": 18.0
+   },
+   {
+    "entered": "2022-07-22",
+    "exited": "2024-04-17",
+    "open_at_end": false,
+    "calendar_days": 635,
+    "months": 20.9
+   }
+  ],
+  "longest_days": 1904,
+  "longest_months": 62.5,
+  "horizon_months_max": 9
+ },
+ {
+  "agent_id": "ladder-sso-vig-bnd",
+  "leveraged_symbol": "SSO",
+  "purpose": "roth",
+  "window": [
+   "2006-07-01",
+   "2026-08-28"
+  ],
+  "cycles": [
+   {
+    "entered": "2008-03-25",
+    "exited": "2013-03-15",
+    "open_at_end": false,
+    "calendar_days": 1816,
+    "months": 59.7
+   },
+   {
+    "entered": "2008-03-25",
+    "exited": "2013-06-11",
+    "open_at_end": false,
+    "calendar_days": 1904,
+    "months": 62.5
+   },
+   {
+    "entered": "2008-03-25",
+    "exited": "2013-06-12",
+    "open_at_end": false,
+    "calendar_days": 1905,
+    "months": 62.6
+   },
+   {
+    "entered": "2019-01-28",
+    "exited": "2019-04-30",
+    "open_at_end": false,
+    "calendar_days": 92,
+    "months": 3.0
+   },
+   {
+    "entered": "2019-01-28",
+    "exited": "2019-07-25",
+    "open_at_end": false,
+    "calendar_days": 178,
+    "months": 5.8
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-08-19",
+    "open_at_end": false,
+    "calendar_days": 120,
+    "months": 3.9
+   },
+   {
+    "entered": "2020-04-21",
+    "exited": "2020-11-12",
+    "open_at_end": false,
+    "calendar_days": 205,
+    "months": 6.7
+   },
+   {
+    "entered": "2022-07-26",
+    "exited": "2024-01-22",
+    "open_at_end": false,
+    "calendar_days": 545,
+    "months": 17.9
+   },
+   {
+    "entered": "2022-07-26",
+    "exited": "2024-04-17",
+    "open_at_end": false,
+    "calendar_days": 631,
+    "months": 20.7
+   }
+  ],
+  "longest_days": 1905,
+  "longest_months": 62.6,
+  "horizon_months_max": null
+ }
+]

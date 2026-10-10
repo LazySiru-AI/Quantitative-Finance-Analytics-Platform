@@ -1,0 +1,172 @@
+{
+  "card": {
+    "agent_id": "r21-vol-compression-off",
+    "display_name": "vol-compression / macro gate off",
+    "discipline": "volatility",
+    "purpose": "trading",
+    "thesis": "Round 21 cell. Everything except the macro conjunct is held identical across the gate-on and gate-off pair, so any difference is attributable to the gate alone. Gate: none. This is the first round in this programme whose cards can read a non-price field at all -- FRED series were collected and displayed but unreachable by any card until 2026-08-30. The honest prior, stated before the data: this finds nothing, on a base rate of ~50 concepts and near-zero survivors. It is worth running because the class was unreachable, not because it is likely to win. Nothing in this round is promotable. See strategy-program/ROUND-21-PLAN.md for the pre-registration, the circular-shift null and the five falsifiable predictions.",
+    "universe": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLY",
+      "XLP",
+      "XLU",
+      "XLB"
+    ],
+    "entry": "close > sma(200) and ema(10) > ema(30) and atr(10) / close < 0.02",
+    "exit": "atr(10) / close > 0.05 or close crosses_below sma(200)",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 6,
+    "position_pct": "0.15",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 65,
+  "starting_equity": "10000.00",
+  "ending_equity": "9374.48",
+  "total_return": "-0.06255200000000005",
+  "max_drawdown": "-0.06255200000000005",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 1.0,
+  "capital_exposure": 0.4927941076923077,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLF",
+      "entry_date": "2018-09-21",
+      "entry_price": "28.96",
+      "exit_date": "2018-09-27",
+      "exit_price": "27.99",
+      "quantity": "51",
+      "exit_reason": "rule",
+      "pnl": "-49.52",
+      "return_pct": "-0.03352832845845520528653450330",
+      "bars_held": 4
+    },
+    {
+      "symbol": "XLK",
+      "entry_date": "2018-09-21",
+      "entry_price": "37.61",
+      "exit_date": "2018-10-11",
+      "exit_price": "34.64",
+      "quantity": "39",
+      "exit_reason": "rule",
+      "pnl": "-115.87",
+      "return_pct": "-0.07899562991293913920874835525",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XLI",
+      "entry_date": "2018-09-21",
+      "entry_price": "79.79",
+      "exit_date": "2018-10-11",
+      "exit_price": "74.87",
+      "quantity": "18",
+      "exit_reason": "rule",
+      "pnl": "-88.60",
+      "return_pct": "-0.06168971327512498085251563131",
+      "bars_held": 14
+    },
+    {
+      "symbol": "XLE",
+      "entry_date": "2018-09-21",
+      "entry_price": "37.52",
+      "exit_date": "2018-10-12",
+      "exit_price": "36.74",
+      "quantity": "39",
+      "exit_reason": "rule",
+      "pnl": "-30.47",
+      "return_pct": "-0.02082308239024656935104696299",
+      "bars_held": 15
+    },
+    {
+      "symbol": "XLY",
+      "entry_date": "2018-09-21",
+      "entry_price": "59.03",
+      "exit_date": "2018-10-12",
+      "exit_price": "54.45",
+      "quantity": "25",
+      "exit_reason": "rule",
+      "pnl": "-114.54",
+      "return_pct": "-0.07761477214975436218871760122",
+      "bars_held": 15
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2018-09-28",
+      "entry_price": "53.82",
+      "exit_date": "2018-10-12",
+      "exit_price": "52.28",
+      "quantity": "27",
+      "exit_reason": "rule",
+      "pnl": "-41.62",
+      "return_pct": "-0.02864142477669047717356896101",
+      "bars_held": 10
+    },
+    {
+      "symbol": "XLV",
+      "entry_date": "2018-09-21",
+      "entry_price": "94.44",
+      "exit_date": "2018-12-18",
+      "exit_price": "87.90",
+      "quantity": "15",
+      "exit_reason": "rule",
+      "pnl": "-98.14",
+      "return_pct": "-0.06927855428490752506000282366",
+      "bars_held": 60
+    },
+    {
+      "symbol": "XLP",
+      "entry_date": "2018-10-24",
+      "entry_price": "54.59",
+      "exit_date": "2018-12-19",
+      "exit_price": "52.83",
+      "quantity": "27",
+      "exit_reason": "rule",
+      "pnl": "-47.56",
+      "return_pct": "-0.03226747538892620409381720977",
+      "bars_held": 38
+    },
+    {
+      "symbol": "XLU",
+      "entry_date": "2018-10-12",
+      "entry_price": "26.48",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "56",
+      "exit_reason": "open_at_end",
+      "pnl": "-39.20",
+      "return_pct": "-0.02643504531722054380664652568",
+      "bars_held": 49
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLP",
+      "reason": "$1451.79 exceeds $1264.40 of settled cash (total cash $2691.84; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "XLU",
+      "reason": "$1489.95 exceeds $1238.70 of settled cash (total cash $3937.24; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.2004503736053771878945033949",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

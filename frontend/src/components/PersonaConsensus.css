@@ -1,0 +1,145 @@
+/**
+ * Layout for the two cross-persona consensus panels, `PersonaWatchlist.tsx` and `PersonaRegime.tsx`.
+ * Both reuse `.panel`/`.placeholder`/`.callout`/`.callout-danger`/`.muted`/`.table-wrap`/`.data-table`
+ * (styles.css) and `.persona-card-subhead`/`.persona-ticker-chip`/`.position-symbol` (Personas.css)
+ * verbatim; only what is genuinely new to these two panels lives here.
+ */
+
+.persona-watchlist-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.persona-watchlist-subtitle,
+.persona-regime-subtitle {
+  margin-top: 0.15rem;
+}
+
+/* Mirrors `.desk-inception-field` (PaperDesk.css): an uppercase, letter-spaced caption above a
+   plain date input, so this reads as the same family of filter control as the rest of the app. */
+.persona-watchlist-asof-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.persona-watchlist-asof-field input[type="date"] {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.persona-watchlist-asof-note {
+  margin-top: 0.6rem;
+}
+
+.persona-watchlist-caveat,
+.persona-regime-caveat {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.persona-watchlist-symbol-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.persona-watchlist-reasoning {
+  max-width: 28rem;
+  white-space: normal;
+}
+
+.persona-watchlist-backers {
+  white-space: normal;
+}
+
+/* Regime tally -- the headline the body leads with, before any per-persona detail. */
+.persona-regime-tally {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.persona-regime-tally-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.persona-regime-tally-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.persona-regime-tally-value {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.persona-regime-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.persona-regime-row {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.persona-regime-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.persona-regime-row-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.persona-regime-name {
+  font-weight: 600;
+}
+
+.persona-regime-row-no-view {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.persona-regime-rates,
+.persona-regime-summary,
+.persona-regime-sectors {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.persona-regime-rates-label,
+.persona-regime-sectors-label {
+  color: var(--muted);
+  font-weight: 600;
+}

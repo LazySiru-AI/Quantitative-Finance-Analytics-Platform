@@ -1,0 +1,32 @@
+{
+  "orders": [
+    {
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": 3,
+      "thesis": "Stop-out, not a new thesis. Session 1's invalidation for this position was 'a daily close back below the 50-day SMA (715.16)'. As of 2026-07-13's close, QQQ is at 711.74, below both sma20 (722.30) and sma50 (716.16), down -1.90% 1d and -1.53% 5d. The invalidation fired; exiting the full position rather than averaging down.",
+      "invalidation": "Already triggered -- this order is the exit leg of the session-1 QQQ thesis.",
+      "stop_level": "715.16",
+      "regime": "risk-on broadly, but this single name broke its trend filter",
+      "conviction": "exit",
+      "evidence": [
+        "brief session2 watchlist QQQ: close 711.74 < sma20 722.2960 and < sma50 716.1588",
+        "change_1d_pct_of_1 -0.018980, change_5d_pct_of_1 -0.015329, change_20d_pct_of_1 -0.007502"
+      ]
+    },
+    {
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": 38,
+      "thesis": "Energy showing a sharp momentum reversal: close 56.74, +3.01% 1d, +6.79% 5d, back above its 20-day SMA (54.48) after a weak 20d print (-0.67%) -- the two-timeframe read is short-term acceleration inside a base, not yet a confirmed long-term uptrend (still below sma50 56.71), so sized as a tactical rather than core position.",
+      "invalidation": "A daily close back below the 20-day SMA (54.48) fails the breakout read.",
+      "stop_level": "54.00",
+      "regime": "risk-on, sector rotation into energy",
+      "conviction": "moderate",
+      "evidence": [
+        "brief session2 watchlist XLE: close 56.74, sma20 54.4825, sma50 56.7074, sma200 51.6483",
+        "change_1d_pct_of_1 0.030138, change_5d_pct_of_1 0.067947, change_20d_pct_of_1 -0.006653"
+      ]
+    }
+  ]
+}

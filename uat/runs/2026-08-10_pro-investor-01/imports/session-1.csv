@@ -1,0 +1,8 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+08/10/2026,08/10/2026,08/11/2026,SPY,"SPY paper fill, UAT persona pro-investor-01",Buy,2,$772.99,"($1,545.98)"
+08/10/2026,08/10/2026,08/11/2026,QQQ,"QQQ paper fill, UAT persona pro-investor-01",Buy,2,$722.75,"($1,445.50)"
+08/10/2026,08/10/2026,08/11/2026,XLK,"XLK paper fill, UAT persona pro-investor-01",Buy,7,$188.17,"($1,317.19)"
+08/10/2026,08/10/2026,08/11/2026,IWM,"IWM paper fill, UAT persona pro-investor-01",Buy,3,$300.66,($901.98)
+08/10/2026,08/10/2026,08/11/2026,XLF,"XLF paper fill, UAT persona pro-investor-01",Buy,17,$57.57,($978.69)
+08/10/2026,08/10/2026,08/11/2026,XLV,"XLV paper fill, UAT persona pro-investor-01",Buy,5,$165.76,($828.80)
+08/07/2026,08/07/2026,08/07/2026,,UAT opening deposit for persona pro-investor-01,ACH,,,"$10,000.00"

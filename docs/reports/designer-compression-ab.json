@@ -1,0 +1,70 @@
+{
+  "rounds": [
+    {
+      "round": 0,
+      "baseline_output": 5152,
+      "candidate_output": 3772,
+      "baseline_cards": 3,
+      "candidate_cards": 3,
+      "baseline_cost": "0.043462",
+      "candidate_cost": "0.036508"
+    },
+    {
+      "round": 1,
+      "baseline_output": 3330,
+      "candidate_output": 4371,
+      "baseline_cards": 3,
+      "candidate_cards": 3,
+      "baseline_cost": "0.03435200000000001",
+      "candidate_cost": "0.039493"
+    },
+    {
+      "round": 2,
+      "baseline_output": 6276,
+      "candidate_output": 6714,
+      "baseline_cards": 3,
+      "candidate_cards": 3,
+      "baseline_cost": "0.04907200000000001",
+      "candidate_cost": "0.05120800000000001"
+    },
+    {
+      "round": 3,
+      "baseline_output": 7675,
+      "candidate_output": 6186,
+      "baseline_cards": 3,
+      "candidate_cards": 3,
+      "baseline_cost": "0.056067000000000006",
+      "candidate_cost": "0.048573"
+    },
+    {
+      "round": 4,
+      "baseline_output": 6305,
+      "candidate_output": 4286,
+      "baseline_cards": 3,
+      "candidate_cards": 3,
+      "baseline_cost": "0.049212000000000006",
+      "candidate_cost": "0.039068"
+    }
+  ],
+  "summary": {
+    "rounds": 5,
+    "baseline_output_mean": 5747.6,
+    "candidate_output_mean": 5065.8,
+    "baseline_output_all": [
+      5152,
+      3330,
+      6276,
+      7675,
+      6305
+    ],
+    "candidate_output_all": [
+      3772,
+      4371,
+      6714,
+      6186,
+      4286
+    ],
+    "output_saved_pct_mean": 11.9,
+    "all_valid_cards": true
+  }
+}

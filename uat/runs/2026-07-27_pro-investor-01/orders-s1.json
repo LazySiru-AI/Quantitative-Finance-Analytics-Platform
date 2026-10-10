@@ -1,0 +1,38 @@
+{
+  "orders": [
+    {
+      "order_id": "s1-1",
+      "session": 1,
+      "decided_on": "2026-07-24",
+      "symbol": "XLE",
+      "side": "buy",
+      "quantity": "33",
+      "thesis": "Energy is the only watchlist name confirming trend across two timeframes: brief shows close $59.62 above sma20 $55.97, sma50 $56.75 and sma200 $52.24 (rising stack), 5d +3.36%, 20d +10.22%. QQQ (-1.60% 5d, -4.49% 20d) and SMH (-11.88% 20d, price below sma20/sma50) are rotating out of. Clean momentum entry.",
+      "invalidation": "Daily close back below sma50 ($56.75) fails the trend-confirmation basis for the entry.",
+      "stop_level": "55.00",
+      "regime": "transitional",
+      "conviction": 4,
+      "evidence": [
+        "brief watchlist XLE: close=59.62, sma20=55.9680, sma50=56.7486, sma200=52.2394, change_5d=+3.36%, change_20d=+10.22%",
+        "brief watchlist QQQ: change_5d=-1.60%, change_20d=-4.49%, close below sma20/sma50",
+        "brief watchlist SMH: change_20d=-11.88%, close below sma20/sma50"
+      ]
+    },
+    {
+      "order_id": "s1-2",
+      "session": 1,
+      "decided_on": "2026-07-24",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "2",
+      "thesis": "Broad-market starter position for beta exposure while the regime clarifies. SPY close $738.93 is just below sma20 $746.15 and sma50 $745.07 but above sma200 $698.54 -- roughly range-bound (1d +0.10%, 5d -0.59%, 20d +0.63%), not a clean confirmation either direction so sized small rather than skipped.",
+      "invalidation": "Sustained close below sma50 ($745.07) on volume, or a break of sma200 ($698.54), invalidates the core-hold thesis.",
+      "stop_level": "725.00",
+      "regime": "transitional",
+      "conviction": 2,
+      "evidence": [
+        "brief benchmark SPY: close=738.93, sma20=746.1530, sma50=745.0680, sma200=698.5427, change_1d=+0.10%, change_5d=-0.59%, change_20d=+0.63%"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "findings": [
+    {
+      "finding_id": "backtest-event-study-placeholder-uses-colon-syntax",
+      "run_id": "2026-06-08_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-06-09T09:20:00Z",
+      "session_date": "2026-06-09",
+      "surface": "ui",
+      "locator": "/backtest, event study condition input (class rule-editor-input, section bt-arm-input-controls)",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "Backtest Event Study condition field's own placeholder example fails to parse",
+      "observed": "On /backtest, after loading a symbol, the Event Study 'CONDITION (BASE)' input shows placeholder text 'e.g. rsi:14 < 30'. Typing that exact text and clicking RUN EVENT STUDY returns: '0 triggers - 0 evaluable bars', 'GUARD_FAILED', and 'parse -- unexpected character \\':\\' (failed)'. The DSL only accepts call syntax (rsi(14)), never colon syntax.",
+      "expected": "A tool's own suggested example should parse. This is the same defect class as rules-tester-placeholder-example-does-not-parse (R2-6), which fixed a colon-syntax placeholder on the /rules page's RuleEditor -- but that fix never reached this input on /backtest, which still shows the broken example. The /backtest page's own Scan textarea, by contrast, is pre-filled with correct parens syntax (close < bb_lower(20,2), rsi(14) < 30, etc.), so the correct convention was known and applied elsewhere on the same page just not here.",
+      "why_it_matters": "I typed the page's own example verbatim to learn the expected condition syntax before writing my own -- exactly the moment a placeholder exists to help. Instead it produced a raw tokenizer error, which is the same signal that made a prior run conclude (wrongly) that the DSL only supported raw OHLCV fields.",
+      "repro": [
+        "Navigate to /backtest, load any symbol (e.g. SPY)",
+        "Do not touch the Event Study condition input -- read its placeholder: 'e.g. rsi:14 < 30'",
+        "Set the input's value to that exact text via a native-setter input event and click RUN EVENT STUDY",
+        "Observe: GUARD_FAILED, 'parse -- unexpected character '':'' (failed)'",
+        "Compare: setting the value to 'rsi(14) < 30' instead runs cleanly with 125 triggers"
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "Change the placeholder literal to 'e.g. rsi(14) < 30', matching the corrected /rules placeholder and the Scan textarea's own pre-filled examples."
+    },
+    {
+      "finding_id": "backtest-tools-honest-about-sample-size-and-multiple-testing",
+      "run_id": "2026-06-08_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 2,
+      "observed_at": "2026-06-09T09:30:00Z",
+      "session_date": "2026-06-09",
+      "surface": "ui",
+      "locator": "/backtest -- event study, scan, reverse conditioning",
+      "kind": "gap",
+      "severity": "polish",
+      "title": "POSITIVE: Backtest tools are honest about sample size, multiple-testing correction and advice framing",
+      "observed": "Event study on SPY/rsi(14)<30 showed both raw (125) and independent/declustered (41-57 depending on horizon) sample counts per horizon, against the same-window unconditional baseline, with a full percentile distribution (p05-p95). Scan (6 expressions x 3 horizons = 18 tests) stated TRIALS 18, DISCOVERIES 0, UNCORRECTED P<=0.05 0, TARGET FDR 0.10 up front, ran Benjamini-Hochberg over the whole set, and reported '0 of 18 survived correction' with a per-row P/Q/verdict table rather than surfacing only the ones that looked good. Reverse conditioning ('what preceded the biggest moves') is labelled 'Nothing here is a finding -- it is a list of candidates' and explicitly quantifies its own autocorrelation problem: '843 bars ... about 124 distinct episodes, so the raw count overstates the evidence roughly 6.8x'.",
+      "expected": "This is exactly what I need before trusting an edge: a real denominator, the correction applied to the whole trial set rather than cherry-picked survivors, and no tool phrasing a computation as a recommendation.",
+      "why_it_matters": "This is the property that decides whether I would route a real book's research process through this tool. A backtest UI that hid the multiple-testing problem or narrated a result as a buy signal would lose my trust immediately, per my own standing rule; this one does the opposite on every one of the three surfaces I tested.",
+      "repro": [
+        "Navigate to /backtest, load SPY",
+        "Run event study on rsi(14) < 30 -- note per-horizon raw vs independent N and percentile distribution",
+        "Run the pre-filled 18-test scan -- note TRIALS/DISCOVERIES/TARGET FDR header and the Q-value verdict column",
+        "Run reverse conditioning ('PROFILE') -- note the exploratory framing and the stated overstatement multiplier"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

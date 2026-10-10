@@ -1,0 +1,29 @@
+{
+  "agent_id": "B3-concentrated",
+  "display_name": "B3 - 4 slots at 22 pct",
+  "discipline": "momentum",
+  "thesis": "Institutional flow into AI/cloud-infrastructure leaders re-rates them in slow, multi-week waves, not single days: a fund building a position over weeks pushes the medium-term average through the long-term one, and that crossover is a public, mechanical signal other trend-following capital reacts to next, extending the move further than any one participant intended. On the design-window history of these 12 names, once close > sma(200) is already established and ema(20) crosses above ema(50) -- a fresh acceleration inside a standing uptrend, not a bottom-pick -- the resulting move has a median duration of roughly 3-4 weeks and stretches past two months at the 75th percentile (NVDA's longest such run reached 256 sessions, MSFT's 169, TSM's 189). The other side of this trade is whoever sells into that strength: value-discipline holders trimming into a re-rate, and short sellers pressing a name that 'already ran too far' -- both wrong, on average, while the wave is still building. I tested a fixed take-profit and a fast rule exit against simply riding the position to a stop or a genuine trend break, on this same entry: capping gains at 8-30% cut mean per-signal return to 2-9%, and a fast 20-day-EMA exit (even with a 3-day confirmation filter) cut it to 3-5% and win rate to 42-49% by whipsawing out of live trends on ordinary pullbacks. Letting the position run to a stop, a 200-day trend-break, or a 180-day backstop produced roughly triple the aggregate return of either capped variant, at the cost of a median trade near breakeven-to-slightly-negative -- this strategy's edge is concentrated in a minority of large winners, which is exactly what a take-profit would have amputated. It is deliberately not diversified across volatility regimes: the universe was chosen so one stop and one position size fit all 12 names reasonably rather than being tuned to any single one.",
+  "falsification": "Added 2026-08-30 by docs/research/programme/thesis-audit.md, after this card's live record already existed. This is NOT a pre-registration of the card's design and must not be read as one: it names measurements that would settle claims the thesis already makes, chosen because none of them has been run. Every threshold below is the programme's 21.2-point ordering floor (PROTOCOL.md section 7), fixed before any of these measurements exist. (1) THE CENTRAL CLAIM IS UNTESTED. The thesis states that running uncapped 'produced roughly triple the aggregate return of either capped variant' -- the two variants being a take-profit at 8-30% and a fast 20-day-EMA exit with a 3-day confirmation filter. Neither has ever been built as a competing arm. Build both, identical in every other field, and score all three over round 2's eight-window regime matrix. The claim is unsupported out of sample if the uncapped arm's advantage over either capped arm sits inside the floor. Round 24 did NOT test this: it shortened the 180-session backstop, which belongs to the uncapped arm, so it changed the arm the thesis prefers rather than building either variant the claim is about. (2) MEASURED, 2026-08-30, and this condition is retired: round 24's arm 2 had already run both cards on round 2's regime matrix as controls, on an identical set of six windows. B3-concentrated's median adjusted excess is +13.89% against B-momentum's +12.16% -- a gap of 1.74pp, well inside the 21.2-point floor -- so the concentration difference is doing no measurable work and the pair is one idea holding two seats. The median also flatters B3-concentrated: B-momentum is HIGHER in five of the six windows, and the whole gap comes from `recent` alone (+14.61pp). This condition was written as though unrun, which was an error -- the measurement was in a scorecard read the same day. What would still settle it is a null over the window set, or a wider matrix; a 1.74pp median gap decided by one window is not a measurement of concentration. The original condition read: this card's separate seat is unjustified in prose. It is identical to B-momentum in every field except max_positions (4 against 6) and position_pct (0.22 against 0.15), and the two share a byte-identical thesis that makes no claim about concentration at all. If the two cards' medians differ by less than the floor across that same matrix, the pair is one idea holding two seats and this card's separate seat is unearned. That conclusion is committed to here, before the measurement.",
+  "universe": [
+    "NVDA",
+    "AMD",
+    "AVGO",
+    "MU",
+    "MRVL",
+    "TSM",
+    "META",
+    "MSFT",
+    "GOOGL",
+    "NOW",
+    "AMZN",
+    "NFLX"
+  ],
+  "entry": "ema(20) crosses_above ema(50) and close > sma(200)",
+  "exit": "close crosses_below sma(200)",
+  "stop_loss_pct": 0.12,
+  "take_profit_pct": null,
+  "max_hold_days": 180,
+  "max_positions": 4,
+  "position_pct": "0.22",
+  "designed_through": "2026-02-13"
+}

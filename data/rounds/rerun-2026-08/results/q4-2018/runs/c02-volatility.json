@@ -1,0 +1,70 @@
+{
+  "card": {
+    "agent_id": "c02-volatility",
+    "display_name": "Squeeze-Break Gamma Unwind",
+    "discipline": "volatility",
+    "purpose": "trading",
+    "thesis": "In heavily-optioned, high-open-interest instruments (broad index ETFs and major sector SPDRs), a period of contracting realized volatility is systematically accompanied by net-short-gamma positioning among option sellers -- covered-call overlay funds, options-income strategies, and dealer desks that have sold volatility into the calm and hedge by trading against price. While the range holds, that flow is stabilizing: dealers buy dips and sell rips, compressing range further. When price finally closes outside the upper band while realized volatility (ATR-14) is still below its own longer-run baseline (ATR-50), the move has started before the option-selling crowd has repriced -- their short-gamma hedging flips from stabilizing to reinforcing (short calls forces the dealer/writer to buy into the breakout to stay hedged), mechanically extending the initial move for a period afterward. The other side of this trade is the option seller who wrote premium assuming continued range-bound behavior and is now a forced, mechanical buyer. What is expected to go wrong: this mechanism is about the first burst of a volatility regime change, not persistence. In a slow grinding bear (rate-driven, low realized-vol decline) there may be few or no valid low-ATR breakouts to trade, and the strategy should sit mostly in cash -- underperforming a benchmark that keeps drifting down slowly without ever tripping the squeeze condition. It is also vulnerable to a crash that gaps straight through the band with ATR already elevated (already-expanded, not compressed, volatility) -- COVID's opening days looked like that -- in which case the squeeze filter correctly refuses the entry, but a separate, unfiltered breakout would have caught the early down-move it is not designed to catch (this strategy is long-only).",
+    "universe": [
+      "SPY",
+      "QQQ",
+      "DIA",
+      "IWM",
+      "XLF",
+      "XLE"
+    ],
+    "entry": "close crosses_above bb_upper(20,2.0) and atr(14) < atr(50)",
+    "exit": "",
+    "stop_loss_pct": "0.08",
+    "take_profit_pct": "0.20",
+    "max_hold_days": 60,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 65,
+  "starting_equity": "10000.00",
+  "ending_equity": "9546.90",
+  "total_return": "-0.04530999999999996",
+  "max_drawdown": "-0.04807312988184209",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.36923076923076925,
+  "capital_exposure": 0.16717458461538462,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLE",
+      "entry_date": "2018-09-25",
+      "entry_price": "38.36",
+      "exit_date": "2018-10-24",
+      "exit_price": "34.59",
+      "quantity": "65",
+      "exit_reason": "stop",
+      "pnl": "-245.12",
+      "return_pct": "-0.09830753188417421994064329831",
+      "bars_held": 21
+    },
+    {
+      "symbol": "SPY",
+      "entry_date": "2018-09-21",
+      "entry_price": "293.24",
+      "exit_date": "2018-10-25",
+      "exit_price": "267.25",
+      "quantity": "8",
+      "exit_reason": "stop",
+      "pnl": "-207.98",
+      "return_pct": "-0.08865604965216205156186059201",
+      "bars_held": 24
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.2004503736053771878945033949",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

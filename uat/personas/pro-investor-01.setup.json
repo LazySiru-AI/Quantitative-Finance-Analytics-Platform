@@ -1,0 +1,77 @@
+{
+  "$comment": "Machine-readable mandate for the pro-investor-01 UAT persona. Fictional; notional capital. Read by uat/harness/paperbroker.py, which enforces every constraint in `constraints` as a hard reject rather than a warning.",
+  "persona_id": "pro-investor-01",
+  "display_name": "Alex Reiner",
+  "pronouns": "they/them",
+  "model": "haiku",
+  "archetype": "professional-investor",
+  "spec": "uat/personas/pro-investor-01.md",
+
+  "account": {
+    "account_id": "uat-taxable",
+    "label": "UAT Taxable",
+    "broker": "robinhood",
+    "tax_treatment": "taxable",
+    "account_type": "cash"
+  },
+
+  "capital": {
+    "starting_cash": "10000.00",
+    "currency": "USD"
+  },
+
+  "constraints": {
+    "allow_margin": false,
+    "allow_short": false,
+    "allow_options": false,
+    "allow_crypto": false,
+    "allow_fractional_shares": false,
+    "max_positions": 8,
+    "max_single_name_weight": "0.25",
+    "min_clip_notional": "500.00",
+    "min_cash": "0.00",
+    "settlement_days": 1
+  },
+
+  "execution": {
+    "$comment": "Orders are decided on data through session D-1 close and filled at session D open. See uat/harness/paperbroker.py for why this is the only fill rule that is defensible without lookahead.",
+    "fill_at": "next_session_open",
+    "slippage_bps": "5",
+    "commission_per_trade": "0.00",
+    "$comment_commission": "Robinhood-style zero commission. Regulatory fees are modelled on sells only.",
+    "sec_fee_rate": "0.0000278",
+    "taf_per_share": "0.000166",
+    "taf_cap": "8.30"
+  },
+
+  "process": [
+    "regime",
+    "screen",
+    "size",
+    "risk",
+    "review"
+  ],
+
+  "feedback_focus": [
+    "as-of timestamps on every figure",
+    "percentage unit ambiguity (fraction vs 0-100)",
+    "partial totals labelled at the point of display",
+    "provenance reachable from the number",
+    "advice-free framing",
+    "empty and error states",
+    "tax visibility at decision time"
+  ],
+
+  "severity_scale": {
+    "blocker": "Cannot complete a core task, or the number shown is wrong.",
+    "major": "Task completable but the workaround is costly or the output is misleading.",
+    "minor": "Noticeable friction with an obvious workaround.",
+    "polish": "Cosmetic or wording."
+  },
+
+  "finding_kinds": {
+    "defect": "The application is wrong.",
+    "friction": "The application is right but costly to use.",
+    "gap": "The application is missing something the mandate needs."
+  }
+}

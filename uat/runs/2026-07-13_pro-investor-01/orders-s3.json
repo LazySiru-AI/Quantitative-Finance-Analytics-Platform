@@ -1,0 +1,19 @@
+{
+  "orders": [
+    {
+      "symbol": "XLV",
+      "side": "sell",
+      "quantity": 7,
+      "thesis": "Discretionary early exit, not a triggered stop -- close (158.29) is still a hair above the 20-day SMA (157.58), my written invalidation level, but the deterioration has accelerated for two straight sessions (-0.82%/-1.77% then -1.93%/-3.74% on 1d/5d) on my lowest-conviction position in the book. Cutting the pilot clip now rather than waiting for the exact SMA cross; this was sized small precisely so it could be cut cheaply. Deliberately realizing the loss this week to test how the tax and wash-sale tooling present a loss-then-repurchase pair if I re-enter later.",
+      "invalidation": "n/a -- exit leg, discretionary",
+      "stop_level": "157.58",
+      "regime": "risk-on broadly, this sector rotation candidate failed to confirm",
+      "conviction": "exit",
+      "evidence": [
+        "brief session3 watchlist XLV: close 158.29, sma20 157.5795",
+        "change_1d_pct_of_1 -0.019330, change_5d_pct_of_1 -0.037400 (vs session2's -0.008201/-0.017711 -- deterioration accelerating)",
+        "book_after session2: XLV cost basis 1127.35, market value 1108.03, unrealized -19.32"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "finding_id": "tax-page-defaults-to-wrong-year",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 1,
+    "observed_at": "2026-08-18T06:35:00Z",
+    "session_date": "2026-06-22",
+    "surface": "ui",
+    "locator": "/tax",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "Tax page's year selector defaults to a year with no activity instead of the ledger's actual year",
+    "observed": "With a ledger holding 2 transactions dated 2026-06-18 and 2026-06-22, /tax opened with tax year 2026 already selected (not 2025), and read 'Nothing was disposed of in 2026. The ledger holds 2 transactions dated in this tax year -- see Activity -- but no lot was sold, so there is no gain or loss to report.'",
+    "expected": "The year selector should resolve from the ledger's most recent transaction date, which it does.",
+    "why_it_matters": "This was the exact failure mode three prior runs hit independently -- an empty-looking tax page on the wrong default year read as a broken import. Confirming it opens on the right year on the first screen a fresh ledger produces is worth recording, since a fresh ledger (2 rows, first session) is precisely the case most likely to regress.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["frontend/src/pages/Tax.tsx:140-167"],
+      "note": "Re-test of a defect fixed by commit b61b198 and previously confirmed fixed by runs 3-5. Verified directly against the running application: resolveDefaultYear anchors on the most recent transaction's trade date (2026-06-22) rather than currentYear-1 (2025), and the empty-year copy correctly distinguishes 'no lot sold' from 'no data imported'. Holds."
+    }
+  },
+  {
+    "finding_id": "portfolio-cash-still-missing",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 1,
+    "observed_at": "2026-08-18T06:36:00Z",
+    "session_date": "2026-06-22",
+    "surface": "ui",
+    "locator": "/portfolio",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "Portfolio page does not display cash balance or total equity",
+    "observed": "After session 1's one buy (6 IWM), /portfolio's tiles read COST BASIS $1,783.68, MARKET VALUE $1,830.54 (1 priced), CASH $8,216.32, TOTAL EQUITY $10,046.86 (labeled 'positions + cash'), UNREALIZED +$46.86 / +2.6%. A banner above reads 'Ledger as of 2026-06-22 - priced at the close of 2026-08-14'. Cash by account shows uat-taxable SETTLED $8,216.32 / UNSETTLED $0.00 / BALANCE $8,216.32.",
+    "expected": "Cash and total equity on the portfolio screen, agreeing with the paper broker's own book_after figures.",
+    "why_it_matters": "Step 3 of my process (size) needs deployable cash before I decide the next clip. The CLI's book_after.equity was $10,005.40 (marked to 2026-06-22's close); the UI's $10,046.86 is marked to 2026-08-14's close -- the labelled staleness gap, not a disagreement in the cash math. Cash figure ($8,216.32) matches the broker exactly.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["backend/app/core/cash.py", "backend/app/api/portfolio.py", "frontend/src/pages/Portfolio.tsx"],
+      "note": "Re-test of the run-1 P0. Cash and equity both render, agree to the cent with the harness's own settled_cash figure, and the equity/market-value gap is fully explained by the labelled pricing-date banner. No regression."
+    }
+  }
+]

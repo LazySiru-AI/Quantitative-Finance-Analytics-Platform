@@ -1,0 +1,47 @@
+{
+  "findings": [
+    {
+      "finding_id": "report-and-thesis-honest-about-multiple-comparisons-and-advice",
+      "run_id": "2026-06-08_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-06-10T09:10:00Z",
+      "session_date": "2026-06-10",
+      "surface": "ui",
+      "locator": "/report/:symbol, /thesis/:symbol",
+      "kind": "gap",
+      "severity": "polish",
+      "title": "POSITIVE: /report and /thesis name their own multiple-comparisons and lookahead risks rather than hiding them",
+      "observed": "On /report/XLF, the Rule Evidence section reads: 'That rule was selected for having the largest edge, which is not the same as having the best evidence: the biggest measured effect across a set of rules tends to be the one with the fewest observations behind it, and no correction for having looked at all of them is applied here.' The page footer states: 'Not investment advice, not a recommendation, and not a prediction.' On /thesis/XLF, running a thesis loop (budget 12) consumed 5 iterations, tried every catalogued hypothesis, 0 survived, and the page said so directly: 'The run ran out of distinct hypotheses before it ran out of budget -- that is information about the catalogue, not about the ticker.' The holdout evaluation was correctly left unspent since no thesis reached the point of needing it, and the pre-run warning names the exact cost of re-running ('a second look afterward burns it').",
+      "expected": "A tool that computes evidence for a professional should tell them when a number is more fragile than it looks (unconnected edge picked from many rules) and should never imply a hypothesis is confirmed just because a loop ran. Both pages do this without being asked.",
+      "why_it_matters": "This is the exact property that decides whether I would trust an automated research tool with a real book: it has to admit when it looked at many things and picked the best one, and it has to never dress up a null result as a recommendation. Both pages pass on every check I ran against them this session.",
+      "repro": [
+        "Navigate to /report/XLF, read the 'RULE EVIDENCE' section and the page footer",
+        "Navigate to /thesis/XLF, run a thesis loop at budget 12, read the RUN OUTCOME text and check the holdout status"
+      ],
+      "blocked_decision": false
+    },
+    {
+      "finding_id": "portfolio-three-views-reconcile-to-the-cent",
+      "run_id": "2026-06-08_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-06-10T09:30:00Z",
+      "session_date": "2026-06-10",
+      "surface": "ui",
+      "locator": "/portfolio -- BY INSTRUMENT, BY ACCOUNT, BY TAX TREATMENT",
+      "kind": "gap",
+      "severity": "polish",
+      "title": "POSITIVE: Portfolio's three views (instrument, account, tax treatment) agree to the cent",
+      "observed": "With 3 open positions in one account (uat-taxable, taxable), all three tabs on /portfolio show identical totals: cost basis $4,502.24, market value $4,759.62, unrealized +$257.38, cash $5,497.76. The BY TAX TREATMENT view's empty RETIREMENT (IRA) bucket correctly shows 0 accounts and 'No positions in this group' rather than being omitted or throwing, and each view carries its own explanation of what question it answers (e.g. 'By instrument is the one that governs risk: wash-sale rules and concentration both apply across every account you hold, not within one').",
+      "expected": "The three groupings of the same underlying positions must sum to the same totals no matter how they are sliced. They do here.",
+      "why_it_matters": "A portfolio tool that let its own breakdowns disagree with each other would be unusable for anything beyond a single glance -- I need to trust that regrouping by account or by tax treatment never silently drops or double-counts a position. Confirmed to the cent on all three totals this session; this is the strongest single check I can run against the page's arithmetic short of re-deriving it myself.",
+      "repro": [
+        "Navigate to /portfolio with at least one open position",
+        "Read the four summary tiles under BY INSTRUMENT (cost basis, market value, cash, total equity)",
+        "Click BY ACCOUNT, then BY TAX TREATMENT, and compare the same tiles"
+      ],
+      "blocked_decision": false
+    }
+  ]
+}

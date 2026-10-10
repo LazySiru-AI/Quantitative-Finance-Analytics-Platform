@@ -1,0 +1,21 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+16 cards
+[1/16] r1 r18-exit-band-breakout-none: 1s trades=30 ret=-8.41% dd=-9.43% rej=0
+[2/16] r1 r18-exit-band-breakout-stop: 2s trades=30 ret=-8.41% dd=-9.43% rej=0
+[3/16] r1 r18-exit-band-reversion-none: 2s trades=29 ret=-6.83% dd=-15.67% rej=0
+[4/16] r1 r18-exit-band-reversion-stop: 2s trades=29 ret=-9.66% dd=-14.52% rej=0
+[5/16] r1 r18-exit-channel-breakout-none: 2s trades=17 ret=-9.05% dd=-14.42% rej=0
+[6/16] r1 r18-exit-channel-breakout-stop: 2s trades=17 ret=-9.05% dd=-14.42% rej=0
+[7/16] r1 r18-exit-ma-crossover-none: 2s trades=30 ret=-8.00% dd=-11.99% rej=0
+[8/16] r1 r18-exit-ma-crossover-stop: 2s trades=30 ret=-8.00% dd=-11.99% rej=0
+[9/16] r1 r18-exit-macd-cross-none: 1s trades=30 ret=-6.23% dd=-6.73% rej=0
+[10/16] r1 r18-exit-macd-cross-stop: 2s trades=30 ret=-6.23% dd=-6.73% rej=0
+[11/16] r1 r18-exit-momentum-state-none: 2s trades=30 ret=-8.00% dd=-11.99% rej=0
+[12/16] r1 r18-exit-momentum-state-stop: 2s trades=30 ret=-8.00% dd=-11.99% rej=0
+[13/16] r1 r18-exit-rsi-pullback-none: 2s trades=27 ret=+0.60% dd=-1.83% rej=0
+[14/16] r1 r18-exit-rsi-pullback-stop: 2s trades=27 ret=-0.15% dd=-2.50% rej=0
+[15/16] r1 r18-exit-vol-compression-none: 2s trades=24 ret=-8.24% dd=-12.85% rej=0
+[16/16] r1 r18-exit-vol-compression-stop: 3s trades=24 ret=-8.24% dd=-12.85% rej=0
+r1: 16 agents, 10 discoveries
+overall: 16 agents, 10 discoveries at alpha=0.1

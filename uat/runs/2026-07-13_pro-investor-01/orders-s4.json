@@ -1,0 +1,18 @@
+{
+  "orders": [
+    {
+      "symbol": "XLV",
+      "side": "buy",
+      "quantity": 7,
+      "thesis": "Re-entering the same clip size 1 session after cutting it (loss realized 2026-07-15). XLV has held its 20-day SMA (158.29 close vs 157.85 sma20) through the pullback and is flat on the day rather than continuing to break down -- the deterioration that triggered my exit has stopped. Also a deliberate test: this repurchase is inside 30 days of the 2026-07-15 loss sale, so I want to see whether the tax/wash-sale surfaces correctly disallow and roll the loss into this lot's basis once it is in the ledger.",
+      "invalidation": "A daily close below the 20-day SMA (157.85) fails the re-entry.",
+      "stop_level": "156.50",
+      "regime": "risk-on, retesting the same sector rotation candidate",
+      "conviction": "low",
+      "evidence": [
+        "brief session4 watchlist XLV: close 158.29, sma20 157.8495, change_1d_pct_of_1 0.0",
+        "prior loss sale: 7 XLV sold 2026-07-15 at 157.30, cost basis 1127.35, realized -26.25"
+      ]
+    }
+  ]
+}

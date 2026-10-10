@@ -1,0 +1,37 @@
+/* =============================================================================
+   MacroTile's optional chart disclosure (Rates/Oil tiles only -- see MacroTile.tsx).
+
+   Scoped to this one file per the Macro-page ownership split: MacroTile.tsx owns this stylesheet,
+   MacroSeriesChart.css (the chart's own chrome) stays untouched, and the shared styles.css is not
+   touched either. Reuses `.panel`-level spacing conventions already established by the sibling
+   `.macro-tile-*` classes in styles.css, without redefining them here.
+   ============================================================================= */
+
+.macro-tile-chart-disclosure {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.macro-tile-chart-toggle {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.macro-tile-chart-toggle:hover {
+  border-color: var(--accent);
+}
+
+.macro-tile-chart-panel {
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}

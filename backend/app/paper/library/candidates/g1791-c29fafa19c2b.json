@@ -1,0 +1,26 @@
+{
+  "agent_id": "g1791-c29fafa19c2b",
+  "display_name": "auto g1791 · pairs-rotation (roth)",
+  "discipline": "pairs-rotation",
+  "purpose": "roth",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 12/23-day EMA crossover trigger inside a 92-day SMA regime filter on AMAT, CRM, INTU, AAPL, LRCX, KLAC, ADBE, CSCO, with a 10% stop and a 63-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "AMAT",
+    "CRM",
+    "INTU",
+    "AAPL",
+    "LRCX",
+    "KLAC",
+    "ADBE",
+    "CSCO"
+  ],
+  "entry": "close > sma(92) and ema(12) crosses_above ema(23)",
+  "exit": "ema(12) crosses_below ema(23)",
+  "stop_loss_pct": "0.1",
+  "take_profit_pct": null,
+  "max_hold_days": 63,
+  "max_positions": 4,
+  "position_pct": "0.2",
+  "rank_by": null,
+  "designed_through": "2026-02-13"
+}

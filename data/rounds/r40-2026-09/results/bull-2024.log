@@ -1,0 +1,13 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+8 cards
+[1/8] r1 r40-divergence-proxy-negative-control-slots3: 4s trades=60 ret=-0.01% dd=-21.40% rej=3
+[2/8] r1 r40-divergence-proxy-negative-control-slots6: 5s trades=107 ret=+10.72% dd=-22.60% rej=2
+[3/8] r1 r40-none-slots3: 2s trades=60 ret=+7.69% dd=-21.91% rej=4
+[4/8] r1 r40-none-slots6: 4s trades=108 ret=+10.28% dd=-23.02% rej=2
+[5/8] r1 r40-rsi-confirm-slots3: 3s trades=19 ret=+3.60% dd=-9.48% rej=0
+[6/8] r1 r40-rsi-confirm-slots6: 3s trades=23 ret=+10.12% dd=-5.29% rej=0
+[7/8] r1 r40-swing-structure-slots3: 1s trades=12 ret=+1.72% dd=-5.63% rej=0
+[8/8] r1 r40-swing-structure-slots6: 1s trades=15 ret=-0.20% dd=-2.89% rej=0
+r1: 8 agents, 6 discoveries
+overall: 8 agents, 6 discoveries at alpha=0.1

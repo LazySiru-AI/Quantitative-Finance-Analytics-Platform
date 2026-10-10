@@ -1,0 +1,48 @@
+{
+  "series_catalog_keys": [
+    "BZ=F",
+    "CL=F",
+    "DCOILBRENTEU",
+    "DCOILWTICO",
+    "DGS10",
+    "DIA",
+    "DX-Y.NYB",
+    "GLD",
+    "IWM",
+    "QQQ",
+    "SPY",
+    "T10Y2Y",
+    "TLT",
+    "XLB",
+    "XLC",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLRE",
+    "XLU",
+    "XLV",
+    "XLY",
+    "^TNX",
+    "^VIX"
+  ],
+  "fear_greed_in_series_catalog": false,
+  "public_fear_greed_api": [
+    "load_fear_greed"
+  ],
+  "citation_from_macro_snapshot": {
+    "source_file": "data/macro_snapshot.json",
+    "source_script": "scripts/macro_snapshot.py (macro stream, not this stream)",
+    "observed_score": 64.3714285714286,
+    "observed_rating": "greed",
+    "observed_source": "cnn",
+    "observed_as_of": "2026-08-11",
+    "n_history_points": 251,
+    "history_span": {
+      "first": "2025-08-11",
+      "last": "2026-08-11"
+    }
+  },
+  "verdict": "untestable: no persisted/joinable Fear & Greed series exists anywhere this study's harness can reach; a single call returns one current reading (plus a transient, unpersisted ~1y composite-score history straight from CNN's own payload when CNN answers, per the citation above -- too short and not store-backed regardless)."
+}

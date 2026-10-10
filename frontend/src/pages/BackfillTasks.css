@@ -1,0 +1,48 @@
+/**
+ * BackfillTasks.tsx.
+ *
+ * One rule, and the reason this file exists at all: a field's label goes ABOVE the field it names.
+ *
+ * The page previously wrote every field as a `<label>` wrapped around a `<span>` and the control,
+ * with no CSS on it. That leaves both children inline, sharing one line box, so the label text is
+ * laid out on the CONTROL's baseline -- which for a one-line input looks like a normal label-left
+ * pairing, and for an eight-row `<textarea>` puts "Agent reply" level with the textarea's bottom
+ * edge, reading as a caption for whatever comes next rather than as the name of the box above it.
+ *
+ * `grid` rather than `flex-direction: column` because the inline variant below only has to change
+ * one property (`grid-auto-flow`) to become a row, and the two then share a baseline rule instead
+ * of needing separate alignment for each.
+ */
+
+.backfill-field {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0.6rem 0;
+}
+
+.backfill-field > textarea,
+.backfill-field > input {
+  width: 100%;
+}
+
+.backfill-field-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* The toolbar's numeric field, where a label above a short input would waste a whole row of the
+   toolbar. Still `<label htmlFor>` -- the association is what matters; the axis is presentation. */
+.backfill-field-inline {
+  grid-auto-flow: column;
+  align-items: baseline;
+  justify-content: start;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.backfill-field-inline > input {
+  width: 6rem;
+}

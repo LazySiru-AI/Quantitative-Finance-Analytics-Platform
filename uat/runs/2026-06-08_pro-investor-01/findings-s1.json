@@ -1,0 +1,30 @@
+{
+  "findings": [
+    {
+      "finding_id": "rules-validate-accepts-arity-and-range-errors-as-valid",
+      "run_id": "2026-06-08_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-06-08T09:15:00Z",
+      "session_date": "2026-06-08",
+      "surface": "api",
+      "locator": "POST /api/rules/validate, frontend/src/components/RuleEditor.tsx",
+      "kind": "defect",
+      "severity": "minor",
+      "title": "Rule tester's VALID verdict skips indicator arity/range checks, accepting rules real evaluation rejects",
+      "observed": "On /rules, typing `rsi(14, 5) < 30` into the expression tester shows VALID, UNDERSTOOD AS `rsi(14, 5) < 30`, INDICATORS NEEDED `rsi:14,5` -- even though RSI takes exactly one parameter (period). Typing `close > sma(9999)` also shows VALID, `INDICATORS NEEDED sma:9999` -- even though SMA's period is capped at 500 in `backend/app/indicators/trend.py`. Confirmed directly against POST /api/rules/validate: `curl -X POST /api/rules/validate -d '{\"expression\":\"rsi(14, 5) < 30\"}'` returns `{\"valid\":true,...}`.",
+      "expected": "A tool labelled 'test a rule expression' that says VALID should mean the rule will actually evaluate. `backend/app/indicators/base.py::parse_spec` explicitly rejects both cases (`rsi takes at most 1 argument(s), got 2`; a period above `maximum` is rejected by `ParamSpec.coerce`) -- but that check only runs inside `app.rules.evaluate._resolve_requests`, called when a rule is evaluated against real bars, never from `/validate`. The endpoint's own docstring says as much: it 'must never touch the bar store or the network' and only parses grammar, deferring arity/range to the registry that it never calls.",
+      "why_it_matters": "I used this exact page to sanity-check a rule before deciding whether the DSL could express a two-timeframe RSI confirmation. A tool that says VALID for a rule it will reject the moment it is actually run costs me the one thing I came to this page for -- proof the expression will do what I typed, before I build a screen or a thesis around it.",
+      "repro": [
+        "Navigate to /rules",
+        "In the expression tester, type: rsi(14, 5) < 30",
+        "Observe: VALID, INDICATORS NEEDED rsi:14,5",
+        "Type: close > sma(9999)",
+        "Observe: VALID, INDICATORS NEEDED sma:9999",
+        "Compare against backend/app/indicators/momentum.py:RSI_SPEC (params=(_PERIOD,), one parameter only) and backend/app/indicators/trend.py (SMA period maximum=500)"
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "Either have /validate call registry.request() per indicator (cheap, no bar/network access needed) so arity and range errors surface at validate time, or relabel the result something like 'PARSES' rather than 'VALID' so it does not imply the rule is runnable."
+    }
+  ]
+}

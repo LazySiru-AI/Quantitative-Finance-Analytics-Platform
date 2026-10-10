@@ -1,0 +1,62 @@
+{
+  "card": {
+    "agent_id": "r21-ma-crossover-off",
+    "display_name": "ma-crossover / macro gate off",
+    "discipline": "trend",
+    "purpose": "trading",
+    "thesis": "Round 21 cell. Everything except the macro conjunct is held identical across the gate-on and gate-off pair, so any difference is attributable to the gate alone. Gate: none. This is the first round in this programme whose cards can read a non-price field at all -- FRED series were collected and displayed but unreachable by any card until 2026-08-30. The honest prior, stated before the data: this finds nothing, on a base rate of ~50 concepts and near-zero survivors. It is worth running because the class was unreachable, not because it is likely to win. Nothing in this round is promotable. See strategy-program/ROUND-21-PLAN.md for the pre-registration, the circular-shift null and the five falsifiable predictions. This cell is the round's regression check: it is identical in construction to round 17's r17-ma-crossover-on-none and must reproduce its figures to the digit.",
+    "universe": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLY",
+      "XLP",
+      "XLU",
+      "XLB"
+    ],
+    "entry": "close > sma(200) and ema(10) crosses_above ema(30)",
+    "exit": "ema(10) crosses_below ema(30)",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 6,
+    "position_pct": "0.15",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "10284.63",
+  "total_return": "0.028462999999999905",
+  "max_drawdown": "-0.009584213823995325",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.5806451612903226,
+  "capital_exposure": 0.08358154838709678,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "XLK",
+      "entry_date": "2020-04-15",
+      "entry_price": "43.62",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "33",
+      "exit_reason": "open_at_end",
+      "pnl": "284.63",
+      "return_pct": "0.1977338724243813652341850416",
+      "bars_held": 53
+    }
+  ],
+  "rejections": [],
+  "rejection_details": [],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

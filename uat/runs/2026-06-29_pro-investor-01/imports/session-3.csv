@@ -1,0 +1,3 @@
+Activity Date,Process Date,Settle Date,Instrument,Description,Trans Code,Quantity,Price,Amount
+07/01/2026,07/01/2026,07/02/2026,XLE,"XLE paper fill, UAT persona pro-investor-01",Sell,10,$53.02,$530.20
+07/01/2026,07/01/2026,07/02/2026,,Regulatory fees on XLE sale (s3-xle-exit),FEE,,,($0.02)

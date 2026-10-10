@@ -1,0 +1,111 @@
+{
+  "card": {
+    "agent_id": "a06-riskmanaged",
+    "display_name": "Two-Name Confirmed-Trend, Wide-Stop",
+    "discipline": "risk-managed",
+    "thesis": "Capital preservation comes first here, so the design choice that matters most is which two names to own, not how cleverly to time them. I measured daily range, ATR14, and cross-correlation across the whole low-volatility candidate set (SGOV, AGG, GLD, SCHD, BRK.B) plus the book's existing AI/semiconductor names as of 2026-02-13, and concentrated in just SCHD and BRK.B rather than spreading across the wider universe -- because every other 'calm' candidate had a specific, measured reason to be excluded, not a marginal one. SGOV moves an average of 0.01% a day (2024-2026): there is no signal to trade, only a cash substitute. AGG's ATR14 (~0.39% of close) is roughly a third of SCHD/BRK.B's (1.1-1.7%), so one shared stop_loss_pct is either noise-width on AGG or absurdly loose on the other two -- the exact single-fixed-stop mismatch this tournament's engine cannot express around. GLD is the most surprising exclusion: its 2-year average ATR14 is 1.25% of close, squarely in the 'calm' band, but as of the design cutoff its ATR14 had spiked to 4.58% -- almost 4x its own norm -- after a -10.3% one-session move on 2026-01-29/30, three weeks before cutoff. That is a live regime break, not routine chop, and a stop sized for GLD's history would not fit GLD's present. UNH carries a documented -22% single-session move in this same window (a gap no previous-close stop can catch). And QQQM, despite calm absolute volatility, correlates 0.76 with NVDA and 0.67 with MU in the design window -- it is not diversification from this book's AI/semiconductor concentration, it is more of the same factor. SCHD and BRK.B, by contrast, sit in a tight, comparable ATR14 band (1.1-1.7%), correlate near zero with NVDA/MU (0.04-0.30), and correlate only 0.62 with each other -- genuinely different businesses (dividend-equity index vs. insurance/utility/cash-rich conglomerate) that happen to share a volatility regime. The entry itself buys a resumption, not a breakout: price above both its 50- and 200-day averages (the primary and intermediate trend must already be up), RSI reset into a neutral 40-60 band (not overbought, not a falling knife), and price reclaiming its 10-day EMA -- i.e., a shallow pullback within an established uptrend has just stabilized. The other side of this trade is momentum traders who chased the prior leg and flinched on the pullback, and dip-buyers who bought too early and got shaken out before the reset was confirmed; this rule deliberately gives up the first leg of a move to buy the second leg once trend-following capital has re-asserted control, which is a return given up for a lower chance of holding a broken trend. The 8% stop is not tight: it sits at roughly 4.8-6x each name's current ATR14 and above the measured 90th-percentile worst 10-day rolling drawdown for both names (SCHD 5.7%, BRK.B 7.3%), so ordinary daily or weekly noise should not trip it under the engine's previous-close stop rule -- a stop-out here should mean the trend actually broke, not that a routine down day printed. The 8% target and 90-session hold are sized off historical hit-rate tests of this exact rule since 2020: results differ by name (reported honestly, not smoothed over) -- BRK.B: 54 signals, 29 hit target vs 3 hit stop, 81.5% win rate, average +4.8% per trade; SCHD: 64 signals, 16 hit target vs 18 hit stop, 53.1% win rate, average -0.16% per trade, roughly flat. Both are reported because a risk-managed strategy should be judged on whether losers are actually controlled, not on which single number looks best.",
+    "universe": [
+      "SCHD",
+      "BRK.B"
+    ],
+    "entry": "close > sma(200) and close > sma(50) and rsi(14) > 40 and rsi(14) < 60 and close crosses_above ema(10)",
+    "exit": "close < sma(50)",
+    "stop_loss_pct": "0.08",
+    "take_profit_pct": "0.08",
+    "max_hold_days": 90,
+    "max_positions": 2,
+    "position_pct": "0.4",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 127,
+  "starting_equity": "10000.00",
+  "ending_equity": "9955.48",
+  "total_return": "-0.0044520000000000115",
+  "max_drawdown": "-0.03667281908688491",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.41732283464566927,
+  "win_rate": 0.2,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "BRK.B",
+      "entry_date": "2026-02-27",
+      "entry_price": "503.19",
+      "exit_date": "2026-03-03",
+      "exit_price": "476.84",
+      "quantity": "7",
+      "exit_reason": "rule",
+      "pnl": "-184.54",
+      "return_pct": "-0.05239145679138524783311046949",
+      "bars_held": 2
+    },
+    {
+      "symbol": "BRK.B",
+      "entry_date": "2026-03-06",
+      "entry_price": "499.50",
+      "exit_date": "2026-03-11",
+      "exit_price": "492.84",
+      "quantity": "7",
+      "exit_reason": "rule",
+      "pnl": "-46.72",
+      "return_pct": "-0.01336193336193336193336193336",
+      "bars_held": 3
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2026-06-03",
+      "entry_price": "32.27",
+      "exit_date": "2026-06-25",
+      "exit_price": "31.81",
+      "quantity": "123",
+      "exit_reason": "rule",
+      "pnl": "-56.71",
+      "return_pct": "-0.01428747786083376792863063431",
+      "bars_held": 15
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2026-06-29",
+      "entry_price": "32.26",
+      "exit_date": "2026-06-30",
+      "exit_price": "31.92",
+      "quantity": "124",
+      "exit_reason": "rule",
+      "pnl": "-42.29",
+      "return_pct": "-0.01057186568805871647701137932",
+      "bars_held": 1
+    },
+    {
+      "symbol": "BRK.B",
+      "entry_date": "2026-07-27",
+      "entry_price": "497.50",
+      "exit_date": "2026-08-18",
+      "exit_price": "500.79",
+      "quantity": "8",
+      "exit_reason": "rule",
+      "pnl": "26.21",
+      "return_pct": "0.006585427135678391959798994975",
+      "bars_held": 16
+    },
+    {
+      "symbol": "SCHD",
+      "entry_date": "2026-07-06",
+      "entry_price": "32.40",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "123",
+      "exit_reason": "open_at_end",
+      "pnl": "259.53",
+      "return_pct": "0.06512345679012345679012345679",
+      "bars_held": 31
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "0.1283706295762637104125621196",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

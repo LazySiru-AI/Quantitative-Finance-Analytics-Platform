@@ -1,0 +1,19 @@
+{
+  "agent_id": "sso-vig-bnd-mean-reversion",
+  "purpose": "roth",
+  "window": "h10y-2",
+  "start": "2016-02-16",
+  "end": "2026-02-13",
+  "sessions": 2515,
+  "seed": "30000",
+  "contribution": "7500",
+  "funding_shape": "annual_contribution",
+  "irr": 0.13862364743251943,
+  "time_weighted_cagr": 0.14229525688823408,
+  "max_drawdown": -0.3783323128392482,
+  "volatility": 0.19805619431218752,
+  "mar": 0.376111825660249,
+  "multiple": 2.519403500069907,
+  "profit": 170932.89375786454,
+  "cash_constraint_modelled": false
+}

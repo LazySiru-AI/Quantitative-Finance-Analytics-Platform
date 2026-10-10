@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "order_id": "s5-spy-add",
+      "session": 5,
+      "decided_on": "2026-06-11",
+      "symbol": "SPY",
+      "side": "buy",
+      "quantity": "1",
+      "order_type": "market_on_open",
+      "thesis": "Broad relief rally on 2026-06-11 (SPY +1.70%, QQQ +3.38%, GLD +3.13% on the day) confirms the prior two sessions' weakness was a pullback, not a breakdown. Adding a single share to SPY, the benchmark leg, while staying well under the 25% cap; final session of the week so sizing conservatively rather than chasing the bounce.",
+      "invalidation": "A close back below sma50 (~721.07) within the next few sessions would undo this read.",
+      "stop_level": "715.00",
+      "regime": "risk-on",
+      "conviction": 2,
+      "evidence": [
+        "close=737.76, change_1d=+1.70%, sma50=721.0712, sma200=685.8166 via brief-s5 watchlist.SPY (as of 2026-06-11)",
+        "QQQ change_1d=+3.38%, GLD change_1d=+3.13% via brief-s5 watchlist -- broad participation cross-check"
+      ]
+    }
+  ]
+}

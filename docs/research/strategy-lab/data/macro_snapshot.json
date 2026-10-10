@@ -1,0 +1,800 @@
+{
+  "run_date": "2026-08-11",
+  "generated_at_utc": "2026-08-11T22:41:10.232661+00:00",
+  "app_macro_panel": {
+    "generated_at": "2026-08-11T22:40:53.959686+00:00",
+    "rates": [
+      {
+        "key": "us10y",
+        "label": "US 10-Year Treasury",
+        "value": 4.65,
+        "unit": "percent",
+        "as_of": "2026-08-07",
+        "source": "fred",
+        "change": {
+          "mode": "basis_points",
+          "day": -4.0000000000000036,
+          "week": -9.999999999999964,
+          "month": 10.000000000000053,
+          "ytd": 47.000000000000064
+        },
+        "warnings": []
+      },
+      {
+        "key": "2s10s",
+        "label": "10Y-2Y Spread",
+        "value": 0.47,
+        "unit": "percent_spread",
+        "as_of": "2026-08-10",
+        "source": "fred",
+        "change": {
+          "mode": "basis_points",
+          "day": 0.9999999999999953,
+          "week": 1.9999999999999962,
+          "month": 12.0,
+          "ytd": -24.0
+        },
+        "warnings": []
+      }
+    ],
+    "oil": [
+      {
+        "key": "wti",
+        "label": "WTI Crude",
+        "value": 81.96,
+        "unit": "usd",
+        "as_of": "2026-08-03",
+        "source": "fred",
+        "change": {
+          "mode": "percent",
+          "day": -4.874651810584962,
+          "week": -2.7181008902077224,
+          "month": 17.53907930589415,
+          "ytd": 43.136570031435554
+        },
+        "warnings": []
+      },
+      {
+        "key": "brent",
+        "label": "Brent Crude",
+        "value": 88.9,
+        "unit": "usd",
+        "as_of": "2026-08-03",
+        "source": "fred",
+        "change": {
+          "mode": "percent",
+          "day": -8.303249097472921,
+          "week": -3.1801350468307428,
+          "month": 29.440885264997085,
+          "ytd": 44.90627546862267
+        },
+        "warnings": []
+      }
+    ],
+    "fear_greed": {
+      "score": 64.3714285714286,
+      "rating": "greed",
+      "source": "cnn",
+      "as_of": "2026-08-11",
+      "previous_close": 64.3714285714286,
+      "previous_week": 59.9714285714286,
+      "previous_month": 46.82857142857143,
+      "previous_year": 57.628571428571426,
+      "n_history_points": 251,
+      "history_span": {
+        "first": "2025-08-11",
+        "last": "2026-08-11"
+      },
+      "components": [
+        {
+          "key": "market_momentum_sp500",
+          "label": "Market Momentum",
+          "raw_value": 7753.11,
+          "rating": "extreme greed",
+          "as_of": "2026-08-10"
+        },
+        {
+          "key": "stock_price_strength",
+          "label": "Stock Price Strength",
+          "raw_value": 1.0822867062790902,
+          "rating": "fear",
+          "as_of": "2026-08-10"
+        },
+        {
+          "key": "stock_price_breadth",
+          "label": "Stock Price Breadth",
+          "raw_value": 976.753214103285,
+          "rating": "fear",
+          "as_of": "2026-08-10"
+        },
+        {
+          "key": "put_call_options",
+          "label": "Put and Call Options",
+          "raw_value": 0.686367809139791,
+          "rating": "extreme greed",
+          "as_of": "2026-08-10"
+        },
+        {
+          "key": "market_volatility_vix",
+          "label": "Market Volatility",
+          "raw_value": 15.46,
+          "rating": "neutral",
+          "as_of": "2026-08-10"
+        },
+        {
+          "key": "junk_bond_demand",
+          "label": "Junk Bond Demand",
+          "raw_value": 1.2185888774391,
+          "rating": "extreme greed",
+          "as_of": "2026-08-11"
+        },
+        {
+          "key": "safe_haven_demand",
+          "label": "Safe Haven Demand",
+          "raw_value": 3.7570169058998704,
+          "rating": "greed",
+          "as_of": "2026-08-10"
+        }
+      ],
+      "warnings": []
+    },
+    "movers": [
+      {
+        "symbol": "SPY",
+        "label": "SPDR S&P 500 ETF",
+        "price": 770.5599975585938,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.31952597501650964,
+          "week": -0.09983010050032953,
+          "month": 2.067684628009748,
+          "ytd": 12.998594684109136
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "QQQ",
+        "label": "Invesco QQQ Trust",
+        "price": 718.4500122070312,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.33570309855424735,
+          "week": -0.7460058798144079,
+          "month": -0.9731082222937865,
+          "ytd": 16.952355498415027
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "DIA",
+        "label": "SPDR Dow Jones Industrial Average ETF",
+        "price": 537.280029296875,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.3172528188800758,
+          "week": -0.5828624283619284,
+          "month": 2.1872264748014367,
+          "ytd": 11.800574548631076
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "IWM",
+        "label": "iShares Russell 2000 ETF",
+        "price": 300.989990234375,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 0.33668218249812176,
+          "week": -0.23864016475911987,
+          "month": 1.6892463140529952,
+          "ytd": 22.274124860482132
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLK",
+        "label": "Technology Select Sector SPDR",
+        "price": 186.08999633789062,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.12344942962989411,
+          "week": -0.4333855457707354,
+          "month": 0.1668627196849222,
+          "ytd": 29.256091380188565
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLF",
+        "label": "Financial Select Sector SPDR",
+        "price": 57.79999923706055,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.017301740171018,
+          "week": -0.1382201616764632,
+          "month": 3.751570969187845,
+          "ytd": 5.532223395969265
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLE",
+        "label": "Energy Select Sector SPDR",
+        "price": 60.93000030517578,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 1.2462612100310946,
+          "week": 4.118249877922518,
+          "month": 10.620911909307168,
+          "ytd": 36.27824100389251
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLV",
+        "label": "Health Care Select Sector SPDR",
+        "price": 168.00999450683594,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.25528848749565625,
+          "week": 3.64589030277164,
+          "month": 4.457845269955535,
+          "ytd": 8.533586043057975
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLI",
+        "label": "Industrial Select Sector SPDR",
+        "price": 185.6999969482422,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 0.5958780110276571,
+          "week": -0.37553485577415024,
+          "month": 2.077835761512304,
+          "ytd": 19.71377178548298
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLY",
+        "label": "Consumer Discretionary Select Sector SPDR",
+        "price": 119.23999786376953,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.3593217278809715,
+          "week": 0.8031084122829576,
+          "month": 1.7059024534646947,
+          "ytd": -0.14237148741817618
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLP",
+        "label": "Consumer Staples Select Sector SPDR",
+        "price": 84.69000244140625,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.30605593428607814,
+          "week": -0.7965330716860104,
+          "month": 0.6776030387699661,
+          "ytd": 9.024204568345496
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLU",
+        "label": "Utilities Select Sector SPDR",
+        "price": 43.630001068115234,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 1.1592858511882476,
+          "week": -1.0881875665258633,
+          "month": -3.9198387696059775,
+          "ytd": 2.2019266143010316
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLB",
+        "label": "Materials Select Sector SPDR",
+        "price": 53.2400016784668,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 0.11282695176136723,
+          "week": 2.3846186124361477,
+          "month": 4.617807657699392,
+          "ytd": 17.398023086700036
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLRE",
+        "label": "Real Estate Select Sector SPDR",
+        "price": 44.08000183105469,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.7207200086191535,
+          "week": -2.4130980342611683,
+          "month": -0.8323935332600831,
+          "ytd": 9.24412267159284
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "XLC",
+        "label": "Communication Services Select Sector SPDR",
+        "price": 111.2699966430664,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.5007647132424264,
+          "week": -0.6872583596652082,
+          "month": -0.3314248912619923,
+          "ytd": -5.4791067879316095
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "^VIX",
+        "label": "CBOE Volatility Index",
+        "price": 15.279999732971191,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -1.1642969258191282,
+          "week": -7.39394101229581,
+          "month": 1.6633400162448237,
+          "ytd": 2.2073573773662525
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "DX-Y.NYB",
+        "label": "US Dollar Index",
+        "price": 99.80999755859375,
+        "as_of": "2026-08-10",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 0.21084245751993658,
+          "week": -0.1500615518735102,
+          "month": -1.1488597089087933,
+          "ytd": 1.5567753340460726
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "GLD",
+        "label": "SPDR Gold Shares",
+        "price": 400.9599914550781,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": -0.39251181405672037,
+          "week": 7.162707806997689,
+          "month": 6.352611620137635,
+          "ytd": 1.173322380240201
+        },
+        "warnings": []
+      },
+      {
+        "symbol": "TLT",
+        "label": "iShares 20+ Year Treasury Bond ETF",
+        "price": 82.19000244140625,
+        "as_of": "2026-08-11",
+        "source": "store",
+        "change": {
+          "mode": "percent",
+          "day": 0.15842662281298742,
+          "week": -0.760682511155986,
+          "month": -2.699181657804996,
+          "ytd": -5.702158113680424
+        },
+        "warnings": []
+      }
+    ],
+    "warnings": []
+  },
+  "fear_greed_direct_call": {
+    "score": 64.3714285714286,
+    "rating": "greed",
+    "source": "cnn",
+    "as_of": "2026-08-11"
+  },
+  "internals": [
+    {
+      "symbol": "SPY",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 8440,
+      "last_close": 770.56,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 9.456,
+      "sma200": 703.993,
+      "dist_from_sma50_pct": 3.038,
+      "sma50": 747.8392,
+      "return_1m_pct": 2.855,
+      "return_3m_pct": 4.497,
+      "return_6m_pct": 11.63,
+      "return_12m_pct": 22.273,
+      "trailing_52w_high": 773.26,
+      "drawdown_from_52w_high_pct": -0.349,
+      "realised_vol_20d_annualised_pct": 14.057
+    },
+    {
+      "symbol": "QQQ",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6898,
+      "last_close": 718.45,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 10.707,
+      "sma200": 648.9648,
+      "dist_from_sma50_pct": 0.641,
+      "sma50": 713.8756,
+      "return_1m_pct": 0.943,
+      "return_3m_pct": 0.834,
+      "return_6m_pct": 17.227,
+      "return_12m_pct": 25.648,
+      "trailing_52w_high": 746.16,
+      "drawdown_from_52w_high_pct": -3.714,
+      "realised_vol_20d_annualised_pct": 24.872
+    },
+    {
+      "symbol": "IWM",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6590,
+      "last_close": 300.99,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 12.425,
+      "sma200": 267.7253,
+      "dist_from_sma50_pct": 2.293,
+      "sma50": 294.2432,
+      "return_1m_pct": 2.559,
+      "return_3m_pct": 5.739,
+      "return_6m_pct": 13.25,
+      "return_12m_pct": 38.034,
+      "trailing_52w_high": 301.71,
+      "drawdown_from_52w_high_pct": -0.239,
+      "realised_vol_20d_annualised_pct": 15.347
+    },
+    {
+      "symbol": "XLK",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 186.09,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 18.61,
+      "sma200": 156.8922,
+      "dist_from_sma50_pct": 1.561,
+      "sma50": 183.23,
+      "return_1m_pct": 2.653,
+      "return_3m_pct": 4.74,
+      "return_6m_pct": 30.132,
+      "return_12m_pct": 40.694,
+      "trailing_52w_high": 198.21,
+      "drawdown_from_52w_high_pct": -6.115,
+      "realised_vol_20d_annualised_pct": 34.163
+    },
+    {
+      "symbol": "XLF",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 57.8,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 9.019,
+      "sma200": 53.0181,
+      "dist_from_sma50_pct": 4.999,
+      "sma50": 55.048,
+      "return_1m_pct": 3.085,
+      "return_3m_pct": 13.33,
+      "return_6m_pct": 8.084,
+      "return_12m_pct": 13.205,
+      "trailing_52w_high": 58.0,
+      "drawdown_from_52w_high_pct": -0.345,
+      "realised_vol_20d_annualised_pct": 11.083
+    },
+    {
+      "symbol": "XLE",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 60.93,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 14.629,
+      "sma200": 53.1539,
+      "dist_from_sma50_pct": 7.332,
+      "sma50": 56.768,
+      "return_1m_pct": 7.385,
+      "return_3m_pct": 7.345,
+      "return_6m_pct": 15.157,
+      "return_12m_pct": 47.954,
+      "trailing_52w_high": 62.56,
+      "drawdown_from_52w_high_pct": -2.606,
+      "realised_vol_20d_annualised_pct": 24.817
+    },
+    {
+      "symbol": "XLV",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 168.01,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 9.682,
+      "sma200": 153.1797,
+      "dist_from_sma50_pct": 5.952,
+      "sma50": 158.5722,
+      "return_1m_pct": 4.089,
+      "return_3m_pct": 17.975,
+      "return_6m_pct": 8.396,
+      "return_12m_pct": 31.334,
+      "trailing_52w_high": 168.44,
+      "drawdown_from_52w_high_pct": -0.255,
+      "realised_vol_20d_annualised_pct": 16.863
+    },
+    {
+      "symbol": "XLY",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 119.24,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 1.807,
+      "sma200": 117.1242,
+      "dist_from_sma50_pct": 2.852,
+      "sma50": 115.9332,
+      "return_1m_pct": 2.758,
+      "return_3m_pct": 0.09,
+      "return_6m_pct": 1.844,
+      "return_12m_pct": 7.397,
+      "trailing_52w_high": 124.52,
+      "drawdown_from_52w_high_pct": -4.24,
+      "realised_vol_20d_annualised_pct": 25.327
+    },
+    {
+      "symbol": "XLP",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 84.69,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 2.584,
+      "sma200": 82.557,
+      "dist_from_sma50_pct": 0.402,
+      "sma50": 84.3508,
+      "return_1m_pct": 0.118,
+      "return_3m_pct": 2.288,
+      "return_6m_pct": -1.913,
+      "return_12m_pct": 5.527,
+      "trailing_52w_high": 90.01,
+      "drawdown_from_52w_high_pct": -5.91,
+      "realised_vol_20d_annualised_pct": 17.902
+    },
+    {
+      "symbol": "XLU",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 43.63,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": -2.6,
+      "sma200": 44.7949,
+      "dist_from_sma50_pct": -2.647,
+      "sma50": 44.8162,
+      "return_1m_pct": -4.571,
+      "return_3m_pct": -2.728,
+      "return_6m_pct": 1.692,
+      "return_12m_pct": 4.077,
+      "trailing_52w_high": 47.73,
+      "drawdown_from_52w_high_pct": -8.59,
+      "realised_vol_20d_annualised_pct": 14.309
+    },
+    {
+      "symbol": "XLI",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 185.7,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 10.261,
+      "sma200": 168.4181,
+      "dist_from_sma50_pct": 3.055,
+      "sma50": 180.1954,
+      "return_1m_pct": 2.955,
+      "return_3m_pct": 6.351,
+      "return_6m_pct": 7.473,
+      "return_12m_pct": 24.705,
+      "trailing_52w_high": 186.4,
+      "drawdown_from_52w_high_pct": -0.376,
+      "realised_vol_20d_annualised_pct": 17.679
+    },
+    {
+      "symbol": "XLB",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6950,
+      "last_close": 53.24,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 8.146,
+      "sma200": 49.2296,
+      "dist_from_sma50_pct": 3.75,
+      "sma50": 51.3158,
+      "return_1m_pct": 5.259,
+      "return_3m_pct": 2.256,
+      "return_6m_pct": 2.868,
+      "return_12m_pct": 22.716,
+      "trailing_52w_high": 53.62,
+      "drawdown_from_52w_high_pct": -0.709,
+      "realised_vol_20d_annualised_pct": 19.107
+    },
+    {
+      "symbol": "XLC",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 2047,
+      "last_close": 111.27,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": -2.571,
+      "sma200": 114.2061,
+      "dist_from_sma50_pct": 0.989,
+      "sma50": 110.1808,
+      "return_1m_pct": -0.287,
+      "return_3m_pct": -3.479,
+      "return_6m_pct": -4.248,
+      "return_12m_pct": 4.682,
+      "trailing_52w_high": 120.08,
+      "drawdown_from_52w_high_pct": -7.337,
+      "realised_vol_20d_annualised_pct": 24.69
+    },
+    {
+      "symbol": "XLRE",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 2725,
+      "last_close": 44.08,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 3.078,
+      "sma200": 42.7639,
+      "dist_from_sma50_pct": -1.487,
+      "sma50": 44.7452,
+      "return_1m_pct": -1.387,
+      "return_3m_pct": -0.233,
+      "return_6m_pct": 5.953,
+      "return_12m_pct": 10.545,
+      "trailing_52w_high": 46.01,
+      "drawdown_from_52w_high_pct": -4.195,
+      "realised_vol_20d_annualised_pct": 14.204
+    }
+  ],
+  "signal_internals": [
+    {
+      "symbol": "TLT",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 6047,
+      "last_close": 82.19,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": -5.474,
+      "sma200": 86.9493,
+      "dist_from_sma50_pct": -2.913,
+      "sma50": 84.6562,
+      "return_1m_pct": -1.726,
+      "return_3m_pct": -2.815,
+      "return_6m_pct": -3.941,
+      "return_12m_pct": -1.532,
+      "trailing_52w_high": 92.06,
+      "drawdown_from_52w_high_pct": -10.721,
+      "realised_vol_20d_annualised_pct": 9.25
+    },
+    {
+      "symbol": "GLD",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 5465,
+      "last_close": 400.96,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": -2.666,
+      "sma200": 411.9421,
+      "dist_from_sma50_pct": 5.014,
+      "sma50": 381.8146,
+      "return_1m_pct": 9.215,
+      "return_3m_pct": -7.751,
+      "return_6m_pct": -14.147,
+      "return_12m_pct": 28.082,
+      "trailing_52w_high": 495.9,
+      "drawdown_from_52w_high_pct": -19.145,
+      "realised_vol_20d_annualised_pct": 23.617
+    },
+    {
+      "symbol": "^VIX",
+      "last_bar_date": "2026-08-11",
+      "n_bars": 9220,
+      "last_close": 15.28,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": -17.653,
+      "sma200": 18.5557,
+      "dist_from_sma50_pct": -11.514,
+      "sma50": 17.2682,
+      "return_1m_pct": -10.956,
+      "return_3m_pct": -15.064,
+      "return_6m_pct": -14.109,
+      "return_12m_pct": -5.969,
+      "trailing_52w_high": 31.05,
+      "drawdown_from_52w_high_pct": -50.789,
+      "realised_vol_20d_annualised_pct": 118.726
+    },
+    {
+      "symbol": "DX-Y.NYB",
+      "last_bar_date": "2026-08-10",
+      "n_bars": 14118,
+      "last_close": 99.81,
+      "sync_warnings": [],
+      "dist_from_sma200_pct": 0.644,
+      "sma200": 99.1709,
+      "dist_from_sma50_pct": -0.689,
+      "sma50": 100.5026,
+      "return_1m_pct": -1.149,
+      "return_3m_pct": 2.013,
+      "return_6m_pct": 2.233,
+      "return_12m_pct": 1.433,
+      "trailing_52w_high": 101.61,
+      "drawdown_from_52w_high_pct": -1.771,
+      "realised_vol_20d_annualised_pct": 4.843
+    }
+  ],
+  "vix_percentile": {
+    "last_bar_date": "2026-08-11",
+    "last_close": 15.28,
+    "n_bars_full_history": 9220,
+    "percentile_full_history": 33.74,
+    "n_full_history": 9220,
+    "percentile_trailing_1y": 13.1,
+    "n_trailing_1y": 252,
+    "percentile_trailing_5y": 23.1,
+    "n_trailing_5y": 1260
+  },
+  "sector_dispersion": {
+    "best_sector": "XLV",
+    "best_3m_return_pct": 17.975,
+    "worst_sector": "XLC",
+    "worst_3m_return_pct": -3.479,
+    "dispersion_pct_pts": 21.454,
+    "n_sectors": 11
+  },
+  "yahoo_proxy_crosscheck": {
+    "CL=F": {
+      "title": "WTI Crude Oil (Yahoo proxy)",
+      "as_of": "2026-08-10",
+      "value": 82.12999725341797
+    },
+    "BZ=F": {
+      "title": "Brent Crude Oil (Yahoo proxy)",
+      "as_of": "2026-08-10",
+      "value": 87.72000122070312
+    },
+    "^TNX": {
+      "title": "US 10-Year Treasury Yield (Yahoo proxy)",
+      "as_of": "2026-08-10",
+      "value": 4.698999881744385
+    }
+  }
+}

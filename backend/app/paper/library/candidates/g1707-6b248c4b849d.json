@@ -1,0 +1,26 @@
+{
+  "agent_id": "g1707-6b248c4b849d",
+  "display_name": "auto g1707 · mean-reversion (roth)",
+  "discipline": "mean-reversion",
+  "purpose": "roth",
+  "thesis": "Machine-proposed candidate (app.evolution). Tests a 8/31-day EMA crossover trigger inside a 170-day SMA regime filter on INTU, LRCX, CRM, CSCO, AAPL, KLAC, ADBE, AMAT, with a 13% stop and a 90-session time stop. Never scored before being written -- this is falsified if the crossover-inside-regime signal fails to beat this purpose's benchmark by more than the measured ordering-noise floor, across whatever windows it is actually run against.",
+  "universe": [
+    "INTU",
+    "LRCX",
+    "CRM",
+    "CSCO",
+    "AAPL",
+    "KLAC",
+    "ADBE",
+    "AMAT"
+  ],
+  "entry": "close > sma(170) and ema(8) crosses_above ema(31)",
+  "exit": "ema(8) crosses_below ema(31)",
+  "stop_loss_pct": "0.13",
+  "take_profit_pct": null,
+  "max_hold_days": 90,
+  "max_positions": 3,
+  "position_pct": "0.32",
+  "rank_by": null,
+  "designed_through": "2026-02-13"
+}

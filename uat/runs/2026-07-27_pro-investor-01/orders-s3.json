@@ -1,0 +1,21 @@
+{
+  "orders": [
+    {
+      "order_id": "s3-1",
+      "session": 3,
+      "decided_on": "2026-07-28",
+      "symbol": "QQQ",
+      "side": "sell",
+      "quantity": "1",
+      "thesis": "Closing the session-2 QQQ rule-probe at a small loss. QQQ's own trend has deteriorated further since the probe was opened (close 675.49 now vs sma20 708.06 and sma50 716.75, 5d -4.72%, 20d -6.71%; SMH, the other tech-adjacent watch name, is down 16.2% over 20d). No thesis basis to hold. Selling now to realize the loss and set up a deliberate repurchase later this week to exercise the /wash-sales tab against a real transaction.",
+      "invalidation": "N/A -- this closes a rule-probe, not a trend position.",
+      "stop_level": "n/a",
+      "regime": "risk-off",
+      "conviction": 3,
+      "evidence": [
+        "brief watchlist QQQ: close=675.49 vs my cost basis 676.57 (session-2 fill), sma20=708.0635, sma50=716.7494, change_5d=-4.72%, change_20d=-6.71%",
+        "brief watchlist SMH: change_20d=-16.20%, confirming broader tech weakness"
+      ]
+    }
+  ]
+}

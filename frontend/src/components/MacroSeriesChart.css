@@ -1,0 +1,86 @@
+/* =============================================================================
+   MacroSeriesChart + the MacroTile sparkline-span caption.
+
+   Owned by both `MacroSeriesChart.tsx` and `MacroTile.tsx` (imported from both) so the tile's new
+   span caption and the expanded chart's chrome share one small stylesheet instead of either file
+   reaching into the shared `styles.css`. Reuses `.panel`, `.placeholder`, `.warning-list`,
+   `.timeframe-tabs`/`.timeframe-tab`/`.active`, `.chart-container` and `.macro-tile-source` from
+   `styles.css` as-is -- nothing there is touched, only built on top of.
+   ============================================================================= */
+
+/* --- MacroTile sparkline span caption ------------------------------------------ */
+
+.macro-tile-span {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+/* --- MacroSeriesChart ----------------------------------------------------------- */
+
+.macro-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.macro-chart-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.macro-chart-titlerow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.macro-chart-title {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.macro-chart-value {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.macro-chart-asof {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.macro-chart-change {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.macro-chart-span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.macro-chart-plot {
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+/* Compact chrome for the small-tile embedding: tighter type, smaller tabs. */
+.macro-chart-compact .macro-chart-title { font-size: 0.82rem; }
+.macro-chart-compact .macro-chart-value { font-size: 1.2rem; }
+.macro-chart-compact .macro-chart-change,
+.macro-chart-compact .macro-chart-span { font-size: 0.66rem; }
+.macro-chart-compact .timeframe-tab {
+  font-size: 0.62rem;
+  padding: 0.1rem 0.35rem;
+}

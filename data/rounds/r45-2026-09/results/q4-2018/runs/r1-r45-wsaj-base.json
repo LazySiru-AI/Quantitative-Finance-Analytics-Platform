@@ -1,0 +1,138 @@
+{
+  "card": {
+    "agent_id": "r45-wsaj-base",
+    "display_name": "wsaj base",
+    "discipline": "mean-reversion",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Round 45 cell on the taxable trading book: base `wsaj` (persona: Creator B (wsaj)), entry 'close > sma(200) and close < bb_lower(26, 2)', exit 'close crosses_above bb_mid(26, 2)', stop 0.12, take-profit None, hold cap 150, 4 slots at 0.20 each. This base is a VAULT DRAFT (`data/vault/influencers/wsaj/strategy/1.json`), machine-mapped from the persona's described methodology onto this programme's fixed rule vocabulary -- fidelity 0.0. The draft's rationale: \"Band-reversion is chosen as the structural proxy: buying names undervalued by P/E\" Every note behind it has `published = null` (`PERSONA-HYPOTHESES.md` section 7), so hindsight against this round's eight windows is unbounded; the draft is inspired by, not a faithful reproduction of, what the persona actually trades. This is the BASE cell: the persona's method with no cross-persona enhancement. Every other arm on this base changes exactly ONE thing against this cell, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-45-PLAN.md and strategy-program/MIX-AND-MATCH-PLAN.md section 3). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only. Not investment advice.",
+    "falsification": "Baseline against which this base's four enhancement arms are contrasted. Honest prior: the null (rounds 17/18/34/38/39/40/42 put form, exit, rotation, style tilts and confirmation conjuncts all inside the 21.2pp floor). Decision rule: an enhancement earns something only if its marginal -- the mean over its bases of (arm median adjusted excess minus base median) -- exceeds the floor AND its arm cells survive BH q<0.10 over m=14 (each arm cell contrasted with its own base; base cells carry p=None but count in m). Pre-registered predictions: (1) null for all four enhancements. (2) `trend100` cuts trades vs base on both bases it applies to (kim, wsaj). (3) `rr5` cells are nearly identical to their base -- fewer than 10% of exits are expected to be the take-profit target, counted from the run files' trade logs. (4) `risk1pct` lowers mean exposure and raises adjusted excess per unit exposure without changing sign patterns across windows. (5) `trim115` lowers exposure and loses to base in bull-2024 and recent. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment). Sign flips by regime are expected; only the eight-window median is safe to read.",
+    "universe": [
+      "NVDA",
+      "TSM",
+      "MU",
+      "AMD",
+      "QCOM",
+      "MSFT",
+      "GOOGL",
+      "AMZN",
+      "NFLX",
+      "ORCL",
+      "INTC",
+      "TXN"
+    ],
+    "entry": "close > sma(200) and close < bb_lower(26, 2)",
+    "exit": "close crosses_above bb_mid(26, 2)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 4,
+    "position_pct": "0.20",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 65,
+  "starting_equity": "10000.00",
+  "ending_equity": "9481.85",
+  "total_return": "-0.051815000000000055",
+  "max_drawdown": "-0.14543548540082518",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.5692307692307692,
+  "capital_exposure": 0.28148063076923074,
+  "win_rate": 0.3333333333333333,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "TSM",
+      "entry_date": "2018-10-05",
+      "entry_price": "41.90",
+      "exit_date": "2018-10-25",
+      "exit_price": "36.76",
+      "quantity": "47",
+      "exit_reason": "stop",
+      "pnl": "-241.64",
+      "return_pct": "-0.1227034987051236479967501143",
+      "bars_held": 14
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2018-10-11",
+      "entry_price": "24.75",
+      "exit_date": "2018-10-26",
+      "exit_price": "18.48",
+      "quantity": "80",
+      "exit_reason": "stop",
+      "pnl": "-501.65",
+      "return_pct": "-0.2533585858585858585858585859",
+      "bars_held": 11
+    },
+    {
+      "symbol": "AMZN",
+      "entry_date": "2018-10-08",
+      "entry_price": "93.75",
+      "exit_date": "2018-10-29",
+      "exit_price": "82.96",
+      "quantity": "21",
+      "exit_reason": "stop",
+      "pnl": "-226.64",
+      "return_pct": "-0.1151187301587301587301587302",
+      "bars_held": 15
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2018-10-10",
+      "entry_price": "56.85",
+      "exit_date": "2018-11-08",
+      "exit_price": "55.34",
+      "quantity": "34",
+      "exit_reason": "rule",
+      "pnl": "-51.40",
+      "return_pct": "-0.02659216720989187231620880542",
+      "bars_held": 21
+    },
+    {
+      "symbol": "MSFT",
+      "entry_date": "2018-10-25",
+      "entry_price": "106.60",
+      "exit_date": "2018-11-08",
+      "exit_price": "111.74",
+      "quantity": "19",
+      "exit_reason": "rule",
+      "pnl": "97.60",
+      "return_pct": "0.04818801224449491458477337810",
+      "bars_held": 10
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2018-10-29",
+      "entry_price": "18.22",
+      "exit_date": "2018-11-28",
+      "exit_price": "21.81",
+      "quantity": "113",
+      "exit_reason": "rule",
+      "pnl": "405.58",
+      "return_pct": "0.1969925104183868742896554404",
+      "bars_held": 21
+    }
+  ],
+  "rejections": [
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$1905.50 exceeds $1851.31 of settled cash (total cash $3329.66; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.2004503736053771878945033949",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,33 @@
+{
+  "agent_id": "r41-struct-lb10",
+  "display_name": "R41 structure half only: a lower low than the last swing low",
+  "discipline": "mean-reversion",
+  "purpose": "trading",
+  "desk_only": false,
+  "thesis": "Round 41 confirmation-stacking cell: structure half only: a lower low than the last swing low. The confirmation gate ANDed onto that entry is `low < swing_low(10)`, and it is the only thing that differs from the control. The round asks one question: does requiring a second, independent condition to agree with a mean-reversion entry change the result at all? Two ingested personas make that claim structurally -- creator-e teaches RSI divergence strictly as confirmation of a support/resistance structure and never as a standalone trigger, and creator-c stacks moving-average alignment with structure and pattern before entering. This programme has tested single-form entries exhaustively (rounds 17, 18 and 34: eight forms, eight exits, a regime filter, every marginal inside the 21.2 percentage point noise floor) and has never tested an indicator-combination gate. The base is c18-meanrev's rule character for character -- entry rsi(2) < 10 and close > sma(200), exit close > sma(5), 8% stop, 10-day cap, six slots at 15%, its own ten defensive large caps in its own write order -- asserted against the library JSON at build time rather than retyped from memory. Nothing here is tuned: every base number is c18's, frozen before this round was conceived, and the gate spends one swing lookback and one RSI period. The divergence conjunction is known in advance to be extremely sparse on this base -- it fires on roughly one percent of the bars the control fires on, and on zero bars in most windows -- so a sparse arm's flat median is an unmeasured result, not a null one, and this round's decision rule requires a minimum trade count before any arm is read as evidence of anything. This is a measurement study on the taxable trading book; PROTOCOL.md section 9's r21 amendment means no card in it can be promoted, and none will be. See strategy-program/ROUND-41-PLAN.md for the pre-registration, the six predictions, the decision rule and the Benjamini-Hochberg correction taken across all six cells.",
+  "falsification": "Regime: this cell buys a 2-period RSI extreme inside an intact 200-day uptrend, so it is supposed to be worst in a grinding, sustained decline where 'oversold' keeps getting more oversold and the 200-day average has not yet rolled over -- `bear-2022` first, `gfc` second. The cell is falsified as a mean-reversion rule if its worst adjusted excess is in neither of those two windows, because then whatever it earned or lost was not the mechanism its own thesis claims exposure to. Round-level: the gate 'carries information' only if gate minus control exceeds 21.2pp on median adjusted excess, with the same sign in at least five of eight windows, surviving Benjamini-Hochberg over all six cells run, AND exceeding both of the divergence's own halves. Anything less is the null, and this cell is falsified as evidence for confirmation stacking. A structural falsification runs before any of that: an arm taking fewer than 20 trades across the eight windows is reported as UNMEASURED, never as a null, because a zero-trade window scores adjusted excess 0.00 and a gate that never fires can out-score a losing control by not trading.",
+  "universe": [
+    "JNJ",
+    "MRK",
+    "PG",
+    "KO",
+    "PEP",
+    "CL",
+    "XOM",
+    "CVX",
+    "MMM",
+    "WMT"
+  ],
+  "entry": "rsi(2) < 10 and close > sma(200) and low < swing_low(10)",
+  "exit": "close > sma(5)",
+  "stop_loss_pct": "0.08",
+  "take_profit_pct": null,
+  "max_hold_days": 10,
+  "max_positions": 6,
+  "position_pct": "0.15",
+  "rank_by": null,
+  "designed_through": "2026-02-13",
+  "reference_only": false,
+  "source_thesis_hash": null,
+  "source_persona": null
+}

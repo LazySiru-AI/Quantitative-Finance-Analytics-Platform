@@ -1,0 +1,108 @@
+{
+  "run_id": "2026-06-01_pro-investor-01",
+  "persona_id": "pro-investor-01",
+  "generated_at": "2026-08-18T22:27:12.291446+00:00",
+  "window": {
+    "first_session": "2026-06-01",
+    "last_session": "2026-06-05",
+    "sessions": 5
+  },
+  "performance": {
+    "starting_cash": "10000.00",
+    "ending_equity": "9877.34",
+    "pnl": "-122.66",
+    "return_pct_of_1": "-0.012266",
+    "benchmark": "SPY",
+    "benchmark_return_pct_of_1": "-0.027672",
+    "$comment": "Five sessions of a notional $10,000 sleeve. Far too short a window to say anything about the persona's process, and not intended to -- these figures exist to give the dashboard non-trivial numbers to display, not to evaluate a strategy."
+  },
+  "activity": {
+    "fills": 3,
+    "buys": 2,
+    "sells": 1,
+    "gross_traded": "3561.83",
+    "total_fees": "0.02",
+    "rejections": 0,
+    "rejections_by_rule": {}
+  },
+  "final_book": {
+    "as_of": "2026-06-05",
+    "cash": "7897.53",
+    "settled_cash": "7167.86",
+    "positions_market_value": "1979.81",
+    "equity": "9877.34",
+    "return_since_inception_pct_of_1": "-0.012266",
+    "positions": [
+      {
+        "symbol": "QQQ",
+        "quantity": "2",
+        "mark": "705.06",
+        "market_value": "1410.12",
+        "weight_pct_of_1": "0.142763"
+      },
+      {
+        "symbol": "SMH",
+        "quantity": "1",
+        "mark": "569.69",
+        "market_value": "569.69",
+        "weight_pct_of_1": "0.057676"
+      }
+    ],
+    "unpriced_symbols": [],
+    "open_position_count": 2,
+    "max_positions": 8
+  },
+  "ingest": {
+    "exports": [
+      "session-1.csv",
+      "session-2.csv",
+      "session-5.csv"
+    ],
+    "replay": [
+      {
+        "import_id": "bc52aafecd06c706d24d3f31fe9295692bac7ce6",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "5bfff9e6c144ddeaa363efca5cc08d0b07077826004722abfa002e7c773e1169",
+        "ledger_txn_count": 5
+      },
+      {
+        "import_id": "44ed32ce34cc0c9d2a213153a1c7973d4871577a",
+        "adapter": "robinhood",
+        "row_count": 1,
+        "usable_row_count": 1,
+        "inserted": 0,
+        "duplicates": 1,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "5bfff9e6c144ddeaa363efca5cc08d0b07077826004722abfa002e7c773e1169",
+        "ledger_txn_count": 5
+      },
+      {
+        "import_id": "797f8813d948933dda623d1d6505980eb624899b",
+        "adapter": "robinhood",
+        "row_count": 2,
+        "usable_row_count": 2,
+        "inserted": 0,
+        "duplicates": 2,
+        "conflicts": [],
+        "instruments": 1,
+        "skipped": {},
+        "ledger_fingerprint": "5bfff9e6c144ddeaa363efca5cc08d0b07077826004722abfa002e7c773e1169",
+        "ledger_txn_count": 5
+      }
+    ],
+    "fingerprint_before_replay": "5bfff9e6c144ddeaa363efca5cc08d0b07077826004722abfa002e7c773e1169",
+    "fingerprint_after_replay": "5bfff9e6c144ddeaa363efca5cc08d0b07077826004722abfa002e7c773e1169",
+    "ledger_txn_count": 5,
+    "idempotent": true
+  },
+  "findings_recorded": 10
+}

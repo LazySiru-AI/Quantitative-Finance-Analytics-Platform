@@ -1,0 +1,27 @@
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+22 cards
+[1/22] r1 A-rotation: 95s trades=47 ret=+95.38% dd=-13.24% rej=12
+[2/22] r1 A1-alpha-order: 97s trades=53 ret=+82.70% dd=-15.97% rej=17
+[3/22] r1 A2-cash-headroom: 116s trades=60 ret=+72.23% dd=-11.68% rej=6
+[4/22] r1 A3-no-target: 89s trades=26 ret=+164.83% dd=-16.25% rej=3
+[5/22] r1 A4-tight-stop: 95s trades=49 ret=+102.85% dd=-11.41% rej=12
+[6/22] r1 B-momentum: 131s trades=17 ret=+24.27% dd=-26.51% rej=0
+[7/22] r1 B1-with-target: 132s trades=19 ret=+2.38% dd=-8.93% rej=0
+[8/22] r1 B2-hold-90: 129s trades=18 ret=+22.19% dd=-22.08% rej=0
+[9/22] r1 B3-concentrated: 111s trades=12 ret=+40.05% dd=-30.41% rej=0
+[10/22] r1 B4-tight-stop: 128s trades=19 ret=+22.18% dd=-26.88% rej=0
+[11/22] r1 C-trend: 99s trades=14 ret=-2.24% dd=-17.99% rej=0
+[12/22] r1 c01-meanrev: 104s trades=36 ret=+8.92% dd=-5.05% rej=0
+[13/22] r1 c02-volatility: 67s trades=12 ret=+10.47% dd=-4.66% rej=0
+[14/22] r1 c03-breakout: 105s trades=13 ret=+3.49% dd=-4.35% rej=0
+[15/22] r1 c04-riskmanaged: 79s trades=10 ret=+12.18% dd=-9.51% rej=0
+[16/22] r1 c05-trend: 35s trades=5 ret=+1.71% dd=-3.00% rej=0
+[17/22] r1 c06-13f-momentum: 111s trades=77 ret=+22.44% dd=-12.07% rej=0
+[18/22] r1 D-13f-newbuys: FAILED GuardFailed: D-13f-newbuys: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against SNDK (failed): causality: sma_200: only 130 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[19/22] r1 E-asymmetric: 130s trades=69 ret=+26.86% dd=-10.98% rej=0
+[20/22] r1 F-fastrev: 113s trades=48 ret=+36.56% dd=-4.58% rej=0
+[21/22] r1 G-volatility: 131s trades=68 ret=+22.77% dd=-11.15% rej=1
+[22/22] r1 H-trend-diversified: 82s trades=14 ret=-3.65% dd=-7.49% rej=0
+r1: 21 agents, 8 discoveries
+overall: 21 agents, 8 discoveries at alpha=0.1

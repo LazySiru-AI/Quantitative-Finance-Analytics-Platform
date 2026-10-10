@@ -1,0 +1,30 @@
+{
+  "findings": [
+    {
+      "finding_id": "tax-page-defaults-to-wrong-year",
+      "run_id": "2026-07-20_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-16T18:10:00Z",
+      "session_date": "2026-07-20",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Tax page's year selector defaults to a year with no activity instead of the ledger's actual year",
+      "observed": "After session 1's two fills (SPY, TLT bought 2026-07-20; account funded 2026-07-17), I opened /tax. document.querySelector('select').value read '2025' on load -- not '2026'. The panel read: 'No 2025 activity at all. The ledger holds 3 transactions, none of them dated in this tax year -- pick another year above.' Manually setting the select to 2026 (native setter + change event) immediately produced the correct read: 'Nothing was disposed of in 2026. The ledger holds 3 transactions dated in this tax year -- see Activity -- but no lot was sold, so there is no gain or loss to report and no Form 8949 to file for it.' The <select>'s option list is 2026, 2025, 2024... in that order -- 2026 is literally the first option in the DOM -- yet the control opens on the second one.",
+      "expected": "A tax page opened after a session of live trading should default to the year the ledger actually has activity in (or the current calendar year), not to a year that happens to have none. The copy shown for the wrong default is itself accurate and well-written -- this is not the messaging defect the last two Tax-page findings were (activity-year-contradicts-count, zero-disposals-boilerplate) -- it is the selection that lands on the wrong year in the first place, which undermines that earlier fix by showing its honest-but-irrelevant output first.",
+      "why_it_matters": "Tax review is the last step of my session process, and it is where I'd notice the discrepancy between what I traded and what's shown. On first look this page tells a trader who just made three transactions that the ledger has 'no activity at all' for the selected year. That reads as 'the app isn't tracking my tax exposure,' not 'you're on the wrong year' -- there is no visual cue that 2025 was chosen for me rather than by me. A user who trusts the first screen and doesn't think to check the dropdown walks away believing tax tracking is broken.",
+      "repro": [
+        "Trade so the ledger has 2026-dated transactions only (this run's sandbox: funded 2026-07-17, bought SPY+TLT 2026-07-20)",
+        "Navigate to /tax",
+        "Read document.querySelector('select').value -- returns '2025'",
+        "Observe the placeholder: 'No 2025 activity at all... pick another year above'",
+        "Set the select to '2026' via the native HTMLSelectElement value setter + a dispatched 'change' event",
+        "Observe the correct message: 'Nothing was disposed of in 2026... no gain or loss to report'"
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "Default the selector to the most recent year that has ledger activity (or the current calendar year), rather than a fixed offset from today."
+    }
+  ]
+}

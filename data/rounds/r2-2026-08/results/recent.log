@@ -1,0 +1,32 @@
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+27 cards
+[1/27] r1 A-rotation: 81s trades=47 ret=+95.28% dd=-13.24% rej=12
+[2/27] r1 A1-alpha-order: 85s trades=53 ret=+82.61% dd=-15.97% rej=17
+[3/27] r1 A2-cash-headroom: 103s trades=60 ret=+72.17% dd=-11.68% rej=6
+[4/27] r1 A3-no-target: 78s trades=26 ret=+164.70% dd=-16.25% rej=3
+[5/27] r1 A4-tight-stop: 82s trades=49 ret=+102.74% dd=-11.41% rej=12
+[6/27] r1 B-momentum: 113s trades=17 ret=+24.27% dd=-26.51% rej=0
+[7/27] r1 B1-with-target: 114s trades=19 ret=+2.38% dd=-8.93% rej=0
+[8/27] r1 B2-hold-90: 113s trades=18 ret=+22.19% dd=-22.08% rej=0
+[9/27] r1 B3-concentrated: 97s trades=12 ret=+40.05% dd=-30.41% rej=0
+[10/27] r1 B4-tight-stop: 112s trades=19 ret=+22.18% dd=-26.88% rej=0
+[11/27] r1 C-trend: 88s trades=14 ret=-2.24% dd=-17.99% rej=0
+[12/27] r1 c01-meanrev: 95s trades=36 ret=+8.92% dd=-5.05% rej=0
+[13/27] r1 c02-volatility: 58s trades=12 ret=+10.47% dd=-4.66% rej=0
+[14/27] r1 c03-breakout: 92s trades=13 ret=+3.43% dd=-4.35% rej=0
+[15/27] r1 c04-riskmanaged: 67s trades=10 ret=+12.05% dd=-9.51% rej=0
+[16/27] r1 c05-trend: 31s trades=5 ret=+1.71% dd=-3.00% rej=0
+[17/27] r1 c06-13f-momentum: 96s trades=77 ret=+22.44% dd=-12.07% rej=0
+[18/27] r1 c07-chop: 78s trades=4 ret=+0.55% dd=-2.03% rej=0
+[19/27] r1 c08-generalist: 76s trades=10 ret=+15.87% dd=-8.34% rej=0
+[20/27] r1 c09-convex: 21s trades=8 ret=+2.33% dd=-2.17% rej=0
+[21/27] r1 c10-momentum: 91s trades=48 ret=+10.60% dd=-4.52% rej=0
+[22/27] r1 c11-breakout: 55s trades=5 ret=+11.90% dd=-4.65% rej=0
+[23/27] r1 D-13f-newbuys: FAILED GuardFailed: D-13f-newbuys: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against SNDK (failed): causality: sma_200: only 130 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[24/27] r1 E-asymmetric: 113s trades=69 ret=+26.86% dd=-10.98% rej=0
+[25/27] r1 F-fastrev: 98s trades=48 ret=+36.45% dd=-4.58% rej=0
+[26/27] r1 G-volatility: 117s trades=68 ret=+22.62% dd=-11.15% rej=1
+[27/27] r1 H-trend-diversified: 73s trades=14 ret=-3.65% dd=-7.49% rej=0
+r1: 26 agents, 7 discoveries
+overall: 26 agents, 7 discoveries at alpha=0.1

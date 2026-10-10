@@ -1,0 +1,69 @@
+/**
+ * Collapsible.tsx -- generic `<details>/<summary>` wrapper.
+ *
+ * Styling follows the house disclosure look already established in `styles.css` (`.warning-detail`,
+ * `.wsale-symbol-summary`, `.empty-accounts-detail`): a plain cursor + colour treatment on the
+ * summary, muted by default, brighter on hover/focus. The summary is styled as a row -- cursor,
+ * marker, hover colour -- and deliberately does NOT set font-size/font-weight, because a caller
+ * passes its own heading (e.g. `<h2 className="section-heading">`) inside `title` and that heading
+ * must keep its own type treatment rather than being flattened by this wrapper.
+ */
+
+.collapsible {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+}
+
+.collapsible-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  padding: 0.6rem 0.85rem;
+}
+
+/* Hide the native marker so we can draw our own chevron whose rotation reflects open/closed. */
+.collapsible-summary::-webkit-details-marker {
+  display: none;
+}
+.collapsible-summary::marker {
+  content: "";
+}
+
+.collapsible-summary::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.collapsible[open] > .collapsible-summary::before {
+  transform: rotate(45deg);
+}
+
+.collapsible-summary:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.collapsible-summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.collapsible-body {
+  padding: 0 0.85rem 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsible-summary::before {
+    transition: none;
+  }
+}

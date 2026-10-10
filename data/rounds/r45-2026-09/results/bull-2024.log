@@ -1,0 +1,19 @@
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+14 cards
+[1/14] r1 r45-bee-base: 3s trades=35 ret=-5.12% dd=-23.48% rej=0
+[2/14] r1 r45-bee-risk1pct: 2s trades=35 ret=-4.25% dd=-19.18% rej=0
+[3/14] r1 r45-bee-rr5: 2s trades=35 ret=-4.16% dd=-23.43% rej=0
+[4/14] r1 r45-bee-trim115: 2s trades=36 ret=-6.72% dd=-20.70% rej=1
+[5/14] r1 r45-kim-base: 3s trades=23 ret=+10.12% dd=-5.29% rej=0
+[6/14] r1 r45-kim-risk1pct: 3s trades=22 ret=+6.93% dd=-3.32% rej=1
+[7/14] r1 r45-kim-rr5: 3s trades=23 ret=+9.06% dd=-5.29% rej=0
+[8/14] r1 r45-kim-trend100: 3s trades=5 ret=-2.40% dd=-2.84% rej=0
+[9/14] r1 r45-kim-trim115: 3s trades=23 ret=+6.36% dd=-4.72% rej=0
+[10/14] r1 r45-wsaj-base: 1s trades=12 ret=+8.17% dd=-4.77% rej=0
+[11/14] r1 r45-wsaj-risk1pct: 1s trades=12 ret=+3.34% dd=-1.81% rej=0
+[12/14] r1 r45-wsaj-rr5: 1s trades=12 ret=+8.17% dd=-4.77% rej=0
+[13/14] r1 r45-wsaj-trend100: 1s trades=10 ret=+4.42% dd=-4.84% rej=0
+[14/14] r1 r45-wsaj-trim115: 1s trades=19 ret=+6.49% dd=-4.85% rej=0
+r1: 14 agents, 5 discoveries
+overall: 14 agents, 5 discoveries at alpha=0.1

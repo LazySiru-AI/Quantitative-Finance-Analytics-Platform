@@ -1,0 +1,240 @@
+{
+  "claim": "once close > sma(200) is already established and ema(20) crosses above ema(50) ... the resulting move has a median duration of roughly 3-4 weeks and stretches past two months at the 75th percentile (NVDA's longest such run reached 256 sessions, MSFT's 169, TSM's 189).",
+  "source": "strategy-program/ROUND-27-PLAN.md section 2b",
+  "tickers": [
+    "NVDA",
+    "AMD",
+    "AVGO",
+    "MU",
+    "MRVL",
+    "TSM",
+    "META",
+    "MSFT",
+    "GOOGL",
+    "NOW",
+    "AMZN",
+    "NFLX"
+  ],
+  "design_through": "2026-02-13",
+  "reference_points_sessions": {
+    "three_to_four_weeks_low": 15,
+    "three_to_four_weeks_high": 20,
+    "past_two_months_min": 42
+  },
+  "thesis_named_max": {
+    "NVDA": 256,
+    "MSFT": 169,
+    "TSM": 189
+  },
+  "pooled": {
+    "n_signals": 478,
+    "n_completed": 472,
+    "n_censored": 6,
+    "median_sessions": 47.5,
+    "p75_sessions": 108.0
+  },
+  "pooled_post_design_through": {
+    "note": "small-sample split, not an out-of-sample test -- plan section 4",
+    "n_signals": 15,
+    "n_completed": 10,
+    "n_censored": 5,
+    "median_sessions": 51.5,
+    "p75_sessions": 74.0
+  },
+  "per_name": {
+    "NVDA": {
+      "n_signals": 39,
+      "n_completed": 38,
+      "n_censored": 1,
+      "max_completed_sessions": 260,
+      "median_completed_sessions": 64.5,
+      "thesis_named_max": 256
+    },
+    "AMD": {
+      "n_signals": 49,
+      "n_completed": 49,
+      "n_censored": 0,
+      "max_completed_sessions": 290,
+      "median_completed_sessions": 40.0,
+      "thesis_named_max": null
+    },
+    "AVGO": {
+      "n_signals": 31,
+      "n_completed": 31,
+      "n_censored": 0,
+      "max_completed_sessions": 350,
+      "median_completed_sessions": 50.0,
+      "thesis_named_max": null
+    },
+    "MU": {
+      "n_signals": 46,
+      "n_completed": 45,
+      "n_censored": 1,
+      "max_completed_sessions": 244,
+      "median_completed_sessions": 48.0,
+      "thesis_named_max": null
+    },
+    "MRVL": {
+      "n_signals": 37,
+      "n_completed": 36,
+      "n_censored": 1,
+      "max_completed_sessions": 223,
+      "median_completed_sessions": 46.0,
+      "thesis_named_max": null
+    },
+    "TSM": {
+      "n_signals": 45,
+      "n_completed": 44,
+      "n_censored": 1,
+      "max_completed_sessions": 224,
+      "median_completed_sessions": 43.5,
+      "thesis_named_max": 189
+    },
+    "META": {
+      "n_signals": 22,
+      "n_completed": 22,
+      "n_censored": 0,
+      "max_completed_sessions": 275,
+      "median_completed_sessions": 71.5,
+      "thesis_named_max": null
+    },
+    "MSFT": {
+      "n_signals": 68,
+      "n_completed": 67,
+      "n_censored": 1,
+      "max_completed_sessions": 576,
+      "median_completed_sessions": 40.0,
+      "thesis_named_max": 169
+    },
+    "GOOGL": {
+      "n_signals": 34,
+      "n_completed": 34,
+      "n_censored": 0,
+      "max_completed_sessions": 309,
+      "median_completed_sessions": 75.0,
+      "thesis_named_max": null
+    },
+    "NOW": {
+      "n_signals": 23,
+      "n_completed": 23,
+      "n_censored": 0,
+      "max_completed_sessions": 371,
+      "median_completed_sessions": 55.0,
+      "thesis_named_max": null
+    },
+    "AMZN": {
+      "n_signals": 46,
+      "n_completed": 45,
+      "n_censored": 1,
+      "max_completed_sessions": 315,
+      "median_completed_sessions": 43.0,
+      "thesis_named_max": null
+    },
+    "NFLX": {
+      "n_signals": 38,
+      "n_completed": 38,
+      "n_censored": 0,
+      "max_completed_sessions": 253,
+      "median_completed_sessions": 46.5,
+      "thesis_named_max": null
+    }
+  },
+  "per_name_post_design_through": {
+    "NVDA": {
+      "n_signals": 3,
+      "n_completed": 2,
+      "n_censored": 1,
+      "max_completed_sessions": 51,
+      "median_completed_sessions": 30.0,
+      "thesis_named_max": 256
+    },
+    "AMD": {
+      "n_signals": 1,
+      "n_completed": 1,
+      "n_censored": 0,
+      "max_completed_sessions": 98,
+      "median_completed_sessions": 98.0,
+      "thesis_named_max": null
+    },
+    "AVGO": {
+      "n_signals": 2,
+      "n_completed": 2,
+      "n_censored": 0,
+      "max_completed_sessions": 52,
+      "median_completed_sessions": 31.5,
+      "thesis_named_max": null
+    },
+    "MU": {
+      "n_signals": 0,
+      "n_completed": 0,
+      "n_censored": 0,
+      "max_completed_sessions": null,
+      "median_completed_sessions": null,
+      "thesis_named_max": null
+    },
+    "MRVL": {
+      "n_signals": 2,
+      "n_completed": 1,
+      "n_censored": 1,
+      "max_completed_sessions": 95,
+      "median_completed_sessions": 95.0,
+      "thesis_named_max": null
+    },
+    "TSM": {
+      "n_signals": 2,
+      "n_completed": 1,
+      "n_censored": 1,
+      "max_completed_sessions": 77,
+      "median_completed_sessions": 77.0,
+      "thesis_named_max": 189
+    },
+    "META": {
+      "n_signals": 1,
+      "n_completed": 1,
+      "n_censored": 0,
+      "max_completed_sessions": 12,
+      "median_completed_sessions": 12.0,
+      "thesis_named_max": null
+    },
+    "MSFT": {
+      "n_signals": 1,
+      "n_completed": 0,
+      "n_censored": 1,
+      "max_completed_sessions": null,
+      "median_completed_sessions": null,
+      "thesis_named_max": 169
+    },
+    "GOOGL": {
+      "n_signals": 1,
+      "n_completed": 1,
+      "n_censored": 0,
+      "max_completed_sessions": 65,
+      "median_completed_sessions": 65.0,
+      "thesis_named_max": null
+    },
+    "NOW": {
+      "n_signals": 0,
+      "n_completed": 0,
+      "n_censored": 0,
+      "max_completed_sessions": null,
+      "median_completed_sessions": null,
+      "thesis_named_max": null
+    },
+    "AMZN": {
+      "n_signals": 2,
+      "n_completed": 1,
+      "n_censored": 1,
+      "max_completed_sessions": 48,
+      "median_completed_sessions": 48.0,
+      "thesis_named_max": null
+    },
+    "NFLX": {
+      "n_signals": 0,
+      "n_completed": 0,
+      "n_censored": 0,
+      "max_completed_sessions": null,
+      "median_completed_sessions": null,
+      "thesis_named_max": null
+    }
+  }
+}

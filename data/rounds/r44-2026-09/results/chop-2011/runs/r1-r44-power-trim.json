@@ -1,0 +1,532 @@
+{
+  "card": {
+    "agent_id": "r44-power-trim",
+    "display_name": "R44 basket / power / trim above 200dma*1.15",
+    "discipline": "risk-managed",
+    "purpose": "roth",
+    "desk_only": false,
+    "thesis": "Round 44 trim cell. Basket (power): Creator A's and Creator D's electricity-infrastructure-as-AI-bottleneck thesis: two regulated utilities (NEE, DUK), one merchant/renewable utility (SO), one uranium miner (CCJ) -- a proxy for 'the grid and its fuel', not a literal transcription of either persona's named tickers, neither of whom stated one. Universe: NEE DUK SO CCJ. Purpose ROTH: no ticker this round trades is claimed by any savings- or trading-purpose card in the live library (app.evolution.promotion._library_cards, all six tiers), because Rev. Rul. 2008-5 destroys rather than defers a wash-sale loss whose replacement is bought inside an IRA. Five of these twenty names (AMAT, KLAC, LRCX, XOP, XME) ARE already held by other roth-purpose cards elsewhere in the library -- legal and disclosed: find_disjointness_violations only ever compares a roth card against the TAXABLE universe, and roth-to-roth overlap creates no wash-sale exposure under Rev. Rul. 2008-5, since nothing is ever repurchased inside the taxable book. Ticker disjointness from the taxable book is NECESSARY, not sufficient, under IRC section 1091; nothing here is a section 1091-safety claim. The Roth benchmark is SPY, price-only, no dividends -- none of these five baskets is a US large-cap-growth book, so a raw adjusted_excess-vs-SPY reading is not this round's decision quantity for any basket; the decision quantities are basket-minus-control (does the theme beat a broad passive control, held passively) and trim-minus-passive (does stepping a name to cash above its own 200-day*1.15 extension beat holding it). Every note in the persona corpus that produced this hypothesis has published=null (PERSONA-HYPOTHESES.md), so the bull-2024 and recent windows are IN-SAMPLE to the hypothesis and any positive result confined to them is hindsight, not a finding -- the fair test is the six windows ending by 2022-10 (gfc, chop-2011, chop-2015, q4-2018, covid, bear-2022), reported separately. Pre-registered 2026-09-09, before any card ran. Not investment advice; no influencer is endorsed. See strategy-program/ROUND-44-PLAN.md.",
+    "falsification": "Pre-registered decision rule (PROTOCOL.md section 7 floor, 21.2pp): a basket edge requires median(r44-power-passive) minus median(r44-control-passive) > 21.2pp AND BH q<0.10 over all 10 cells this round runs; a trim edge requires median(r44-power-trim) minus median(r44-power-passive) > 21.2pp AND the same BH q<0.10. A margin inside the floor is a null whichever side it lands on, and the pre-registered prediction is null on both axes (39 prior rounds found every basket- and rule-margin this programme has ever measured inside this floor). This is the rule-question card, matched to r44-power-passive by universe, slots, size and absent brackets -- the two differ in exactly one thing (PROTOCOL.md section 7). Predicted to UNDERPERFORM its own passive control in bull-2024 and recent (sustained uptrends give the trim's stop-out nothing to avoid and only cost re-entry lag), and to have its best chance of beating it in bear-2022 and gfc, where a run-up-then-reversal sequence is most plausible. Exposure prediction: trim sits out most in this basket if it is semicap (mean support ~34%, ROUND-44-PLAN.md section 3a) and least if it is power (~11%, driven by SO's 3.8% and DUK's 4.6%). Nothing is promoted from this round regardless of outcome.",
+    "universe": [
+      "NEE",
+      "DUK",
+      "SO",
+      "CCJ"
+    ],
+    "entry": "close < sma(200) * 1.15",
+    "exit": "close > sma(200) * 1.15",
+    "stop_loss_pct": null,
+    "take_profit_pct": null,
+    "max_hold_days": null,
+    "max_positions": 4,
+    "position_pct": "0.25",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 260,
+  "starting_equity": "10000.00",
+  "ending_equity": "11149.01",
+  "total_return": "0.11490099999999992",
+  "max_drawdown": "-0.12340734371788742",
+  "sharpe": 0.739272581598112,
+  "sortino": 0.7084626786933139,
+  "volatility": 0.159846982407494,
+  "exposure": 1.0,
+  "capital_exposure": 0.9193673923076923,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "CCJ",
+      "entry_date": "2011-05-26",
+      "entry_price": "28.38",
+      "exit_date": "2012-02-23",
+      "exit_price": "25.89",
+      "quantity": "87",
+      "exit_reason": "rule",
+      "pnl": "-216.71",
+      "return_pct": "-0.08777024454650757778263792698",
+      "bars_held": 187
+    },
+    {
+      "symbol": "NEE",
+      "entry_date": "2011-05-26",
+      "entry_price": "14.21",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "175",
+      "exit_reason": "open_at_end",
+      "pnl": "385.88",
+      "return_pct": "0.1551744244495827887805368453",
+      "bars_held": 259
+    },
+    {
+      "symbol": "DUK",
+      "entry_date": "2011-05-26",
+      "entry_price": "55.89",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "44",
+      "exit_reason": "open_at_end",
+      "pnl": "535.92",
+      "return_pct": "0.2179280730005367686527106817",
+      "bars_held": 259
+    },
+    {
+      "symbol": "SO",
+      "entry_date": "2011-05-26",
+      "entry_price": "39.87",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "62",
+      "exit_reason": "open_at_end",
+      "pnl": "443.92",
+      "return_pct": "0.1795836468522698771005768748",
+      "bars_held": 259
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2494.80 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2466.09 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2505.00 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2493.00 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2480.56 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2493.69 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2476.12 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2423.20 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2489.40 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2505.60 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2517.71 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2503.72 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2504.25 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2492.88 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2498.28 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2522.88 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2489.89 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2460.26 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2491.00 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2464.56 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2493.70 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2530.00 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2481.93 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2466.20 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2485.15 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2501.25 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2467.32 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2489.36 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2449.02 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2482.92 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2464.40 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2487.44 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2511.18 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2497.32 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2460.30 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2509.54 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2521.64 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2483.91 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2496.88 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2558.24 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2418.08 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2497.48 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2507.92 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2482.92 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2514.84 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2476.32 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2557.19 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2464.49 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2499.48 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2450.52 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2483.07 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2473.08 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2421.36 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2513.90 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2455.72 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2411.55 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2480.36 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2472.50 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2481.92 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2547.95 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2487.69 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2484.48 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2444.00 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2489.70 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2484.54 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2535.00 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2445.66 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2512.90 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2425.80 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2483.11 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2498.85 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "CCJ",
+      "reason": "$2526.99 exceeds $2365.44 of settled cash (total cash $2365.44; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.0004544421722335832765280618041",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

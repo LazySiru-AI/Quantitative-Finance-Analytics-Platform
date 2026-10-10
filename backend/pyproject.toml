@@ -1,0 +1,150 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "investing-dashboard"
+version = "0.1.0"
+description = "Personal investing dashboard: brokerage ledger, US tax engine, research reports, backtest workbench"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "duckdb>=1.1",
+    "pandas>=2.2",
+    # Market data providers. Runtime, not dev: the fetch path is part of the app, and httpx is here
+    # rather than requests for its explicit timeouts -- a provider that hangs would otherwise hang
+    # the API worker serving the chart.
+    "httpx>=0.28",
+    "numpy>=2.0",
+    "python-dateutil>=2.9",
+    "tzdata>=2024.2",
+    # Tournament analyst PDF reports (app.tournament.report_pdf). platypus/canvas is the only
+    # working path here: no jinja2/weasyprint/wkhtmltopdf/pandoc is available to render an HTML
+    # template to PDF instead.
+    "reportlab>=5.0",
+    # `app.agents` -- the Claude-backed card designer and idea scout for the evolution loop.
+    #
+    # A runtime dependency rather than an extra, because `backend/Dockerfile` installs with a bare
+    # `pip install .` and an extra would silently not be there in the container -- which would look
+    # like the agent being disabled rather than missing. `app.agents.client` still degrades to the
+    # deterministic proposer when the import or the credentials are absent, so the app runs without
+    # ever reaching Anthropic; the dependency being present is what makes that a *choice* rather than
+    # an accident of how the image was built.
+    "anthropic>=1.0",
+    # `app.personas` -- the influencer-persona feature's YouTube ingest. yt-dlp lists a channel's
+    # recent videos (the RSS feed proved unreliable for the seed channels, returning 404/500);
+    # youtube-transcript-api fetches auto-generated captions. Both verified working from a home IP
+    # 2026-09-01; youtube-transcript-api is IP-blocked from cloud providers, so a deployed instance
+    # would need a residential proxy or the yt-dlp caption fallback. Runtime, not dev: ingest is part
+    # of the app, and app.personas.service degrades to a 501 only until Phase 1 wires these in.
+    "yt-dlp>=2026.8",
+    "youtube-transcript-api>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-cov>=6.0",
+    "httpx>=0.28",
+    "ruff>=0.8",
+    "mypy>=1.13",
+]
+# The MCP server (`app.mcp.server`), which exposes the tax, decision-table and macro engines to an
+# MCP client such as Claude Code.
+#
+# An extra rather than a core dependency, deliberately: the dashboard is a complete product without
+# it, nothing under `app/api/`, `app/tax/` or `app/rules/` imports it, and a checkout that never
+# runs an agent should not carry it. `app.mcp.tools` -- where all the logic lives -- imports nothing
+# from this package, so the suite stays green whether or not the extra is installed. Only
+# `app.mcp.server`, which is registration and nothing else, needs it.
+# Pinned to 2.0+: the server class was `FastMCP` at `mcp.server.fastmcp` through 1.x and is
+# `MCPServer` at `mcp.server.mcpserver` from 2.0. `app/mcp/server.py` imports the 2.x path, so a
+# 1.x resolve would fail at import with a confusing ModuleNotFoundError.
+mcp = [
+    "mcp>=2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+# `backend/app/paper/library/` holds no `__init__.py` -- it is package *data* (strategy card JSON),
+# not a Python subpackage, so `packages.find`'s `include = ["app*"]` above does not need it to look
+# like one. Without an explicit package-data entry, setuptools only bundles `.py` files into a
+# wheel, so a real (non-editable) `pip install .` would ship `app.paper` with none of its library
+# cards. See `tests` -- verified by building an actual wheel and listing its contents, not assumed.
+[tool.setuptools.package-data]
+"app.paper" = ["library/*/*.json"]
+
+[tool.pytest.ini_options]
+# There is also a root-level `pytest.ini` (repo root) covering the same intent for invocations made
+# from the repository root (a bare `pytest`, or `pytest tests`, from where the README and every
+# contributor actually stand). pytest has no config-include mechanism, so if you change testpaths /
+# pythonpath / norecursedirs / filterwarnings / addopts here, check whether the root pytest.ini
+# needs the equivalent change (same values, different relative path prefixes).
+testpaths = ["../tests"]
+# Two entries, for two different imports. `.` puts `app` on the path; `..` puts the *repository
+# root* there, which is what lets `from tests.conftest import ...` resolve -- eight test modules
+# import shared helpers that way. Without it the suite does not merely skip those modules, it fails
+# collection outright, so the whole run dies rather than degrading.
+pythonpath = [".", ".."]
+# `-q` removed 2026-08-12: it stacks with a command-line `-q` into pytest's second quiet level,
+# which drops the "N passed" summary line. See the note in the root pytest.ini.
+addopts = "--strict-markers"
+filterwarnings = ["error::DeprecationWarning"]
+# Vendored third-party checkouts under `tools/` carry their own `conftest.py`. Running pytest from
+# the repository root would otherwise collect them and abort with an ImportPathMismatchError before
+# reaching a single test of ours.
+norecursedirs = ["tools", "*.egg", ".*", "build", "dist", "node_modules"]
+
+# Ruff configuration lives in the repository root (`ruff.toml`) so that it covers `tests/` as well
+# as `backend/`. Ruff resolves config per file by walking up to the nearest one; a [tool.ruff]
+# section here would apply to backend/ only.
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+plugins = []
+# The repo root, so `uat.*` resolves when mypy is invoked from `backend/`. `app.tournament`
+# is the first module in the application to import the UAT harness -- it reuses that paper
+# broker and its as-of market rather than growing a second one -- and without this the
+# imports degrade to `Any`, which silently switches off strict checking for every value
+# that flows through them. pytest already does the equivalent via its `pythonpath` setting.
+mypy_path = ".."
+
+[[tool.mypy.overrides]]
+module = ["duckdb.*", "pandas.*"]
+ignore_missing_imports = true
+
+# `reportlab` (used by `app.tournament.report_pdf`) ships no type stubs and none are published for
+# it, unlike `duckdb`/`pandas` above where stubs merely aren't installed. There is no fix but to
+# ignore the missing types for this one package.
+[[tool.mypy.overrides]]
+module = ["reportlab.*"]
+ignore_missing_imports = true
+
+# `mcp` is an optional extra (see `[project.optional-dependencies].mcp`), so a normal dev checkout
+# does not have it installed and mypy cannot resolve the import. Without this, running mypy on a
+# checkout without the extra reports errors for a module the project deliberately treats as
+# optional -- which would break the "mypy is clean, so gate CI on it" property for everyone who has
+# not opted in.
+[[tool.mypy.overrides]]
+module = ["mcp.*"]
+ignore_missing_imports = true
+
+# `app.mcp.server` binds functions to `FastMCP.tool()`. With the extra absent that decorator is
+# `Any`, and `strict = true` implies `disallow_untyped_decorators`, so every registration is an
+# error purely because an optional dependency is missing.
+#
+# Relaxed for this one module rather than globally, and it is safe *because* of how the module is
+# built: it contains no logic at all -- every function is a one-line call into `app.mcp.tools`,
+# which is fully typed and strictly checked like everything else. There is nothing in here for the
+# relaxed rule to hide. If that stops being true, the fix is to move the logic down into `tools`,
+# not to widen this exemption.
+[[tool.mypy.overrides]]
+module = ["app.mcp.server"]
+disallow_untyped_decorators = false

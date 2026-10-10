@@ -1,0 +1,20 @@
+{
+  "round_id": "r1-2026-08",
+  "title": "Round 1 - twenty-two strategies against five regimes",
+  "focus": "Six new analyst-designed cards were traded alongside sixteen inherited cards across five market-regime windows, including the GFC, to see whether a new exposure-adjusted metric and regime matrix would change the picture the prior tournament's flawed methodology had produced.",
+  "headline": "The inherited library's best-looking result, the B family's strength through the covid window, turned out to be an artifact of never holding a position before the market bottomed rather than genuine risk management.",
+  "outcome": "Not one inherited card could run the GFC window at all - every A, B, C, D and H card was blocked by a universe symbol with insufficient history (AVGO in 2009, NOW in 2012, META, INDA), so the entire legacy field was built on names that did not exist in 2008.\n\nThe ranked leaderboard's top six by median adjusted excess were B2-hold-90, B3-concentrated, G-volatility, B-momentum, A2-cash-headroom and B4-tight-stop, but the report itself flagged the B family's best window, covid, as an artifact: no B-family card held a position before the post-bottom date of 2020-03-30, because its entry rule structurally cannot fire during a crash.\n\nThe five new challenger cards had the five lowest cross-window spreads in the field but ranked worst on median - consistent and mediocre against incumbents that were volatile and higher-median. c04-riskmanaged finished a 56% bear market up 1.38% on 43.8% capital deployed, yet ranked 18th of 19 because the median-only metric could not see the difference between a hedge and an absence.\n\nEight variants were run to isolate single design decisions, and none separated from its own base by a margin that cleared the noise floor - the pure ordering-artifact control alone produced a larger gap than five of the seven substantive variant comparisons.\n\nTwo engine defects were found and fixed mid-round: total_return being silently rebased to the first session's close (changing the sign of return for two card-window pairs), and exposure measuring session presence rather than capital actually at risk.",
+  "seated": [],
+  "owner_override": null,
+  "carries_forward": [
+    "The B family's covid-window strength is an artifact of absence during the crash, not risk management, and should not be read as a genuine hedge signature.",
+    "Two engine defects (total_return rebasing and exposure-vs-capital-at-risk) were found and fixed; later rounds should use the corrected fields.",
+    "Variant comparisons must be checked against the ordering noise floor, since a pure ordering-artifact control produced a larger gap than most substantive variant tests.",
+    "The window matrix needs widening beyond five windows, since the entire legacy card family could not even be tested through the GFC."
+  ],
+  "sources": [
+    "data/rounds/r1-2026-08/BRIEF.md",
+    "data/rounds/r1-2026-08/REPORT.md",
+    "data/rounds/PROGRAMME-REPORT.md"
+  ]
+}

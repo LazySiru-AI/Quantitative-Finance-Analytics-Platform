@@ -1,0 +1,174 @@
+field: 5 cards from data/rounds/r42-2026-09/cards
+
+==============================================================
+WINDOW q4-2018  2018-09-21 -> 2018-12-24
+==============================================================
+tee: data/rounds/r42-2026-09/results/q4-2018.log: No such file or directory
+window: 2018-09-21 -> 2018-12-24
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 1s trades=3 ret=-3.79% dd=-4.21% rej=0
+[2/5] r1 r42-breakout-q25: 1s trades=4 ret=-2.35% dd=-4.98% rej=0
+[3/5] r1 r42-reclaim-control: 1s trades=19 ret=-8.54% dd=-8.54% rej=2
+[4/5] r1 r42-reclaim-wick-body: 1s trades=7 ret=-4.82% dd=-4.82% rej=0
+[5/5] r1 r42-reclaim-wick: 1s trades=19 ret=-7.35% dd=-7.51% rej=1
+r1: 5 agents, 2 discoveries
+overall: 5 agents, 2 discoveries at alpha=0.1
+
+-- q4-2018: 5 run files, 0 FAILED lines
+grep: data/rounds/r42-2026-09/results/q4-2018.log: No such file or directory
+
+==============================================================
+WINDOW covid  2020-02-19 -> 2020-06-30
+==============================================================
+window: 2020-02-19 -> 2020-06-30
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 2s trades=10 ret=+4.38% dd=-7.21% rej=0
+[2/5] r1 r42-breakout-q25: 1s trades=9 ret=+3.98% dd=-5.16% rej=0
+[3/5] r1 r42-reclaim-control: 1s trades=11 ret=+26.91% dd=-7.96% rej=0
+[4/5] r1 r42-reclaim-wick-body: 1s trades=7 ret=+16.38% dd=-6.60% rej=0
+[5/5] r1 r42-reclaim-wick: 1s trades=11 ret=+38.61% dd=-9.19% rej=0
+r1: 5 agents, 0 discoveries
+overall: 5 agents, 0 discoveries at alpha=0.1
+
+-- covid: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW bear-2022  2022-01-03 -> 2022-10-12
+==============================================================
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 1s trades=7 ret=-3.06% dd=-6.71% rej=0
+[2/5] r1 r42-breakout-q25: 1s trades=6 ret=-4.32% dd=-7.02% rej=0
+[3/5] r1 r42-reclaim-control: 2s trades=33 ret=-37.31% dd=-38.83% rej=19
+[4/5] r1 r42-reclaim-wick-body: 2s trades=24 ret=-36.21% dd=-40.70% rej=9
+[5/5] r1 r42-reclaim-wick: 2s trades=36 ret=-36.88% dd=-42.51% rej=4
+r1: 5 agents, 3 discoveries
+overall: 5 agents, 3 discoveries at alpha=0.1
+
+-- bear-2022: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW chop-2015  2015-04-07 -> 2016-04-15
+==============================================================
+window: 2015-04-07 -> 2016-04-15
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 3s trades=23 ret=+8.77% dd=-9.32% rej=0
+[2/5] r1 r42-breakout-q25: 2s trades=15 ret=+2.84% dd=-8.39% rej=0
+[3/5] r1 r42-reclaim-control: 2s trades=28 ret=+15.03% dd=-25.26% rej=2
+[4/5] r1 r42-reclaim-wick-body: 2s trades=24 ret=-8.02% dd=-14.51% rej=0
+[5/5] r1 r42-reclaim-wick: 2s trades=38 ret=+1.78% dd=-19.88% rej=1
+r1: 5 agents, 3 discoveries
+overall: 5 agents, 3 discoveries at alpha=0.1
+
+-- chop-2015: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW chop-2011  2011-05-26 -> 2012-06-06
+==============================================================
+window: 2011-05-26 -> 2012-06-06
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 2s trades=26 ret=-4.95% dd=-10.56% rej=0
+[2/5] r1 r42-breakout-q25: 1s trades=22 ret=-12.92% dd=-15.47% rej=0
+[3/5] r1 r42-reclaim-control: 2s trades=17 ret=+6.17% dd=-12.22% rej=0
+[4/5] r1 r42-reclaim-wick-body: 2s trades=16 ret=-2.55% dd=-11.01% rej=0
+[5/5] r1 r42-reclaim-wick: 2s trades=25 ret=+3.41% dd=-11.07% rej=0
+r1: 5 agents, 4 discoveries
+overall: 5 agents, 4 discoveries at alpha=0.1
+
+-- chop-2011: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW bull-2024  2024-08-21 -> 2025-08-20
+==============================================================
+window: 2024-08-21 -> 2025-08-20
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 2s trades=26 ret=+1.70% dd=-16.27% rej=1
+[2/5] r1 r42-breakout-q25: 2s trades=19 ret=+3.41% dd=-7.52% rej=2
+[3/5] r1 r42-reclaim-control: 3s trades=16 ret=+0.37% dd=-29.96% rej=0
+[4/5] r1 r42-reclaim-wick-body: 2s trades=19 ret=-0.46% dd=-19.77% rej=0
+[5/5] r1 r42-reclaim-wick: 2s trades=20 ret=+3.28% dd=-25.89% rej=0
+r1: 5 agents, 3 discoveries
+overall: 5 agents, 3 discoveries at alpha=0.1
+
+-- bull-2024: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW recent  2025-08-21 -> 2026-08-18
+==============================================================
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 2s trades=21 ret=+74.98% dd=-11.48% rej=0
+[2/5] r1 r42-breakout-q25: 2s trades=25 ret=+49.04% dd=-11.44% rej=0
+[3/5] r1 r42-reclaim-control: 2s trades=20 ret=+36.55% dd=-17.00% rej=2
+[4/5] r1 r42-reclaim-wick-body: 1s trades=15 ret=+33.37% dd=-21.82% rej=0
+[5/5] r1 r42-reclaim-wick: 2s trades=25 ret=+20.51% dd=-24.75% rej=2
+r1: 5 agents, 1 discoveries
+overall: 5 agents, 1 discoveries at alpha=0.1
+
+-- recent: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW gfc  2007-10-09 -> 2009-03-09
+==============================================================
+window: 2007-10-09 -> 2009-03-09
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+5 cards
+[1/5] r1 r42-breakout-control: 2s trades=29 ret=-35.97% dd=-36.57% rej=2
+[2/5] r1 r42-breakout-q25: 1s trades=23 ret=-23.97% dd=-24.04% rej=0
+[3/5] r1 r42-reclaim-control: 2s trades=35 ret=-30.75% dd=-35.17% rej=18
+[4/5] r1 r42-reclaim-wick-body: 2s trades=28 ret=-12.69% dd=-27.11% rej=1
+[5/5] r1 r42-reclaim-wick: 2s trades=44 ret=-33.93% dd=-46.39% rej=7
+r1: 5 agents, 5 discoveries
+overall: 5 agents, 5 discoveries at alpha=0.1
+
+-- gfc: 5 run files, 0
+0 FAILED lines
+
+==============================================================
+WINDOW 13f-legal  2025-11-17 -> 2026-08-18
+==============================================================
+window: 2025-11-17 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+0 of 5 cards selected by --only='c06-13f'
+no runs completed
+
+-- 13f-legal: 0 run files, 0
+0 FAILED lines
+
+==============================================================
+RECONCILIATION
+==============================================================
+window         runs   failed
+q4-2018           5        0
+covid             5      0
+0
+bear-2022         5      0
+0
+chop-2015         5      0
+0
+chop-2011         5      0
+0
+bull-2024         5      0
+0
+recent            5      0
+0
+gfc               5      0
+0
+13f-legal         0      0
+0
+
+Any IOException among the FAILED lines above means a card was lost to store
+contention rather than to an honest guard failure. Re-run that window alone.

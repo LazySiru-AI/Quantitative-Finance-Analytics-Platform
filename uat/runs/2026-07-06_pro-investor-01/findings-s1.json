@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "finding_id": "tax-page-defaults-to-year-with-no-activity",
+      "run_id": "2026-07-06_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 1,
+      "observed_at": "2026-08-16T18:05:00Z",
+      "session_date": "2026-07-06",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Tax page's default year selection has no activity, reads as an empty ledger",
+      "observed": "Landing on /tax fresh (right after my first two fills) selects tax year 2025 by default (confirmed via document.querySelector('select').value === '2025'). The page reads: 'No 2025 activity at all. The ledger holds 3 transactions, none of them dated in this tax year -- pick another year above.' The ledger's only three transactions -- my deposit and two buys -- are all dated 2026. Switching the select to 2026 immediately surfaces them: 'Nothing was disposed of in 2026. The ledger holds 3 transactions dated in this tax year -- see Activity -- but no lot was sold.'",
+      "expected": "The default year should be the one that actually has data -- either the current calendar year or the most recent year present in the ledger -- not a year picked independent of the ledger's contents. A tax page's first impression on a fresh session should not be an absence claim about a ledger that in fact holds every transaction I have made.",
+      "why_it_matters": "I read tax exposure at decision time, per my mandate. If I trust the first screen I land on, I would conclude the tax page has not picked up my trading yet and stop checking it -- exactly the wrong read one session before I need this page's wash-sale panel to size an exit. A new user with a real book would reasonably conclude the import failed.",
+      "repro": [
+        "Fill at least one order so the ledger has 2026-dated transactions.",
+        "Navigate to /tax.",
+        "Note the year <select>'s value is 2025 (one year behind the ledger's actual activity), and the panel below states no 2025 activity exists.",
+        "Manually switch the select to 2026 -- the same three transactions are now found and the message changes to the correct 'nothing disposed of' copy."
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "Default the year select to the most recent year that has ledger transactions (falling back to the current calendar year if the ledger is empty), rather than a fixed offset from today's date."
+    }
+  ]
+}

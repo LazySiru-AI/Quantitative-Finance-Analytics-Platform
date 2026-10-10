@@ -1,0 +1,62 @@
+/* Shared sortable-table-header and filter-bar primitives (`tableSort.tsx`).
+ *
+ * Namespaced `tbl-` rather than a page prefix because this file is imported by more than one page
+ * -- the whole point of extracting it. Every colour comes from the shared custom properties
+ * declared in `styles.css`, never a literal hex, so both the light and dark themes stay correct
+ * without this file repeating either palette. Layout (flex row, gap, wrapping) for the filter bar
+ * itself is inherited from the shared `.filter-bar` class in `styles.css` -- this file only adds
+ * the handful of rules `.filter-bar` does not already cover.
+ */
+
+/* A column header rendered as a real <button> rather than a bare clickable <th> -- keyboard-
+   reachable and announced as a button by a screen reader for free. Reset to look like plain
+   header text until hovered/focused, matching the model this was extracted from
+   (`.inst-sort-button` in styles.css). */
+.tbl-sort-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+.tbl-sort-button:hover,
+.tbl-sort-button:focus-visible {
+  color: var(--accent);
+}
+
+/* The arrow glyph is decorative (aria-hidden -- the real state lives in `aria-sort` on the <th>
+   and in the visually-hidden state word inside the button), so it gets a little breathing room
+   from the label rather than semantic meaning of its own. */
+.tbl-sort-arrow {
+  margin-left: 0.25rem;
+}
+
+.tbl-filter-bar {
+  margin-bottom: 0.8rem;
+}
+
+/* "Showing N of M" -- a fragment, not a sentence, per this project's prose budget. */
+.tbl-filter-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.tbl-filter-clear {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  align-self: center;
+}
+.tbl-filter-clear:hover,
+.tbl-filter-clear:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}

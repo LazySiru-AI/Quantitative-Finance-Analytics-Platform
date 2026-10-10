@@ -1,0 +1,647 @@
+/* Personas page. Reuses .panel/.subtitle/.placeholder/.muted, .filter-bar, .badge, .callout/
+   .callout-danger/.callout-warn, .warning-list and .position-symbol from styles.css rather than
+   inventing a parallel vocabulary -- only what this page needs that nothing above it already
+   covers is added below.
+
+   The ingest panel's mode switcher reuses .view-tabs/.timeframe-tab verbatim (PaperDesk.tsx's own
+   in-place tab pattern -- local state switching rendered content, not routed pages, which is
+   exactly this case: same card, three request shapes). Only the panel's own field layout below is
+   new. */
+
+.persona-add-form button {
+  align-self: flex-end;
+}
+
+.persona-add-error {
+  margin-top: 0.75rem;
+}
+
+/* `.persona-grid`'s equal-height layout and track sizing now live on `CardGrid` (Card.css) -- this
+   class stays only as the caller-supplied `className` that names the grid instance for tests/deep
+   selectors. */
+
+/* UX-04: the loading silhouette for the grid above. `Skeleton variant="tiles"` already lays its
+   blocks out on a grid; these two rules retune that grid to this page's own card geometry so the
+   placeholder occupies close to the height and column count the real cards will. */
+.persona-grid-skeleton .skeleton-blocks {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+.persona-grid-skeleton .skeleton-block {
+  height: 11rem;
+}
+
+/* Page-level cross-persona panels (PersonaWatchlist.tsx / PersonaRegime.tsx) -- fetched and
+   rendered once, above the per-persona grid, rather than per card. Each is already a self-styled
+   `.panel`; this only lays the pair out side by side on wide screens. Deliberately NOT a
+   `CardGrid`: see the comment above this row in Personas.tsx for why. */
+.persona-consensus-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1rem;
+}
+
+.persona-card-name {
+  margin: 0 0 0.15rem;
+}
+
+.persona-card-handle {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.persona-card-asof {
+  white-space: nowrap;
+}
+
+.persona-card-empty {
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.persona-card-headline {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.persona-card-headline-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.persona-card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.persona-card-subhead {
+  margin: 0;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.persona-card-themes {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.5;
+}
+
+.persona-card-tickers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.persona-ticker-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.persona-ticker-chip:hover {
+  border-color: var(--accent);
+}
+
+.persona-ticker-stance {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.persona-ticker-stance-bullish { color: var(--up); }
+.persona-ticker-stance-bearish { color: var(--down); }
+.persona-ticker-stance-neutral { color: var(--muted); }
+.persona-ticker-stance-unclear { color: var(--muted); font-style: italic; }
+
+.persona-card-note-degraded {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.persona-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Wraps the card's read-only body (degraded badge, headline/themes/tickers, warnings) inside its
+   ScrollRegion (src/components/ScrollPanel.tsx) -- the region's own inner wrapper div is unstyled,
+   so this restores the gap the direct-child flex layout used to give these blocks for free. */
+.persona-card-scroll-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* A11Y-04. This used to be `color: var(--down)` on the browser's own button face, which left the
+   real background out of the author's hands: the UA paints a mid-grey ButtonFace (and greys the
+   text again while `disabled`), and axe measured 1.66:1 on the resulting pair -- well under WCAG
+   1.4.3's 4.5:1 for the ~13px label.
+
+   So every state names both halves of the pair explicitly, and none of them uses `opacity` to say
+   "disabled" -- opacity scales contrast down along with everything else, which is exactly how the
+   disabled state got to 1.66:1 in the first place. Measured against these tokens: rest 5.3:1,
+   hover 4.8:1, disabled ~8:1 (a LIGHTER red, not a faded one -- "in flight" is already said by the
+   label changing to "Removing…", so colour is not the only signal). */
+.persona-card-remove {
+  color: var(--down);
+  background: color-mix(in srgb, var(--down) 12%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--down) 45%, transparent);
+}
+.persona-card-remove:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--down) 20%, var(--panel));
+  border-color: color-mix(in srgb, var(--down) 65%, transparent);
+}
+.persona-card-remove:disabled {
+  color: color-mix(in srgb, var(--down) 70%, var(--text));
+  background: color-mix(in srgb, var(--down) 12%, var(--panel));
+  border-style: dashed;
+  cursor: progress;
+}
+
+.persona-ingest-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+}
+
+.persona-ingest-progress-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--muted);
+}
+
+.persona-ingest-bar {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border-strong);
+  overflow: hidden;
+}
+
+.persona-ingest-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.persona-ingest-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.persona-ingest-tabs {
+  margin: 0;
+}
+
+.persona-ingest-drop-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-ingest-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.persona-ingest-field input,
+.persona-ingest-field textarea {
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  width: 100%;
+  resize: vertical;
+}
+
+.persona-ingest-panel > button {
+  align-self: flex-start;
+}
+
+/* Persona profile (Phase 2) -- consolidated view alongside PersonaCard.tsx's digest card. Reuses
+   .panel, .placeholder, .muted, .badge, .callout variants, .persona-card-section,
+   .persona-card-subhead, .persona-ticker-chip and .persona-ticker-stance variants verbatim; only
+   what's new below. */
+
+.persona-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.persona-profile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.persona-profile-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.persona-profile-summary {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.persona-profile-no-notes-reason {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.persona-claim-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.persona-claim {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  line-height: 1.5;
+}
+
+.persona-claim-citations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.persona-citation-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
+.persona-vocab-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.persona-vocab-chip {
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.78rem;
+}
+
+.persona-thesis-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.persona-thesis-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.persona-thesis-claim-list {
+  padding-left: 1rem;
+}
+
+/* Wraps everything inside the profile's ScrollPanel (src/components/ScrollPanel.tsx) body --
+   loading/error/empty states, the loaded ProfileBody, the no-notes reason, the consolidate error
+   and the Consolidate button itself. ScrollPanel's own inner wrapper div is unstyled, so this
+   restores the flex-column gap `.persona-profile` used to give these direct children for free. */
+.persona-profile-scroll-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.persona-profile-scroll-body > button {
+  align-self: flex-start;
+}
+
+/* Persona call scorecard (Phase 3a) -- dated ticker calls priced against the market. Reuses .panel,
+   .placeholder, .muted, .callout variants, .warning-list, .persona-card-subhead,
+   .persona-ticker-chip and .persona-ticker-stance variants verbatim; only what's new below. */
+
+.persona-scorecard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.persona-scorecard-caption {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.persona-scorecard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.persona-scorecard-aggregate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.persona-scorecard-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.persona-scorecard-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.persona-scorecard-stat-value {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.persona-scorecard-empty {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.persona-scorecard-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.persona-scorecard-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+.persona-scorecard-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.persona-scorecard-said-on {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.persona-scorecard-return {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.persona-scorecard-return-pos { color: var(--up); }
+.persona-scorecard-return-neg { color: var(--down); }
+
+.persona-outcome-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--border-strong);
+  color: var(--muted);
+}
+
+.persona-outcome-played_out {
+  color: var(--up);
+  border-color: color-mix(in srgb, var(--up) 45%, transparent);
+}
+
+.persona-outcome-went_against {
+  color: var(--down);
+  border-color: color-mix(in srgb, var(--down) 45%, transparent);
+}
+
+.persona-outcome-flat {
+  color: var(--muted);
+}
+
+.persona-outcome-not_directional {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.persona-outcome-pending {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  border-style: dashed;
+}
+
+.persona-outcome-no_data {
+  color: var(--muted);
+  border-style: dashed;
+}
+
+/* The single page-level "not advice" marker under the subtitle (Personas.tsx). The per-panel
+   caveats below it are the contractual guardrails; this states the framing once, prominently. */
+.personas-caveat {
+  margin: 0.15rem 0 0.9rem;
+}
+
+/* The list page's compact per-persona row (`PersonaListRow` in Personas.tsx) -- a slimmed sibling
+   of PersonaCard.tsx's own `.persona-card` styling above, deliberately not reusing that class name
+   since this component renders none of that card's ingest/delete machinery. Its equal-height
+   layout, head and scrolling body now come from the `Card` primitive (Card.css); `panelClassName`
+   still names the root `.persona-list-card` for tests/deep selectors. Reuses .panel, .badge,
+   .muted, .placeholder, .callout variants, .warning-list, .position-symbol,
+   .persona-ticker-stance(-*) and .persona-card-remove verbatim; only what's new below. */
+
+/* The body content Card passes through as `className` -- restores the flex-column gap the old
+   direct-child layout gave these blocks for free, same convention `.persona-card-scroll-body`
+   above follows for `PersonaCard.tsx`'s own card. */
+.persona-list-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.persona-list-card-name {
+  margin: 0 0 0.15rem;
+}
+
+.persona-list-card-handle {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.persona-list-card-asof {
+  white-space: nowrap;
+}
+
+.persona-list-card-empty {
+  margin: 0;
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.persona-list-card-headline {
+  margin: 0;
+  line-height: 1.55;
+  /* Compact: clamp a long headline to two lines rather than growing the row -- the full text is
+     one click away on the detail page. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.persona-list-card-headline-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.persona-list-card-themes {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+
+.persona-list-card-tickers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.persona-list-card-ticker-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.persona-list-card-warnings {
+  margin: 0;
+}
+
+.persona-list-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.persona-list-card-detail-link {
+  font-size: 0.85rem;
+}
+
+/* Detail route (pages/personas/PersonaDetail.tsx). */
+.persona-detail-back-link {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* A11Y-02 / UX-14: the detail route's page heading and the not-advice marker that has to be read
+   before any of the BULLISH/BEARISH calls below it. One row so the pill reads as part of the
+   heading rather than as a stray badge floating above the first panel. */
+.persona-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+.persona-detail-title {
+  margin: 0;
+}
+
+.persona-detail-not-found {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+/* The heading row: the page title, and the button that opens the backfill queue folded in from the
+   former `/backfill` page. `space-between` rather than a gap so the button sits at the far edge and
+   never reads as part of the title. */
+.personas-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.personas-title-row h1 {
+  margin: 0;
+}
+
+.personas-backfill-panel {
+  margin-bottom: 1rem;
+}

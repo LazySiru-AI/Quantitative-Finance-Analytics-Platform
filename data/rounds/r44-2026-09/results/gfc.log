@@ -1,0 +1,15 @@
+window: 2007-10-09 -> 2009-03-09
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 2s trades=4 ret=-56.50% dd=-56.70% rej=0
+[2/10] r1 r44-control-trim: 2s trades=4 ret=-56.50% dd=-56.70% rej=0
+[3/10] r1 r44-defense-passive: 2s trades=4 ret=-53.04% dd=-54.47% rej=0
+[4/10] r1 r44-defense-trim: 2s trades=6 ret=-51.34% dd=-53.01% rej=0
+[5/10] r1 r44-power-passive: 2s trades=4 ret=-41.60% dd=-44.57% rej=1
+[6/10] r1 r44-power-trim: 2s trades=6 ret=-37.46% dd=-40.94% rej=1
+[7/10] r1 r44-realassets-passive: 2s trades=4 ret=-62.57% dd=-70.15% rej=0
+[8/10] r1 r44-realassets-trim: 2s trades=26 ret=-47.38% dd=-56.84% rej=0
+[9/10] r1 r44-semicap-passive: 2s trades=4 ret=-62.49% dd=-67.24% rej=0
+[10/10] r1 r44-semicap-trim: 2s trades=6 ret=-59.84% dd=-64.57% rej=0
+r1: 10 agents, 0 discoveries
+overall: 10 agents, 0 discoveries at alpha=0.1

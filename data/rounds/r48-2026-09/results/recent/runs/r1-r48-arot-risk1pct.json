@@ -1,0 +1,723 @@
+{
+  "card": {
+    "agent_id": "r48-arot-risk1pct",
+    "display_name": "arot risk1pct",
+    "discipline": "pairs-rotation",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Round 48 cell on the taxable trading book: base `arot` (`A-rotation`, the card seated on `app.paperdesk.desk.AGENT_IDS` today), read verbatim from `backend/app/paper/library/candidates/A-rotation.json` -- entry 'close > sma(50) and rsi(14) > 55 and rsi(14) < 80', exit 'close < sma(50) or rsi(14) < 45', stop 0.12, take-profit 0.20, hold cap 120, 3 slots at 0.30 each. Arm `risk1pct`, round 45's follow-up question asked of every seated trading card: position size becomes Decimal('0.01') / this base's stop_loss_pct, quantised to 3dp (0.083 here, since every base in this round carries a 0.12 stop) -- slot count and every other field unchanged. Round 45 measured this exact resizing lower the tail (worst window, IQR) and mean exposure on Creator E's own card without moving the per-window sign pattern, at a cost to the median. Predicted here to repeat that shape on the four other bases, and to be near-inert on the fifth if its own position size barely moves relative to its stop. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-48-PLAN.md). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only, and a decision to resize a seated card for real is the owner's, about risk, not this round's to make. Not investment advice.",
+    "falsification": "Decision rule (ROUND-48-PLAN.md section 4): risk1pct earns something only if its marginal -- the mean over the five bases of (risk1pct median adjusted excess minus that base's own median) -- exceeds the 21.2pp floor AND every risk1pct cell survives BH q<0.10 over m=10 (base cells carry p=None but still occupy a seat in m). Pre-registered predictions: (1) null on the median marginal (|marginal| < 5pp). (2) worst window shallower on at least 4 of 5 bases. (3) IQR narrower on at least 4 of 5. (4) mean exposure lower on 5 of 5. (5) per-window sign pattern identical on at least 7 of 8 windows for every base. (6) adjusted excess per unit exposure within +/-3pp of the base on every base -- sizing is not alpha. (7) `i13f` cells unranked by provenance on the main windows, reported not interpreted. (8) PROTOCOL.md section 4's caveat applies: a smaller book's shallower worst window is a size effect, and the report prints the worst window in dollars of realised P&L per cell so that effect is visible in currency, not only in percentage points. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment).",
+    "universe": [
+      "MU",
+      "INTC",
+      "AMD",
+      "TSM",
+      "SOXX",
+      "NVDA",
+      "AVGO",
+      "QCOM",
+      "MRVL"
+    ],
+    "entry": "close > sma(50) and rsi(14) > 55 and rsi(14) < 80",
+    "exit": "close < sma(50) or rsi(14) < 45",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": "0.20",
+    "max_hold_days": 120,
+    "max_positions": 3,
+    "position_pct": "0.083",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 249,
+  "starting_equity": "10000.00",
+  "ending_equity": "12344.07",
+  "total_return": "0.23440700000000003",
+  "max_drawdown": "-0.03897775126967773",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.9558232931726908,
+  "capital_exposure": 0.17486272289156626,
+  "win_rate": 0.5,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "SOXX",
+      "entry_date": "2025-08-25",
+      "entry_price": "248.97",
+      "exit_date": "2025-09-03",
+      "exit_price": "243.11",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-17.60",
+      "return_pct": "-0.02356374931383968617370232023",
+      "bars_held": 6
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2025-08-25",
+      "entry_price": "178.44",
+      "exit_date": "2025-09-03",
+      "exit_price": "170.97",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-29.90",
+      "return_pct": "-0.04189083165209594261376373011",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2025-09-04",
+      "entry_price": "305.21",
+      "exit_date": "2025-09-11",
+      "exit_price": "370.99",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "131.54",
+      "return_pct": "0.2154909734281314504767209462",
+      "bars_held": 5
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-08-21",
+      "entry_price": "23.54",
+      "exit_date": "2025-09-19",
+      "exit_price": "30.36",
+      "quantity": "35",
+      "exit_reason": "target",
+      "pnl": "238.66",
+      "return_pct": "0.2896710765869644374317271514",
+      "bars_held": 20
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-09-11",
+      "entry_price": "147.79",
+      "exit_date": "2025-10-02",
+      "exit_price": "184.87",
+      "quantity": "5",
+      "exit_reason": "target",
+      "pnl": "185.37",
+      "return_pct": "0.2508559442452128019487110089",
+      "bars_held": 15
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-09-19",
+      "entry_price": "30.40",
+      "exit_date": "2025-10-03",
+      "exit_price": "37.93",
+      "quantity": "27",
+      "exit_reason": "target",
+      "pnl": "203.28",
+      "return_pct": "0.2476608187134502923976608187",
+      "bars_held": 10
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2025-09-03",
+      "entry_price": "159.48",
+      "exit_date": "2025-10-13",
+      "exit_price": "155.87",
+      "quantity": "5",
+      "exit_reason": "rule",
+      "pnl": "-18.07",
+      "return_pct": "-0.02266114873338349636318033609",
+      "bars_held": 28
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-10-02",
+      "entry_price": "185.05",
+      "exit_date": "2025-10-30",
+      "exit_price": "225.99",
+      "quantity": "4",
+      "exit_reason": "target",
+      "pnl": "163.73",
+      "return_pct": "0.2211969737908673331532018373",
+      "bars_held": 20
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-10-03",
+      "entry_price": "37.97",
+      "exit_date": "2025-11-14",
+      "exit_price": "35.01",
+      "quantity": "22",
+      "exit_reason": "rule",
+      "pnl": "-65.15",
+      "return_pct": "-0.07799219479493379941101826801",
+      "bars_held": 30
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2025-10-13",
+      "entry_price": "220.31",
+      "exit_date": "2025-11-20",
+      "exit_price": "232.58",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "36.79",
+      "return_pct": "0.05566398862209311122206587687",
+      "bars_held": 28
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-10-30",
+      "entry_price": "226.21",
+      "exit_date": "2025-11-21",
+      "exit_price": "204.43",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-65.36",
+      "return_pct": "-0.09631168678071997995962453767",
+      "bars_held": 16
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2025-11-25",
+      "entry_price": "385.12",
+      "exit_date": "2025-12-15",
+      "exit_price": "361.71",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "-46.84",
+      "return_pct": "-0.06081221437474034067303697549",
+      "bars_held": 13
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2025-12-01",
+      "entry_price": "39.88",
+      "exit_date": "2025-12-15",
+      "exit_price": "38.31",
+      "quantity": "20",
+      "exit_reason": "rule",
+      "pnl": "-31.42",
+      "return_pct": "-0.03939317953861584754262788365",
+      "bars_held": 10
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-12-01",
+      "entry_price": "232.41",
+      "exit_date": "2025-12-26",
+      "exit_price": "290.69",
+      "quantity": "3",
+      "exit_reason": "target",
+      "pnl": "174.82",
+      "return_pct": "0.2507350515611778035942228533",
+      "bars_held": 18
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2025-12-15",
+      "entry_price": "179.81",
+      "exit_date": "2026-01-02",
+      "exit_price": "173.71",
+      "quantity": "4",
+      "exit_reason": "rule",
+      "pnl": "-24.42",
+      "return_pct": "-0.03395250542239030087314387409",
+      "bars_held": 12
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2025-12-26",
+      "entry_price": "290.99",
+      "exit_date": "2026-01-20",
+      "exit_price": "364.50",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "147.00",
+      "return_pct": "0.2525859995188838104402213134",
+      "bars_held": 15
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2026-01-02",
+      "entry_price": "312.14",
+      "exit_date": "2026-02-25",
+      "exit_price": "390.01",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "155.72",
+      "return_pct": "0.2494393541359646312552059973",
+      "bars_held": 36
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2025-12-24",
+      "entry_price": "305.15",
+      "exit_date": "2026-02-26",
+      "exit_price": "366.20",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "122.08",
+      "return_pct": "0.2000327707684745207275110601",
+      "bars_held": 42
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2026-01-20",
+      "entry_price": "364.86",
+      "exit_date": "2026-03-04",
+      "exit_price": "393.44",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "57.14",
+      "return_pct": "0.07830400701638984816093844214",
+      "bars_held": 30
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-02-26",
+      "entry_price": "366.56",
+      "exit_date": "2026-03-04",
+      "exit_price": "339.79",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "-53.56",
+      "return_pct": "-0.07305761676123963334788302052",
+      "bars_held": 4
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2026-02-25",
+      "entry_price": "390.41",
+      "exit_date": "2026-03-09",
+      "exit_price": "335.43",
+      "quantity": "2",
+      "exit_reason": "stop",
+      "pnl": "-109.98",
+      "return_pct": "-0.1408519248994646653518096360",
+      "bars_held": 8
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2026-03-12",
+      "entry_price": "47.42",
+      "exit_date": "2026-03-13",
+      "exit_price": "45.95",
+      "quantity": "17",
+      "exit_reason": "rule",
+      "pnl": "-25.01",
+      "return_pct": "-0.03102438782345498300543329943",
+      "bars_held": 1
+    },
+    {
+      "symbol": "AVGO",
+      "entry_date": "2026-03-10",
+      "entry_price": "348.90",
+      "exit_date": "2026-03-16",
+      "exit_price": "325.86",
+      "quantity": "2",
+      "exit_reason": "rule",
+      "pnl": "-46.10",
+      "return_pct": "-0.06606477500716537689882487819",
+      "bars_held": 4
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-03-26",
+      "entry_price": "218.09",
+      "exit_date": "2026-03-27",
+      "exit_price": "201.67",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-49.28",
+      "return_pct": "-0.07532058630229110306142723952",
+      "bars_held": 1
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-03-09",
+      "entry_price": "87.97",
+      "exit_date": "2026-04-02",
+      "exit_price": "102.25",
+      "quantity": "9",
+      "exit_reason": "target",
+      "pnl": "128.49",
+      "return_pct": "0.1622901746807623811147739760",
+      "bars_held": 18
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2026-04-02",
+      "entry_price": "46.08",
+      "exit_date": "2026-04-09",
+      "exit_price": "58.37",
+      "quantity": "17",
+      "exit_reason": "target",
+      "pnl": "208.90",
+      "return_pct": "0.2666717728758169934640522876",
+      "bars_held": 4
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-04-02",
+      "entry_price": "102.35",
+      "exit_date": "2026-04-13",
+      "exit_price": "129.91",
+      "quantity": "7",
+      "exit_reason": "target",
+      "pnl": "192.89",
+      "return_pct": "0.2692302323958406029729918347",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-04-06",
+      "entry_price": "219.39",
+      "exit_date": "2026-04-17",
+      "exit_price": "280.86",
+      "quantity": "3",
+      "exit_reason": "target",
+      "pnl": "184.39",
+      "return_pct": "0.2801555829041129191546257046",
+      "bars_held": 9
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2026-04-09",
+      "entry_price": "58.43",
+      "exit_date": "2026-04-27",
+      "exit_price": "83.63",
+      "quantity": "14",
+      "exit_reason": "target",
+      "pnl": "352.77",
+      "return_pct": "0.4312486247280017603481577468",
+      "bars_held": 12
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2026-04-27",
+      "entry_price": "510.82",
+      "exit_date": "2026-05-06",
+      "exit_price": "660.04",
+      "quantity": "1",
+      "exit_reason": "target",
+      "pnl": "149.20",
+      "return_pct": "0.2920794017462119729063075056",
+      "bars_held": 7
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-04-17",
+      "entry_price": "413.59",
+      "exit_date": "2026-05-07",
+      "exit_price": "502.68",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "178.15",
+      "return_pct": "0.2153702942527623975434609154",
+      "bars_held": 14
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-05-06",
+      "entry_price": "409.69",
+      "exit_date": "2026-05-27",
+      "exit_price": "507.75",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "196.09",
+      "return_pct": "0.2393150918987527154677927213",
+      "bars_held": 14
+    },
+    {
+      "symbol": "INTC",
+      "entry_date": "2026-05-27",
+      "entry_price": "124.45",
+      "exit_date": "2026-06-02",
+      "exit_price": "107.40",
+      "quantity": "6",
+      "exit_reason": "stop",
+      "pnl": "-102.32",
+      "return_pct": "-0.1370295968929958483996250167",
+      "bars_held": 4
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2026-04-13",
+      "entry_price": "370.45",
+      "exit_date": "2026-06-03",
+      "exit_price": "449.77",
+      "quantity": "2",
+      "exit_reason": "target",
+      "pnl": "158.61",
+      "return_pct": "0.2140774733432312052908624646",
+      "bars_held": 36
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-05-07",
+      "entry_price": "208.44",
+      "exit_date": "2026-06-08",
+      "exit_price": "210.07",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "4.87",
+      "return_pct": "0.007788012537580758651570395957",
+      "bars_held": 21
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-06-03",
+      "entry_price": "616.52",
+      "exit_date": "2026-06-08",
+      "exit_price": "569.49",
+      "quantity": "1",
+      "exit_reason": "stop",
+      "pnl": "-47.05",
+      "return_pct": "-0.07631544799844287289950042172",
+      "bars_held": 3
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-06-08",
+      "entry_price": "288.83",
+      "exit_date": "2026-06-11",
+      "exit_price": "260.41",
+      "quantity": "3",
+      "exit_reason": "stop",
+      "pnl": "-85.28",
+      "return_pct": "-0.09842006255121236252005216448",
+      "bars_held": 3
+    },
+    {
+      "symbol": "MRVL",
+      "entry_date": "2026-06-11",
+      "entry_price": "260.67",
+      "exit_date": "2026-07-08",
+      "exit_price": "225.05",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-106.88",
+      "return_pct": "-0.1366734440736051968644902239",
+      "bars_held": 17
+    },
+    {
+      "symbol": "SOXX",
+      "entry_date": "2026-06-09",
+      "entry_price": "585.74",
+      "exit_date": "2026-07-14",
+      "exit_price": "580.22",
+      "quantity": "1",
+      "exit_reason": "rule",
+      "pnl": "-5.54",
+      "return_pct": "-0.009458121350769966196606002663",
+      "bars_held": 23
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-07-13",
+      "entry_price": "208.64",
+      "exit_date": "2026-07-14",
+      "exit_price": "208.10",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-1.64",
+      "return_pct": "-0.002620143149284253578732106339",
+      "bars_held": 1
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-07-15",
+      "entry_price": "212.07",
+      "exit_date": "2026-07-17",
+      "exit_price": "202.54",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-28.61",
+      "return_pct": "-0.04496942833341192373587337514",
+      "bars_held": 2
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-06-02",
+      "entry_price": "506.55",
+      "exit_date": "2026-07-20",
+      "exit_price": "516.74",
+      "quantity": "1",
+      "exit_reason": "rule",
+      "pnl": "10.18",
+      "return_pct": "0.02009673280031586220511301945",
+      "bars_held": 32
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-07-23",
+      "entry_price": "209.56",
+      "exit_date": "2026-07-24",
+      "exit_price": "207.35",
+      "quantity": "3",
+      "exit_reason": "rule",
+      "pnl": "-6.65",
+      "return_pct": "-0.01057771839409556531144620475",
+      "bars_held": 1
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2026-07-23",
+      "entry_price": "545.01",
+      "exit_date": "2026-07-28",
+      "exit_price": "466.77",
+      "quantity": "1",
+      "exit_reason": "rule",
+      "pnl": "-78.25",
+      "return_pct": "-0.1435753472413350213757545733",
+      "bars_held": 3
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2026-08-05",
+      "entry_price": "216.97",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "3",
+      "exit_reason": "open_at_end",
+      "pnl": "8.31",
+      "return_pct": "0.01276674194589113702355164308",
+      "bars_held": 9
+    }
+  ],
+  "rejections": [
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip",
+    "min_clip"
+  ],
+  "rejection_details": [
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$410.21 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$446.38 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$452.77 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$464.99 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$425.18 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$444.14 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$416.68 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "MU",
+      "reason": "$467.08 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "TSM",
+      "reason": "$450.21 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "TSM",
+      "reason": "$431.10 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$421.91 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$420.76 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$428.61 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$427.20 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$426.28 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$426.47 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "TSM",
+      "reason": "$429.36 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$416.02 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "TSM",
+      "reason": "$429.41 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "AVGO",
+      "reason": "$412.17 is below the $500.00 minimum clip for a new position"
+    },
+    {
+      "rule": "min_clip",
+      "symbol": "TSM",
+      "reason": "$417.21 is below the $500.00 minimum clip for a new position"
+    }
+  ],
+  "benchmark_return": "0.2061513798956434274218897341",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,83 @@
+/**
+ * Fear & Greed history chart. Deliberately reuses the shared `.timeframe-tabs` / `.timeframe-tab`
+ * chrome (defined in styles.css) so its range selector reads identically to the WTI / Dollar Index
+ * charts a reader sees a few centimetres higher on the same Overview page -- the whole point of this
+ * component is to make Fear & Greed's history feel like those, not like a bespoke widget.
+ */
+.fg-chart {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.fg-chart-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+  margin-bottom: 0.4rem;
+  min-height: 1.2rem;
+}
+
+/* The live crosshair readout: date, score, and which band that score sits in. Empty until the
+ * pointer is over the plot, so it is reserved space (min-height on the head) rather than a jump. */
+.fg-chart-readout {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.fg-chart-readout .fg-chart-readout-date {
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+
+.fg-chart-readout .fg-chart-readout-score {
+  font-weight: 700;
+}
+
+.fg-chart-readout .fg-chart-readout-band {
+  margin-left: 0.4rem;
+}
+
+.fg-chart-span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.fg-chart-plot {
+  width: 100%;
+}
+
+/* Compact zone legend under the plot: the four boundaries this chart draws, so a reader who has not
+ * hovered still knows what the horizontal reference lines mean and where "Fear" turns to "Greed". */
+.fg-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.fg-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.fg-chart-legend-swatch {
+  width: 0.7rem;
+  height: 0.16rem;
+  border-radius: 1px;
+  display: inline-block;
+}
+
+.fg-chart-empty {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  padding: 0.6rem 0;
+}

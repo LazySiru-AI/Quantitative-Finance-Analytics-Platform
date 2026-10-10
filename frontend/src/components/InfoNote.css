@@ -1,0 +1,97 @@
+/**
+ * InfoNote.tsx -- short visible line, long form behind a native disclosure.
+ *
+ * Prose stays in the sans stack. `styles.css` sets the rule in its own header: monospace is reserved
+ * for things that read as instrument output, and long explanatory prose is not that. The ⓘ mark and
+ * the chevron are the only chrome; the summary line itself is styled as body text, not as a control,
+ * because it has to be readable whether or not anyone ever opens it.
+ */
+
+.info-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0 0 0.6rem;
+}
+
+.info-note-quiet {
+  font-size: 0.72rem;
+}
+
+/* `<details>` needs the summary marker suppressed before a custom one can be drawn, the same way
+   `.collapsible-summary` does it. */
+.info-note-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.info-note-summary::-webkit-details-marker {
+  display: none;
+}
+.info-note-summary::marker {
+  content: "";
+}
+
+.info-note-mark {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
+.info-note-line {
+  flex: 1 1 auto;
+}
+
+/* The chevron trails the line rather than leading it: the sentence is the content, the affordance
+   is secondary, and a leading marker would indent every note away from the text above it. */
+.info-note-summary::after {
+  content: "";
+  flex: 0 0 auto;
+  align-self: center;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+  opacity: 0.6;
+}
+
+.info-note[open] > .info-note-summary::after {
+  transform: rotate(45deg);
+}
+
+.info-note-summary:hover {
+  color: var(--text);
+}
+
+.info-note-summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.info-note-body {
+  margin-top: 0.4rem;
+  padding-left: 1.15rem;
+  border-left: 1px solid var(--border);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.info-note-body p {
+  margin: 0 0 0.5rem;
+}
+
+.info-note-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info-note-summary::after {
+    transition: none;
+  }
+}

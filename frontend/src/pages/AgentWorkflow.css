@@ -1,0 +1,398 @@
+/* =============================================================================
+   Agent Workflow (agent: AgentWorkflow).
+
+   Reuses .panel, .subtitle, .muted, .callout/.callout-warn/.callout-danger,
+   .comp-run-cta from styles.css / Competition.css -- nothing there is modified,
+   only built on top of. Every class this file adds is prefixed `wf-`.
+
+   The stage-state palette below (`.wf-stage-*`) deliberately matches
+   VibeTrading.css's own `.vibe-stage-*` rules value for value: `StageState` is
+   the same shared union on both desks, and a reader who has already learned
+   what "degraded" or "blocked" looks like on Vibe Trading should see the same
+   colors mean the same thing here.
+   ============================================================================= */
+
+.wf-explainer ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.wf-explainer li {
+  line-height: 1.5;
+}
+
+/* --- Run form --------------------------------------------------------------- */
+
+.wf-run-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 520px;
+}
+
+.wf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+.wf-field input,
+.wf-field select {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 0.45rem 0.6rem;
+  font-family: var(--font-mono);
+}
+
+.wf-arm-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+.wf-arm-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.wf-arm-blurb {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.wf-agent-unavailable {
+  font-family: var(--font-mono);
+}
+
+/* --- Dynamic universe controls (Universe mode toggle + screen-mode sub-fields) -------------------
+   Only visible when the run form's Universe select is "screen" -- "card" (the default) hides this
+   block entirely and leaves the form identical to before this control existed. */
+
+.wf-universe-screen-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: var(--bg-raised);
+}
+
+/* --- Universe source badge (paper book cards, study tables) ---------------------------------------
+   Distinguishes a card-sourced row from a screen-sourced one at a glance. Renders whatever label
+   `universeSourceLabel` returns -- including its fallback for an unrecognised value -- never blank. */
+
+.wf-universe-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  vertical-align: middle;
+}
+.wf-universe-badge[data-universe="screen"] {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+/* --- Universe filter toggle (Book/Study/Candidates panels) ----------------------------------------
+   Drives `universeFilter` -- shared by the book, study and candidates panels, plus the execute
+   button. `.active` marks the selected side; both buttons stay visible so the current selection is
+   always legible, not just implied by absence. */
+
+.wf-universe-toggle {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.wf-universe-toggle button {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.wf-universe-toggle button.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --- Candidate gate rulings (Candidates panel) -------------------------------------------------
+   One badge per gate a candidate passed through. `verdict_source` renders inline in parentheses
+   whenever it is not `"fresh"` -- a cached or mixed verdict must never look identical to one the
+   gate just recomputed. */
+
+.wf-gate-rulings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.wf-gate-ruling {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+.wf-gate-pass {
+  color: var(--up);
+}
+.wf-gate-fail {
+  color: var(--down);
+}
+.wf-gate-ruling[data-verdict-source="cached"],
+.wf-gate-ruling[data-verdict-source="mixed"] {
+  font-style: italic;
+}
+
+/* --- Stage board ---------------------------------------------------------------
+   Layers stack top-to-bottom -- a layer never depends on one below it. Within a
+   layer, stages that ran in parallel (including the per-symbol
+   research_{SYM}/vibe_{SYM} fan-out) sit side by side. */
+
+.wf-dag {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.wf-dag-layer-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.wf-dag-layer-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Base stage card. State-specific rules below override border/background/color
+   so `degraded`/`blocked`/`failed` are never visually confusable -- three
+   different claims about what happened to a stage, not shades of one. */
+.wf-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 160px;
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.wf-stage.selected {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.wf-stage-seat {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* pending -- hasn't started; dim, no color signal. */
+.wf-stage-pending {
+  opacity: 0.65;
+}
+
+/* running -- animated to read as "in progress" at a glance. */
+.wf-stage-running {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px -4px var(--glow-cyan);
+}
+
+/* succeeded -- ran clean. */
+.wf-stage-succeeded {
+  border-color: color-mix(in srgb, var(--up) 55%, var(--border));
+}
+
+/* degraded -- ran, produced output, but a grounding check flagged it. Amber,
+   not red: this stage has a result to look at, unlike `failed`. */
+.wf-stage-degraded {
+  border-color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 10%, var(--panel-2));
+}
+
+/* failed -- ran and errored. Solid red fill: this stage was attempted and did
+   not produce a usable result. */
+.wf-stage-failed {
+  border-color: var(--down);
+  background: color-mix(in srgb, var(--down) 16%, var(--panel-2));
+}
+
+/* blocked -- never ran at all, because an upstream dependency failed. A
+   hatched pattern rather than a solid fill: visually distinct from `failed`'s
+   solid red so "stopped before it could start" never reads as "ran and
+   broke". Magenta, the app's second accent, keeps it from being confused with
+   `running`'s cyan or `failed`'s red. */
+.wf-stage-blocked {
+  border-color: var(--accent-2);
+  border-style: dashed;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--panel-2),
+    var(--panel-2) 6px,
+    color-mix(in srgb, var(--accent-2) 12%, var(--panel-2)) 6px,
+    color-mix(in srgb, var(--accent-2) 12%, var(--panel-2)) 12px
+  );
+}
+
+/* skipped -- not run by design. */
+.wf-stage-skipped {
+  opacity: 0.5;
+  font-style: italic;
+}
+
+/* --- Per-stage / final report -------------------------------------------------- */
+
+.wf-stage-detail,
+.wf-final-report {
+  margin-top: 1rem;
+}
+
+/* Scrolling/height-capping now comes from the shared `ScrollRegion` this element is wrapped in
+   (see AgentWorkflow.tsx) -- this rule only carries the typography/box styling that is not
+   `ScrollRegion`'s concern. */
+.wf-output-md {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.wf-grounding-issues ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+/* --- Recent runs --------------------------------------------------------------- */
+
+.wf-recent-runs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.wf-recent-runs button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.wf-recent-runs button:hover {
+  border-color: var(--border-strong);
+}
+
+/* --- Paper book ----------------------------------------------------------------- */
+
+.wf-book-toolbar {
+  margin-bottom: 0.75rem;
+}
+
+.wf-book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.wf-book-card {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.wf-book-card h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.wf-book-card h4 {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 0.85rem;
+}
+
+.wf-tax-summary {
+  border-top: 1px dashed var(--border);
+  padding-top: 0.5rem;
+}
+
+/* --- Shared table (book positions/orders, study metrics/paired) ---------------- */
+
+.wf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.wf-table th,
+.wf-table td {
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.wf-table th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.wf-table tr[data-status="rejected"] td {
+  color: var(--down);
+}
+.wf-table tr[data-status="filled"] td:nth-child(3) {
+  color: var(--up);
+}
+
+/* --- Effectiveness study --------------------------------------------------------
+   `.wf-study-note` reuses `.callout-warn` for its background/border, but the
+   caveat this holds (a directional study, not a backtest with guaranteed
+   fills) must read as the headline of the panel, not a footnote -- hence the
+   larger, bolder text overriding the callout's default sizing. */
+
+.wf-study-note {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}

@@ -1,0 +1,255 @@
+{
+ "explains": [],
+ "count": 10,
+ "quotes": [],
+ "news": [
+  {
+   "uuid": "53367977-3ee0-31ea-bfb8-cdf9663ddc3e",
+   "title": "Sector Update: Tech",
+   "publisher": "MT Newswires",
+   "link": "https://finance.yahoo.com/technology/articles/sector-tech-170110430.html",
+   "providerPublishTime": 1787590870,
+   "type": "STORY",
+   "relatedTickers": [
+    "NVDA",
+    "XLK",
+    "PEAI.PVT"
+   ]
+  },
+  {
+   "uuid": "4ee23ca0-381b-3283-8fb0-ae54936bc142",
+   "title": "Why Direxion Daily Semiconductor Bull 3X ETF Dropped Today",
+   "publisher": "Motley Fool",
+   "link": "https://finance.yahoo.com/m/4ee23ca0-381b-3283-8fb0-ae54936bc142/why-direxion-daily.html",
+   "providerPublishTime": 1787590495,
+   "type": "STORY",
+   "thumbnail": {
+    "resolutions": [
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/iKIoQY9l7oKjx4eYLZfHfw--~B/aD0xMDUwO3c9MTQwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/motleyfool.com/bb436cff51fb339e078256c902006fc7.jpg",
+      "width": 1400,
+      "height": 1050,
+      "tag": "original"
+     },
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/cx32ET7HNvIkYWZtBroBYA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/bb436cff51fb339e078256c902006fc7.jpg",
+      "width": 140,
+      "height": 140,
+      "tag": "140x140"
+     }
+    ]
+   },
+   "relatedTickers": [
+    "NVDA",
+    "SOXL",
+    "SNDK",
+    "AAPL",
+    "688825.SS",
+    "MU"
+   ]
+  },
+  {
+   "uuid": "1e7f6aa4-af9e-3097-82e1-91753c1e904a",
+   "title": "NVIDIA's Next Earnings Report on Aug. 26 Could Send the Stock Soaring. Here's Why.",
+   "publisher": "Motley Fool",
+   "link": "https://finance.yahoo.com/m/1e7f6aa4-af9e-3097-82e1-91753c1e904a/nvidia%27s-next-earnings-report.html",
+   "providerPublishTime": 1787590438,
+   "type": "STORY",
+   "thumbnail": {
+    "resolutions": [
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/NqWtE6627jC.jdY4xmy2Mw--~B/aD04NDA7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7ba57bff8aa8d739c5bbbae28e30729d.png",
+      "width": 1400,
+      "height": 840,
+      "tag": "original"
+     },
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/NaNlw45lVqyphcvC.xMe4g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7ba57bff8aa8d739c5bbbae28e30729d.png",
+      "width": 140,
+      "height": 140,
+      "tag": "140x140"
+     }
+    ]
+   },
+   "relatedTickers": [
+    "NVDA"
+   ]
+  },
+  {
+   "uuid": "8d4eb932-05cc-3c26-81a8-e3da5a589496",
+   "title": "Gogoro Inc. Q2 2026 Earnings Call Summary",
+   "publisher": "Moby",
+   "link": "https://finance.yahoo.com/m/8d4eb932-05cc-3c26-81a8-e3da5a589496/gogoro-inc.-q2-2026-earnings.html",
+   "providerPublishTime": 1787590387,
+   "type": "STORY",
+   "thumbnail": {
+    "resolutions": [
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/Mw9iKbWYxXyUz_b3eZU5Sw--~B/aD02NzU7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/moby_896/db1d8d68483d93f5dec1ba768376bd20.png",
+      "width": 1200,
+      "height": 675,
+      "tag": "original"
+     },
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/10ul6kF.xXOy6.9xr_HcrA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/moby_896/db1d8d68483d93f5dec1ba768376bd20.png",
+      "width": 140,
+      "height": 140,
+      "tag": "140x140"
+     }
+    ]
+   },
+   "relatedTickers": [
+    "NVDA",
+    "GGR"
+   ]
+  },
+  {
+   "uuid": "4a8884dd-e134-321e-baef-f836ea83688a",
+   "title": "Napco Security Technologies, Inc. Q4 2026 Earnings Call Summary",
+   "publisher": "Moby",
+   "link": "https://finance.yahoo.com/m/4a8884dd-e134-321e-baef-f836ea83688a/napco-security-technologies%2C.html",
+   "providerPublishTime": 1787590368,
+   "type": "STORY",
+   "relatedTickers": [
+    "NVDA",
+    "NSSC"
+   ]
+  },
+  {
+   "uuid": "9642c272-cfa0-35ea-9e89-d6341c73fa6f",
+   "title": "Prediction: This Artificial Intelligence (AI) Stock Will Go Parabolic After Nvidia Reports Earnings on Aug. 26",
+   "publisher": "Motley Fool",
+   "link": "https://finance.yahoo.com/m/9642c272-cfa0-35ea-9e89-d6341c73fa6f/prediction%3A-this-artificial.html",
+   "providerPublishTime": 1787590200,
+   "type": "STORY",
+   "thumbnail": {
+    "resolutions": [
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/32xOIR6enhRN.Rcnlkv5ag--~B/aD04MDA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/2896b87298e1c0227850afa60e063567.png",
+      "width": 1200,
+      "height": 800,
+      "tag": "original"
+     },
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/1VAE.wKAGiefnaIliPyVBg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/2896b87298e1c0227850afa60e063567.png",
+      "width": 140,
+      "height": 140,
+      "tag": "140x140"
+     }
+    ]
+   },
+   "relatedTickers": [
+    "NVDA",
+    "AMZN",
+    "GOOG",
+    "META",
+    "ORCL"
+   ]
+  },
+  {
+   "uuid": "659c0998-f114-3aba-b2fc-37f9dcedae5e",
+   "title": "U.S. Stocks Mixed With Nasdaq Slipping on Weakness in Tech Sector",
+   "publisher": "The Wall Street Journal",
+   "link": "https://finance.yahoo.com/m/659c0998-f114-3aba-b2fc-37f9dcedae5e/u.s.-stocks-mixed-with-nasdaq.html",
+   "providerPublishTime": 1787590140,
+   "type": "STORY",
+   "thumbnail": {
+    "resolutions": [
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/Zocd3ivcdujrc.nYGoLj.g--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/dd3bfed141db70be30ae9b7b441ebc24.jpg",
+      "width": 1280,
+      "height": 640,
+      "tag": "original"
+     },
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/oOondLWQCNWwL0H79nbBOA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/dd3bfed141db70be30ae9b7b441ebc24.jpg",
+      "width": 140,
+      "height": 140,
+      "tag": "140x140"
+     }
+    ]
+   },
+   "relatedTickers": [
+    "CL=F",
+    "DX-Y.NYB",
+    "^IXIC",
+    "^DJI",
+    "BABA",
+    "NVDA"
+   ]
+  },
+  {
+   "uuid": "89bf208f-8526-3b06-9d48-a9dbd269ac73",
+   "title": "Update: US Equity Indexes Mixed as Chipmakers Push Technology Lower",
+   "publisher": "MT Newswires",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-chipmakers-164640643.html",
+   "providerPublishTime": 1787590000,
+   "type": "STORY",
+   "relatedTickers": [
+    "^SPX",
+    "NVDA",
+    "^DJI",
+    "^GSPC",
+    "^IXIC",
+    "SNDK"
+   ]
+  },
+  {
+   "uuid": "ff961792-c244-3756-99b9-935e3e8b5930",
+   "title": "Market Chatter: Nvidia Manager Indicted by Taiwan After Chip-Smuggling Investigation",
+   "publisher": "MT Newswires",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-nvidia-manager-indicted-164611984.html",
+   "providerPublishTime": 1787589971,
+   "type": "STORY",
+   "relatedTickers": [
+    "NVDA"
+   ]
+  },
+  {
+   "uuid": "e8ed1c1c-c199-37cd-a27c-b2d474df8782",
+   "title": "Tech drags S&P 500, Nasdaq lower as Iran tensions, Nvidia earnings loom",
+   "publisher": "Reuters",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/p-nasdaq-futures-slip-markets-100932666.html",
+   "providerPublishTime": 1787589747,
+   "type": "STORY",
+   "thumbnail": {
+    "resolutions": [
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/xPnnN8_1G_yD9.4MP2nEuw--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters.com/0c470a38b043fa11594c2a7007099c5d.jpg",
+      "width": 800,
+      "height": 533,
+      "tag": "original"
+     },
+     {
+      "url": "https://s.yimg.com/uu/api/res/1.2/tcWtrYxPc3aWRQzDp.tesg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters.com/0c470a38b043fa11594c2a7007099c5d.jpg",
+      "width": 140,
+      "height": 140,
+      "tag": "140x140"
+     }
+    ]
+   },
+   "relatedTickers": [
+    "NVDA",
+    "MU",
+    "^GSPC",
+    "^IXIC"
+   ]
+  }
+ ],
+ "nav": [],
+ "lists": [],
+ "researchReports": [],
+ "screenerFieldResults": [],
+ "totalTime": 47,
+ "timeTakenForQuotes": 425,
+ "timeTakenForNews": 600,
+ "timeTakenForAlgowatchlist": 400,
+ "timeTakenForPredefinedScreener": 400,
+ "timeTakenForCrunchbase": 0,
+ "timeTakenForNav": 400,
+ "timeTakenForResearchReports": 0,
+ "timeTakenForQuestions": 0,
+ "timeTakenForScreenerField": 0,
+ "timeTakenForCulturalAssets": 0,
+ "timeTakenForSearchLists": 0
+}

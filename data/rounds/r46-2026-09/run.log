@@ -1,0 +1,40 @@
+macro pin : none -- this field is price-only
+mandate   : SAVINGS, starting_cash $100,000
+benchmark : 30-70-spy-agg (30/70 SPY/AGG, recomputed per window)
+windows   : rank ('h10y-1', 'h10y-2', 'h5y-1', 'h5y-2', 'h5y-3') | report ('h3y-1', 'h3y-2', 'h3y-3', 'h3y-4') | bear ('b6m-1', 'b6m-2', 'b6m-3', 'b1y-1', 'b1y-2', 'b1y-3')
+
+card             horizon     h10y-1    h10y-2     h5y-1     h5y-2     h5y-3
+r46-agg-derisk   maxDD       -15.6%    -15.4%     -5.7%    -13.5%    -15.4%
+r46-both         maxDD       -14.4%    -14.4%     -5.3%    -11.9%    -14.4%
+r46-both-gld     maxDD       -14.0%    -14.1%     -6.1%    -12.0%    -14.1%
+r46-both-trim    maxDD       -14.4%    -14.5%     -5.3%    -11.9%    -14.5%
+r46-control      maxDD       -16.9%    -17.9%     -5.5%    -13.1%    -17.0%
+r46-spy-derisk   maxDD       -16.2%    -16.2%     -5.3%    -11.9%    -16.1%
+r46-trim-high    maxDD       -17.4%    -17.3%     -5.5%    -13.1%    -17.0%
+
+== treatment minus control (drawdown & MAR), judged rungs ==
+card              fired  dd_margin  mar_margin  cagr_margin verdict
+r46-agg-derisk        5      +1.34      +0.008        +0.01 measured
+r46-both              5      +2.45      +0.009        -0.54 measured
+r46-both-gld          5      +2.91      +0.038        -0.07 measured
+r46-both-trim         5      +2.51      +0.008        -0.53 measured
+r46-spy-derisk        5      +0.94      -0.003        -0.30 measured
+r46-trim-high         4      +0.03      -0.002        -0.08 measured
+
+== additivity pairwise lines (drawdown margin, judged rungs) ==
+  both - spy               rungs= 5     +1.68pp   both adds over spy alone
+  both - agg               rungs= 5     +0.99pp   both adds over agg alone
+  both - (spy + agg)       rungs= 5     +0.25pp   within +/-0.5pp of the sum (P1 holds -- reads look independent)
+  both-gld - both          rungs= 5     +0.36pp   does not improve both by more than the tolerance (P4 holds for GLD)
+  both-trim - both         rungs= 5     +0.00pp   does not improve both by more than the tolerance (P4 holds for trim)
+
+== bear-window firing (each treatment's condition, treatment vs control) ==
+  r46-agg-derisk   2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r46-both         2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r46-both-gld     2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r46-both-trim    2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r46-spy-derisk   2022 (in-sample to hypothesis): fired 2/2   other bear windows: fired 4/4
+  r46-trim-high    2022 (in-sample to hypothesis): fired 0/2   other bear windows: fired 0/4
+
+wrote data/rounds/r46-2026-09/analysis.json
+wrote data/rounds/r46-2026-09/ANALYSIS.md

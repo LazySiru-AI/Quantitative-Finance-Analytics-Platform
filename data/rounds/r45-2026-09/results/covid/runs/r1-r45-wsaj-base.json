@@ -1,0 +1,210 @@
+{
+  "card": {
+    "agent_id": "r45-wsaj-base",
+    "display_name": "wsaj base",
+    "discipline": "mean-reversion",
+    "purpose": "trading",
+    "desk_only": false,
+    "thesis": "Round 45 cell on the taxable trading book: base `wsaj` (persona: Creator B (wsaj)), entry 'close > sma(200) and close < bb_lower(26, 2)', exit 'close crosses_above bb_mid(26, 2)', stop 0.12, take-profit None, hold cap 150, 4 slots at 0.20 each. This base is a VAULT DRAFT (`data/vault/influencers/wsaj/strategy/1.json`), machine-mapped from the persona's described methodology onto this programme's fixed rule vocabulary -- fidelity 0.0. The draft's rationale: \"Band-reversion is chosen as the structural proxy: buying names undervalued by P/E\" Every note behind it has `published = null` (`PERSONA-HYPOTHESES.md` section 7), so hindsight against this round's eight windows is unbounded; the draft is inspired by, not a faithful reproduction of, what the persona actually trades. This is the BASE cell: the persona's method with no cross-persona enhancement. Every other arm on this base changes exactly ONE thing against this cell, per PROTOCOL.md section 7's one-decision rule. Pre-registered 2026-09-09, before any measurement (see strategy-program/ROUND-45-PLAN.md and strategy-program/MIX-AND-MATCH-PLAN.md section 3). Nothing here is promotable -- the `trading` purpose is exempt from PROTOCOL.md section 6 promotion (r21 amendment); this is a measurement study, report only. Not investment advice.",
+    "falsification": "Baseline against which this base's four enhancement arms are contrasted. Honest prior: the null (rounds 17/18/34/38/39/40/42 put form, exit, rotation, style tilts and confirmation conjuncts all inside the 21.2pp floor). Decision rule: an enhancement earns something only if its marginal -- the mean over its bases of (arm median adjusted excess minus base median) -- exceeds the floor AND its arm cells survive BH q<0.10 over m=14 (each arm cell contrasted with its own base; base cells carry p=None but count in m). Pre-registered predictions: (1) null for all four enhancements. (2) `trend100` cuts trades vs base on both bases it applies to (kim, wsaj). (3) `rr5` cells are nearly identical to their base -- fewer than 10% of exits are expected to be the take-profit target, counted from the run files' trade logs. (4) `risk1pct` lowers mean exposure and raises adjusted excess per unit exposure without changing sign patterns across windows. (5) `trim115` lowers exposure and loses to base in bull-2024 and recent. Nothing here is promotable regardless of outcome (`trading` purpose, PROTOCOL.md r21 amendment). Sign flips by regime are expected; only the eight-window median is safe to read.",
+    "universe": [
+      "NVDA",
+      "TSM",
+      "MU",
+      "AMD",
+      "QCOM",
+      "MSFT",
+      "GOOGL",
+      "AMZN",
+      "NFLX",
+      "ORCL",
+      "INTC",
+      "TXN"
+    ],
+    "entry": "close > sma(200) and close < bb_lower(26, 2)",
+    "exit": "close crosses_above bb_mid(26, 2)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 150,
+    "max_positions": 4,
+    "position_pct": "0.20",
+    "rank_by": null,
+    "designed_through": "2026-02-13",
+    "reference_only": false,
+    "source_thesis_hash": null,
+    "source_persona": null
+  },
+  "sessions": 93,
+  "starting_equity": "10000.00",
+  "ending_equity": "9555.95",
+  "total_return": "-0.04440500000000003",
+  "max_drawdown": "-0.16450890954468056",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.26881720430107525,
+  "capital_exposure": 0.13189526881720431,
+  "win_rate": 0.3333333333333333,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "TSM",
+      "entry_date": "2020-02-25",
+      "entry_price": "55.36",
+      "exit_date": "2020-03-05",
+      "exit_price": "56.08",
+      "quantity": "36",
+      "exit_reason": "rule",
+      "pnl": "25.86",
+      "return_pct": "0.01297567437379576107899807322",
+      "bars_held": 7
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2020-02-25",
+      "entry_price": "83.98",
+      "exit_date": "2020-03-10",
+      "exit_price": "74.76",
+      "quantity": "24",
+      "exit_reason": "stop",
+      "pnl": "-221.33",
+      "return_pct": "-0.1098128522664126379296657934",
+      "bars_held": 10
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2020-02-26",
+      "entry_price": "52.68",
+      "exit_date": "2020-03-10",
+      "exit_price": "48.13",
+      "quantity": "38",
+      "exit_reason": "stop",
+      "pnl": "-172.96",
+      "return_pct": "-0.08640051152939295847820005595",
+      "bars_held": 9
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2020-02-26",
+      "entry_price": "69.78",
+      "exit_date": "2020-03-10",
+      "exit_price": "62.69",
+      "quantity": "28",
+      "exit_reason": "stop",
+      "pnl": "-198.57",
+      "return_pct": "-0.1016306350571182901363468861",
+      "bars_held": 9
+    },
+    {
+      "symbol": "MU",
+      "entry_date": "2020-03-11",
+      "entry_price": "46.22",
+      "exit_date": "2020-03-13",
+      "exit_price": "41.55",
+      "quantity": "41",
+      "exit_reason": "stop",
+      "pnl": "-191.52",
+      "return_pct": "-0.1010648964127027683085138943",
+      "bars_held": 2
+    },
+    {
+      "symbol": "TSM",
+      "entry_date": "2020-03-10",
+      "entry_price": "53.74",
+      "exit_date": "2020-03-17",
+      "exit_price": "45.73",
+      "quantity": "38",
+      "exit_reason": "stop",
+      "pnl": "-304.43",
+      "return_pct": "-0.1490754705893874992654692183",
+      "bars_held": 5
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2020-03-13",
+      "entry_price": "5.77",
+      "exit_date": "2020-03-17",
+      "exit_price": "5.02",
+      "quantity": "369",
+      "exit_reason": "stop",
+      "pnl": "-276.86",
+      "return_pct": "-0.1300343332722755303809537229",
+      "bars_held": 2
+    },
+    {
+      "symbol": "NFLX",
+      "entry_date": "2020-03-12",
+      "entry_price": "32.67",
+      "exit_date": "2020-03-24",
+      "exit_price": "36.98",
+      "quantity": "57",
+      "exit_reason": "rule",
+      "pnl": "245.60",
+      "return_pct": "0.1318877235942626692227968145",
+      "bars_held": 8
+    },
+    {
+      "symbol": "NVDA",
+      "entry_date": "2020-03-19",
+      "entry_price": "5.05",
+      "exit_date": "2020-03-27",
+      "exit_price": "6.25",
+      "quantity": "394",
+      "exit_reason": "rule",
+      "pnl": "472.67",
+      "return_pct": "0.2375584258933507563954364980",
+      "bars_held": 6
+    },
+    {
+      "symbol": "AMD",
+      "entry_date": "2020-06-29",
+      "entry_price": "50.18",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "39",
+      "exit_reason": "open_at_end",
+      "pnl": "94.77",
+      "return_pct": "0.04842566759665205261060183340",
+      "bars_held": 1
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_date": "2020-06-29",
+      "entry_price": "68.05",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "29",
+      "exit_reason": "open_at_end",
+      "pnl": "82.72",
+      "return_pct": "0.04191644075096911500164686209",
+      "bars_held": 1
+    }
+  ],
+  "rejections": [
+    "insufficient_cash",
+    "insufficient_cash",
+    "insufficient_cash"
+  ],
+  "rejection_details": [
+    {
+      "rule": "insufficient_cash",
+      "symbol": "MSFT",
+      "reason": "$2057.12 exceeds $2012.54 of settled cash (total cash $7390.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "NFLX",
+      "reason": "$2032.62 exceeds $2012.54 of settled cash (total cash $7390.88; unsettled proceeds are not spendable in a cash account)"
+    },
+    {
+      "rule": "insufficient_cash",
+      "symbol": "AMD",
+      "reason": "$2153.22 exceeds $1504.54 of settled cash (total cash $3208.04; unsettled proceeds are not spendable in a cash account)"
+    }
+  ],
+  "benchmark_return": "-0.08712513691938778531039995263",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

@@ -1,0 +1,4503 @@
+{
+  "descriptive_only": true,
+  "guarded_rule_engine": false,
+  "p_value": null,
+  "note": "Naive divergence diagnostic outside app.backtest entirely. Swing points are the strict local extreme within +/-5 bars; a 'divergence' is flagged between two consecutive swing lows (bullish) or highs (bearish) where price and MACD(12,26,9) disagree on direction. Forward return is measured from the second swing point's close, matched to the primary family's 10-bar horizon. This is a plain pandas/numpy computation on the bars frame, not a DSL expression, not run through event_study, not BH-corrected, and not a finding of this study -- it exists only to answer 'how often would a naive definition have fired, and what followed', as the brief requests.",
+  "swing_order": 5,
+  "forward_horizon": 10,
+  "symbols": {
+    "SPY": {
+      "symbol": "SPY",
+      "bars": 8440,
+      "years": 33.5,
+      "swing_lows_found": 514,
+      "swing_highs_found": 487,
+      "unconditional_baseline": {
+        "n": 8405,
+        "mean_forward_return": 0.0038790972318792755,
+        "median_forward_return": 0.00622929398118634,
+        "share_positive_forward": 0.6070196311719215
+      },
+      "naive_bullish_divergence": {
+        "count": 23,
+        "per_year": 0.6867298578199051,
+        "mean_forward_return": 0.058260001435145446,
+        "median_forward_return": 0.04980434558978432,
+        "share_positive_forward": 1.0
+      },
+      "naive_bearish_divergence": {
+        "count": 97,
+        "per_year": 2.896208530805687,
+        "mean_forward_return": -0.011769803833189412,
+        "median_forward_return": -0.008307751995046114,
+        "share_positive_forward": 0.31958762886597936
+      },
+      "bullish_events_detail": [
+        {
+          "prior_low_idx": 1240,
+          "prior_low_date": "1997-12-24",
+          "low_idx": 1250,
+          "low_date": "1998-01-09",
+          "price_change": -0.0117096018735363,
+          "macd_change": 0.05255831684880263,
+          "forward_return_10d": 0.03859174001354096
+        },
+        {
+          "prior_low_idx": 1349,
+          "prior_low_date": "1998-06-03",
+          "low_idx": 1357,
+          "low_date": "1998-06-15",
+          "price_change": -0.003186558516801854,
+          "macd_change": 0.204145795189433,
+          "forward_return_10d": 0.06102877070619006
+        },
+        {
+          "prior_low_idx": 1683,
+          "prior_low_date": "1999-09-29",
+          "low_idx": 1695,
+          "low_date": "1999-10-15",
+          "price_change": -0.015278462296697881,
+          "macd_change": 0.6656900637839271,
+          "forward_return_10d": 0.0970970970970971
+        },
+        {
+          "prior_low_idx": 1946,
+          "prior_low_date": "2000-10-12",
+          "low_idx": 1975,
+          "low_date": "2000-11-22",
+          "price_change": -0.007394366197183098,
+          "macd_change": 1.2067659795846737,
+          "forward_return_10d": 0.011469788341019273
+        },
+        {
+          "prior_low_idx": 1981,
+          "prior_low_date": "2000-12-01",
+          "low_idx": 1994,
+          "low_date": "2000-12-20",
+          "price_change": -0.04514299220042543,
+          "macd_change": 0.1670059744757566,
+          "forward_return_10d": 0.023267326732673267
+        },
+        {
+          "prior_low_idx": 2056,
+          "prior_low_date": "2001-03-22",
+          "low_idx": 2064,
+          "low_date": "2001-04-03",
+          "price_change": -0.006569504489650025,
+          "macd_change": 1.1669955468991162,
+          "forward_return_10d": 0.12329015930430205
+        },
+        {
+          "prior_low_idx": 2131,
+          "prior_low_date": "2001-07-10",
+          "low_idx": 2141,
+          "low_date": "2001-07-24",
+          "price_change": -0.003889726671429931,
+          "macd_change": 0.35962364350193354,
+          "forward_return_10d": 0.0252121690523528
+        },
+        {
+          "prior_low_idx": 2199,
+          "prior_low_date": "2001-10-19",
+          "low_idx": 2207,
+          "low_date": "2001-10-31",
+          "price_change": -0.014438709309687967,
+          "macd_change": 0.06581604546725828,
+          "forward_return_10d": 0.08374291450650727
+        },
+        {
+          "prior_low_idx": 2529,
+          "prior_low_date": "2003-02-12",
+          "low_idx": 2547,
+          "low_date": "2003-03-11",
+          "price_change": -0.019244846046528527,
+          "macd_change": 0.6978916913176079,
+          "forward_return_10d": 0.08693492662487302
+        },
+        {
+          "prior_low_idx": 2893,
+          "prior_low_date": "2004-07-26",
+          "low_idx": 2902,
+          "low_date": "2004-08-06",
+          "price_change": -0.017471278398886493,
+          "macd_change": 0.06718220116964346,
+          "forward_return_10d": 0.0339729053313153
+        },
+        {
+          "prior_low_idx": 3378,
+          "prior_low_date": "2006-06-27",
+          "low_idx": 3391,
+          "low_date": "2006-07-17",
+          "price_change": -0.004600171958457083,
+          "macd_change": 0.5543551913516325,
+          "forward_return_10d": 0.03656560945465972
+        },
+        {
+          "prior_low_idx": 3955,
+          "prior_low_date": "2008-10-10",
+          "low_idx": 3966,
+          "low_date": "2008-10-27",
+          "price_change": -0.0514124638616702,
+          "macd_change": 0.35972863650681575,
+          "forward_return_10d": 0.10339488529734282
+        },
+        {
+          "prior_low_idx": 3966,
+          "prior_low_date": "2008-10-27",
+          "low_idx": 3984,
+          "low_date": "2008-11-20",
+          "price_change": -0.10125074817144446,
+          "macd_change": 2.512155815722892,
+          "forward_return_10d": 0.16540760585444064
+        },
+        {
+          "prior_low_idx": 4363,
+          "prior_low_date": "2010-05-26",
+          "low_idx": 4370,
+          "low_date": "2010-06-07",
+          "price_change": -0.015676031854805008,
+          "macd_change": 0.32637261361128367,
+          "forward_return_10d": 0.05611911952055377
+        },
+        {
+          "prior_low_idx": 4370,
+          "prior_low_date": "2010-06-07",
+          "low_idx": 4389,
+          "low_date": "2010-07-02",
+          "price_change": -0.03118779962225492,
+          "macd_change": 0.34350928655237567,
+          "forward_return_10d": 0.04980434558978432
+        },
+        {
+          "prior_low_idx": 4629,
+          "prior_low_date": "2011-06-15",
+          "low_idx": 4636,
+          "low_date": "2011-06-24",
+          "price_change": -0.0016532757835190778,
+          "macd_change": 0.2203451468566584,
+          "forward_return_10d": 0.040690826917847284
+        },
+        {
+          "prior_low_idx": 4689,
+          "prior_low_date": "2011-09-09",
+          "low_idx": 4698,
+          "low_date": "2011-09-22",
+          "price_change": -0.026397494883790604,
+          "macd_change": 0.33090987036824515,
+          "forward_return_10d": 0.03216371817992905
+        },
+        {
+          "prior_low_idx": 5785,
+          "prior_low_date": "2016-01-20",
+          "low_idx": 5801,
+          "low_date": "2016-02-11",
+          "price_change": -0.015028243349625266,
+          "macd_change": 1.6214093666715144,
+          "forward_return_10d": 0.06688174388448914
+        },
+        {
+          "prior_low_idx": 6485,
+          "prior_low_date": "2018-10-29",
+          "low_idx": 6503,
+          "low_date": "2018-11-23",
+          "price_change": -0.0023117766445327663,
+          "macd_change": 2.4156644622187855,
+          "forward_return_10d": 0.0031149376038698954
+        },
+        {
+          "prior_low_idx": 7302,
+          "prior_low_date": "2022-01-27",
+          "low_idx": 7320,
+          "low_date": "2022-02-23",
+          "price_change": -0.02154247805797123,
+          "macd_change": 2.397833907012682,
+          "forward_return_10d": 0.012939901166300147
+        },
+        {
+          "prior_low_idx": 7380,
+          "prior_low_date": "2022-05-19",
+          "low_idx": 7400,
+          "low_date": "2022-06-17",
+          "price_change": -0.06059674066992769,
+          "macd_change": 0.4352895855447514,
+          "forward_return_10d": 0.04400592234224465
+        },
+        {
+          "prior_low_idx": 7472,
+          "prior_low_date": "2022-09-30",
+          "low_idx": 7480,
+          "low_date": "2022-10-12",
+          "price_change": -0.0017358058399152296,
+          "macd_change": 2.143064778617884,
+          "forward_return_10d": 0.07140450872056747
+        },
+        {
+          "prior_low_idx": 7724,
+          "prior_low_date": "2023-10-03",
+          "low_idx": 7742,
+          "low_date": "2023-10-27",
+          "price_change": -0.025878231829213904,
+          "macd_change": 0.07190350394745337,
+          "forward_return_10d": 0.0728791107664454
+        }
+      ],
+      "bearish_events_detail": [
+        {
+          "prior_high_idx": 96,
+          "prior_high_date": "1993-06-17",
+          "high_idx": 103,
+          "high_date": "1993-06-28",
+          "price_change": 0.002074688796680498,
+          "macd_change": -0.10444643896090611,
+          "forward_return_10d": -0.008281573498964804
+        },
+        {
+          "prior_high_idx": 525,
+          "prior_high_date": "1995-02-28",
+          "high_idx": 537,
+          "high_date": "1995-03-16",
+          "price_change": 0.015620019126554032,
+          "macd_change": -0.08191570212140675,
+          "forward_return_10d": 0.010671688637790333
+        },
+        {
+          "prior_high_idx": 621,
+          "prior_high_date": "1995-07-17",
+          "high_idx": 629,
+          "high_date": "1995-07-27",
+          "price_change": 0.005267535347934572,
+          "macd_change": -0.16792750614293084,
+          "forward_return_10d": -0.012134583563154992
+        },
+        {
+          "prior_high_idx": 673,
+          "prior_high_date": "1995-09-28",
+          "high_idx": 688,
+          "high_date": "1995-10-19",
+          "price_change": 0.010133333333333333,
+          "macd_change": -0.19452491649363424,
+          "forward_return_10d": -0.0005279831045406547
+        },
+        {
+          "prior_high_idx": 932,
+          "prior_high_date": "1996-10-07",
+          "high_idx": 941,
+          "high_date": "1996-10-18",
+          "price_change": 0.011315731084978922,
+          "macd_change": -0.0006813831750775989,
+          "forward_return_10d": -0.008775778850372971
+        },
+        {
+          "prior_high_idx": 1109,
+          "prior_high_date": "1997-06-19",
+          "high_idx": 1127,
+          "high_date": "1997-07-16",
+          "price_change": 0.03896103896103896,
+          "macd_change": -0.3537385386237162,
+          "forward_return_10d": 0.017666666666666667
+        },
+        {
+          "prior_high_idx": 1127,
+          "prior_high_date": "1997-07-16",
+          "high_idx": 1142,
+          "high_date": "1997-08-06",
+          "price_change": 0.024333333333333332,
+          "macd_change": -0.09739943265442719,
+          "forward_return_10d": -0.01854864952814839
+        },
+        {
+          "prior_high_idx": 1246,
+          "prior_high_date": "1998-01-05",
+          "high_idx": 1256,
+          "high_date": "1998-01-20",
+          "price_change": 0.0009587727708533077,
+          "macd_change": -0.22805733662188743,
+          "forward_return_10d": 0.028735632183908046
+        },
+        {
+          "prior_high_idx": 1300,
+          "prior_high_date": "1998-03-24",
+          "high_idx": 1308,
+          "high_date": "1998-04-03",
+          "price_change": 0.018371961560203504,
+          "macd_change": -0.1657259987602231,
+          "forward_return_10d": -0.0030530113794060504
+        },
+        {
+          "prior_high_idx": 1308,
+          "prior_high_date": "1998-04-03",
+          "high_idx": 1320,
+          "high_date": "1998-04-22",
+          "price_change": 0.004440743824590619,
+          "macd_change": -0.5869568086537811,
+          "forward_return_10d": -0.025421387123514782
+        },
+        {
+          "prior_high_idx": 1508,
+          "prior_high_date": "1999-01-20",
+          "high_idx": 1515,
+          "high_date": "1999-01-29",
+          "price_change": 0.011639425458147598,
+          "macd_change": -0.35213055589082387,
+          "forward_return_10d": -0.031578947368421054
+        },
+        {
+          "prior_high_idx": 1564,
+          "prior_high_date": "1999-04-12",
+          "high_idx": 1575,
+          "high_date": "1999-04-27",
+          "price_change": 0.0068775790921595595,
+          "macd_change": -0.24016002632541245,
+          "forward_return_10d": -0.011384335154826957
+        },
+        {
+          "prior_high_idx": 1575,
+          "prior_high_date": "1999-04-27",
+          "high_idx": 1587,
+          "high_date": "1999-05-13",
+          "price_change": 0.0006830601092896175,
+          "macd_change": -0.6379102798422309,
+          "forward_return_10d": -0.0639362912400455
+        },
+        {
+          "prior_high_idx": 1719,
+          "prior_high_date": "1999-11-18",
+          "high_idx": 1729,
+          "high_date": "1999-12-03",
+          "price_change": 0.008545135845749343,
+          "macd_change": -0.7506865761657195,
+          "forward_return_10d": -0.008038235933087117
+        },
+        {
+          "prior_high_idx": 1729,
+          "prior_high_date": "1999-12-03",
+          "high_idx": 1748,
+          "high_date": "1999-12-31",
+          "price_change": 0.021073213121877037,
+          "macd_change": -0.09481481085563814,
+          "forward_return_10d": 0.0006382978723404255
+        },
+        {
+          "prior_high_idx": 1748,
+          "prior_high_date": "1999-12-31",
+          "high_idx": 1760,
+          "high_date": "2000-01-19",
+          "price_change": 0.000851063829787234,
+          "macd_change": -0.8736683899391835,
+          "forward_return_10d": -0.04039115646258504
+        },
+        {
+          "prior_high_idx": 1865,
+          "prior_high_date": "2000-06-19",
+          "high_idx": 1883,
+          "high_date": "2000-07-14",
+          "price_change": 0.01873289833719217,
+          "macd_change": -0.10524309035380952,
+          "forward_return_10d": -0.060537190082644625
+        },
+        {
+          "prior_high_idx": 2224,
+          "prior_high_date": "2001-11-26",
+          "high_idx": 2231,
+          "high_date": "2001-12-05",
+          "price_change": 0.012680076053079211,
+          "macd_change": -0.43405884031190567,
+          "forward_return_10d": -0.013713803998517533
+        },
+        {
+          "prior_high_idx": 2231,
+          "prior_high_date": "2001-12-05",
+          "high_idx": 2251,
+          "high_date": "2002-01-04",
+          "price_change": 0.0018739456375103142,
+          "macd_change": -0.623671531167787,
+          "forward_return_10d": -0.03800375035132381
+        },
+        {
+          "prior_high_idx": 2463,
+          "prior_high_date": "2002-11-06",
+          "high_idx": 2478,
+          "high_date": "2002-11-27",
+          "price_change": 0.013327577940324261,
+          "macd_change": -0.14968755467187123,
+          "forward_return_10d": -0.037229552202765165
+        },
+        {
+          "prior_high_idx": 2593,
+          "prior_high_date": "2003-05-15",
+          "high_idx": 2629,
+          "high_date": "2003-07-08",
+          "price_change": 0.06350542400133223,
+          "macd_change": -0.839338159171831,
+          "forward_return_10d": -0.01957492167142495
+        },
+        {
+          "prior_high_idx": 2672,
+          "prior_high_date": "2003-09-08",
+          "high_idx": 2680,
+          "high_date": "2003-09-18",
+          "price_change": 0.008873439103369539,
+          "macd_change": -0.09587074283146535,
+          "forward_return_10d": -0.020554508195435917
+        },
+        {
+          "prior_high_idx": 2680,
+          "prior_high_date": "2003-09-18",
+          "high_idx": 2700,
+          "high_date": "2003-10-16",
+          "price_change": 0.007743835562183906,
+          "macd_change": -0.054267754367316456,
+          "forward_return_10d": -9.488792223677829e-05
+        },
+        {
+          "prior_high_idx": 2700,
+          "prior_high_date": "2003-10-16",
+          "high_idx": 2715,
+          "high_date": "2003-11-06",
+          "price_change": 0.009391877709661777,
+          "macd_change": -0.171595819045109,
+          "forward_return_10d": -0.024624085610983632
+        },
+        {
+          "prior_high_idx": 2768,
+          "prior_high_date": "2004-01-26",
+          "high_idx": 2783,
+          "high_date": "2004-02-17",
+          "price_change": 0.0025890689156139735,
+          "macd_change": -0.7051842211445916,
+          "forward_return_10d": -0.005939526752925171
+        },
+        {
+          "prior_high_idx": 2783,
+          "prior_high_date": "2004-02-17",
+          "high_idx": 2796,
+          "high_date": "2004-03-05",
+          "price_change": 0.0018076877660551899,
+          "macd_change": -0.3268911399449905,
+          "forward_return_10d": -0.045712320161340914
+        },
+        {
+          "prior_high_idx": 2928,
+          "prior_high_date": "2004-09-14",
+          "high_idx": 2944,
+          "high_date": "2004-10-06",
+          "price_change": 0.008974103556240167,
+          "macd_change": -0.2989179797357622,
+          "forward_return_10d": -0.036274883598178924
+        },
+        {
+          "prior_high_idx": 2971,
+          "prior_high_date": "2004-11-12",
+          "high_idx": 2984,
+          "high_date": "2004-12-02",
+          "price_change": 0.004545844863755354,
+          "macd_change": -0.34650790944718324,
+          "forward_return_10d": 0.012402545083627958
+        },
+        {
+          "prior_high_idx": 2984,
+          "prior_high_date": "2004-12-02",
+          "high_idx": 2993,
+          "high_date": "2004-12-15",
+          "price_change": 0.01298915108170146,
+          "macd_change": -0.07844177594776625,
+          "forward_return_10d": 0.002068166823960869
+        },
+        {
+          "prior_high_idx": 2993,
+          "prior_high_date": "2004-12-15",
+          "high_idx": 3002,
+          "high_date": "2004-12-29",
+          "price_change": 0.0039709080727996235,
+          "macd_change": -0.20164198601550254,
+          "forward_return_10d": -0.0229894602957786
+        },
+        {
+          "prior_high_idx": 3109,
+          "prior_high_date": "2005-06-02",
+          "high_idx": 3123,
+          "high_date": "2005-06-22",
+          "price_change": 0.006707498710375843,
+          "macd_change": -0.09787826742619643,
+          "forward_return_10d": -0.01332567862670647
+        },
+        {
+          "prior_high_idx": 3232,
+          "prior_high_date": "2005-11-25",
+          "high_idx": 3245,
+          "high_date": "2005-12-14",
+          "price_change": 0.005348858018302986,
+          "macd_change": -0.46333401211013836,
+          "forward_return_10d": -0.020499140655928567
+        },
+        {
+          "prior_high_idx": 3463,
+          "prior_high_date": "2006-10-26",
+          "high_idx": 3482,
+          "high_date": "2006-11-22",
+          "price_change": 0.015420085087705603,
+          "macd_change": -0.25469550582874945,
+          "forward_return_10d": 0.0017031329568733473
+        },
+        {
+          "prior_high_idx": 3482,
+          "prior_high_date": "2006-11-22",
+          "high_idx": 3490,
+          "high_date": "2006-12-05",
+          "price_change": 0.006954270084251429,
+          "macd_change": -0.25994361049791337,
+          "forward_return_10d": 0.002255160944208316
+        },
+        {
+          "prior_high_idx": 3505,
+          "prior_high_date": "2006-12-27",
+          "high_idx": 3515,
+          "high_date": "2007-01-12",
+          "price_change": 0.005122524836621952,
+          "macd_change": -0.2902807237773004,
+          "forward_return_10d": -0.008307751995046114
+        },
+        {
+          "prior_high_idx": 3602,
+          "prior_high_date": "2007-05-18",
+          "high_idx": 3612,
+          "high_date": "2007-06-04",
+          "price_change": 0.00969735967552427,
+          "macd_change": -0.09348464182599514,
+          "forward_return_10d": -0.0078520873844377
+        },
+        {
+          "prior_high_idx": 3845,
+          "prior_high_date": "2008-05-06",
+          "high_idx": 3854,
+          "high_date": "2008-05-19",
+          "price_change": 0.007039774575968412,
+          "macd_change": -0.19391163773499898,
+          "forward_return_10d": -0.034673237385899086
+        },
+        {
+          "prior_high_idx": 4099,
+          "prior_high_date": "2009-05-08",
+          "high_idx": 4115,
+          "high_date": "2009-06-02",
+          "price_change": 0.02011179877041866,
+          "macd_change": -0.8325853405610388,
+          "forward_return_10d": -0.03384290074973985
+        },
+        {
+          "prior_high_idx": 4166,
+          "prior_high_date": "2009-08-13",
+          "high_idx": 4176,
+          "high_date": "2009-08-27",
+          "price_change": 0.01801714912427966,
+          "macd_change": -0.3210795265626416,
+          "forward_return_10d": 0.013249469022924707
+        },
+        {
+          "prior_high_idx": 4176,
+          "prior_high_date": "2009-08-27",
+          "high_idx": 4189,
+          "high_date": "2009-09-16",
+          "price_change": 0.03791100687715384,
+          "macd_change": -0.09945086306969131,
+          "forward_return_10d": -0.016120046234187863
+        },
+        {
+          "prior_high_idx": 4189,
+          "prior_high_date": "2009-09-16",
+          "high_idx": 4212,
+          "high_date": "2009-10-19",
+          "price_change": 0.0230152928412862,
+          "macd_change": -0.2796518205916243,
+          "forward_return_10d": -0.04982239889870987
+        },
+        {
+          "prior_high_idx": 4212,
+          "prior_high_date": "2009-10-19",
+          "high_idx": 4233,
+          "high_date": "2009-11-17",
+          "price_change": 0.014117819559504795,
+          "macd_change": -0.3311417025157226,
+          "forward_return_10d": -0.0008083019656072858
+        },
+        {
+          "prior_high_idx": 4239,
+          "prior_high_date": "2009-11-25",
+          "high_idx": 4251,
+          "high_date": "2009-12-14",
+          "price_change": 0.004399402991985848,
+          "macd_change": -0.4754191011460023,
+          "forward_return_10d": 0.006167826897928634
+        },
+        {
+          "prior_high_idx": 4334,
+          "prior_high_date": "2010-04-15",
+          "high_idx": 4340,
+          "high_date": "2010-04-23",
+          "price_change": 0.0042872177355209925,
+          "macd_change": -0.19187481884213753,
+          "forward_return_10d": -0.08661025887705533
+        },
+        {
+          "prior_high_idx": 4557,
+          "prior_high_date": "2011-03-03",
+          "high_idx": 4581,
+          "high_date": "2011-04-06",
+          "price_change": 0.0014235591493856814,
+          "macd_change": -0.06018523101926121,
+          "forward_return_10d": -0.00418971676829679
+        },
+        {
+          "prior_high_idx": 4783,
+          "prior_high_date": "2012-01-25",
+          "high_idx": 4808,
+          "high_date": "2012-03-01",
+          "price_change": 0.03900119390587712,
+          "macd_change": -0.2456486851537818,
+          "forward_return_10d": 0.021709181630114666
+        },
+        {
+          "prior_high_idx": 4808,
+          "prior_high_date": "2012-03-01",
+          "high_idx": 4830,
+          "high_date": "2012-04-02",
+          "price_change": 0.029840998604850528,
+          "macd_change": -0.32555645798510113,
+          "forward_return_10d": -0.01945850661375576
+        },
+        {
+          "prior_high_idx": 4960,
+          "prior_high_date": "2012-10-05",
+          "high_idx": 4968,
+          "high_date": "2012-10-17",
+          "price_change": 0.00041054850721451296,
+          "macd_change": -0.4696778710282672,
+          "forward_return_10d": -0.031737342588940634
+        },
+        {
+          "prior_high_idx": 5067,
+          "prior_high_date": "2013-03-14",
+          "high_idx": 5079,
+          "high_date": "2013-04-02",
+          "price_change": 0.0005743099542742573,
+          "macd_change": -0.552170873736145,
+          "forward_return_10d": 0.0037622516919721375
+        },
+        {
+          "prior_high_idx": 5156,
+          "prior_high_date": "2013-07-22",
+          "high_idx": 5165,
+          "high_date": "2013-08-02",
+          "price_change": 0.00855455426691556,
+          "macd_change": -0.13960084015440088,
+          "forward_return_10d": -0.029950249830876918
+        },
+        {
+          "prior_high_idx": 5226,
+          "prior_high_date": "2013-10-29",
+          "high_idx": 5247,
+          "high_date": "2013-11-27",
+          "price_change": 0.022294953937266285,
+          "macd_change": -0.1808032667563566,
+          "forward_return_10d": -0.016508338753214016
+        },
+        {
+          "prior_high_idx": 5247,
+          "prior_high_date": "2013-11-27",
+          "high_idx": 5254,
+          "high_date": "2013-12-09",
+          "price_change": 0.0015459296976886034,
+          "macd_change": -0.5439864864992501,
+          "forward_return_10d": 0.006229354580118318
+        },
+        {
+          "prior_high_idx": 5323,
+          "prior_high_date": "2014-03-20",
+          "high_idx": 5332,
+          "high_date": "2014-04-02",
+          "price_change": 0.006018667817909454,
+          "macd_change": -0.40401345843403647,
+          "forward_return_10d": -0.014559508306377863
+        },
+        {
+          "prior_high_idx": 5379,
+          "prior_high_date": "2014-06-10",
+          "high_idx": 5386,
+          "high_date": "2014-06-19",
+          "price_change": 0.004498924317812795,
+          "macd_change": -0.25089501206599607,
+          "forward_return_10d": 0.008754078064457358
+        },
+        {
+          "prior_high_idx": 5386,
+          "prior_high_date": "2014-06-19",
+          "high_idx": 5396,
+          "high_date": "2014-07-03",
+          "price_change": 0.008754078064457358,
+          "macd_change": -0.2840354056590968,
+          "forward_return_10d": -0.002472201018766694
+        },
+        {
+          "prior_high_idx": 5396,
+          "prior_high_date": "2014-07-03",
+          "high_idx": 5410,
+          "high_date": "2014-07-24",
+          "price_change": 0.00227041854273943,
+          "macd_change": -0.4444721474130233,
+          "forward_return_10d": -0.03835889932701556
+        },
+        {
+          "prior_high_idx": 5440,
+          "prior_high_date": "2014-09-05",
+          "high_idx": 5449,
+          "high_date": "2014-09-18",
+          "price_change": 0.0035304396186782265,
+          "macd_change": -0.475216306294584,
+          "forward_return_10d": -0.03686454351106069
+        },
+        {
+          "prior_high_idx": 5504,
+          "prior_high_date": "2014-12-05",
+          "high_idx": 5519,
+          "high_date": "2014-12-29",
+          "price_change": 0.0034615443303034855,
+          "macd_change": -1.076186076526426,
+          "forward_return_10d": -0.03181295204491313
+        },
+        {
+          "prior_high_idx": 5526,
+          "prior_high_date": "2015-01-08",
+          "high_idx": 5535,
+          "high_date": "2015-01-22",
+          "price_change": 0.0009714046282672818,
+          "macd_change": -0.361907370378276,
+          "forward_return_10d": 9.698696302723705e-05
+        },
+        {
+          "prior_high_idx": 5835,
+          "prior_high_date": "2016-04-01",
+          "high_idx": 5848,
+          "high_date": "2016-04-20",
+          "price_change": 0.015368296746136208,
+          "macd_change": -0.36855957832258923,
+          "forward_return_10d": -0.02422661327373715
+        },
+        {
+          "prior_high_idx": 5913,
+          "prior_high_date": "2016-07-22",
+          "high_idx": 5929,
+          "high_date": "2016-08-15",
+          "price_change": 0.008515884726327612,
+          "macd_change": -0.7908977984608043,
+          "forward_return_10d": -0.003331944587799571
+        },
+        {
+          "prior_high_idx": 5935,
+          "prior_high_date": "2016-08-23",
+          "high_idx": 5944,
+          "high_date": "2016-09-06",
+          "price_change": 0.0002739989873465707,
+          "macd_change": -0.6555498035993708,
+          "forward_return_10d": -0.025612932665010954
+        },
+        {
+          "prior_high_idx": 6029,
+          "prior_high_date": "2017-01-06",
+          "high_idx": 6041,
+          "high_date": "2017-01-25",
+          "price_change": 0.010386869154594879,
+          "macd_change": -0.30928662629145265,
+          "forward_return_10d": -0.001437477982864853
+        },
+        {
+          "prior_high_idx": 6130,
+          "prior_high_date": "2017-06-02",
+          "high_idx": 6141,
+          "high_date": "2017-06-19",
+          "price_change": 0.0020068210543418997,
+          "macd_change": -0.13331153305480825,
+          "forward_return_10d": -0.010013884213072215
+        },
+        {
+          "prior_high_idx": 6175,
+          "prior_high_date": "2017-08-07",
+          "high_idx": 6201,
+          "high_date": "2017-09-13",
+          "price_change": 0.009279070065218751,
+          "macd_change": -0.13309989888279006,
+          "forward_return_10d": -0.0004796543073341059
+        },
+        {
+          "prior_high_idx": 6388,
+          "prior_high_date": "2018-06-12",
+          "high_idx": 6418,
+          "high_date": "2018-07-25",
+          "price_change": 0.018248946267204295,
+          "macd_change": -0.33592231805874917,
+          "forward_return_10d": 0.005105389386274451
+        },
+        {
+          "prior_high_idx": 6418,
+          "prior_high_date": "2018-07-25",
+          "high_idx": 6427,
+          "high_date": "2018-08-07",
+          "price_change": 0.005527892513141438,
+          "macd_change": -0.018893538225654538,
+          "forward_return_10d": 0.002661285108761221
+        },
+        {
+          "prior_high_idx": 6443,
+          "prior_high_date": "2018-08-29",
+          "high_idx": 6458,
+          "high_date": "2018-09-20",
+          "price_change": 0.0072045269204961005,
+          "macd_change": -0.6101414059857575,
+          "forward_return_10d": -0.014101724641370625
+        },
+        {
+          "prior_high_idx": 6568,
+          "prior_high_date": "2019-03-01",
+          "high_idx": 6582,
+          "high_date": "2019-03-21",
+          "price_change": 0.015369792996976864,
+          "macd_change": -1.2567638472293652,
+          "forward_return_10d": 0.008604578354653194
+        },
+        {
+          "prior_high_idx": 6582,
+          "prior_high_date": "2019-03-21",
+          "high_idx": 6612,
+          "high_date": "2019-05-03",
+          "price_change": 0.03266247825704368,
+          "macd_change": -0.1590647170624493,
+          "forward_return_10d": -0.027854309000469653
+        },
+        {
+          "prior_high_idx": 6612,
+          "prior_high_date": "2019-05-03",
+          "high_idx": 6645,
+          "high_date": "2019-06-20",
+          "price_change": 0.006223809066636221,
+          "macd_change": -0.43814906396079323,
+          "forward_return_10d": 0.008787961306852995
+        },
+        {
+          "prior_high_idx": 6661,
+          "prior_high_date": "2019-07-15",
+          "high_idx": 6670,
+          "high_date": "2019-07-26",
+          "price_change": 0.004189558655444721,
+          "macd_change": -0.8096790100992735,
+          "forward_return_10d": -0.03440288173395536
+        },
+        {
+          "prior_high_idx": 6791,
+          "prior_high_date": "2020-01-17",
+          "high_idx": 6812,
+          "high_date": "2020-02-19",
+          "price_change": 0.01924983851747551,
+          "macd_change": -0.25958400472126186,
+          "forward_return_10d": -0.07530889419553566
+        },
+        {
+          "prior_high_idx": 6888,
+          "prior_high_date": "2020-06-08",
+          "high_idx": 6919,
+          "high_date": "2020-07-22",
+          "price_change": 0.011324173905620995,
+          "macd_change": -3.9152084916152035,
+          "forward_return_10d": 0.016061923255467413
+        },
+        {
+          "prior_high_idx": 7016,
+          "prior_high_date": "2020-12-08",
+          "high_idx": 7023,
+          "high_date": "2020-12-17",
+          "price_change": 0.00559196242686668,
+          "macd_change": -1.3354332305309526,
+          "forward_return_10d": -0.009268165108431523
+        },
+        {
+          "prior_high_idx": 7023,
+          "prior_high_date": "2020-12-17",
+          "high_idx": 7037,
+          "high_date": "2021-01-08",
+          "price_change": 0.024231731592220085,
+          "macd_change": -0.751807518021792,
+          "forward_return_10d": 0.008209633328018412
+        },
+        {
+          "prior_high_idx": 7061,
+          "prior_high_date": "2021-02-12",
+          "high_idx": 7083,
+          "high_date": "2021-03-17",
+          "price_change": 0.01176649079265178,
+          "macd_change": -1.511954457975662,
+          "forward_return_10d": -0.0023410944230406404
+        },
+        {
+          "prior_high_idx": 7104,
+          "prior_high_date": "2021-04-16",
+          "high_idx": 7113,
+          "high_date": "2021-04-29",
+          "price_change": 0.006710414915010675,
+          "macd_change": -0.9706678187463353,
+          "forward_return_10d": -0.02328238545955015
+        },
+        {
+          "prior_high_idx": 7113,
+          "prior_high_date": "2021-04-29",
+          "high_idx": 7119,
+          "high_date": "2021-05-07",
+          "price_change": 0.004904055541033524,
+          "macd_change": -1.2013255204901725,
+          "forward_return_10d": -0.01700936406432954
+        },
+        {
+          "prior_high_idx": 7119,
+          "prior_high_date": "2021-05-07",
+          "high_idx": 7144,
+          "high_date": "2021-06-14",
+          "price_change": 0.007438677828009024,
+          "macd_change": -1.8171787683796765,
+          "forward_return_10d": 0.0051968005557261904
+        },
+        {
+          "prior_high_idx": 7163,
+          "prior_high_date": "2021-07-12",
+          "high_idx": 7173,
+          "high_date": "2021-07-26",
+          "price_change": 0.009014373941724328,
+          "macd_change": -0.67254603415563,
+          "forward_return_10d": 0.0025169287034429947
+        },
+        {
+          "prior_high_idx": 7247,
+          "prior_high_date": "2021-11-08",
+          "high_idx": 7255,
+          "high_date": "2021-11-18",
+          "price_change": 0.0017060506323808735,
+          "macd_change": -1.1363181723891103,
+          "forward_return_10d": -0.034722068373588474
+        },
+        {
+          "prior_high_idx": 7255,
+          "prior_high_date": "2021-11-18",
+          "high_idx": 7270,
+          "high_date": "2021-12-10",
+          "price_change": 0.0021501271462858935,
+          "macd_change": -3.828196202947595,
+          "forward_return_10d": 0.013850574980901392
+        },
+        {
+          "prior_high_idx": 7608,
+          "prior_high_date": "2023-04-18",
+          "high_idx": 7616,
+          "high_date": "2023-04-28",
+          "price_change": 0.004152486072730726,
+          "macd_change": -1.4432852474251945,
+          "forward_return_10d": -0.010434439483361965
+        },
+        {
+          "prior_high_idx": 7616,
+          "prior_high_date": "2023-04-28",
+          "high_idx": 7630,
+          "high_date": "2023-05-18",
+          "price_change": 0.007934071523231674,
+          "macd_change": -0.7236835037508058,
+          "forward_return_10d": 0.020728483681216343
+        },
+        {
+          "prior_high_idx": 7649,
+          "prior_high_date": "2023-06-15",
+          "high_idx": 7660,
+          "high_date": "2023-07-03",
+          "price_change": 0.0026886634093898575,
+          "macd_change": -1.3530865077412386,
+          "forward_return_10d": 0.023434493107637535
+        },
+        {
+          "prior_high_idx": 7784,
+          "prior_high_date": "2023-12-28",
+          "high_idx": 7834,
+          "high_date": "2024-03-12",
+          "price_change": 0.08410083419023778,
+          "macd_change": -1.3021355045706287,
+          "forward_return_10d": 0.0039281089566884034
+        },
+        {
+          "prior_high_idx": 7834,
+          "prior_high_date": "2024-03-12",
+          "high_idx": 7845,
+          "high_date": "2024-03-27",
+          "price_change": 0.012364939144369314,
+          "macd_change": -0.6061729885211662,
+          "forward_return_10d": -0.009882032759979826
+        },
+        {
+          "prior_high_idx": 7987,
+          "prior_high_date": "2024-10-18",
+          "high_idx": 8003,
+          "high_date": "2024-11-11",
+          "price_change": 0.024239180039346737,
+          "macd_change": -0.5913922348800043,
+          "forward_return_10d": -0.0020542127875765384
+        },
+        {
+          "prior_high_idx": 8131,
+          "prior_high_date": "2025-05-19",
+          "high_idx": 8148,
+          "high_date": "2025-06-12",
+          "price_change": 0.014961796720754376,
+          "macd_change": -2.8556716790637893,
+          "forward_return_10d": 0.01848442756858178
+        },
+        {
+          "prior_high_idx": 8148,
+          "prior_high_date": "2025-06-12",
+          "high_idx": 8177,
+          "high_date": "2025-07-25",
+          "price_change": 0.05523805480072464,
+          "macd_change": -0.7455339879513758,
+          "forward_return_10d": 0.00012559581370280026
+        },
+        {
+          "prior_high_idx": 8177,
+          "prior_high_date": "2025-07-25",
+          "high_idx": 8191,
+          "high_date": "2025-08-14",
+          "price_change": 0.012321514553307137,
+          "macd_change": -2.1642245846808237,
+          "forward_return_10d": 0.006155470389929422
+        },
+        {
+          "prior_high_idx": 8217,
+          "prior_high_date": "2025-09-22",
+          "high_idx": 8229,
+          "high_date": "2025-10-08",
+          "price_change": 0.00940249271727161,
+          "macd_change": -0.8087738407508596,
+          "forward_return_10d": -0.007888751725797621
+        },
+        {
+          "prior_high_idx": 8274,
+          "prior_high_date": "2025-12-11",
+          "high_idx": 8283,
+          "high_date": "2025-12-24",
+          "price_change": 0.0017557670860049554,
+          "macd_change": -1.4284542137530707,
+          "forward_return_10d": 0.005344886026982494
+        },
+        {
+          "prior_high_idx": 8294,
+          "prior_high_date": "2026-01-12",
+          "high_idx": 8304,
+          "high_date": "2026-01-27",
+          "price_change": 0.0004747354603156012,
+          "macd_change": -1.4744867477161279,
+          "forward_return_10d": -0.00484549765561951
+        },
+        {
+          "prior_high_idx": 8379,
+          "prior_high_date": "2026-05-14",
+          "high_idx": 8391,
+          "high_date": "2026-06-02",
+          "price_change": 0.015237211695823231,
+          "macd_change": -2.5840379143635346,
+          "forward_return_10d": -0.0121647644657867
+        },
+        {
+          "prior_high_idx": 8400,
+          "prior_high_date": "2026-06-15",
+          "high_idx": 8417,
+          "high_date": "2026-07-10",
+          "price_change": 0.00015896972095800685,
+          "macd_change": -1.3279738760569444,
+          "forward_return_10d": -0.0212199738687557
+        }
+      ]
+    },
+    "QQQ": {
+      "symbol": "QQQ",
+      "bars": 6898,
+      "years": 27.4,
+      "swing_lows_found": 409,
+      "swing_highs_found": 396,
+      "unconditional_baseline": {
+        "n": 6863,
+        "mean_forward_return": 0.004892996290120643,
+        "median_forward_return": 0.008342414559514354,
+        "share_positive_forward": 0.5940550779542474
+      },
+      "naive_bullish_divergence": {
+        "count": 26,
+        "per_year": 0.9498405334879675,
+        "mean_forward_return": 0.04920303800613679,
+        "median_forward_return": 0.04563782131184704,
+        "share_positive_forward": 0.8076923076923077
+      },
+      "naive_bearish_divergence": {
+        "count": 76,
+        "per_year": 2.776456944041751,
+        "mean_forward_return": -0.016931520425961973,
+        "median_forward_return": -0.010675840522847629,
+        "share_positive_forward": 0.32894736842105265
+      },
+      "bullish_events_detail": [
+        {
+          "prior_low_idx": 279,
+          "prior_low_date": "2000-04-14",
+          "low_idx": 296,
+          "low_date": "2000-05-10",
+          "price_change": -0.007776049766718507,
+          "macd_change": 0.9277605232209112,
+          "forward_return_10d": -0.003134796238244514
+        },
+        {
+          "prior_low_idx": 296,
+          "prior_low_date": "2000-05-10",
+          "low_idx": 305,
+          "low_date": "2000-05-23",
+          "price_change": -0.06191222570532915,
+          "macd_change": 0.06425028015236478,
+          "forward_return_10d": 0.252297410192147
+        },
+        {
+          "prior_low_idx": 416,
+          "prior_low_date": "2000-10-30",
+          "low_idx": 425,
+          "low_date": "2000-11-10",
+          "price_change": -0.06533686138815388,
+          "macd_change": 0.12758366324537462,
+          "forward_return_10d": -0.03048780487804878
+        },
+        {
+          "prior_low_idx": 437,
+          "prior_low_date": "2000-11-29",
+          "low_idx": 452,
+          "low_date": "2000-12-20",
+          "price_change": -0.11444885799404171,
+          "macd_change": 0.706641065198724,
+          "forward_return_10d": 0.0159798149705635
+        },
+        {
+          "prior_low_idx": 575,
+          "prior_low_date": "2001-06-19",
+          "low_idx": 589,
+          "low_date": "2001-07-10",
+          "price_change": -0.03156383798318359,
+          "macd_change": 0.164684670890189,
+          "forward_return_10d": -0.008641937632619598
+        },
+        {
+          "prior_low_idx": 741,
+          "prior_low_date": "2002-02-21",
+          "low_idx": 775,
+          "low_date": "2002-04-11",
+          "price_change": -0.014336904085998865,
+          "macd_change": 0.34967643807320314,
+          "forward_return_10d": -0.017575813062263256
+        },
+        {
+          "prior_low_idx": 793,
+          "prior_low_date": "2002-05-07",
+          "low_idx": 817,
+          "low_date": "2002-06-11",
+          "price_change": -0.04320563224750925,
+          "macd_change": 0.4672745899417663,
+          "forward_return_10d": -0.07283321437293515
+        },
+        {
+          "prior_low_idx": 837,
+          "prior_low_date": "2002-07-10",
+          "low_idx": 848,
+          "low_date": "2002-07-25",
+          "price_change": -0.06903764204460434,
+          "macd_change": 0.13027870762737592,
+          "forward_return_10d": 0.05932582898086376
+        },
+        {
+          "prior_low_idx": 848,
+          "prior_low_date": "2002-07-25",
+          "low_idx": 855,
+          "low_date": "2002-08-05",
+          "price_change": -0.03640447037943294,
+          "macd_change": 0.10501253858320325,
+          "forward_return_10d": 0.18003724845394897
+        },
+        {
+          "prior_low_idx": 1489,
+          "prior_low_date": "2005-02-09",
+          "low_idx": 1497,
+          "low_date": "2005-02-22",
+          "price_change": -0.005928354003900428,
+          "macd_change": 0.13905094280305264,
+          "forward_return_10d": 0.02141504279203168
+        },
+        {
+          "prior_low_idx": 2233,
+          "prior_low_date": "2008-01-25",
+          "low_idx": 2241,
+          "low_date": "2008-02-06",
+          "price_change": -0.026824284158947737,
+          "macd_change": 0.3037886613471983,
+          "forward_return_10d": 0.016584888149889707
+        },
+        {
+          "prior_low_idx": 2251,
+          "prior_low_date": "2008-02-21",
+          "low_idx": 2263,
+          "low_date": "2008-03-10",
+          "price_change": -0.05193019559877555,
+          "macd_change": 0.02597807931034879,
+          "forward_return_10d": 0.08652456749273141
+        },
+        {
+          "prior_low_idx": 2416,
+          "prior_low_date": "2008-10-15",
+          "low_idx": 2424,
+          "low_date": "2008-10-27",
+          "price_change": -0.06241829488893528,
+          "macd_change": 0.18886411503364897,
+          "forward_return_10d": 0.07249912460743621
+        },
+        {
+          "prior_low_idx": 2424,
+          "prior_low_date": "2008-10-27",
+          "low_idx": 2442,
+          "low_date": "2008-11-20",
+          "price_change": -0.10909728162603695,
+          "macd_change": 0.8878978344851696,
+          "forward_return_10d": 0.13223791622605247
+        },
+        {
+          "prior_low_idx": 2821,
+          "prior_low_date": "2010-05-26",
+          "low_idx": 2830,
+          "low_date": "2010-06-09",
+          "price_change": -0.008597309084977559,
+          "macd_change": 0.22556950983759094,
+          "forward_return_10d": 0.050889994472084026
+        },
+        {
+          "prior_low_idx": 2830,
+          "prior_low_date": "2010-06-09",
+          "low_idx": 2847,
+          "low_date": "2010-07-02",
+          "price_change": -0.030807815689705455,
+          "macd_change": 0.04246204037925594,
+          "forward_return_10d": 0.052978571587682884
+        },
+        {
+          "prior_low_idx": 3176,
+          "prior_low_date": "2011-10-20",
+          "low_idx": 3184,
+          "low_date": "2011-11-01",
+          "price_change": -0.002650671946888952,
+          "macd_change": 0.014482615719003888,
+          "forward_return_10d": 0.029943346607497853
+        },
+        {
+          "prior_low_idx": 3321,
+          "prior_low_date": "2012-05-18",
+          "low_idx": 3330,
+          "low_date": "2012-06-01",
+          "price_change": -0.006577890426665818,
+          "macd_change": 0.07645508924263567,
+          "forward_return_10d": 0.04270819131884523
+        },
+        {
+          "prior_low_idx": 3458,
+          "prior_low_date": "2012-12-05",
+          "low_idx": 3465,
+          "low_date": "2012-12-14",
+          "price_change": -0.0032357331207291114,
+          "macd_change": 0.06731058464897899,
+          "forward_return_10d": 0.006801589046317464
+        },
+        {
+          "prior_low_idx": 4248,
+          "prior_low_date": "2016-01-27",
+          "low_idx": 4257,
+          "low_date": "2016-02-09",
+          "price_change": -0.04235436526821743,
+          "macd_change": 0.05478120334633729,
+          "forward_return_10d": 0.06468026761495478
+        },
+        {
+          "prior_low_idx": 4943,
+          "prior_low_date": "2018-10-29",
+          "low_idx": 4959,
+          "low_date": "2018-11-20",
+          "price_change": -0.024934094051091284,
+          "macd_change": 0.8448719245405982,
+          "forward_return_10d": 0.04856745130484885
+        },
+        {
+          "prior_low_idx": 5142,
+          "prior_low_date": "2019-08-15",
+          "low_idx": 5148,
+          "low_date": "2019-08-23",
+          "price_change": -0.002629393149902993,
+          "macd_change": 0.5491677345488597,
+          "forward_return_10d": 0.050090595651743945
+        },
+        {
+          "prior_low_idx": 5760,
+          "prior_low_date": "2022-01-27",
+          "low_idx": 5778,
+          "low_date": "2022-02-23",
+          "price_change": -0.0342421356399409,
+          "macd_change": 3.7578571686850637,
+          "forward_return_10d": 0.016908434762912556
+        },
+        {
+          "prior_low_idx": 5841,
+          "prior_low_date": "2022-05-24",
+          "low_idx": 5857,
+          "low_date": "2022-06-16",
+          "price_change": -0.05518025388110001,
+          "macd_change": 3.3651383517127442,
+          "forward_return_10d": 0.039574006612909975
+        },
+        {
+          "prior_low_idx": 5930,
+          "prior_low_date": "2022-09-30",
+          "low_idx": 5940,
+          "low_date": "2022-10-14",
+          "price_change": -0.024395791712227218,
+          "macd_change": 0.9214963544943089,
+          "forward_return_10d": 0.07854572276358134
+        },
+        {
+          "prior_low_idx": 5940,
+          "prior_low_date": "2022-10-14",
+          "low_idx": 5954,
+          "low_date": "2022-11-03",
+          "price_change": -0.000958809577983335,
+          "macd_change": 5.507652252644164,
+          "forward_return_10d": 0.09336254073462441
+        }
+      ],
+      "bearish_events_detail": [
+        {
+          "prior_high_idx": 89,
+          "prior_high_date": "1999-07-16",
+          "high_idx": 117,
+          "high_date": "1999-08-25",
+          "price_change": 0.002036659877800407,
+          "macd_change": -1.0316646793280242,
+          "forward_return_10d": 0.014735772357723578
+        },
+        {
+          "prior_high_idx": 134,
+          "prior_high_date": "1999-09-20",
+          "high_idx": 149,
+          "high_date": "1999-10-11",
+          "price_change": 0.01883540563831097,
+          "macd_change": -0.4656723196721728,
+          "forward_return_10d": -0.041082648622522956
+        },
+        {
+          "prior_high_idx": 207,
+          "prior_high_date": "2000-01-03",
+          "high_idx": 220,
+          "high_date": "2000-01-21",
+          "price_change": 0.0158311345646438,
+          "macd_change": -1.4381582688312733,
+          "forward_return_10d": 0.009415584415584415
+        },
+        {
+          "prior_high_idx": 220,
+          "prior_high_date": "2000-01-21",
+          "high_idx": 232,
+          "high_date": "2000-02-08",
+          "price_change": 0.06623376623376623,
+          "macd_change": -0.47139019550996863,
+          "forward_return_10d": 0.015834348355663823
+        },
+        {
+          "prior_high_idx": 253,
+          "prior_high_date": "2000-03-09",
+          "high_idx": 265,
+          "high_date": "2000-03-27",
+          "price_change": 0.02391304347826087,
+          "macd_change": -0.8627067353947382,
+          "forward_return_10d": -0.14968152866242038
+        },
+        {
+          "prior_high_idx": 325,
+          "prior_high_date": "2000-06-21",
+          "high_idx": 342,
+          "high_date": "2000-07-17",
+          "price_change": 0.029077117572692796,
+          "macd_change": -0.434263559458131,
+          "forward_return_10d": -0.12100737100737101
+        },
+        {
+          "prior_high_idx": 542,
+          "prior_high_date": "2001-05-02",
+          "high_idx": 555,
+          "high_date": "2001-05-21",
+          "price_change": 0.04226214197979363,
+          "macd_change": -0.04895579876590972,
+          "forward_return_10d": -0.06268365936852674
+        },
+        {
+          "prior_high_idx": 678,
+          "prior_high_date": "2001-11-19",
+          "high_idx": 690,
+          "high_date": "2001-12-06",
+          "price_change": 0.05976779621207832,
+          "macd_change": -0.13506243251929106,
+          "forward_return_10d": -0.09601489038768295
+        },
+        {
+          "prior_high_idx": 1074,
+          "prior_high_date": "2003-06-18",
+          "high_idx": 1087,
+          "high_date": "2003-07-08",
+          "price_change": 0.04398443401187528,
+          "macd_change": -0.1586700669370309,
+          "forward_return_10d": -0.029120156823297733
+        },
+        {
+          "prior_high_idx": 1130,
+          "prior_high_date": "2003-09-08",
+          "high_idx": 1138,
+          "high_date": "2003-09-18",
+          "price_change": 0.008115906646286232,
+          "macd_change": -0.1282670071330756,
+          "forward_return_10d": -0.04370329244141511
+        },
+        {
+          "prior_high_idx": 1138,
+          "prior_high_date": "2003-09-18",
+          "high_idx": 1158,
+          "high_date": "2003-10-16",
+          "price_change": 0.019551475820653506,
+          "macd_change": -0.11062336691624353,
+          "forward_return_10d": -0.001974046718316765
+        },
+        {
+          "prior_high_idx": 1158,
+          "prior_high_date": "2003-10-16",
+          "high_idx": 1173,
+          "high_date": "2003-11-06",
+          "price_change": 0.013536366458805463,
+          "macd_change": -0.10800846366958439,
+          "forward_return_10d": -0.057317686068659245
+        },
+        {
+          "prior_high_idx": 1567,
+          "prior_high_date": "2005-06-02",
+          "high_idx": 1609,
+          "high_date": "2005-08-02",
+          "price_change": 0.036730522225742655,
+          "macd_change": -0.08568969995607745,
+          "forward_return_10d": -0.03168663672015237
+        },
+        {
+          "prior_high_idx": 1702,
+          "prior_high_date": "2005-12-13",
+          "high_idx": 1721,
+          "high_date": "2006-01-11",
+          "price_change": 0.027830593326965827,
+          "macd_change": -0.08514275096003132,
+          "forward_return_10d": -0.03841703037685608
+        },
+        {
+          "prior_high_idx": 1913,
+          "prior_high_date": "2006-10-16",
+          "high_idx": 1921,
+          "high_date": "2006-10-26",
+          "price_change": 0.008241075207468506,
+          "macd_change": -0.13234656805930456,
+          "forward_return_10d": 0.0002335856212459931
+        },
+        {
+          "prior_high_idx": 1948,
+          "prior_high_date": "2006-12-05",
+          "high_idx": 1956,
+          "high_date": "2006-12-15",
+          "price_change": 0.00022517191901780386,
+          "macd_change": -0.18980527972302497,
+          "forward_return_10d": -0.02678367361096682
+        },
+        {
+          "prior_high_idx": 1956,
+          "prior_high_date": "2006-12-15",
+          "high_idx": 1973,
+          "high_date": "2007-01-12",
+          "price_change": 0.019806460996416433,
+          "macd_change": -0.007380486129143549,
+          "forward_return_10d": -0.037519327111333
+        },
+        {
+          "prior_high_idx": 2053,
+          "prior_high_date": "2007-05-09",
+          "high_idx": 2080,
+          "high_date": "2007-06-18",
+          "price_change": 0.020072572922378937,
+          "macd_change": -0.33342345520019734,
+          "forward_return_10d": 0.005442711305039306
+        },
+        {
+          "prior_high_idx": 2311,
+          "prior_high_date": "2008-05-16",
+          "high_idx": 2324,
+          "high_date": "2008-06-05",
+          "price_change": 0.010797859101203594,
+          "macd_change": -0.4198708975692398,
+          "forward_return_10d": -0.03521263711497498
+        },
+        {
+          "prior_high_idx": 2553,
+          "prior_high_date": "2009-05-04",
+          "high_idx": 2578,
+          "high_date": "2009-06-09",
+          "price_change": 0.05420831860874668,
+          "macd_change": -0.08380196750921698,
+          "forward_return_10d": -0.05277403850273497
+        },
+        {
+          "prior_high_idx": 2624,
+          "prior_high_date": "2009-08-13",
+          "high_idx": 2635,
+          "high_date": "2009-08-28",
+          "price_change": 0.00873031860286737,
+          "macd_change": -0.24480156095791017,
+          "forward_return_10d": 0.030662752734314534
+        },
+        {
+          "prior_high_idx": 2651,
+          "prior_high_date": "2009-09-22",
+          "high_idx": 2673,
+          "high_date": "2009-10-22",
+          "price_change": 0.015474790710420929,
+          "macd_change": -0.3315294237374644,
+          "forward_return_10d": -0.02216584781181626
+        },
+        {
+          "prior_high_idx": 2726,
+          "prior_high_date": "2010-01-08",
+          "high_idx": 2732,
+          "high_date": "2010-01-19",
+          "price_change": 0.000859310766550931,
+          "macd_change": -0.16216674644711304,
+          "forward_return_10d": -0.06310364063275667
+        },
+        {
+          "prior_high_idx": 2936,
+          "prior_high_date": "2010-11-08",
+          "high_idx": 2966,
+          "high_date": "2010-12-21",
+          "price_change": 0.021399286848970005,
+          "macd_change": -0.5423879418958961,
+          "forward_return_10d": 0.015485558357988597
+        },
+        {
+          "prior_high_idx": 2984,
+          "prior_high_date": "2011-01-18",
+          "high_idx": 2991,
+          "high_date": "2011-01-27",
+          "price_change": 0.00034990304088633386,
+          "macd_change": -0.18907747341302183,
+          "forward_return_10d": 0.014690453796864636
+        },
+        {
+          "prior_high_idx": 3266,
+          "prior_high_date": "2012-03-01",
+          "high_idx": 3288,
+          "high_date": "2012-04-02",
+          "price_change": 0.05129392983636288,
+          "macd_change": -0.05488363475058833,
+          "forward_return_10d": -0.021538479424221612
+        },
+        {
+          "prior_high_idx": 3353,
+          "prior_high_date": "2012-07-05",
+          "high_idx": 3363,
+          "high_date": "2012-07-19",
+          "price_change": 0.0026181760071817125,
+          "macd_change": -0.08137315051553173,
+          "forward_return_10d": -0.011059926844535085
+        },
+        {
+          "prior_high_idx": 3387,
+          "prior_high_date": "2012-08-22",
+          "high_idx": 3406,
+          "high_date": "2012-09-19",
+          "price_change": 0.028788560747005018,
+          "macd_change": -0.22310712347311323,
+          "forward_return_10d": -0.018323876243854086
+        },
+        {
+          "prior_high_idx": 3467,
+          "prior_high_date": "2012-12-18",
+          "high_idx": 3476,
+          "high_date": "2013-01-02",
+          "price_change": 0.009767000250606396,
+          "macd_change": -0.11344016463797857,
+          "forward_return_10d": -0.004464217797425488
+        },
+        {
+          "prior_high_idx": 3490,
+          "prior_high_date": "2013-01-23",
+          "high_idx": 3508,
+          "high_date": "2013-02-19",
+          "price_change": 0.009616830316567402,
+          "macd_change": -0.09071174017107353,
+          "forward_return_10d": 0.006447867162666768
+        },
+        {
+          "prior_high_idx": 3522,
+          "prior_high_date": "2013-03-11",
+          "high_idx": 3537,
+          "high_date": "2013-04-02",
+          "price_change": 0.0010149295865635934,
+          "macd_change": -0.1285184548874838,
+          "forward_return_10d": 0.006228277802341
+        },
+        {
+          "prior_high_idx": 3537,
+          "prior_high_date": "2013-04-02",
+          "high_idx": 3543,
+          "high_date": "2013-04-10",
+          "price_change": 0.014194607684581561,
+          "macd_change": -0.04853794096121078,
+          "forward_return_10d": -0.00856895891011882
+        },
+        {
+          "prior_high_idx": 3585,
+          "prior_high_date": "2013-06-10",
+          "high_idx": 3591,
+          "high_date": "2013-06-18",
+          "price_change": 0.0021792926464148598,
+          "macd_change": -0.22657708236965846,
+          "forward_return_10d": -0.02500684862049808
+        },
+        {
+          "prior_high_idx": 3624,
+          "prior_high_date": "2013-08-05",
+          "high_idx": 3630,
+          "high_date": "2013-08-13",
+          "price_change": 0.001038715068054856,
+          "macd_change": -0.08571363706711566,
+          "forward_return_10d": -0.025421519108467135
+        },
+        {
+          "prior_high_idx": 3656,
+          "prior_high_date": "2013-09-19",
+          "high_idx": 3664,
+          "high_date": "2013-10-01",
+          "price_change": 0.002264154782085299,
+          "macd_change": -0.08945950279736792,
+          "forward_return_10d": -0.00251000185085587
+        },
+        {
+          "prior_high_idx": 3684,
+          "prior_high_date": "2013-10-29",
+          "high_idx": 3712,
+          "high_date": "2013-12-09",
+          "price_change": 0.039609932726117035,
+          "macd_change": -0.1978364996994202,
+          "forward_return_10d": 0.012275682764556881
+        },
+        {
+          "prior_high_idx": 3712,
+          "prior_high_date": "2013-12-09",
+          "high_idx": 3727,
+          "high_date": "2013-12-31",
+          "price_change": 0.018645056616116516,
+          "macd_change": -0.06619908969781818,
+          "forward_return_10d": 0.004661251323065917
+        },
+        {
+          "prior_high_idx": 3727,
+          "prior_high_date": "2013-12-31",
+          "high_idx": 3741,
+          "high_date": "2014-01-22",
+          "price_change": 0.009322415909039853,
+          "macd_change": -0.26045659812108113,
+          "forward_return_10d": -0.046068893828869875
+        },
+        {
+          "prior_high_idx": 3837,
+          "prior_high_date": "2014-06-10",
+          "high_idx": 3854,
+          "high_date": "2014-07-03",
+          "price_change": 0.0300289869353501,
+          "macd_change": -0.13948275952934353,
+          "forward_return_10d": 0.004388775462208188
+        },
+        {
+          "prior_high_idx": 3854,
+          "prior_high_date": "2014-07-03",
+          "high_idx": 3867,
+          "high_date": "2014-07-23",
+          "price_change": 0.01598752829134243,
+          "macd_change": -0.1073708829373885,
+          "forward_return_10d": -0.02787212403890073
+        },
+        {
+          "prior_high_idx": 3867,
+          "prior_high_date": "2014-07-23",
+          "high_idx": 3899,
+          "high_date": "2014-09-08",
+          "price_change": 0.029311924053511376,
+          "macd_change": -0.009751748684607264,
+          "forward_return_10d": -0.010291754201160174
+        },
+        {
+          "prior_high_idx": 3899,
+          "prior_high_date": "2014-09-08",
+          "high_idx": 3907,
+          "high_date": "2014-09-18",
+          "price_change": 0.001998370749231229,
+          "macd_change": -0.41121853266893993,
+          "forward_return_10d": -0.03061427734538455
+        },
+        {
+          "prior_high_idx": 4057,
+          "prior_high_date": "2015-04-24",
+          "high_idx": 4079,
+          "high_date": "2015-05-27",
+          "price_change": 0.003799512985948566,
+          "macd_change": -0.0035373537722307447,
+          "forward_return_10d": -0.013248028414131734
+        },
+        {
+          "prior_high_idx": 4204,
+          "prior_high_date": "2015-11-20",
+          "high_idx": 4210,
+          "high_date": "2015-12-01",
+          "price_change": 0.0059399046578958396,
+          "macd_change": -0.015277762016680185,
+          "forward_return_10d": -0.024748228663467393
+        },
+        {
+          "prior_high_idx": 4221,
+          "prior_high_date": "2015-12-16",
+          "high_idx": 4229,
+          "high_date": "2015-12-29",
+          "price_change": 0.002807507329352545,
+          "macd_change": -0.16808293977578614,
+          "forward_return_10d": -0.10848644964833365
+        },
+        {
+          "prior_high_idx": 4393,
+          "prior_high_date": "2016-08-23",
+          "high_idx": 4403,
+          "high_date": "2016-09-07",
+          "price_change": 0.003062271332322311,
+          "macd_change": -0.6453960982435376,
+          "forward_return_10d": 0.001950503396413434
+        },
+        {
+          "prior_high_idx": 4403,
+          "prior_high_date": "2016-09-07",
+          "high_idx": 4414,
+          "high_date": "2016-09-22",
+          "price_change": 0.009921965630198221,
+          "macd_change": -0.2407732394467672,
+          "forward_return_10d": -0.003022864993090045
+        },
+        {
+          "prior_high_idx": 4426,
+          "prior_high_date": "2016-10-10",
+          "high_idx": 4436,
+          "high_date": "2016-10-24",
+          "price_change": 0.00293573620648743,
+          "macd_change": -0.3693101138992745,
+          "forward_return_10d": -0.026929842175474287
+        },
+        {
+          "prior_high_idx": 4523,
+          "prior_high_date": "2017-03-01",
+          "high_idx": 4533,
+          "high_date": "2017-03-15",
+          "price_change": 0.005021330263620419,
+          "macd_change": -0.485523445775101,
+          "forward_return_10d": 0.0011354571502959466
+        },
+        {
+          "prior_high_idx": 4533,
+          "prior_high_date": "2017-03-15",
+          "high_idx": 4547,
+          "high_date": "2017-04-04",
+          "price_change": 0.0031036213806003854,
+          "macd_change": -0.5568158268290802,
+          "forward_return_10d": -0.007697449671385019
+        },
+        {
+          "prior_high_idx": 4640,
+          "prior_high_date": "2017-08-16",
+          "high_idx": 4651,
+          "high_date": "2017-08-31",
+          "price_change": 0.013307445142706906,
+          "macd_change": -0.1755180185908216,
+          "forward_return_10d": -0.0009575881844785549
+        },
+        {
+          "prior_high_idx": 4699,
+          "prior_high_date": "2017-11-08",
+          "high_idx": 4712,
+          "high_date": "2017-11-28",
+          "price_change": 0.013527484387641587,
+          "macd_change": -0.17238431700513956,
+          "forward_return_10d": -0.005747454610972491
+        },
+        {
+          "prior_high_idx": 4712,
+          "prior_high_date": "2017-11-28",
+          "high_idx": 4726,
+          "high_date": "2017-12-18",
+          "price_change": 0.01309153266300809,
+          "macd_change": -0.5699651584622245,
+          "forward_return_10d": 0.008761972989134652
+        },
+        {
+          "prior_high_idx": 4848,
+          "prior_high_date": "2018-06-14",
+          "high_idx": 4876,
+          "high_date": "2018-07-25",
+          "price_change": 0.02939189775511947,
+          "macd_change": -0.597729566654948,
+          "forward_return_10d": -0.004375905369804859
+        },
+        {
+          "prior_high_idx": 5040,
+          "prior_high_date": "2019-03-21",
+          "high_idx": 5070,
+          "high_date": "2019-05-03",
+          "price_change": 0.04677654019571233,
+          "macd_change": -0.2626179902078434,
+          "forward_return_10d": -0.042227027881562545
+        },
+        {
+          "prior_high_idx": 5119,
+          "prior_high_date": "2019-07-15",
+          "high_idx": 5128,
+          "high_date": "2019-07-26",
+          "price_change": 0.00587174568883198,
+          "macd_change": -0.5110679209478235,
+          "forward_return_10d": -0.045061130091162846
+        },
+        {
+          "prior_high_idx": 5348,
+          "prior_high_date": "2020-06-10",
+          "high_idx": 5357,
+          "high_date": "2020-06-23",
+          "price_change": 0.01064087037689122,
+          "macd_change": -1.1052988508909607,
+          "forward_return_10d": 0.04480788482790448
+        },
+        {
+          "prior_high_idx": 5369,
+          "prior_high_date": "2020-07-10",
+          "high_idx": 5375,
+          "high_date": "2020-07-20",
+          "price_change": 0.01064513977194073,
+          "macd_change": -0.6589046892335944,
+          "forward_return_10d": 0.009745880933400002
+        },
+        {
+          "prior_high_idx": 5375,
+          "prior_high_date": "2020-07-20",
+          "high_idx": 5388,
+          "high_date": "2020-08-06",
+          "price_change": 0.029462538065468315,
+          "macd_change": -1.0519018821722739,
+          "forward_return_10d": 0.01926149776140731
+        },
+        {
+          "prior_high_idx": 5415,
+          "prior_high_date": "2020-09-15",
+          "high_idx": 5427,
+          "high_date": "2020-10-01",
+          "price_change": 0.011431242275190125,
+          "macd_change": -1.3562126299316901,
+          "forward_return_10d": 0.027812244830879098
+        },
+        {
+          "prior_high_idx": 5434,
+          "prior_high_date": "2020-10-12",
+          "high_idx": 5453,
+          "high_date": "2020-11-06",
+          "price_change": 0.0002715736006421612,
+          "macd_change": -1.1552117666045092,
+          "forward_return_10d": -0.01435789918560398
+        },
+        {
+          "prior_high_idx": 5474,
+          "prior_high_date": "2020-12-08",
+          "high_idx": 5481,
+          "high_date": "2020-12-17",
+          "price_change": 0.008790396639413774,
+          "macd_change": -0.7973917816870539,
+          "forward_return_10d": -0.005434091451467042
+        },
+        {
+          "prior_high_idx": 5481,
+          "prior_high_date": "2020-12-17",
+          "high_idx": 5495,
+          "high_date": "2021-01-08",
+          "price_change": 0.025819931766227894,
+          "macd_change": -0.9875731109368076,
+          "forward_return_10d": 0.02846123125414017
+        },
+        {
+          "prior_high_idx": 5623,
+          "prior_high_date": "2021-07-14",
+          "high_idx": 5631,
+          "high_date": "2021-07-26",
+          "price_change": 0.014928203379014578,
+          "macd_change": -1.1964501964541228,
+          "forward_return_10d": 0.0006513630174878341
+        },
+        {
+          "prior_high_idx": 5631,
+          "prior_high_date": "2021-07-26",
+          "high_idx": 5639,
+          "high_date": "2021-08-05",
+          "price_change": 0.0032023208896633285,
+          "macd_change": -0.9511566803083724,
+          "forward_return_10d": -0.015446267658311117
+        },
+        {
+          "prior_high_idx": 5704,
+          "prior_high_date": "2021-11-05",
+          "high_idx": 5714,
+          "high_date": "2021-11-19",
+          "price_change": 0.01352228812926713,
+          "macd_change": -0.45917835017320385,
+          "forward_return_10d": -0.044035690134359234
+        },
+        {
+          "prior_high_idx": 5726,
+          "prior_high_date": "2021-12-08",
+          "high_idx": 5738,
+          "high_date": "2021-12-27",
+          "price_change": 0.009684506835736137,
+          "macd_change": -0.8390738418904107,
+          "forward_return_10d": -0.05792114850407674
+        },
+        {
+          "prior_high_idx": 6107,
+          "prior_high_date": "2023-06-15",
+          "high_idx": 6118,
+          "high_date": "2023-07-03",
+          "price_change": 8.102084617743153e-05,
+          "macd_change": -3.131026704803446,
+          "forward_return_10d": 0.041724003707701456
+        },
+        {
+          "prior_high_idx": 6241,
+          "prior_high_date": "2023-12-27",
+          "high_idx": 6271,
+          "high_date": "2024-02-09",
+          "price_change": 0.062089885280604495,
+          "macd_change": -0.7362044568967576,
+          "forward_return_10d": -0.0011440338953558117
+        },
+        {
+          "prior_high_idx": 6271,
+          "prior_high_date": "2024-02-09",
+          "high_idx": 6285,
+          "high_date": "2024-03-01",
+          "price_change": 0.01958585470238849,
+          "macd_change": -1.5680490695220897,
+          "forward_return_10d": -0.02623363997241974
+        },
+        {
+          "prior_high_idx": 6285,
+          "prior_high_date": "2024-03-01",
+          "high_idx": 6300,
+          "high_date": "2024-03-22",
+          "price_change": 0.0017280122900354123,
+          "macd_change": -2.0557879047447045,
+          "forward_return_10d": -0.01294860593232506
+        },
+        {
+          "prior_high_idx": 6441,
+          "prior_high_date": "2024-10-14",
+          "high_idx": 6452,
+          "high_date": "2024-10-29",
+          "price_change": 0.005346741029365578,
+          "macd_change": -1.3087772429793745,
+          "forward_return_10d": 0.02549178140808578
+        },
+        {
+          "prior_high_idx": 6589,
+          "prior_high_date": "2025-05-19",
+          "high_idx": 6636,
+          "high_date": "2025-07-28",
+          "price_change": 0.08836996229923677,
+          "macd_change": -6.024852913146674,
+          "forward_return_10d": 0.00829014119066143
+        },
+        {
+          "prior_high_idx": 6636,
+          "prior_high_date": "2025-07-28",
+          "high_idx": 6648,
+          "high_date": "2025-08-13",
+          "price_change": 0.021473601387820857,
+          "macd_change": -1.2676511718034362,
+          "forward_return_10d": -0.011803488134723684
+        },
+        {
+          "prior_high_idx": 6675,
+          "prior_high_date": "2025-09-22",
+          "high_idx": 6687,
+          "high_date": "2025-10-08",
+          "price_change": 0.015343723093778966,
+          "macd_change": -0.06188371651342095,
+          "forward_return_10d": -0.009731146446541881
+        },
+        {
+          "prior_high_idx": 6837,
+          "prior_high_date": "2026-05-14",
+          "high_idx": 6849,
+          "high_date": "2026-06-02",
+          "price_change": 0.03663567974293988,
+          "macd_change": -3.246744821173138,
+          "forward_return_10d": -0.02184516508474174
+        }
+      ]
+    },
+    "IWM": {
+      "symbol": "IWM",
+      "bars": 6590,
+      "years": 26.2,
+      "swing_lows_found": 406,
+      "swing_highs_found": 395,
+      "unconditional_baseline": {
+        "n": 6555,
+        "mean_forward_return": 0.0035751989480008128,
+        "median_forward_return": 0.005462154524150401,
+        "share_positive_forward": 0.5673531655225019
+      },
+      "naive_bullish_divergence": {
+        "count": 20,
+        "per_year": 0.7647951441578148,
+        "mean_forward_return": 0.0644378662567492,
+        "median_forward_return": 0.051026869954749705,
+        "share_positive_forward": 1.0
+      },
+      "naive_bearish_divergence": {
+        "count": 59,
+        "per_year": 2.2561456752655538,
+        "mean_forward_return": -0.02650632445055045,
+        "median_forward_return": -0.019376665892162227,
+        "share_positive_forward": 0.1724137931034483
+      },
+      "bullish_events_detail": [
+        {
+          "prior_low_idx": 96,
+          "prior_low_date": "2000-10-12",
+          "low_idx": 130,
+          "low_date": "2000-11-30",
+          "price_change": -0.030591434398368457,
+          "macd_change": 0.3131236759236202,
+          "forward_return_10d": 0.029453015427769985
+        },
+        {
+          "prior_low_idx": 130,
+          "prior_low_date": "2000-11-30",
+          "low_idx": 144,
+          "low_date": "2000-12-20",
+          "price_change": -0.011220196353436185,
+          "macd_change": 0.36105978096568947,
+          "forward_return_10d": 0.04468085106382979
+        },
+        {
+          "prior_low_idx": 206,
+          "prior_low_date": "2001-03-22",
+          "low_idx": 214,
+          "low_date": "2001-04-03",
+          "price_change": -0.017093037450036336,
+          "macd_change": 0.2404115729591254,
+          "forward_return_10d": 0.10434165174724239
+        },
+        {
+          "prior_low_idx": 291,
+          "prior_low_date": "2001-07-24",
+          "low_idx": 302,
+          "low_date": "2001-08-08",
+          "price_change": -0.010031647084016312,
+          "macd_change": 0.08491714953482443,
+          "forward_return_10d": 0.017066650390625
+        },
+        {
+          "prior_low_idx": 686,
+          "prior_low_date": "2003-02-24",
+          "low_idx": 697,
+          "low_date": "2003-03-11",
+          "price_change": -0.03454569745962908,
+          "macd_change": 0.026674373021172926,
+          "forward_return_10d": 0.07563631924715909
+        },
+        {
+          "prior_low_idx": 1008,
+          "prior_low_date": "2004-06-03",
+          "low_idx": 1014,
+          "low_date": "2004-06-14",
+          "price_change": -0.0047321319580078125,
+          "macd_change": 0.1570793814279483,
+          "forward_return_10d": 0.04386829941776502
+        },
+        {
+          "prior_low_idx": 1805,
+          "prior_low_date": "2007-08-03",
+          "low_idx": 1813,
+          "low_date": "2007-08-15",
+          "price_change": -0.0019907303107700018,
+          "macd_change": 0.22876851751091465,
+          "forward_return_10d": 0.04468086099344055
+        },
+        {
+          "prior_low_idx": 1841,
+          "prior_low_date": "2007-09-25",
+          "low_idx": 1859,
+          "low_date": "2007-10-19",
+          "price_change": -0.009145619640749378,
+          "macd_change": 0.024298283619117456,
+          "forward_return_10d": 0.005563313462886741
+        },
+        {
+          "prior_low_idx": 2116,
+          "prior_low_date": "2008-10-27",
+          "low_idx": 2134,
+          "low_date": "2008-11-20",
+          "price_change": -0.14110570095699068,
+          "macd_change": 1.4407171004216437,
+          "forward_return_10d": 0.1964702812005218
+        },
+        {
+          "prior_low_idx": 2521,
+          "prior_low_date": "2010-06-08",
+          "low_idx": 2540,
+          "low_date": "2010-07-06",
+          "price_change": -0.04604941835882095,
+          "macd_change": 0.08480300594124657,
+          "forward_return_10d": 0.05623305628965647
+        },
+        {
+          "prior_low_idx": 2839,
+          "prior_low_date": "2011-09-09",
+          "low_idx": 2848,
+          "low_date": "2011-09-22",
+          "price_change": -0.0410369873046875,
+          "macd_change": 0.21206727965851258,
+          "forward_return_10d": 0.03723151410058896
+        },
+        {
+          "prior_low_idx": 3834,
+          "prior_low_date": "2015-08-25",
+          "low_idx": 3858,
+          "low_date": "2015-09-29",
+          "price_change": -0.019691891822713713,
+          "macd_change": 0.8603821874338422,
+          "forward_return_10d": 0.060076249956364944
+        },
+        {
+          "prior_low_idx": 3934,
+          "prior_low_date": "2016-01-19",
+          "low_idx": 3951,
+          "low_date": "2016-02-11",
+          "price_change": -0.04029559443969522,
+          "macd_change": 0.9116408548494803,
+          "forward_return_10d": 0.08861695795703828
+        },
+        {
+          "prior_low_idx": 4019,
+          "prior_low_date": "2016-05-19",
+          "low_idx": 4045,
+          "low_date": "2016-06-27",
+          "price_change": -0.002477942780240736,
+          "macd_change": 0.23050465520159946,
+          "forward_return_10d": 0.10148126351586975
+        },
+        {
+          "prior_low_idx": 4834,
+          "prior_low_date": "2019-08-15",
+          "low_idx": 4842,
+          "low_date": "2019-08-27",
+          "price_change": -0.004398923400126672,
+          "macd_change": 0.07358950895900307,
+          "forward_return_10d": 0.08387983006228872
+        },
+        {
+          "prior_low_idx": 5470,
+          "prior_low_date": "2022-02-23",
+          "low_idx": 5483,
+          "low_date": "2022-03-14",
+          "price_change": -0.0013990518170238846,
+          "macd_change": 0.7344093415294424,
+          "forward_return_10d": 0.06994964069278431
+        },
+        {
+          "prior_low_idx": 5533,
+          "prior_low_date": "2022-05-24",
+          "low_idx": 5549,
+          "low_date": "2022-06-16",
+          "price_change": -0.06646928826621158,
+          "macd_change": 1.1656182048493804,
+          "forward_return_10d": 0.04582068361984294
+        },
+        {
+          "prior_low_idx": 5750,
+          "prior_low_date": "2023-04-05",
+          "low_idx": 5764,
+          "low_date": "2023-04-26",
+          "price_change": -0.012901027645975715,
+          "macd_change": 1.32555352546035,
+          "forward_return_10d": 0.01762065629975922
+        },
+        {
+          "prior_low_idx": 6186,
+          "prior_low_date": "2024-12-30",
+          "low_idx": 6193,
+          "low_date": "2025-01-10",
+          "price_change": -0.017446034858188953,
+          "macd_change": 0.04205814778705985,
+          "forward_return_10d": 0.044597141019626016
+        },
+        {
+          "prior_low_idx": 6491,
+          "prior_low_date": "2026-03-20",
+          "low_idx": 6497,
+          "low_date": "2026-03-30",
+          "price_change": -0.010775330679539603,
+          "macd_change": 0.22893788462278053,
+          "forward_return_10d": 0.12148908866992407
+        }
+      ],
+      "bearish_events_detail": [
+        {
+          "prior_high_idx": 382,
+          "prior_high_date": "2001-12-06",
+          "high_idx": 401,
+          "high_date": "2002-01-04",
+          "price_change": 0.030569916562095206,
+          "macd_change": -0.06828448349838112,
+          "forward_return_10d": -0.055806893842859785
+        },
+        {
+          "prior_high_idx": 457,
+          "prior_high_date": "2002-03-27",
+          "high_idx": 470,
+          "high_date": "2002-04-16",
+          "price_change": 0.03647029611953199,
+          "macd_change": -0.012213594726311783,
+          "forward_return_10d": -0.028763182284005116
+        },
+        {
+          "prior_high_idx": 482,
+          "prior_high_date": "2002-05-02",
+          "high_idx": 490,
+          "high_date": "2002-05-14",
+          "price_change": 0.0004885496092162193,
+          "macd_change": -0.2735981301250945,
+          "forward_return_10d": -0.054003893524350324
+        },
+        {
+          "prior_high_idx": 757,
+          "prior_high_date": "2003-06-05",
+          "high_idx": 783,
+          "high_date": "2003-07-14",
+          "price_change": 0.04330242587223296,
+          "macd_change": -0.4130120471401355,
+          "forward_return_10d": -0.006393465956796886
+        },
+        {
+          "prior_high_idx": 822,
+          "prior_high_date": "2003-09-08",
+          "high_idx": 830,
+          "high_date": "2003-09-18",
+          "price_change": 0.005819013389287652,
+          "macd_change": -0.20848322645843353,
+          "forward_return_10d": -0.02969821481288415
+        },
+        {
+          "prior_high_idx": 830,
+          "prior_high_date": "2003-09-18",
+          "high_idx": 848,
+          "high_date": "2003-10-14",
+          "price_change": 0.023430723427126113,
+          "macd_change": -0.27721382525914606,
+          "forward_return_10d": -0.008856250676575056
+        },
+        {
+          "prior_high_idx": 865,
+          "prior_high_date": "2003-11-06",
+          "high_idx": 881,
+          "high_date": "2003-12-01",
+          "price_change": 0.01874656240808988,
+          "macd_change": -0.17974706960941944,
+          "forward_return_10d": -0.04014069027369885
+        },
+        {
+          "prior_high_idx": 933,
+          "prior_high_date": "2004-02-17",
+          "high_idx": 946,
+          "high_date": "2004-03-05",
+          "price_change": 0.0066554417509531606,
+          "macd_change": -0.09950868639536736,
+          "forward_return_10d": -0.04845594626362384
+        },
+        {
+          "prior_high_idx": 1133,
+          "prior_high_date": "2004-12-01",
+          "high_idx": 1143,
+          "high_date": "2004-12-15",
+          "price_change": 0.009995305354517226,
+          "macd_change": -0.3208084427445783,
+          "forward_return_10d": 0.0018556169781934037
+        },
+        {
+          "prior_high_idx": 1143,
+          "prior_high_date": "2004-12-15",
+          "high_idx": 1151,
+          "high_date": "2004-12-28",
+          "price_change": 0.005489459826582572,
+          "macd_change": -0.1454959899798638,
+          "forward_return_10d": -0.06497504328603323
+        },
+        {
+          "prior_high_idx": 1387,
+          "prior_high_date": "2005-12-02",
+          "high_idx": 1394,
+          "high_date": "2005-12-13",
+          "price_change": 0.0005812396934717237,
+          "macd_change": -0.06633783121863246,
+          "forward_return_10d": -0.019604973310414865
+        },
+        {
+          "prior_high_idx": 1427,
+          "prior_high_date": "2006-02-01",
+          "high_idx": 1446,
+          "high_date": "2006-03-01",
+          "price_change": 0.010943954424855837,
+          "macd_change": -0.45227479370018386,
+          "forward_return_10d": 0.0005412843667308438
+        },
+        {
+          "prior_high_idx": 1472,
+          "prior_high_date": "2006-04-06",
+          "high_idx": 1480,
+          "high_date": "2006-04-19",
+          "price_change": 0.013511724176031933,
+          "macd_change": -0.2922806961765332,
+          "forward_return_10d": -0.01423761899697461
+        },
+        {
+          "prior_high_idx": 1613,
+          "prior_high_date": "2006-10-26",
+          "high_idx": 1632,
+          "high_date": "2006-11-22",
+          "price_change": 0.024402871639102708,
+          "macd_change": -0.05029937718045119,
+          "forward_return_10d": -0.0019006782736841372
+        },
+        {
+          "prior_high_idx": 1632,
+          "prior_high_date": "2006-11-22",
+          "high_idx": 1640,
+          "high_date": "2006-12-05",
+          "price_change": 0.005828675812788652,
+          "macd_change": -0.312511346079404,
+          "forward_return_10d": -0.019148358473909593
+        },
+        {
+          "prior_high_idx": 2004,
+          "prior_high_date": "2008-05-19",
+          "high_idx": 2016,
+          "high_date": "2008-06-05",
+          "price_change": 0.03014729877975072,
+          "macd_change": -0.0405895493810533,
+          "forward_return_10d": -0.03228345384506481
+        },
+        {
+          "prior_high_idx": 2075,
+          "prior_high_date": "2008-08-28",
+          "high_idx": 2090,
+          "high_date": "2008-09-19",
+          "price_change": 0.0065762696244947485,
+          "macd_change": -0.8297275222109448,
+          "forward_return_10d": -0.16399998982747396
+        },
+        {
+          "prior_high_idx": 2249,
+          "prior_high_date": "2009-05-08",
+          "high_idx": 2268,
+          "high_date": "2009-06-05",
+          "price_change": 0.042932807556705394,
+          "macd_change": -0.3546580702491653,
+          "forward_return_10d": -0.0355263038072184
+        },
+        {
+          "prior_high_idx": 2316,
+          "prior_high_date": "2009-08-13",
+          "high_idx": 2325,
+          "high_date": "2009-08-26",
+          "price_change": 0.015974963821978234,
+          "macd_change": -0.30656835544108674,
+          "forward_return_10d": 0.015211130232047175
+        },
+        {
+          "prior_high_idx": 2343,
+          "prior_high_date": "2009-09-22",
+          "high_idx": 2359,
+          "high_date": "2009-10-14",
+          "price_change": 0.005159620968434887,
+          "macd_change": -0.8381514247230015,
+          "forward_return_10d": -0.08838624170751577
+        },
+        {
+          "prior_high_idx": 2613,
+          "prior_high_date": "2010-10-18",
+          "high_idx": 2627,
+          "high_date": "2010-11-05",
+          "price_change": 0.04077313066641063,
+          "macd_change": -0.2456933052399961,
+          "forward_return_10d": -0.017893449300411274
+        },
+        {
+          "prior_high_idx": 2658,
+          "prior_high_date": "2010-12-21",
+          "high_idx": 2666,
+          "high_date": "2011-01-03",
+          "price_change": 0.00505052451126116,
+          "macd_change": -0.31182151953009907,
+          "forward_return_10d": 0.012562814311172529
+        },
+        {
+          "prior_high_idx": 2666,
+          "prior_high_date": "2011-01-03",
+          "high_idx": 2676,
+          "high_date": "2011-01-18",
+          "price_change": 0.012562814311172529,
+          "macd_change": -0.27801355783294923,
+          "forward_return_10d": -0.010545886975345413
+        },
+        {
+          "prior_high_idx": 2731,
+          "prior_high_date": "2011-04-06",
+          "high_idx": 2747,
+          "high_date": "2011-04-29",
+          "price_change": 0.011829493660355394,
+          "macd_change": -0.2306759881023197,
+          "forward_return_10d": -0.03333716024731284
+        },
+        {
+          "prior_high_idx": 2940,
+          "prior_high_date": "2012-02-03",
+          "high_idx": 2975,
+          "high_date": "2012-03-26",
+          "price_change": 0.017480465714079164,
+          "macd_change": -1.110102162562427,
+          "forward_return_10d": -0.07168249931728672
+        },
+        {
+          "prior_high_idx": 3200,
+          "prior_high_date": "2013-02-19",
+          "high_idx": 3217,
+          "high_date": "2013-03-14",
+          "price_change": 0.02431118234260572,
+          "macd_change": -0.11476794688452685,
+          "forward_return_10d": -0.0039029824332391786
+        },
+        {
+          "prior_high_idx": 3277,
+          "prior_high_date": "2013-06-10",
+          "high_idx": 3283,
+          "high_date": "2013-06-18",
+          "price_change": 0.007186225329372843,
+          "macd_change": -0.16635267902776718,
+          "forward_return_10d": -0.01437041779195314
+        },
+        {
+          "prior_high_idx": 3376,
+          "prior_high_date": "2013-10-29",
+          "high_idx": 3398,
+          "high_date": "2013-11-29",
+          "price_change": 0.019398326822711025,
+          "macd_change": -0.4266008622784767,
+          "forward_return_10d": -0.029160471550478313
+        },
+        {
+          "prior_high_idx": 3419,
+          "prior_high_date": "2013-12-31",
+          "high_idx": 3433,
+          "high_date": "2014-01-22",
+          "price_change": 0.01603674119567479,
+          "macd_change": -0.13293255909027835,
+          "forward_return_10d": -0.07303129106267293
+        },
+        {
+          "prior_high_idx": 3503,
+          "prior_high_date": "2014-05-02",
+          "high_idx": 3509,
+          "high_date": "2014-05-12",
+          "price_change": 0.004463090292315525,
+          "macd_change": -0.06659461061556726,
+          "forward_return_10d": 0.009330872328694903
+        },
+        {
+          "prior_high_idx": 3638,
+          "prior_high_date": "2014-11-12",
+          "high_idx": 3648,
+          "high_date": "2014-11-26",
+          "price_change": 0.004664931427015783,
+          "macd_change": -0.5440760700382299,
+          "forward_return_10d": -0.019670698705701685
+        },
+        {
+          "prior_high_idx": 3711,
+          "prior_high_date": "2015-03-02",
+          "high_idx": 3725,
+          "high_date": "2015-03-20",
+          "price_change": 0.020409788759634836,
+          "macd_change": -0.21562573515711847,
+          "forward_return_10d": -0.0062703462887709225
+        },
+        {
+          "prior_high_idx": 3725,
+          "prior_high_date": "2015-03-20",
+          "high_idx": 3742,
+          "high_date": "2015-04-15",
+          "price_change": 0.004444838459270423,
+          "macd_change": -0.24837806064482493,
+          "forward_return_10d": -0.021730540763995672
+        },
+        {
+          "prior_high_idx": 3886,
+          "prior_high_date": "2015-11-06",
+          "high_idx": 3902,
+          "high_date": "2015-12-01",
+          "price_change": 0.005619847023025899,
+          "macd_change": -0.1943725318199654,
+          "forward_return_10d": -0.05988823372865675
+        },
+        {
+          "prior_high_idx": 3976,
+          "prior_high_date": "2016-03-18",
+          "high_idx": 3985,
+          "high_date": "2016-04-01",
+          "price_change": 0.013776134730610195,
+          "macd_change": -0.03963147187261029,
+          "forward_return_10d": 0.0119689899998771
+        },
+        {
+          "prior_high_idx": 4079,
+          "prior_high_date": "2016-08-15",
+          "high_idx": 4085,
+          "high_date": "2016-08-23",
+          "price_change": 0.005510537250951124,
+          "macd_change": -0.11039635910451295,
+          "forward_return_10d": 0.010718905636909937
+        },
+        {
+          "prior_high_idx": 4085,
+          "prior_high_date": "2016-08-23",
+          "high_idx": 4095,
+          "high_date": "2016-09-07",
+          "price_change": 0.010718905636909937,
+          "macd_change": -0.1748467937882623,
+          "forward_return_10d": -0.011881073675578273
+        },
+        {
+          "prior_high_idx": 4095,
+          "prior_high_date": "2016-09-07",
+          "high_idx": 4106,
+          "high_date": "2016-09-22",
+          "price_change": 0.0023123616750234523,
+          "macd_change": -0.7246720236274484,
+          "forward_return_10d": -0.01495622354065824
+        },
+        {
+          "prior_high_idx": 4209,
+          "prior_high_date": "2017-02-21",
+          "high_idx": 4215,
+          "high_date": "2017-03-01",
+          "price_change": 0.001141252964281046,
+          "macd_change": -0.12449871136655588,
+          "forward_return_10d": -0.01873756676671414
+        },
+        {
+          "prior_high_idx": 4378,
+          "prior_high_date": "2017-10-20",
+          "high_idx": 4406,
+          "high_date": "2017-11-30",
+          "price_change": 0.02446991781232218,
+          "macd_change": -0.39241181814310266,
+          "forward_return_10d": -0.02310437965497359
+        },
+        {
+          "prior_high_idx": 4406,
+          "prior_high_date": "2017-11-30",
+          "high_idx": 4418,
+          "high_date": "2017-12-18",
+          "price_change": 0.004230453505330794,
+          "macd_change": -0.4532065181503242,
+          "forward_return_10d": -0.0015554471057499328
+        },
+        {
+          "prior_high_idx": 4805,
+          "prior_high_date": "2019-07-05",
+          "high_idx": 4822,
+          "high_date": "2019-07-30",
+          "price_change": 0.007403648942655855,
+          "macd_change": -0.15912303863706256,
+          "forward_return_10d": -0.04795991029564194
+        },
+        {
+          "prior_high_idx": 4891,
+          "prior_high_date": "2019-11-05",
+          "high_idx": 4907,
+          "high_date": "2019-11-27",
+          "price_change": 0.023122890830670675,
+          "macd_change": -0.15165098148676748,
+          "forward_return_10d": 0.006939783025888213
+        },
+        {
+          "prior_high_idx": 4907,
+          "prior_high_date": "2019-11-27",
+          "high_idx": 4940,
+          "high_date": "2020-01-16",
+          "price_change": 0.04114718954062171,
+          "macd_change": -0.4031523817185132,
+          "forward_return_10d": -0.05308794941782945
+        },
+        {
+          "prior_high_idx": 5087,
+          "prior_high_date": "2020-08-17",
+          "high_idx": 5099,
+          "high_date": "2020-09-02",
+          "price_change": 0.0035466297595295924,
+          "macd_change": -1.6790578379784051,
+          "forward_return_10d": -0.030102259689248793
+        },
+        {
+          "prior_high_idx": 5196,
+          "prior_high_date": "2021-01-22",
+          "high_idx": 5208,
+          "high_date": "2021-02-09",
+          "price_change": 0.062232580850290695,
+          "macd_change": -0.4740436066771281,
+          "forward_return_10d": -0.006042581895558743
+        },
+        {
+          "prior_high_idx": 5218,
+          "prior_high_date": "2021-02-24",
+          "high_idx": 5231,
+          "high_date": "2021-03-15",
+          "price_change": 0.03268721660328332,
+          "macd_change": -0.9581727724785765,
+          "forward_return_10d": -0.08540228832368056
+        },
+        {
+          "prior_high_idx": 5654,
+          "prior_high_date": "2022-11-15",
+          "high_idx": 5666,
+          "high_date": "2022-12-02",
+          "price_change": 0.0026659557017549925,
+          "macd_change": -0.4955441886082781,
+          "forward_return_10d": -0.0727466509575387
+        },
+        {
+          "prior_high_idx": 5821,
+          "prior_high_date": "2023-07-19",
+          "high_idx": 5829,
+          "high_date": "2023-07-31",
+          "price_change": 0.009705303010625716,
+          "macd_change": -0.16747362362764306,
+          "forward_return_10d": -0.04051131186035049
+        },
+        {
+          "prior_high_idx": 5981,
+          "prior_high_date": "2024-03-07",
+          "high_idx": 5996,
+          "high_date": "2024-03-28",
+          "price_change": 0.016138366010532368,
+          "macd_change": -0.6556491437873717,
+          "forward_return_10d": -0.05520684946207146
+        },
+        {
+          "prior_high_idx": 6153,
+          "prior_high_date": "2024-11-11",
+          "high_idx": 6163,
+          "high_date": "2024-11-25",
+          "price_change": 0.002896139665206886,
+          "macd_change": -0.5297140728085878,
+          "forward_return_10d": -0.02351483948748093
+        },
+        {
+          "prior_high_idx": 6280,
+          "prior_high_date": "2025-05-16",
+          "high_idx": 6296,
+          "high_date": "2025-06-10",
+          "price_change": 0.022206281952746838,
+          "macd_change": -0.42477396936516243,
+          "forward_return_10d": -0.011840908820926145
+        },
+        {
+          "prior_high_idx": 6316,
+          "prior_high_date": "2025-07-10",
+          "high_idx": 6325,
+          "high_date": "2025-07-23",
+          "price_change": 0.008362943053833454,
+          "macd_change": -0.9086514781874371,
+          "forward_return_10d": -0.026998391189913637
+        },
+        {
+          "prior_high_idx": 6325,
+          "prior_high_date": "2025-07-23",
+          "high_idx": 6340,
+          "high_date": "2025-08-13",
+          "price_change": 0.020028271976413093,
+          "macd_change": -1.5687565381220168,
+          "forward_return_10d": 0.020413464214965597
+        },
+        {
+          "prior_high_idx": 6365,
+          "prior_high_date": "2025-09-18",
+          "high_idx": 6377,
+          "high_date": "2025-10-06",
+          "price_change": 0.008046076009511254,
+          "macd_change": -0.7025217802241173,
+          "forward_return_10d": 0.005469819362544776
+        },
+        {
+          "prior_high_idx": 6377,
+          "prior_high_date": "2025-10-06",
+          "high_idx": 6384,
+          "high_date": "2025-10-15",
+          "price_change": 0.01426200035363346,
+          "macd_change": -0.4060569731799717,
+          "forward_return_10d": -0.013941618933552493
+        },
+        {
+          "prior_high_idx": 6523,
+          "prior_high_date": "2026-05-06",
+          "high_idx": 6538,
+          "high_date": "2026-05-28",
+          "price_change": 0.01823574340631944,
+          "macd_change": -1.7011879753483754,
+          "forward_return_10d": -0.005547358572609588
+        },
+        {
+          "prior_high_idx": 6538,
+          "prior_high_date": "2026-05-28",
+          "high_idx": 6560,
+          "high_date": "2026-06-30",
+          "price_change": 0.028832700280555224,
+          "macd_change": -0.25335196634154045,
+          "forward_return_10d": -0.015576711609964952
+        },
+        {
+          "prior_high_idx": 6574,
+          "prior_high_date": "2026-07-21",
+          "high_idx": 6584,
+          "high_date": "2026-08-04",
+          "price_change": 0.017434352064413145,
+          "macd_change": -0.5156665613534415,
+          "forward_return_10d": null
+        }
+      ]
+    },
+    "XLK": {
+      "symbol": "XLK",
+      "bars": 6950,
+      "years": 27.6,
+      "swing_lows_found": 409,
+      "swing_highs_found": 399,
+      "unconditional_baseline": {
+        "n": 6915,
+        "mean_forward_return": 0.004397117385327897,
+        "median_forward_return": 0.007761459869711256,
+        "share_positive_forward": 0.5835140997830802
+      },
+      "naive_bullish_divergence": {
+        "count": 27,
+        "per_year": 0.9789928057553957,
+        "mean_forward_return": 0.06417695042215851,
+        "median_forward_return": 0.063578065548115,
+        "share_positive_forward": 0.8888888888888888
+      },
+      "naive_bearish_divergence": {
+        "count": 75,
+        "per_year": 2.7194244604316546,
+        "mean_forward_return": -0.01595730340775359,
+        "median_forward_return": -0.011306730591479247,
+        "share_positive_forward": 0.26666666666666666
+      },
+      "bullish_events_detail": [
+        {
+          "prior_low_idx": 61,
+          "prior_low_date": "1999-03-23",
+          "low_idx": 79,
+          "low_date": "1999-04-19",
+          "price_change": -0.0009066183136899365,
+          "macd_change": 0.0473900839343564,
+          "forward_return_10d": 0.0780399274047187
+        },
+        {
+          "prior_low_idx": 456,
+          "prior_low_date": "2000-10-12",
+          "low_idx": 490,
+          "low_date": "2000-11-30",
+          "price_change": -0.13260530421216848,
+          "macd_change": 0.397715924643137,
+          "forward_return_10d": 0.039568345323741004
+        },
+        {
+          "prior_low_idx": 490,
+          "prior_low_date": "2000-11-30",
+          "low_idx": 504,
+          "low_date": "2000-12-20",
+          "price_change": -0.12140287769784172,
+          "macd_change": 0.03155816478484752,
+          "forward_return_10d": 0.06448311156601842
+        },
+        {
+          "prior_low_idx": 564,
+          "prior_low_date": "2001-03-20",
+          "low_idx": 575,
+          "low_date": "2001-04-04",
+          "price_change": -0.11293551351104852,
+          "macd_change": 0.09667213521407625,
+          "forward_return_10d": 0.37020320109077953
+        },
+        {
+          "prior_low_idx": 626,
+          "prior_low_date": "2001-06-18",
+          "low_idx": 641,
+          "low_date": "2001-07-10",
+          "price_change": -0.013958921968661797,
+          "macd_change": 0.025343723769839954,
+          "forward_return_10d": -0.004325623634741916
+        },
+        {
+          "prior_low_idx": 641,
+          "prior_low_date": "2001-07-10",
+          "low_idx": 651,
+          "low_date": "2001-07-24",
+          "price_change": -0.004325623634741916,
+          "macd_change": 0.004007355197140683,
+          "forward_return_10d": 0.04344393344106488
+        },
+        {
+          "prior_low_idx": 827,
+          "prior_low_date": "2002-04-11",
+          "low_idx": 869,
+          "low_date": "2002-06-11",
+          "price_change": -0.1361068162294508,
+          "macd_change": 0.0036064869669107935,
+          "forward_return_10d": -0.08323422377713095
+        },
+        {
+          "prior_low_idx": 884,
+          "prior_low_date": "2002-07-02",
+          "low_idx": 900,
+          "low_date": "2002-07-25",
+          "price_change": -0.10136052996266333,
+          "macd_change": 0.04557562582686092,
+          "forward_return_10d": 0.0673732279146608
+        },
+        {
+          "prior_low_idx": 900,
+          "prior_low_date": "2002-07-25",
+          "low_idx": 907,
+          "low_date": "2002-08-05",
+          "price_change": -0.029523114473621232,
+          "macd_change": 0.019689542650251468,
+          "forward_return_10d": 0.21294856169246398
+        },
+        {
+          "prior_low_idx": 1039,
+          "prior_low_date": "2003-02-12",
+          "low_idx": 1057,
+          "low_date": "2003-03-11",
+          "price_change": -0.022222184242360436,
+          "macd_change": 0.08236277444285278,
+          "forward_return_10d": 0.10777120794385515
+        },
+        {
+          "prior_low_idx": 1573,
+          "prior_low_date": "2005-03-29",
+          "low_idx": 1586,
+          "low_date": "2005-04-15",
+          "price_change": -0.04002081428917408,
+          "macd_change": 0.008161179543062502,
+          "forward_return_10d": 0.021656824079559676
+        },
+        {
+          "prior_low_idx": 1864,
+          "prior_low_date": "2006-05-23",
+          "low_idx": 1877,
+          "low_date": "2006-06-12",
+          "price_change": -0.034533830642877156,
+          "macd_change": 0.01700630408713799,
+          "forward_return_10d": 0.025549310567042963
+        },
+        {
+          "prior_low_idx": 2282,
+          "prior_low_date": "2008-01-22",
+          "low_idx": 2295,
+          "low_date": "2008-02-08",
+          "price_change": -0.016321166210330494,
+          "macd_change": 0.07260068136122655,
+          "forward_return_10d": 0.014349848122014208
+        },
+        {
+          "prior_low_idx": 2295,
+          "prior_low_date": "2008-02-08",
+          "low_idx": 2315,
+          "low_date": "2008-03-10",
+          "price_change": -0.023318321444193116,
+          "macd_change": 0.1746446672095665,
+          "forward_return_10d": 0.06519743028128662
+        },
+        {
+          "prior_low_idx": 2403,
+          "prior_low_date": "2008-07-15",
+          "low_idx": 2412,
+          "low_date": "2008-07-28",
+          "price_change": -0.005000027743252841,
+          "macd_change": 0.10003998558736704,
+          "forward_return_10d": 0.07354959594530257
+        },
+        {
+          "prior_low_idx": 2476,
+          "prior_low_date": "2008-10-27",
+          "low_idx": 2494,
+          "low_date": "2008-11-20",
+          "price_change": -0.10576274031299655,
+          "macd_change": 0.17957275706903886,
+          "forward_return_10d": 0.1394996369313319
+        },
+        {
+          "prior_low_idx": 2873,
+          "prior_low_date": "2010-05-26",
+          "low_idx": 2882,
+          "low_date": "2010-06-09",
+          "price_change": -0.0028435765335376516,
+          "macd_change": 0.05277940552016602,
+          "forward_return_10d": 0.04277564540722435
+        },
+        {
+          "prior_low_idx": 2882,
+          "prior_low_date": "2010-06-09",
+          "low_idx": 2899,
+          "low_date": "2010-07-02",
+          "price_change": -0.03564638628159499,
+          "macd_change": 0.014907462570835861,
+          "forward_return_10d": 0.063578065548115
+        },
+        {
+          "prior_low_idx": 3373,
+          "prior_low_date": "2012-05-18",
+          "low_idx": 3382,
+          "low_date": "2012-06-01",
+          "price_change": -0.009828851735128357,
+          "macd_change": 0.02185338678011739,
+          "forward_return_10d": 0.04301470748074735
+        },
+        {
+          "prior_low_idx": 3510,
+          "prior_low_date": "2012-12-05",
+          "low_idx": 3517,
+          "low_date": "2012-12-14",
+          "price_change": -0.002086937945822011,
+          "macd_change": 0.02575583762278022,
+          "forward_return_10d": 0.005576850625087132
+        },
+        {
+          "prior_low_idx": 4295,
+          "prior_low_date": "2016-01-20",
+          "low_idx": 4311,
+          "low_date": "2016-02-11",
+          "price_change": -0.008702333126276732,
+          "macd_change": 0.18834641307435263,
+          "forward_return_10d": 0.06532400746707547
+        },
+        {
+          "prior_low_idx": 4375,
+          "prior_low_date": "2016-05-13",
+          "low_idx": 4405,
+          "low_date": "2016-06-27",
+          "price_change": -0.018479004885451535,
+          "macd_change": 0.07498162748917636,
+          "forward_return_10d": 0.08013515979649792
+        },
+        {
+          "prior_low_idx": 5812,
+          "prior_low_date": "2022-01-27",
+          "low_idx": 5830,
+          "low_date": "2022-02-23",
+          "price_change": -0.02728236721890485,
+          "macd_change": 0.8259346295990184,
+          "forward_return_10d": 0.013582342954159592
+        },
+        {
+          "prior_low_idx": 5843,
+          "prior_low_date": "2022-03-14",
+          "low_idx": 5873,
+          "low_date": "2022-04-26",
+          "price_change": -0.011103982404745884,
+          "macd_change": 0.48095360250138697,
+          "forward_return_10d": -0.018809932377660137
+        },
+        {
+          "prior_low_idx": 5890,
+          "prior_low_date": "2022-05-19",
+          "low_idx": 5909,
+          "low_date": "2022-06-16",
+          "price_change": -0.05567030795168762,
+          "macd_change": 0.48433436404256724,
+          "forward_return_10d": 0.031743508512035744
+        },
+        {
+          "prior_low_idx": 5982,
+          "prior_low_date": "2022-09-30",
+          "low_idx": 5990,
+          "low_date": "2022-10-12",
+          "price_change": -0.01869002562315287,
+          "macd_change": 0.308302388914413,
+          "forward_return_10d": 0.07764244373125051
+        },
+        {
+          "prior_low_idx": 6229,
+          "prior_low_date": "2023-09-26",
+          "low_idx": 6251,
+          "low_date": "2023-10-26",
+          "price_change": -0.010989681829238353,
+          "macd_change": 0.35066388860464315,
+          "forward_return_10d": 0.09214054736177932
+        }
+      ],
+      "bearish_events_detail": [
+        {
+          "prior_high_idx": 594,
+          "prior_high_date": "2001-05-02",
+          "high_idx": 607,
+          "high_date": "2001-05-21",
+          "price_change": 0.02359584848362298,
+          "macd_change": -0.09538975546642625,
+          "forward_return_10d": -0.053571417513052645
+        },
+        {
+          "prior_high_idx": 730,
+          "prior_high_date": "2001-11-19",
+          "high_idx": 741,
+          "high_date": "2001-12-05",
+          "price_change": 0.04767630519657765,
+          "macd_change": -0.08803958971553882,
+          "forward_return_10d": -0.05430210696017419
+        },
+        {
+          "prior_high_idx": 1103,
+          "prior_high_date": "2003-05-15",
+          "high_idx": 1126,
+          "high_date": "2003-06-18",
+          "price_change": 0.06126129015813811,
+          "macd_change": -0.017862138972435382,
+          "forward_return_10d": 0.0
+        },
+        {
+          "prior_high_idx": 1126,
+          "prior_high_date": "2003-06-18",
+          "high_idx": 1139,
+          "high_date": "2003-07-08",
+          "price_change": 0.029994379420323614,
+          "macd_change": -0.04477575531169542,
+          "forward_return_10d": -0.036813189461962124
+        },
+        {
+          "prior_high_idx": 1182,
+          "prior_high_date": "2003-09-08",
+          "high_idx": 1191,
+          "high_date": "2003-09-19",
+          "price_change": 0.004622504148018096,
+          "macd_change": -0.02288025069863231,
+          "forward_return_10d": -0.017893680522800763
+        },
+        {
+          "prior_high_idx": 1191,
+          "prior_high_date": "2003-09-19",
+          "high_idx": 1213,
+          "high_date": "2003-10-21",
+          "price_change": 0.010224988159518708,
+          "macd_change": -0.07246120929943523,
+          "forward_return_10d": 0.00759107372433272
+        },
+        {
+          "prior_high_idx": 1213,
+          "prior_high_date": "2003-10-21",
+          "high_idx": 1229,
+          "high_date": "2003-11-12",
+          "price_change": 0.02024289544013372,
+          "macd_change": -0.020170546580246196,
+          "forward_return_10d": -0.016369043958520464
+        },
+        {
+          "prior_high_idx": 1229,
+          "prior_high_date": "2003-11-12",
+          "high_idx": 1244,
+          "high_date": "2003-12-04",
+          "price_change": 0.0014881293091556708,
+          "macd_change": -0.042704917769297523,
+          "forward_return_10d": -0.004457659742805522
+        },
+        {
+          "prior_high_idx": 1485,
+          "prior_high_date": "2004-11-18",
+          "high_idx": 1496,
+          "high_date": "2004-12-06",
+          "price_change": 0.01733828159508687,
+          "macd_change": -0.03613665023277868,
+          "forward_return_10d": -0.04007365124704233
+        },
+        {
+          "prior_high_idx": 1651,
+          "prior_high_date": "2005-07-19",
+          "high_idx": 1662,
+          "high_date": "2005-08-03",
+          "price_change": 0.00895384261101475,
+          "macd_change": -0.008227352172873736,
+          "forward_return_10d": -0.024754819730163174
+        },
+        {
+          "prior_high_idx": 1746,
+          "prior_high_date": "2005-12-01",
+          "high_idx": 1773,
+          "high_date": "2006-01-11",
+          "price_change": 0.009981819610520118,
+          "macd_change": -0.10313264484631368,
+          "forward_return_10d": -0.035489708329038375
+        },
+        {
+          "prior_high_idx": 1807,
+          "prior_high_date": "2006-03-02",
+          "high_idx": 1816,
+          "high_date": "2006-03-15",
+          "price_change": 0.002259428210816417,
+          "macd_change": -0.011013903352337095,
+          "forward_return_10d": 0.0009017338813563812
+        },
+        {
+          "prior_high_idx": 1951,
+          "prior_high_date": "2006-09-26",
+          "high_idx": 1964,
+          "high_date": "2006-10-13",
+          "price_change": 0.030727534160115418,
+          "macd_change": -0.00023997329030933656,
+          "forward_return_10d": -0.0021919876471369827
+        },
+        {
+          "prior_high_idx": 1964,
+          "prior_high_date": "2006-10-13",
+          "high_idx": 1973,
+          "high_date": "2006-10-26",
+          "price_change": 0.010960105473622438,
+          "macd_change": -0.015716967817919425,
+          "forward_return_10d": -0.0013009011271305792
+        },
+        {
+          "prior_high_idx": 1973,
+          "prior_high_date": "2006-10-26",
+          "high_idx": 1992,
+          "high_date": "2006-11-22",
+          "price_change": 0.03252385157717306,
+          "macd_change": -0.0030814331730262268,
+          "forward_return_10d": -0.01763965080699434
+        },
+        {
+          "prior_high_idx": 2000,
+          "prior_high_date": "2006-12-05",
+          "high_idx": 2007,
+          "high_date": "2006-12-14",
+          "price_change": 0.002539203361066436,
+          "macd_change": -0.0354075156766438,
+          "forward_return_10d": -0.01815113108830863
+        },
+        {
+          "prior_high_idx": 2113,
+          "prior_high_date": "2007-05-21",
+          "high_idx": 2122,
+          "high_date": "2007-06-04",
+          "price_change": 0.012588500938780186,
+          "macd_change": -0.01687208946190566,
+          "forward_return_10d": 0.004273528023686692
+        },
+        {
+          "prior_high_idx": 2122,
+          "prior_high_date": "2007-06-04",
+          "high_idx": 2132,
+          "high_date": "2007-06-18",
+          "price_change": 0.004273528023686692,
+          "macd_change": -0.05231748161285665,
+          "forward_return_10d": -0.00116056813163583
+        },
+        {
+          "prior_high_idx": 2218,
+          "prior_high_date": "2007-10-18",
+          "high_idx": 2227,
+          "high_date": "2007-10-31",
+          "price_change": 0.021215396041644533,
+          "macd_change": -0.022078683132622956,
+          "forward_return_10d": -0.07499997145693028
+        },
+        {
+          "prior_high_idx": 2593,
+          "prior_high_date": "2009-04-16",
+          "high_idx": 2605,
+          "high_date": "2009-05-04",
+          "price_change": 0.047675072210379095,
+          "macd_change": -0.009470221869456452,
+          "forward_return_10d": -0.03033702423168672
+        },
+        {
+          "prior_high_idx": 2605,
+          "prior_high_date": "2009-05-04",
+          "high_idx": 2632,
+          "high_date": "2009-06-11",
+          "price_change": 0.03539331995046037,
+          "macd_change": -0.03793276967099857,
+          "forward_return_10d": -0.013022233702880831
+        },
+        {
+          "prior_high_idx": 2676,
+          "prior_high_date": "2009-08-13",
+          "high_idx": 2687,
+          "high_date": "2009-08-28",
+          "price_change": 0.019095531427115654,
+          "macd_change": -0.03151447128318097,
+          "forward_return_10d": 0.016765292952469306
+        },
+        {
+          "prior_high_idx": 2707,
+          "prior_high_date": "2009-09-28",
+          "high_idx": 2719,
+          "high_date": "2009-10-14",
+          "price_change": 0.021032530231977174,
+          "macd_change": -0.030509597753461293,
+          "forward_return_10d": -0.02762172920079237
+        },
+        {
+          "prior_high_idx": 2844,
+          "prior_high_date": "2010-04-15",
+          "high_idx": 2850,
+          "high_date": "2010-04-23",
+          "price_change": 0.0012474298377222973,
+          "macd_change": -0.002515677141495587,
+          "forward_return_10d": -0.09676079448041186
+        },
+        {
+          "prior_high_idx": 2973,
+          "prior_high_date": "2010-10-18",
+          "high_idx": 3011,
+          "high_date": "2010-12-10",
+          "price_change": 0.038762908620932665,
+          "macd_change": -0.11682923593820327,
+          "forward_return_10d": 0.0027788683342653015
+        },
+        {
+          "prior_high_idx": 3234,
+          "prior_high_date": "2011-10-28",
+          "high_idx": 3241,
+          "high_date": "2011-11-08",
+          "price_change": 0.001132956463902346,
+          "macd_change": -0.0346030500633443,
+          "forward_return_10d": -0.0671444991051434
+        },
+        {
+          "prior_high_idx": 3318,
+          "prior_high_date": "2012-03-01",
+          "high_idx": 3340,
+          "high_date": "2012-04-02",
+          "price_change": 0.046703250817582476,
+          "macd_change": -0.04161363112620542,
+          "forward_return_10d": -0.01771650315907751
+        },
+        {
+          "prior_high_idx": 3437,
+          "prior_high_date": "2012-08-20",
+          "high_idx": 3458,
+          "high_date": "2012-09-19",
+          "price_change": 0.02858996559894185,
+          "macd_change": -0.04128459315772659,
+          "forward_return_10d": -0.022109942081906586
+        },
+        {
+          "prior_high_idx": 3519,
+          "prior_high_date": "2012-12-18",
+          "high_idx": 3528,
+          "high_date": "2013-01-02",
+          "price_change": 0.011537161876818153,
+          "macd_change": -0.009369452103745957,
+          "forward_return_10d": -0.01677289530217016
+        },
+        {
+          "prior_high_idx": 3535,
+          "prior_high_date": "2013-01-11",
+          "high_idx": 3542,
+          "high_date": "2013-01-23",
+          "price_change": 0.006421106220947419,
+          "macd_change": -0.009067496021655685,
+          "forward_return_10d": -0.0036937746076309186
+        },
+        {
+          "prior_high_idx": 3577,
+          "prior_high_date": "2013-03-14",
+          "high_idx": 3595,
+          "high_date": "2013-04-10",
+          "price_change": 0.004926095723217099,
+          "macd_change": -0.07968033982194633,
+          "forward_return_10d": -0.02124181733422102
+        },
+        {
+          "prior_high_idx": 3663,
+          "prior_high_date": "2013-07-17",
+          "high_idx": 3676,
+          "high_date": "2013-08-05",
+          "price_change": 0.00654814737982514,
+          "macd_change": -0.0004789335276829121,
+          "forward_return_10d": -0.017348187333313794
+        },
+        {
+          "prior_high_idx": 3747,
+          "prior_high_date": "2013-11-13",
+          "high_idx": 3764,
+          "high_date": "2013-12-09",
+          "price_change": 0.017773910716076036,
+          "macd_change": -0.024929434680110774,
+          "forward_return_10d": 0.014027994832193729
+        },
+        {
+          "prior_high_idx": 3779,
+          "prior_high_date": "2013-12-31",
+          "high_idx": 3789,
+          "high_date": "2014-01-15",
+          "price_change": 0.006155495122385708,
+          "macd_change": -0.07028177326555962,
+          "forward_return_10d": -0.03392651382276169
+        },
+        {
+          "prior_high_idx": 3823,
+          "prior_high_date": "2014-03-06",
+          "high_idx": 3833,
+          "high_date": "2014-03-20",
+          "price_change": 0.0032850465533013373,
+          "macd_change": -0.06415914475307005,
+          "forward_return_10d": -0.0008186246315148313
+        },
+        {
+          "prior_high_idx": 3833,
+          "prior_high_date": "2014-03-20",
+          "high_idx": 3842,
+          "high_date": "2014-04-02",
+          "price_change": 0.004092706819554314,
+          "macd_change": -0.01795657562992048,
+          "forward_return_10d": -0.019565147307958754
+        },
+        {
+          "prior_high_idx": 3889,
+          "prior_high_date": "2014-06-10",
+          "high_idx": 3895,
+          "high_date": "2014-06-18",
+          "price_change": 0.0023479346097424556,
+          "macd_change": -0.03485871930463702,
+          "forward_return_10d": 0.009370136062175795
+        },
+        {
+          "prior_high_idx": 3919,
+          "prior_high_date": "2014-07-23",
+          "high_idx": 3959,
+          "high_date": "2014-09-18",
+          "price_change": 0.020100483728542687,
+          "macd_change": -0.09366150090613345,
+          "forward_return_10d": -0.03300493110712854
+        },
+        {
+          "prior_high_idx": 4036,
+          "prior_high_date": "2015-01-08",
+          "high_idx": 4045,
+          "high_date": "2015-01-22",
+          "price_change": 0.0019332531245163063,
+          "macd_change": -0.02656496682952536,
+          "forward_return_10d": -0.0055475047591707774
+        },
+        {
+          "prior_high_idx": 4111,
+          "prior_high_date": "2015-04-28",
+          "high_idx": 4131,
+          "high_date": "2015-05-27",
+          "price_change": 0.008988232199456535,
+          "macd_change": -0.0007370145384903992,
+          "forward_return_10d": -0.017131110573595253
+        },
+        {
+          "prior_high_idx": 4176,
+          "prior_high_date": "2015-07-30",
+          "high_idx": 4183,
+          "high_date": "2015-08-10",
+          "price_change": 0.0014044371928686593,
+          "macd_change": -0.031819770320414165,
+          "forward_return_10d": -0.1117344300068126
+        },
+        {
+          "prior_high_idx": 4256,
+          "prior_high_date": "2015-11-20",
+          "high_idx": 4265,
+          "high_date": "2015-12-04",
+          "price_change": 0.00837101641398613,
+          "macd_change": -0.026962066834002485,
+          "forward_return_10d": -0.05384791434399788
+        },
+        {
+          "prior_high_idx": 4439,
+          "prior_high_date": "2016-08-15",
+          "high_idx": 4455,
+          "high_date": "2016-09-07",
+          "price_change": 0.007815778003636935,
+          "macd_change": -0.1750984000317466,
+          "forward_return_10d": -0.0018864002162008301
+        },
+        {
+          "prior_high_idx": 4455,
+          "prior_high_date": "2016-09-07",
+          "high_idx": 4466,
+          "high_date": "2016-09-22",
+          "price_change": 0.0041920093644383215,
+          "macd_change": -0.07437974972849304,
+          "forward_return_10d": -0.003339591899847436
+        },
+        {
+          "prior_high_idx": 4466,
+          "prior_high_date": "2016-09-22",
+          "high_idx": 4478,
+          "high_date": "2016-10-10",
+          "price_change": 0.0008349178804997309,
+          "macd_change": -0.006367805638532786,
+          "forward_return_10d": 0.0008342213741581512
+        },
+        {
+          "prior_high_idx": 4478,
+          "prior_high_date": "2016-10-10",
+          "high_idx": 4488,
+          "high_date": "2016-10-24",
+          "price_change": 0.0008342213741581512,
+          "macd_change": -0.057348766632415504,
+          "forward_return_10d": -0.016878544383432784
+        },
+        {
+          "prior_high_idx": 4575,
+          "prior_high_date": "2017-03-01",
+          "high_idx": 4586,
+          "high_date": "2017-03-16",
+          "price_change": 0.006404222106059218,
+          "macd_change": -0.07593956880053199,
+          "forward_return_10d": -0.00037433010760687613
+        },
+        {
+          "prior_high_idx": 4677,
+          "prior_high_date": "2017-07-26",
+          "high_idx": 4692,
+          "high_date": "2017-08-16",
+          "price_change": 0.009528746109299666,
+          "macd_change": -0.0806268684121747,
+          "forward_return_10d": 0.0036038970795078617
+        },
+        {
+          "prior_high_idx": 4692,
+          "prior_high_date": "2017-08-16",
+          "high_idx": 4703,
+          "high_date": "2017-08-31",
+          "price_change": 0.009610457677907967,
+          "macd_change": -0.02535756261315214,
+          "forward_return_10d": -0.0015298342646044606
+        },
+        {
+          "prior_high_idx": 4751,
+          "prior_high_date": "2017-11-08",
+          "high_idx": 4764,
+          "high_date": "2017-11-28",
+          "price_change": 0.010935743241382903,
+          "macd_change": -0.13752072655451641,
+          "forward_return_10d": -0.00896309440983844
+        },
+        {
+          "prior_high_idx": 4764,
+          "prior_high_date": "2017-11-28",
+          "high_idx": 4778,
+          "high_date": "2017-12-18",
+          "price_change": 0.006490467854852624,
+          "macd_change": -0.1915808905117231,
+          "forward_return_10d": 0.002303109660749054
+        },
+        {
+          "prior_high_idx": 4804,
+          "prior_high_date": "2018-01-26",
+          "high_idx": 4824,
+          "high_date": "2018-02-26",
+          "price_change": 0.002456975906154591,
+          "macd_change": -0.3405254703283376,
+          "forward_return_10d": 0.019752057879560726
+        },
+        {
+          "prior_high_idx": 4900,
+          "prior_high_date": "2018-06-14",
+          "high_idx": 4928,
+          "high_date": "2018-07-25",
+          "price_change": 0.02754322302795199,
+          "macd_change": -0.12099150752476362,
+          "forward_return_10d": -0.008755408736294143
+        },
+        {
+          "prior_high_idx": 5078,
+          "prior_high_date": "2019-03-01",
+          "high_idx": 5092,
+          "high_date": "2019-03-21",
+          "price_change": 0.052565183522560295,
+          "macd_change": -0.01572139015661378,
+          "forward_return_10d": 0.006259172241642008
+        },
+        {
+          "prior_high_idx": 5122,
+          "prior_high_date": "2019-05-03",
+          "high_idx": 5155,
+          "high_date": "2019-06-20",
+          "price_change": 0.0015221049233402582,
+          "macd_change": -0.25230986725600957,
+          "forward_return_10d": 0.012537967011757635
+        },
+        {
+          "prior_high_idx": 5213,
+          "prior_high_date": "2019-09-12",
+          "high_idx": 5236,
+          "high_date": "2019-10-15",
+          "price_change": 0.008072358310548262,
+          "macd_change": -0.1381519400637714,
+          "forward_return_10d": 0.009585063492818723
+        },
+        {
+          "prior_high_idx": 5400,
+          "prior_high_date": "2020-06-10",
+          "high_idx": 5409,
+          "high_date": "2020-06-23",
+          "price_change": 0.0049946848527316545,
+          "macd_change": -0.2868308028447899,
+          "forward_return_10d": 0.02953267751504423
+        },
+        {
+          "prior_high_idx": 5409,
+          "prior_high_date": "2020-06-23",
+          "high_idx": 5420,
+          "high_date": "2020-07-09",
+          "price_change": 0.033260092213372505,
+          "macd_change": -0.02986338202774874,
+          "forward_return_10d": -0.014984763087929495
+        },
+        {
+          "prior_high_idx": 5420,
+          "prior_high_date": "2020-07-09",
+          "high_idx": 5427,
+          "high_date": "2020-07-20",
+          "price_change": 0.013412236981370897,
+          "macd_change": -0.1732145446981832,
+          "forward_return_10d": 0.03276747031109769
+        },
+        {
+          "prior_high_idx": 5539,
+          "prior_high_date": "2020-12-28",
+          "high_idx": 5547,
+          "high_date": "2021-01-08",
+          "price_change": 0.0018387237704499274,
+          "macd_change": -0.2950581719658487,
+          "forward_return_10d": 0.02431942542184847
+        },
+        {
+          "prior_high_idx": 5613,
+          "prior_high_date": "2021-04-15",
+          "high_idx": 5620,
+          "high_date": "2021-04-26",
+          "price_change": 0.0006976267595700115,
+          "macd_change": -0.14812488545213398,
+          "forward_return_10d": -0.05514877506269264
+        },
+        {
+          "prior_high_idx": 5675,
+          "prior_high_date": "2021-07-14",
+          "high_idx": 5682,
+          "high_date": "2021-07-23",
+          "price_change": 0.009538786993043523,
+          "macd_change": -0.2958992575664041,
+          "forward_return_10d": 0.0022003386518881962
+        },
+        {
+          "prior_high_idx": 5682,
+          "prior_high_date": "2021-07-23",
+          "high_idx": 5691,
+          "high_date": "2021-08-05",
+          "price_change": 0.0030416852686231135,
+          "macd_change": -0.2277952770246685,
+          "forward_return_10d": -0.007936066473540292
+        },
+        {
+          "prior_high_idx": 5691,
+          "prior_high_date": "2021-08-05",
+          "high_idx": 5708,
+          "high_date": "2021-08-30",
+          "price_change": 0.030389001149405483,
+          "macd_change": -0.10091001370624042,
+          "forward_return_10d": -0.020162813288886337
+        },
+        {
+          "prior_high_idx": 5766,
+          "prior_high_date": "2021-11-19",
+          "high_idx": 5780,
+          "high_date": "2021-12-10",
+          "price_change": 0.020839456979139165,
+          "macd_change": -0.5046586630720924,
+          "forward_return_10d": 0.010121162878843404
+        },
+        {
+          "prior_high_idx": 5780,
+          "prior_high_date": "2021-12-10",
+          "high_idx": 5790,
+          "high_date": "2021-12-27",
+          "price_change": 0.010121162878843404,
+          "macd_change": -0.3362759160119566,
+          "forward_return_10d": -0.06051507247082863
+        },
+        {
+          "prior_high_idx": 6070,
+          "prior_high_date": "2023-02-07",
+          "high_idx": 6076,
+          "high_date": "2023-02-15",
+          "price_change": 0.0038317059877621402,
+          "macd_change": -0.03628095979314594,
+          "forward_return_10d": -0.04788669631376705
+        },
+        {
+          "prior_high_idx": 6169,
+          "prior_high_date": "2023-06-30",
+          "high_idx": 6180,
+          "high_date": "2023-07-18",
+          "price_change": 0.03681119218921319,
+          "macd_change": -0.009165566092519839,
+          "forward_return_10d": -0.00893154698443368
+        },
+        {
+          "prior_high_idx": 6268,
+          "prior_high_date": "2023-11-20",
+          "high_idx": 6294,
+          "high_date": "2023-12-28",
+          "price_change": 0.041089299009820175,
+          "macd_change": -0.5521805485805658,
+          "forward_return_10d": -0.004298968247620571
+        },
+        {
+          "prior_high_idx": 6312,
+          "prior_high_date": "2024-01-25",
+          "high_idx": 6323,
+          "high_date": "2024-02-09",
+          "price_change": 0.01832430241319125,
+          "macd_change": -0.18544903316752936,
+          "forward_return_10d": -0.011306730591479247
+        },
+        {
+          "prior_high_idx": 6323,
+          "prior_high_date": "2024-02-09",
+          "high_idx": 6344,
+          "high_date": "2024-03-12",
+          "price_change": 0.01530026939280972,
+          "macd_change": -0.6875831741305234,
+          "forward_return_10d": -0.01592266392911858
+        },
+        {
+          "prior_high_idx": 6412,
+          "prior_high_date": "2024-06-18",
+          "high_idx": 6426,
+          "high_date": "2024-07-10",
+          "price_change": 0.027094718959630313,
+          "macd_change": -0.3105780603555246,
+          "forward_return_10d": -0.09171991107684889
+        },
+        {
+          "prior_high_idx": 6504,
+          "prior_high_date": "2024-10-29",
+          "high_idx": 6511,
+          "high_date": "2024-11-07",
+          "price_change": 0.017572392919691895,
+          "macd_change": -0.44717724254613245,
+          "forward_return_10d": -0.016595074011425903
+        },
+        {
+          "prior_high_idx": 6640,
+          "prior_high_date": "2025-05-16",
+          "high_idx": 6690,
+          "high_date": "2025-07-30",
+          "price_change": 0.12682529423790212,
+          "macd_change": -1.350811670915789,
+          "forward_return_10d": 0.013714693151208678
+        },
+        {
+          "prior_high_idx": 6690,
+          "prior_high_date": "2025-07-30",
+          "high_idx": 6700,
+          "high_date": "2025-08-13",
+          "price_change": 0.013714693151208678,
+          "macd_change": -0.629519449211358,
+          "forward_return_10d": -0.014386289689856053
+        }
+      ]
+    },
+    "XLV": {
+      "symbol": "XLV",
+      "bars": 6950,
+      "years": 27.6,
+      "swing_lows_found": 418,
+      "swing_highs_found": 411,
+      "unconditional_baseline": {
+        "n": 6915,
+        "mean_forward_return": 0.003138975721204907,
+        "median_forward_return": 0.004627422257965686,
+        "share_positive_forward": 0.5639913232104121
+      },
+      "naive_bullish_divergence": {
+        "count": 17,
+        "per_year": 0.6164028776978417,
+        "mean_forward_return": 0.03848845503442214,
+        "median_forward_return": 0.0269458994853972,
+        "share_positive_forward": 0.8823529411764706
+      },
+      "naive_bearish_divergence": {
+        "count": 62,
+        "per_year": 2.2480575539568344,
+        "mean_forward_return": -0.014511639842338286,
+        "median_forward_return": -0.011878430855179051,
+        "share_positive_forward": 0.27419354838709675
+      },
+      "bullish_events_detail": [
+        {
+          "prior_low_idx": 490,
+          "prior_low_date": "2000-11-30",
+          "low_idx": 504,
+          "low_date": "2000-12-20",
+          "price_change": -0.018648018648018648,
+          "macd_change": 0.29021860121674337,
+          "forward_return_10d": 0.07363420427553444
+        },
+        {
+          "prior_low_idx": 709,
+          "prior_low_date": "2001-10-19",
+          "low_idx": 716,
+          "low_date": "2001-10-30",
+          "price_change": -0.007662848315439253,
+          "macd_change": 0.11668911243763347,
+          "forward_return_10d": 0.09180614955070115
+        },
+        {
+          "prior_low_idx": 942,
+          "prior_low_date": "2002-09-24",
+          "low_idx": 951,
+          "low_date": "2002-10-07",
+          "price_change": -0.003557318391379809,
+          "macd_change": 0.0422922177424887,
+          "forward_return_10d": 0.1106704092363796
+        },
+        {
+          "prior_low_idx": 1008,
+          "prior_low_date": "2002-12-27",
+          "low_idx": 1027,
+          "low_date": "2003-01-27",
+          "price_change": -0.017182159364764797,
+          "macd_change": 0.04008466546198264,
+          "forward_return_10d": 0.007770037479326868
+        },
+        {
+          "prior_low_idx": 1838,
+          "prior_low_date": "2006-04-17",
+          "low_idx": 1850,
+          "low_date": "2006-05-03",
+          "price_change": -0.014915725990445198,
+          "macd_change": 0.03427818977602115,
+          "forward_return_10d": 0.006583303767754494
+        },
+        {
+          "prior_low_idx": 1850,
+          "prior_low_date": "2006-05-03",
+          "low_idx": 1864,
+          "low_date": "2006-05-23",
+          "price_change": -0.012179030352396796,
+          "macd_change": 0.0826288737025358,
+          "forward_return_10d": 0.01966011823019149
+        },
+        {
+          "prior_low_idx": 1864,
+          "prior_low_date": "2006-05-23",
+          "low_idx": 1900,
+          "low_date": "2006-07-14",
+          "price_change": -0.0013329195342306791,
+          "macd_change": 0.2654300552049804,
+          "forward_return_10d": 0.06773442553069893
+        },
+        {
+          "prior_low_idx": 2360,
+          "prior_low_date": "2008-05-13",
+          "low_idx": 2368,
+          "low_date": "2008-05-23",
+          "price_change": -0.001910202681752837,
+          "macd_change": 0.01175555348569901,
+          "forward_return_10d": -0.0031898047927563828
+        },
+        {
+          "prior_low_idx": 2476,
+          "prior_low_date": "2008-10-27",
+          "low_idx": 2494,
+          "low_date": "2008-11-20",
+          "price_change": -0.04227645932520953,
+          "macd_change": 0.5045667291290492,
+          "forward_return_10d": 0.06918510632699777
+        },
+        {
+          "prior_low_idx": 2587,
+          "prior_low_date": "2009-04-07",
+          "low_idx": 2599,
+          "low_date": "2009-04-24",
+          "price_change": -0.004191130717169463,
+          "macd_change": 0.003713618408912822,
+          "forward_return_10d": 0.07702019806723613
+        },
+        {
+          "prior_low_idx": 2873,
+          "prior_low_date": "2010-05-26",
+          "low_idx": 2882,
+          "low_date": "2010-06-09",
+          "price_change": -0.0017587458273813949,
+          "macd_change": 0.14911311429397145,
+          "forward_return_10d": 0.025017653728574334
+        },
+        {
+          "prior_low_idx": 2882,
+          "prior_low_date": "2010-06-09",
+          "low_idx": 2898,
+          "low_date": "2010-07-01",
+          "price_change": -0.014799157459968024,
+          "macd_change": 0.2634477236360091,
+          "forward_return_10d": 0.025751117463482732
+        },
+        {
+          "prior_low_idx": 4457,
+          "prior_low_date": "2016-09-09",
+          "low_idx": 4471,
+          "low_date": "2016-09-29",
+          "price_change": -0.0018179957898034121,
+          "macd_change": 0.19139908209275802,
+          "forward_return_10d": -0.018072302678122803
+        },
+        {
+          "prior_low_idx": 5193,
+          "prior_low_date": "2019-08-14",
+          "low_idx": 5200,
+          "low_date": "2019-08-23",
+          "price_change": -0.004262926363247168,
+          "macd_change": 0.04806630409299828,
+          "forward_return_10d": 0.018814760350976206
+        },
+        {
+          "prior_low_idx": 5811,
+          "prior_low_date": "2022-01-26",
+          "low_idx": 5830,
+          "low_date": "2022-02-23",
+          "price_change": -0.007762253854970798,
+          "macd_change": 0.5559154646727222,
+          "forward_return_10d": 0.0269458994853972
+        },
+        {
+          "prior_low_idx": 6621,
+          "prior_low_date": "2025-04-21",
+          "low_idx": 6638,
+          "low_date": "2025-05-14",
+          "price_change": -0.028664123420196894,
+          "macd_change": 0.7386895673769516,
+          "forward_return_10d": 0.027879135037494056
+        },
+        {
+          "prior_low_idx": 6856,
+          "prior_low_date": "2026-03-27",
+          "low_idx": 6878,
+          "low_date": "2026-04-29",
+          "price_change": -0.002931719845384131,
+          "macd_change": 1.6002981802461136,
+          "forward_return_10d": 0.02709332452531
+        }
+      ],
+      "bearish_events_detail": [
+        {
+          "prior_high_idx": 28,
+          "prior_high_date": "1999-02-03",
+          "high_idx": 40,
+          "high_date": "1999-02-22",
+          "price_change": 0.01192504258943782,
+          "macd_change": -0.16221295515821055,
+          "forward_return_10d": 0.012345679012345678
+        },
+        {
+          "prior_high_idx": 74,
+          "prior_high_date": "1999-04-12",
+          "high_idx": 83,
+          "high_date": "1999-04-23",
+          "price_change": 0.001544799176107106,
+          "macd_change": -0.12362379116434496,
+          "forward_return_10d": -0.03650385604113111
+        },
+        {
+          "prior_high_idx": 227,
+          "prior_high_date": "1999-11-16",
+          "high_idx": 243,
+          "high_date": "1999-12-09",
+          "price_change": 0.01744186046511628,
+          "macd_change": -0.13432888004826538,
+          "forward_return_10d": 0.011948051948051949
+        },
+        {
+          "prior_high_idx": 258,
+          "prior_high_date": "1999-12-31",
+          "high_idx": 264,
+          "high_date": "2000-01-10",
+          "price_change": 0.06322711178553364,
+          "macd_change": -0.09250691778720821,
+          "forward_return_10d": -0.04995242626070409
+        },
+        {
+          "prior_high_idx": 742,
+          "prior_high_date": "2001-12-06",
+          "high_idx": 763,
+          "high_date": "2002-01-08",
+          "price_change": 0.0018017743084881757,
+          "macd_change": -0.30803137583292184,
+          "forward_return_10d": -0.03597122400877216
+        },
+        {
+          "prior_high_idx": 810,
+          "prior_high_date": "2002-03-18",
+          "high_idx": 826,
+          "high_date": "2002-04-10",
+          "price_change": 0.002677373693206028,
+          "macd_change": -0.2788212491490718,
+          "forward_return_10d": 0.008010737176263211
+        },
+        {
+          "prior_high_idx": 961,
+          "prior_high_date": "2002-10-21",
+          "high_idx": 973,
+          "high_date": "2002-11-06",
+          "price_change": 0.0024999891008649555,
+          "macd_change": -0.13584292602752512,
+          "forward_return_10d": -0.007837524607991267
+        },
+        {
+          "prior_high_idx": 1348,
+          "prior_high_date": "2004-05-05",
+          "high_idx": 1371,
+          "high_date": "2004-06-08",
+          "price_change": 0.0015929004581525636,
+          "macd_change": -0.061409136258504304,
+          "forward_return_10d": -0.023536887994532754
+        },
+        {
+          "prior_high_idx": 1558,
+          "prior_high_date": "2005-03-07",
+          "high_idx": 1586,
+          "high_date": "2005-04-15",
+          "price_change": 0.0026041642413474077,
+          "macd_change": -0.034889416508313786,
+          "forward_return_10d": 0.0032467657125588383
+        },
+        {
+          "prior_high_idx": 1613,
+          "prior_high_date": "2005-05-24",
+          "high_idx": 1630,
+          "high_date": "2005-06-17",
+          "price_change": 0.0028508125897335947,
+          "macd_change": -0.1588313757637394,
+          "forward_return_10d": -0.021162352480197853
+        },
+        {
+          "prior_high_idx": 1630,
+          "prior_high_date": "2005-06-17",
+          "high_idx": 1652,
+          "high_date": "2005-07-20",
+          "price_change": 0.0037902981620894518,
+          "macd_change": -0.042237468698296254,
+          "forward_return_10d": 0.009754545602406165
+        },
+        {
+          "prior_high_idx": 1913,
+          "prior_high_date": "2006-08-02",
+          "high_idx": 1935,
+          "high_date": "2006-09-01",
+          "price_change": 0.027422906323802773,
+          "macd_change": -0.05786314513293078,
+          "forward_return_10d": 0.004852891764882294
+        },
+        {
+          "prior_high_idx": 1935,
+          "prior_high_date": "2006-09-01",
+          "high_idx": 1941,
+          "high_date": "2006-09-12",
+          "price_change": 0.010312409463133157,
+          "macd_change": -0.06030491919621994,
+          "forward_return_10d": -0.00780552763468051
+        },
+        {
+          "prior_high_idx": 1947,
+          "prior_high_date": "2006-09-20",
+          "high_idx": 1970,
+          "high_date": "2006-10-23",
+          "price_change": 0.019213430299093556,
+          "macd_change": -0.11312784347621374,
+          "forward_return_10d": -0.01413842507951593
+        },
+        {
+          "prior_high_idx": 2029,
+          "prior_high_date": "2007-01-19",
+          "high_idx": 2038,
+          "high_date": "2007-02-01",
+          "price_change": 0.003749670463832883,
+          "macd_change": -0.07281589733933913,
+          "forward_return_10d": 0.0020114855275534605
+        },
+        {
+          "prior_high_idx": 2038,
+          "prior_high_date": "2007-02-01",
+          "high_idx": 2048,
+          "high_date": "2007-02-15",
+          "price_change": 0.0020114855275534605,
+          "macd_change": -0.05860979053909432,
+          "forward_return_10d": -0.046171513038946344
+        },
+        {
+          "prior_high_idx": 2615,
+          "prior_high_date": "2009-05-18",
+          "high_idx": 2625,
+          "high_date": "2009-06-02",
+          "price_change": 0.022673961119466013,
+          "macd_change": -0.01711791772968496,
+          "forward_return_10d": -0.04663605965101644
+        },
+        {
+          "prior_high_idx": 2625,
+          "prior_high_date": "2009-06-02",
+          "high_idx": 2644,
+          "high_date": "2009-06-29",
+          "price_change": 0.014143763050136293,
+          "macd_change": -0.09900016712848725,
+          "forward_return_10d": -0.012061876889959215
+        },
+        {
+          "prior_high_idx": 2669,
+          "prior_high_date": "2009-08-04",
+          "high_idx": 2685,
+          "high_date": "2009-08-26",
+          "price_change": 0.027748088308814867,
+          "macd_change": -0.12063407660087222,
+          "forward_return_10d": 0.0006922969257949597
+        },
+        {
+          "prior_high_idx": 2685,
+          "prior_high_date": "2009-08-26",
+          "high_idx": 2702,
+          "high_date": "2009-09-21",
+          "price_change": 0.005192160922393554,
+          "macd_change": -0.1889851383932779,
+          "forward_return_10d": -0.02444906919550612
+        },
+        {
+          "prior_high_idx": 2702,
+          "prior_high_date": "2009-09-21",
+          "high_idx": 2722,
+          "high_date": "2009-10-19",
+          "price_change": 0.015495827872037403,
+          "macd_change": -0.07841803236262379,
+          "forward_return_10d": -0.04408271438285112
+        },
+        {
+          "prior_high_idx": 2752,
+          "prior_high_date": "2009-12-01",
+          "high_idx": 2762,
+          "high_date": "2009-12-15",
+          "price_change": 0.011531089630664106,
+          "macd_change": -0.07070402932239972,
+          "forward_return_10d": -0.0028499098418404527
+        },
+        {
+          "prior_high_idx": 2762,
+          "prior_high_date": "2009-12-15",
+          "high_idx": 2770,
+          "high_date": "2009-12-28",
+          "price_change": 0.001266653439644767,
+          "macd_change": -0.11969640283874483,
+          "forward_return_10d": 0.003478769768609422
+        },
+        {
+          "prior_high_idx": 2973,
+          "prior_high_date": "2010-10-18",
+          "high_idx": 2986,
+          "high_date": "2010-11-04",
+          "price_change": 0.006361286647376804,
+          "macd_change": -0.10115622782386424,
+          "forward_return_10d": -0.02117572974774289
+        },
+        {
+          "prior_high_idx": 3033,
+          "prior_high_date": "2011-01-12",
+          "high_idx": 3059,
+          "high_date": "2011-02-18",
+          "price_change": 0.015475084455221465,
+          "macd_change": -0.05056616047454909,
+          "forward_return_10d": 0.002133486494797955
+        },
+        {
+          "prior_high_idx": 3059,
+          "prior_high_date": "2011-02-18",
+          "high_idx": 3067,
+          "high_date": "2011-03-03",
+          "price_change": 0.011277016653402621,
+          "macd_change": -0.04205484033176532,
+          "forward_return_10d": -0.036467781214352187
+        },
+        {
+          "prior_high_idx": 3300,
+          "prior_high_date": "2012-02-03",
+          "high_idx": 3309,
+          "high_date": "2012-02-16",
+          "price_change": 0.0038652508263421793,
+          "macd_change": -0.11512356506060684,
+          "forward_return_10d": -0.0013751165077349385
+        },
+        {
+          "prior_high_idx": 3309,
+          "prior_high_date": "2012-02-16",
+          "high_idx": 3316,
+          "high_date": "2012-02-28",
+          "price_change": 0.0011001351720537548,
+          "macd_change": -0.08266407198421888,
+          "forward_return_10d": 0.0162087947212976
+        },
+        {
+          "prior_high_idx": 3403,
+          "prior_high_date": "2012-07-02",
+          "high_idx": 3421,
+          "high_date": "2012-07-27",
+          "price_change": 0.018358267593252237,
+          "macd_change": -0.0667156902145436,
+          "forward_return_10d": -0.0036055420485129656
+        },
+        {
+          "prior_high_idx": 3470,
+          "prior_high_date": "2012-10-05",
+          "high_idx": 3479,
+          "high_date": "2012-10-18",
+          "price_change": 0.004129268671447531,
+          "macd_change": -0.08796145167399771,
+          "forward_return_10d": -0.028543790537502285
+        },
+        {
+          "prior_high_idx": 3597,
+          "prior_high_date": "2013-04-12",
+          "high_idx": 3604,
+          "high_date": "2013-04-23",
+          "price_change": 0.005424542455200587,
+          "macd_change": -0.09345738724920238,
+          "forward_return_10d": -0.014110818106537476
+        },
+        {
+          "prior_high_idx": 3604,
+          "prior_high_date": "2013-04-23",
+          "high_idx": 3620,
+          "high_date": "2013-05-15",
+          "price_change": 0.023656427408857903,
+          "macd_change": -0.20811288464884825,
+          "forward_return_10d": -0.00283809444859106
+        },
+        {
+          "prior_high_idx": 3906,
+          "prior_high_date": "2014-07-03",
+          "high_idx": 3963,
+          "high_date": "2014-09-24",
+          "price_change": 0.047336279889089755,
+          "macd_change": -0.09502365344378916,
+          "forward_return_10d": -0.008732951189522843
+        },
+        {
+          "prior_high_idx": 4023,
+          "prior_high_date": "2014-12-18",
+          "high_idx": 4036,
+          "high_date": "2015-01-08",
+          "price_change": 0.004822643090647163,
+          "macd_change": -0.2901428385356297,
+          "forward_return_10d": 0.0014117180785642436
+        },
+        {
+          "prior_high_idx": 4134,
+          "prior_high_date": "2015-06-01",
+          "high_idx": 4150,
+          "high_date": "2015-06-23",
+          "price_change": 0.01608185963353555,
+          "macd_change": -0.015639667564897763,
+          "forward_return_10d": -0.0336167403193508
+        },
+        {
+          "prior_high_idx": 4262,
+          "prior_high_date": "2015-12-01",
+          "high_idx": 4273,
+          "high_date": "2015-12-16",
+          "price_change": 0.004148846105474088,
+          "macd_change": -0.23276772201249685,
+          "forward_return_10d": -0.00798790560775729
+        },
+        {
+          "prior_high_idx": 4654,
+          "prior_high_date": "2017-06-22",
+          "high_idx": 4673,
+          "high_date": "2017-07-20",
+          "price_change": 0.006080227266788929,
+          "macd_change": -0.3487952885690504,
+          "forward_return_10d": -0.017513543868735274
+        },
+        {
+          "prior_high_idx": 4867,
+          "prior_high_date": "2018-04-27",
+          "high_idx": 4878,
+          "high_date": "2018-05-14",
+          "price_change": 0.0004788234987906122,
+          "macd_change": -0.08307445397748836,
+          "forward_return_10d": -0.01782729672794098
+        },
+        {
+          "prior_high_idx": 4953,
+          "prior_high_date": "2018-08-29",
+          "high_idx": 4975,
+          "high_date": "2018-10-01",
+          "price_change": 0.029611283715625932,
+          "macd_change": -0.17386768499498828,
+          "forward_return_10d": -0.05417276883900678
+        },
+        {
+          "prior_high_idx": 5069,
+          "prior_high_date": "2019-02-15",
+          "high_idx": 5078,
+          "high_date": "2019-03-01",
+          "price_change": 0.00107698950742541,
+          "macd_change": -0.021012027491892127,
+          "forward_return_10d": -0.010328123894476482
+        },
+        {
+          "prior_high_idx": 5156,
+          "prior_high_date": "2019-06-21",
+          "high_idx": 5164,
+          "high_date": "2019-07-03",
+          "price_change": 0.007148171822782187,
+          "macd_change": -0.13023386610710475,
+          "forward_return_10d": -0.01779661311462187
+        },
+        {
+          "prior_high_idx": 5267,
+          "prior_high_date": "2019-11-27",
+          "high_idx": 5284,
+          "high_date": "2019-12-23",
+          "price_change": 0.03275244784058477,
+          "macd_change": -0.12294514257054345,
+          "forward_return_10d": -0.007564724805350921
+        },
+        {
+          "prior_high_idx": 5284,
+          "prior_high_date": "2019-12-23",
+          "high_idx": 5303,
+          "high_date": "2020-01-22",
+          "price_change": 0.015711402744569412,
+          "macd_change": -0.5542507548676952,
+          "forward_return_10d": -0.009261922941005106
+        },
+        {
+          "prior_high_idx": 5384,
+          "prior_high_date": "2020-05-18",
+          "high_idx": 5398,
+          "high_date": "2020-06-08",
+          "price_change": 0.02637035228587963,
+          "macd_change": -0.10082707636469479,
+          "forward_return_10d": -0.03829865086283667
+        },
+        {
+          "prior_high_idx": 5434,
+          "prior_high_date": "2020-07-29",
+          "high_idx": 5447,
+          "high_date": "2020-08-17",
+          "price_change": 0.005145986769196176,
+          "macd_change": -0.5516618631987313,
+          "forward_return_10d": 0.007725978113161185
+        },
+        {
+          "prior_high_idx": 5447,
+          "prior_high_date": "2020-08-17",
+          "high_idx": 5459,
+          "high_date": "2020-09-02",
+          "price_change": 0.01870987741339167,
+          "macd_change": -0.15753986819537147,
+          "forward_return_10d": -0.034174026039212185
+        },
+        {
+          "prior_high_idx": 5510,
+          "prior_high_date": "2020-11-13",
+          "high_idx": 5526,
+          "high_date": "2020-12-08",
+          "price_change": 0.005172977055406265,
+          "macd_change": -0.34853807200801157,
+          "forward_return_10d": -0.014463152595882944
+        },
+        {
+          "prior_high_idx": 5526,
+          "prior_high_date": "2020-12-08",
+          "high_idx": 5534,
+          "high_date": "2020-12-18",
+          "price_change": 0.0026619614896315376,
+          "macd_change": -0.13625807183002792,
+          "forward_return_10d": 0.006814129584658463
+        },
+        {
+          "prior_high_idx": 5619,
+          "prior_high_date": "2021-04-23",
+          "high_idx": 5630,
+          "high_date": "2021-05-10",
+          "price_change": 0.004446984560160903,
+          "macd_change": -0.4556885842165741,
+          "forward_return_10d": 0.0020123963072085586
+        },
+        {
+          "prior_high_idx": 5630,
+          "prior_high_date": "2021-05-10",
+          "high_idx": 5640,
+          "high_date": "2021-05-24",
+          "price_change": 0.0020123963072085586,
+          "macd_change": -0.5147911648548842,
+          "forward_return_10d": -0.018717880528759685
+        },
+        {
+          "prior_high_idx": 5640,
+          "prior_high_date": "2021-05-24",
+          "high_idx": 5652,
+          "high_date": "2021-06-10",
+          "price_change": 0.007712074699419454,
+          "macd_change": -0.6976266907126814,
+          "forward_return_10d": -0.0024713423306340133
+        },
+        {
+          "prior_high_idx": 5689,
+          "prior_high_date": "2021-08-03",
+          "high_idx": 5699,
+          "high_date": "2021-08-17",
+          "price_change": 0.0196765254950975,
+          "macd_change": -0.04551907342315076,
+          "forward_return_10d": -0.011694984820398886
+        },
+        {
+          "prior_high_idx": 5699,
+          "prior_high_date": "2021-08-17",
+          "high_idx": 5712,
+          "high_date": "2021-09-03",
+          "price_change": 0.00029243875181519474,
+          "macd_change": -0.47469664107478593,
+          "forward_return_10d": -0.041651530528392273
+        },
+        {
+          "prior_high_idx": 6026,
+          "prior_high_date": "2022-12-02",
+          "high_idx": 6034,
+          "high_date": "2022-12-14",
+          "price_change": 0.00228936419382876,
+          "macd_change": -0.3631868605460511,
+          "forward_return_10d": -0.026838041411981404
+        },
+        {
+          "prior_high_idx": 6302,
+          "prior_high_date": "2024-01-10",
+          "high_idx": 6321,
+          "high_date": "2024-02-07",
+          "price_change": 0.02411856329036511,
+          "macd_change": -0.6241209795595353,
+          "forward_return_10d": 0.01932540444194917
+        },
+        {
+          "prior_high_idx": 6344,
+          "prior_high_date": "2024-03-12",
+          "high_idx": 6356,
+          "high_date": "2024-03-28",
+          "price_change": 0.004760912426401742,
+          "macd_change": -0.5678258088091468,
+          "forward_return_10d": -0.05970346118263314
+        },
+        {
+          "prior_high_idx": 6394,
+          "prior_high_date": "2024-05-22",
+          "high_idx": 6406,
+          "high_date": "2024-06-10",
+          "price_change": 0.003139763368469202,
+          "macd_change": -0.3902635888184989,
+          "forward_return_10d": -0.002313372355356087
+        },
+        {
+          "prior_high_idx": 6406,
+          "prior_high_date": "2024-06-10",
+          "high_idx": 6415,
+          "high_date": "2024-06-24",
+          "price_change": 0.0008164599318966103,
+          "macd_change": -0.060078541796201534,
+          "forward_return_10d": -0.014548911842600747
+        },
+        {
+          "prior_high_idx": 6463,
+          "prior_high_date": "2024-08-30",
+          "high_idx": 6473,
+          "high_date": "2024-09-16",
+          "price_change": 0.00025450728815883973,
+          "macd_change": -0.7527874664572778,
+          "forward_return_10d": -0.020478256857114605
+        },
+        {
+          "prior_high_idx": 6570,
+          "prior_high_date": "2025-02-05",
+          "high_idx": 6589,
+          "high_date": "2025-03-05",
+          "price_change": 0.008285589443076287,
+          "macd_change": -0.5619253456664239,
+          "forward_return_10d": -0.018439301455701596
+        },
+        {
+          "prior_high_idx": 6676,
+          "prior_high_date": "2025-07-10",
+          "high_idx": 6687,
+          "high_date": "2025-07-25",
+          "price_change": 0.0011736237875912203,
+          "macd_change": -0.23013041994016703,
+          "forward_return_10d": -0.04630709454333924
+        },
+        {
+          "prior_high_idx": 6924,
+          "prior_high_date": "2026-07-07",
+          "high_idx": 6939,
+          "high_date": "2026-07-28",
+          "price_change": 0.017149063631487816,
+          "macd_change": -1.2398096515364614,
+          "forward_return_10d": 0.004484036976154196
+        }
+      ]
+    }
+  }
+}

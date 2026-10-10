@@ -1,0 +1,118 @@
+
+########################################################################################
+# monthly contribution $1,000  (seed $20,000)
+########################################################################################
+
+=== CORE (SPY/AGG) ===
+window 2003-09-29 .. 2026-08-19  (5759 sessions, 22.85y)
+
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal
+benchmark: SPY buy & hold        $  1,303,809  $  296,000   4.40x   10.67%    9.26%    -56.4%   0.16     0
+benchmark: static 60/40 SPY/AGG  $    715,340  $  296,000   2.42x    6.60%    5.76%    -38.0%   0.15     7
+1. broad-market core 80/20 SPY/AGG $    988,891  $  296,000   3.34x    8.82%    7.68%    -47.4%   0.16     5
+3. horizon glidepath 90->60 SPY/AGG (20y) $    785,357  $  296,000   2.65x    7.25%    6.54%    -48.8%   0.13     8
+4. vol-trimmed core 70/30 SPY/AGG $    711,738  $  296,000   2.40x    6.56%    5.92%    -33.5%   0.18    23
+
+  -- cost of turnover (5bp slippage, charged on every dollar traded) --
+  benchmark: SPY buy & hold              turnover   1.00x paid-in   cost paid $      148  (   1.1bp of final balance)
+  benchmark: static 60/40 SPY/AGG        turnover   1.88x paid-in   cost paid $      278  (   3.9bp of final balance)
+  1. broad-market core 80/20 SPY/AGG     turnover   1.68x paid-in   cost paid $      248  (   2.5bp of final balance)
+  3. horizon glidepath 90->60 SPY/AGG (20y) turnover   2.19x paid-in   cost paid $      324  (   4.1bp of final balance)
+  4. vol-trimmed core 70/30 SPY/AGG      turnover   8.14x paid-in   cost paid $    1,204  (  16.9bp of final balance)
+
+  -- 2008 GFC slice (2007-10-09 .. 2009-03-09), raw balance return/drawdown --
+    benchmark: SPY buy & hold              return   -45.7%   max drawdown   -45.7%
+    benchmark: static 60/40 SPY/AGG        return   -23.0%   max drawdown   -27.1%
+    1. broad-market core 80/20 SPY/AGG     return   -34.7%   max drawdown   -35.7%
+    3. horizon glidepath 90->60 SPY/AGG (20y) return   -36.4%   max drawdown   -37.0%
+    4. vol-trimmed core 70/30 SPY/AGG      return   -16.8%   max drawdown   -22.5%
+
+=== DIVERSIFIED-FULL (SPY*/AGG/GLD, SPY proxy for SCHD) ===
+window 2004-11-18 .. 2026-08-19  (5471 sessions, 21.71y)
+
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal
+benchmark: SPY buy & hold        $  1,183,025  $  282,000   4.20x   10.89%    8.97%    -55.5%   0.16     0
+benchmark: static 60/40 SPY/AGG  $    661,122  $  282,000   2.34x    6.72%    5.61%    -37.0%   0.15     7
+2. diversified multi-asset core  $    788,484  $  282,000   2.80x    8.01%    7.10%    -33.4%   0.21    13
+
+  -- cost of turnover (5bp slippage, charged on every dollar traded) --
+  benchmark: SPY buy & hold              turnover   1.00x paid-in   cost paid $      141  (   1.2bp of final balance)
+  benchmark: static 60/40 SPY/AGG        turnover   1.86x paid-in   cost paid $      262  (   4.0bp of final balance)
+  2. diversified multi-asset core        turnover   2.33x paid-in   cost paid $      328  (   4.2bp of final balance)
+
+  -- 2008 GFC slice (2007-10-09 .. 2009-03-09), raw balance return/drawdown --
+    benchmark: SPY buy & hold              return   -42.0%   max drawdown   -42.9%
+    benchmark: static 60/40 SPY/AGG        return   -17.9%   max drawdown   -25.2%
+    2. diversified multi-asset core        return   -12.3%   max drawdown   -25.1%
+
+=== DIVERSIFIED-PRIMARY (SPY/SCHD/AGG/GLD, native SCHD) ===
+window 2011-10-20 .. 2026-08-19  (3728 sessions, 14.79y)
+
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal
+benchmark: SPY buy & hold        $    646,700  $  199,000   3.25x   13.24%   13.26%    -34.3%   0.39     0
+benchmark: static 60/40 SPY/AGG  $    391,142  $  199,000   1.97x    7.80%    7.82%    -23.8%   0.33     4
+2. diversified multi-asset core  $    417,546  $  199,000   2.10x    8.52%    7.95%    -20.7%   0.38     3
+
+  -- cost of turnover (5bp slippage, charged on every dollar traded) --
+  benchmark: SPY buy & hold              turnover   1.00x paid-in   cost paid $      100  (   1.5bp of final balance)
+  benchmark: static 60/40 SPY/AGG        turnover   1.47x paid-in   cost paid $      147  (   3.8bp of final balance)
+  2. diversified multi-asset core        turnover   1.41x paid-in   cost paid $      140  (   3.4bp of final balance)
+
+########################################################################################
+# monthly contribution $500  (seed $20,000)
+########################################################################################
+
+=== CORE (SPY/AGG) ===
+window 2003-09-29 .. 2026-08-19  (5759 sessions, 22.85y)
+
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal
+benchmark: SPY buy & hold        $    728,064  $  158,000   4.61x   10.45%    9.27%    -56.6%   0.16     0
+benchmark: static 60/40 SPY/AGG  $    394,268  $  158,000   2.50x    6.49%    5.77%    -38.2%   0.15     7
+1. broad-market core 80/20 SPY/AGG $    549,628  $  158,000   3.48x    8.66%    7.70%    -47.6%   0.16     5
+3. horizon glidepath 90->60 SPY/AGG (20y) $    436,695  $  158,000   2.76x    7.16%    6.56%    -49.0%   0.13     9
+4. vol-trimmed core 70/30 SPY/AGG $    392,591  $  158,000   2.48x    6.46%    5.91%    -33.8%   0.17    23
+
+  -- cost of turnover (5bp slippage, charged on every dollar traded) --
+  benchmark: SPY buy & hold              turnover   1.00x paid-in   cost paid $       79  (   1.1bp of final balance)
+  benchmark: static 60/40 SPY/AGG        turnover   1.89x paid-in   cost paid $      149  (   3.8bp of final balance)
+  1. broad-market core 80/20 SPY/AGG     turnover   1.71x paid-in   cost paid $      135  (   2.5bp of final balance)
+  3. horizon glidepath 90->60 SPY/AGG (20y) turnover   2.50x paid-in   cost paid $      197  (   4.5bp of final balance)
+  4. vol-trimmed core 70/30 SPY/AGG      turnover   8.54x paid-in   cost paid $      675  (  17.2bp of final balance)
+
+  -- 2008 GFC slice (2007-10-09 .. 2009-03-09), raw balance return/drawdown --
+    benchmark: SPY buy & hold              return   -48.4%   max drawdown   -48.4%
+    benchmark: static 60/40 SPY/AGG        return   -26.6%   max drawdown   -28.2%
+    1. broad-market core 80/20 SPY/AGG     return   -37.7%   max drawdown   -37.7%
+    3. horizon glidepath 90->60 SPY/AGG (20y) return   -39.4%   max drawdown   -39.4%
+    4. vol-trimmed core 70/30 SPY/AGG      return   -20.9%   max drawdown   -24.0%
+
+=== DIVERSIFIED-FULL (SPY*/AGG/GLD, SPY proxy for SCHD) ===
+window 2004-11-18 .. 2026-08-19  (5471 sessions, 21.71y)
+
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal
+benchmark: SPY buy & hold        $    656,248  $  151,000   4.35x   10.59%    8.97%    -55.8%   0.16     0
+benchmark: static 60/40 SPY/AGG  $    362,838  $  151,000   2.40x    6.55%    5.59%    -37.6%   0.15     7
+2. diversified multi-asset core  $    443,307  $  151,000   2.94x    7.94%    7.16%    -33.4%   0.21    14
+
+  -- cost of turnover (5bp slippage, charged on every dollar traded) --
+  benchmark: SPY buy & hold              turnover   1.00x paid-in   cost paid $       76  (   1.2bp of final balance)
+  benchmark: static 60/40 SPY/AGG        turnover   1.88x paid-in   cost paid $      142  (   3.9bp of final balance)
+  2. diversified multi-asset core        turnover   2.69x paid-in   cost paid $      203  (   4.6bp of final balance)
+
+  -- 2008 GFC slice (2007-10-09 .. 2009-03-09), raw balance return/drawdown --
+    benchmark: SPY buy & hold              return   -45.9%   max drawdown   -45.9%
+    benchmark: static 60/40 SPY/AGG        return   -23.6%   max drawdown   -27.3%
+    2. diversified multi-asset core        return   -17.8%   max drawdown   -26.7%
+
+=== DIVERSIFIED-PRIMARY (SPY/SCHD/AGG/GLD, native SCHD) ===
+window 2011-10-20 .. 2026-08-19  (3728 sessions, 14.79y)
+
+                                      balance     paid in    mult      IRR      TWR    maxDD    MAR  rebal
+benchmark: SPY buy & hold        $    386,532  $  109,500   3.53x   13.24%   13.26%    -34.3%   0.39     0
+benchmark: static 60/40 SPY/AGG  $    225,625  $  109,500   2.06x    7.78%    7.80%    -23.7%   0.33     4
+2. diversified multi-asset core  $    240,176  $  109,500   2.19x    8.43%    7.96%    -20.3%   0.39     5
+
+  -- cost of turnover (5bp slippage, charged on every dollar traded) --
+  benchmark: SPY buy & hold              turnover   1.00x paid-in   cost paid $       55  (   1.4bp of final balance)
+  benchmark: static 60/40 SPY/AGG        turnover   1.50x paid-in   cost paid $       82  (   3.7bp of final balance)
+  2. diversified multi-asset core        turnover   1.78x paid-in   cost paid $       97  (   4.1bp of final balance)

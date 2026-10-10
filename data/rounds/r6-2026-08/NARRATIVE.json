@@ -1,0 +1,19 @@
+{
+  "round_id": "r6-2026-08",
+  "title": "Round 6 - four cards for the paper desk",
+  "focus": "Which four cards should trade forward, live, on the paper desk, under a selection rule pre-registered before round 5's results existed - a different kind of decision from every prior round because the desk holds indefinitely and runs as a book rather than a scored shortlist.",
+  "headline": "The rule seated B-momentum, A-rotation, c07-chop and c14-riskmanaged-wide, but the only out-of-sample evidence the programme had, 55 live sessions, ranked the field almost exactly backwards against what the rule's own backtest ladder had just predicted.",
+  "outcome": "A gate requiring positive median annualized adjusted excess at both the 5-year and 10-year rungs against both SPY and QQQ left eight survivors. A correlation cap of at most 0.70 between any two seated cards, forced by the incumbent desk already holding B-momentum and C-trend at 0.909 (two versions of one trade), picked B-momentum, A-rotation and c07-chop as the largest mutually-under-cap set containing the Gate-A leader.\n\nThe hedge slot went to c14-riskmanaged-wide, even though c20-rotation had by far the strongest hedge signature in the entire programme - it was excluded on a single raw correlation figure to B-momentum that the same document flags as suspect, since the same pair reads with the opposite sign on the annualized bear arm. The rule was applied as written rather than rewritten around this result, and c20-rotation was flagged for round 7.\n\nThe book check passed with a veto count of one, so the selection stood.\n\nThe live desk, the programme's only true out-of-sample evidence, contradicted every backtest conclusion above: over 55 live sessions the ladder's rank-1 short-horizon winner, A-rotation, was last of ten live cards, and the ladder's 8th-of-10 card was the only one making money. Two of the four selected cards, c07-chop and c14-riskmanaged-wide, took zero trades in those 55 sessions and sat at 100% cash, because the exposure floor that qualified them was measured on historical windows rather than the regime the desk was about to trade. The correlation cap also missed a holdings overlap: B-momentum and A-rotation cleared the 0.70 cap comfortably, yet live they turned out to share the same NVDA, AVGO and TSM names at nearly half of each book's weight.",
+  "seated": ["B-momentum", "A-rotation", "c07-chop", "c14-riskmanaged-wide"],
+  "owner_override": null,
+  "carries_forward": [
+    "A liveness gate is needed: a desk card must be shown to have traded in the 60 sessions before selection, since c07-chop and c14-riskmanaged-wide sat at 100% cash and cleared the exposure floor anyway.",
+    "A holdings-overlap cap is needed alongside the return-correlation cap, since B-momentum and A-rotation cleared the correlation cap while sharing nearly half their book weight in the same names.",
+    "The correlation cap should be re-specified on annualized figures only - c20-rotation was excluded on a raw correlation figure that reads with the opposite sign when annualized.",
+    "The live desk should be scored as its own matrix, weighted above any backtest matrix, once it accumulates roughly 250 sessions."
+  ],
+  "sources": [
+    "strategy-program/ROUND-6-PLAN.md",
+    "data/rounds/r6-2026-08/SELECTION.md"
+  ]
+}

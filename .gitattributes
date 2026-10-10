@@ -1,0 +1,17 @@
+# Normalize line endings in the repo; check out native on Windows.
+* text=auto
+
+# Always LF — these are read by tooling that dislikes CRLF
+*.py    text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.md    text eol=lf
+*.sh    text eol=lf
+
+# Broker fixtures are byte-sensitive: adapters are tested against exact
+# encodings and line terminators, so git must not rewrite them.
+tests/fixtures/** -text
+*.csv -text

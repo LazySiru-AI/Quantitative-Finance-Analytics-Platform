@@ -1,0 +1,26 @@
+{
+  "agent_id": "I-13f-duquesne-2026q2",
+  "display_name": "I - Duquesne 2026-Q2 disclosures, price-confirmed",
+  "discipline": "momentum",
+  "desk_only": true,
+  "thesis": "This is D-13f-newbuys' idea run on a filing that is sixteen days old instead of six months old, and the age is the only thing that has changed. Duquesne Family Office's 13F for the quarter ending 2026-06-30 was filed 2026-08-14 (accession 0001536411-26-000006, book $5.21bn across 95 positions, up from $3.38bn and 70 positions in the 2026-03-31 filing accession 0001536411-26-000004, filed 2026-05-15). The desk's inception is 2026-08-15, one day after that filing became public, so for the first time in this programme a 13F-derived basket can trade a window that begins entirely after the document it was derived from -- the constraint CONSTRAINTS.md says is enforced by discipline and not by code, satisfied here by an accident of the calendar rather than by cleverness. What has NOT changed is the evidence for the underlying idea, and it is weak: D-13f-newbuys measured a 52% beat-rate against QQQM across 25 fresh initiations, a coin flip whose average was carried by two outliers. This card does not claim that institutions buying a name is an edge. It claims the narrower thing that card claimed -- that among names a concentrated, genuinely stock-picking manager committed fresh capital to, the ones the market has already begun confirming with its own price action have done better than the ones it has not -- and it is an ordinary momentum rule riding a curated, high-dispersion starting list. The universe is what survived three filters applied to 118 changed rows, and each filter removed something a naive reader would have traded. First, option legs: nine rows carry a putCall element, and four of them are NEW, including the single largest new line in the whole filing -- an Insmed call at 2.76% weight, ahead of every equity position. Tesla (1.02%), CDW (0.67%) and Meta (0.54%) are also calls. A reader sorting NEW rows by weight buys a derivative with a strike and an expiry that a 13F does not disclose; all nine are excluded here. Second, the CUSIP-to-ticker bridge: only 17 of 118 changed rows resolve to a ticker in the user's ledger (14.4%), so 101 rows -- including large new equity positions in Fox Corp, CDW, Bitdeer, Delta, Fluor and D.R. Horton -- are not addressable by this engine at all, and the honest response is a smaller universe rather than a name-matching workaround. Third, the roster floor: Lam Research resolved cleanly and was still dropped, because it has too few transactions in the ledger to clear the min_txns floor. Also excluded, and worth naming because eight of the managers probed on 2026-08-30 disclosed it: SPCX resolves to CUSIP 84615Q103, Space Exploration Technologies -- a private company with zero daily bars, correctly rejected by the roster rather than silently held. What remains is seven fresh equity initiations (GOOGL 2.31% weight, AMD 0.81%, EQIX, LRCX-excluded, LLY, RDDT, IREN) and two share-count increases (AMZN 45,800 to 541,600 shares; TSM 495,280 to 589,680). Note the concentration this list does NOT capture: Natera at 16.60% is by far the largest position in the book and does not appear here, because it was a 4% share-count increase to an existing holding rather than a new decision, and because it does not resolve to a ticker. The other side of this trade is whoever sells into confirmed strength -- value-discipline holders unwinding into a re-rate, and shorts fading a name that has already run -- while accumulation that began before the filing quietly continues. What is expected to go wrong: the surviving eight are almost entirely mega-cap technology and semiconductors plus one healthcare name, so this is a concentrated bet on continued AI and mega-cap-tech leadership that should underperform badly in a rotation away from that theme. And the position age is real even at sixteen days of filing age: a position new in the 2026-06-30 filing could have been bought as early as 2026-04-01, so the worst case is roughly 151 days old at inception, and Duquesne may already have exited. The Q3 filing that would say so is due around 2026-11-14, inside a window this engine cannot rotate into.",
+  "falsification": "Two measurements would make this wrong rather than merely unlucky. First: if this card's return over the desk window is at or below a plain price-confirmed momentum card run on eight mega-cap technology names chosen without any 13F input, then the 13F provenance contributed nothing and the result is the sector's, not the signal's -- this is the control that matters and it has not been run. Second: if fewer than half the eight names ever satisfy the entry rule across the whole desk window, the card is not testing the thesis at all, it is holding cash and reporting the benchmark gap as a finding.",
+  "universe": [
+    "GOOGL",
+    "AMD",
+    "EQIX",
+    "LLY",
+    "RDDT",
+    "IREN",
+    "AMZN",
+    "TSM"
+  ],
+  "entry": "close > sma(50) and close > sma(200) and rsi(14) > 50",
+  "exit": "close crosses_below sma(50)",
+  "stop_loss_pct": 0.12,
+  "take_profit_pct": null,
+  "max_hold_days": 120,
+  "max_positions": 6,
+  "position_pct": 0.15,
+  "designed_through": "2026-08-14"
+}

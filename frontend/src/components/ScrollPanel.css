@@ -1,0 +1,181 @@
+/**
+ * ScrollPanel.tsx -- the shared bounded-card primitive.
+ *
+ * Height caps are `clamp(floor, vh, ceiling)` rather than fixed pixels, following
+ * `EventCalendar.css`: a fixed rem cap on a short laptop viewport produces a card taller than the
+ * window (so the page scrolls anyway, and nothing was gained), while a bare `vh` on a tall monitor
+ * produces a card with a scrollbar that never needed one. The floor also protects the degenerate
+ * case -- a 400px browser window should still show several rows, not one and a half.
+ */
+
+.scroll-region {
+  overflow-y: auto;
+  /* Without this a flex/grid child refuses to shrink below its content height and the cap silently
+     does nothing -- the single most common way a max-height on a flex child is defeated. */
+  min-height: 0;
+  /* Reaching the end of this region must not start scrolling the page behind it. */
+  overscroll-behavior: contain;
+  /* Reserve the gutter so content does not reflow by a scrollbar's width the moment it overflows. */
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+  position: relative;
+}
+
+.scroll-region-sm {
+  max-height: 16rem;
+}
+
+.scroll-region-md {
+  max-height: clamp(320px, 55vh, 640px);
+}
+
+.scroll-region-lg {
+  max-height: clamp(400px, 75vh, 900px);
+}
+
+/* Expanded lifts the cap rather than raising it, matching `.event-calendar-panel.expanded`. */
+.scroll-region.expanded {
+  max-height: none;
+  overflow-y: visible;
+}
+
+.scroll-region::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-region::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 5px;
+}
+
+.scroll-region::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-region:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* A column header inside a bounded region must survive its own scroll, otherwise a table read at
+   row 60 is a grid of unlabelled numbers. The Competition leaderboard already did this by hand;
+   here every table in a scroll region gets it. `--panel` (not transparent) so scrolled rows pass
+   behind the header rather than through it. */
+.scroll-region table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel);
+}
+
+/* The bottom fade says "there is more below". `data-more` is measured in JS and is false when the
+   content fits or the reader has hit the end, so the fade never implies content that is not there.
+   `mask-image` fades the content itself rather than painting a gradient over it, which keeps it
+   correct on top of whatever background the card happens to have. */
+.scroll-region[data-more="true"] {
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), transparent 100%);
+}
+
+/* --- the full card ---------------------------------------------------------- */
+
+.scroll-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  /* The card must be allowed to be shorter than its content for the body's cap to bite. */
+  min-height: 0;
+}
+
+.scroll-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.scroll-panel-head > :first-child {
+  margin: 0;
+}
+
+.scroll-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Sized and voiced as a label, per the house convention: mono, uppercase, letter-spaced. */
+.scroll-panel-expand {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.scroll-panel-expand:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.scroll-panel-expand:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-region {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   UX-08 -- wide tables on a phone, this primitive's half.
+
+   `styles.css` gives every `.table-wrap table` a sticky first column under
+   720px (see its own "UX-08" section, appended at the end of that file, for
+   the full rationale -- specificity choices and the row-background-painting
+   caveat behind the `:where()` use below are explained there and not repeated
+   here). That rule does not reach a table that sits directly inside a
+   `ScrollRegion` with no `.table-wrap` div between them --
+   `AgentWorkflow.css`'s `.wf-table` (book positions/orders) is the one table
+   in the codebase built that way, found via
+   `grep -rho 'className="[^"]*table[^"]*"' src`. This block is that rule's
+   `.scroll-region` counterpart, plus the sticky corner cell any
+   `ScrollRegion` table needs once its first column also goes sticky: the
+   `.scroll-region table thead th` rule above already pins the header row to
+   the top of the region; its own first cell is now the corner of *both* axes
+   and must out-rank the ordinary sticky-left data cells below it in the same
+   column, or a data row would paint over the header corner while scrolling
+   vertically. Kept at the same specificity as the primitive's own
+   `thead th` rule (a deliberate tie, broken by source order -- this block
+   comes later in the file) rather than higher, so a page's own pinned-column
+   rule (the Competition leaderboard already has one, in `Competition.css`,
+   which sets its own header z-index of 3 specifically to beat this) keeps
+   winning over this default. Gated to the same `@media (max-width: 720px)` as
+   the `styles.css` half -- desktop is untouched. --------------------------- */
+@media (max-width: 720px) {
+  :where(.scroll-region) :where(table) :where(th, td):first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--panel);
+    box-shadow: 3px 0 6px -3px color-mix(in srgb, var(--bg) 85%, transparent);
+  }
+  :where(.scroll-region) table thead th:first-child {
+    z-index: 2;
+  }
+  @media (forced-colors: active) {
+    :where(.scroll-region) :where(table) :where(th, td):first-child {
+      box-shadow: none;
+      border-right: 1px solid CanvasText;
+    }
+  }
+}

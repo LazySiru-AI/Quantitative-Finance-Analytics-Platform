@@ -1,0 +1,15 @@
+window: 2025-08-21 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r44-control-passive: 1s trades=4 ret=+21.02% dd=-8.12% rej=0
+[2/10] r1 r44-control-trim: 1s trades=12 ret=+22.53% dd=-7.82% rej=0
+[3/10] r1 r44-defense-passive: 2s trades=4 ret=+23.58% dd=-19.81% rej=0
+[4/10] r1 r44-defense-trim: 1s trades=24 ret=+18.63% dd=-10.57% rej=0
+[5/10] r1 r44-power-passive: 1s trades=4 ret=+11.08% dd=-14.10% rej=0
+[6/10] r1 r44-power-trim: 1s trades=20 ret=+7.31% dd=-6.28% rej=0
+[7/10] r1 r44-realassets-passive: 1s trades=4 ret=+62.67% dd=-20.52% rej=0
+[8/10] r1 r44-realassets-trim: 1s trades=19 ret=+22.02% dd=-5.38% rej=0
+[9/10] r1 r44-semicap-passive: 2s trades=4 ret=+172.31% dd=-37.82% rej=0
+[10/10] r1 r44-semicap-trim: 0s trades=6 ret=+18.99% dd=-2.31% rej=0
+r1: 10 agents, 4 discoveries
+overall: 10 agents, 4 discoveries at alpha=0.1

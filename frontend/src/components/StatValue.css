@@ -1,0 +1,26 @@
+/**
+ * StatValue.tsx.
+ *
+ * Tabular numerals so a column of these lines up, and the mono font already used for every other
+ * numeric readout in the app (`StatusPill.css`, `styles.css`). The empty state is deliberately
+ * muted and italic -- the same "never reads as a quiet no" treatment `.status-pill-neutral` uses --
+ * so a missing estimate is never mistaken for a real, if unremarkable, zero.
+ */
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+}
+
+.stat-value-empty {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* The ▲/▼ direction glyph (see this component's docstring) sits just ahead of the value, small
+   enough not to compete with the number it points at. */
+.stat-value-direction {
+  margin-right: 0.2em;
+  font-size: 0.75em;
+}

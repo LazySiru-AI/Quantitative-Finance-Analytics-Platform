@@ -1,0 +1,223 @@
+{
+  "round": 35,
+  "n_cells": 9,
+  "control": "r35-passive-8-order",
+  "vs_control": [
+    {
+      "a": "r35-absolute-2-order",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.039928559258636975,
+      "mean_paired_diff": -0.04999750015137981,
+      "windows_a_gt_b": 2,
+      "windows_a_lt_b": 6,
+      "n_windows": 8,
+      "p_signflip": 0.078125,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-absolute-2-rank",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.05540015198421523,
+      "mean_paired_diff": -0.035950927243907194,
+      "windows_a_gt_b": 3,
+      "windows_a_lt_b": 5,
+      "n_windows": 8,
+      "p_signflip": 0.1875,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-absolute-4-order",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.0009858484685060613,
+      "mean_paired_diff": -0.005424881397415066,
+      "windows_a_gt_b": 3,
+      "windows_a_lt_b": 5,
+      "n_windows": 8,
+      "p_signflip": 0.78125,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-absolute-4-rank",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.012253769399093787,
+      "mean_paired_diff": -0.011321545708104607,
+      "windows_a_gt_b": 2,
+      "windows_a_lt_b": 6,
+      "n_windows": 8,
+      "p_signflip": 0.578125,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-macross-2-order",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.023177263481525972,
+      "mean_paired_diff": -0.02735334759884823,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.3515625,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-macross-2-rank",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.023177263481525972,
+      "mean_paired_diff": -0.022026348826560092,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.421875,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-macross-4-order",
+      "b": "r35-passive-8-order",
+      "median_diff": -0.0057953380793510645,
+      "mean_paired_diff": -0.014846192045541459,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.6015625,
+      "inside_floor": true
+    },
+    {
+      "a": "r35-macross-4-rank",
+      "b": "r35-passive-8-order",
+      "median_diff": 0.0007527616079465692,
+      "mean_paired_diff": -0.008288842545747474,
+      "windows_a_gt_b": 4,
+      "windows_a_lt_b": 4,
+      "n_windows": 8,
+      "p_signflip": 0.734375,
+      "inside_floor": true
+    }
+  ],
+  "bh": [
+    {
+      "cell": "r35-absolute-2-order",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.039928559258636975,
+      "p": 0.078125,
+      "q": 0.703125
+    },
+    {
+      "cell": "r35-absolute-2-rank",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.05540015198421523,
+      "p": 0.1875,
+      "q": 0.84375
+    },
+    {
+      "cell": "r35-absolute-4-order",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.0009858484685060613,
+      "p": 0.78125,
+      "q": 0.87890625
+    },
+    {
+      "cell": "r35-absolute-4-rank",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.012253769399093787,
+      "p": 0.578125,
+      "q": 0.87890625
+    },
+    {
+      "cell": "r35-macross-2-order",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.023177263481525972,
+      "p": 0.3515625,
+      "q": 0.87890625
+    },
+    {
+      "cell": "r35-macross-2-rank",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.023177263481525972,
+      "p": 0.421875,
+      "q": 0.87890625
+    },
+    {
+      "cell": "r35-macross-4-order",
+      "vs": "r35-passive-8-order",
+      "median_diff": -0.0057953380793510645,
+      "p": 0.6015625,
+      "q": 0.87890625
+    },
+    {
+      "cell": "r35-macross-4-rank",
+      "vs": "r35-passive-8-order",
+      "median_diff": 0.0007527616079465692,
+      "p": 0.734375,
+      "q": 0.87890625
+    },
+    {
+      "cell": "r35-passive-8-order",
+      "vs": "r35-passive-8-order",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    }
+  ],
+  "min_q": 0.703125,
+  "fill_marginals": {
+    "rank": -0.04536243200376887,
+    "order": -0.04031457851155178
+  },
+  "fill_spread": 0.0050478534922170915,
+  "matched_pairs_rank_minus_order": {
+    "r35-absolute-2-rank": -0.015471592725578256,
+    "r35-absolute-4-rank": -0.011267920930587726,
+    "r35-macross-2-rank": 0.0,
+    "r35-macross-4-rank": 0.006548099687297634
+  },
+  "mean_iqr_k2": 0.0879647268052667,
+  "mean_iqr_k4": 0.07137311063606556,
+  "worst_window": {
+    "r35-absolute-2-order": "chop-2011",
+    "r35-absolute-2-rank": "gfc",
+    "r35-absolute-4-order": "chop-2011",
+    "r35-absolute-4-rank": "chop-2011",
+    "r35-macross-2-order": "bear-2022",
+    "r35-macross-2-rank": "bear-2022",
+    "r35-macross-4-order": "chop-2011",
+    "r35-macross-4-rank": "chop-2011",
+    "r35-passive-8-order": "chop-2011"
+  },
+  "worst_two_macross": {
+    "r35-macross-2-order": [
+      "bear-2022",
+      "chop-2011"
+    ],
+    "r35-macross-2-rank": [
+      "bear-2022",
+      "chop-2011"
+    ],
+    "r35-macross-4-order": [
+      "chop-2011",
+      "bull-2024"
+    ],
+    "r35-macross-4-rank": [
+      "chop-2011",
+      "bull-2024"
+    ]
+  },
+  "control_trades": {
+    "q4-2018": 8,
+    "covid": 8,
+    "bear-2022": 8,
+    "chop-2015": 8,
+    "chop-2011": 8,
+    "bull-2024": 8,
+    "recent": 8,
+    "gfc": 8
+  },
+  "control_session_exposure": {
+    "q4-2018": 1.0,
+    "covid": 1.0,
+    "bear-2022": 1.0,
+    "chop-2015": 1.0,
+    "chop-2011": 1.0,
+    "bull-2024": 1.0,
+    "recent": 1.0,
+    "gfc": 1.0
+  }
+}

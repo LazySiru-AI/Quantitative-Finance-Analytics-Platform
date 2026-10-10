@@ -1,0 +1,149 @@
+{
+  "generated_on": "2026-09-01",
+  "selector_id": "mom12_1_hysteresis",
+  "screen_top_n": 10,
+  "screen_entry_rule": "close > sma(200) and ema(20) > ema(50)",
+  "max_research_symbols": 3,
+  "sessions_observed": 21,
+  "first_session": "2026-08-03",
+  "last_session": "2026-08-31",
+  "distinct_symbols": 10,
+  "observations_total": 132,
+  "observations_resolved": 27,
+  "observations_pending": 105,
+  "observations_unpriceable": 0,
+  "skip_reasons": {
+    "weekly_budget_exhausted": 0,
+    "no_book_capacity": 0,
+    "tax_wash_sale_blocked": 0,
+    "correlation_duplicate": 0,
+    "budget_exhausted": 132
+  },
+  "verdict_sources": {
+    "fresh": 396,
+    "cached": 0,
+    "mixed": 0
+  },
+  "avoided_cost_usd": "0",
+  "gated_candidates_per_gate": {
+    "ta_gated": 0,
+    "vibe_gated": 0,
+    "full_workflow": 0
+  },
+  "resolved_mean_forward_return": "0.078366",
+  "resolved_hit_rate": "0.888889",
+  "screen_run_count": 2,
+  "screen_spend_usd": "0",
+  "floor_sessions_required": 60,
+  "floor_gated_required": 40,
+  "floor_met": false,
+  "study": {
+    "benchmark": "SPY",
+    "benchmark_return": "0.005424586534274996436896057",
+    "window": {
+      "start": "2026-08-03",
+      "end": "2026-09-01"
+    },
+    "arms": [
+      {
+        "arm": "raw_signal",
+        "universe_source": "screen",
+        "total_return": "0.05117140000000009",
+        "max_drawdown": "-0.026292395342342068",
+        "realized_vol": "0.012596826308193186",
+        "win_rate": null,
+        "exposure": "0.9545454545454546",
+        "adjusted_excess": "0.04599338558091941128707631645",
+        "trades": 5,
+        "live_fill_fraction": "0.000000",
+        "excess_per_exposure": "0.04818354679905842811882965729",
+        "research_cost_usd": "0",
+        "net_adjusted_excess": "0.04599338558091941128707631645",
+        "research_input_tokens": 0,
+        "research_output_tokens": 0,
+        "research_cache_read_tokens": 0,
+        "research_cache_creation_tokens": 0
+      },
+      {
+        "arm": "full_workflow",
+        "universe_source": "screen",
+        "total_return": "0.0",
+        "max_drawdown": "0.0",
+        "realized_vol": "0.0",
+        "win_rate": null,
+        "exposure": "0.0",
+        "adjusted_excess": "0E-28",
+        "trades": 0,
+        "live_fill_fraction": "0",
+        "excess_per_exposure": null,
+        "research_cost_usd": "0",
+        "net_adjusted_excess": "0E-28",
+        "research_input_tokens": 0,
+        "research_output_tokens": 0,
+        "research_cache_read_tokens": 0,
+        "research_cache_creation_tokens": 0
+      }
+    ],
+    "paired": [
+      {
+        "arm": "full_workflow",
+        "universe_source": "screen",
+        "mean_daily_diff": "-0.0023494866342737694",
+        "bootstrap_p": "0.2652"
+      }
+    ],
+    "discrimination": [
+      {
+        "gate": "ta_gated",
+        "passed_n": 0,
+        "refused_n": 27,
+        "passed_hit_rate": null,
+        "refused_hit_rate": "0.8888888888888888",
+        "passed_mean_forward_return": null,
+        "refused_mean_forward_return": "0.07836633333333333",
+        "mean_diff": null,
+        "p_value": null,
+        "q_value": null
+      },
+      {
+        "gate": "vibe_gated",
+        "passed_n": 0,
+        "refused_n": 27,
+        "passed_hit_rate": null,
+        "refused_hit_rate": "0.8888888888888888",
+        "passed_mean_forward_return": null,
+        "refused_mean_forward_return": "0.07836633333333333",
+        "mean_diff": null,
+        "p_value": null,
+        "q_value": null
+      },
+      {
+        "gate": "full_workflow",
+        "passed_n": 0,
+        "refused_n": 27,
+        "passed_hit_rate": null,
+        "refused_hit_rate": "0.8888888888888888",
+        "passed_mean_forward_return": null,
+        "refused_mean_forward_return": "0.07836633333333333",
+        "mean_diff": null,
+        "p_value": null,
+        "q_value": null
+      }
+    ],
+    "vibe_verdict_compliance": "0.000000",
+    "note": "Directional study, not a promotion decision (docs/WORKFLOW-STUDY-PLAN.md): a few months of daily decisions on a small universe is under-powered for the equity-curve comparison, and the gates are model draws, not deterministic like raw_signal -- one run is one sample from a distribution this study cannot characterise. Live-quote fill share by arm: raw_signal=0.000000.",
+    "grounding_retry_rate": "1.000000",
+    "grounding_retry_waste_usd": "3.92664250000000001",
+    "gate_concordance": {
+      "total": 132,
+      "both_pass": 0,
+      "ta_only": 0,
+      "vibe_only": 0,
+      "neither": 132,
+      "agreement_rate": 1.0,
+      "disagreement_count": 0
+    }
+  },
+  "verdict": "below_floor",
+  "verdict_detail": "Below the \u00a74 floor (60 sessions, 40 gated candidates): monitoring, not evidence -- the decision rule is not evaluated."
+}

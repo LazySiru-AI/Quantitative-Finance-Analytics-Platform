@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "finding_id": "wash-sale-repurchase-safe-date-not-displayed",
+      "run_id": "2026-07-06_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 3,
+      "observed_at": "2026-08-16T18:10:00Z",
+      "session_date": "2026-07-08",
+      "surface": "ui",
+      "locator": "/tax",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Wash-sale per-symbol panel's repurchase-safe date is computed but never rendered",
+      "observed": "After selling QQQ at a loss this session, the /tax page's new 'Wash sales by symbol' table shows a row: SYMBOL=QQQ, DEFERRED=$0.00, PERMANENTLY DISALLOWED=$0.00, LOSS SALES=1, LAST LOSS SALE=2026-07-08, REPURCHASE STATUS='SAFE TO REPURCHASE'. No date appears anywhere in the row or the panel. The caption directly under the table reads 'This date tells you when a new purchase will stop creating a new wash sale on this symbol's most recent loss sale' -- promising a date that is nowhere on the page. I fetched the underlying data directly (GET /api/tax/report?year=2026) and the API already computes and returns the exact figure the caption describes: wash_sale_summary.symbols[0].repurchase_safe_on = '2026-08-08', alongside days_until_safe and window_is_open. The frontend drops this field and renders only the boolean-shaded status word.",
+      "expected": "The date the caption promises should be printed in the row -- 'Safe to repurchase on 2026-08-08' or equivalent -- not just a status word I have to trust. My mandate is literal about provenance: a number (or in this case a date-gated verdict) I cannot reconstruct from the page is one I will not act on, and right now the only way to see the actual date is to open devtools and read the API response myself.",
+      "why_it_matters": "This is exactly the decision this panel exists for: whether I can safely rebuy a name I just sold at a loss without triggering a wash sale. 'Safe to repurchase' with no date is an assertion, not a number -- I have no way to tell whether that status is fresh, how many days of margin it has, or when it will flip if I check back tomorrow. For a symbol still inside the window, the same missing-date problem would leave me guessing at exactly the date I most need to know.",
+      "repro": [
+        "Sell a position at a loss (session 3: sold 2 QQQ at 704.60, cost basis 714.53/sh).",
+        "Navigate to /tax, select the tax year containing the sale.",
+        "Read the 'Wash sales by symbol' table -- the QQQ row shows a Repurchase Status of 'SAFE TO REPURCHASE' with no date in the row or column.",
+        "Compare against GET /api/tax/report?year=2026 -- wash_sale_summary.symbols[0].repurchase_safe_on is populated ('2026-08-08' in this run), proving the backend already has the value the frontend does not show."
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "Render wash_sale_summary.symbols[].repurchase_safe_on directly in the Repurchase Status cell (e.g. 'Safe to repurchase on 2026-08-08') instead of only a derived status word."
+    }
+  ]
+}

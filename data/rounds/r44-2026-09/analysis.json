@@ -1,0 +1,288 @@
+{
+  "round": 44,
+  "n_cells": 10,
+  "basket_vs_control": {
+    "power": {
+      "contrast": {
+        "a": "r44-power-passive",
+        "b": "r44-control-passive",
+        "median_diff": 0.08008868295432293,
+        "mean_paired_diff": 0.0759106863022348,
+        "windows_a_gt_b": 6,
+        "windows_a_lt_b": 2,
+        "n_windows": 8,
+        "p_signflip": 0.0859375,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.09396082210074982,
+      "hindsight_median_diff": 0.0002818754204552826
+    },
+    "defense": {
+      "contrast": {
+        "a": "r44-defense-passive",
+        "b": "r44-control-passive",
+        "median_diff": 0.0033164703705552794,
+        "mean_paired_diff": 0.030656788287196108,
+        "windows_a_gt_b": 4,
+        "windows_a_lt_b": 4,
+        "n_windows": 8,
+        "p_signflip": 0.6796875,
+        "inside_floor": true
+      },
+      "fair_median_diff": -0.004007726625492342,
+      "hindsight_median_diff": 0.011164645629438332
+    },
+    "semicap": {
+      "contrast": {
+        "a": "r44-semicap-passive",
+        "b": "r44-control-passive",
+        "median_diff": -0.0023437084696386525,
+        "mean_paired_diff": 0.16608872888797396,
+        "windows_a_gt_b": 4,
+        "windows_a_lt_b": 4,
+        "n_windows": 8,
+        "p_signflip": 0.6875,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.0038776807629677685,
+      "hindsight_median_diff": 0.6868449033287989
+    },
+    "realassets": {
+      "contrast": {
+        "a": "r44-realassets-passive",
+        "b": "r44-control-passive",
+        "median_diff": -0.041318665501800605,
+        "mean_paired_diff": 0.008292152433101907,
+        "windows_a_gt_b": 2,
+        "windows_a_lt_b": 6,
+        "n_windows": 8,
+        "p_signflip": 0.96875,
+        "inside_floor": true
+      },
+      "fair_median_diff": -0.053869430774604904,
+      "hindsight_median_diff": 0.20379313309783237
+    }
+  },
+  "trim_vs_passive": {
+    "power": {
+      "contrast": {
+        "a": "r44-power-trim",
+        "b": "r44-power-passive",
+        "median_diff": 0.023648209490662153,
+        "mean_paired_diff": 0.029396137970471185,
+        "windows_a_gt_b": 6,
+        "windows_a_lt_b": 1,
+        "n_windows": 8,
+        "p_signflip": 0.03125,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.04694809138959044,
+      "hindsight_median_diff": 0.0033427260714623333,
+      "mean_exposure_trim": 0.9020341393944854,
+      "mean_exposure_passive": 0.9901362865168539,
+      "trades_trim": 78,
+      "trades_passive": 32
+    },
+    "defense": {
+      "contrast": {
+        "a": "r44-defense-trim",
+        "b": "r44-defense-passive",
+        "median_diff": 0.007584287398590597,
+        "mean_paired_diff": 0.009147004389809157,
+        "windows_a_gt_b": 4,
+        "windows_a_lt_b": 2,
+        "n_windows": 8,
+        "p_signflip": 0.125,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.008264695463465107,
+      "hindsight_median_diff": 0.0038371517829211034,
+      "mean_exposure_trim": 0.8696718129332335,
+      "mean_exposure_passive": 0.955803125,
+      "trades_trim": 85,
+      "trades_passive": 32
+    },
+    "semicap": {
+      "contrast": {
+        "a": "r44-semicap-trim",
+        "b": "r44-semicap-passive",
+        "median_diff": 0.0035891807587436434,
+        "mean_paired_diff": -0.14957519401991823,
+        "windows_a_gt_b": 5,
+        "windows_a_lt_b": 2,
+        "n_windows": 8,
+        "p_signflip": 0.9375,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.01547157728668187,
+      "hindsight_median_diff": -0.6684956451149523,
+      "mean_exposure_trim": 0.7940933542649894,
+      "mean_exposure_passive": 0.9746713037634409,
+      "trades_trim": 66,
+      "trades_passive": 32
+    },
+    "realassets": {
+      "contrast": {
+        "a": "r44-realassets-trim",
+        "b": "r44-realassets-passive",
+        "median_diff": 0.00734769476664103,
+        "mean_paired_diff": -0.04222204066497803,
+        "windows_a_gt_b": 2,
+        "windows_a_lt_b": 4,
+        "n_windows": 8,
+        "p_signflip": 0.34375,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.0,
+      "hindsight_median_diff": -0.1609042022933937,
+      "mean_exposure_trim": 0.8654142307607037,
+      "mean_exposure_passive": 0.98745125,
+      "trades_trim": 87,
+      "trades_passive": 32
+    },
+    "control": {
+      "contrast": {
+        "a": "r44-control-trim",
+        "b": "r44-control-passive",
+        "median_diff": 0.0,
+        "mean_paired_diff": 0.002034117500520104,
+        "windows_a_gt_b": 1,
+        "windows_a_lt_b": 1,
+        "n_windows": 8,
+        "p_signflip": 1.0,
+        "inside_floor": true
+      },
+      "fair_median_diff": 0.0,
+      "hindsight_median_diff": 0.008136470002080416,
+      "mean_exposure_trim": 0.9625995182349397,
+      "mean_exposure_passive": 0.965439875,
+      "trades_trim": 42,
+      "trades_passive": 32
+    }
+  },
+  "bh": [
+    {
+      "cell": "r44-control-passive",
+      "vs": "r44-control-passive",
+      "median_diff": 0.0,
+      "p": null,
+      "q": null
+    },
+    {
+      "cell": "r44-control-trim",
+      "vs": "r44-control-passive",
+      "median_diff": 0.0,
+      "p": 1.0,
+      "q": 1.0
+    },
+    {
+      "cell": "r44-defense-passive",
+      "vs": "r44-control-passive",
+      "median_diff": 0.0033164703705552794,
+      "p": 0.6796875,
+      "q": 1.0
+    },
+    {
+      "cell": "r44-defense-trim",
+      "vs": "r44-control-passive",
+      "median_diff": 0.010900757769145876,
+      "p": 0.5703125,
+      "q": 1.0
+    },
+    {
+      "cell": "r44-power-passive",
+      "vs": "r44-control-passive",
+      "median_diff": 0.08008868295432293,
+      "p": 0.0859375,
+      "q": 0.4296875
+    },
+    {
+      "cell": "r44-power-trim",
+      "vs": "r44-control-passive",
+      "median_diff": 0.10373689244498509,
+      "p": 0.0390625,
+      "q": 0.390625
+    },
+    {
+      "cell": "r44-realassets-passive",
+      "vs": "r44-control-passive",
+      "median_diff": -0.041318665501800605,
+      "p": 0.96875,
+      "q": 1.0
+    },
+    {
+      "cell": "r44-realassets-trim",
+      "vs": "r44-control-passive",
+      "median_diff": -0.033970970735159575,
+      "p": 0.421875,
+      "q": 1.0
+    },
+    {
+      "cell": "r44-semicap-passive",
+      "vs": "r44-control-passive",
+      "median_diff": -0.0023437084696386525,
+      "p": 0.6875,
+      "q": 1.0
+    },
+    {
+      "cell": "r44-semicap-trim",
+      "vs": "r44-control-passive",
+      "median_diff": 0.0012454722891049909,
+      "p": 0.7578125,
+      "q": 1.0
+    }
+  ],
+  "min_q": 0.390625,
+  "trim_exposure_by_basket": {
+    "power": 0.9020341393944854,
+    "defense": 0.8696718129332335,
+    "semicap": 0.7940933542649894,
+    "realassets": 0.8654142307607037,
+    "control": 0.9625995182349397
+  },
+  "exposure_prediction": {
+    "predicted_most_reduced": "semicap",
+    "predicted_least_reduced": "power",
+    "actual_most_reduced": "semicap",
+    "actual_least_reduced": "control"
+  },
+  "trim_minus_passive_by_regime_window": [
+    {
+      "basket": "power",
+      "bull-2024": -0.00703907744780892,
+      "recent": 0.013724529590733586,
+      "bear-2022": 0.06673177899197469,
+      "gfc": 0.03956068635004764
+    },
+    {
+      "basket": "defense",
+      "bull-2024": -0.011709907769976956,
+      "recent": 0.019384211335819163,
+      "bear-2022": 0.026039810772450933,
+      "gfc": 0.016529390926930215
+    },
+    {
+      "basket": "semicap",
+      "bull-2024": 0.00906336278928846,
+      "recent": -1.346054653019193,
+      "bear-2022": 0.02529374761533415,
+      "gfc": 0.023764793055876456
+    },
+    {
+      "basket": "realassets",
+      "bull-2024": -0.019436659777980245,
+      "recent": -0.30237174480880713,
+      "bear-2022": -0.07996688734569618,
+      "gfc": 0.059138196961742884
+    },
+    {
+      "basket": "control",
+      "bull-2024": -0.0034727174515247344,
+      "recent": 0.019745657455685565,
+      "bear-2022": 0.0,
+      "gfc": 0.0
+    }
+  ],
+  "basket_edge_any_cell": false,
+  "trim_edge_any_cell": false
+}

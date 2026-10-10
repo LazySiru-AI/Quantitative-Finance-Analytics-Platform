@@ -1,0 +1,178 @@
+/* =============================================================================
+   Competition tab -- Next-round briefing (NextRoundPanel.tsx).
+
+   Reuses .panel, .section-heading, .placeholder, .callout/.callout-warn/
+   .callout-info, .symbol-submit from styles.css -- nothing there is modified,
+   only built on top of. Every class this file adds is prefixed `comp-next-` so
+   it cannot collide with this page's own `comp-`/`selection-` prefixes
+   (Competition.css) or the sibling `summary-`/`findings-`/`comp-narrative-`
+   sheets.
+   ============================================================================= */
+
+.comp-next-empty { padding: 0.25rem 0; }
+
+.comp-next-heading { margin-bottom: 0.75rem; }
+
+.comp-next-preregistration { margin-bottom: 1rem; }
+.comp-next-preregistration strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+.comp-next-preregistration p {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Committed plan reads as calm/informational -- the same neutral `.callout-info` treatment
+   `styles.css` uses elsewhere for "resolved, nothing to act on". More specific than the plain `p`
+   rule above (two classes, not one class + a type selector) so it wins without needing `!important`. */
+.comp-next-preregistration .comp-next-plan-path {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  word-break: break-all;
+}
+
+/* No committed plan is a real blocker per this programme's protocol, not a cosmetic nicety -- the same
+   amber `.callout-warn` treatment `RoundNarrativeCard.css` gives an owner override. */
+.comp-next-preregistration-warning strong { color: var(--warn); }
+
+.comp-next-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.comp-next-focus { margin-bottom: 1rem; }
+.comp-next-focus-body {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 68ch;
+  margin: 0;
+}
+.comp-next-focus-unset {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.comp-next-carries { margin-bottom: 1rem; }
+.comp-next-carries-empty {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --- Authored carries-forward -- the record, primary --------------------------------------------- */
+/* Hand-written prose committed to the previous round's NARRATIVE.json. Full-weight text and the
+   round's own accent border, same visual family `.findings-entry-pinned` gives a carried-forward
+   entry on the Findings tab -- this is the analogous "most prominent" treatment here. */
+
+.comp-next-authored-empty {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0.3rem 0 0;
+}
+.comp-next-authored-list {
+  margin: 0.3rem 0 0;
+  padding-left: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.comp-next-authored-list li { margin-bottom: 0.35rem; }
+.comp-next-authored-source {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+/* --- Heuristic carries-forward -- the parser's best read, visually secondary ---------------------- */
+/* Deliberately quieter than the authored block above: smaller label, muted heading colour, no accent
+   border on the container -- the uncertainty is stated in the label text and reinforced by the muted
+   styling, never left to look like a second authoritative list. */
+
+.comp-next-heuristic { margin-top: 0.85rem; }
+.comp-next-heuristic-label {
+  color: var(--muted);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.comp-next-heuristic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+.comp-next-carry-item {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+}
+/* The heuristic variant loses the accent border and dims slightly -- same shape, deliberately less
+   confident presentation than an authored item would get. */
+.comp-next-heuristic-item {
+  border-left-color: var(--border-strong);
+  opacity: 0.88;
+}
+.comp-next-carry-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.comp-next-carry-body {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 68ch;
+  margin: 0 0 0.4rem;
+  white-space: pre-wrap;
+}
+.comp-next-carry-source {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* Blockers are surfaced, never used to disable anything -- each one gets a visibly "blocking" red
+   marker via the same `--down` accent the rest of the page uses for a fault rather than a mere
+   qualifier (see FindingsSection.css's own `[data-kind="defect"]` treatment). */
+.comp-next-blockers { margin-bottom: 1rem; }
+.comp-next-blockers-list {
+  margin: 0.3rem 0 0;
+  padding-left: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.comp-next-blocker-item {
+  margin-bottom: 0.3rem;
+  border-left: 2px solid var(--down);
+  padding-left: 0.6rem;
+}
+
+.comp-next-run-button { margin-top: 0.4rem; }

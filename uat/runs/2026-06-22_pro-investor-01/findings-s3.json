@@ -1,0 +1,46 @@
+[
+  {
+    "finding_id": "harness-order-rejections-double-recorded",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 3,
+    "observed_at": "2026-08-18T06:44:00Z",
+    "session_date": "2026-06-24",
+    "surface": "workflow",
+    "locator": "uat/harness/paperbroker.py, uat/runs/2026-06-22_pro-investor-01/state.json",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "Harness rejections were recorded twice, making rejections_by_rule wrong in a plausible-looking way",
+    "observed": "Deliberately triggered 3 rejections in one session across 3 different rules: TLT 1-share buy (min_clip), a second XLV buy (max_single_name_weight), and a ZZZZ buy (unpriceable). rejections_this_session in the close output listed exactly 3 entries, one per order_id. state.json's top-level rejections array also holds exactly 3 entries (s3-2/min_clip, s3-3/max_single_name_weight, s3-4/unpriceable), no duplicates. Session 4's brief.prior_rejections again lists exactly the same 3, once each.",
+    "expected": "Each rejected order appears exactly once in rejections_this_session and in the next session's prior_rejections -- which is what happened.",
+    "why_it_matters": "This is a harness bookkeeping defect (double-append in _precheck vs submit), not an application defect, but it feeds directly into how a UAT run's own metrics.json is trusted; run 5 was the only prior run to produce rejections and its rejections_by_rule came out wrong in a way that still looked plausible. Re-testing it required deliberately breaching the mandate three different ways in one session.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["uat/harness/paperbroker.py (_precheck/_reject/submit)", "uat/runs/2026-06-22_pro-investor-01/state.json"],
+      "note": "Re-test of the harness defect described in BACKLOG.md §R3-5 ('Two harness defects, both fixed in 4648a00') and fixed by making _reject the sole append site. No finding_id existed for it in known_findings since it was found during verification rather than filed by a prior persona, so a new id is assigned here for future re-tests to reuse. Held: 3 deliberate rejections across min_clip, max_single_name_weight and unpriceable each appear exactly once in state.json's rejections array and in the following session's prior_rejections. This is a harness finding, not an application one -- flagged per the run's instructions to report it separately."
+    }
+  },
+  {
+    "finding_id": "harness-stop-level-na-crashes-orders-cli",
+    "run_id": "2026-06-22_pro-investor-01",
+    "persona_id": "pro-investor-01",
+    "session": 3,
+    "observed_at": "2026-08-18T06:44:30Z",
+    "session_date": "2026-06-24",
+    "surface": "workflow",
+    "locator": "uat/harness/run.py (orders CLI), uat/schema/order.schema.json stop_level",
+    "kind": "gap",
+    "severity": "polish",
+    "title": "A stop_level of 'n/a' crashed the orders CLI",
+    "observed": "Submitted order s3-4 (ZZZZ, a deliberately unpriceable probe) with \"stop_level\": \"n/a\" in orders-s3.json. The orders command ran to completion and returned normal JSON (the order was rejected for unpriceable, as intended) with no exception and no crash.",
+    "expected": "null, empty string or the literal string 'n/a' should all mean 'no stop' rather than being parsed as a decimal.",
+    "why_it_matters": "Every sell or rule-probe order in my mandate has no stop level by definition (a stop describes when to exit a position I still hold, not one I am closing or one that never existed), so this is the only legal way to express that. A crash here would have blocked every session that includes a sell.",
+    "blocked_decision": false,
+    "verification": {
+      "status": "confirmed",
+      "checked_against": ["uat/harness/run.py"],
+      "note": "Re-test of the harness defect described in BACKLOG.md §R3-5 (unhandled decimal.InvalidOperation on stop_level: 'n/a'). No finding_id existed for it in known_findings since it was found during verification rather than filed by a prior persona, so a new id is assigned here for future re-tests to reuse. Held: the CLI accepted the literal string 'n/a' without raising. This is a harness finding, not an application one."
+    }
+  }
+]

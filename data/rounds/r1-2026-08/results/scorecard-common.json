@@ -1,0 +1,1034 @@
+{
+  "results_root": "strategy-program\\rounds\\r1-2026-08\\results",
+  "round": "r1",
+  "window_tags": [
+    "covid",
+    "bear-2022",
+    "bull-2024",
+    "recent"
+  ],
+  "main_window_tags": [
+    "gfc",
+    "covid",
+    "bear-2022",
+    "bull-2024",
+    "recent"
+  ],
+  "min_ranked_main_windows": 3,
+  "ranked": [
+    {
+      "agent_id": "B2-hold-90",
+      "display_name": "B2 - 90 day max hold",
+      "ranked": true,
+      "median_adjusted_excess": "0.1783127678249750913900230432",
+      "worst_adjusted_excess": "-0.05149593571771349732418686559",
+      "best_adjusted_excess": "0.2761293480727193551252018576",
+      "hit_rate": 0.75,
+      "iqr": "0.1232142627592103704964695912",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 48,
+      "mean_exposure": 0.3635688673780534,
+      "worst_drawdown": "-0.22080986075516662",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.3164161369193877853103999526",
+          "adjusted_excess": "0.2761293480727193551252018576",
+          "trades": 6,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1837151788788578626915809364",
+          "adjusted_excess": "-0.05149593571771349732418686559",
+          "trades": 5,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.1369206632545509762938349679",
+          "adjusted_excess": "0.2058513956993765296461046501",
+          "trades": 19,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.0157106201043565725781102659",
+          "adjusted_excess": "0.1507741399505736531339414362",
+          "trades": 18,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "B3-concentrated",
+      "display_name": "B3 - 4 slots at 22 pct",
+      "ranked": true,
+      "median_adjusted_excess": "0.1560726094745614408977600288",
+      "worst_adjusted_excess": "-0.07752537743019105605710686542",
+      "best_adjusted_excess": "0.3158889463827523585256976861",
+      "hit_rate": 0.75,
+      "iqr": "0.2644628566828442404063505062",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 36,
+      "mean_exposure": 0.40790894994235005,
+      "worst_drawdown": "-0.3041141987769863",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.3056151369193877853103999526",
+          "adjusted_excess": "0.2668121266276336987381929410",
+          "trades": 4,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1497431788788578626915809364",
+          "adjusted_excess": "-0.07752537743019105605710686542",
+          "trades": 5,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0147343367454490237061650321",
+          "adjusted_excess": "0.04533309232148918305732711648",
+          "trades": 15,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.1943086201043565725781102659",
+          "adjusted_excess": "0.3158889463827523585256976861",
+          "trades": 12,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "G-volatility",
+      "display_name": "G - Range expansion: beat the blind window",
+      "ranked": true,
+      "median_adjusted_excess": "0.1266075719091769834038980295",
+      "worst_adjusted_excess": "-0.1926762508087425606396243150",
+      "best_adjusted_excess": "0.1621008566024959838095072185",
+      "hit_rate": 0.6666666666666666,
+      "iqr": "0.1773885537056192722245657668",
+      "n_windows_run": 3,
+      "n_windows_eligible": 3,
+      "total_trades": 130,
+      "mean_exposure": 0.1971153155167609,
+      "worst_drawdown": "-0.21035746975435976",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "COIN first bar 2021-04-14, needs <= 2019-10-13"
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.0442201788788578626915809364",
+          "adjusted_excess": "-0.1926762508087425606396243150",
+          "trades": 15,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.0178306632545509762938349679",
+          "adjusted_excess": "0.1266075719091769834038980295",
+          "trades": 47,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.0200466201043565725781102659",
+          "adjusted_excess": "0.1621008566024959838095072185",
+          "trades": 68,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "B-momentum",
+      "display_name": "Strategy B - Confirmed Acceleration",
+      "ranked": true,
+      "median_adjusted_excess": "0.1221050273098193587211100234",
+      "worst_adjusted_excess": "-0.05149593571771349732418686559",
+      "best_adjusted_excess": "0.2761293480727193551252018576",
+      "hit_rate": 0.75,
+      "iqr": "0.1534823764779624186735127250",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 47,
+      "mean_exposure": 0.3775538443499409,
+      "worst_drawdown": "-0.26512832773811623",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.3164161369193877853103999526",
+          "adjusted_excess": "0.2761293480727193551252018576",
+          "trades": 6,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1837151788788578626915809364",
+          "adjusted_excess": "-0.05149593571771349732418686559",
+          "trades": 5,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.0120856632545509762938349679",
+          "adjusted_excess": "0.07438765695624988834699966056",
+          "trades": 19,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.0365266201043565725781102659",
+          "adjusted_excess": "0.1698223976633888290952203862",
+          "trades": 17,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "A2-cash-headroom",
+      "display_name": "A2 - 4 slots at 22 pct",
+      "ranked": true,
+      "median_adjusted_excess": "0.1141846192218080878533030513",
+      "worst_adjusted_excess": "-0.2277908419974120238059532022",
+      "best_adjusted_excess": "0.5816438633113582133904322893",
+      "hit_rate": 0.75,
+      "iqr": "0.2126167184661294976729549692",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 158,
+      "mean_exposure": 0.5076723305342965,
+      "worst_drawdown": "-0.29924941346558753",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.1493971369193877853103999526",
+          "adjusted_excess": "0.1073459244625167956040639871",
+          "trades": 16,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "-0.0343958211211421373084190636",
+          "adjusted_excess": "-0.2277908419974120238059532022",
+          "trades": 33,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.0655076632545509762938349679",
+          "adjusted_excess": "0.1210233139810993801025421155",
+          "trades": 49,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.5155326201043565725781102659",
+          "adjusted_excess": "0.5816438633113582133904322893",
+          "trades": 60,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "B4-tight-stop",
+      "display_name": "B4 - 8 pct stop",
+      "ranked": true,
+      "median_adjusted_excess": "0.1111990603189116610289089826",
+      "worst_adjusted_excess": "-0.04046653376666223911357530625",
+      "best_adjusted_excess": "0.2761293480727193551252018576",
+      "hit_rate": 0.75,
+      "iqr": "0.1377225803128846302820598550",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 49,
+      "mean_exposure": 0.3667646897139684,
+      "worst_drawdown": "-0.2688259076866364",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.3164161369193877853103999526",
+          "adjusted_excess": "0.2761293480727193551252018576",
+          "trades": 6,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1951271788788578626915809364",
+          "adjusted_excess": "-0.04046653376666223911357530625",
+          "trades": 5,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.0049096632545509762938349679",
+          "adjusted_excess": "0.07214998708355217321399860655",
+          "trades": 19,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.0156436201043565725781102659",
+          "adjusted_excess": "0.1502481335542711488438193587",
+          "trades": 19,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "A1-alpha-order",
+      "display_name": "A1 - original alphabetical order",
+      "ranked": true,
+      "median_adjusted_excess": "0.09702524814834988884219843665",
+      "worst_adjusted_excess": "-0.2997328687216940103776131490",
+      "best_adjusted_excess": "0.6784181474226572474596948175",
+      "hit_rate": 0.75,
+      "iqr": "0.3083797799272882612217541879",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 129,
+      "mean_exposure": 0.5270967550258823,
+      "worst_drawdown": "-0.36833935657351",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.09811513691938778531039995263",
+          "adjusted_excess": "0.05446389755421625766724697249",
+          "trades": 12,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "-0.1051098211211421373084190636",
+          "adjusted_excess": "-0.2997328687216940103776131490",
+          "trades": 25,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.0930216632545509762938349679",
+          "adjusted_excess": "0.1395865987424835200171499008",
+          "trades": 39,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.6199326201043565725781102659",
+          "adjusted_excess": "0.6784181474226572474596948175",
+          "trades": 53,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "B1-with-target",
+      "display_name": "B1 - 25 pct take-profit",
+      "ranked": true,
+      "median_adjusted_excess": "0.0827785869103945238013511673",
+      "worst_adjusted_excess": "-0.05149593571771349732418686559",
+      "best_adjusted_excess": "0.2318232187759335108948201259",
+      "hit_rate": 0.5,
+      "iqr": "0.2403047980937168525738515311",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 52,
+      "mean_exposure": 0.28853319419137113,
+      "worst_drawdown": "-0.08934600000000004",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.2821781369193877853103999526",
+          "adjusted_excess": "0.2318232187759335108948201259",
+          "trades": 8,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1837151788788578626915809364",
+          "adjusted_excess": "-0.05149593571771349732418686559",
+          "trades": 5,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.1126176632545509762938349679",
+          "adjusted_excess": "0.1957619265572645908140843561",
+          "trades": 20,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1823833798956434274218897341",
+          "adjusted_excess": "-0.03020475273647554321138202145",
+          "trades": 19,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "C-trend",
+      "display_name": "C - Trend (r1): won in-sample and 3yr",
+      "ranked": true,
+      "median_adjusted_excess": "0.04987612516932827261494382027",
+      "worst_adjusted_excess": "-0.07208443924626651447684242977",
+      "best_adjusted_excess": "0.1963282253690735511374217041",
+      "hit_rate": 0.5,
+      "iqr": "0.2291933125607301148502483254",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 41,
+      "mean_exposure": 0.30501518843636954,
+      "worst_drawdown": "-0.17991812904741145",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.2454581369193877853103999526",
+          "adjusted_excess": "0.1963282253690735511374217041",
+          "trades": 7,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1817281788788578626915809364",
+          "adjusted_excess": "-0.05818397243526845968284437436",
+          "trades": 5,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "0.0875546632545509762938349679",
+          "adjusted_excess": "0.1579362227739250049127320149",
+          "trades": 15,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.2285153798956434274218897341",
+          "adjusted_excess": "-0.07208443924626651447684242977",
+          "trades": 14,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "A-rotation",
+      "display_name": "Strategy A - Semis Breadth-Capped Rotation",
+      "ranked": true,
+      "median_adjusted_excess": "0.03229414529193655643770021490",
+      "worst_adjusted_excess": "-0.2740682553567679433730242044",
+      "best_adjusted_excess": "0.8032311061602921398298291550",
+      "hit_rate": 0.75,
+      "iqr": "0.2936956142395665541013496260",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 121,
+      "mean_exposure": 0.5288896759591083,
+      "worst_drawdown": "-0.3454790089966383",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.09177213691938778531039995263",
+          "adjusted_excess": "0.04854132786547091197145773906",
+          "trades": 13,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "-0.0813498211211421373084190636",
+          "adjusted_excess": "-0.2740682553567679433730242044",
+          "trades": 22,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0325323367454490237061650321",
+          "adjusted_excess": "0.01604696271840220090394269073",
+          "trades": 39,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.7466346201043565725781102659",
+          "adjusted_excess": "0.8032311061602921398298291550",
+          "trades": 47,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "H-trend-diversified",
+      "display_name": "H - Trend, cross-asset: lowest drawdown of the trend family",
+      "ranked": true,
+      "median_adjusted_excess": "0.03098885369633184493128354574",
+      "worst_adjusted_excess": "-0.08750666676513055427847051752",
+      "best_adjusted_excess": "0.1218677448691637961741834257",
+      "hit_rate": 0.75,
+      "iqr": "0.08854563977143955889462393275",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 36,
+      "mean_exposure": 0.2557395369317811,
+      "worst_drawdown": "-0.09178007324119086",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.1895211369193877853103999526",
+          "adjusted_excess": "0.1218677448691637961741834257",
+          "trades": 3,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.2202901788788578626915809364",
+          "adjusted_excess": "0.00685416245442119741030991444",
+          "trades": 6,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0286833367454490237061650321",
+          "adjusted_excess": "0.05512354493824249245225717704",
+          "trades": 13,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.2426763798956434274218897341",
+          "adjusted_excess": "-0.08750666676513055427847051752",
+          "trades": 14,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "A4-tight-stop",
+      "display_name": "A4 - 8 pct stop",
+      "ranked": true,
+      "median_adjusted_excess": "0.02448282269887673400555350034",
+      "worst_adjusted_excess": "-0.2781863130395009147895983924",
+      "best_adjusted_excess": "0.8791614631219919597923977295",
+      "hit_rate": 0.75,
+      "iqr": "0.3019907340110850182979152448",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 123,
+      "mean_exposure": 0.5258051161623175,
+      "worst_drawdown": "-0.34881903687465854",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.07643213691938778531039995263",
+          "adjusted_excess": "0.03291868267935126710716430995",
+          "trades": 13,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "-0.0847308211211421373084190636",
+          "adjusted_excess": "-0.2781863130395009147895983924",
+          "trades": 22,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0325323367454490237061650321",
+          "adjusted_excess": "0.01604696271840220090394269073",
+          "trades": 39,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.8212946201043565725781102659",
+          "adjusted_excess": "0.8791614631219919597923977295",
+          "trades": 49,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "c01-meanrev",
+      "display_name": "Band Reversion \u2014 Broad Market & Sector ETFs",
+      "ranked": true,
+      "median_adjusted_excess": "0.00623812491749845075310964713",
+      "worst_adjusted_excess": "-0.06458656512110501943849442630",
+      "best_adjusted_excess": "0.05518852556242446368109011137",
+      "hit_rate": 0.75,
+      "iqr": "0.03483172502617501180585729840",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 73,
+      "mean_exposure": 0.11258781344591136,
+      "worst_drawdown": "-0.08265599999999995",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.01499513691938778531039995263",
+          "adjusted_excess": "-0.06458656512110501943849442630",
+          "trades": 7,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.2453841788788578626915809364",
+          "adjusted_excess": "0.00949675982102687810375042312",
+          "trades": 8,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.1177733367454490237061650321",
+          "adjusted_excess": "0.00297949001397002340246887114",
+          "trades": 22,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1169673798956434274218897341",
+          "adjusted_excess": "0.05518852556242446368109011137",
+          "trades": 36,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "c05-trend",
+      "display_name": "Cross-Asset 200dma Trend",
+      "ranked": true,
+      "median_adjusted_excess": "-0.00072805745952089590899226664",
+      "worst_adjusted_excess": "-0.02694788269744597299110315659",
+      "best_adjusted_excess": "0.05312747827195556697279947744",
+      "hit_rate": 0.5,
+      "iqr": "0.03370055967587840926082773767",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 30,
+      "mean_exposure": 0.20449356827847134,
+      "worst_drawdown": "-0.06216890666218855",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.1122181369193877853103999526",
+          "adjusted_excess": "0.05312747827195556697279947744",
+          "trades": 6,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.2119771788788578626915809364",
+          "adjusted_excess": "0.00839308882949778693757578614",
+          "trades": 13,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.1369073367454490237061650321",
+          "adjusted_excess": "-0.00984920374853957875556031942",
+          "trades": 6,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1890043798956434274218897341",
+          "adjusted_excess": "-0.02694788269744597299110315659",
+          "trades": 5,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "c06-13f-momentum",
+      "display_name": "13F Conviction + Price Confirmation",
+      "ranked": true,
+      "median_adjusted_excess": "-0.00596247916321610106500276115",
+      "worst_adjusted_excess": "-0.1636272775206960001429158404",
+      "best_adjusted_excess": "0.2373250126467198077828465672",
+      "hit_rate": 0.5,
+      "iqr": "0.2917825532757925420961997825",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 182,
+      "mean_exposure": 0.36432096371654094,
+      "worst_drawdown": "-0.15615599999999996",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.2767821369193877853103999526",
+          "adjusted_excess": "0.2373250126467198077828465672",
+          "trades": 21,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.0952401788788578626915809364",
+          "adjusted_excess": "-0.1336587996525084944748422149",
+          "trades": 25,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.2584463367454490237061650321",
+          "adjusted_excess": "-0.1636272775206960001429158404",
+          "trades": 59,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.0182856201043565725781102659",
+          "adjusted_excess": "0.1217338413260762923448366926",
+          "trades": 77,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "A3-no-target",
+      "display_name": "A3 - no take-profit",
+      "ranked": true,
+      "median_adjusted_excess": "-0.007868585083466953139630351565",
+      "worst_adjusted_excess": "-0.2740682553567679433730242044",
+      "best_adjusted_excess": "1.495619200574284312708178537",
+      "hit_rate": 0.5,
+      "iqr": "0.4737800305348497343698079422",
+      "n_windows_run": 4,
+      "n_windows_eligible": 4,
+      "total_trades": 83,
+      "mean_exposure": 0.4938209300281587,
+      "worst_drawdown": "-0.3454790089966383",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.06338113691938778531039995263",
+          "adjusted_excess": "0.01303685928459082709337448634",
+          "trades": 10,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "-0.0813498211211421373084190636",
+          "adjusted_excess": "-0.2740682553567679433730242044",
+          "trades": 22,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0867823367454490237061650321",
+          "adjusted_excess": "-0.02877402945152473337263518947",
+          "trades": 25,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "1.440825620104356572578110266",
+          "adjusted_excess": "1.495619200574284312708178537",
+          "trades": 26,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "c02-volatility",
+      "display_name": "Squeeze-Break Gamma Unwind",
+      "ranked": true,
+      "median_adjusted_excess": "-0.00919001450779578615930598179",
+      "worst_adjusted_excess": "-0.04411373448666416563945906356",
+      "best_adjusted_excess": "0.04435471232365212591522314398",
+      "hit_rate": 0.25,
+      "iqr": "0.02740421083276371349222995220",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 29,
+      "mean_exposure": 0.37092229123256687,
+      "worst_drawdown": "-0.15356123875358707",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.1076221369193877853103999526",
+          "adjusted_excess": "0.04435471232365212591522314398",
+          "trades": 4,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1842561788788578626915809364",
+          "adjusted_excess": "-0.00566528175433935909026638158",
+          "trades": 4,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.1286593367454490237061650321",
+          "adjusted_excess": "-0.04411373448666416563945906356",
+          "trades": 9,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1014763798956434274218897341",
+          "adjusted_excess": "-0.0127147472612522132283455820",
+          "trades": 12,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "c04-riskmanaged",
+      "display_name": "All-Weather Trend Sleeve",
+      "ranked": true,
+      "median_adjusted_excess": "-0.02512612931934001324412985866",
+      "worst_adjusted_excess": "-0.0262971258677130095790214356",
+      "best_adjusted_excess": "0.03710347814780895555455813833",
+      "hit_rate": 0.25,
+      "iqr": "0.01698412045913811705737374828",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 55,
+      "mean_exposure": 0.5258497190827893,
+      "worst_drawdown": "-0.09508045171844481",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.07390513691938778531039995263",
+          "adjusted_excess": "0.03710347814780895555455813833",
+          "trades": 10,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1855681788788578626915809364",
+          "adjusted_excess": "-0.02437014968250159606147728880",
+          "trades": 18,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.0750103367454490237061650321",
+          "adjusted_excess": "-0.02588210895617843042678242852",
+          "trades": 17,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.0856833798956434274218897341",
+          "adjusted_excess": "-0.0262971258677130095790214356",
+          "trades": 10,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "c03-breakout",
+      "display_name": "Sector Confirmed-Range Breakout",
+      "ranked": true,
+      "median_adjusted_excess": "-0.05404878058106186740869201455",
+      "worst_adjusted_excess": "-0.0825491695269163660362200673",
+      "best_adjusted_excess": "0.00067673224601198867117705786",
+      "hit_rate": 0.25,
+      "iqr": "0.03287665079126520535147404960",
+      "n_windows_run": 4,
+      "n_windows_eligible": 5,
+      "total_trades": 40,
+      "mean_exposure": 0.40209655026796853,
+      "worst_drawdown": "-0.10938544452887922",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "run",
+          "excess": "0.02955613691938778531039995263",
+          "adjusted_excess": "-0.04600199701570645629227550234",
+          "trades": 7,
+          "reason": null
+        },
+        "bear-2022": {
+          "status": "run",
+          "excess": "0.1678901788788578626915809364",
+          "adjusted_excess": "0.00067673224601198867117705786",
+          "trades": 9,
+          "reason": null
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.1217533367454490237061650321",
+          "adjusted_excess": "-0.06209556414641727852510852674",
+          "trades": 11,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "-0.1718043798956434274218897341",
+          "adjusted_excess": "-0.0825491695269163660362200673",
+          "trades": 13,
+          "reason": null
+        }
+      }
+    }
+  ],
+  "unranked": [
+    {
+      "agent_id": "D-13f-newbuys",
+      "display_name": null,
+      "ranked": false,
+      "median_adjusted_excess": null,
+      "worst_adjusted_excess": null,
+      "best_adjusted_excess": null,
+      "hit_rate": null,
+      "iqr": null,
+      "n_windows_run": 0,
+      "n_windows_eligible": 0,
+      "total_trades": 0,
+      "mean_exposure": null,
+      "worst_drawdown": null,
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "SNDK first bar 2025-02-13, needs <= 2019-03-09"
+        },
+        "bear-2022": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "SNDK first bar 2025-02-13, needs <= 2021-01-21"
+        },
+        "bull-2024": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "SNDK first bar 2025-02-13, needs <= 2023-09-09"
+        },
+        "recent": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "SNDK first bar 2025-02-13, needs <= 2024-09-08"
+        }
+      }
+    },
+    {
+      "agent_id": "E-asymmetric",
+      "display_name": "E - Asymmetric: tight stop, distant target",
+      "ranked": false,
+      "median_adjusted_excess": "0.2120929946846542516327963517",
+      "worst_adjusted_excess": "0.2120929946846542516327963517",
+      "best_adjusted_excess": "0.2120929946846542516327963517",
+      "hit_rate": 1.0,
+      "iqr": null,
+      "n_windows_run": 1,
+      "n_windows_eligible": 1,
+      "total_trades": 69,
+      "mean_exposure": 0.27386673493975905,
+      "worst_drawdown": "-0.10983476872098741",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "NBIS first bar 2024-10-21, needs <= 2019-10-13"
+        },
+        "bear-2022": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "NBIS first bar 2024-10-21, needs <= 2021-08-27"
+        },
+        "bull-2024": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "NBIS first bar 2024-10-21, needs <= 2024-04-14"
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.0623996201043565725781102659",
+          "adjusted_excess": "0.2120929946846542516327963517",
+          "trades": 69,
+          "reason": null
+        }
+      }
+    },
+    {
+      "agent_id": "F-fastrev",
+      "display_name": "F - Fast reversion: low-exposure satellite",
+      "ranked": false,
+      "median_adjusted_excess": "0.1343305191266425830982987566",
+      "worst_adjusted_excess": "-0.08048170600153634528467048967",
+      "best_adjusted_excess": "0.3491427442548215114812680028",
+      "hit_rate": 0.5,
+      "iqr": "0.2148122251281789283829692462",
+      "n_windows_run": 2,
+      "n_windows_eligible": 2,
+      "total_trades": 89,
+      "mean_exposure": 0.07293639503614457,
+      "worst_drawdown": "-0.19938800198386908",
+      "notes": [],
+      "windows": {
+        "covid": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "CRDO first bar 2022-01-27, needs <= 2019-12-10"
+        },
+        "bear-2022": {
+          "status": "not_eligible",
+          "excess": null,
+          "adjusted_excess": null,
+          "trades": null,
+          "reason": "CRDO first bar 2022-01-27, needs <= 2021-10-24"
+        },
+        "bull-2024": {
+          "status": "run",
+          "excess": "-0.2104223367454490237061650321",
+          "adjusted_excess": "-0.08048170600153634528467048967",
+          "trades": 41,
+          "reason": null
+        },
+        "recent": {
+          "status": "run",
+          "excess": "0.1583186201043565725781102659",
+          "adjusted_excess": "0.3491427442548215114812680028",
+          "trades": 48,
+          "reason": null
+        }
+      }
+    }
+  ]
+}

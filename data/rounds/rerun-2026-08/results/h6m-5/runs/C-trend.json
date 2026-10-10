@@ -1,0 +1,73 @@
+{
+  "card": {
+    "agent_id": "C-trend",
+    "display_name": "C - Trend (r1): won in-sample and 3yr",
+    "discipline": "trend",
+    "purpose": "trading",
+    "thesis": "AI-capex-cycle names re-rate on multi-quarter earnings-revision cycles, not single days: a data-center or cloud demand cycle shows up as a sequence of beat-and-raise quarters that institutional allocators scale into over months, not one print. That flow creates serial correlation in price that a same-day oscillator cannot see. The other side of the trade is investors who sell into strength too early, anchored to a pre-cycle 'fair value', and investors who panic-sell the first pullback inside an intact uptrend, mistaking noise for reversal -- both hand the rest of the move to a slower, rule-following holder. I measured this rather than assuming it: on this universe's last ~1500 sessions (~6y) through 2026-02-13, a close>sma(200) regime filter plus a 20/50-EMA crossover trigger produced 77 trades at 49.4% win rate, but average winners (+29.6%) were 4.1x average losers (-7.3%), and winning trades were held a median of 118 days vs 16 for losers -- the classic trend signature of a system that is right less than half the time and still profitable because it cuts losses fast and lets the rest run. The chop problem is real and I confronted it directly: the same golden-cross setup on this universe's smaller, more speculative names (IREN, OKLO, APLD, BE, KORU) produced negative average 60-day forward returns after the signal fired -- those names were excluded from the universe below specifically because the measured data showed the entries do not sustain here, not because of a prior. Within the chosen universe, widening the stop from 8% to 12% cut stop-outs from 12/77 (16%) to 7/77 (9%) while barely moving mean trade return (0.093->0.093), meaning most of the discarded stop-outs at the tighter level were noise, not real breakdowns -- direct evidence the wider stop survives chop without giving back the move. The regime filter (sma200) plus a medium-term trigger (ema20/50, not raw ema50/200) was chosen over a textbook dual-moving-average cross because it produces materially fewer whipsaw entries on this universe's large, liquid AI/semi/software names, at the cost of entering somewhat later into each trend.",
+    "universe": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "ORCL",
+      "SOXX",
+      "NFLX",
+      "MU",
+      "META",
+      "QCOM"
+    ],
+    "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+    "exit": "ema(20) crosses_below ema(50)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 120,
+    "max_positions": 5,
+    "position_pct": "0.18",
+    "rank_by": null,
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 127,
+  "starting_equity": "10000.00",
+  "ending_equity": "10303.25",
+  "total_return": "0.030324999999999935",
+  "max_drawdown": "-0.01825087753837884",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.5826771653543307,
+  "capital_exposure": 0.1253055905511811,
+  "win_rate": null,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "ORCL",
+      "entry_date": "2022-10-31",
+      "entry_price": "76.54",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "23",
+      "exit_reason": "open_at_end",
+      "pnl": "271.40",
+      "return_pct": "0.1541677554220015678076822576",
+      "bars_held": 73
+    },
+    {
+      "symbol": "QCOM",
+      "entry_date": "2023-01-24",
+      "entry_price": "130.62",
+      "exit_date": null,
+      "exit_price": null,
+      "quantity": "13",
+      "exit_reason": "open_at_end",
+      "pnl": "31.85",
+      "return_pct": "0.01875669882100750267952840300",
+      "bars_held": 16
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.03214644752530802141537886050",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

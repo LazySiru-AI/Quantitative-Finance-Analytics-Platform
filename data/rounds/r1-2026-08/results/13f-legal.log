@@ -1,0 +1,6 @@
+window: 2025-11-17 -> 2026-08-18
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+1 of 22 cards selected by --only='c06-13f'
+[1/1] r1 c06-13f-momentum: 81s trades=56 ret=+17.79% dd=-12.49% rej=0
+r1: 1 agents, 1 discoveries
+overall: 1 agents, 1 discoveries at alpha=0.1

@@ -1,0 +1,28 @@
+{
+  "agent_id": "r46-control",
+  "display_name": "Two-sleeve de-risk control (no tilt)",
+  "purpose": "savings",
+  "thesis": "Round 46 pre-registered cell, on the taxable savings book ($100,000 lump sum, 10-20 year horizon, benchmark 30/70 SPY/AGG, mandate: lowest drawdown of the three books, least return accepted). Base allocation on every card in this field, including the control: 30% SPY, 50% AGG, 10% GLD, 10% BIL -- round 38's and round 43's own figures, reused unmodified. This round asks whether two independently-measured de-risking reads (round 43: the SPY-sleeve placebo, +0.94pp drawdown margin; the AGG-sleeve primary, +1.34pp) stack additively when carried on one card, and whether adding a third rule -- Creator A's metals destination or Creator B's trim-after-gains -- improves the stack further. Every reported figure is treatment MINUS CONTROL, never treatment against the benchmark alone. It is not a proposal to trade anything, and nothing in a measurement round is promotable. Not investment advice. This is the MANDATORY CONTROL: the same four sleeves and the same 5-point band with every tilt removed, so it carries no rule at all. It is not a treatment that never fires -- it is the static, periodically-rebalanced book every other card in the field is measured as a difference from.",
+  "falsification": "This round's additivity hypothesis is wrong, in the informative direction, if r46-both's drawdown margin is NOT within +/-0.5pp of the sum of r46-spy-derisk's and r46-agg-derisk's own margins (P1) -- that would show the two reads are not independent, i.e. they fire on overlapping sessions of the same underlying drawdown rather than capturing two separable risks. It is also wrong if any card in this field moves the drawdown margin by more than a few points (P2) -- every prior savings tilt this programme has measured, including both single-sleeve reads this round stacks, has stayed inside a couple of points. It is wrong about the trim rule specifically if r46-trim-high does NOT show a CAGR drag with no drawdown benefit (P3) -- SPY trades more than 15% above its own 200-day mean on a meaningful minority of sessions, mostly inside sustained rallies, so a rule that steps out there is predicted to give back upside without shallowing a drawdown it was never positioned to prevent. It is wrong about the two add-on cards specifically if r46-both-gld or r46-both-trim improves r46-both's own drawdown margin by more than 0.5pp (P4) -- a third rule stacked on an already-stacked card is predicted to add cost (more trades, more whipsaw) without a compensating defensive benefit. b6m-2 and b1y-1 (the 2021-2022 bear windows) are in-sample to the corpus's bond-stress hypothesis, exactly as round 43 pre-registered, and are reported separately. See ROUND-46-PLAN.md section 5 for the full prediction set and section 6 for the pre-registered support and overlap tables.",
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "target_weight": "0.30"
+    },
+    {
+      "symbol": "AGG",
+      "target_weight": "0.50"
+    },
+    {
+      "symbol": "GLD",
+      "target_weight": "0.10"
+    },
+    {
+      "symbol": "BIL",
+      "target_weight": "0.10"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [],
+  "designed_through": "2026-02-13"
+}

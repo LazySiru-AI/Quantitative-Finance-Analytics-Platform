@@ -1,0 +1,144 @@
+/* Portfolio page. Every new selector here is prefixed `account-` per the project convention (see
+   PaperDesk.css), so it can never collide with a class another page introduces in the shared
+   stylesheet. `.account-card` also carries the shared `.panel` class from `styles.css` --
+   background, border, radius, padding and shadow come from there, so nothing in this file
+   re-specifies that chrome. Everything else unprefixed referenced from Portfolio.tsx (.panel,
+   .stat, .tile-grid, .data-table, .table-wrap, .badge, .muted, .placeholder, .callout*,
+   .filter-bar) is defined in the shared stylesheet (or, for the sort/filter controls, in
+   `tableSort.css`) and reused as-is, matching every other page in this app. */
+
+/* `.account-card` supplies only the internal stacking rhythm -- background, border, radius, padding
+   and shadow all come from the shared `.panel` class it's combined with in the TSX, and must stay
+   that way so an account panel reads as the same kind of surface as every other panel in the app.
+   There is only ever one on screen now (the `<select>` account picker shows one account's -- or the
+   combined "all open accounts" -- panel at a time, not a grid of them), but the class name survives
+   from the earlier three-column-grid design: it still reads as "the account's card," and every
+   `.closest(".account-card")` scoped query elsewhere in this page's tests keeps working unchanged. */
+.account-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.account-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* No heading tag assumed -- the account label is a title by weight and position, not necessarily an
+   `<h2>`/`<h3>`, so it gets its own explicit treatment rather than leaning on the global heading
+   rules the way `.desk-panel-title` leans on `<h3>`. */
+.account-card-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+/* Broker + tax-treatment + status line: secondary to the account label above it, so it drops in
+   size and goes muted -- but only a modest letter-spacing (0.03em), not the 0.05-0.08em this
+   codebase uses for genuinely uppercase mono labels (`.nav a`, `.stat .label`). Whether this line is
+   cased uppercase is a TSX/content decision, not a CSS one; a wider tracking value would read fine
+   on an uppercase broker code but stretch a mixed-case broker name ("Fidelity") into looking
+   mis-kerned, so this stays conservative enough to work either way without the line becoming
+   illegible. */
+/* Flex, not the plain block this started as. The markup puts a bare text node (the broker name)
+   directly against one or more `.badge` spans with no separator between them -- which is the right
+   markup, since a literal space would be content standing in for spacing -- so a block container
+   renders "robinhood" flush against "Taxable" flush against "19 warnings", and two adjacent badges
+   with no gap read as one merged pill. The gap belongs here rather than as a margin on the badges:
+   `.badge` is shared with several other pages that space it themselves, and giving it a margin would
+   shift all of them. `align-items: baseline` keeps the badges sitting on the broker name's baseline
+   rather than centred against a taller line box. */
+.account-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+
+/* A row of money tiles inside the panel -- flex-wrap rather than a nested grid, since the figure
+   count varies (cash-only accounts show fewer than fully-invested ones) and there is no column
+   alignment to preserve between renders, only within one. `tabular-nums` is already the document
+   default (see `:root` in `styles.css`), but it's restated here explicitly per this file's own
+   requirement that money figures visibly commit to lining up by digit, not merely inherit it. */
+.account-card-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The "this account held nothing" state. Muted and understated rather than alarming: an account with
+   no current holdings is a legitimate, unremarkable state (fully in cash, freshly opened, fully
+   liquidated, or closed), not an error condition, and must not compete visually with the figures
+   above it when it does have something to show. */
+.account-card-empty {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* --- Caveat strip --------------------------------------------------------------
+   The four honesty caveats (partial totals, cash, uncertainty, closed accounts -- see
+   `pages/portfolio/CaveatStrip.tsx`) used to be four separate `.panel` blocks, each paying its own
+   border/padding/shadow, stacked above the view rail. Folded into one `.panel` holding four
+   `.caveat-strip-item`s instead, so the view controls land above the fold on a normal viewport --
+   this is purely a spacing change, not a content one; every item keeps its own `callout-danger`/
+   `callout-warn` tint and, for the three that had one, its own `InfoNote` disclosure. */
+.caveat-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.caveat-strip-item {
+  margin: 0;
+}
+
+/* --- Account picker ----------------------------------------------------------
+   Either a `FolderTabs` rail (`size="sm"`, the normal path -- see `FOLDER_TAB_MAX`) or, past that
+   many open accounts, the original `<select>` this replaced. `label`+`select` stacked rather than
+   side-by-side: the label text varies by language length (Korean runs shorter), and a fixed
+   side-by-side width would either clip the longer language or leave visible slack on the shorter
+   one. */
+.account-picker-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.account-picker-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.account-picker-select {
+  max-width: 28rem;
+}
+
+/* The allocation pie sits inside `.account-card` as its own nested `.panel` (see `AllocationPie.tsx`)
+   so it keeps its own box even though it is visually part of one account's story -- this wrapper
+   only carries the aria-label naming which mode ("By ticker" / "By sector") is active; it introduces
+   no layout of its own. */
+.alloc-section {
+  display: contents;
+}
+
+/* A plain, muted badge for the sector column -- same size and weight as `.badge`, no accent color,
+   since sector is descriptive metadata rather than a flag needing to draw the eye the way
+   `.badge.basis-uncertain`/`.badge.fees-unknown` do. */
+.badge.sector-badge {
+  color: var(--muted);
+}
+
+/* The "closed" account-status badge. Muted rather than alarming (`.badge.stale`'s warn color, say):
+   a closed account is a fact about the ledger, not a problem to fix, so it reads the same register
+   as `.badge.deferred` elsewhere in this app. */
+.badge.status-closed {
+  color: var(--muted);
+}

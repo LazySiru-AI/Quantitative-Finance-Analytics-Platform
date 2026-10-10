@@ -1,0 +1,77 @@
+{
+  "window": [
+    "2026-02-17",
+    "2026-08-18"
+  ],
+  "sessions": 127,
+  "ranking": [
+    "B3-concentrated",
+    "B-momentum",
+    "B4-tight-stop",
+    "B2-hold-90",
+    "A-rotation",
+    "C-trend"
+  ],
+  "pairwise_novel_names": {
+    "B3-concentrated": {
+      "B-momentum": 0.0,
+      "B4-tight-stop": 0.0,
+      "B2-hold-90": 0.21621621621621623,
+      "A-rotation": 2.144144144144144,
+      "C-trend": 2.063063063063063
+    },
+    "B-momentum": {
+      "B3-concentrated": 1.3243243243243243,
+      "B4-tight-stop": 0.0,
+      "B2-hold-90": 0.21621621621621623,
+      "A-rotation": 3.369369369369369,
+      "C-trend": 3.225225225225225
+    },
+    "B4-tight-stop": {
+      "B3-concentrated": 1.3243243243243243,
+      "B-momentum": 0.0,
+      "B2-hold-90": 0.21621621621621623,
+      "A-rotation": 3.369369369369369,
+      "C-trend": 3.225225225225225
+    },
+    "B2-hold-90": {
+      "B3-concentrated": 1.4054054054054055,
+      "B-momentum": 0.08108108108108109,
+      "B4-tight-stop": 0.08108108108108109,
+      "A-rotation": 3.171171171171171,
+      "C-trend": 3.027027027027027
+    },
+    "A-rotation": {
+      "B3-concentrated": 1.4152542372881356,
+      "B-momentum": 1.3220338983050848,
+      "B4-tight-stop": 1.3220338983050848,
+      "B2-hold-90": 1.2627118644067796,
+      "C-trend": 1.805084745762712
+    },
+    "C-trend": {
+      "B3-concentrated": 1.8426966292134832,
+      "B-momentum": 1.6404494382022472,
+      "B4-tight-stop": 1.6404494382022472,
+      "B2-hold-90": 1.5617977528089888,
+      "A-rotation": 2.460674157303371
+    }
+  },
+  "seats_by_threshold": {
+    "0.50": [
+      "B3-concentrated",
+      "B-momentum",
+      "A-rotation",
+      "C-trend"
+    ],
+    "1.00": [
+      "B3-concentrated",
+      "B-momentum",
+      "A-rotation",
+      "C-trend"
+    ],
+    "1.50": [
+      "B3-concentrated",
+      "C-trend"
+    ]
+  }
+}

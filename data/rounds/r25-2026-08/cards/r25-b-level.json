@@ -1,0 +1,32 @@
+{
+  "agent_id": "r25-b-level",
+  "display_name": "Round 25 b-level",
+  "purpose": "savings",
+  "thesis": "Round 25 arm. A static 35/40/25 XLK/XLP/XLU allocation, rotating out of technology into consumer staples when the US yield curve signal is negative, reading its level. Arm A applies no tilt; arm B sizes the shift by how inverted the curve is; arm C sizes it by how fast the curve is falling. The two tilted arms are calibrated to move the same total weight over the window set, computed from the pinned series before any card ran, so they differ only in which signal drives them. Arm C reads a derived series and is NOT expressible as a card on this engine; it measures a hypothesis, not a shippable capability. A purpose-built three-sector allocation; it bears on no seated card's record. Nothing in this round is promotable. See strategy-program/ROUND-25-PLAN.md.",
+  "sleeves": [
+    {
+      "symbol": "XLK",
+      "target_weight": "0.35"
+    },
+    {
+      "symbol": "XLP",
+      "target_weight": "0.40"
+    },
+    {
+      "symbol": "XLU",
+      "target_weight": "0.25"
+    }
+  ],
+  "band_pct": "0.05",
+  "rules": [
+    {
+      "condition": "macro(T10Y2Y) < 0",
+      "on_symbol": "XLK",
+      "from_symbol": "XLK",
+      "to_symbol": "XLP",
+      "shift_pct": null,
+      "shift_expr": "-0.5 * macro(T10Y2Y)"
+    }
+  ],
+  "designed_through": "2026-02-13"
+}

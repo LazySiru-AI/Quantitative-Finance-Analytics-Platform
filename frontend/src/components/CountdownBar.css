@@ -1,0 +1,64 @@
+/**
+ * CountdownBar.tsx -- one bar, three urgency tones (ok/warn/danger), reusing the same --up/--warn/
+ * --down variables and color-mix intensity `StatusPill.css` already establishes, so a countdown bar
+ * and a status pill agree about what "amber" looks like on this page.
+ */
+
+.countdown-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.countdown-bar-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.countdown-bar-label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* The remaining-time text is the colour-blind-safe half of this component's urgency signal -- it
+   always renders, in every tone, right next to the bar. See the component's own docstring. */
+.countdown-bar-caption {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.countdown-bar-caption-ok { color: var(--up); }
+.countdown-bar-caption-warn { color: var(--warn); }
+.countdown-bar-caption-danger { color: var(--down); }
+
+.countdown-bar-track {
+  position: relative;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.countdown-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.2s ease;
+}
+
+.countdown-bar-fill-ok {
+  background: color-mix(in srgb, var(--up) 70%, transparent);
+}
+
+.countdown-bar-fill-warn {
+  background: color-mix(in srgb, var(--warn) 70%, transparent);
+}
+
+.countdown-bar-fill-danger {
+  background: color-mix(in srgb, var(--down) 70%, transparent);
+}

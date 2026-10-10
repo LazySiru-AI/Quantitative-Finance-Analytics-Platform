@@ -1,0 +1,194 @@
+# ---------------------------------------------------------------------------
+# DEFAULT TOPOLOGY, as of this revision: `docker compose up` starts ONLY the
+# frontend (static build served by nginx). The backend (FastAPI/uvicorn) is
+# expected to run on the Windows HOST, not in a container -- it wants the
+# repo venv, the host's Anthropic credentials (an `ant auth login` profile
+# under %APPDATA%\Anthropic, which a container cannot see), and it runs a
+# long-lived loop a developer needs to restart quickly. See docs/DOCKER.md
+# for the exact host command and the "0.0.0.0 bind" tension this creates.
+#
+# The OLD both-in-Docker topology still exists, gated behind a Compose
+# profile: `docker compose --profile backend up` starts the backend service
+# below too. Under that profile, override API_PROXY_TARGET so nginx proxies
+# to the backend *container* instead of the host -- see the frontend
+# service's `environment:` block below for the exact command.
+#
+# See docs/DOCKER.md for how to run either topology and what the
+# ports/volumes mean.
+#
+# Host ports 8000 and 5174 are deliberately NOT used here -- they were
+# occupied by another dev environment's servers at the time this was
+# written. Backend (when run in Docker via --profile backend) is published
+# on host 8002, frontend on host 8080. When the backend runs on the host
+# instead (the default topology), run it on port 8000 directly -- see
+# docs/DOCKER.md.
+#
+# 8002, not 8001: .claude/launch.json's "uat-backend" configuration also
+# binds host 8001 (`uat.harness.serve --port 8001`), run directly on the
+# host rather than in a container. That's a real collision, not a
+# hypothetical one -- both can be started independently by a developer in
+# the same session, and whichever binds second fails outright. 8002 is
+# free: checked against every "port" value in .claude/launch.json (8000,
+# 8001, 8003-8012, 8100, plus the 5173-5192/5273 frontend ports) and
+# against the repo for any other reference to 8002 as a service port. If
+# this ever collides too, move it again rather than reintroducing 8001.
+#
+# BOTH PUBLISHES ARE BOUND TO 127.0.0.1 ON PURPOSE. An unprefixed publish
+# ("8001:8000") binds 0.0.0.0 -- every interface, including whatever Wi-Fi
+# the laptop is on. This application now sits behind a login gate
+# (backend/app/auth/gate.py's AuthGateMiddleware): every route returns 401
+# with {"detail": "not_authenticated"} unless it is GET /api/health (the
+# Docker healthcheck), /api/auth/login, /api/auth/logout, /api/auth/me, or
+# an OPTIONS preflight. /docs and /openapi.json are gated too now, so the
+# API surface is no longer self-documenting to an unauthenticated caller.
+# See docs/AUTH.md for the full design.
+#
+# That auth is real, but it is not by itself a reason to widen these
+# binds. The traffic here is plain HTTP -- there is no TLS terminator in
+# this compose file -- so the login form's password and the session cookie
+# both cross the wire in the clear to whatever network reaches the port.
+# Settings.auth_cookie_secure defaults to False for exactly that reason (a
+# Secure cookie is never sent over plain HTTP, so flipping it on without
+# TLS in front just breaks login), and the login throttle (5 failed
+# attempts per 15 minutes, per username and per IP) is in-memory and
+# single-process, not something you want directly reachable from a cafe or
+# office Wi-Fi. GET /api/tax/report and /api/tax/form8949.csv still return
+# a complete realized-gains history and IRS Form 8949 rows to any caller
+# holding a valid session; an unprefixed publish widens who can attempt to
+# get one. This still applies to the frontend's own publish even in the
+# default (host-backend) topology: the frontend container proxies /api/
+# through to whatever API_PROXY_TARGET names, so an unprefixed frontend
+# publish would expose the same login and tax endpoints just as directly
+# as publishing the backend would.
+#
+# Do not remove the 127.0.0.1 prefixes to "make it reachable from my phone".
+# Putting real authentication in front of every router is DONE (see
+# docs/AUTH.md) -- what remains before relaxing this is TLS in front of the
+# API plus setting INVDASH_AUTH_COOKIE_SECURE=1, in that order, never the
+# reverse. See docs/DOCKER.md's "Binding the host backend beyond 127.0.0.1"
+# section for the specific, separate tension this creates for the *host*
+# backend once a container needs to reach it.
+# ---------------------------------------------------------------------------
+
+services:
+  backend:
+    # Gated behind a profile: this service does NOT start on a bare
+    # `docker compose up` any more -- the default topology runs the backend
+    # on the host instead (see the header comment). This service is kept,
+    # unchanged in behavior, for the old both-in-Docker path:
+    # `docker compose --profile backend up`. A profile-less service (like
+    # `frontend` below) always starts regardless of which profiles are
+    # active, so that command starts both backend and frontend together.
+    profiles: ["backend"]
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: investing-dashboard-backend
+    env_file:
+      # Reads INVDASH_FRED_API_KEY (and anything else in .env) from the host
+      # file into the container's process environment at start time. The
+      # file itself is never copied into the image or any layer -- it is not
+      # referenced anywhere in backend/Dockerfile, and .dockerignore excludes
+      # it from the build context as a second line of defense. If .env does
+      # not exist, Compose errors here rather than silently starting the
+      # backend without a key -- create it from .env.example first.
+      - .env
+    environment:
+      # Points the backend's store paths at the /data mount below instead of
+      # their default (a `data/` directory under a repo root that doesn't
+      # exist inside this image). See backend/app/config.py -- every one of
+      # these is a plain environment-variable override, by design.
+      INVDASH_DATA_DIR: /data
+      INVDASH_STORE_DIR: /data/store
+      INVDASH_CACHE_DIR: /data/cache
+      # Safe here, and only here: the frontend nginx container defined below is the only thing
+      # in this compose file that reaches the backend directly, so its own hop
+      # ($proxy_add_x_forwarded_for -- appended, not overwritten) is the one this process should
+      # trust. See backend/app/api/auth.py's _client_ip and Settings.auth_trust_forwarded_for's own
+      # docstring for why that means reading the LAST X-Forwarded-For entry, not the first.
+      INVDASH_AUTH_TRUST_FORWARDED_FOR: "1"
+    volumes:
+      # The user's real financial data: raw broker exports plus the derived
+      # SQLite ledger, DuckDB analytics store and parquet bars. A bind mount
+      # to the host's own `data/` directory, not an image layer -- nothing
+      # under here is ever built into the backend image. Do not change this
+      # to a named volume or remove it; that would either copy data into
+      # Docker's storage or make it vanish, either of which is the wrong
+      # thing to do with someone's brokerage ledger.
+      - ./data:/data
+    ports:
+      # Loopback only -- see the header comment. `--host 0.0.0.0` in
+      # backend/Dockerfile is correct and unrelated: that is the bind *inside*
+      # the container, which must be 0.0.0.0 for Docker to route to it at all.
+      # This line is what decides host reachability. Host side is 8002, not
+      # 8001 -- see the header comment for why.
+      - "127.0.0.1:8002:8000"
+    # No healthcheck: block here -- backend/Dockerfile already declares a
+    # HEALTHCHECK (image-level, so it also applies to `docker run` outside
+    # Compose). Compose picks that up automatically and reports it under
+    # `docker compose ps`; see backend/Dockerfile for the probe and the
+    # reasoning behind each parameter.
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    image: investing-dashboard-frontend
+    # No `depends_on: backend` any more. It used to gate startup on
+    # `condition: service_healthy` (backend's HEALTHCHECK, see
+    # backend/Dockerfile) so nginx never proxied /api/ before uvicorn was
+    # accepting connections. Two things broke that:
+    #   1. This service has no `profiles:` (see backend's `profiles: ["backend"]`
+    #      above), so it must start on every `docker compose up`, profile or
+    #      not -- but Compose refuses to start a profile-less service that
+    #      depends_on a profile-gated one unless that profile is also active.
+    #      A hard `depends_on: backend` here would make the default,
+    #      no-profile `docker compose up` fail outright.
+    #   2. In the default topology the backend isn't a Compose service at
+    #      all -- it's a process on the host (see the header comment) --
+    #      so there is nothing here for Compose to depend on or health-check.
+    # What is lost: nginx now starts immediately and will return 502 on
+    # /api/* until whatever API_PROXY_TARGET points at is actually up
+    # (the host backend, or the `backend` container under --profile
+    # backend), instead of Compose gating frontend startup on a health
+    # check. That is an accepted trade-off for a host-run backend, not an
+    # oversight -- see docs/DOCKER.md.
+    environment:
+      # Where nginx's /api/ proxy points, resolved at container *start* via
+      # nginx's envsubst-templates mechanism (see frontend/Dockerfile) --
+      # not baked into the image. Defaults to the host backend, which is
+      # the point of this whole revision. To run the OLD both-in-Docker
+      # topology instead, override this to the Compose service/network
+      # target when invoking the backend profile:
+      #
+      #   API_PROXY_TARGET=http://backend:8000 docker compose --profile backend up
+      #
+      # Left unset (or set to anything else) while running --profile
+      # backend, this would silently keep proxying to the host instead of
+      # the backend container -- hence documenting the override explicitly
+      # here and in docs/DOCKER.md rather than trying to make Compose
+      # switch it automatically (Compose has no per-profile conditional
+      # value for a single service's environment).
+      API_PROXY_TARGET: ${API_PROXY_TARGET:-http://host.docker.internal:8000}
+    extra_hosts:
+      # Lets the container resolve `host.docker.internal` to the Windows
+      # host running Docker Desktop. On Docker Desktop for Windows/Mac this
+      # name already resolves without any extra_hosts entry -- Desktop adds
+      # it automatically -- so this line is redundant here. It is NOT
+      # redundant on native Linux Docker (no Desktop layer), where
+      # `host.docker.internal` does not resolve unless something maps it;
+      # `host-gateway` is the special Compose/Docker value that resolves to
+      # the host's gateway IP from inside the container. Kept so this
+      # compose file also works unmodified if this repo is ever run on
+      # Linux.
+      - "host.docker.internal:host-gateway"
+    ports:
+      # Loopback only -- see the header comment. nginx proxies /api/ through to
+      # whatever API_PROXY_TARGET names, so publishing this one broadly would
+      # expose the login and tax endpoints just as directly as publishing a
+      # backend container would -- a session is required now (docs/AUTH.md),
+      # but it is negotiated over plain HTTP here, which is exactly why
+      # loopback-only still matters.
+      - "127.0.0.1:8080:8080"
+    restart: unless-stopped

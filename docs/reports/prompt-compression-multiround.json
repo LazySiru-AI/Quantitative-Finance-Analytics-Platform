@@ -1,0 +1,62 @@
+[
+  {
+    "symbol": "AAPL",
+    "baseline_rating": "Underweight",
+    "candidate_rating": "Underweight",
+    "rating_match": true,
+    "arms_match": true,
+    "baseline_output_tokens": 183801,
+    "candidate_output_tokens": 174646,
+    "output_saved_pct": 5.0,
+    "baseline_cost": "1.556219700000000026",
+    "candidate_cost": "1.406723200000000022",
+    "baseline_checked": 277,
+    "candidate_checked": 217
+  },
+  {
+    "symbol": "MSFT",
+    "baseline_rating": "Underweight",
+    "candidate_rating": "Underweight",
+    "rating_match": true,
+    "arms_match": true,
+    "baseline_output_tokens": 223673,
+    "candidate_output_tokens": 145891,
+    "output_saved_pct": 34.8,
+    "baseline_cost": "1.819015600000000039",
+    "candidate_cost": "1.213883100000000089",
+    "baseline_checked": 293,
+    "candidate_checked": 212,
+    "baseline_grounded_ok": false,
+    "candidate_grounded_ok": false
+  },
+  {
+    "symbol": "AMZN",
+    "baseline_rating": "Underweight",
+    "candidate_rating": "Underweight",
+    "rating_match": true,
+    "arms_match": true,
+    "baseline_output_tokens": 232544,
+    "candidate_output_tokens": 138947,
+    "output_saved_pct": 40.2,
+    "baseline_cost": "1.866226699999999955",
+    "candidate_cost": "1.135824500000000007",
+    "baseline_checked": 229,
+    "candidate_checked": 230,
+    "baseline_grounded_ok": false,
+    "candidate_grounded_ok": false
+  },
+  {
+    "symbol": "NVDA",
+    "baseline_rating": "Underweight",
+    "candidate_rating": "Underweight",
+    "rating_match": true,
+    "arms_match": true,
+    "baseline_output_tokens": 177498,
+    "candidate_output_tokens": 139913,
+    "output_saved_pct": 21.2,
+    "baseline_cost": "1.537780200000000031",
+    "candidate_cost": "1.171010400000000059",
+    "baseline_checked": 317,
+    "candidate_checked": 212
+  }
+]

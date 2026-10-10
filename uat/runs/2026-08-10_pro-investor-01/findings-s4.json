@@ -1,0 +1,31 @@
+{
+  "findings": [
+    {
+      "finding_id": "report-current-drawdown-frozen-at-episode-trough-not-live-price",
+      "run_id": "2026-08-10_pro-investor-01",
+      "persona_id": "pro-investor-01",
+      "session": 4,
+      "observed_at": "2026-08-14T21:10:00Z",
+      "session_date": "2026-08-13",
+      "surface": "ui",
+      "locator": "/report/:symbol",
+      "kind": "defect",
+      "severity": "major",
+      "title": "Report's 'Current Drawdown' is frozen at the episode's trough, not the live gap to peak",
+      "observed": "On /report/XLE, the Drawdown Profile section headlines 'CURRENT DRAWDOWN (CLOSE BASIS) 15.6%' with 'peak 2026-03-27 -> trough 2026-07-01'. The page's own quote at the top shows the last price as $61.91 against a 52-week/episode high of $62.56 -- a live gap of 1.04%, not 15.6%. Confirmed via GET /api/report?symbol=XLE&interval=1d: drawdown.current.depth=-0.1559 is computed strictly from peak_value 62.56 to trough_value 52.81 (the episode's worst point, reached 2026-07-01), not from the current quote.price (61.91). The same pattern holds on /report/XLK: headline 'CURRENT DRAWDOWN 16.0%' (peak $198.21 on 2026-06-02, trough $166.57 on 2026-07-29) while the live quote is $190.03, a 4.13% live gap. For contrast, /report/XLV -- where the recent trough and the peak are only 3 bars apart -- correctly shows 0.0%/-0.04%, because in that case the stale-trough figure and the live gap happen to coincide.",
+      "expected": "A field labelled 'Current Drawdown' should state how far the price is below its peak right now (peak vs last close), the way I'd use the term when sizing or reviewing a position today. If the intended meaning is instead 'the deepest point this still-open episode has reached, regardless of where price has since recovered to,' that is a materially different and legitimate statistic, but it needs a different label -- e.g. 'Episode low point' or 'Max drawdown of open episode' -- so it isn't read as a live number.",
+      "why_it_matters": "I hold both XLE (22 shares) and XLK (7 shares). Reading '15.6%' and '16.0%' next to my two largest sector positions on the page whose whole job is the narrative case for a holding reads as 'you are sitting on a meaningful loss from highs right now' -- it is not true; both names are within low single digits of their own peak on the same page. I caught this only by cross-checking the quote price against the stated peak myself, per my usual practice of walking a number back to its source; a reader who trusts the headline figure at face value would misjudge current risk on a position they're actively holding, in either direction depending on which way price has moved since the trough.",
+      "repro": [
+        "Navigate to /report/XLE",
+        "Read the top quote: last price $61.91",
+        "Read the Drawdown Profile headline: 'CURRENT DRAWDOWN (CLOSE BASIS) 15.6%', 'peak 2026-03-27 -> trough 2026-07-01'",
+        "Compute the live gap from the page's own numbers: (62.56-61.91)/62.56 = 1.04%, not 15.6%",
+        "Confirm via GET /api/report?symbol=XLE&interval=1d: drawdown.current.depth is computed from peak_value/trough_value, not quote.price",
+        "Repeat on /report/XLK: quote $190.03 vs stated 'Current Drawdown 16.0%' (peak $198.21, trough $166.57) -- live gap is 4.13%",
+        "Repeat on /report/XLV as a contrast case: peak and trough only 3 bars apart, so the (correct-by-coincidence) reading is 0.0%"
+      ],
+      "blocked_decision": false,
+      "suggested_fix": "Compute 'Current Drawdown' as (peak_value - last_close) / peak_value using the same last close the page's own quote already carries, and move the episode's trough-based depth into the historical-episode context (e.g. as a 'deepest point reached so far' subline) rather than the headline number."
+    }
+  ]
+}

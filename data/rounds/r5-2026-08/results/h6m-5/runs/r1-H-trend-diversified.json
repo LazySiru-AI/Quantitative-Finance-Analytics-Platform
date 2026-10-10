@@ -1,0 +1,93 @@
+{
+  "card": {
+    "agent_id": "H-trend-diversified",
+    "display_name": "H - Trend, cross-asset: lowest drawdown of the trend family",
+    "discipline": "trend",
+    "thesis": "Round 1 forced this discipline into one sector; round 2 lets me test its central weakness directly -- trend following's worst outcome is not a bad trade, it is every position turning at once, which is a correlation problem before it is a signal problem. I measured correlation rather than assumed it. Trailing 2y (504-session) daily-return correlation across my round-1 universe (NVDA AVGO TSM ORCL SOXX NFLX MU META QCOM) averages 0.501 pairwise (median 0.468, range 0.219-0.800) through 2026-02-13 -- nine names sharing one regime. The round-2 roster this card actually trades (NVDA MU GDX EWZ FXI INDA DBC) averages 0.274 pairwise over the same window, a ~45% reduction, with every pair outside the NVDA/MU core below 0.39 and GDX the most decoupled name in the set (0.16-0.22 vs NVDA/MU). But correlation alone is not sufficient, and I tested that too: I ran the identical unscaled rule (close>sma(200) & ema(20)-crosses-above-ema(50) entry, ema(20)-crosses-below-ema(50) exit, 12% stop, 120-day time stop -- same parameters as my round-1 card, same trailing ~1500-session/6y design methodology) on every 'obvious diversifier' round 2 exposes. Bonds (TLT, mean trade return -1.6% over 5 trades), utilities (XLU, -0.5% over 18 trades), regional banks (KRE, -0.8%), biotech (XBI, -0.2%), copper (CPER, -1.1%) and defence (ITA, +2.2% mean but only 28.6% win rate, and 0.53 correlated to the semis sleeve -- a worse diversifier than gold despite the label) all showed flat-to-negative or too-thin edge under this exact rule to earn a slot: including them would not have reduced correlated drawdown, it would have parked capital in dead-or-negative-expectancy positions that still occasionally fire a badly-timed entry. Gold miners (GDX) were the standout: 4 trades in 6y, 75% win rate, +20.9% mean trade return, lowest correlation to the core of anything tested. Brazil (EWZ, +2.1% mean trade, 0.23-0.30 corr), China (FXI, +2.8%, 0.24-0.31 corr), India (INDA, +4.5%, 0.21-0.26 corr, only 0.07 correlated to DBC) and broad commodities (DBC, +5.5%, 0.07-0.39 corr) all cleared a lower but genuinely positive bar and are the five diversifying sleeves in this universe. NVDA and MU stay as the trend engine because that is where the measured edge is largest -- +17.3% and +20.6% mean trade return respectively in the same 6y window, against +12.7% averaged across all nine round-1 names and +9.7% averaged across this seven-name diversified book. The mechanism is unchanged from round 1: gradual institutional flow into a confirmed uptrend, plus both premature profit-taking and panicked pullback-selling handing the rest of a move to a slower, rule-following holder -- but now spread across sleeves whose macro drivers are structurally different (US AI capex cycle, gold's real-rate/dollar cycle, EM equity flows, broad commodity demand), so a single regime turning cannot take out the whole book the way it structurally can in a one-sector universe. This is a real trade-off, not a free lunch: the diversified book's measured per-trade expectancy (9.7%) is lower than the concentrated book's (12.7%) on this identical rule and sample -- I am spending some expected return to buy a reduction in simultaneous-drawdown risk, and round 1 is the direct comparison for whether that trade was worth it. Realised 2y annualised volatility on this universe ranges from INDA (14.1%) to MU (60.0%), a 4.3x spread wider than round 1's uniformly high-vol semis cluster, exactly as the brief warned. I did not rescale the single 12% stop because the engine cannot: it is proportionately tight on NVDA/MU (12.5%-25% measured stop-hit rate in the design window) and proportionately loose on INDA/DBC/EWZ/FXI (0% measured stop-hit rate over the same window) -- I am stating that mismatch rather than pretending a single number fits both a 60%-vol stock and a 14%-vol commodity ETF equally well.",
+    "universe": [
+      "NVDA",
+      "MU",
+      "GDX",
+      "EWZ",
+      "FXI",
+      "INDA",
+      "DBC"
+    ],
+    "entry": "close > sma(200) and ema(20) crosses_above ema(50)",
+    "exit": "ema(20) crosses_below ema(50)",
+    "stop_loss_pct": "0.12",
+    "take_profit_pct": null,
+    "max_hold_days": 120,
+    "max_positions": 6,
+    "position_pct": "0.16",
+    "designed_through": "2026-02-13"
+  },
+  "sessions": 127,
+  "starting_equity": "10000.00",
+  "ending_equity": "9645.57",
+  "total_return": "-0.035443",
+  "max_drawdown": "-0.04070252137041919",
+  "sharpe": null,
+  "sortino": null,
+  "volatility": null,
+  "exposure": 0.7165354330708661,
+  "capital_exposure": 0.14196630708661417,
+  "win_rate": 0.0,
+  "profit_factor": null,
+  "realised_reward_risk": null,
+  "trades": [
+    {
+      "symbol": "EWZ",
+      "entry_date": "2022-08-16",
+      "entry_price": "31.83",
+      "exit_date": "2022-10-03",
+      "exit_price": "31.50",
+      "quantity": "49",
+      "exit_reason": "rule",
+      "pnl": "-16.22",
+      "return_pct": "-0.01039963582039790468496540935",
+      "bars_held": 33
+    },
+    {
+      "symbol": "EWZ",
+      "entry_date": "2022-10-04",
+      "entry_price": "33.19",
+      "exit_date": "2022-11-18",
+      "exit_price": "29.99",
+      "quantity": "49",
+      "exit_reason": "rule",
+      "pnl": "-156.85",
+      "return_pct": "-0.09644532715165005441766944801",
+      "bars_held": 33
+    },
+    {
+      "symbol": "DBC",
+      "entry_date": "2022-11-07",
+      "entry_price": "26.58",
+      "exit_date": "2022-11-28",
+      "exit_price": "24.41",
+      "quantity": "60",
+      "exit_reason": "rule",
+      "pnl": "-130.25",
+      "return_pct": "-0.08167168296965136694256333083",
+      "bars_held": 14
+    },
+    {
+      "symbol": "INDA",
+      "entry_date": "2022-11-08",
+      "entry_price": "43.27",
+      "exit_date": "2022-12-27",
+      "exit_price": "41.89",
+      "quantity": "37",
+      "exit_reason": "rule",
+      "pnl": "-51.11",
+      "return_pct": "-0.03192399702683964297091174836",
+      "bars_held": 33
+    }
+  ],
+  "rejections": [],
+  "benchmark_return": "-0.03214644752530802141537886050",
+  "p_value": null,
+  "q_value": null,
+  "notes": []
+}

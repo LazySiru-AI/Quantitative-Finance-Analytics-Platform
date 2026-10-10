@@ -1,0 +1,32 @@
+window: 2018-09-21 -> 2018-12-24
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+27 cards
+[1/27] r1 A-rotation: 24s trades=9 ret=-15.79% dd=-17.23% rej=6
+[2/27] r1 A1-alpha-order: 24s trades=8 ret=-15.94% dd=-16.93% rej=2
+[3/27] r1 A2-cash-headroom: 26s trades=12 ret=-17.52% dd=-18.76% rej=2
+[4/27] r1 A3-no-target: 25s trades=9 ret=-15.79% dd=-17.23% rej=6
+[5/27] r1 A4-tight-stop: 25s trades=10 ret=-15.39% dd=-16.84% rej=8
+[6/27] r1 B-momentum: 23s trades=1 ret=-0.88% dd=-1.03% rej=0
+[7/27] r1 B1-with-target: 24s trades=1 ret=-0.88% dd=-1.03% rej=0
+[8/27] r1 B2-hold-90: 24s trades=1 ret=-0.88% dd=-1.03% rej=0
+[9/27] r1 B3-concentrated: 24s trades=1 ret=-1.31% dd=-1.53% rej=0
+[10/27] r1 B4-tight-stop: 24s trades=1 ret=-0.88% dd=-1.03% rej=0
+[11/27] r1 C-trend: 19s trades=2 ret=-1.84% dd=-2.11% rej=0
+[12/27] r1 c01-meanrev: 24s trades=6 ret=-3.70% dd=-5.44% rej=0
+[13/27] r1 c02-volatility: 14s trades=2 ret=-4.53% dd=-4.81% rej=0
+[14/27] r1 c03-breakout: 23s trades=4 ret=-2.60% dd=-3.70% rej=0
+[15/27] r1 c04-riskmanaged: 9s trades=7 ret=-2.74% dd=-3.36% rej=0
+[16/27] r1 c05-trend: 7s trades=6 ret=-1.98% dd=-2.78% rej=0
+[17/27] r1 c06-13f-momentum: 20s trades=13 ret=-9.51% dd=-10.25% rej=0
+[18/27] r1 c07-chop: 23s trades=10 ret=-6.52% dd=-8.05% rej=3
+[19/27] r1 c08-generalist: 16s trades=8 ret=-6.73% dd=-6.83% rej=0
+[20/27] r1 c09-convex: 6s trades=3 ret=+0.71% dd=-0.19% rej=0
+[21/27] r1 c10-momentum: 20s trades=8 ret=-1.79% dd=-1.79% rej=0
+[22/27] r1 c11-breakout: 8s trades=2 ret=-0.91% dd=-1.22% rej=0
+[23/27] r1 D-13f-newbuys: FAILED GuardFailed: D-13f-newbuys: entry expression 'close > sma(50) and close > sma(200) and rsi(14) > 50' failed the lookahead guard against SNDK (failed): causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_200: only 0 bars against a 199-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: rsi_14: only 0 bars against a 14-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[24/27] r1 E-asymmetric: FAILED GuardFailed: E-asymmetric: entry expression 'close > bb_upper(20,2) and macd_hist(12,26,9) > 0 and close > sma(50)' failed the lookahead guard against PLTR (failed): causality: bb_20_2: only 0 bars against a 19-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: macd_12_26_9: only 0 bars against a 33-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[25/27] r1 F-fastrev: FAILED GuardFailed: F-fastrev: entry expression 'rsi(3) < 15 and close < bb_lower(10,2)' failed the lookahead guard against CRDO (failed): causality: rsi_3: only 0 bars against a 3-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: bb_10_2: only 0 bars against a 9-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[26/27] r1 G-volatility: FAILED GuardFailed: G-volatility: entry expression 'high - low > atr(14) * 1.5 and close > open and close > sma(50)' failed the lookahead guard against COIN (failed): causality: atr_14: only 0 bars against a 13-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence; causality: sma_50: only 0 bars against a 49-bar warmup leaves no post-warmup region to truncate, so causality could not be demonstrated -- this guard reports that as a failure rather than passing on no evidence
+[27/27] r1 H-trend-diversified: 13s trades=0 ret=+0.00% dd=0.00% rej=0
+r1: 23 agents, 2 discoveries
+overall: 23 agents, 2 discoveries at alpha=0.1

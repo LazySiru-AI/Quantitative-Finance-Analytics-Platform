@@ -1,0 +1,178 @@
+{
+  "A-rotation": {
+    "gfc": "AVGO first bar 2009-08-06, needs <= 2007-06-02",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "A1-alpha-order": {
+    "gfc": "AVGO first bar 2009-08-06, needs <= 2007-06-02",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "A2-cash-headroom": {
+    "gfc": "AVGO first bar 2009-08-06, needs <= 2007-06-02",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "A3-no-target": {
+    "gfc": "AVGO first bar 2009-08-06, needs <= 2007-06-02",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "A4-tight-stop": {
+    "gfc": "AVGO first bar 2009-08-06, needs <= 2007-06-02",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "B-momentum": {
+    "gfc": "NOW first bar 2012-06-29, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "B1-with-target": {
+    "gfc": "NOW first bar 2012-06-29, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "B2-hold-90": {
+    "gfc": "NOW first bar 2012-06-29, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "B3-concentrated": {
+    "gfc": "NOW first bar 2012-06-29, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "B4-tight-stop": {
+    "gfc": "NOW first bar 2012-06-29, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "C-trend": {
+    "gfc": "META first bar 2012-05-18, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "c01-meanrev": {
+    "gfc": true,
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "c02-volatility": {
+    "gfc": true,
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "c03-breakout": {
+    "gfc": true,
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "c04-riskmanaged": {
+    "gfc": true,
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "c05-trend": {
+    "gfc": true,
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "c06-13f-momentum": {
+    "gfc": "META first bar 2012-05-18, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "D-13f-newbuys": {
+    "gfc": "SNDK first bar 2025-02-13, needs <= 2006-10-27",
+    "covid": "SNDK first bar 2025-02-13, needs <= 2019-03-09",
+    "bear-2022": "SNDK first bar 2025-02-13, needs <= 2021-01-21",
+    "bull-2024": "SNDK first bar 2025-02-13, needs <= 2023-09-09",
+    "recent": "SNDK first bar 2025-02-13, needs <= 2024-09-08",
+    "13f-legal": "SNDK first bar 2025-02-13, needs <= 2024-12-05"
+  },
+  "E-asymmetric": {
+    "gfc": "NBIS first bar 2024-10-21, needs <= 2007-06-02",
+    "covid": "NBIS first bar 2024-10-21, needs <= 2019-10-13",
+    "bear-2022": "NBIS first bar 2024-10-21, needs <= 2021-08-27",
+    "bull-2024": "NBIS first bar 2024-10-21, needs <= 2024-04-14",
+    "recent": true,
+    "13f-legal": true
+  },
+  "F-fastrev": {
+    "gfc": "CRDO first bar 2022-01-27, needs <= 2007-07-30",
+    "covid": "CRDO first bar 2022-01-27, needs <= 2019-12-10",
+    "bear-2022": "CRDO first bar 2022-01-27, needs <= 2021-10-24",
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "G-volatility": {
+    "gfc": "COIN first bar 2021-04-14, needs <= 2007-06-02",
+    "covid": "COIN first bar 2021-04-14, needs <= 2019-10-13",
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  },
+  "H-trend-diversified": {
+    "gfc": "INDA first bar 2012-02-03, needs <= 2006-10-27",
+    "covid": true,
+    "bear-2022": true,
+    "bull-2024": true,
+    "recent": true,
+    "13f-legal": true
+  }
+}

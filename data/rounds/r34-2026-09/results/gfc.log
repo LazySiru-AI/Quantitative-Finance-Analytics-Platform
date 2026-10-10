@@ -1,0 +1,21 @@
+window: 2007-10-09 -> 2009-03-09
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+16 cards
+[1/16] r1 r34-band-breakout-off: 2s trades=29 ret=-24.17% dd=-24.63% rej=0
+[2/16] r1 r34-band-breakout-on: 1s trades=20 ret=-15.13% dd=-15.80% rej=0
+[3/16] r1 r34-band-reversion-off: 2s trades=50 ret=-25.09% dd=-41.35% rej=64
+[4/16] r1 r34-band-reversion-on: 1s trades=10 ret=-9.46% dd=-10.61% rej=0
+[5/16] r1 r34-channel-breakout-off: 2s trades=18 ret=-30.44% dd=-31.18% rej=0
+[6/16] r1 r34-channel-breakout-on: 2s trades=13 ret=-20.22% dd=-21.84% rej=0
+[7/16] r1 r34-ma-crossover-off: 2s trades=34 ret=-27.37% dd=-28.86% rej=8
+[8/16] r1 r34-ma-crossover-on: 1s trades=14 ret=-5.09% dd=-9.73% rej=0
+[9/16] r1 r34-macd-cross-off: 3s trades=74 ret=-34.61% dd=-41.02% rej=16
+[10/16] r1 r34-macd-cross-on: 1s trades=36 ret=-7.25% dd=-9.84% rej=0
+[11/16] r1 r34-momentum-state-off: 3s trades=41 ret=-31.36% dd=-32.52% rej=36
+[12/16] r1 r34-momentum-state-on: 2s trades=26 ret=-16.28% dd=-17.93% rej=2
+[13/16] r1 r34-rsi-pullback-off: 4s trades=56 ret=-52.58% dd=-56.64% rej=247
+[14/16] r1 r34-rsi-pullback-on: 2s trades=17 ret=-6.48% dd=-9.95% rej=0
+[15/16] r1 r34-vol-compression-off: 2s trades=24 ret=-16.32% dd=-17.38% rej=2
+[16/16] r1 r34-vol-compression-on: 2s trades=20 ret=-11.13% dd=-12.24% rej=0
+r1: 16 agents, 12 discoveries
+overall: 16 agents, 12 discoveries at alpha=0.1

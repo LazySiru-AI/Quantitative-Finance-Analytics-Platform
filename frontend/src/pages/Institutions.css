@@ -1,0 +1,57 @@
+/* =============================================================================
+   Institutions page (`Institutions.tsx`) -- portfolio-shape row.
+
+   Reuses .panel/.subtitle/.placeholder/.muted/.badge/.section-heading and every `inst-` class
+   already declared in the shared `styles.css` (see that file's own "Institutions page" section,
+   appended near its end) -- this file adds only the two-column pie/moves layout introduced
+   alongside `HoldingsPieChart` and `RecentMoves`. `styles.css` is a shared, actively-edited
+   2700-line file owned by other work happening in parallel; keeping this page's new layout rules
+   here instead avoids colliding with it, matching the precedent `Competition.css` already set for
+   a per-page stylesheet.
+
+   `.inst-shape-section` is deliberately NOT `.panel`: the two cells of `.inst-shape-grid` below are
+   each a `Card` (`@/components/Card`), and `Card` already renders as `section.panel.card` -- a
+   second outer `.panel` here would box an already-boxed pair a second time. `.section-heading` (the
+   same bare heading class `Competition.tsx` uses above its own un-boxed rows of cards, e.g. "Desk
+   roster") titles the row without that redundant border.
+   ============================================================================= */
+
+.inst-shape-section { margin-bottom: 1rem; }
+
+/* `CardGrid` (`height="md"`) supplies the equal-row-height machinery (`grid-auto-rows`,
+   `align-items: stretch`) and the responsive `auto-fit` fallback; this rule only overrides its
+   column template to the fixed two-up split a pie-plus-legend needs. 420px is roughly the width a
+   labelled pie legend needs before it starts wrapping awkwardly -- the same threshold this page's
+   own `.table-wrap` scrolls render illegible below. `align-items: start` is deliberately NOT
+   repeated here: `CardGrid`'s own `stretch` is what makes the short pie card's card fill the same
+   row height as the (potentially longer) moves list, which is the entire point of moving this row
+   onto the `Card` primitive. */
+.inst-shape-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 760px) {
+  .inst-shape-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inst-shape-pie,
+.inst-shape-moves {
+  min-width: 0;
+}
+
+/* `HoldingsPieChart`'s loaded output and every phase of `RecentMoves` each still render their own
+   complete `<section className="panel">` internally (out of this page's scope to change) -- nested
+   one card-body deep inside `.inst-shape-pie`/`.inst-shape-moves` above, that would double the
+   border/background/shadow `.panel` draws. Flattened to plain content here rather than a second
+   visible box; the `Card` itself is the only panel chrome this row shows. */
+.inst-shape-pie .card-body > .panel,
+.inst-shape-moves .card-body > .panel {
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0;
+}

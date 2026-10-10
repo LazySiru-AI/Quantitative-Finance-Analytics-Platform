@@ -1,0 +1,15 @@
+window: 2011-05-26 -> 2012-06-06
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+10 cards
+[1/10] r1 r36-canonical-k2: 4s trades=18 ret=-1.43% dd=-8.68% rej=0
+[2/10] r1 r36-canonical-k4: 4s trades=35 ret=-3.18% dd=-10.31% rej=0
+[3/10] r1 r36-reversed-k2: 3s trades=20 ret=-5.08% dd=-11.02% rej=0
+[4/10] r1 r36-reversed-k4: 4s trades=36 ret=-3.76% dd=-10.16% rej=0
+[5/10] r1 r36-strong-k2: 2s trades=20 ret=-3.60% dd=-10.82% rej=0
+[6/10] r1 r36-strong-k4: 3s trades=34 ret=-3.34% dd=-9.50% rej=0
+[7/10] r1 r36-volunits-k2: 2s trades=18 ret=-3.99% dd=-9.95% rej=0
+[8/10] r1 r36-volunits-k4: 3s trades=35 ret=-4.08% dd=-10.48% rej=0
+[9/10] r1 r36-weak-k2: 2s trades=21 ret=-6.08% dd=-11.77% rej=0
+[10/10] r1 r36-weak-k4: 3s trades=36 ret=-4.24% dd=-10.64% rej=0
+r1: 10 agents, 10 discoveries
+overall: 10 agents, 10 discoveries at alpha=0.1

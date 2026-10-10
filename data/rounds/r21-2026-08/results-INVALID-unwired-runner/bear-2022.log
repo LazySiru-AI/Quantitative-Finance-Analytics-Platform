@@ -1,0 +1,13 @@
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+8 cards
+[1/8] r1 r21-channel-breakout-off: 2s trades=13 ret=-12.65% dd=-13.73% rej=0
+[2/8] r1 r21-channel-breakout-on: FAILED RuleEvaluationError: rule references macro(T10Y2Y) but this evaluation was given no macro frame; the caller must bind one with app.rules.macro_binding.bind_macro before evaluating
+[3/8] r1 r21-ma-crossover-off: 1s trades=15 ret=-3.32% dd=-8.69% rej=0
+[4/8] r1 r21-ma-crossover-on: FAILED RuleEvaluationError: rule references macro(T10Y2Y) but this evaluation was given no macro frame; the caller must bind one with app.rules.macro_binding.bind_macro before evaluating
+[5/8] r1 r21-rsi-pullback-off: 2s trades=18 ret=-3.16% dd=-7.74% rej=0
+[6/8] r1 r21-rsi-pullback-on: FAILED RuleEvaluationError: rule references macro(T10Y2Y) but this evaluation was given no macro frame; the caller must bind one with app.rules.macro_binding.bind_macro before evaluating
+[7/8] r1 r21-vol-compression-off: 2s trades=22 ret=-11.40% dd=-11.48% rej=1
+[8/8] r1 r21-vol-compression-on: FAILED RuleEvaluationError: rule references macro(T10Y2Y) but this evaluation was given no macro frame; the caller must bind one with app.rules.macro_binding.bind_macro before evaluating
+r1: 4 agents, 3 discoveries
+overall: 4 agents, 3 discoveries at alpha=0.1

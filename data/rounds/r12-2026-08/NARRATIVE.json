@@ -1,0 +1,19 @@
+{
+  "round_id": "r12-2026-08",
+  "title": "Round 12 - distinctness, restated over holdings",
+  "focus": "Replace the base-family distinctness rule with a rule measured directly on live holdings overlap (novel names held per session), to give the round-11 override that kept both B3-concentrated and B-momentum a principled, pre-registered test rather than a standing exception.",
+  "headline": "The new holdings-based distinctness rule reproduced the exact four-card roster the desk already runs by owner override, and the round states plainly that this is not independent confirmation - it is the same measurement, shaped in part by watching that override, read a second time.",
+  "outcome": "Round 12 reran no tournament and added no new evidence within the window it measures; Gate A, Gate L, the live matrix, Gate C and the ranking are the exact computations round 11 already published, recomputed from the same stored results rather than copied. A store-drift issue was disclosed rather than smoothed over: three extra sessions of bars had been appended to the shared store by unrelated concurrent work, but every computation in this round is bounded at or before the live window's own end date, so the drift is inert to every number reported.\n\nThe new distinctness rule walks down the live ranking and seats each card whose novel names, measured against the union of already-seated cards' holdings across the live window, average at least one whole position per invested session. B3-concentrated seats unconditionally as the top-ranked card; B-momentum seats next at 1.32 novel names (roughly 23% of its book); A-rotation and C-trend both clear the bar against the growing union. B4-tight-stop and B2-hold-90, despite clearing every gate and reaching the ranking, are excluded at 0.00 and 0.08 novel names respectively - B4-tight-stop held an identical book to B-momentum on all 127 live sessions.\n\nThe four seats this rule reaches are exactly the four StrategyCards the desk already trades, arrived at through round 11's owner override of the base-family clause this rule replaces. The document addresses the obvious suspicion directly: the threshold was fixed as one whole position before this round's numbers existed, the roster is unchanged at half that threshold, and the rule has real teeth (it excludes two cards that clear every other gate). But it also states clearly that reproducing the override this way is not a second, independent measurement - it is one field, one 127-session window, and the first live outing of this exact rule, partly informed by watching the pairing it now reproduces.",
+  "seated": ["B3-concentrated", "B-momentum", "A-rotation", "C-trend", "ladder-qld-schd"],
+  "owner_override": null,
+  "carries_forward": [
+    "Do not read this roster as re-confirmation of round 11's override - the same evidence, scored by a rule partly shaped by watching this exact pairing get overridden, reproducing that pairing is expected, not remarkable; treat the next genuinely new live sub-window as the first real test of this rule.",
+    "The store-drift disclosed this round is a process gap, not a data problem, but a future round's window boundaries may not be so lucky - a pinned store snapshot per round, or a check that fails loud rather than warns, is needed before concurrent work silently overlaps a window that matters.",
+    "Cards with no live record still have no distinctness path into the competition, since this rule cannot score a card that has not traded live - deciding how to seat the ROTH-MOMENTUM and ROTH-VOLTARGET specifications is the actual widening move available next.",
+    "B4-tight-stop is effectively a duplicate row of B-momentum (identical holdings on all 127 live sessions, zero novel names in both directions) and its place in the field should be reconsidered."
+  ],
+  "sources": [
+    "strategy-program/ROUND-12-PLAN.md",
+    "data/rounds/r12-2026-08/SELECTION.md"
+  ]
+}

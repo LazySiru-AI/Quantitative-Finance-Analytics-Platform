@@ -1,0 +1,184 @@
+/* =============================================================================
+   Competition tab -- Summary view (SummarySection.tsx).
+
+   Reuses .panel, .section-heading, .subtitle, .muted, .tile/.tile-grid, .stat,
+   .data-table/.table-wrap, .badge, .callout/.callout-info, .placeholder from
+   styles.css -- nothing there is modified, only built on top of. Every class
+   this file adds is prefixed `summary-` so it cannot collide with this page's
+   own `comp-`/`selection-` prefixes (Competition.css) or another agent's
+   FindingsSection.
+   ============================================================================= */
+
+.summary-panel-subtitle { margin-bottom: 0.75rem; }
+.summary-panel-body { margin-top: 0.75rem; }
+
+.summary-tile-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* Numeric/mixed figures line up by digit and pick up the same signed-value colour rules the rest of
+   this page uses -- never colour alone: a positive figure still carries its own `+` sign from
+   `formatSignedPctFraction`. */
+.summary-num { font-variant-numeric: tabular-nums; }
+.summary-num.pos { color: var(--up); }
+.summary-num.neg { color: var(--down); }
+
+/* --- Round picker ------------------------------------------------------------- */
+
+/* A single `<select>` with two native `<optgroup>`s ("Scored"/"Record only") replaced the old
+   two-tablist button wall -- the grouping is now expressed by the browser's own optgroup rendering
+   rather than a second labelled div per group, so there is far less bespoke layout left here than
+   the button version needed. */
+/* The label-plus-select stacks as before; the "no scored results" pill sits beside it on the same
+   baseline rather than inside an option's text. `align-items: flex-end` keeps the pill on the
+   select's line, not floating up beside its label. */
+.summary-round-picker {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.summary-round-select-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.summary-round-select {
+  display: block;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.summary-empty-round { margin-top: 0.75rem; }
+
+/* --- Orientation body (round's question + windows) ------------------------------ */
+
+.summary-orientation-body { margin-top: 0.75rem; }
+
+.summary-orientation-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+/* The round's own `label` sentence, rendered as prose rather than a table value -- this is "what the
+   round asked", meant to read before any figure on the page, matching `RoundNarrativeCard`'s own
+   `.comp-narrative-headline` treatment just above it on the tab. */
+.summary-orientation-question {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 0.9rem;
+  max-width: 70ch;
+}
+
+.summary-orientation-windows { margin-top: 0.4rem; }
+.summary-orientation-no-windows { margin: 0.3rem 0 0; }
+
+.summary-orientation-window-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.summary-window-chip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+/* --- Inline number meaning + noise-floor caution --------------------------------- */
+
+/* Every tile that shows a margin against SPY carries this directly under its value -- what the figure
+   is measured against, in the tile's own words. Kept as a block so it wraps under the number rather
+   than crowding onto the same line. */
+.summary-tile-meaning {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* Fires only when a tile's margin is smaller than the 21.2pp reordering-noise floor measured in
+   `strategy-program/PROTOCOL.md` section 7 -- see `withinNoiseFloor` in `SummarySection.tsx`. Amber,
+   like every other "this needs a second look" treatment on the page (`.callout-warn`,
+   `.summary-provenance-chip`), and always a full sentence rather than a bare icon -- the point is that
+   a reader who never hovers anything still gets told the number in front of them is not evidence. */
+.summary-noise-caution {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--warn);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  cursor: help;
+}
+
+/* The same caution, compressed to a chip for the per-window detail table where a full sentence per
+   row would not fit -- `title` carries the full explanation on hover/focus, matching
+   `.summary-provenance-chip`'s own pattern just below. */
+.summary-noise-chip {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: var(--warn);
+  border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent);
+  border-radius: 4px;
+  padding: 0 0.3rem;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+  cursor: help;
+}
+
+.summary-noise-chip-inline {
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.summary-window-table-note {
+  margin: 0.4rem 0 0.6rem;
+  max-width: 72ch;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* --- Window detail strip -------------------------------------------------------- */
+
+.summary-window-table { min-width: 640px; }
+
+.summary-constrained-row { background: color-mix(in srgb, var(--warn) 6%, transparent); }
+
+.summary-provenance-chip {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+  font-size: 0.6rem;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: normal;
+  white-space: normal;
+  cursor: help;
+}
+
+.summary-best-card-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+.summary-best-card-btn:hover { color: var(--accent); }

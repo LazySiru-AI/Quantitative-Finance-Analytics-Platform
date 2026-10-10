@@ -1,0 +1,16 @@
+{
+  "agent_id": "c03-breakout",
+  "display_name": "Sector Confirmed-Range Breakout",
+  "discipline": "breakout",
+  "thesis": "A close that breaks above a confirmed multi-week swing high forces two groups to act, not just one: short sellers who sold into the old resistance are now underwater and mechanically buy to cover, and systematic trend/breakout funds (CTA-style N-day-high rules are a large, well-documented share of managed-futures and momentum flow) generate a fresh buy signal on the same event. Both are non-discretionary, price-triggered flows, which is why a break of an established range tends to keep going for a while rather than immediately mean-revert -- the buying is not opinion, it is a rule firing. The sma(200) trend filter restricts entries to sectors already in a primary uptrend, because a break of a local high inside a primary downtrend is disproportionately a bear-market rally, not a fresh trend. What I expect to go wrong: a grinding, broad-based bear (bear-2022-style) still produces some sector-level breakout signals -- sectors do not top in lockstep -- and those are precisely the trades that get overrun when the broader decline catches up, so I expect this card's worst window to be a bear regime, not a crash. See memo for the measured entry-frequency-by-window breakdown that grounds this."
+  ,
+  "universe": ["XLK", "XLF", "XLE", "XLI", "XLY", "XLP", "XLV", "XLU", "XLB"],
+  "entry": "close crosses_above swing_high(20) and close > sma(200)",
+  "exit": "close crosses_below swing_low(10)",
+  "stop_loss_pct": "0.10",
+  "take_profit_pct": null,
+  "max_hold_days": null,
+  "max_positions": 4,
+  "position_pct": "0.20",
+  "designed_through": "2026-02-13"
+}

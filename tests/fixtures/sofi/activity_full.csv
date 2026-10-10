@@ -1,0 +1,18 @@
+Date,Ticker/Type,Description,Shares,Price,Notes,Amount
+2026-06-19,Deposit,Account transfer,,,,12.5
+2026-06-19,Transfer fee,Brokerage account,,,,-75.0
+2026-06-19,SPCX,Account transfer,18.0,,,-3210.0
+2026-06-17,Cash sweep payment,Interest/Cash sweep,,,,0.07
+2026-06-15,SPCX,Limit sell (Canceled),9.0,301.11,,2710.0
+2026-06-12,SPCX,Limit sell (Canceled),12.0,288.5,,3462.0
+2026-06-12,SPCX,Limit buy,14.0,201.25,,-2817.5
+2026-06-12,SPCX,Market buy (Canceled),,,,-1900.0
+2026-06-12,SPCX,Market buy (Canceled),,,,-2050.0
+2026-06-12,SPCX,Market buy,4.0,190.0,,-760.0
+2026-05-27,Withdrawal,To SoFi Checking • 0000,,,,-1500.25
+2026-05-26,ZQXT,Market buy (Canceled),,,,-1234.56
+2026-05-18,ABCD,Market sell,5.0,100.1,,500.5
+2026-05-18,WXYZ,Market sell,3.0,220.0,,660.0
+2026-05-15,ABCD,Market buy,2.0,90.25,,-180.5
+2026-05-15,WXYZ,Market buy,3.0,250.0,,-750.0
+2026-05-15,ABCD,Market buy,4.0,95.0,,-380.0

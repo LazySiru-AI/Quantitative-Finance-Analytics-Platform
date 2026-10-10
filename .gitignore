@@ -1,0 +1,267 @@
+# ---------------------------------------------------------------------------
+# Personal financial data — NEVER commit
+# ---------------------------------------------------------------------------
+# Raw brokerage exports contain real account activity, positions and dollar
+# amounts. They stay on disk and are read by the app, but are not tracked, so
+# that pushing this repo anywhere can never leak them.
+
+# `data/*.csv` matches the top level only. Broker exports arrive in subdirectories too -- the user
+# dropped five into `data/rawData/` on 2026-08-14 and `git check-ignore` confirmed none of them were
+# covered, so a `git add -A` would have committed real brokerage history. The `**` forms below are
+# the rule that was meant all along; the flat ones are kept because removing them would rely on
+# nobody's git version treating `**` differently.
+data/**/*.csv
+data/**/*.xlsx
+data/**/*.xls
+data/**/*.ofx
+data/**/*.qfx
+data/**/*.pdf
+data/*.csv
+data/*.xlsx
+data/*.xls
+data/*.ofx
+data/*.qfx
+data/*.pdf
+data/statements/
+data/1099/
+# The account manifest names the user's real accounts and their tax treatments. It is not an
+# export, but it describes them, and "rh-roth / roth_ira" is exactly the kind of detail the rule
+# above exists to keep out of a repository.
+data/accounts.toml
+
+# Redacted fixtures built for tests ARE tracked (see tests/fixtures/).
+!tests/fixtures/**
+
+# `data/rounds/` IS TRACKED, DELIBERATELY, AND MUST STAY THAT WAY.
+#
+# It holds the strategy programme's round records — the brief each round was run under, the cards
+# submitted against it, every run's trade log, and the reports written from them. It lives under
+# `data/` because the application *writes* it (`app.tournament.jobs` creates a round there, and
+# `Settings.rounds_dir` / `INVDASH_ROUNDS_DIR` is how the Docker image reaches it through the `/data`
+# mount), not because it is derived or personal. None of it is financial data: no positions, no
+# account numbers, no dollar balances of the user's own — it is backtest output over public prices.
+#
+# The hazard this comment exists for: `data/` carries a NEVER-COMMIT banner at the top of this file,
+# so the natural instinct on seeing a new subdirectory here is to ignore it. Doing that would quietly
+# drop the entire research record out of version control, and the loss would not be noticed until
+# someone went looking for a round that no longer existed. The rules above are deliberately
+# file-type-scoped (`data/**/*.csv` and friends) rather than a blanket `data/`; keep them that way.
+#
+# If a round ever does need excluding — a scratch round, a re-run — exclude that round by name.
+# Do not add `data/` or `data/**`.
+
+# `data/loop/` is the evolution loop's working tree, and is NOT tracked — with five exceptions.
+#
+# Read the `data/rounds/` banner above first: this is the opposite call, made for the opposite
+# reason, and the two are easy to confuse. A round is a record; a generation is churn. The loop
+# (`app.evolution`, see `strategy-program/EVOLUTION-LOOP.md`) mints a round directory *per
+# generation* and runs until a human stops it, so pointing it at `data/rounds/` would have added
+# directories without bound to a tree that is deliberately committed — which is exactly why
+# `app.evolution.loop` writes its rounds under `data/loop/rounds/` instead. The genomes, the
+# per-generation plans, the news cache and those rounds are all reproducible working state.
+#
+# What survives is the part that changed something outside the loop: which candidates were promoted,
+# on what evidence, and which of them the paper desk now seats. `PROTOCOL.md`'s whole premise is that
+# the record of a decision outlives the run that produced it, and a card sitting on the desk with no
+# committed account of how it got there would break that. The ledger is tracked for the same reason:
+# it is the multiple-comparison denominator every promotion's q-value was computed against, so
+# discarding it would leave those q-values unverifiable after the fact. `amendments.jsonl` is tracked
+# for the same reason as the ledger: it is the append-only record of every amendment a reviewer ever
+# proposed to the loop's own config, applied or refused (`app.evolution.amend.apply_amendments`), and
+# a self-modifying loop with no committed account of what it changed, and why, would not be auditable.
+# `pending_seats.json` is tracked for the closest reason of all: it is the record of which promoted
+# cards a *person* agreed to seat on the paper desk and which they refused. The loop files the
+# requests; only a human decides them (`app.evolution.promotion.approve_pending_seat`), and a desk
+# holding cards with no committed account of who approved them is exactly the state that made this
+# queue necessary — 25 cards were seated automatically before it existed.
+# Written as `data/loop/*` rather than `data/loop/`: git does not descend into an excluded
+# *directory*, so a `!` negation under a `data/loop/` rule can never re-include anything and the
+# four exceptions below would silently do nothing. Excluding the directory's *contents* leaves the
+# directory itself visible, which is what makes the negations effective. Verified with
+# `git check-ignore -v` rather than assumed -- the first spelling looked correct and ignored all three.
+data/loop/*
+!data/loop/promotions.jsonl
+!data/loop/roster_overlay.json
+!data/loop/ledger.jsonl
+!data/loop/pending_seats.json
+!data/loop/amendments.jsonl
+
+# Agent Desk runs: one directory per run holding a `run.json` snapshot and the stage markdown. These
+# are the working evidence of a model run -- reproducible only in the auditable sense `app.agents`'
+# own docstring describes, and accumulating one directory per click -- not part of the programme's
+# record. The `AgentCall` archive they point into lives under `data/loop/agent_calls/`, already
+# covered by the `data/loop/*` rule above.
+data/agentdesk/
+
+# Auto-proposed cards are working output, not library members. A card earns a tracked home by being
+# promoted into `candidates/` (`app.evolution.promotion`, gated by EVOLUTION-LOOP.md section 4); the
+# generated tier is where the other few hundred candidates of a long search live, and committing them
+# would bury the ~35 hand-authored cards the library exists to hold.
+backend/app/paper/library/generated/
+
+# Derived stores and caches — rebuildable from the raw exports
+data/cache/
+data/store/
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.sqlite3
+*.db
+*.parquet
+
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.toml
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# ---------------------------------------------------------------------------
+# Node / frontend
+# ---------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+.vite/
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Tooling clones (Vibe-Trading MCP server lives outside the app tree)
+# ---------------------------------------------------------------------------
+tools/vendor/
+
+# ---------------------------------------------------------------------------
+# MCP config -- machine-specific, and a live auto-launch path
+# ---------------------------------------------------------------------------
+# `.mcp.json` at a project root is auto-discovered by MCP-aware tooling, which
+# launches the declared command as a process with no sandbox. The server it
+# points at (Vibe-Trading) registers order-placement tools, on the same machine
+# that holds the brokerage ledger. It is also machine-specific by construction
+# -- `tools/write_mcp_config.py` exists to regenerate it locally, and its own
+# docstring says so -- and committing it leaked an absolute path containing a
+# developer's username. Generate it per machine; never track it.
+.mcp.json
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# UAT sandbox -- disposable, rebuildable, and large
+# ---------------------------------------------------------------------------
+# `uat/sandbox/` holds the isolated ledger a persona run trades into plus a copy
+# of the daily bar store (~19MB). Both are rebuildable: the ledger from the run's
+# own `imports/*.csv`, the bars from `data/store/bars`. The run *artifacts* under
+# `uat/runs/` are committed on purpose -- they are synthetic, they carry no
+# personal financial data, and they are what the enhancement loop reads.
+uat/sandbox/
+
+# ---------------------------------------------------------------------------
+# Session scratch -- working files, never a deliverable
+# ---------------------------------------------------------------------------
+# `.scratch/` is where a session drops one-off probe scripts, coverage dumps and
+# per-card working directories while it is figuring something out (~50 directories,
+# ~3MB at the time of writing). None of it is input to anything: the cards that
+# matter are in `backend/app/paper/library/`, the rounds that matter are in
+# `strategy-program/rounds/`, and a probe script that proved a point has already
+# served its purpose by the time the finding is written down. Committing it would
+# add hundreds of files that no later reader can tell apart from real library
+# content.
+.scratch/
+
+# ---------------------------------------------------------------------------
+# Paper desk local state
+# ---------------------------------------------------------------------------
+# `data/paperdesk/inception.json` is the desk's inception-date override -- a
+# per-machine display setting a person sets in the UI, in the same category as
+# `data/accounts.toml` above: it describes *this* checkout's session, not the
+# programme. Tracking it would mean one developer's chosen window silently
+# re-running every agent's trades on someone else's clone, and it is precisely
+# the persisted-state-plus-render-crash combination that took the Paper Desk page
+# down once already.
+data/paperdesk/
+
+# ---------------------------------------------------------------------------
+# Gemini review packets
+# ---------------------------------------------------------------------------
+# Throwaway working files produced by `tools/gemini_review_bundle.py` for pasting
+# into the Gemini web app / Antigravity. Regenerated on demand; never input.
+.gemini-review/
+
+# ---------------------------------------------------------------------------
+# Local-only documents — quote the real ledger, never tracked
+# ---------------------------------------------------------------------------
+# `docs/local/` holds documents that quote the owner's real ledger in enough
+# detail that they cannot be tracked: per-lot dollar figures, sale dates, ACAT
+# control numbers, Roth contribution dates. HANDOFF.md and MIGRATION.md's full
+# text live here, along with any report whose numbers turned out to be the
+# owner's own money rather than backtest or institutional data. They stay
+# readable on this machine, because the engineering history they carry is
+# worth keeping -- a tracked stub at each original path says where the rest
+# went and why. Never track this directory; a single `git add -A` here would
+# put the real ledger's own numbers straight into history.
+docs/local/
+
+# ---------------------------------------------------------------------------
+# Persona vault -- dated personal notes on named influencers
+# ---------------------------------------------------------------------------
+# `data/vault/` is the Obsidian vault the persona agents read and write
+# (`Settings.vault_dir`): one dated note per YouTube video, filed under the
+# influencer it came from. It was untracked but nothing above ignored it, so a
+# `git add -A` would have committed every note in it -- the same failure mode
+# the `data/rawData/` incident described at the top of this file, just in a
+# directory that incident never touched. Ignore it explicitly rather than
+# trust that it stays unstaged by luck.
+data/vault/
+
+# ---------------------------------------------------------------------------
+# Korean translation cache
+# ---------------------------------------------------------------------------
+# `data/i18n_cache/` holds `ko.json`, the on-display Korean translation cache
+# for the i18n system. It is rebuildable from the English source strings and
+# is machine-local -- the same category as the derived stores and caches
+# below -- it just lives under `data/` because the i18n system put it there
+# first rather than under `data/cache/`.
+data/i18n_cache/
+
+# ---------------------------------------------------------------------------
+# Round 33 run logs
+# ---------------------------------------------------------------------------
+# `data/round33/*.log` are console logs from the dynamic-universe round's loop
+# and bake-off runs -- the same category of reproducible working state as
+# `data/loop/*` above: not part of the programme's record, just the output of
+# a run that already wrote its findings elsewhere.
+data/round33/*.log
+
+# Backfill task packets (tools/backfill_task_bundler.py) -- throwaway hand-off staging.
+.backfill-tasks/
+
+# Backfill replies (the pasted-back external-agent output for those packets) and the retry log the
+# scheduled task appends to. Neither is part of the record: a reply is re-ingestable from the
+# packet, and the log is yt-dlp/transcript-API console noise. Both were unignored until the
+# 2026-09-07 security audit found them one `git add -A` away from the remote.
+.backfill-replies/
+data/backfill_retry.log

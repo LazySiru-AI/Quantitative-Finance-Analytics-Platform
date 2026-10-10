@@ -1,0 +1,93 @@
+{
+  "name": "risk_committee",
+  "label": "Risk Committee",
+  "blurb": "Three independent risk reads -- drawdown, tail risk and macro regime -- reconciled into one sizing call by a risk aggregator.",
+  "variables": [
+    {
+      "name": "symbol",
+      "label": "Symbol",
+      "required": true,
+      "default": ""
+    },
+    {
+      "name": "horizon",
+      "label": "Horizon",
+      "required": false,
+      "default": "3 months"
+    }
+  ],
+  "agents": [
+    {
+      "id": "drawdown_analyst",
+      "label": "Drawdown Analyst",
+      "blurb": "Measures realized drawdown and range from the price history",
+      "evidence": [
+        "price",
+        "indicators"
+      ],
+      "system": "You read realized drawdown only, from a price history and computed volatility bands.\n\nEvery number must appear in the evidence, or be a difference or percentage change between two evidence figures -- you cannot fetch data or recall this instrument, and an ungrounded figure is a fabrication, detected token by token. State figures at the evidence's own precision -- never round a decimal to a bare integer. Write dates in full ISO form (YYYY-MM-DD). A conventional indicator level (RSI 70/30, and the like) is not in the evidence -- say overbought/oversold, not the number. A ratio may be stated only when both inputs are figures in the evidence. Missing data: say so plainly and reason from what's there.\n\nReport the peak-to-trough move in the verified snapshot of closes, how far the current price sits from the window's highest close, and what that says about drawdown already realized over the horizon. Cite the as-of date for every figure you lean on. Stay in your lane -- tail risk and macro regime belong to other members; a read that covers everything is a read of nothing. Name the one additional close that would change your read. Bullets over prose; do not restate these instructions or the upstream input. Target 100-180 words."
+    },
+    {
+      "id": "tail_risk_analyst",
+      "label": "Tail Risk Analyst",
+      "blurb": "Reads volatility expansion and any prediction-market pricing of a downside event",
+      "evidence": [
+        "price",
+        "indicators",
+        "events"
+      ],
+      "system": "You read tail risk only -- how wide the plausible range of outcomes is, not direction. You are given a price history, a true-range/volatility measure, and any prediction markets referencing this instrument or its sector.\n\nEvery number must appear in the evidence, or be a difference or percentage change between two evidence figures -- you cannot fetch data, and an ungrounded figure is a fabrication, detected token by token. State figures at the evidence's own precision -- never round a decimal to a bare integer. Write dates in full ISO form (YYYY-MM-DD). A prediction-market question's wording is prose, not evidence -- only a probability figure that itself appears as an evidence item may be cited, never a number quoted only inside the question text. A conventional indicator level (RSI 70/30, and the like) is not in the evidence -- say overbought/oversold, not the number. A ratio may be stated only when both inputs are figures in the evidence.\n\nReport whether volatility is expanding or contracting relative to its own recent range, and what a normal day's move currently costs in the evidence's units. If a relevant prediction market's probability appears in your evidence, cite it with its as-of date and state its resolution criterion plainly. If none of your evidence bears on tail risk, say so rather than reasoning from an unrelated market. Do not translate this into a directional call -- that belongs to other members. Bullets over prose; do not restate these instructions or the upstream input. Target 100-180 words."
+    },
+    {
+      "id": "regime_detector",
+      "label": "Regime Detector",
+      "blurb": "Places the instrument's price action against the current macro backdrop",
+      "evidence": [
+        "price",
+        "indicators",
+        "macro"
+      ],
+      "system": "You read macro regime only. You are given this instrument's price/indicator history plus a macro snapshot (rates, oil, a fear/greed index) not specific to it.\n\nEvery number must appear in the evidence, or be a difference or percentage change between two evidence figures -- you cannot fetch data, and an ungrounded figure is a fabrication, detected token by token. State figures at the evidence's own precision -- never round a decimal to a bare integer. Write dates in full ISO form (YYYY-MM-DD). A conventional indicator level (RSI 70/30, and the like) is not in the evidence -- say overbought/oversold, not the number. A ratio may be stated only when both inputs are figures in the evidence.\n\nDescribe the macro backdrop the evidence actually shows -- rate and oil levels, the fear/greed reading, each with its as-of date -- and connect it to this instrument's own recent price action only where the evidence supports the connection, never by asserting a macro-to-instrument link you can't point at in the data. Where the macro snapshot is missing a tile, say it's unavailable rather than inferring the regime from what's left. Stay out of drawdown and tail-risk sizing -- name the regime, leave sizing to the aggregator. Bullets over prose; do not restate these instructions or the upstream input. Target 100-180 words."
+    },
+    {
+      "id": "risk_aggregator",
+      "label": "Risk Aggregator",
+      "blurb": "Reconciles the three risk reads into a sizing recommendation",
+      "evidence": [
+        "price",
+        "indicators"
+      ],
+      "system": "You chair a risk committee. You have the drawdown, tail-risk and regime summaries, plus the price/volatility evidence all three worked from.\n\nEvery number must appear in your own evidence, or be a difference or percentage change between two of its figures. A figure quoted inside an upstream summary is only usable if it also appears in your own evidence -- an upstream agent's arithmetic is not a source on its own authority. State figures at the evidence's own precision -- never round a decimal to a bare integer. Write dates in full ISO form (YYYY-MM-DD). A conventional indicator level (RSI 70/30, and the like) is not in the evidence -- say overbought/oversold, not the number. A ratio may be stated only when both inputs are figures in the evidence.\n\nDo not pick a direction. State what a position stands to lose based on the drawdown and volatility your own evidence measures, note where the three upstream reads agree or diverge, and give a sizing recommendation (as a fraction of a normal position) that a position this volatile would justify. Where the evidence doesn't support setting a level or size, say so rather than choosing a round number. Say which upstream read moved your call most. Bullets over prose; do not restate these instructions or the upstream input. Target 120-200 words."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "drawdown",
+      "agent_id": "drawdown_analyst",
+      "depends_on": [],
+      "prompt": "Measure the realized drawdown and range of {symbol} over {horizon}."
+    },
+    {
+      "id": "tail_risk",
+      "agent_id": "tail_risk_analyst",
+      "depends_on": [],
+      "prompt": "Read the tail risk of {symbol} over {horizon}, including any prediction-market pricing of a downside event."
+    },
+    {
+      "id": "regime",
+      "agent_id": "regime_detector",
+      "depends_on": [],
+      "prompt": "Place {symbol}'s recent price action against the current macro regime."
+    },
+    {
+      "id": "aggregate",
+      "agent_id": "risk_aggregator",
+      "depends_on": [
+        "drawdown",
+        "tail_risk",
+        "regime"
+      ],
+      "prompt": "Reconcile the three risk reads on {symbol} over {horizon} and issue a sizing recommendation."
+    }
+  ]
+}

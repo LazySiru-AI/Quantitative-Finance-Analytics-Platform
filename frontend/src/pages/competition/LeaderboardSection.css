@@ -1,0 +1,18 @@
+/**
+ * LeaderboardSection.tsx.
+ *
+ * One rule, for one job: putting the programme's "no durable edge" verdict pill on the same line as
+ * the leaderboard heading. It wraps rather than shrinking the pill, because the pill is the part of
+ * that line a reader is worse off for not seeing.
+ */
+
+.comp-leaderboard-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.comp-leaderboard-head .section-heading {
+  margin: 0;
+}

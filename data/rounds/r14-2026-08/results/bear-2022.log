@@ -1,0 +1,27 @@
+window: 2022-01-03 -> 2022-10-12
+single-name cap: raised to 1.0 so cards run as written (see module docstring)
+22 cards
+[1/22] r1 A-rotation-lowvol: 3s trades=22 ret=-26.58% dd=-29.07% rej=115
+[2/22] r1 A-rotation-rs: 3s trades=20 ret=-28.22% dd=-30.59% rej=113
+[3/22] r1 A-rotation-stretch: 3s trades=22 ret=-31.85% dd=-32.68% rej=114
+[4/22] r1 A-rotation: 2s trades=22 ret=-33.27% dd=-34.55% rej=111
+[5/22] r1 B-momentum-lowvol: 2s trades=5 ret=-6.77% dd=-7.77% rej=0
+[6/22] r1 B-momentum-rs: 1s trades=5 ret=-6.77% dd=-7.77% rej=0
+[7/22] r1 B-momentum-stretch: 2s trades=5 ret=-6.77% dd=-7.77% rej=0
+[8/22] r1 B-momentum: 1s trades=5 ret=-6.77% dd=-7.77% rej=0
+[9/22] r1 B3-concentrated-lowvol: 1s trades=5 ret=-10.17% dd=-11.61% rej=0
+[10/22] r1 B3-concentrated-rs: 1s trades=5 ret=-10.17% dd=-11.61% rej=0
+[11/22] r1 B3-concentrated-stretch: 2s trades=5 ret=-10.17% dd=-11.61% rej=0
+[12/22] r1 B3-concentrated: 1s trades=5 ret=-10.17% dd=-11.61% rej=0
+[13/22] r1 C-trend-lowvol: 1s trades=5 ret=-6.97% dd=-7.60% rej=0
+[14/22] r1 C-trend-rs: 1s trades=5 ret=-6.97% dd=-7.60% rej=0
+[15/22] r1 C-trend-stretch: 1s trades=5 ret=-6.97% dd=-7.60% rej=0
+[16/22] r1 C-trend: 1s trades=5 ret=-6.97% dd=-7.60% rej=0
+[17/22] r1 c19-volatility-lowvol: 4s trades=16 ret=+2.17% dd=-6.27% rej=0
+[18/22] r1 c19-volatility-rs: 3s trades=16 ret=+2.24% dd=-6.21% rej=0
+[19/22] r1 c19-volatility-stretch: 3s trades=16 ret=+2.24% dd=-6.21% rej=0
+[20/22] r1 c19-volatility: 3s trades=16 ret=+2.24% dd=-6.21% rej=0
+[21/22] r1 c21-uncorrelated-rs: 1s trades=8 ret=-6.17% dd=-7.95% rej=0
+[22/22] r1 c21-uncorrelated: 1s trades=8 ret=-6.17% dd=-7.95% rej=0
+r1: 22 agents, 4 discoveries
+overall: 22 agents, 4 discoveries at alpha=0.1
